@@ -1,0 +1,963 @@
+% VN-Edu LOD — final project report (compile with: latexmk -lualatex main.tex)
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------------- fonts & layout
+\usepackage{fontspec}
+\setmainfont{Libertinus Serif}
+\setsansfont{Libertinus Sans}
+\setmonofont{DejaVu Sans Mono}[Scale=0.82]
+\usepackage[a4paper,margin=2.4cm]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx,multirow,array}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{fvextra}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric,fit,backgrounds,calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[edges]{forest}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage[capitalise,noabbrev]{cleveref}
+
+\definecolor{acc}{HTML}{0F6E64}
+\definecolor{s1}{HTML}{2A78D6}
+\definecolor{s2}{HTML}{EB6834}
+\definecolor{s3}{HTML}{1BAF7A}
+\definecolor{bronze}{HTML}{B07A4A}
+\definecolor{silver}{HTML}{8C939C}
+\definecolor{gold}{HTML}{C9A227}
+\definecolor{codebg}{HTML}{F6F7F8}
+
+\setlist{itemsep=2pt,topsep=4pt}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\arraystretch}{1.12}
+
+\newcommand{\vn}[1]{\texttt{vnedu:#1}}
+\newcommand{\proj}{VN-Edu LOD}
+\newcommand{\base}{\url{https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/}}
+
+% ---------------------------------------------------------------- code blocks (fvextra: an toàn với Unicode)
+\DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\footnotesize, frame=single, rulecolor=\color{black!20},
+  framesep=2.5mm, breaklines=true, breakanywhere=true}
+\newcommand{\codetitle}[1]{\par\smallskip\noindent{\footnotesize #1}\par\nopagebreak}
+
+\hypersetup{pdftitle={VN-Edu LOD: A Five-Star Linked Open Dataset of Vietnamese Higher Education},
+            pdfauthor={[Author Name]}}
+
+% ================================================================= document
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{0.5cm}
+{\large [University Name]\par}
+{\large [Faculty / School]\par}
+\vspace{0.4cm}
+{\normalsize Course: Semantic Web \& Linked Data \quad [Course code]\par}
+\vspace{2.2cm}
+{\Large\bfseries FINAL PROJECT REPORT\par}
+\vspace{0.8cm}
+{\huge\bfseries VN-Edu LOD\par}
+\vspace{0.3cm}
+{\LARGE A Five-Star Linked Open Dataset of\\[2pt] Vietnamese Higher Education Institutions\par}
+\vspace{0.6cm}
+{\large Ontology Engineering, Multi-source Integration, OWL~2~RL Reasoning,\\ Quality Validation and Web Publication\par}
+\vspace{2.2cm}
+\begin{tabular}{rl}
+Student:     & [Full Name] \\
+Student ID:  & [Student ID] \\
+Email:       & [Email] \\[4pt]
+Instructor:  & [Instructor Name] \\
+\end{tabular}
+\vfill
+\begin{tabular}{rl}
+Live dataset:     & \url{https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/} \\
+SPARQL endpoint:  & \url{https://vnedu-lod.onrender.com/sparql} \\
+Source code:      & \url{https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2} \\
+\end{tabular}
+\vspace{1cm}
+
+{\large [City], October 2026\par}
+\end{titlepage}
+
+% ---------------------------------------------------------------- abstract
+\begin{abstract}
+\noindent
+Information about Vietnamese higher education institutions is scattered across Wikipedia articles, Wikidata items
+and administrative documents, and it became partly obsolete when the country reorganised its provinces in July~2025.
+This report presents \proj{}, an open knowledge graph of \textbf{300 Vietnamese educational institutions} (271 of them
+higher education institutions), together with their 63 current and former provinces, 50 governing bodies and
+1{,}695 people, published according to the \emph{five-star Linked Open Data} scheme. We designed an OWL~2~RL ontology
+of 34 classes and 47 properties whose defined classes and property chains let a rule reasoner classify
+institutions (public/private, military/police, member institutions) and propagate locations through the 2025 province
+mergers; data-quality constraints are expressed separately in SHACL. A medallion (bronze/silver/gold) pipeline
+collects data from Wikidata and Vietnamese Wikipedia, resolves entities by Wikidata identifiers, records every
+conflict and fallback value, and enforces a JSON-Schema data contract before RDF generation. The resulting graph contains
+39{,}507 triples (14{,}666 of them inferred), reuses standard vocabularies for 74\% of asserted triples, and links
+84\% of its entities via \texttt{owl:sameAs} to Wikidata, DBpedia, ROR and GeoNames. Every one of its 2{,}241 HTTP URIs
+dereferences to HTML with embedded JSON-LD, Turtle and JSON-LD, and a hardened SPARQL~1.1 endpoint supports
+federated queries. Compared with a previous version of the project, \proj{} answers 21/21 benchmark facts correctly
+(vs.\ 14/21), is logically consistent (0 vs.\ 349 violations), and answers aggregate and multi-hop questions that the
+earlier model could not express. An empirical comparison also shows why identifier-based linking was preferred over
+string-similarity linking (100\% vs.\ at most 98.3\% precision, with 66--84\% recall for the latter).
+\par\medskip
+\noindent\textbf{Keywords:} Linked Open Data, knowledge graph, ontology engineering, OWL 2 RL, SHACL, data integration,
+owl:sameAs, Wikidata, higher education, Vietnam.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% ================================================================= 1
+\section{Introduction}
+\label{sec:intro}
+
+Vietnam has more than 250 higher education institutions (HEIs) of very different legal types: national and regional
+universities, universities, academies, officer schools, and their member schools and branches. Basic facts about them
+-- founding year, governing ministry, public or private ownership, location, leadership, admission codes -- are
+published in many places but rarely in a form that machines can query, compare and combine. Two recent events make the
+problem more pressing. First, Resolution 202/2025/QH15 \cite{vn2025nq202} merged the 63 provinces into 34 from
+1~July~2025, so the location of many institutions in existing datasets is now obsolete. Second, community knowledge
+bases such as Wikidata \cite{vrandecic2014wikidata} and DBpedia \cite{lehmann2015dbpedia} cover Vietnamese institutions
+only partially and inconsistently, while the richer Vietnamese Wikipedia infoboxes are semi-structured text.
+
+The Linked Data principles \cite{bernerslee2006linked,bizer2009linked} and the five-star open data scheme provide a
+well-established way to publish such information: give every entity an HTTP URI, return useful RDF when the URI is
+looked up, use W3C standards, and link to other datasets. This project applies them to Vietnamese higher education
+and, in doing so, addresses the weaknesses of an earlier version of the same project
+\cite{phamng2025vukg,ha2025viodbpedia}, whose ontology produced 349 logical contradictions under reasoning and whose
+URIs could not be dereferenced.
+
+\paragraph{Research questions.} The work is organised around four questions:
+\begin{description}[leftmargin=1.2cm,style=nextline]
+  \item[RQ1] How can an ontology for Vietnamese higher education be designed so that standard rule-based reasoning is
+             both \emph{correct} (no spurious contradictions) and \emph{useful} (it derives facts users ask for)?
+  \item[RQ2] How can two heterogeneous community sources be integrated into accurate, traceable data, and how much
+             more accurate is the result than a single-source approach?
+  \item[RQ3] How should the dataset be linked to existing Linked Data -- in particular, when should existing URIs be
+             reused and when should new URIs be minted?
+  \item[RQ4] Does the published dataset actually satisfy all five stars, and is it usable by external people and
+             programs?
+\end{description}
+
+\paragraph{Contributions.}
+\begin{enumerate}
+  \item An OWL~2~RL ontology (34 classes, 27 object and 20 datatype properties) with defined classes, four property
+        chains and disjointness axioms, aligned to schema.org, FOAF and DBpedia, plus 8 SHACL shapes (\cref{sec:onto}).
+  \item A reproducible bronze/silver/gold integration pipeline with an explicit conflict-resolution policy,
+        provenance at the level of individual Wikipedia revisions, and a JSON-Schema data contract (\cref{sec:integration}).
+  \item A URI and linking strategy that reuses existing vocabularies and IRIs wherever possible, mints URIs only for
+        described entities, and links them with \texttt{owl:sameAs} after explicit verification (\cref{sec:linking}).
+  \item A public, five-star publication: 2{,}241 dereferenceable URIs, a hardened SPARQL endpoint with federated
+        queries, interactive maps, statistics and an ontology browser (\cref{sec:publication}).
+  \item A quantitative evaluation of completeness, correctness, consistency, link quality, performance and security,
+        including a comparison with the previous version and with string-similarity linking (\cref{sec:eval}).
+\end{enumerate}
+
+% ================================================================= 2
+\section{Background and Related Work}
+\label{sec:background}
+
+\subsection{Linked Data and the five-star scheme}
+Linked Data \cite{bernerslee2006linked,heath2011linked} rests on four principles: use URIs as names for things; use HTTP
+URIs so that people can look them up; return useful information in standard formats (RDF \cite{w3c2014rdf},
+SPARQL \cite{w3c2013sparql}) when a URI is looked up; and include links to other URIs. The five-star scheme grades open
+data from \emph{available on the Web under an open licence} (\(\star\)) to \emph{machine-readable} (\(\star\star\)),
+\emph{non-proprietary format} (\(\star\star\star\)), \emph{W3C standards and URIs} (\(\star\star\star\star\)) and
+\emph{linked to other data} (\(\star\star\star\star\star\)). The W3C Best Practices \cite{w3c2014bp} and Cool URIs
+\cite{w3c2008cooluris} recommend reusing vocabularies, minting stable HTTP URIs in a namespace the publisher controls,
+and describing datasets with VoID \cite{w3c2011void} and DCAT \cite{w3c2020dcat}. Empirical studies show that
+conformance to these practices is far from universal \cite{hogan2012conformance}.
+
+\subsection{Ontologies, reasoning and validation}
+OWL~2~RL \cite{w3c2012owlprofiles} is the OWL profile designed for rule-based implementation: reasoning can be
+performed by forward chaining in polynomial time, which makes it practical to \emph{materialise} all consequences and
+serve them from an ordinary triple store. Because OWL follows the open-world assumption, cardinality restrictions do
+not detect missing data; SHACL \cite{w3c2017shacl} closes this gap by validating RDF graphs against shapes. PROV-O
+\cite{w3c2013provo} records provenance and JSON-LD \cite{w3c2020jsonld} embeds RDF into Web pages.
+
+\subsection{Knowledge graphs extracted from Wikipedia}
+DBpedia \cite{lehmann2015dbpedia} and YAGO \cite{suchanek2007yago} extract knowledge graphs from Wikipedia infoboxes and
+categories; Wikidata \cite{vrandecic2014wikidata} is a collaboratively edited knowledge base that now serves as a hub of
+identifiers. Hogan et al.\ \cite{hogan2021kg} survey the broader field of knowledge graphs. Schema.org
+\cite{guha2016schemaorg} provides widely used classes such as \texttt{CollegeOrUniversity}.
+
+\subsection{Identity links and link discovery}
+\texttt{owl:sameAs} asserts that two URIs denote the same individual; Halpin et al.\ \cite{halpin2010sameas} showed
+that it is frequently misused for mere similarity, which propagates errors under reasoning. Link discovery frameworks
+such as Silk \cite{volz2009silk} generate links from similarity metrics and thresholds. Zaveri et al.\
+\cite{zaveri2016quality} survey Linked Data quality dimensions, several of which (completeness, consistency,
+interlinking, licensing, provenance) we measure in \cref{sec:eval}.
+
+\subsection{Prior course projects (baselines)}
+\label{sec:baselines}
+\emph{vio} \cite{ha2025viodbpedia,phamng2025vukg} built a Vietnamese DBpedia-style ontology and a dataset of
+universities from Vietnamese Wikipedia; it is the direct predecessor of this work and serves as our main baseline.
+\emph{hust-semantic-web} \cite{phuongbv2025hust} built a smartphone dataset using a medallion architecture and Silk
+linking; we adopted its medallion idea and used its linking approach as a comparison point.
+
+% ================================================================= 3
+\section{System Architecture and Methodology}
+\label{sec:arch}
+
+\Cref{fig:arch} shows the overall architecture. It follows the \emph{medallion} pattern \cite{databricks2023medallion}:
+raw snapshots (bronze), cleaned and integrated records (silver) and RDF (gold), with a \emph{quality gate} at every
+boundary so that defective data stops the pipeline instead of reaching publication.
+
+\begin{figure}[ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  node distance=6mm and 15mm,
+  box/.style={draw, rounded corners=3pt, align=center, font=\footnotesize, minimum height=1.6cm, text width=2.4cm, thick},
+  gate/.style={font=\scriptsize\itshape, text=acc, align=center},
+  arr/.style={-{Stealth[length=2.2mm]}, thick}]
+  \node[box, fill=black!4]                    (src) {\textbf{Open sources}\\Wikidata, Vietnamese Wikipedia, DBpedia, OSM, legal texts};
+  \node[box, fill=bronze!18, right=of src]    (br)  {\textbf{Bronze}\\JSON snapshots + source, time, licence};
+  \node[box, fill=silver!22, right=of br]     (sv)  {\textbf{Silver}\\300 institutions, 63 provinces, 50 bodies, 1{,}695 people};
+  \node[box, fill=gold!22, right=of sv]       (gd)  {\textbf{Gold}\\RDF + links + OWL 2 RL closure + VoID/DCAT};
+  \node[box, fill=acc!12, right=of gd]        (out) {\textbf{Access}\\LD site, SPARQL endpoint, Fuseki, CLI};
+  \draw[arr] (src) -- node[above, gate]{collect} (br);
+  \draw[arr] (br)  -- node[above, gate]{integrate} node[below, gate]{JSON Schema} (sv);
+  \draw[arr] (sv)  -- node[above, gate]{RDF, link} (gd);
+  \draw[arr] (gd)  -- node[above, gate]{reason} node[below, gate]{SHACL,\\consistency} (out);
+  \node[below=9mm of sv, draw, dashed, rounded corners, font=\scriptsize, align=center, text width=7.6cm] (ref)
+     {\textbf{Reference data} (hand-curated, legally grounded): province mergers (Res.~202/2025),
+      regions, training fields and majors (Circular 09/2022), link overrides};
+  \draw[arr, dashed] (ref.north) -- (sv.south);
+  \node[above=7mm of sv, font=\scriptsize, align=center, text width=12cm] {\texttt{manifest.json}: lineage of every file (records, SHA-256, timestamp) \quad\textbullet\quad HTTP cache for reproducibility};
+\end{tikzpicture}}
+\caption{Architecture of the \proj{} pipeline. Each arrow is a script (\texttt{step2\_collect.py} \ldots{}
+\texttt{step7\_publish.py}); gates in italics must pass before data moves to the next layer.}
+\label{fig:arch}
+\end{figure}
+
+\paragraph{Reproducibility.} All HTTP responses are cached on disk, so re-running the pipeline yields identical output;
+every bronze snapshot has a \texttt{.meta.json} file recording source endpoint, retrieval time, user agent and licence;
+and \texttt{data/manifest.json} records, for every file in every layer, its record or triple count and SHA-256 hash.
+A continuous-integration workflow runs the full test suite (100 tests) and rebuilds the published site on every commit.
+
+\paragraph{Technology.} The pipeline is written in Python (\(\approx\)5{,}100 lines) using RDFLib, OWL-RL and pySHACL
+\cite{rdflib}; Apache Jena Fuseki \cite{jenafuseki} serves SPARQL locally; Oxigraph \cite{oxigraph} compiled to
+WebAssembly provides SPARQL in the browser; a Flask/Waitress server provides the public endpoint.
+
+% ================================================================= 4
+\section{Ontology Design}
+\label{sec:onto}
+
+\subsection{Design principles}
+The ontology (namespace \texttt{vnedu:}) was designed to fix the specific failures we observed when running a rule
+reasoner over the baseline:
+\begin{enumerate}
+  \item \textbf{Stay inside OWL~2~RL} so that materialisation is sound and complete and the closure can be served by
+        any triple store.
+  \item \textbf{Never redefine external vocabularies.} The baseline declared \texttt{geo:lat rdfs:domain vio:Site};
+        since provinces also have coordinates, the reasoner typed them as \texttt{Site}, which was disjoint with
+        \texttt{Place} -- 344 of the baseline's 349 contradictions came from this single axiom.
+  \item \textbf{Align, do not equate.} Our classes are connected to schema.org, FOAF and DBpedia only through
+        \texttt{rdfs:subClassOf}/\texttt{rdfs:subPropertyOf} (26 alignment axioms), never
+        \texttt{owl:equivalentClass}, so external semantics cannot leak in.
+  \item \textbf{Property chains range over common super-classes}, so that chaining never forces an individual into an
+        incompatible class.
+  \item \textbf{Constraints belong in SHACL}, because OWL's open-world semantics cannot detect missing values.
+  \item \textbf{Defined classes for classification, disjointness and functional properties for error detection.}
+\end{enumerate}
+
+\subsection{Class hierarchy}
+\Cref{fig:classes} shows the class hierarchy. Institution types follow the Law on Higher Education
+\cite{vn2018law34} and are determined from the institution's official name (\emph{Đại học}, \emph{Trường Đại học},
+\emph{Học viện}, \emph{Trường Sĩ quan}) rather than from Wikidata's \texttt{P31}, which mixes universities, colleges and
+faculties. The four legal types are pairwise disjoint (\texttt{owl:AllDisjointClasses}). Six \emph{defined classes} are
+populated by the reasoner only.
+
+\begin{figure}[ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{forest}
+  for tree={font=\small, grow'=0, child anchor=west, parent anchor=east, anchor=west,
+            calign=first, edge={black!45}, l sep=6mm, s sep=0.8mm, inner sep=1.5pt,
+            edge path={\noexpand\path[\forestoption{edge}] (!u.parent anchor) -- +(2.5mm,0) |- (.child anchor)\forestoption{edge label};}},
+  def/.style={text=s2!85!black, font=\small\itshape, align=left}
+[owl:Thing
+  [Organization
+    [EducationalOrganization
+      [HigherEducationInstitution
+        [University [NationalUniversity] [RegionalUniversity]]
+        [UniversitySchool]
+        [Academy]
+        [OfficerSchool]]
+      [Branch]
+      [VocationalCollege]
+      [{PublicInstitution, PrivateInstitution,\\ MilitaryInstitution, PoliceInstitution,\\ MemberInstitution, DefunctInstitution}, def]]
+    [GoverningBody [Ministry] [ProvincialPeoplesCommittee]]
+    [Company]]
+  [Person [{Alumnus, InstitutionLeader}, def]]
+  [AdministrativeUnit [Country] [Region] [Province [CentrallyGovernedCity]] [FormerProvince]]
+  [FieldOfStudy] [Major] [AcademicProgram]
+]
+\end{forest}}
+\caption{Class hierarchy of the \vn{} ontology (34 classes). Classes in orange italics are \emph{defined} classes whose
+members are inferred by the reasoner. Organization, Person and AdministrativeUnit are mutually disjoint, as are the four
+legal HEI types; Branch and VocationalCollege are disjoint with HigherEducationInstitution. Alignments
+(\(\sqsubseteq\)): Organization to \texttt{foaf:Organization} and \texttt{schema:Organization}; HigherEducationInstitution
+to \texttt{schema:CollegeOrUniversity}; University and UniversitySchool to \texttt{dbo:University}; Person to
+\texttt{foaf:Person} and \texttt{schema:Person}; Major and FieldOfStudy to \texttt{skos:Concept}.}
+\label{fig:classes}
+\end{figure}
+
+\subsection{Key axioms}
+\Cref{tab:axioms} lists the axioms that drive reasoning, each with a real example from the data. All are covered by
+unit tests that check both the positive inference and the detection of erroneous data.
+
+\begin{table}[ht]
+\centering\small
+\caption{Main OWL 2 RL axioms and what they derive in the dataset.}
+\label{tab:axioms}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{6.1cm}X}
+\toprule
+Axiom (DL notation) & Effect on real data \\
+\midrule
+\(\mathit{locatedIn} \circ \mathit{mergedInto} \sqsubseteq \mathit{locatedIn}\) &
+  Thu Dau Mot University is recorded in Bình Dương (former province) \(\Rightarrow\) located in Ho Chi Minh City. \\
+\(\mathit{locatedIn} \circ \mathit{partOf} \sqsubseteq \mathit{locatedIn}\), \(\mathit{partOf}\) transitive &
+  \(\Rightarrow\) located in Nam Bộ (region) and Vietnam. \\
+\(\mathit{governedBy} \circ \mathit{subordinateTo} \sqsubseteq \mathit{governedBy}\) &
+  Naval Academy is governed by the Navy \(\Rightarrow\) governed by the Ministry of National Defence. \\
+\(\mathit{MilitaryInstitution} \equiv \mathit{EduOrg} \sqcap \exists \mathit{governedBy}.\{\mathit{MoND}\}\) &
+  \(\Rightarrow\) 21 military institutions (7 police institutions analogously). \\
+\(\exists \mathit{ownedBy}.\mathit{Company} \sqsubseteq \exists \mathit{ownership}.\{\mathit{Private}\}\) &
+  FPT University is owned by FPT Education \(\Rightarrow\) private. \\
+\(\mathit{PublicInstitution} \equiv \mathit{EduOrg} \sqcap \exists \mathit{ownership}.\{\mathit{Public}\}\) &
+  \(\Rightarrow\) 221 public / 35 private institutions. \\
+\(\mathit{rector}, \mathit{director}, \mathit{councilChair} \sqsubseteq \mathit{hasLeader} \equiv \mathit{leads}^{-}\) &
+  \(\Rightarrow\) 214 \textit{InstitutionLeader}s. \\
+\(\mathit{offersProgram} \circ \mathit{ofMajor} \sqsubseteq \mathit{trainsMajor}\) &
+  Majors taught by an institution derived from its programmes. \\
+8 inverse pairs (\(\mathit{memberOf}/\mathit{hasMember}\), \(\mathit{alumnusOf}/\mathit{hasAlumnus}\), \ldots) &
+  Only one direction needs to be asserted. \\
+\(\mathit{ownership}\), \(\mathit{foundingYear}\) functional; \(\mathit{AllDifferent}(\mathit{Public},\mathit{Private})\);
+  legal types \(\mathit{AllDisjointClasses}\); \(\mathit{Organization} \sqcap \mathit{Person} \sqsubseteq \bot\) &
+  Detect contradictory data: an institution both public and private, two founding years, both an academy and a
+  university, or a person used as a governing body. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{SHACL shapes}
+Eight node shapes with 23 property constraints and 2 SPARQL-based constraints check what OWL cannot: language-tagged
+labels in Vietnamese and English, \texttt{xsd:gYear} founding years between 1800 and the current year, admission codes
+matching \texttt{\^{}[A-Z]\{3\}\$}, coordinates inside Vietnam's bounding box, exactly one region per province, member
+institutions in the same province as their parent (informational), and a warning when a private institution lists a
+ministry as its governing body.
+
+\subsection{URI design}
+All URIs live under the namespace controlled by the project, \base{}, with the pattern
+\texttt{resource/\{type\}/\{slug\}}, where the slug is the accent-free official Vietnamese name
+(e.g.\ \texttt{resource/university/dai-hoc-bach-khoa-ha-noi}). Slugs are stable (they do not encode database keys) and
+human-readable; homonyms of defunct institutions receive their period of activity, e.g.\ ``Đại học Cần Thơ
+(1966--1975)''. The ontology itself is published at \texttt{\ldots/ontology} with hash URIs for terms.
+
+% ================================================================= 5
+\section{Data Acquisition and Integration}
+\label{sec:integration}
+
+\subsection{Sources}
+\Cref{tab:sources} summarises the bronze layer. Wikidata is queried with one SPARQL query per property using
+\texttt{VALUES} blocks (avoiding Cartesian products and time-outs); Vietnamese Wikipedia is crawled recursively through
+164 categories (e.g.\ \emph{Đại học Việt Nam}, \emph{Học viện Việt Nam}) \emph{and} through every article linked from
+Wikidata, so that institutions missing from categories are not lost.
+
+\begin{table}[ht]
+\centering\small
+\caption{Bronze-layer snapshots.}
+\label{tab:sources}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}Xlrl}
+\toprule
+Snapshot & Source & Records & Licence \\
+\midrule
+Institution facts (labels, types, inception, website, coordinates, ROR, leaders, \ldots) & Wikidata SPARQL & 363 & CC0 \\
+Infoboxes, lead sections, \emph{History} sections & Vietnamese Wikipedia API & 279 & CC BY-SA 4.0 \\
+Image/logo metadata (URL, licence, author) & Wikipedia/Commons API & 280 & per file \\
+Organisations linked from infoboxes (title \(\to\) QID) & Wikipedia API & 80 & CC BY-SA 4.0 \\
+Notable alumni (gender, occupation, birth date) & Wikidata SPARQL & 1{,}531 & CC0 \\
+Provinces (population, area, GeoNames) & Wikidata SPARQL & 63 & CC0 \\
+Founding years (cross-check) & DBpedia SPARQL & 72 & CC BY-SA 3.0 \\
+Province mergers, regions, training fields & Res.~202/2025, Circ.~09/2022 & curated & public law \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Cleaning semi-structured infoboxes}
+Infobox values are wikitext, not data. The parser (based on \texttt{mwparserfromhell}) handles line-break templates
+whose removal would glue tokens together (\texttt{BKHN<br>HUST} \(\to\) ``BKHN | HUST''), list templates, date
+templates (\texttt{\{\{start date|1956|3|6\}\}} \(\to\) \texttt{1956-03-06}), degree--minute--second coordinates,
+references, invisible soft hyphens and image captions. Infobox templates with English parameter names
+(\texttt{principal}, \texttt{parent}, \texttt{affiliation}) are normalised to their Vietnamese equivalents; before this
+normalisation one institution (VinUni) silently lost its rector, owner, council chair and partners. Person names are
+separated from academic titles and ranks (e.g.\ ``GS.TS.NGND'' \(\to\) \vn{honorific}).
+
+\subsection{Entity resolution and scope}
+Wikidata QIDs are the primary key. Missing sitelinks are repaired by title search (accepting only articles not
+attached to another item); three groups of duplicate Wikidata items (e.g.\ Hanoi Law University has three QIDs) are
+merged into one entity that keeps \texttt{owl:sameAs} to all of them. \textbf{68 candidate entities were excluded}, each
+with a recorded reason: faculties and departments, high schools, list and history articles, and English-only items
+that could not be cross-checked.
+
+\subsection{Conflict resolution and fallbacks}
+\Cref{tab:policy} states the resolution policy per field. All 42 cases where sources disagree are written to
+\texttt{conflicts.csv}; every value obtained from a lower-priority fallback (176 values, mostly coordinates, governing
+bodies and ownership) is written to \texttt{filled.csv} with its source, so a reviewer can audit exactly which facts
+were not taken from a structured field.
+
+\begin{table}[ht]
+\centering\small
+\caption{Source priority per field (first available wins; disagreements are logged).}
+\label{tab:policy}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+Field & Priority \\
+\midrule
+Province & infobox city/province \(\to\) Wikidata P131 \(\to\) headquarters address \(\to\) Wikidata P159/P276 \(\to\) lead
+  sentence near ``trụ sở/đặt tại'' \(\to\) reverse geocoding of coordinates (OSM) \(\to\) place name in the official name \\
+Founding year & earliest of Wikidata, infobox and DBpedia (institutions date themselves from their predecessor);
+  then ``thành lập năm \ldots'' in the lead, taking the year nearest to the keyword \\
+Ownership & infobox type \(\to\) Wikidata class (public/private university) \(\to\) strict pattern in the lead;
+  plus the OWL rule for company-owned institutions \\
+Leaders & infobox (usually more current) \(\to\) Wikidata statements without end date (P582) \\
+Coordinates & Wikidata \(\to\) infobox \(\to\) geocoded address, accepted \emph{only} if inside the chosen province \\
+Relations & a ``member of / under'' target is typed by what it resolves to: HEI \(\to\) \vn{memberOf}/\vn{branchOf};
+  ministry or committee \(\to\) \vn{governedBy}; company \(\to\) \vn{ownedBy} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Data contract}
+Before RDF generation every silver record is validated against a JSON Schema
+(file \url{schemas/silver.schema.json}) covering identifiers, enumerations, value ranges, URL and email formats, image URLs, and cross-field rules (e.g.\ a
+former province must have a successor). Any violation stops the pipeline.
+
+\subsection{Worked example}
+\Cref{lst:vinuni} follows VinUni through the layers: the infobox (bronze), the cleaned record (silver) and the RDF
+(gold). The founding year (2018, approval of the project, from Wikidata) and the founding date (17~December~2019,
+licensing, from the infobox) are both kept, and the difference is logged as a conflict rather than silently resolved.
+
+\begin{figure}[ht]
+\begin{subfigure}{\textwidth}
+\codetitle{\footnotesize\textbf{Bronze} -- infobox wikitext (English parameter names)}
+\begin{code}
+| other_name = VinUniversity     | established = {{Start date and age|2019|12|17}}
+| parent = [[Tập đoàn Vingroup]] | affiliation = [[Đại học Cornell]]{{·}}[[Đại học Pennsylvania]]{{·}}...
+| chairman = Lê Mai Lan          | principal = Tan Yap-Peng    | image = Trường Đại học VinUni logo.png
+\end{code}
+\end{subfigure}
+\begin{subfigure}{\textwidth}
+\codetitle{\footnotesize\textbf{Gold} -- RDF (excerpt), reusing standard vocabularies}
+\begin{code}
+university:truong-dai-hoc-vinuni a vnedu:UniversitySchool ;
+    rdfs:label "Trường Đại học VinUni"@vi , "VinUni"@en ;   skos:altLabel "VinUniversity" ;
+    schema:foundingDate "2019-12-17"^^xsd:date ;  vnedu:foundingYear "2018"^^xsd:gYear ;
+    vnedu:ownership vnedu:PrivateOwnership ;      vnedu:ownedBy organization:tap-doan-vingroup ;
+    vnedu:rector person:tan-yap-peng ;            vnedu:councilChair person:le-mai-lan ;
+    dbo:affiliation wd:Q49115 , wd:Q49117 ;       # partners = existing Wikidata IRIs
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/4/4b/...VinUni_logo.png> ;
+    owl:sameAs wd:Q86012411 , dbr:VinUniversity , <https://ror.org/052dmdr17> ;
+    prov:wasDerivedFrom wd:Q86012411 , <https://vi.wikipedia.org/w/index.php?oldid=75478634> .
+\end{code}
+\end{subfigure}
+\caption{One institution through the pipeline. After reasoning the entity additionally becomes a
+\vn{PrivateInstitution}, a \texttt{schema:CollegeOrUniversity} and is located in Bắc Bộ and Vietnam.}
+\label{lst:vinuni}
+\end{figure}
+
+% ================================================================= 6
+\section{RDF Generation and Linking}
+\label{sec:linking}
+
+\subsection{Vocabulary reuse and provenance}
+RDF is generated from silver records by \texttt{step3\_transform.py}. Standard vocabularies are used wherever an
+appropriate term exists -- RDFS, SKOS, FOAF, schema.org, DBpedia ontology, W3C Geo, PROV-O -- so that \textbf{74\% of
+asserted triples} (15{,}083 of 20{,}446) use externally defined predicates. Every institution carries
+\texttt{prov:wasDerivedFrom} links to its Wikidata item \emph{and to the exact Wikipedia revision} (\texttt{oldid}) that
+was parsed, so any value can be traced to the text it came from. Textual descriptions (\texttt{dbo:abstract},
+\vn{history}) are attributed to that revision under CC BY-SA.
+
+\subsection{URI strategy: when to reuse and when to mint}
+\label{sec:uristrategy}
+A natural question is why the project mints its own URIs instead of using Wikidata's. Our answer follows the W3C
+best practices \cite{w3c2014bp}:
+\begin{itemize}
+  \item \textbf{Reuse whenever we only \emph{refer} to something.} Occupations and genders of alumni, partner
+        universities and image files are referenced directly by their existing IRIs (222 Wikidata IRIs in 2{,}523
+        triples), with only a label added for display. We do not mint \texttt{vnedu:occupation/politician}.
+  \item \textbf{Mint only for entities we \emph{describe}.} The 2{,}241 entities we publish facts about need URIs whose
+        lookup returns \emph{our} description (Linked Data principle~3): admission codes, legal type, post-2025
+        province, inferred classification. A Wikidata URI cannot be made to return that. Keeping our assertions
+        under our own URIs also keeps their provenance separate, covers entities Wikidata does not have (training
+        majors, province-merger relations), and lets the project guarantee dereferenceability of its namespace.
+  \item \textbf{Assert identity explicitly.} \textbf{84\%} of minted entities (1{,}874/2{,}241) carry
+        \texttt{owl:sameAs} to existing URIs; where identity is not exact (a training \emph{major} vs.\ an academic
+        \emph{discipline}) we use \texttt{skos:closeMatch} instead, following \cite{halpin2010sameas}.
+\end{itemize}
+
+\subsection{Identifier-based linking with verification}
+Links are derived from shared identifiers rather than name similarity (\cref{tab:links}). Wikidata links come from the
+data's own provenance; ROR and GeoNames links from Wikidata properties P6782 and P1566; DBpedia links from DBpedia's
+own \texttt{owl:sameAs} to Wikidata. Two verification steps guard against wrong identity links: governing bodies and
+regions without a QID are searched by Vietnamese label \emph{and} must satisfy \texttt{P17 = Vietnam} (this rejected,
+e.g., a Korean ministry with the same name); and DBpedia resources that DBpedia maps to several Wikidata items are
+rejected (14 cases, e.g.\ \texttt{dbr:Pleiku} wrongly mapped to Gia Lai province). Links are not fed to the reasoner,
+because \texttt{owl:sameAs} semantics would copy every triple onto the external URIs.
+
+\begin{table}[ht]
+\centering\small
+\caption{Outgoing links (gold layer), described as \texttt{void:Linkset}s in the dataset description.}
+\label{tab:links}
+\begin{tabular}{llrl}
+\toprule
+Target & Predicate & Links & Derivation \\
+\midrule
+Wikidata  & \texttt{owl:sameAs} & 1{,}880 & provenance; label search + country check \\
+Wikipedia (vi, en) & \texttt{foaf:isPrimaryTopicOf} & 1{,}188 & sitelinks \\
+DBpedia   & \texttt{owl:sameAs} & 260 & DBpedia \texttt{owl:sameAs} \(\to\) QID, ambiguity filter \\
+ROR       & \texttt{owl:sameAs} & 195 & Wikidata P6782 \\
+GeoNames  & \texttt{owl:sameAs} & 63 & Wikidata P1566 \\
+Wikidata, DBpedia & \texttt{skos:closeMatch} & 88 & majors; exact label + manual overrides \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ================================================================= 7
+\section{Reasoning and Validation}
+\label{sec:reasoning}
+
+The asserted data, ontology and VoID description (21{,}071 triples) are materialised with OWL-RL \cite{rdflib} in about
+30~seconds, producing a closure of 59{,}880 triples. From the closure we keep only \emph{instance-level} triples whose
+subject belongs to the dataset (14{,}666 new triples), which avoids publishing tautologies about the vocabularies.
+A set of SPARQL checks then looks for \texttt{owl:Nothing} members, violations of disjointness and
+\texttt{AllDifferent}, and functional-property clashes: \textbf{the dataset is consistent (0 violations)}.
+SHACL validation of asserted plus inferred data \textbf{conforms} and reports 37 warnings and 1 informational result
+(\cref{tab:shacl}); the warnings are genuine gaps in the open sources, deliberately not filled by guesswork.
+
+\begin{table}[ht]
+\centering\small
+\caption{SHACL validation report (severity \(\ge\) Warning does not block publication).}
+\label{tab:shacl}
+\begin{tabular}{lrl}
+\toprule
+Message & Count & Severity \\
+\midrule
+Missing founding year & 22 & Warning \\
+Missing province of headquarters & 12 & Warning \\
+Private institution lists a ministry as governing body & 3 & Warning \\
+Member institution located in a different province from its university & 1 & Info \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Test suite.} 100 automated tests run in continuous integration: 14 reasoning tests (each axiom of
+\cref{tab:axioms}, five tests that inject erroneous data and expect a contradiction, and one test asserting that the
+real dataset is consistent), 29 extraction tests using real Wikipedia sentences, 3 data-contract tests, 11 infobox/media
+tests, and 43 web-server tests (content negotiation, SPARQL protocol, security).
+
+% ================================================================= 8
+\section{Publication and Access}
+\label{sec:publication}
+
+\subsection{Dereferenceable URIs}
+Every one of the 2{,}241 URIs resolves on GitHub Pages to (i) an HTML page for people, with an embedded JSON-LD
+description, a Wikipedia-style infobox, introduction and history text, a mini-map and markers on every inferred value;
+(ii) \texttt{.ttl} and (iii) \texttt{.jsonld} representations announced by \texttt{<link rel="alternate">}
+(\cref{fig:resource}). Because GitHub Pages is static, content negotiation is provided by a second deployment of the
+same pages behind a Flask/Waitress server (\url{https://vnedu-lod.onrender.com}), which returns HTML, Turtle, JSON-LD,
+N-Triples or RDF/XML according to the \texttt{Accept} header. The dataset is described with VoID and DCAT (licence,
+sources, linksets, distributions, SPARQL endpoint).
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/resource.png}
+\caption{The URI of VinUni looked up in a browser: introduction and history text (with revision-level attribution),
+and an infobox generated from the RDF (logo, legal type, founding date, owner, rector, council chair, partners linked to
+Wikidata).}
+\label{fig:resource}
+\end{figure}
+
+\subsection{Querying}
+Three query channels are offered: (1) a public SPARQL~1.1 Protocol endpoint (\url{https://vnedu-lod.onrender.com/sparql})
+that supports federated queries \cite{w3c2013sparqlfed} to Wikidata and DBpedia; (2) SPARQL in the browser, where
+Oxigraph compiled to WebAssembly loads the full dataset client-side (\cref{fig:sparql}); and (3) Apache Jena Fuseki
+plus a command-line client for local use. Fifteen documented competency queries ship with the dataset (\cref{tab:cq}).
+
+\begin{figure}[ht]
+\centering
+\begin{subfigure}[t]{0.49\textwidth}\centering
+  \includegraphics[width=\textwidth]{figures/ontology.png}
+  \caption{Interactive ontology browser with instance counts.}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.49\textwidth}\centering
+  \includegraphics[width=\textwidth]{figures/sparql.png}
+  \caption{SPARQL in the browser: institutions per region and ownership, where the region is inferred.}
+  \label{fig:sparql}
+\end{subfigure}
+\caption{Ontology and query interfaces of the published site.}
+\label{fig:ui}
+\end{figure}
+
+\subsection{Securing a public SPARQL endpoint}
+An open endpoint executes arbitrary user queries, so we audited the server and reproduced two real vulnerabilities in
+the first version: a \textbf{server-side request forgery} (a query with \texttt{SERVICE <http://127.0.0.1:\ldots>} made
+the server issue requests to internal addresses) and a \textbf{SPARQL injection} through the resource path. The
+hardened server only allows \texttt{SERVICE} calls to an allow-list (Wikidata, DBpedia), rejects variable endpoints and
+\texttt{FROM} clauses, validates resource paths against the dataset's URI pattern before building queries, limits
+query length (20{,}000 characters) and execution time (30~s), returns generic error messages, and sets security
+headers. A further practical issue was that RDFLib hard-codes a User-Agent that Wikimedia rate-limits; the server
+replaces it with a descriptive one so that federated queries work. All of these behaviours are covered by tests.
+
+% ================================================================= 9
+\section{Evaluation}
+\label{sec:eval}
+
+\subsection{Dataset statistics}
+\Cref{tab:stats} and \cref{fig:charts} summarise the dataset.
+
+\begin{table}[ht]
+\centering\small
+\caption{Dataset size.}
+\label{tab:stats}
+\begin{tabular}{lr@{\hspace{1.4cm}}lr}
+\toprule
+Entities & Count & RDF & Triples \\
+\midrule
+Educational institutions & 300 & Asserted data & 20{,}446 \\
+\quad of which HEIs & 271 & Outgoing links & 3{,}674 \\
+Provinces (current / former) & 34 / 29 & Inferred (instance level) & 14{,}666 \\
+Governing bodies and companies & 50 & VoID/DCAT & 96 \\
+People (alumni / leaders) & 1{,}481 / 214 & Ontology & 629 \\
+Majors / fields / programmes & 37 / 16 / 78 & \textbf{Total served} & \textbf{39{,}507} \\
+\midrule
+Dereferenceable URIs & 2{,}241 & Entities with \texttt{owl:sameAs} & 84\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[ht]
+\centering
+\begin{subfigure}[t]{0.47\textwidth}\centering
+\begin{tikzpicture}
+\begin{axis}[ybar stacked, width=\textwidth, height=5.2cm, bar width=16pt,
+  symbolic x coords={Bắc Bộ,Nam Bộ,Trung Bộ}, xtick=data, ymin=0, ymax=150,
+  ylabel={HEIs}, legend style={font=\scriptsize, at={(0.98,0.97)}, anchor=north east, draw=none},
+  tick label style={font=\scriptsize}, label style={font=\scriptsize},
+  nodes near coords, every node near coord/.append style={font=\tiny}]
+\addplot[fill=s1!75, draw=none] coordinates {(Bắc Bộ,116) (Nam Bộ,56) (Trung Bộ,37)};
+\addplot[fill=s2!75, draw=none] coordinates {(Bắc Bộ,10) (Nam Bộ,17) (Trung Bộ,7)};
+\addplot[fill=black!25, draw=none] coordinates {(Bắc Bộ,10) (Nam Bộ,6) (Trung Bộ,4)};
+\legend{public, private, unknown}
+\end{axis}
+\end{tikzpicture}
+\caption{HEIs by region (inferred via \(\mathit{locatedIn}\circ\mathit{partOf}\)) and ownership.}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.5\textwidth}\centering
+\begin{tikzpicture}
+\begin{axis}[ybar, width=\textwidth, height=5.2cm, bar width=7pt, ymin=0, ymax=65,
+  symbolic x coords={1890s,1900s,1910s,1920s,1930s,1940s,1950s,1960s,1970s,1980s,1990s,2000s,2010s,2020s},
+  xtick=data, x tick label style={rotate=60, anchor=east, font=\tiny}, ylabel={HEIs},
+  tick label style={font=\scriptsize}, label style={font=\scriptsize},
+  nodes near coords, every node near coord/.append style={font=\tiny}]
+\addplot[fill=s3!75, draw=none] coordinates {(1890s,2) (1900s,9) (1910s,1) (1920s,2) (1930s,0) (1940s,10) (1950s,49)
+  (1960s,43) (1970s,34) (1980s,5) (1990s,28) (2000s,57) (2010s,19) (2020s,2)};
+\end{axis}
+\end{tikzpicture}
+\caption{HEIs by decade of (earliest recorded) foundation.}
+\end{subfigure}
+\caption{Two views of the data, both produced by SPARQL over the inferred graph. Hà Nội (103) and Ho Chi Minh City (58)
+host 60\% of HEIs.}
+\label{fig:charts}
+\end{figure}
+
+\subsection{Completeness}
+\Cref{fig:complete} reports the share of the 300 institutions that have each property. Identity and classification
+properties are nearly complete; scale figures (students, staff) and admission codes are sparse because the open
+sources rarely provide them -- a limitation we report rather than fill with unverifiable values.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[xbar, width=0.82\textwidth, height=8.4cm, bar width=6pt, xmin=0, xmax=100,
+  symbolic y coords={students,admission code,email,image,founding date,logo,coordinates,phone,leaders,history,website,ownership,abstract,founding year,province},
+  ytick=data, xlabel={\% of 300 institutions}, tick label style={font=\scriptsize}, label style={font=\scriptsize},
+  nodes near coords, nodes near coords align={horizontal}, every node near coord/.append style={font=\tiny},
+  enlarge y limits=0.04]
+\addplot[fill=acc!70, draw=none] coordinates {
+  (9.3,students) (20.0,admission code) (30.7,email) (32.3,image) (38.3,founding date) (49.7,logo) (58.3,coordinates)
+  (60.3,phone) (66.3,leaders) (74.3,history) (79.0,website) (85.3,ownership) (90.3,abstract) (92.7,founding year) (96.0,province)};
+\end{axis}
+\end{tikzpicture}
+\caption{Property completeness over the 300 institutions (asserted data).}
+\label{fig:complete}
+\end{figure}
+
+\subsection{Correctness against the baseline}
+We built a benchmark of 21 facts with verified answers (12 founding years, 5 headquarters provinces after the 2025
+reform, 4 governing bodies, including ones requiring inference) and ran both datasets through the same OWL~2~RL
+reasoner. \proj{} answers \textbf{21/21} correctly, the baseline \textbf{14/21} (\cref{tab:bench}). The baseline errors
+are typical of single-source extraction from free text: a year mentioned in the article but unrelated to the founding
+(Hanoi Law University ``1727''; Naval Academy ``2022''), missing entities, and an obsolete or wrong province.
+
+\begin{table}[ht]
+\centering\small
+\caption{Benchmark of 21 verified facts (both datasets reasoned with the same engine).}
+\label{tab:bench}
+\begin{tabularx}{\textwidth}{lccX}
+\toprule
+Category & Baseline & \proj{} & Examples of baseline errors \\
+\midrule
+Founding year (12) & 6 & 12 & Hanoi Law Univ.\ 1727 (true 1979); Naval Academy 2022 (1955); An Giang Univ.\ 1976 (1999);
+  Hanoi Nat.\ Univ.\ of Education 1950 (1951); 2 institutions missing \\
+Province after 2025 (5) & 4 & 5 & Thu Dau Mot Univ.\ placed in Bình Phước (true: Bình Dương \(\to\) Ho Chi Minh City) \\
+Governing body (4) & 4 & 4 & -- \\
+\midrule
+\textbf{Total (21)} & \textbf{14} & \textbf{21} & \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Beyond these facts, aggregate questions reveal modelling errors in the baseline: it lists 62 members of Vietnam
+National University, Hanoi (true: 12, because ``member of'' and ``governed by the Ministry'' were not distinguished)
+and 40 military schools (21 after correctly typing governing bodies), and it cannot express public/private ownership,
+regions, dissolved institutions or admission codes at all.
+
+\subsection{Logical consistency}
+Under OWL~2~RL materialisation the baseline produces \textbf{349 contradictions} (344 from the redefined domain of
+\texttt{geo:lat}, 5 institutions with two founding years); \proj{} produces \textbf{none}. The baseline also equated its
+classes with external ones (\texttt{owl:equivalentClass} to \texttt{dbo:University} and
+\texttt{schema:CollegeOrUniversity}) and declared a sub-property of \texttt{owl:sameAs}, which is not allowed in OWL~DL.
+
+\subsection{Link quality}
+\paragraph{Identifier-based vs.\ string-similarity linking.} To justify the linking strategy we simulated a Silk-style
+\cite{volz2009silk} matcher -- Jaccard similarity over lower-cased tokens of English names, best candidate above a
+threshold \(\theta\) -- on 86 HEIs whose correct DBpedia resource is known from identifiers (\cref{tab:linkeval}). At
+the threshold used by the hust-semantic-web baseline (\(\theta=0.2\)) one link in six is wrong; raising \(\theta\) buys
+precision at a steep cost in recall. The root cause is structural: Vietnamese university names share most tokens.
+\emph{Hanoi University of Science and Technology} and \emph{University of Science and Technology of Hanoi} are two
+different institutions with \emph{identical} token sets (Jaccard \(=1.0\)); no threshold separates them, whereas shared
+identifiers (QID, ROR) do.
+
+\begin{table}[ht]
+\centering\small
+\caption{String-similarity linking vs.\ identifier-based linking on 86 HEIs (ground truth from identifiers).}
+\label{tab:linkeval}
+\begin{tabular}{lrrrrrr}
+\toprule
+Method & \(\theta\) & Links & Wrong & Precision & Recall & F1 \\
+\midrule
+Token Jaccard (Silk-style) & 0.2 & 85 & 13 & 84.7\% & 83.7\% & 0.842 \\
+                           & 0.4 & 80 & 8  & 90.0\% & 83.7\% & 0.867 \\
+                           & 0.6 & 76 & 6  & 92.1\% & 81.4\% & 0.864 \\
+                           & 0.8 & 68 & 4  & 94.1\% & 74.4\% & 0.831 \\
+                           & 1.0 & 58 & 1  & 98.3\% & 66.3\% & 0.792 \\
+\midrule
+Shared identifiers (this work) & -- & 86 & 0 & 100\% & 100\% & 1.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Link validity.} We dereferenced a random sample of 30 links per target (150 links). All 150 returned
+HTTP~200; Wikidata, DBpedia and GeoNames returned RDF when RDF was requested; 30/30 ROR records were the correct
+Vietnamese organisation; and 29/30 Wikidata labels matched (the remaining item is the correct entity under a former
+name).
+
+\paragraph{External usability.} Acting as an external client, we parsed the live Turtle and embedded JSON-LD of
+sample resources (identical, 192 triples for HUST), followed all 162 internal URIs mentioned on that page (162/162
+dereferenceable), and parsed 40 randomly sampled resources out of 2{,}241 (40/40 valid RDF).
+
+\subsection{Competency questions}
+\Cref{tab:cq} lists the documented queries. Nine of them depend on inferred triples; two are federated and retrieve
+facts the dataset does not store (province area from Wikidata to compute HEI density; logos and mottos from DBpedia),
+which is the practical benefit of the \texttt{owl:sameAs} links.
+
+\begin{table}[ht]
+\centering\small
+\caption{Competency questions shipped with the dataset (\texttt{queries/*.rq}).}
+\label{tab:cq}
+\begin{tabularx}{\textwidth}{rXcl}
+\toprule
+\# & Question & Inference & Example answer \\
+\midrule
+1 & HEIs per post-2025 province (old-province records mapped to new) & \checkmark & Hà Nội 103, HCMC 58 \\
+2 & HEIs per region \(\times\) ownership & \checkmark & Bắc Bộ 136 (116 public) \\
+3 & Military and police institutions & \checkmark & 21 + 7 \\
+4 & Lookup by admission code (BKA, KHA, \ldots) & & BKA \(\to\) HUST, public, Hà Nội \\
+5 & Universities and their member institutions & \checkmark & VNU Hanoi: 12 \\
+6 & Old provinces merged into each new province & & Res.~202/2025 \\
+7 & Full profile of HUST including inferred facts and links & \checkmark & 192 triples \\
+8 & Institutions training IT, by region & \checkmark & (sample programme data) \\
+9 & Institutions with most notable alumni & \checkmark & ranked list \\
+10 & Leaders of national and regional universities & \checkmark & 5 universities \\
+11 & Link statistics per target dataset & & \cref{tab:links} \\
+12 & \textbf{Federated}: HEI density per 1{,}000 km\(^2\) using Wikidata areas & & Hà Nội 30.7 \\
+13 & \textbf{Federated}: logo, motto, students from DBpedia & & HUST motto \\
+14 & Training-field catalogue with \texttt{skos:closeMatch} & & 16 fields \\
+15 & Data quality: share of HEIs with each property & & \cref{fig:complete} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Performance}
+\Cref{tab:perf} reports measured latencies. In the browser the whole dataset (39{,}507 triples) loads in 2.3~s and the
+competency queries run in 2--34~ms. On the public server (free tier, single shared CPU, rdflib in memory, 121~MB
+resident memory, 3.5~s start-up) typical queries take 1--3.5~s and URI dereferencing about 0.2~s. Federated queries are
+dominated by the remote endpoints.
+
+\begin{table}[ht]
+\centering\small
+\caption{Measured latency (median of 5 runs unless noted).}
+\label{tab:perf}
+\begin{tabular}{llr}
+\toprule
+Channel & Operation & Time \\
+\midrule
+Browser (Oxigraph/WASM) & load 39{,}507 triples & 2.3 s \\
+                        & competency queries 1--10 & 2--34 ms \\
+Public server (rdflib)  & Q01 per-province aggregation & 1.7 s \\
+                        & Q02 region \(\times\) ownership & 1.1 s \\
+                        & Q09 alumni ranking & 3.5 s \\
+                        & dereference URI as Turtle / HTML & 0.18 / 0.22 s \\
+                        & Q12 federated (Wikidata) / Q13 (DBpedia), single run & 5.9 / 8.7 s \\
+Local server (Waitress) & 20 concurrent dereferences & 0.83 s total \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Security}
+All attacks reproduced against the first server version were re-run against the deployed endpoint and are rejected:
+\texttt{SERVICE} to a cloud metadata address and to localhost (HTTP~400), SPARQL injection through the resource path
+(404), over-long queries (413) and path traversal (400). Normal federated queries to Wikidata and DBpedia still
+succeed.
+
+\subsection{Five-star compliance}
+\begin{table}[ht]
+\centering\small
+\caption{Five-star assessment of the published dataset.}
+\label{tab:stars}
+\begin{tabularx}{\textwidth}{lXX}
+\toprule
+Star & Requirement & Evidence \\
+\midrule
+\(\star\) & On the Web, open licence & Public at \base{}; CC BY-SA 4.0 (required by Wikipedia share-alike) declared in DCAT, licence file and every bronze snapshot \\
+\(\star\star\) & Machine-readable & JSON, CSV, RDF \\
+\(\star\star\star\) & Non-proprietary formats & Turtle, N-Triples, JSON-LD, CSV \\
+\(\star\star\star\star\) & W3C standards, URIs & RDF, OWL~2~RL, SHACL, SPARQL~1.1, PROV-O, VoID, DCAT, JSON-LD; 2{,}241 HTTP URIs that dereference (verified externally) \\
+\(\star\star\star\star\star\) & Linked to other data & 3{,}674 links to Wikidata, DBpedia, ROR, GeoNames, Wikipedia, verified (150/150 sample); federated queries exploit them \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% ================================================================= 10
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{Lessons learned.}
+(1) \emph{Most reasoning failures were design failures, not data failures}: a single domain declaration on an
+external property caused 98\% of the baseline's contradictions. Keeping the ontology in OWL~2~RL, aligning instead of
+equating, and moving completeness checks to SHACL removed all of them. (2) \emph{Two independent sources are worth more
+than one large source}: most baseline errors were values that one source states and another contradicts; logging
+conflicts makes these visible. (3) \emph{For identity, identifiers beat similarity}: with name-similarity matching the
+best achievable F1 on our data was 0.867, while identifiers gave exact links. (4) \emph{Publishing is engineering}:
+the first public endpoint had an SSRF and an injection vulnerability, and federated queries failed because of a
+third-party User-Agent policy; neither was visible until the system was tested as an external client would use it.
+
+\paragraph{Limitations.}
+\begin{itemize}
+  \item \textbf{Coverage is bounded by the open sources.} There is no machine-readable official register of
+        Vietnamese HEIs, so completeness cannot be proven; private institutions (35 identified) are probably
+        under-represented, and 24 HEIs have unknown ownership.
+  \item \textbf{Sparse quantitative attributes:} students (9\%), admission codes (20\%), staff counts.
+  \item \textbf{Programmes are sample data:} 37 majors and 78 programmes were curated by hand for 16 institutions;
+        queries about ``who trains major X'' are illustrative, not statistics.
+  \item \textbf{Limited temporal modelling:} leader terms, dated student counts and renaming events are not modelled
+        as time-indexed facts.
+  \item \textbf{Hosting:} primary URIs are on static hosting; content negotiation and the SPARQL endpoint run on a
+        free-tier server that sleeps when idle and keeps the graph in memory, which suits a dataset of this size but
+        not heavy load. Timed-out queries cannot be forcibly stopped by rdflib.
+\end{itemize}
+
+\paragraph{Threats to validity.}
+The correctness benchmark is small (21 facts) and biased towards well-known institutions, so it demonstrates the kind
+of errors avoided rather than estimating an error rate for the whole dataset; a random sample of about 50 institutions
+checked against official websites would give such an estimate. Wikipedia and Wikidata are community-edited and may be
+outdated (e.g.\ leaders); revision-level provenance makes every value auditable but does not make it correct.
+Server latencies were measured on a shared free-tier instance and vary with load.
+
+% ================================================================= 11
+\section{Conclusion and Future Work}
+\label{sec:conclusion}
+
+\proj{} shows that a small team can publish a genuinely five-star dataset by combining careful ontology design,
+multi-source integration with explicit provenance and quality gates, identifier-based linking, and an engineering
+approach to publication. The resulting knowledge graph of 300 institutions and 39{,}507 triples is logically
+consistent, answers all benchmark facts correctly, supports aggregate, multi-hop and federated questions, and is usable
+by external clients through dereferenceable URIs and a public SPARQL endpoint.
+
+Future work includes: integrating the Ministry of Education and Training's official lists and admission data to
+measure and improve coverage; modelling time-indexed facts (leadership terms, enrolment by year, renaming and merger
+events) with an n-ary or RDF-star pattern; replacing the sample programme data with programme catalogues; registering
+a persistent namespace (e.g.\ \texttt{w3id.org/vnedu}) with server-side content negotiation; and contributing verified
+corrections (e.g.\ missing sitelinks and ambiguous DBpedia mappings found in this work) back to Wikidata.
+
+% ---------------------------------------------------------------- references
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+% ================================================================= appendix
+\appendix
+\section{Namespaces}
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{11.4cm}}
+\toprule
+Prefix & IRI \\
+\midrule
+\texttt{vnedu:} & \url{https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#} \\
+\texttt{university:}, \texttt{province:}, \ldots & \url{https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/...} \\
+\texttt{schema:} & \url{https://schema.org/} \\
+\texttt{dbo:} & \url{http://dbpedia.org/ontology/} \\
+\texttt{dbr:} & \url{http://dbpedia.org/resource/} \\
+\texttt{wd:} & \url{http://www.wikidata.org/entity/} \\
+\texttt{prov:} & \url{http://www.w3.org/ns/prov#} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Example federated query}
+\begin{code}
+# HEI density per province: our data + area fetched from Wikidata through owl:sameAs
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX wdt:   <http://www.wikidata.org/prop/direct/>
+SELECT ?tinh (COUNT(DISTINCT ?u) AS ?so_co_so) ?dien_tich_km2 WHERE {
+  ?u a vnedu:HigherEducationInstitution ; vnedu:locatedIn ?p .
+  ?p a vnedu:Province ; rdfs:label ?tinh ; owl:sameAs ?wd .
+  FILTER(LANG(?tinh) = "vi" && STRSTARTS(STR(?wd), "http://www.wikidata.org/entity/"))
+  OPTIONAL { SERVICE <https://query.wikidata.org/sparql> { ?wd wdt:P2046 ?dien_tich_km2 } }
+} GROUP BY ?tinh ?dien_tich_km2 ORDER BY DESC(?so_co_so)
+\end{code}
+
+\section{Reproducing the results}
+\begin{code}
+pip install -r requirements.txt
+powershell -File run_all.ps1          # collect -> integrate -> RDF -> link -> reason -> report -> publish -> tests
+python -m pytest tests -q             # 100 tests
+python app/server.py --prod           # local server with the same interface; Fuseki: fuseki/run_fuseki.ps1
+curl -H "Accept: text/turtle" https://vnedu-lod.onrender.com/resource/university/truong-dai-hoc-vinuni
+\end{code}
+
+\end{document}

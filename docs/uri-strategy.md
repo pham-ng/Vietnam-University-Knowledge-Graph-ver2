@@ -13,7 +13,7 @@ them with owl:sameAs".
 | Mức | Tái sử dụng | Số liệu |
 |---|---|---|
 | Từ vựng (thuộc tính) | `rdfs:label`, `schema:hasOccupation`, `schema:gender`, `prov:wasDerivedFrom`, `foaf:name`, `geo:lat/long`, `skos:prefLabel`… | **74%** số triple dùng thuộc tính của từ vựng chuẩn (15.083/20.446) |
-| Lớp | Mọi lớp `vnedu:` đều được căn chỉnh `rdfs:subClassOf` sang `schema:`, `foaf:`, `dbo:` | 76 tiên đề căn chỉnh; sau suy luận mỗi cơ sở cũng có kiểu `schema:CollegeOrUniversity`, `dbo:University`… |
+| Lớp | Mọi lớp `vnedu:` đều được căn chỉnh `rdfs:subClassOf` sang `schema:`, `foaf:`, `dbo:` | 26 tiên đề căn chỉnh (rdfs:subClassOf/subPropertyOf sang từ vựng ngoài); sau suy luận mỗi cơ sở cũng có kiểu `schema:CollegeOrUniversity`, `dbo:University`… |
 | **Giá trị** | Nghề nghiệp, giới tính: dùng **thẳng URI Wikidata** (`wd:Q82955` = politician, `wd:Q6581097` = male) | **222 URI Wikidata** được dùng lại làm giá trị trong 2.523 triple (cùng 5 URI đối tác `dbo:affiliation`); **không** tạo `vnedu:occupation/…` |
 | Danh mục pháp lý | Cá thể `vnedu:MinistryOfNationalDefence` có `owl:sameAs wd:Q6866771` | — |
 

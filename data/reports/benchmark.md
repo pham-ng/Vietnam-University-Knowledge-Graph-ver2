@@ -1,7 +1,7 @@
 # Bộ câu hỏi kiểm chứng: repo cũ (vio) vs VN-Edu 2.0
 
 Cả hai dataset được suy luận OWL 2 RL bằng cùng bộ máy (owlrl). ✅ đúng · ⚠️ đúng một phần / thiếu · ❌ sai hoặc không trả lời được.
-**Kết quả câu hỏi có đáp án chuẩn (A–C): repo cũ 13/21 · VN-Edu 2.0 21/21**
+**Kết quả câu hỏi có đáp án chuẩn (A–C): repo cũ 14/21 · VN-Edu 2.0 21/21**
 
 
 ## A. Năm thành lập
@@ -15,7 +15,7 @@ Cả hai dataset được suy luận OWL 2 RL bằng cùng bộ máy (owlrl). �
 | Học viện Hải quân | 1955 | 2022 | ❌ | 1955 | ✅ |
 | Trường Đại học An Giang, Đại học Quốc gia Thành phố Hồ Chí Minh | 1999 | 1976 | ❌ | 1999 | ✅ |
 | Đại học Cần Thơ | 1966 | ∅ (không có thực thể) | ❌ | 1966 | ✅ |
-| Đại học Huế | 1957 | ∅ (không có giá trị) | ❌ | 1957 | ✅ |
+| Đại học Huế | 1957 | 1957 | ✅ | 1957 | ✅ |
 | Học viện Kỹ thuật Quân sự | 1966 | 1966 | ✅ | 1966 | ✅ |
 | Trường Đại học Sư phạm Hà Nội | 1951 | 1950 | ❌ | 1951 | ✅ |
 | Đại học Kinh tế Thành phố Hồ Chí Minh | 1976 | 1976 | ✅ | 1976 | ✅ |

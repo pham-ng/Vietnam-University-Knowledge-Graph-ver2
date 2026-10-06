@@ -9,3 +9,13 @@ data/bronze/http_cache/
 # Site tĩnh là SẢN PHẨM BUILD (scripts/step7_publish.py) — GitHub Actions tự build và đăng lên Pages, không commit
 site/
 site_server/
+# Tệp trung gian khi biên dịch báo cáo LaTeX (giữ main.tex, references.bib, figures/, PDF cuối)
+docs/report/*.aux
+docs/report/*.log
+docs/report/*.out
+docs/report/*.toc
+docs/report/*.bbl
+docs/report/*.blg
+docs/report/*.fls
+docs/report/*.fdb_latexmk
+docs/report/main.pdf
