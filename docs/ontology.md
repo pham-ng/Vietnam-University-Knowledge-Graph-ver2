@@ -1,6 +1,6 @@
 # Sơ đồ ontology VN-Edu
 
-*Sinh tự động từ `ontology/vnedu.ttl` bởi `scripts/gen_docs.py`* — 34 lớp, 27 thuộc tính quan hệ, 20 thuộc tính dữ liệu, 629 triple.
+*Sinh tự động từ `ontology/vnedu.ttl` bởi `scripts/gen_docs.py`* — 34 lớp, 33 thuộc tính quan hệ, 20 thuộc tính dữ liệu, 769 triple.
 
 Mũi tên rỗng = kế thừa (`rdfs:subClassOf`); mũi tên có nhãn = thuộc tính quan hệ (domain → range).
 
@@ -65,19 +65,36 @@ classDiagram
   HigherEducationInstitution <|-- UniversitySchool
   EducationalOrganization <|-- VocationalCollege
   Person --> EducationalOrganization : alumnusOf
+  Person --> AdministrativeUnit : bornIn
   Branch --> HigherEducationInstitution : branchOf
+  EducationalOrganization --> Person : councilChair
+  EducationalOrganization --> Person : director
   EducationalOrganization --> GoverningBody : governedBy
+  GoverningBody --> EducationalOrganization : governs
+  EducationalOrganization --> Person : hasAlumnus
+  HigherEducationInstitution --> Branch : hasBranch
+  Organization --> Person : hasLeader
+  HigherEducationInstitution --> EducationalOrganization : hasMember
+  AdministrativeUnit --> AdministrativeUnit : hasPart
   Major --> FieldOfStudy : inField
   Person --> Organization : leads
   Organization --> AdministrativeUnit : locatedIn
   EducationalOrganization --> HigherEducationInstitution : memberOf
+  Province --> FormerProvince : mergedFrom
   FormerProvince --> Province : mergedInto
+  Person --> Country : nationality
   AcademicProgram --> Major : ofMajor
+  AcademicProgram --> EducationalOrganization : offeredBy
   EducationalOrganization --> AcademicProgram : offersProgram
   EducationalOrganization --> Company : ownedBy
   EducationalOrganization --> OwnershipType : ownership
   AdministrativeUnit --> AdministrativeUnit : partOf
+  EducationalOrganization --> Organization : predecessor
+  EducationalOrganization --> Person : rector
+  EducationalOrganization --> GoverningBody : stateManagedBy
   GoverningBody --> GoverningBody : subordinateTo
+  Organization --> Organization : successor
+  EducationalOrganization --> Major : trainsMajor
 ```
 
 ## Tiên đề phục vụ suy luận
@@ -92,6 +109,8 @@ classDiagram
 | Phân loại (⊑) | EducationalOrganization ⊓ ∃dissolutionYear.gYear ⊑ **DefunctInstitution** |
 | Phân loại (⊑) | Person ⊓ ∃alumnusOf.EducationalOrganization ⊑ **Alumnus** |
 | Phân loại (⊑) | Person ⊓ ∃leads.EducationalOrganization ⊑ **InstitutionLeader** |
+| Chuỗi thuộc tính | bornIn ∘ mergedInto ⊑ **bornIn** |
+| Chuỗi thuộc tính | bornIn ∘ partOf ⊑ **bornIn** |
 | Chuỗi thuộc tính | governedBy ∘ subordinateTo ⊑ **governedBy** |
 | Chuỗi thuộc tính | locatedIn ∘ partOf ⊑ **locatedIn** |
 | Chuỗi thuộc tính | locatedIn ∘ mergedInto ⊑ **locatedIn** |
@@ -114,6 +133,7 @@ classDiagram
 | Nghịch đảo | **mergedInto** ⇄ **mergedFrom** |
 | Nghịch đảo | **offersProgram** ⇄ **offeredBy** |
 | Nghịch đảo | **partOf** ⇄ **hasPart** |
+| Nghịch đảo | **predecessor** ⇄ **successor** |
 | Rời nhau | University ⊥ UniversitySchool ⊥ Academy ⊥ OfficerSchool |
 | Rời nhau | HigherEducationInstitution ⊥ Branch ⊥ VocationalCollege |
 | Rời nhau | EducationalOrganization ⊥ GoverningBody ⊥ Company |

@@ -78,6 +78,7 @@ def main() -> None:
     referenced = set()
     for f in facts.values():
         referenced |= set(f.get("parents", [])) | {r["v"] for r in f.get("leaders", [])}
+        referenced |= set(f.get("replaces", [])) | set(f.get("replaced_by", [])) | set(f.get("member_of_assoc", []))
     save("wd_entities.json", wd.labels_of(referenced - set(facts)))
 
     print("[4/5] Tỉnh/thành ...")

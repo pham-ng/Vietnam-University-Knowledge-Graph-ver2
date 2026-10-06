@@ -185,6 +185,19 @@ def main() -> None:
             g.add((s, VNEDU.governedBy, u_body[b]))
         for b in i["owned_by"]:
             g.add((s, VNEDU.ownedBy, u_body[b]))
+        for b in i.get("state_managed_by", []):
+            g.add((s, VNEDU.stateManagedBy, u_body[b]))
+        # Lịch sử tổ chức: trỏ tới cơ sở trong dataset nếu có, nếu không thì tới URI Wikidata (tái sử dụng)
+        qid_to_inst = {x["qid"]: kk for kk, x in insts.items() if x.get("qid")}
+        for r in i.get("associations", []):          # hiệp hội: dùng thẳng schema:memberOf + URI Wikidata
+            add_reused(g, s, SCHEMA.memberOf, {"qid": r["qid"], "vi": r["name"]})
+        for prop, refs in ((VNEDU.predecessor, i.get("predecessors", [])), (VNEDU.successor, i.get("successors", []))):
+            for r in refs:
+                if r["qid"] in qid_to_inst:
+                    if qid_to_inst[r["qid"]] != k:
+                        g.add((s, prop, u_inst[qid_to_inst[r["qid"]]]))
+                else:
+                    add_reused(g, s, prop, {"qid": r["qid"], "vi": r["name"]})
         if i["qid"]:
             g.add((s, PROV.wasDerivedFrom, WD[i["qid"]]))
         if i["viwiki"] and i["viwiki_revid"]:
@@ -209,6 +222,16 @@ def main() -> None:
             add_reused(g, s, SCHEMA.hasOccupation, o)
         for sch in p["alumnus_of"]:
             g.add((s, VNEDU.alumnusOf, u_inst[sch]))
+        # Nơi sinh: URI Wikidata của địa danh (tái sử dụng) + tỉnh của dataset chứa nơi đó (cạnh trong đồ thị)
+        if p.get("birth_place"):
+            add_reused(g, s, VNEDU.birthPlace, p["birth_place"])
+        if p.get("born_in") and p["born_in"] in u_prov:
+            g.add((s, VNEDU.bornIn, u_prov[p["born_in"]]))
+        for c in p.get("nationality", []):
+            if c["qid"] == "Q881":                       # Việt Nam -> thực thể quốc gia của dataset
+                g.add((s, VNEDU.nationality, country))
+            else:
+                add_reused(g, s, VNEDU.nationality, c)
         for l in p["leads"]:
             role_prop = {"rector": VNEDU.rector, "director": VNEDU.director, "chair": VNEDU.councilChair}[l["role"]]
             g.add((u_inst[l["org"]], role_prop, s))

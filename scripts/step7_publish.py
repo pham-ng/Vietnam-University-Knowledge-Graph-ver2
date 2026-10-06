@@ -232,6 +232,17 @@ def institution_panels() -> dict[str, dict]:
         row("Tổ chức mẹ", "<br>".join(a(umap["body"][b], bodies[b]["name_vi"]) for b in i["owned_by"]))
         row("Thành viên của", "<br>".join(a(umap["institution"][m], insts[m]["name_vi"]) for m in i["member_of"]))
         row("Phân hiệu của", "<br>".join(a(umap["institution"][m], insts[m]["name_vi"]) for m in i["branch_of"]))
+        row("Quản lý nhà nước", "<br>".join(a(umap["body"][b], bodies[b]["name_vi"]) for b in i.get("state_managed_by", [])))
+        qid_inst0 = {x["qid"]: kk for kk, x in insts.items() if x.get("qid")}
+
+        def org_ref(r):
+            if r["qid"] in qid_inst0:
+                return a(umap["institution"][qid_inst0[r["qid"]]], insts[qid_inst0[r["qid"]]]["name_vi"])
+            return (f'<a href="https://www.wikidata.org/wiki/{r["qid"]}">{esc(r["name"])}</a> '
+                    '<span class="pill ext">Wikidata</span>')
+        row("Tiền thân", "<br>".join(org_ref(r) for r in i.get("predecessors", [])))
+        row("Thành viên hiệp hội", "<br>".join(org_ref(r) for r in i.get("associations", [])))
+        row("Đơn vị kế tục", "<br>".join(org_ref(r) for r in i.get("successors", [])))
         for role, label in (("rector", "Hiệu trưởng"), ("director", "Giám đốc"), ("chair", "Chủ tịch hội đồng trường")):
             row(label, "<br>".join(person(l) for l in i["leaders"] if l["role"] == role))
         qid_inst = {x["qid"]: kk for kk, x in insts.items() if x.get("qid")}

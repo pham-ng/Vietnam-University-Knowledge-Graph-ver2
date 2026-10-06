@@ -145,10 +145,10 @@ dùng chung (QID, ROR) mới làm được.
 ## Bước 5 — Suy luận, kiểm tra và truy vấn
 
 * [scripts/step5_reason.py](../scripts/step5_reason.py) gồm 4 việc:
-  - materialize bằng **owlrl**, sinh 14.666 triple mới về cá thể;
+  - materialize bằng **owlrl**, sinh 20.990 triple mới về cá thể;
   - kiểm tra nhất quán (disjoint, AllDifferent, thuộc tính hàm, `owl:Nothing`); kết quả hiện tại là **nhất quán**;
   - kiểm định **SHACL** ([shapes/vnedu-shapes.ttl](../shapes/vnedu-shapes.ttl)): `conforms = True`, kèm 34 cảnh báo thiếu
-    thông tin và 3 cảnh báo "trường tư thục mà infobox ghi Bộ GD&ĐT là chủ quản";
+    thông tin và 0 cảnh báo "trường tư thục mà infobox ghi Bộ GD&ĐT là chủ quản";
   - gộp tất cả thành `vnedu-all.ttl`.
   Không đưa `owl:sameAs` ra ngoài vào suy luận, vì làm vậy sẽ nhân bản mọi triple sang URI của Wikidata.
 * **Fuseki**: [fuseki/run_fuseki.ps1](../fuseki/run_fuseki.ps1) (hoặc `fuseki/start.cmd`, `fuseki/docker-compose.yml`
@@ -204,7 +204,7 @@ rdflib đều gửi từng URI đã biết sang endpoint ngoài (bind join) thay
 | `/` | thống kê (theo tỉnh 2025, miền × sở hữu, thập kỷ thành lập, loại hình, chủ quản, liên kết), chỉ số chất lượng |
 | `map` | bản đồ Leaflet: điểm theo miền, lớp mật độ theo tỉnh, lọc theo sở hữu/loại hình, popup dẫn tới URI |
 | `explore` | tra cứu không dấu, lọc, sắp xếp, **xuất CSV** |
-| `sparql` | **SPARQL 1.1 trong trình duyệt** (Oxigraph WebAssembly) trên toàn bộ 39.507 triple — không cần máy chủ |
+| `sparql` | **SPARQL 1.1 trong trình duyệt** (Oxigraph WebAssembly) trên toàn bộ 48.428 triple — không cần máy chủ |
 | `download/` | dump Turtle, N-Triples, ZIP, shapes, JSON Schema |
 
 GitHub Pages là hosting tĩnh nên không có content negotiation phía máy chủ; máy đọc lấy RDF bằng JSON-LD nhúng trong

@@ -142,3 +142,45 @@ def test_real_dataset_is_consistent():
         pytest.skip("chưa chạy pipeline")
     g = load_ontology() + Graph().parse(p)
     assert consistency(reason(g)) == []
+
+
+# ------------------------------------------------------------------ ontology 2.1
+
+def test_birthplace_chain_through_2025_merger(onto):
+    """Người sinh ở Bình Dương (tỉnh cũ) => sinh ra tại TP.HCM, Nam Bộ, Việt Nam (bornIn ∘ mergedInto, bornIn ∘ partOf)."""
+    p, bd, hcm, nb, vn = R.p, R.bd, R.hcm, R.nb, R.vn
+    c = closure_of(onto, [
+        (p, RDF.type, V.Person), (p, V.bornIn, bd),
+        (bd, RDF.type, V.FormerProvince), (bd, V.mergedInto, hcm),
+        (hcm, RDF.type, V.Province), (hcm, V.partOf, nb), (nb, RDF.type, V.Region), (nb, V.partOf, vn)])
+    for place in (hcm, nb, vn):
+        assert (p, V.bornIn, place) in c
+
+
+def test_predecessor_successor_inverse_and_alignment(onto):
+    """predecessor ↔ successor là nghịch đảo; căn chỉnh sang dbo:predecessor."""
+    new, old = R.new, R.old
+    c = closure_of(onto, [(new, RDF.type, V.UniversitySchool), (new, V.predecessor, old)])
+    DBO = Namespace("http://dbpedia.org/ontology/")
+    assert (old, V.successor, new) in c
+    assert (new, DBO.predecessor, old) in c
+    assert (old, RDF.type, V.Organization) in c
+
+
+def test_state_management_is_not_governing_body(onto):
+    """Trường tư chịu quản lý nhà nước của Bộ nhưng KHÔNG có cơ quan chủ quản -> vẫn là tư thục, không mâu thuẫn."""
+    u, moet = R.priv, R.moet
+    c = closure_of(onto, [(u, RDF.type, V.UniversitySchool), (u, V.ownership, V.PrivateOwnership),
+                          (u, V.stateManagedBy, moet), (moet, RDF.type, V.Ministry)])
+    assert (u, RDF.type, V.PrivateInstitution) in c
+    assert (u, V.governedBy, moet) not in c
+    assert consistency(c) == []
+
+
+def test_every_object_property_has_domain_and_range(onto):
+    """Ontology 2.1: mọi quan hệ của vnedu: đều khai báo domain và range (trừ website/birthPlace trỏ ra ngoài)."""
+    from rdflib.namespace import RDFS
+    missing = [str(p) for p in onto.subjects(RDF.type, OWL.ObjectProperty) if str(p).startswith(str(V))
+               and str(p).split("#")[-1] not in ("website", "birthPlace")
+               and ((p, RDFS.domain, None) not in onto or (p, RDFS.range, None) not in onto)]
+    assert missing == []

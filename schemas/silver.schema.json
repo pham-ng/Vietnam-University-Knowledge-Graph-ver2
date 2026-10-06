@@ -50,6 +50,10 @@
         "telephone": { "type": "string", "maxLength": 30 },
         "campus": { "type": "string", "maxLength": 120 },
         "funding": { "type": "string", "maxLength": 120 },
+        "predecessors": { "type": "array", "items": { "$ref": "#/$defs/orgRef" } },
+        "successors": { "type": "array", "items": { "$ref": "#/$defs/orgRef" } },
+        "associations": { "type": "array", "items": { "$ref": "#/$defs/orgRef" } },
+        "state_managed_by": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
         "partners": { "type": "array", "items": { "type": "object", "required": ["qid", "name"],
                       "properties": { "qid": { "$ref": "#/$defs/qid" }, "name": { "$ref": "#/$defs/nonEmpty" } } } },
         "abstract": { "type": "string" },
@@ -70,6 +74,15 @@
           }
         }
       }
+    },
+
+    "orgRef": {
+      "type": "object", "required": ["qid", "name"],
+      "properties": { "qid": { "$ref": "#/$defs/qid" }, "name": { "$ref": "#/$defs/nonEmpty" } }
+    },
+    "wdRef": {
+      "type": ["object", "null"], "required": ["qid"],
+      "properties": { "qid": { "$ref": "#/$defs/qid" }, "en": { "type": "string" }, "vi": { "type": "string" } }
     },
 
     "media": {
@@ -103,6 +116,9 @@
       "properties": {
         "qid": { "$ref": "#/$defs/qidOrEmpty" },
         "birth_date": { "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$" },
+        "birth_place": { "$ref": "#/$defs/wdRef" },
+        "born_in": { "anyOf": [{ "$ref": "#/$defs/qid" }, { "type": "null" }] },
+        "nationality": { "type": "array", "items": { "$ref": "#/$defs/wdRef" } },
         "alumnus_of": { "type": "array", "items": { "type": "string" } },
         "leads": { "type": "array", "items": { "type": "object", "required": ["org", "role"] } }
       }

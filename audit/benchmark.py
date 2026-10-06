@@ -32,19 +32,18 @@ def rows(g, q):
 
 
 def find(g, prefix, name):
-    """URI của cơ sở có nhãn tiếng Việt khớp tên (bỏ dấu)."""
+    """MỌI URI có nhãn tiếng Việt khớp tên (bỏ dấu). Repo cũ có nhiều thực thể trùng nhãn (trường + Site...):
+    lấy tất cả để kết quả tất định (trước đây lấy thực thể đầu tiên -> điểm thay đổi giữa các lần chạy)."""
     key = vn_key(name)
-    for s, lab in g.query(prefix + 'SELECT ?s ?l WHERE { ?s rdfs:label ?l FILTER(LANG(?l) = "vi") }'):
-        if vn_key(str(lab)) == key:
-            return s
-    return None
+    return sorted({s for s, lab in g.query(prefix + 'SELECT ?s ?l WHERE { ?s rdfs:label ?l FILTER(LANG(?l) = "vi") }')
+                   if vn_key(str(lab)) == key})
 
 
 def attr(g, prefix, name, path):
-    s = find(g, prefix, name)
-    if s is None:
+    subjects = find(g, prefix, name)
+    if not subjects:
         return "∅ (không có thực thể)"
-    vals = sorted({r[0] for r in rows(g, prefix + f"SELECT ?v WHERE {{ <{s}> {path} ?x . OPTIONAL {{ ?x rdfs:label ?l FILTER(LANG(?l)='vi') }} BIND(COALESCE(?l, ?x) AS ?v) }}")})
+    vals = sorted({r[0] for s in subjects for r in rows(g, prefix + f"SELECT ?v WHERE {{ <{s}> {path} ?x . OPTIONAL {{ ?x rdfs:label ?l FILTER(LANG(?l)='vi') }} BIND(COALESCE(?l, ?x) AS ?v) }}")})
     return " · ".join(v[:4] if path.endswith("foundingYearOrg") or path.endswith("foundingYear") else v for v in vals) or "∅ (không có giá trị)"
 
 

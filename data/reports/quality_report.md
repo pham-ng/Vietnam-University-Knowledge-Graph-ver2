@@ -6,23 +6,23 @@
 
 | Tầng | Tệp | Số lượng | SHA-256 | Tạo lúc |
 |---|---|---|---|---|
-| bronze | `data/bronze/dbp_years.json` | 72 records | `7a669856282b` | 2026-10-06T15:12:49 |
-| bronze | `data/bronze/viwiki_images.json` | 280 records | `25e5393d6f99` | 2026-10-06T15:13:09 |
-| bronze | `data/bronze/viwiki_links.json` | 80 records | `d80ec77b0f91` | 2026-10-06T15:12:43 |
-| bronze | `data/bronze/viwiki_pages.json` | 279 records | `c210a0fb69ca` | 2026-10-06T15:12:40 |
-| bronze | `data/bronze/wd_alumni.json` | 1,531 records | `05c0781d29f8` | 2026-10-06T15:13:10 |
-| bronze | `data/bronze/wd_entities.json` | 5 records | `e52e8701c307` | 2026-10-06T15:13:10 |
-| bronze | `data/bronze/wd_institutions.json` | 363 records | `58e7799e04d1` | 2026-10-06T15:12:49 |
-| bronze | `data/bronze/wd_provinces.json` | 63 records | `e27588d03d60` | 2026-10-06T15:13:10 |
-| silver | `data/silver/governing_bodies.json` | 50 records | `c04e931b132e` | 2026-10-06T15:15:11 |
-| silver | `data/silver/institutions.json` | 300 records | `27636ab77b93` | 2026-10-06T15:15:11 |
-| silver | `data/silver/people.json` | 1,695 records | `8ff587a7c45d` | 2026-10-06T15:15:11 |
-| silver | `data/silver/provinces.json` | 63 records | `a3275bbe296d` | 2026-10-06T15:15:11 |
-| gold | `data/gold/vnedu-all.ttl` | 39,507 triples | `f6ea58d59943` | 2026-10-06T15:20:17 |
-| gold | `data/gold/vnedu-data.ttl` | 20,446 triples | `c97b1aa95880` | 2026-10-06T15:16:49 |
-| gold | `data/gold/vnedu-inferred.ttl` | 14,666 triples | `76ddb91d7e5d` | 2026-10-06T15:20:06 |
-| gold | `data/gold/vnedu-links.ttl` | 3,674 triples | `9058bbfe77eb` | 2026-10-06T15:17:27 |
-| gold | `data/gold/void.ttl` | 96 triples | `a4deaa82127c` | 2026-10-06T15:17:28 |
+| bronze | `data/bronze/dbp_years.json` | 72 records | `7a669856282b` | 2026-10-06T21:38:54 |
+| bronze | `data/bronze/viwiki_images.json` | 280 records | `25e5393d6f99` | 2026-10-06T21:38:54 |
+| bronze | `data/bronze/viwiki_links.json` | 80 records | `d80ec77b0f91` | 2026-10-06T21:38:51 |
+| bronze | `data/bronze/viwiki_pages.json` | 279 records | `c210a0fb69ca` | 2026-10-06T21:38:51 |
+| bronze | `data/bronze/wd_alumni.json` | 1,531 records | `3bb40dc83253` | 2026-10-06T21:38:55 |
+| bronze | `data/bronze/wd_entities.json` | 12 records | `9bf354f87f33` | 2026-10-06T21:38:55 |
+| bronze | `data/bronze/wd_institutions.json` | 363 records | `f3e31d6e0d6d` | 2026-10-06T21:38:54 |
+| bronze | `data/bronze/wd_provinces.json` | 63 records | `e27588d03d60` | 2026-10-06T21:38:55 |
+| silver | `data/silver/governing_bodies.json` | 50 records | `c04e931b132e` | 2026-10-06T21:40:37 |
+| silver | `data/silver/institutions.json` | 300 records | `bbbd5e106f79` | 2026-10-06T21:40:37 |
+| silver | `data/silver/people.json` | 1,695 records | `7cd82e3d0504` | 2026-10-06T21:40:37 |
+| silver | `data/silver/provinces.json` | 63 records | `a3275bbe296d` | 2026-10-06T21:40:37 |
+| gold | `data/gold/vnedu-all.ttl` | 48,428 triples | `db75811ba8be` | 2026-10-06T21:41:55 |
+| gold | `data/gold/vnedu-data.ttl` | 22,903 triples | `74349e0df2e5` | 2026-10-06T21:40:40 |
+| gold | `data/gold/vnedu-inferred.ttl` | 20,990 triples | `1e4c3cb91894` | 2026-10-06T21:41:38 |
+| gold | `data/gold/vnedu-links.ttl` | 3,674 triples | `9058bbfe77eb` | 2026-10-06T21:40:42 |
+| gold | `data/gold/void.ttl` | 96 triples | `d7aa7ed1104b` | 2026-10-06T21:40:43 |
 
 ## 2. Độ đầy đủ — 271 cơ sở giáo dục đại học (tầng silver)
 
@@ -33,7 +33,7 @@
 | loại hình sở hữu | 247 | 91.1% | `██████████████████░░` |
 | website | 221 | 81.5% | `████████████████░░░░` |
 | lãnh đạo | 195 | 72.0% | `██████████████░░░░░░` |
-| cơ quan chủ quản | 133 | 49.1% | `██████████░░░░░░░░░░` |
+| cơ quan chủ quản | 130 | 48.0% | `██████████░░░░░░░░░░` |
 | tên tiếng Anh | 226 | 83.4% | `█████████████████░░░` |
 | tên viết tắt | 88 | 32.5% | `██████░░░░░░░░░░░░░░` |
 | khẩu hiệu | 126 | 46.5% | `█████████░░░░░░░░░░░` |
@@ -95,13 +95,12 @@ Giá trị chưa phân giải được, cần rà soát tay (`unresolved.csv`): 
 |---|---|---|
 | JSON Schema (`schemas/silver.schema.json`) | silver | ✅ đạt — 0 vi phạm |
 | Nhất quán logic OWL 2 RL (disjoint, functional, AllDifferent) | gold | ✅ nhất quán |
-| SHACL (`shapes/vnedu-shapes.ttl`) | gold | ✅ conforms — 0 vi phạm, 37 cảnh báo, 1 thông tin |
+| SHACL (`shapes/vnedu-shapes.ttl`) | gold | ✅ conforms — 0 vi phạm, 34 cảnh báo, 1 thông tin |
 
 | Mức | Thông điệp SHACL | Số |
 |---|---|---|
 | Warning | Thiếu năm thành lập. | 22 |
 | Warning | Thiếu tỉnh/thành nơi đặt trụ sở. | 12 |
-| Warning | Cơ sở tư thục lại có Bộ làm cơ quan chủ quản — cần kiểm tra. | 3 |
 | Info | Trường thành viên đặt ở tỉnh khác với đại học chủ quản (https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang ≠ https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh). | 1 |
 
 ## 5. Liên kết (5 sao)
@@ -125,5 +124,5 @@ Giá trị chưa phân giải được, cần rà soát tay (`unresolved.csv`): 
 | ★ | Công khai, giấy phép mở | `dct:license` CC BY-SA 4.0 trong VoID/DCAT; giấy phép từng nguồn trong `*.meta.json` |
 | ★★ | Có cấu trúc, máy đọc được | JSON (bronze/silver), RDF (gold) |
 | ★★★ | Định dạng mở | JSON, CSV, Turtle |
-| ★★★★ | Chuẩn W3C, URI dereference được | RDF/OWL 2 RL/SHACL/SPARQL 1.1/PROV-O; 39,507 triple (trong đó 14,666 suy luận); HTTP URI + content negotiation (`app/server.py`) |
+| ★★★★ | Chuẩn W3C, URI dereference được | RDF/OWL 2 RL/SHACL/SPARQL 1.1/PROV-O; 48,428 triple (trong đó 20,990 suy luận); HTTP URI + content negotiation (`app/server.py`) |
 | ★★★★★ | Liên kết tới dataset khác | 3,674 liên kết tới Wikidata, DBpedia, ROR, GeoNames, Wikipedia; `void:Linkset` |

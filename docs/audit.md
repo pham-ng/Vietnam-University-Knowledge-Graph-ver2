@@ -9,7 +9,7 @@ Mọi con số dưới đây đều do script đo được và chạy lại đư
 
 | Tiêu chí | Repo cũ (`vio`) | VN-Edu 2.0 |
 |---|---|---|
-| Triple | 9.649 | 39.507 (20.446 khẳng định + 3.674 liên kết + 14.666 suy luận) |
+| Triple | 9.649 | 48.428 (22.903 khẳng định + 3.674 liên kết + 20.990 suy luận) |
 | Thực thể "trường" | 327, gắn kiểu `University` cho cả bệnh viện (Bệnh viện Quân y 103), ký túc xá, dự án khu đô thị, trường trung học, thậm chí một chính khách (Trường Chinh) | 300, phân theo loại hình pháp lý; 68 thực thể bị loại có ghi lý do |
 | **Nhất quán logic** khi suy luận OWL 2 RL | **349 mâu thuẫn** (344 `Site ⊥ Place` do `geo:lat rdfs:domain Site`; 5 trường có 2 năm thành lập) | **0** (có test tự động) |
 | Câu hỏi có đáp án chuẩn (năm thành lập, trụ sở, chủ quản) | **14/21** (ĐH Luật HN "1727", HV Hải quân "2022", ĐH An Giang "1976", ĐH Thủ Dầu Một ở "Bình Phước") | **21/21** |

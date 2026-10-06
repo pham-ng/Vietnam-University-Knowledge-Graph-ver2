@@ -1,7 +1,7 @@
 # 🎓 VN-Edu LOD — Dữ liệu liên kết mở về giáo dục đại học Việt Nam
 
 [![CI & Pages](https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/actions/workflows/pages.yml/badge.svg)](https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/actions/workflows/pages.yml)
-![Python](https://img.shields.io/badge/python-3.10%2B-blue) ![tests](https://img.shields.io/badge/tests-100-brightgreen) ![license data](https://img.shields.io/badge/data-CC%20BY--SA%204.0-orange)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue) ![tests](https://img.shields.io/badge/tests-104-brightgreen) ![license data](https://img.shields.io/badge/data-CC%20BY--SA%204.0-orange)
 
 **VN-Edu LOD** là một đồ thị tri thức (knowledge graph) về **300 cơ sở giáo dục đại học Việt Nam**, công bố theo chuẩn
 **Linked Open Data 5 sao**. Dữ liệu được thu thập từ Wikidata và Wikipedia tiếng Việt, đối chiếu chéo, chuyển sang RDF
@@ -48,7 +48,7 @@ theo một ontology OWL, suy luận tự động, kiểm định chất lượng
 | 📍 **Địa giới hành chính** | 34 tỉnh/thành mới (từ 1/7/2025) + 29 tỉnh cũ đã sáp nhập + 3 miền |
 | 👤 **Con người** | 1.695 người — 1.481 cựu sinh viên nổi tiếng, 214 hiệu trưởng / giám đốc / chủ tịch hội đồng trường |
 | 🏛️ **Cơ quan chủ quản** | 50 — các Bộ, UBND tỉnh, quân chủng/binh chủng, tập đoàn giáo dục |
-| 🔗 **Triple RDF** | **39.507** (20.446 dữ kiện gốc + 3.674 liên kết + 14.666 do máy suy luận ra) |
+| 🔗 **Triple RDF** | **48.428** (22.903 dữ kiện gốc + 3.674 liên kết + 20.990 do máy suy luận ra) |
 | 🌍 **Liên kết ra ngoài** | 1.880 Wikidata · 1.188 Wikipedia · 260 DBpedia · 195 ROR · 63 GeoNames |
 
 Với mỗi trường có: tên (vi/en/viết tắt/tên khác/tên cũ), mã tuyển sinh, loại hình, công lập hay tư thục, năm và ngày
@@ -116,7 +116,7 @@ Truy vấn từ terminal:
 py query.py queries/03_truong_quan_doi_cong_an.rq
 ```
 
-**Chạy lại toàn bộ pipeline** (thu thập → … → công bố site → 100 test). Dữ liệu tải về được cache nên chạy lại cho kết
+**Chạy lại toàn bộ pipeline** (thu thập → … → công bố site → 104 test). Dữ liệu tải về được cache nên chạy lại cho kết
 quả giống hệt; thêm `-Fresh` để tải dữ liệu mới nhất.
 
 ```bash
@@ -151,7 +151,7 @@ flowchart LR
 | ④ | [`step4_link.py`](scripts/step4_link.py) | Nối tới Wikidata, DBpedia, ROR, GeoNames, Wikipedia; mô tả dataset bằng VoID/DCAT | `vnedu-links.ttl`, `void.ttl` |
 | ⑤ | [`step5_reason.py`](scripts/step5_reason.py) | Suy luận OWL 2 RL, kiểm tra mâu thuẫn logic, kiểm định **SHACL** | `vnedu-inferred.ttl`, `vnedu-all.ttl` |
 | ⑥ | [`step6_report.py`](scripts/step6_report.py) | Báo cáo chất lượng: độ đầy đủ, nguồn gốc, cảnh báo | [`quality_report.md`](data/reports/quality_report.md) |
-| ⑦ | [`step7_publish.py`](scripts/step7_publish.py) | Sinh trang web tĩnh: mỗi URI một trang HTML + `.ttl` + `.jsonld`. Chạy trong **GitHub Actions** (sau khi 100 test đạt) rồi đăng lên Pages — `site/` không nằm trong git | `site/` |
+| ⑦ | [`step7_publish.py`](scripts/step7_publish.py) | Sinh trang web tĩnh: mỗi URI một trang HTML + `.ttl` + `.jsonld`. Chạy trong **GitHub Actions** (sau khi 104 test đạt) rồi đăng lên Pages — `site/` không nằm trong git | `site/` |
 
 Mọi tệp ở mọi tầng được ghi vào [`data/manifest.json`](data/manifest.json) (số bản ghi, mã SHA-256, thời điểm) để truy
 được dòng dõi dữ liệu. Chi tiết kỹ thuật từng bước: [docs/pipeline.md](docs/pipeline.md).
@@ -236,7 +236,7 @@ person:tan-yap-peng  a vnedu:InstitutionLeader ;  vnedu:leads university:truong-
 
 ## 5. Cây ontology
 
-Ontology [`ontology/vnedu.ttl`](ontology/vnedu.ttl) gồm **34 lớp, 27 thuộc tính quan hệ, 20 thuộc tính dữ liệu**, theo
+Ontology [`ontology/vnedu.ttl`](ontology/vnedu.ttl) gồm **34 lớp, 33 thuộc tính quan hệ (đều có domain/range), 20 thuộc tính dữ liệu**, theo
 profile **OWL 2 RL** (để suy luận vừa đúng vừa đầy đủ). Mỗi lớp đều nối sang lớp tương ứng của schema.org / FOAF / DBpedia.
 👉 Xem bản **tương tác** (bấm để mở/thu nhánh): [trang Ontology](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology).
 
@@ -291,7 +291,13 @@ flowchart LR
     E -- "memberOf / branchOf" --> E
     E -- "rector / director / councilChair" --> Pe[Person]
     Pe -- alumnusOf --> E
+    Pe -- "bornIn (+ chuỗi → tỉnh mới, miền)" --> P
+    Pe -- "nationality" --> C
+    E -- "stateManagedBy (trường tư)" --> G
+    E -- "predecessor / successor" --> E
     E -- offersProgram --> AP[AcademicProgram] -- ofMajor --> M[Major] -- inField --> F[FieldOfStudy]
+    E -- "schema:memberOf (hiệp hội)" --> AS[(Wikidata: AUN, AUF, ...)]
+    Pe -- "birthPlace · hasOccupation" --> WP[(Wikidata: địa danh, nghề nghiệp)]
     E -- "owl:sameAs" --> W[(Wikidata · DBpedia · ROR)]
 ```
 
@@ -301,7 +307,7 @@ Sơ đồ đầy đủ (sinh tự động từ tệp TTL, kèm bảng tiên đ�
 
 ## 6. Suy luận: máy tự biết thêm điều gì?
 
-Bộ suy luận OWL 2 RL sinh thêm **14.666 triple**. Vài ví dụ có thật trong dữ liệu:
+Bộ suy luận OWL 2 RL sinh thêm **20.990 triple**. Vài ví dụ có thật trong dữ liệu:
 
 | Dữ liệu gốc chỉ ghi | Quy tắc trong ontology | Máy tự suy ra |
 |---|---|---|
@@ -312,7 +318,7 @@ Bộ suy luận OWL 2 RL sinh thêm **14.666 triple**. Vài ví dụ có thật 
 | Ông A **là hiệu trưởng** trường X | `rector ⊑ hasLeader`, `inverseOf leads` | Ông A là **InstitutionLeader** |
 
 Ontology cũng **phát hiện dữ liệu sai**: một trường vừa công lập vừa tư thục, vừa là học viện vừa là trường đại học,
-hay có hai năm thành lập khác nhau → **mâu thuẫn**. Hiện tại toàn bộ dữ liệu: **0 mâu thuẫn**, SHACL **đạt**, **84/100 test** đạt.
+hay có hai năm thành lập khác nhau → **mâu thuẫn**. Hiện tại toàn bộ dữ liệu: **0 mâu thuẫn**, SHACL **đạt**, **84/104 test** đạt.
 
 ---
 
@@ -322,15 +328,15 @@ hay có hai năm thành lập khác nhau → **mâu thuẫn**. Hiện tại toà
 
 | Tệp | Nội dung | Số triple |
 |---|---|--:|
-| [`vnedu-data.ttl`](data/gold/vnedu-data.ttl) | dữ kiện gốc (sau làm sạch) | 20.446 |
+| [`vnedu-data.ttl`](data/gold/vnedu-data.ttl) | dữ kiện gốc (sau làm sạch) | 22.903 |
 | [`vnedu-links.ttl`](data/gold/vnedu-links.ttl) | liên kết ra dataset khác | 3.674 |
-| [`vnedu-inferred.ttl`](data/gold/vnedu-inferred.ttl) | do bộ suy luận sinh ra | 14.666 |
+| [`vnedu-inferred.ttl`](data/gold/vnedu-inferred.ttl) | do bộ suy luận sinh ra | 20.990 |
 | [`void.ttl`](data/gold/void.ttl) | mô tả dataset (VoID + DCAT) | 96 |
-| [`ontology/vnedu.ttl`](ontology/vnedu.ttl) | ontology | 629 |
-| **[`vnedu-all.ttl`](data/gold/vnedu-all.ttl)** | **tất cả, dùng để truy vấn** | **39.507** |
+| [`ontology/vnedu.ttl`](ontology/vnedu.ttl) | ontology (v2.1) | 769 |
+| **[`vnedu-all.ttl`](data/gold/vnedu-all.ttl)** | **tất cả, dùng để truy vấn** | **48.428** |
 
 - **2.241 URI** riêng của dataset, URI nào cũng mở được trên web (HTML cho người, `.ttl`/`.jsonld` cho máy).
-- **74%** triple dùng từ vựng chuẩn có sẵn (rdfs, schema.org, FOAF, SKOS, PROV, DBpedia); **84%** thực thể có `owl:sameAs`.
+- **69%** triple dùng từ vựng chuẩn có sẵn (rdfs, schema.org, FOAF, SKOS, PROV, DBpedia); **84%** thực thể có `owl:sameAs`.
 - 0 literal sai kiểu, 0 IRI lỗi, 100% thực thể có nhãn và kiểu.
 
 ### 7.2. Trường học thu thập được
@@ -433,7 +439,7 @@ federated sang Wikidata/DBpedia…).
 ├── app/                       Ứng dụng web Flask (cục bộ)
 ├── fuseki/                    Script chạy Apache Jena Fuseki
 ├── site_src/                  Giao diện trang web (site/ được CI build tự động, không commit)
-├── tests/                     100 test (suy luận, trích xuất, hợp đồng dữ liệu, infobox, máy chủ web)
+├── tests/                     104 test (suy luận, trích xuất, hợp đồng dữ liệu, infobox, máy chủ web)
 ├── .github/workflows/         CI: chạy test → build site → đăng GitHub Pages
 └── docs/                      Tài liệu chi tiết
 ```

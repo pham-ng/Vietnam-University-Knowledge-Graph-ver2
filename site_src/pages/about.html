@@ -24,8 +24,8 @@
 <h2>Tạo URI mới hay dùng lại URI đã có?</h2>
 <p><b>Dùng lại ở mọi chỗ có thể</b>, chỉ tạo mới cho thực thể mà dataset tự công bố dữ kiện — rồi khẳng định đồng nhất bằng <code>owl:sameAs</code>:</p>
 <ul>
-  <li><b>Từ vựng:</b> 74% số triple dùng thuộc tính chuẩn (<code>rdfs</code>, <code>schema</code>, <code>prov</code>, <code>foaf</code>, <code>geo</code>, <code>skos</code>); mọi lớp riêng đều <code>rdfs:subClassOf</code> lớp của schema.org / FOAF / DBpedia.</li>
-  <li><b>Giá trị:</b> nghề nghiệp và giới tính dùng thẳng URI Wikidata (222 URI, ví dụ <a href="http://www.wikidata.org/entity/Q82955">wd:Q82955</a> = chính khách) qua <code>schema:hasOccupation</code>, <code>schema:gender</code> — không tạo URI riêng vì ta không mô tả gì thêm về chúng.</li>
+  <li><b>Từ vựng:</b> 69% số triple dùng thuộc tính chuẩn (<code>rdfs</code>, <code>schema</code>, <code>prov</code>, <code>foaf</code>, <code>geo</code>, <code>skos</code>); mọi lớp riêng đều <code>rdfs:subClassOf</code> lớp của schema.org / FOAF / DBpedia.</li>
+  <li><b>Giá trị:</b> nghề nghiệp và giới tính dùng thẳng URI Wikidata (562 URI, ví dụ <a href="http://www.wikidata.org/entity/Q82955">wd:Q82955</a> = chính khách) qua <code>schema:hasOccupation</code>, <code>schema:gender</code> — không tạo URI riêng vì ta không mô tả gì thêm về chúng.</li>
   <li><b>Thực thể được mô tả</b> (300 cơ sở, 63 tỉnh, 1.695 người, 50 cơ quan…): có URI riêng vì (1) tra cứu URI phải trả về <i>dữ kiện của ta</i> — mã tuyển sinh, loại hình pháp lý, tỉnh sau sáp nhập 2025, kết quả suy luận — điều URI Wikidata không làm được; (2) không trộn nguồn gốc dữ kiện; (3) nhiều thực thể không có trên Wikidata (ngành theo TT 09/2022, quan hệ sáp nhập tỉnh, lãnh đạo từ infobox); (4) ta chịu trách nhiệm cho không gian tên của mình.</li>
   <li><b>owl:sameAs:</b> 84% thực thể tự tạo trỏ về URI đã có — 1.880 Wikidata, 260 DBpedia, 195 ROR, 63 GeoNames — đều đã xác minh (quốc gia, nhãn, tính duy nhất). Item trùng trên Wikidata được <i>gộp</i> về một URI của ta kèm <code>owl:sameAs</code> tới cả hai. Ngành học dùng <code>skos:closeMatch</code> vì không đồng nhất hoàn toàn.</li>
 </ul>

@@ -78,6 +78,11 @@ def institution_facts(ids: list[str]) -> dict[str, dict]:
     put("motto", multi(ids, "?u wdt:P1546 ?v . BIND(LANG(?v) AS ?lang)", ("v", "lang")), lambda rs: rs)
     put("ror", multi(ids, "?u wdt:P6782 ?v .", ("v",)), lambda rs: sorted({r["v"] for r in rs}))
     put("parents", multi(ids, "?u wdt:P749|wdt:P361 ?v .", ("v",)), lambda rs: sorted({r["v"] for r in rs}))
+    # Lịch sử tổ chức: P1365 "thay thế cho" (tiền thân), P1366 "được thay thế bởi" (đơn vị kế tục)
+    put("replaces", multi(ids, "?u wdt:P1365 ?v .", ("v",)), lambda rs: sorted({r["v"] for r in rs}))
+    put("replaced_by", multi(ids, "?u wdt:P1366 ?v .", ("v",)), lambda rs: sorted({r["v"] for r in rs}))
+    # Thành viên hiệp hội / mạng lưới (P463), VD: Mạng lưới các trường đại học ASEAN, AUF
+    put("member_of_assoc", multi(ids, "?u wdt:P463 ?v .", ("v",)), lambda rs: sorted({r["v"] for r in rs}))
     put("students", multi(ids, """?u p:P2196 ?st . ?st ps:P2196 ?v .
         OPTIONAL { ?st pq:P585 ?t } BIND(YEAR(?t) AS ?year)""", ("v", "year")), lambda rs: rs)
     put("staff", multi(ids, "?u wdt:P1128 ?v .", ("v",)), lambda rs: [r["v"] for r in rs])
@@ -165,6 +170,12 @@ def alumni(ids: list[str]) -> list[dict]:
             OPTIONAL { ?g rdfs:label ?vi FILTER(LANG(?vi) = 'vi') }""", ("g", "en", "vi")),
         "occupation": multi(pids, """?u wdt:P106 ?o . OPTIONAL { ?o rdfs:label ?en FILTER(LANG(?en) = 'en') }
             OPTIONAL { ?o rdfs:label ?vi FILTER(LANG(?vi) = 'vi') }""", ("o", "en", "vi")),
+        # Nơi sinh (P19) + mọi đơn vị hành chính chứa nó (P131*) để nối về tỉnh trong dataset
+        "birthplace": multi(pids, """?u wdt:P19 ?pl . OPTIONAL { ?pl rdfs:label ?en FILTER(LANG(?en) = 'en') }
+            OPTIONAL { ?pl rdfs:label ?vi FILTER(LANG(?vi) = 'vi') } OPTIONAL { ?pl wdt:P131* ?anc }""",
+                            ("pl", "en", "vi", "anc")),
+        "nationality": multi(pids, """?u wdt:P27 ?c . OPTIONAL { ?c rdfs:label ?en FILTER(LANG(?en) = 'en') }
+            OPTIONAL { ?c rdfs:label ?vi FILTER(LANG(?vi) = 'vi') }""", ("c", "en", "vi")),
     }
     out = []
     for p in pids:
@@ -178,6 +189,9 @@ def alumni(ids: list[str]) -> list[dict]:
             "gender": sorted({(r["g"], r["en"], r["vi"]) for r in facts["gender"].get(p, [])}),
             "occupations": sorted({(r["o"], r["en"], r["vi"]) for r in facts["occupation"].get(p, [])}),
             "schools": sorted(people[p]["schools"]),
+            "birthplace": sorted({(r["pl"], r["en"], r["vi"]) for r in facts["birthplace"].get(p, [])}),
+            "birthplace_ancestors": sorted({r["anc"] for r in facts["birthplace"].get(p, []) if r["anc"]}),
+            "nationality": sorted({(r["c"], r["en"], r["vi"]) for r in facts["nationality"].get(p, [])}),
         })
     return out
 

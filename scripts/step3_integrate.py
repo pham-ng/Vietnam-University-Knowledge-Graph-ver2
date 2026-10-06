@@ -739,6 +739,21 @@ def build_institutions(provs):
                 partners.append({"qid": q, "name": t})
         inst["partners"] = partners
 
+        # --- lịch sử tổ chức: tiền thân (P1365 + infobox "tiền thân"), đơn vị kế tục (P1366)
+        def ref(q, fallback=""):
+            lab = (wdi.get(q, {}).get("labels") or {}) or ents.get(q) or {}
+            return {"qid": q, "name": lab.get("vi") or lab.get("en") or fallback}
+        preds = [ref(q) for q in f.get("replaces", [])]
+        for t in links.get("tiền thân", []):
+            q = link_qids.get(t)
+            if q and q != k and all(x["qid"] != q for x in preds):
+                preds.append(ref(q, t))
+        inst["predecessors"] = [x for x in preds if x["name"] and x["qid"] != k]
+        inst["successors"] = [x for x in (ref(q) for q in f.get("replaced_by", [])) if x["name"] and x["qid"] != k]
+        # P463 đôi khi bị dùng sai cho cơ quan nhà nước (VD: một Bộ) -> chỉ giữ hiệp hội / mạng lưới
+        inst["associations"] = [x for x in (ref(q) for q in f.get("member_of_assoc", []))
+                                if x["name"] and not (MINISTRY.search(x["name"]) or PPC.search(x["name"]))]
+
         # --- văn bản giới thiệu (CC BY-SA, ghi nguồn bằng bản sửa đổi viwiki) và ảnh
         inst["abstract"] = lead if len(lead) >= 40 else ""
         inst["history"] = page.get("history", "") if page else ""
@@ -833,6 +848,10 @@ def resolve_relations(insts, ents, wdi):
             else:
                 governed.add(b)
         i["member_of"], i["branch_of"] = sorted(member), sorted(branch)
+        # Trường TƯ THỤC không có cơ quan chủ quản nhà nước; Bộ ghi trong infobox là cơ quan QUẢN LÝ NHÀ NƯỚC
+        state = {b for b in governed if i.get("ownership") == "private" and bodies[b]["kind"] == "Ministry"}
+        governed -= state
+        i["state_managed_by"] = sorted(state)
         i["governed_by"], i["owned_by"] = sorted(governed), sorted(owned)
         # Cơ sở công lập do cơ quan nhà nước thành lập: suy ra "công lập" khi nguồn không nêu
         if "ownership" not in i and governed:
@@ -851,7 +870,14 @@ def resolve_relations(insts, ents, wdi):
     return bodies
 
 
-def build_people(insts, ents):
+def birth_province(ancestors, provs):
+    """Tỉnh của dataset chứa nơi sinh: ưu tiên tỉnh cũ (chi tiết hơn, suy luận sẽ quy về tỉnh mới)."""
+    cands = [q for q in ancestors if q in provs]
+    former = [q for q in cands if provs[q]["status"] == "former"]
+    return (former or cands or [None])[0]
+
+
+def build_people(insts, ents, provs):
     people = {}
     for a in load("wd_alumni.json"):
         schools = [s for s in a["schools"] if s in insts]
@@ -863,7 +889,12 @@ def build_people(insts, ents):
                             if len(a["gender"]) == 1 else None,
                             "occupations": [{"qid": q, "en": en, "vi": vi} for q, en, vi in a["occupations"]],
                             "alumnus_of": schools,
-                            "enwiki": a["entitle"], "viwiki": a["vititle"], "leads": []}
+                            "enwiki": a["entitle"], "viwiki": a["vititle"], "leads": [],
+                            "birth_place": ({"qid": a["birthplace"][0][0], "en": a["birthplace"][0][1],
+                                             "vi": a["birthplace"][0][2]} if len({b[0] for b in a.get("birthplace", [])}) == 1 else None),
+                            "born_in": birth_province(a.get("birthplace_ancestors", []), provs)
+                            if len({b[0] for b in a.get("birthplace", [])}) == 1 else None,
+                            "nationality": [{"qid": q, "en": en, "vi": vi} for q, en, vi in a.get("nationality", [])]}
         if len(set(a["birth"])) > 1:
             conflict(a["vi"] or a["en"], "birth_date", a["birth"][0], [("wikidata", b) for b in a["birth"]])
     for k, i in insts.items():
@@ -905,7 +936,7 @@ def main() -> None:
     provs = build_provinces()
     insts, wdi, ents = build_institutions(provs)
     bodies = resolve_relations(insts, ents, wdi)
-    people = build_people(insts, ents)
+    people = build_people(insts, ents, provs)
 
     CLEAN.mkdir(parents=True, exist_ok=True)
     REPORTS.mkdir(parents=True, exist_ok=True)
