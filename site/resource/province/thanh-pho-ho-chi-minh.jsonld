@@ -1,0 +1,91 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh",
+  "@type": [
+    "vnedu:CentrallyGovernedCity",
+    "vnedu:Province",
+    "vnedu:AdministrativeUnit",
+    "schema:AdministrativeArea"
+  ],
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/wiki/Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "10.775555555"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "106.701944444"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "wd:Q1854"
+    },
+    {
+      "@id": "https://sws.geonames.org/1566083/"
+    },
+    {
+      "@id": "dbr:Ho_Chi_Minh_City"
+    }
+  ],
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q1854"
+  },
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Ho Chi Minh City"
+    },
+    {
+      "@language": "vi",
+      "@value": "Thành phố Hồ Chí Minh"
+    }
+  ],
+  "vnedu:area": {
+    "@type": "xsd:decimal",
+    "@value": "6772.59"
+  },
+  "vnedu:mergedFrom": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/binh-duong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ba-ria-vung-tau"
+    }
+  ],
+  "vnedu:partOf": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    }
+  ],
+  "vnedu:population": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "14002598"
+  }
+}

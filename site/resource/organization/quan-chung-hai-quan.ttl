@@ -1,0 +1,20 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+organization:quan-chung-hai-quan a foaf:Organization,
+        vnedu:GoverningBody,
+        vnedu:Organization,
+        schema:GovernmentOrganization,
+        schema:Organization ;
+    rdfs:label "Quân chủng Hải quân"@vi ;
+    owl:sameAs <http://dbpedia.org/resource/Vietnam_People's_Navy>,
+        wd:Q1324290 ;
+    vnedu:governs university:hoc-vien-hai-quan ;
+    vnedu:subordinateTo vnedu:MinistryOfNationalDefence .
+

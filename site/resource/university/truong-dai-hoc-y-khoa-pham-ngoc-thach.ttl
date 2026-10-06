@@ -1,0 +1,71 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-y-khoa-pham-ngoc-thach a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Pham Ngoc Thach University of Medicine"@en,
+        "Trường Đại học Y khoa Phạm Ngọc Thạch"@vi ;
+    owl:sameAs dbr:Pham_Ngoc_Thach_University_of_Medicine,
+        wd:Q10829174,
+        <https://ror.org/003g49r03> ;
+    geo:lat 10.7737 ;
+    geo:long 106.665 ;
+    skos:notation "TYS" ;
+    skos:prefLabel "Trường Đại học Y khoa Phạm Ngọc Thạch"@vi ;
+    prov:wasDerivedFrom wd:Q10829174,
+        <https://vi.wikipedia.org/w/index.php?oldid=75373233> ;
+    foaf:homepage <http://pnt.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Pham_Ngoc_Thach_University_of_Medicine>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_khoa_Ph%E1%BA%A1m_Ng%E1%BB%8Dc_Th%E1%BA%A1ch> ;
+    vnedu:address "2 Dương Quang Trung, phường Hòa Hưng, Thành phố Hồ Chí Minh, Việt Nam" ;
+    vnedu:admissionCode "TYS" ;
+    vnedu:foundingYear "1989"^^xsd:gYear ;
+    vnedu:hasAlumnus person:buu-truong,
+        person:gia-ky,
+        person:hao-phan-thai,
+        person:hoang-phan,
+        person:huu-hoai-le,
+        person:lam-tuyet-trinh,
+        person:ngoc-minh-nguyen,
+        person:nguyen-minh-duc-2,
+        person:thu-y-t-nguyen,
+        person:tran-minh-quan,
+        person:truong-tam-nguyen,
+        person:tuyet-thi-nguyen,
+        person:vy-t-pham ;
+    vnedu:hasLeader person:ngo-quoc-dat ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    vnedu:numberOfStudents "9000"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:ngo-quoc-dat ;
+    vnedu:website <http://pnt.edu.vn/> ;
+    schema:employee person:ngo-quoc-dat ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+

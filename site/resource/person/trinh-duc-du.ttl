@@ -1,0 +1,25 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+person:trinh-duc-du a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Trịnh Đức Dụ"@en,
+        "Trịnh Đức Dụ"@vi ;
+    owl:sameAs wd:Q139254584 ;
+    prov:wasDerivedFrom wd:Q139254584 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%E1%BB%8Bnh_%C4%90%E1%BB%A9c_D%E1%BB%A5> ;
+    foaf:name "Trịnh Đức Dụ" ;
+    vnedu:alumnusOf university:hoc-vien-ngoai-giao ;
+    schema:alumniOf university:hoc-vien-ngoai-giao ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q193391 .
+

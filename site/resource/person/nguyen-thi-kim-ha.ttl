@@ -1,0 +1,26 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:nguyen-thi-kim-ha a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Thị Kim Hà"@vi ;
+    owl:sameAs wd:Q109441596 ;
+    prov:wasDerivedFrom wd:Q109441596 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Nguy%E1%BB%85n_Th%E1%BB%8B_Kim_H%C3%A0> ;
+    foaf:name "Nguyễn Thị Kim Hà" ;
+    vnedu:alumnusOf university:truong-dai-hoc-ton-duc-thang ;
+    vnedu:birthDate "2000-02-28"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-ton-duc-thang ;
+    schema:gender wd:Q6581072 ;
+    schema:hasOccupation wd:Q2066131 .
+

@@ -1,0 +1,27 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+person:tran-hung a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Trần Hùng"@en,
+        "Trần Hùng"@vi ;
+    owl:sameAs wd:Q130616418 ;
+    prov:wasDerivedFrom wd:Q130616418 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%E1%BA%A7n_H%C3%B9ng_%28nh%C3%A0_quay_phim%29> ;
+    foaf:name "Trần Hùng" ;
+    vnedu:alumnusOf university:truong-dai-hoc-san-khau-dien-anh-ha-noi ;
+    schema:alumniOf university:truong-dai-hoc-san-khau-dien-anh-ha-noi ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q1028181,
+        wd:Q222344,
+        wd:Q33231 .
+

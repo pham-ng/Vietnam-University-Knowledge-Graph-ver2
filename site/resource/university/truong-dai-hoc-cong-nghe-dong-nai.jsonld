@@ -1,0 +1,119 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-dong-nai",
+  "@type": [
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "dbo:University",
+    "schema:EducationalOrganization",
+    "vnedu:Organization",
+    "foaf:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution"
+  ],
+  "foaf:homepage": {
+    "@id": "https://dntu.edu.vn/"
+  },
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_%C4%90%E1%BB%93ng_Nai"
+  },
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "10.984778"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "106.869639"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "https://ror.org/01j85cs18"
+    },
+    {
+      "@id": "wd:Q10829032"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "wd:Q10829032"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74904746"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Công nghệ Đồng Nai"
+    },
+    {
+      "@language": "en",
+      "@value": "Dong Nai Technology University"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-ngoc-son"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-nai"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Đại học Công nghệ Đồng Nai"
+  },
+  "vnedu:address": "206, Đường Nguyễn Khuyến, Khu phố 5, phường Trảng Dài, Biên Hòa - Đồng Nai, Việt Nam",
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+  },
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-ngoc-son"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-nai"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "DNTU Điểm đến thành công"
+  },
+  "vnedu:rector": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-ngoc-son"
+  },
+  "vnedu:website": {
+    "@id": "https://dntu.edu.vn/"
+  }
+}

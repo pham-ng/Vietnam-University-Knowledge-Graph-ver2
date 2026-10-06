@@ -1,0 +1,25 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+person:nguyen-hoang-lam a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Hoàng Lâm"@en,
+        "Nguyễn Hoàng Lâm"@vi ;
+    owl:sameAs wd:Q133267523 ;
+    prov:wasDerivedFrom wd:Q133267523 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Nguy%E1%BB%85n_Ho%C3%A0ng_L%C3%A2m_%28%C4%91%E1%BA%A1o_di%E1%BB%85n%29> ;
+    foaf:name "Nguyễn Hoàng Lâm" ;
+    vnedu:alumnusOf university:truong-dai-hoc-san-khau-dien-anh-ha-noi ;
+    schema:alumniOf university:truong-dai-hoc-san-khau-dien-anh-ha-noi ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q1235146 .
+

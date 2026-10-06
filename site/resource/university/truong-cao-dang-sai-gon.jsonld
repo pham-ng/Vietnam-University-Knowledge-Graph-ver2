@@ -1,0 +1,89 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-sai-gon",
+  "@type": [
+    "vnedu:EducationalOrganization",
+    "vnedu:VocationalCollege",
+    "schema:EducationalOrganization",
+    "vnedu:Organization",
+    "foaf:Organization",
+    "schema:Organization"
+  ],
+  "foaf:homepage": {
+    "@id": "https://caodangsaigon.edu.vn"
+  },
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "10.856049"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "106.629858"
+  },
+  "owl:sameAs": {
+    "@id": "wd:Q137737155"
+  },
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q137737155"
+  },
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Trường Cao đẳng Sài Gòn"
+    },
+    {
+      "@language": "en",
+      "@value": "SaigonTech"
+    }
+  ],
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Cao đẳng Sài Gòn"
+  },
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "2001"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    }
+  ],
+  "vnedu:website": {
+    "@id": "https://caodangsaigon.edu.vn"
+  }
+}

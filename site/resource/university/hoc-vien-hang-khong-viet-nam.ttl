@@ -1,0 +1,50 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:hoc-vien-hang-khong-viet-nam a foaf:Organization,
+        vnedu:Academy,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Vietnam Aviation Academy"@en,
+        "Học viện Hàng không Việt Nam"@vi ;
+    owl:sameAs dbr:Vietnam_Aviation_Academy,
+        wd:Q302448,
+        <https://ror.org/05da5vm76> ;
+    geo:lat 10.7969 ;
+    geo:long 106.6737 ;
+    skos:prefLabel "Học viện Hàng không Việt Nam"@vi ;
+    prov:wasDerivedFrom wd:Q302448,
+        <https://vi.wikipedia.org/w/index.php?oldid=75614797> ;
+    foaf:homepage <https://vaa.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Vietnam_Aviation_Academy>,
+        <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam> ;
+    vnedu:foundingYear "1979"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-xay-dung ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:website <https://vaa.edu.vn/> ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+

@@ -1,0 +1,28 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:anh-ngoc a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Anh Ngọc"@en,
+        "Anh Ngọc"@vi ;
+    owl:sameAs wd:Q16156825 ;
+    prov:wasDerivedFrom wd:Q16156825 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Tr%C6%B0%C6%A1ng_Anh_Ng%E1%BB%8Dc>,
+        <https://vi.wikipedia.org/wiki/Anh_Ng%E1%BB%8Dc_%28nh%C3%A0_b%C3%A1o%29> ;
+    foaf:name "Anh Ngọc" ;
+    vnedu:alumnusOf university:truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-ha-noi ;
+    vnedu:birthDate "1976-01-19"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-ha-noi ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q1930187 .
+

@@ -1,0 +1,69 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix program: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-bach-khoa-dai-hoc-da-nang a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "UDN University of Science and Technology"@en,
+        "Trường Đại học Bách khoa, Đại học Đà Nẵng"@vi ;
+    owl:sameAs dbr:Da_Nang_University_of_Technology,
+        wd:Q5207276,
+        <https://ror.org/001ydh096> ;
+    geo:lat 16.074893 ;
+    geo:long 108.153204 ;
+    skos:prefLabel "Trường Đại học Bách khoa, Đại học Đà Nẵng"@vi ;
+    prov:wasDerivedFrom wd:Q5207276,
+        <https://vi.wikipedia.org/w/index.php?oldid=75085336> ;
+    foaf:homepage <http://www.dut.edu.vn/en/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Da_Nang_University_of_Science_and_Technology>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_B%C3%A1ch_khoa%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng> ;
+    vnedu:address "54 Nguyễn Lương Bằng, phường Liên Chiểu" ;
+    vnedu:foundingYear "1975"^^xsd:gYear ;
+    vnedu:hasAlumnus person:luong-hong-khanh ;
+    vnedu:hasLeader person:nguyen-huu-hieu ;
+    vnedu:locatedIn country:viet-nam,
+        province:da-nang,
+        region:trung-bo ;
+    vnedu:memberOf university:dai-hoc-da-nang ;
+    vnedu:offersProgram program:truong-dai-hoc-bach-khoa-dai-hoc-da-nang-7480201,
+        program:truong-dai-hoc-bach-khoa-dai-hoc-da-nang-7520103,
+        program:truong-dai-hoc-bach-khoa-dai-hoc-da-nang-7520201,
+        program:truong-dai-hoc-bach-khoa-dai-hoc-da-nang-7580201 ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:nguyen-huu-hieu ;
+    vnedu:trainsMajor major:7480201,
+        major:7520103,
+        major:7520201,
+        major:7580201 ;
+    vnedu:website <http://www.dut.edu.vn/en/> ;
+    schema:employee person:nguyen-huu-hieu ;
+    schema:location country:viet-nam,
+        province:da-nang,
+        region:trung-bo ;
+    schema:parentOrganization university:dai-hoc-da-nang .
+

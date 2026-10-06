@@ -1,0 +1,60 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-quoc-te-rmit-viet-nam a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "RMIT University Vietnam"@en,
+        "Trường Đại học Quốc tế RMIT Việt Nam"@vi ;
+    owl:sameAs dbr:RMIT_University_Vietnam,
+        wd:Q7277005,
+        <https://ror.org/004axh929> ;
+    geo:lat 10.75 ;
+    geo:long 106.666667 ;
+    skos:prefLabel "Trường Đại học Quốc tế RMIT Việt Nam"@vi ;
+    prov:wasDerivedFrom wd:Q7277005,
+        <https://vi.wikipedia.org/w/index.php?oldid=75045774> ;
+    foaf:homepage <http://www.rmit.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Royal_Melbourne_Institute_of_Technology_Vietnam>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_t%E1%BA%BF_RMIT_Vi%E1%BB%87t_Nam> ;
+    vnedu:address "Cổng chính, 702 Đường Nguyễn Văn Linh, Tân Hưng, Quận 7, Hồ Chí Minh 700000" ;
+    vnedu:foundingYear "2000"^^xsd:gYear ;
+    vnedu:hasAlumnus person:chi-pu,
+        person:cris-phan,
+        person:duc-anh-hoang,
+        person:duy-dang-pham,
+        person:mai-phuong-thuy,
+        person:thuy-van,
+        person:vu-hoang-my ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    vnedu:motto "Cultivated mind & Skillful hand"@vi ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:website <http://www.rmit.edu.vn> ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+

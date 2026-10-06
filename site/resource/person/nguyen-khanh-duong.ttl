@@ -1,0 +1,27 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+person:nguyen-khanh-duong a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Khánh Dương"@vi ;
+    owl:sameAs wd:Q137735914 ;
+    prov:wasDerivedFrom wd:Q137735914 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Nguy%E1%BB%85n_Kh%C3%A1nh_D%C6%B0%C6%A1ng> ;
+    foaf:name "Nguyễn Khánh Dương" ;
+    vnedu:alumnusOf university:truong-dai-hoc-su-pham-ha-noi ;
+    schema:alumniOf university:truong-dai-hoc-su-pham-ha-noi ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q109517242,
+        wd:Q3282637,
+        wd:Q4220878,
+        wd:Q43845 .
+

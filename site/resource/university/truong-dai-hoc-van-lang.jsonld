@@ -1,0 +1,153 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-lang",
+  "@type": [
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "dbo:University",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "foaf:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:PrivateInstitution",
+    "vnedu:HigherEducationInstitution"
+  ],
+  "foaf:homepage": {
+    "@id": "http://www.vanlanguni.edu.vn"
+  },
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://en.wikipedia.org/wiki/V%C4%83n_Lang_University"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C4%83n_Lang"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "10.7634"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "106.693"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "https://ror.org/02ryrf141"
+    },
+    {
+      "@id": "dbr:Văn_Lang_University"
+    },
+    {
+      "@id": "wd:Q7913477"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75483193"
+    },
+    {
+      "@id": "wd:Q7913477"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Van Lang University"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Văn Lang"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thi-my-dieu"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    }
+  ],
+  "schema:parentOrganization": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tap-doan-giao-duc-van-lang"
+  },
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Đại học Văn Lang"
+  },
+  "vnedu:address": "Cổng Bình Thạnh: 69/68 Đặng Thùy Trâm, Phường Bình Lợi Trung Cổng Gò Vấp: 80/68 Dương Quảng Hàm, Phường An Nhơn Cơ sở 1: 45 Nguyễn Khắc Nhu, Phường Cầu Ông Lãnh",
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+  },
+  "vnedu:hasAlumnus": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-cong-hoang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thao-p-h-ngo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hua-kim-tuyen"
+    }
+  ],
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thi-my-dieu"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Đạo đức - Ý chí - Sáng tạo Morality - Will - Creativity Moralitas - Voluntas - Creativitas"
+  },
+  "vnedu:numberOfStudents": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "145000"
+  },
+  "vnedu:ownedBy": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tap-doan-giao-duc-van-lang"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PrivateOwnership"
+  },
+  "vnedu:rector": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thi-my-dieu"
+  },
+  "vnedu:shortName": "VLU",
+  "vnedu:website": {
+    "@id": "http://www.vanlanguni.edu.vn"
+  }
+}

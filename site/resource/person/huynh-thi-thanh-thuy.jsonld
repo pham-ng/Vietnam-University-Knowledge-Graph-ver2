@@ -1,0 +1,68 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thi-thanh-thuy",
+  "@type": [
+    "vnedu:Alumnus",
+    "foaf:Person",
+    "schema:Person",
+    "vnedu:Person"
+  ],
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://vi.wikipedia.org/wiki/Thanh_Th%E1%BB%A7y_%28ng%C6%B0%E1%BB%9Di_m%E1%BA%ABu%29"
+    },
+    {
+      "@id": "https://en.wikipedia.org/wiki/Hu%E1%BB%B3nh_Th%E1%BB%8B_Thanh_Th%E1%BB%A7y"
+    }
+  ],
+  "foaf:name": "Huỳnh Thị Thanh Thủy",
+  "owl:sameAs": {
+    "@id": "wd:Q115829217"
+  },
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q115829217"
+  },
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Huỳnh Thị Thanh Thủy"
+    },
+    {
+      "@language": "vi",
+      "@value": "Huỳnh Thị Thanh Thủy"
+    }
+  ],
+  "schema:alumniOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ngoai-ngu-dai-hoc-da-nang"
+  },
+  "schema:gender": {
+    "@id": "wd:Q6581072"
+  },
+  "schema:hasOccupation": {
+    "@id": "wd:Q4610556"
+  },
+  "vnedu:alumnusOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ngoai-ngu-dai-hoc-da-nang"
+  },
+  "vnedu:birthDate": {
+    "@type": "xsd:date",
+    "@value": "2002-07-01"
+  }
+}

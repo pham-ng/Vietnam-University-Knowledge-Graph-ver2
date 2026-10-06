@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-da-nang",
+  "@type": [
+    "foaf:Organization",
+    "vnedu:University",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:RegionalUniversity",
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "schema:EducationalOrganization",
+    "vnedu:Organization"
+  ],
+  "foaf:homepage": {
+    "@id": "http://www.udn.vn/"
+  },
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng"
+    },
+    {
+      "@id": "https://en.wikipedia.org/wiki/University_of_Da_Nang"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "16.070939"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "108.219435"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "wd:Q945839"
+    },
+    {
+      "@id": "https://ror.org/03ecpp171"
+    },
+    {
+      "@id": "dbr:University_of_Da_Nang"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "wd:Q945839"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75610520"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Đại học Đà Nẵng"
+    },
+    {
+      "@language": "en",
+      "@value": "University of Da Nang"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ngoc-vu"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    }
+  ],
+  "schema:subOrganization": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-dai-hoc-da-nang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-bach-khoa-dai-hoc-da-nang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-dai-hoc-da-nang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ngoai-ngu-dai-hoc-da-nang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-ky-thuat-dai-hoc-da-nang"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Đại học Đà Nẵng"
+  },
+  "vnedu:address": "41 Lê Duẩn, phường Hải Châu",
+  "vnedu:director": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ngoc-vu"
+  },
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1994"
+  },
+  "vnedu:governedBy": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+  },
+  "vnedu:hasAlumnus": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-son-tran"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xuan-tien"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-van-ga"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-duy-nguyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-tin-nghi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quang-x-le"
+    }
+  ],
+  "vnedu:hasBranch": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/phan-hieu-dai-hoc-da-nang-tai-kon-tum"
+  },
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ngoc-vu"
+  },
+  "vnedu:hasMember": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-ky-thuat-dai-hoc-da-nang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-dai-hoc-da-nang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-bach-khoa-dai-hoc-da-nang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-dai-hoc-da-nang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ngoai-ngu-dai-hoc-da-nang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang"
+    }
+  ],
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Nơi hun đúc trí tuệ và tài năng, vì sự phát triển của miền Trung - Tây Nguyên và cả nước"
+  },
+  "vnedu:numberOfStudents": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "60000"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:shortName": "UDN",
+  "vnedu:website": {
+    "@id": "http://www.udn.vn/"
+  }
+}

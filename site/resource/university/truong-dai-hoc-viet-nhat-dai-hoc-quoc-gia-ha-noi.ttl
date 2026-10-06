@@ -1,0 +1,60 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-viet-nhat-dai-hoc-quoc-gia-ha-noi a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "VNU Vietnam Japan University"@en,
+        "Trường Đại học Việt Nhật, Đại học Quốc gia Hà Nội"@vi ;
+    owl:sameAs dbr:VNU_Vietnam_Japan_University,
+        wd:Q20026262,
+        <https://ror.org/056kdz329> ;
+    geo:lat 21.032917 ;
+    geo:long 105.7625 ;
+    skos:notation "QHJ" ;
+    skos:prefLabel "Trường Đại học Việt Nhật, Đại học Quốc gia Hà Nội"@vi ;
+    prov:wasDerivedFrom wd:Q20026262,
+        <https://vi.wikipedia.org/w/index.php?oldid=75216235> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/VNU_Vietnam_Japan_University>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Vi%E1%BB%87t_Nh%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i> ;
+    vnedu:address "Cơ sở Mỹ Đình: Khối C, tòa nhà Việt Úc, đường Lưu Hữu Phước, phường Cầu Diễn, quận Nam Từ Liêm" ;
+    vnedu:admissionCode "QHJ" ;
+    vnedu:foundingYear "2016"^^xsd:gYear ;
+    vnedu:hasAlumnus person:do-quang-minh ;
+    vnedu:hasLeader person:furuta-motoo ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:memberOf university:dai-hoc-quoc-gia-ha-noi ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:furuta-motoo ;
+    vnedu:shortName "VNU-VJU" ;
+    schema:employee person:furuta-motoo ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    schema:parentOrganization university:dai-hoc-quoc-gia-ha-noi .
+

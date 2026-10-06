@@ -1,0 +1,15 @@
+# Danh mục ngành theo lĩnh vực (TT 09/2022/TT-BGDĐT) và liên kết skos:closeMatch sang Wikidata
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?ma_lv ?linh_vuc ?ma_nganh ?nganh ?wikidata
+WHERE {
+  ?n a vnedu:Major ; vnedu:code ?ma_nganh ; skos:prefLabel ?nganh ; vnedu:inField ?f .
+  ?f vnedu:code ?ma_lv ; skos:prefLabel ?linh_vuc .
+  FILTER(LANG(?nganh) = "vi" && LANG(?linh_vuc) = "vi")
+  OPTIONAL { ?n skos:closeMatch ?wikidata FILTER(STRSTARTS(STR(?wikidata), "http://www.wikidata.org/")) }
+}
+ORDER BY ?ma_nganh

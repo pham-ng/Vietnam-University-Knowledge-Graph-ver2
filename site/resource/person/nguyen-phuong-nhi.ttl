@@ -1,0 +1,27 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:nguyen-phuong-nhi a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Phương Nhi"@en,
+        "Nguyễn Phương Nhi"@vi ;
+    owl:sameAs wd:Q119855525 ;
+    prov:wasDerivedFrom wd:Q119855525 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Nguy%E1%BB%85n_Ph%C6%B0%C6%A1ng_Nhi> ;
+    foaf:name "Nguyễn Phương Nhi" ;
+    vnedu:alumnusOf university:truong-dai-hoc-luat-ha-noi ;
+    vnedu:birthDate "2002-04-21"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-luat-ha-noi ;
+    schema:gender wd:Q6581072 ;
+    schema:hasOccupation wd:Q4610556 .
+

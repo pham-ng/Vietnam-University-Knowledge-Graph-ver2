@@ -1,0 +1,15 @@
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix program: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+
+program:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh-7720101 a vnedu:AcademicProgram,
+        schema:EducationalOccupationalProgram ;
+    rdfs:label "Y khoa – Trường Đại học Y Dược Thành phố Hồ Chí Minh"@vi ;
+    vnedu:degreeLevel "Đại học"@vi ;
+    vnedu:ofMajor major:7720101 ;
+    vnedu:offeredBy university:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh ;
+    schema:provider university:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh .
+

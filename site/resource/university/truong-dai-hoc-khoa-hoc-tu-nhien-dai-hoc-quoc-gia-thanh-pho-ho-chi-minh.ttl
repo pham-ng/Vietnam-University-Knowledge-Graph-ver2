@@ -1,0 +1,162 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix program: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "VNU-HCM University of Science"@en,
+        "Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Thành phố Hồ Chí Minh"@vi ;
+    owl:sameAs dbr:Ho_Chi_Minh_City_University_of_Science,
+        wd:Q5873997,
+        <https://ror.org/05jfbgm49> ;
+    geo:lat 10.762778 ;
+    geo:long 106.681389 ;
+    skos:notation "QST" ;
+    skos:prefLabel "Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Thành phố Hồ Chí Minh"@vi ;
+    prov:wasDerivedFrom wd:Q5873997,
+        <https://vi.wikipedia.org/w/index.php?oldid=75483113> ;
+    foaf:homepage <http://www.hcmus.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Science>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_T%E1%BB%B1_nhi%C3%AAn%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> ;
+    vnedu:academicStaff "565"^^xsd:nonNegativeInteger ;
+    vnedu:address "227 Nguyễn Văn Cừ, Phường Chợ Quán" ;
+    vnedu:admissionCode "QST" ;
+    vnedu:foundingYear "1941"^^xsd:gYear ;
+    vnedu:hasAlumnus person:anh-le-hoang-nguyen,
+        person:binh-x-nguyen,
+        person:bui-thi-kim-ly,
+        person:chi-thang-nguyen,
+        person:cuong-m-q-le,
+        person:dai-hai-nguyen,
+        person:dai-nam-le,
+        person:dang-nguyen,
+        person:dao-huy-manh,
+        person:diem-hong-tran,
+        person:dinh-ngoc-quy,
+        person:du-tran,
+        person:duy-hoang-le,
+        person:gia-buu-tran,
+        person:giang-thi-tuyet-nguyen,
+        person:hai-trieu-ly,
+        person:hoa-tran,
+        person:hoang-d-nguyen,
+        person:hoang-minh-nguyen,
+        person:huu-quang-nguyen,
+        person:huy-q-pham,
+        person:huynh-anh-n-le,
+        person:huynh-ngoc-tien,
+        person:huynh-thi-hong-diem,
+        person:khanh-to-duc,
+        person:khoa-huynh,
+        person:khuong-p-ong,
+        person:le-bin-ho,
+        person:le-hoang-sinh,
+        person:le-minh-luu,
+        person:le-quoc-phong,
+        person:mai-duy-luu-trinh,
+        person:mai-t-t-nguyen,
+        person:mai-thanh-nhat-truong,
+        person:mai-tran-2,
+        person:men-nguyen-van,
+        person:ngo-minh-hieu,
+        person:ngoc-khanh-vu,
+        person:ngoc-sam-ly,
+        person:nguyen-dinh-tuan,
+        person:nguyen-hoai-chung,
+        person:nguyen-hong-quan,
+        person:nguyen-minh-triet,
+        person:nguyen-minh-tung,
+        person:nguyen-tri-khoa,
+        person:nguyen-van-thin,
+        person:nguyen-xuan-hai,
+        person:nhan-nguyen-minh,
+        person:nhat-t-t-le,
+        person:nhung-t-nguyen,
+        person:niem-v-t-vo,
+        person:phan-thi-thanh-phuong,
+        person:phu-hoang-dang,
+        person:phuc-chau,
+        person:phuong-hoang-tran,
+        person:quoc-pham,
+        person:synh-viet-uyen-ha,
+        person:tan-le-hoang-doan,
+        person:thai-son-dinh,
+        person:thanh-duy-tran,
+        person:thanh-hoa-tran,
+        person:thanh-tran-tan,
+        person:thanh-tung-le,
+        person:thi-diem-phuc-huynh,
+        person:thi-h-ho,
+        person:thi-kim-ngan-nguyen,
+        person:thi-sinh-vo,
+        person:thien-tam-luong,
+        person:thinh-phat-cao,
+        person:thuc-ly,
+        person:tran-anh-vy,
+        person:tran-thien-thanh,
+        person:trinh-thanh-deo,
+        person:trung-anh-le,
+        person:trung-hai-nguyen,
+        person:trung-thien-nguyen,
+        person:trung-vo-duy,
+        person:van-phuc-dinh,
+        person:van-phuc-pham,
+        person:van-quan-vuong,
+        person:viet-van-pham,
+        person:vo-si-trong-long,
+        person:vo-van-giau,
+        person:vu-dang-hoang-nguyen,
+        person:vu-nguyen ;
+    vnedu:hasLeader person:tran-le-quan ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    vnedu:motto "Nơi nuôi dưỡng và chắp cánh niềm đam mê Khoa học"@vi ;
+    vnedu:numberOfPostgraduates "2094"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfStudents "17977"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfUndergraduates "15883"^^xsd:nonNegativeInteger ;
+    vnedu:offersProgram program:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh-7420201,
+        program:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh-7440102,
+        program:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh-7440112,
+        program:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh-7460101,
+        program:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh-7480101,
+        program:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh-7480201 ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:tran-le-quan ;
+    vnedu:shortName "HCMUS" ;
+    vnedu:trainsMajor major:7420201,
+        major:7440102,
+        major:7440112,
+        major:7460101,
+        major:7480101,
+        major:7480201 ;
+    vnedu:website <http://www.hcmus.edu.vn/> ;
+    schema:employee person:tran-le-quan ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+

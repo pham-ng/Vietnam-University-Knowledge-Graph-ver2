@@ -1,0 +1,115 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-rang-ham-mat",
+  "@type": [
+    "foaf:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "vnedu:DefunctInstitution",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "schema:EducationalOrganization",
+    "vnedu:Organization"
+  ],
+  "foaf:homepage": {
+    "@id": "http://www.dhrhm.edu.vn"
+  },
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_R%C4%83ng_H%C3%A0m_M%E1%BA%B7t"
+  },
+  "owl:sameAs": {
+    "@id": "wd:Q10829120"
+  },
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "wd:Q10829120"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74506043"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Răng Hàm Mặt"
+    },
+    {
+      "@language": "en",
+      "@value": "jaw"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-manh-dung"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Đại học Răng Hàm Mặt"
+  },
+  "vnedu:address": "40A phố Tràng Thi, phường Hàng Bông, quận Hoàn Kiếm",
+  "vnedu:dissolutionYear": {
+    "@type": "xsd:gYear",
+    "@value": "2009"
+  },
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+  },
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-manh-dung"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    }
+  ],
+  "vnedu:numberOfUndergraduates": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "22500"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:rector": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-manh-dung"
+  },
+  "vnedu:website": {
+    "@id": "http://www.dhrhm.edu.vn"
+  }
+}

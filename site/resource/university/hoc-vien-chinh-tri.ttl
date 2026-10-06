@@ -1,0 +1,51 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:hoc-vien-chinh-tri a foaf:Organization,
+        vnedu:Academy,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MilitaryInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Học viện Chính trị"@vi ;
+    owl:sameAs wd:Q16480519 ;
+    geo:lat 21.028307 ;
+    geo:long 105.856292 ;
+    skos:prefLabel "Học viện Chính trị"@vi ;
+    prov:wasDerivedFrom wd:Q16480519,
+        <https://vi.wikipedia.org/w/index.php?oldid=75498298> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Ch%C3%ADnh_tr%E1%BB%8B_%28Qu%C3%A2n_%C4%91%E1%BB%99i_nh%C3%A2n_d%C3%A2n_Vi%E1%BB%87t_Nam%29> ;
+    vnedu:address "124 phố Ngô Quyền, phường Hà Đông, thành phố Hà Nội" ;
+    vnedu:director person:dang-sy-loc ;
+    vnedu:foundingYear "1951"^^xsd:gYear ;
+    vnedu:governedBy vnedu:MinistryOfNationalDefence,
+        organization:quan-doi-nhan-dan-viet-nam ;
+    vnedu:hasAlumnus person:pham-xuan-truong ;
+    vnedu:hasLeader person:dang-sy-loc ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    schema:employee person:dang-sy-loc ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

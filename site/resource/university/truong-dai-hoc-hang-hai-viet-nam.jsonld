@@ -1,0 +1,148 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-hang-hai-viet-nam",
+  "@type": [
+    "schema:EducationalOrganization",
+    "vnedu:UniversitySchool",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "vnedu:Organization"
+  ],
+  "foaf:homepage": {
+    "@id": "http://vimaru.edu.vn"
+  },
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam"
+    },
+    {
+      "@id": "https://en.wikipedia.org/wiki/Vietnam_Maritime_University"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "20.837335"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "106.695632"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "dbr:Vietnam_Maritime_University"
+    },
+    {
+      "@id": "https://ror.org/03z9fzp04"
+    },
+    {
+      "@id": "wd:Q7928523"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75526007"
+    },
+    {
+      "@id": "wd:Q7928523"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Hàng hải Việt Nam"
+    },
+    {
+      "@language": "en",
+      "@value": "Vietnam Maritime University"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-xuan-duong"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Đại học Hàng hải Việt Nam"
+  },
+  "vnedu:address": "484, Lạch Tray, Phường Lê Chân",
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1956"
+  },
+  "vnedu:governedBy": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-xay-dung"
+  },
+  "vnedu:hasAlumnus": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-nhat"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-quang-duong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/mac-trung-kien"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thanh-tam"
+    }
+  ],
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-xuan-duong"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "trường đại học hàng hải Việt Nam tại thành phố Hải Phòng"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:rector": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-xuan-duong"
+  },
+  "vnedu:website": {
+    "@id": "http://vimaru.edu.vn"
+  }
+}

@@ -1,0 +1,69 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:hoc-vien-bao-chi-va-tuyen-truyen a foaf:Organization,
+        vnedu:Academy,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Academy of Journalism and Communication - AJC"@en,
+        "Học viện Báo chí và Tuyên truyền"@vi ;
+    owl:sameAs dbr:Academy_of_Journalism_and_Communication,
+        wd:Q10771877,
+        <https://ror.org/03zwxvq16> ;
+    geo:lat 21.0378 ;
+    geo:long 105.788 ;
+    skos:notation "HBT" ;
+    skos:prefLabel "Học viện Báo chí và Tuyên truyền"@vi ;
+    prov:wasDerivedFrom wd:Q10771877,
+        <https://vi.wikipedia.org/w/index.php?oldid=75544973> ;
+    foaf:homepage <https://ajc.hcma.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Academy_of_Journalism_and_Communication>,
+        <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_B%C3%A1o_ch%C3%AD_v%C3%A0_Tuy%C3%AAn_truy%E1%BB%81n> ;
+    vnedu:address "số 36 đường Xuân Thủy, phường Cầu Giấy" ;
+    vnedu:admissionCode "HBT" ;
+    vnedu:director person:pham-minh-son ;
+    vnedu:foundingYear "1962"^^xsd:gYear ;
+    vnedu:hasAlumnus person:chau-tho,
+        person:dan-le,
+        person:diep-chi,
+        person:do-chi-nghia,
+        person:ha-quoc-tri,
+        person:le-viet-huong,
+        person:luong-kim-lien,
+        person:nam-linh,
+        person:quang-tung ;
+    vnedu:hasLeader person:pham-minh-son ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:memberOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:shortName "AJC",
+        "HVBCVTT" ;
+    vnedu:website <https://ajc.hcma.vn/> ;
+    schema:employee person:pham-minh-son ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    schema:parentOrganization university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh .
+

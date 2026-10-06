@@ -1,0 +1,73 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/phan-hieu-long-an-truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh",
+  "@type": [
+    "foaf:Organization",
+    "vnedu:Branch",
+    "schema:Organization",
+    "vnedu:EducationalOrganization",
+    "schema:EducationalOrganization",
+    "vnedu:Organization"
+  ],
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Ph%C3%A2n_hi%E1%BB%87u_Long_An%2C_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+  },
+  "owl:sameAs": {
+    "@id": "wd:Q10828805"
+  },
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75102025"
+    },
+    {
+      "@id": "wd:Q10828805"
+    }
+  ],
+  "rdfs:label": {
+    "@language": "vi",
+    "@value": "Phân hiệu Long An, Trường Đại học Sư phạm Thành phố Hồ Chí Minh"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Phân hiệu Long An, Trường Đại học Sư phạm Thành phố Hồ Chí Minh"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    }
+  ]
+}

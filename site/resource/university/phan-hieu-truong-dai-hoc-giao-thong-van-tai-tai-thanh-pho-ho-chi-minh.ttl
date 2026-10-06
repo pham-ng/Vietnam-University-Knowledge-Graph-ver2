@@ -1,0 +1,48 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:phan-hieu-truong-dai-hoc-giao-thong-van-tai-tai-thanh-pho-ho-chi-minh a foaf:Organization,
+        vnedu:Branch,
+        vnedu:EducationalOrganization,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "University of Transport and Communications"@en,
+        "Phân hiệu Trường Đại học Giao thông Vận tải tại Thành phố Hồ Chí Minh"@vi ;
+    owl:sameAs wd:Q10829042 ;
+    skos:prefLabel "Phân hiệu Trường Đại học Giao thông Vận tải tại Thành phố Hồ Chí Minh"@vi ;
+    prov:wasDerivedFrom wd:Q10829042,
+        <https://vi.wikipedia.org/w/index.php?oldid=75258491> ;
+    foaf:homepage <http://www.utc2.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Ph%C3%A2n_hi%E1%BB%87u_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Giao_th%C3%B4ng_V%E1%BA%ADn_t%E1%BA%A3i_t%E1%BA%A1i_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> ;
+    vnedu:address "Số 450–451 Lê Văn Việt, phường Tăng Nhơn Phú A, thành phố Thủ Đức" ;
+    vnedu:formerName "Trường Đại học Giao thông Vận tải cơ sở II"@vi ;
+    vnedu:foundingYear "1990"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
+    vnedu:hasLeader person:nguyen-van-hung ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:nguyen-van-hung ;
+    vnedu:shortName "UTC2" ;
+    vnedu:website <http://www.utc2.edu.vn> ;
+    schema:employee person:nguyen-van-hung ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+

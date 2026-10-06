@@ -1,0 +1,30 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:tran-dinh-long a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Tran Dinh Long"@en,
+        "Trần Đình Long"@vi ;
+    owl:sameAs dbr:Trần_Đình_Long,
+        wd:Q49055898 ;
+    prov:wasDerivedFrom wd:Q49055898 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_%C4%90%C3%ACnh_Long>,
+        <https://vi.wikipedia.org/wiki/Tr%E1%BA%A7n_%C4%90%C3%ACnh_Long_%28doanh_nh%C3%A2n%29> ;
+    foaf:name "Trần Đình Long" ;
+    vnedu:alumnusOf university:dai-hoc-kinh-te-quoc-dan ;
+    vnedu:birthDate "1961-02-20"^^xsd:date ;
+    schema:alumniOf university:dai-hoc-kinh-te-quoc-dan ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q43845 .
+

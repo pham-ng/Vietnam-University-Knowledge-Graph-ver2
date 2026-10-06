@@ -1,0 +1,55 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:hoc-vien-tai-chinh a foaf:Organization,
+        vnedu:Academy,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Academy of Finance"@en,
+        "Học viện Tài chính"@vi ;
+    owl:sameAs wd:Q10771904 ;
+    geo:lat 21.075248 ;
+    geo:long 105.773553 ;
+    skos:prefLabel "Học viện Tài chính"@vi ;
+    prov:wasDerivedFrom wd:Q10771904,
+        <https://vi.wikipedia.org/w/index.php?oldid=75506912> ;
+    foaf:homepage <http://hvtc.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_T%C3%A0i_ch%C3%ADnh_%28Vi%E1%BB%87t_Nam%29> ;
+    vnedu:address "58 phố Lê Văn Hiến, phường Đông Ngạc" ;
+    vnedu:formerName "Trường Đại học Tài chính - Kế toán Hà Nội"@vi ;
+    vnedu:foundingYear "1963"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-tai-chinh ;
+    vnedu:hasAlumnus person:dinh-la-thang,
+        person:ho-duc-phoc,
+        person:nguyen-the-manh,
+        person:pham-anh-tuan,
+        person:ta-anh-tuan ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:motto "\"Sinh viên Học viện Tài chính phát huy truyền thống, thi đua học tập, sáng tạo, tình nguyện và hội nhập\""@vi ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:website <http://hvtc.edu.vn> ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

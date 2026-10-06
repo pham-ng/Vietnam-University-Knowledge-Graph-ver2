@@ -1,0 +1,13 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+
+organization:tap-doan-phenikaa a foaf:Organization,
+        vnedu:Company,
+        vnedu:Organization,
+        schema:Corporation,
+        schema:Organization ;
+    rdfs:label "Tập đoàn Phenikaa"@vi .
+

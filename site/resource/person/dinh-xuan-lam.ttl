@@ -1,0 +1,30 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:dinh-xuan-lam a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Đinh Xuân Lâm"@en,
+        "Đinh Xuân Lâm"@vi ;
+    owl:sameAs dbr:Đinh_Xuân_Lâm,
+        wd:Q10840158 ;
+    prov:wasDerivedFrom wd:Q10840158 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/%C4%90inh_Xu%C3%A2n_L%C3%A2m>,
+        <https://vi.wikipedia.org/wiki/%C4%90inh_Xu%C3%A2n_L%C3%A2m> ;
+    foaf:name "Đinh Xuân Lâm" ;
+    vnedu:alumnusOf university:truong-dai-hoc-tong-hop-ha-noi ;
+    vnedu:birthDate "1925-02-04"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-tong-hop-ha-noi ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q201788 .
+

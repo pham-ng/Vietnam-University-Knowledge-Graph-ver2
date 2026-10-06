@@ -1,0 +1,15 @@
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix program: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+
+program:truong-dai-hoc-cong-nghe-dai-hoc-quoc-gia-ha-noi-7480102 a vnedu:AcademicProgram,
+        schema:EducationalOccupationalProgram ;
+    rdfs:label "Mạng máy tính và truyền thông dữ liệu – Trường Đại học Công nghệ, Đại học Quốc gia Hà Nội"@vi ;
+    vnedu:degreeLevel "Đại học"@vi ;
+    vnedu:ofMajor major:7480102 ;
+    vnedu:offeredBy university:truong-dai-hoc-cong-nghe-dai-hoc-quoc-gia-ha-noi ;
+    schema:provider university:truong-dai-hoc-cong-nghe-dai-hoc-quoc-gia-ha-noi .
+

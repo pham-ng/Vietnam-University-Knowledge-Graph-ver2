@@ -1,0 +1,29 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:quang-tung a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Quang Tùng"@vi ;
+    owl:sameAs wd:Q140193767 ;
+    prov:wasDerivedFrom wd:Q140193767 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Quang_T%C3%B9ng> ;
+    foaf:name "Quang Tùng" ;
+    vnedu:alumnusOf university:hoc-vien-bao-chi-va-tuyen-truyen,
+        university:truong-dai-hoc-the-duc-the-thao-bac-ninh ;
+    vnedu:birthDate "1972-05-13"^^xsd:date ;
+    schema:alumniOf university:hoc-vien-bao-chi-va-tuyen-truyen,
+        university:truong-dai-hoc-the-duc-the-thao-bac-ninh ;
+    schema:hasOccupation wd:Q189290,
+        wd:Q1930187,
+        wd:Q2986228 .
+

@@ -1,0 +1,20 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+university:dai-chung-vien-thanh-giuse-xuan-loc a foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:Organization,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Đại chủng viện Thánh Giuse Xuân Lộc"@vi ;
+    owl:sameAs wd:Q10841203 ;
+    skos:prefLabel "Đại chủng viện Thánh Giuse Xuân Lộc"@vi ;
+    prov:wasDerivedFrom wd:Q10841203 .
+

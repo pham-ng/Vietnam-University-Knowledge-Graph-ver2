@@ -1,0 +1,107 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-doanh-va-cong-nghe-ha-noi",
+  "@type": [
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "dbo:University",
+    "schema:EducationalOrganization",
+    "vnedu:Organization",
+    "foaf:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:PrivateInstitution",
+    "vnedu:HigherEducationInstitution"
+  ],
+  "foaf:homepage": {
+    "@id": "http://hubt.edu.vn/"
+  },
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_doanh_v%C3%A0_C%C3%B4ng_ngh%E1%BB%87_H%C3%A0_N%E1%BB%99i"
+  },
+  "owl:sameAs": {
+    "@id": "wd:Q10829067"
+  },
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75576334"
+    },
+    {
+      "@id": "wd:Q10829067"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Hanoi University of Business and Technology"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Kinh doanh và Công nghệ Hà Nội"
+    }
+  ],
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    }
+  ],
+  "skos:notation": "DQK",
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Đại học Kinh doanh và Công nghệ Hà Nội"
+  },
+  "vnedu:address": "Số 29A, ngõ 124 phố Vĩnh Tuy, phường Vĩnh Tuy, thành phố Hà Nội",
+  "vnedu:admissionCode": "DQK",
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+  },
+  "vnedu:hasAlumnus": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/do-minh-tuan"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xinh-xo"
+    }
+  ],
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    }
+  ],
+  "vnedu:ownership": {
+    "@id": "vnedu:PrivateOwnership"
+  },
+  "vnedu:website": {
+    "@id": "http://hubt.edu.vn/"
+  }
+}

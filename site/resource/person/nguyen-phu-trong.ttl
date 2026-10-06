@@ -1,0 +1,32 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:nguyen-phu-trong a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Phú Trọng"@en,
+        "Nguyễn Phú Trọng"@vi ;
+    owl:sameAs dbr:Nguyễn_Phú_Trọng,
+        wd:Q318458 ;
+    prov:wasDerivedFrom wd:Q318458 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Nguy%E1%BB%85n_Ph%C3%BA_Tr%E1%BB%8Dng>,
+        <https://vi.wikipedia.org/wiki/Nguy%E1%BB%85n_Ph%C3%BA_Tr%E1%BB%8Dng> ;
+    foaf:name "Nguyễn Phú Trọng" ;
+    vnedu:alumnusOf university:dai-hoc-quoc-gia-ha-noi,
+        university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh ;
+    vnedu:birthDate "1944-04-14"^^xsd:date ;
+    schema:alumniOf university:dai-hoc-quoc-gia-ha-noi,
+        university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q82955 .
+

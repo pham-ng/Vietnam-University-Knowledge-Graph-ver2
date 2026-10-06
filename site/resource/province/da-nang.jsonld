@@ -1,0 +1,86 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang",
+  "@type": [
+    "vnedu:AdministrativeUnit",
+    "schema:AdministrativeArea",
+    "vnedu:CentrallyGovernedCity",
+    "vnedu:Province"
+  ],
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://en.wikipedia.org/wiki/Da_Nang"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/wiki/%C4%90%C3%A0_N%E1%BA%B5ng"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "16.069444444"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "108.209722222"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "wd:Q25282"
+    },
+    {
+      "@id": "https://sws.geonames.org/1905468/"
+    },
+    {
+      "@id": "dbr:Da_Nang"
+    }
+  ],
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q25282"
+  },
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Da Nang"
+    },
+    {
+      "@language": "vi",
+      "@value": "Đà Nẵng"
+    }
+  ],
+  "vnedu:area": {
+    "@type": "xsd:decimal",
+    "@value": "11860.0"
+  },
+  "vnedu:mergedFrom": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-nam"
+  },
+  "vnedu:partOf": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    }
+  ],
+  "vnedu:population": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "2819900"
+  }
+}

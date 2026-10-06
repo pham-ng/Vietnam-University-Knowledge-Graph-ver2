@@ -1,0 +1,56 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:dai-hoc-phenikaa a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PrivateInstitution,
+        vnedu:University,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Phenikaa University"@en,
+        "Đại học Phenikaa"@vi ;
+    owl:sameAs wd:Q107518125,
+        <https://ror.org/03anxx281> ;
+    geo:lat 20.961242 ;
+    geo:long 105.747473 ;
+    skos:prefLabel "Đại học Phenikaa"@vi ;
+    prov:wasDerivedFrom wd:Q107518125,
+        <https://vi.wikipedia.org/w/index.php?oldid=75437043> ;
+    foaf:homepage <https://phenikaa-uni.edu.vn/vi> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Phenikaa> ;
+    vnedu:address "Đường Nguyễn Trác - Phường Dương Nội" ;
+    vnedu:director person:le-anh-son ;
+    vnedu:foundingYear "2007"^^xsd:gYear ;
+    vnedu:hasLeader person:le-anh-son ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:ownedBy organization:tap-doan-phenikaa ;
+    vnedu:ownership vnedu:PrivateOwnership ;
+    vnedu:shortName "PKA" ;
+    vnedu:website <https://phenikaa-uni.edu.vn/vi> ;
+    schema:employee person:le-anh-son ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    schema:parentOrganization organization:tap-doan-phenikaa .
+

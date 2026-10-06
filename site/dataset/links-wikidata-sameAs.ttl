@@ -1,0 +1,10 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/wikidata> ;
+    void:subjectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset> ;
+    void:triples 1878 .
+

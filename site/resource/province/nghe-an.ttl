@@ -1,0 +1,32 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+province:nghe-an a vnedu:AdministrativeUnit,
+        vnedu:Province,
+        schema:AdministrativeArea ;
+    rdfs:label "Nghệ An"@en,
+        "Nghệ An"@vi ;
+    owl:sameAs dbr:Nghệ_An_province,
+        wd:Q36587,
+        <https://sws.geonames.org/1559969/> ;
+    geo:lat 19.333333333 ;
+    geo:long 104.833333333 ;
+    prov:wasDerivedFrom wd:Q36587 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ngh%E1%BB%87_An_province>,
+        <https://vi.wikipedia.org/wiki/Ngh%E1%BB%87_An> ;
+    vnedu:area 16486.49 ;
+    vnedu:partOf country:viet-nam,
+        region:trung-bo ;
+    vnedu:population "3472300"^^xsd:nonNegativeInteger .
+

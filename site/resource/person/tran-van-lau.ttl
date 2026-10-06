@@ -1,0 +1,25 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+person:tran-van-lau a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Trần Văn Lâu"@en,
+        "Trần Văn Lâu"@vi ;
+    owl:sameAs wd:Q107300425 ;
+    prov:wasDerivedFrom wd:Q107300425 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%E1%BA%A7n_V%C4%83n_L%C3%A2u> ;
+    foaf:name "Trần Văn Lâu" ;
+    vnedu:alumnusOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh ;
+    schema:alumniOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q82955 .
+

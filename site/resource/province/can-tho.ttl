@@ -1,0 +1,35 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+province:can-tho a vnedu:AdministrativeUnit,
+        vnedu:CentrallyGovernedCity,
+        vnedu:Province,
+        schema:AdministrativeArea ;
+    rdfs:label "Cần Thơ"@en,
+        "Cần Thơ"@vi ;
+    owl:sameAs dbr:Cần_Thơ,
+        wd:Q216075,
+        <https://sws.geonames.org/1581188/> ;
+    geo:lat 10.1547298 ;
+    geo:long 105.5005357 ;
+    prov:wasDerivedFrom wd:Q216075 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/C%E1%BA%A7n_Th%C6%A1>,
+        <https://vi.wikipedia.org/wiki/C%E1%BA%A7n_Th%C6%A1> ;
+    vnedu:area 6361.0 ;
+    vnedu:mergedFrom province:hau-giang,
+        province:soc-trang ;
+    vnedu:partOf country:viet-nam,
+        region:nam-bo ;
+    vnedu:population "3207000"^^xsd:nonNegativeInteger .
+

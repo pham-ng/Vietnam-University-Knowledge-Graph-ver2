@@ -1,0 +1,53 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-nguyen-tat-thanh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PrivateInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Nguyen Tat Thanh University"@en,
+        "Trường Đại học Nguyễn Tất Thành"@vi ;
+    owl:sameAs wd:Q10829104,
+        <https://ror.org/04r9s1v23> ;
+    geo:lat 10.662223 ;
+    geo:long 106.72113 ;
+    skos:prefLabel "Trường Đại học Nguyễn Tất Thành"@vi ;
+    prov:wasDerivedFrom wd:Q10829104,
+        <https://vi.wikipedia.org/w/index.php?oldid=74533372> ;
+    foaf:homepage <http://ntt.edu.vn/ntt_trangchu/> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Nguy%E1%BB%85n_T%E1%BA%A5t_Th%C3%A0nh> ;
+    vnedu:address "300A Nguyễn Tất Thành, phường Xóm Chiếu" ;
+    vnedu:foundingYear "1999"^^xsd:gYear ;
+    vnedu:hasLeader person:tran-ai-cam ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    vnedu:numberOfStudents "34000"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PrivateOwnership ;
+    vnedu:rector person:tran-ai-cam ;
+    vnedu:website <http://ntt.edu.vn/ntt_trangchu/> ;
+    schema:employee person:tran-ai-cam ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+

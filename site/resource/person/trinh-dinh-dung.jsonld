@@ -1,0 +1,63 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/trinh-dinh-dung",
+  "@type": [
+    "foaf:Person",
+    "schema:Person",
+    "vnedu:Person",
+    "vnedu:Alumnus"
+  ],
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Tr%E1%BB%8Bnh_%C4%90%C3%ACnh_D%C5%A9ng"
+  },
+  "foaf:name": "Trịnh Đình Dũng",
+  "owl:sameAs": {
+    "@id": "wd:Q10829899"
+  },
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q10829899"
+  },
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Trịnh Đình Dũng"
+    },
+    {
+      "@language": "en",
+      "@value": "Trịnh Đình Dũng"
+    }
+  ],
+  "schema:alumniOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-xay-dung-ha-noi"
+  },
+  "schema:gender": {
+    "@id": "wd:Q6581097"
+  },
+  "schema:hasOccupation": {
+    "@id": "wd:Q82955"
+  },
+  "vnedu:alumnusOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-xay-dung-ha-noi"
+  },
+  "vnedu:birthDate": {
+    "@type": "xsd:date",
+    "@value": "1956-08-25"
+  }
+}

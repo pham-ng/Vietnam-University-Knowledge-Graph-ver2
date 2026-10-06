@@ -1,0 +1,63 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:dai-hoc-tra-vinh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:University,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Tra Vinh University"@en,
+        "Đại học Trà Vinh"@vi ;
+    owl:sameAs dbr:Tra_Vinh_University,
+        wd:Q10829149,
+        <https://ror.org/05ghhgs79> ;
+    geo:lat 9.922 ;
+    geo:long 106.347 ;
+    skos:prefLabel "Đại học Trà Vinh"@vi ;
+    prov:wasDerivedFrom wd:Q10829149,
+        <https://vi.wikipedia.org/w/index.php?oldid=75556505> ;
+    foaf:homepage <http://www.tvu.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Tra_Vinh_University>,
+        <https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Tr%C3%A0_Vinh> ;
+    vnedu:address "Số 126 Nguyễn Thiện Thành, khóm 4, phường Hòa Thuận" ;
+    vnedu:director person:nguyen-minh-hoa ;
+    vnedu:foundingYear "2001"^^xsd:gYear ;
+    vnedu:governedBy organization:ubnd-tinh-vinh-long ;
+    vnedu:hasLeader person:nguyen-minh-hoa ;
+    vnedu:locatedIn country:viet-nam,
+        province:tra-vinh,
+        province:vinh-long,
+        region:nam-bo ;
+    vnedu:motto "Mang đến cơ hội học tập chất lượng cho cộng đồng"@vi ;
+    vnedu:numberOfPostgraduates "1543"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfStudents "41138"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:shortName "TVU" ;
+    vnedu:website <http://www.tvu.edu.vn/> ;
+    schema:employee person:nguyen-minh-hoa ;
+    schema:location country:viet-nam,
+        province:tra-vinh,
+        province:vinh-long,
+        region:nam-bo .
+

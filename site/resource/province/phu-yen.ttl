@@ -1,0 +1,29 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+province:phu-yen a vnedu:AdministrativeUnit,
+        vnedu:FormerProvince,
+        schema:AdministrativeArea ;
+    rdfs:label "Phu Yen"@en,
+        "Phú Yên"@vi ;
+    owl:sameAs dbr:Phú_Yên_province,
+        wd:Q36725,
+        <https://sws.geonames.org/1569805/> ;
+    geo:lat 13.166666666 ;
+    geo:long 109.166666666 ;
+    prov:wasDerivedFrom wd:Q36725 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ph%C3%BA_Y%C3%AAn_province>,
+        <https://vi.wikipedia.org/wiki/Ph%C3%BA_Y%C3%AAn_%28t%E1%BB%89nh%29> ;
+    vnedu:area 5025.96 ;
+    vnedu:mergedInto province:dak-lak ;
+    vnedu:population "876620"^^xsd:nonNegativeInteger .
+

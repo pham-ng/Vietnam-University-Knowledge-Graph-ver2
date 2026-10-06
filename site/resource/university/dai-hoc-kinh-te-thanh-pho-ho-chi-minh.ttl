@@ -1,0 +1,86 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix program: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:dai-hoc-kinh-te-thanh-pho-ho-chi-minh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:University,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "University of Economics Ho Chi Minh City"@en,
+        "Đại học Kinh tế Thành phố Hồ Chí Minh"@vi ;
+    owl:sameAs dbr:University_of_Economics_Ho_Chi_Minh_City,
+        wd:Q2562140,
+        <https://ror.org/010yce376> ;
+    geo:lat 10.784 ;
+    geo:long 106.694 ;
+    skos:prefLabel "Đại học Kinh tế Thành phố Hồ Chí Minh"@vi ;
+    prov:wasDerivedFrom wd:Q2562140,
+        <https://vi.wikipedia.org/w/index.php?oldid=75610492> ;
+    foaf:homepage <http://www.ueh.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/University_of_Economics_Ho_Chi_Minh_City>,
+        <https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> ;
+    vnedu:academicStaff "767"^^xsd:nonNegativeInteger ;
+    vnedu:address "59C Nguyễn Đình Chiểu, phường Xuân Hòa" ;
+    vnedu:director person:bui-quang-hung ;
+    vnedu:foundingYear "1976"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
+    vnedu:hasAlumnus person:dang-thi-hoang-yen,
+        person:hieuthuhai,
+        person:ho-tue-an,
+        person:huy-duc-dang,
+        person:misthy,
+        person:nguyen-duc-tai,
+        person:nguyen-phuc-canh,
+        person:phan-nhu-nguyen,
+        person:tri-khai-lam ;
+    vnedu:hasBranch university:phan-hieu-dai-hoc-kinh-te-thanh-pho-ho-chi-minh-tai-vinh-long ;
+    vnedu:hasLeader person:bui-quang-hung ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    vnedu:motto "Thỏa sức sáng tạo - Chủ động tương lai - Toàn diện giá trị"@vi ;
+    vnedu:numberOfPostgraduates "10000"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfUndergraduates "25000"^^xsd:nonNegativeInteger ;
+    vnedu:offersProgram program:dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7310101,
+        program:dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340101,
+        program:dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340115,
+        program:dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340201,
+        program:dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340301,
+        program:dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7510605 ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:shortName "UEH" ;
+    vnedu:trainsMajor major:7310101,
+        major:7340101,
+        major:7340115,
+        major:7340201,
+        major:7340301,
+        major:7510605 ;
+    vnedu:website <http://www.ueh.edu.vn/> ;
+    schema:employee person:bui-quang-hung ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+

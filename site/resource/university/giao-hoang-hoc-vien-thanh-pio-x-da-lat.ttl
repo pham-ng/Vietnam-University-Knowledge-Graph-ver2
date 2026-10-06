@@ -1,0 +1,30 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:giao-hoang-hoc-vien-thanh-pio-x-da-lat a foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Pontifical College St.Pius X"@en,
+        "Giáo hoàng Học viện Thánh Piô X Đà Lạt"@vi ;
+    owl:sameAs dbr:Pontifical_College_of_St._Pius_X,
+        wd:Q10761706 ;
+    skos:prefLabel "Giáo hoàng Học viện Thánh Piô X Đà Lạt"@vi ;
+    prov:wasDerivedFrom wd:Q10761706,
+        <https://vi.wikipedia.org/w/index.php?oldid=74530690> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Pontifical_College_of_St._Pius_X>,
+        <https://vi.wikipedia.org/wiki/Gi%C3%A1o_ho%C3%A0ng_H%E1%BB%8Dc_vi%E1%BB%87n_Th%C3%A1nh_Pi%C3%B4_X_%C4%90%C3%A0_L%E1%BA%A1t> ;
+    vnedu:foundingYear "1958"^^xsd:gYear .
+

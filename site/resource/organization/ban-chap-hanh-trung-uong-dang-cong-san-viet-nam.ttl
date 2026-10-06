@@ -1,0 +1,21 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+organization:ban-chap-hanh-trung-uong-dang-cong-san-viet-nam a foaf:Organization,
+        vnedu:GoverningBody,
+        vnedu:Organization,
+        schema:GovernmentOrganization,
+        schema:Organization ;
+    rdfs:label "Central Committee of the Communist Party of Vietnam"@en,
+        "Ban Chấp hành Trung ương Đảng Cộng sản Việt Nam"@vi ;
+    owl:sameAs dbr:Central_Committee_of_the_Communist_Party_of_Vietnam,
+        wd:Q5060621 ;
+    vnedu:governs university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh .
+

@@ -1,0 +1,63 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-cong-nghiep-thanh-pho-ho-chi-minh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Industrial University of Ho Chi Minh City"@en,
+        "Trường Đại học Công nghiệp Thành phố Hồ Chí Minh"@vi ;
+    owl:sameAs dbr:Industrial_University_of_Ho_Chi_Minh_City,
+        wd:Q7895548,
+        <https://ror.org/03mj71j26> ;
+    geo:lat 10.9384 ;
+    geo:long 106.824 ;
+    skos:prefLabel "Trường Đại học Công nghiệp Thành phố Hồ Chí Minh"@vi ;
+    prov:wasDerivedFrom wd:Q7895548,
+        <https://vi.wikipedia.org/w/index.php?oldid=75608102> ;
+    foaf:homepage <http://www.hui.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Industrial_University_of_Ho_Chi_Minh_City>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_nghi%E1%BB%87p_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> ;
+    vnedu:address "12 Nguyễn Văn Bảo, phường Hạnh Thông" ;
+    vnedu:foundingYear "1956"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-cong-thuong ;
+    vnedu:hasAlumnus person:anh-tu-le,
+        person:hoai-thuong-nguyen,
+        person:minh-canh-vu,
+        person:pham-duc-phuong-nam ;
+    vnedu:hasLeader person:phan-hong-hai ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    vnedu:motto "Đổi mới tư duy, làm giàu thêm đời sống tri thức và kinh tế"@vi ;
+    vnedu:numberOfStudents "36000"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:phan-hong-hai ;
+    vnedu:website <http://www.hui.edu.vn/> ;
+    schema:employee person:phan-hong-hai ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+

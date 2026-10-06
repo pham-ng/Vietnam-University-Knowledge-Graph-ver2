@@ -1,0 +1,139 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-dong-thap",
+  "@type": [
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "schema:EducationalOrganization",
+    "vnedu:Organization",
+    "vnedu:UniversitySchool",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization"
+  ],
+  "foaf:homepage": {
+    "@id": "http://www.dthu.edu.vn/"
+  },
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%E1%BB%93ng_Th%C3%A1p"
+    },
+    {
+      "@id": "https://en.wikipedia.org/wiki/Dong_Thap_University"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "10.420858"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "105.642929"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "https://ror.org/05h7nhz20"
+    },
+    {
+      "@id": "wd:Q30263747"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75587728"
+    },
+    {
+      "@id": "wd:Q30263747"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Dong Thap University"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Đồng Tháp"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-tan-dat"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-thap"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Đại học Đồng Tháp"
+  },
+  "vnedu:address": "783 Phạm Hữu Lầu, Phường Cao Lãnh",
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+  },
+  "vnedu:governedBy": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+  },
+  "vnedu:hasAlumnus": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-thanh-dat"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/danh-duc-ha"
+    }
+  ],
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-tan-dat"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-thap"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Chất lượng - Sáng tạo - Hợp tác - Trách nhiệm - Thân thiện."
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:rector": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-tan-dat"
+  },
+  "vnedu:website": {
+    "@id": "http://www.dthu.edu.vn/"
+  }
+}

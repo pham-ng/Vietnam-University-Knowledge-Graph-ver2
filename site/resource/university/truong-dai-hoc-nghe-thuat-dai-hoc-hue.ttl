@@ -1,0 +1,52 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-nghe-thuat-dai-hoc-hue a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Hue University of the Arts"@en,
+        "Trường Đại học Nghệ thuật, Đại học Huế"@vi ;
+    owl:sameAs wd:Q109430486 ;
+    skos:notation "DHN" ;
+    skos:prefLabel "Trường Đại học Nghệ thuật, Đại học Huế"@vi ;
+    prov:wasDerivedFrom wd:Q109430486,
+        <https://vi.wikipedia.org/w/index.php?oldid=75188917> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngh%E1%BB%87_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF> ;
+    vnedu:address "10 đường Tô Ngọc Vân, phường Đông Ba, quận Phú Xuân" ;
+    vnedu:admissionCode "DHN" ;
+    vnedu:formerName "Trường Cao đẳng Nghệ thuật Huế"@vi,
+        "Trường Quốc gia Cao đẳng Mỹ thuật Huế"@vi ;
+    vnedu:foundingYear "1957"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
+    vnedu:locatedIn country:viet-nam,
+        province:hue,
+        region:trung-bo ;
+    vnedu:memberOf university:dai-hoc-hue ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:shortName "HUA" ;
+    schema:location country:viet-nam,
+        province:hue,
+        region:trung-bo ;
+    schema:parentOrganization university:dai-hoc-hue .
+

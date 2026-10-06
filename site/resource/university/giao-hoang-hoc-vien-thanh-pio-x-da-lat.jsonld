@@ -1,0 +1,72 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/giao-hoang-hoc-vien-thanh-pio-x-da-lat",
+  "@type": [
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "schema:CollegeOrUniversity"
+  ],
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://en.wikipedia.org/wiki/Pontifical_College_of_St._Pius_X"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/wiki/Gi%C3%A1o_ho%C3%A0ng_H%E1%BB%8Dc_vi%E1%BB%87n_Th%C3%A1nh_Pi%C3%B4_X_%C4%90%C3%A0_L%E1%BA%A1t"
+    }
+  ],
+  "owl:sameAs": [
+    {
+      "@id": "wd:Q10761706"
+    },
+    {
+      "@id": "dbr:Pontifical_College_of_St._Pius_X"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74530690"
+    },
+    {
+      "@id": "wd:Q10761706"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Giáo hoàng Học viện Thánh Piô X Đà Lạt"
+    },
+    {
+      "@language": "en",
+      "@value": "Pontifical College St.Pius X"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Giáo hoàng Học viện Thánh Piô X Đà Lạt"
+  },
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1958"
+  }
+}

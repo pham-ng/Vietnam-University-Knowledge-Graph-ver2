@@ -1,0 +1,63 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-thi-thanh-ha",
+  "@type": [
+    "vnedu:Alumnus",
+    "foaf:Person",
+    "schema:Person",
+    "vnedu:Person"
+  ],
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Ph%E1%BA%A1m_Th%E1%BB%8B_Thanh_H%C3%A0"
+  },
+  "foaf:name": "Phạm Thị Thanh Hà",
+  "owl:sameAs": {
+    "@id": "wd:Q138719356"
+  },
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q138719356"
+  },
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Phạm Thị Thanh Hà"
+    },
+    {
+      "@language": "vi",
+      "@value": "Phạm Thị Thanh Hà"
+    }
+  ],
+  "schema:alumniOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-ha-noi"
+  },
+  "schema:gender": {
+    "@id": "wd:Q6581072"
+  },
+  "schema:hasOccupation": {
+    "@id": "wd:Q28389"
+  },
+  "vnedu:alumnusOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-ha-noi"
+  },
+  "vnedu:birthDate": {
+    "@type": "xsd:date",
+    "@value": "1976-03-31"
+  }
+}

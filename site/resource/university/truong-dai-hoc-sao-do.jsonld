@@ -1,0 +1,115 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-sao-do",
+  "@type": [
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:UniversitySchool",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution"
+  ],
+  "foaf:homepage": {
+    "@id": "http://saodo.edu.vn"
+  },
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Sao_%C4%90%E1%BB%8F"
+  },
+  "owl:sameAs": {
+    "@id": "wd:Q10829121"
+  },
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75525960"
+    },
+    {
+      "@id": "wd:Q10829121"
+    }
+  ],
+  "rdfs:label": {
+    "@language": "vi",
+    "@value": "Trường Đại học Sao Đỏ"
+  },
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-van-nhuong"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Đại học Sao Đỏ"
+  },
+  "vnedu:academicStaff": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "284"
+  },
+  "vnedu:address": "Số 76, Đường Nguyễn Thị Duệ, TDP Thái Học 2, phường Chu Văn An",
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "2010"
+  },
+  "vnedu:governedBy": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-cong-thuong"
+  },
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-van-nhuong"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Tri thức – Yếu tố quan trọng nhất của sản xuất; Sáng tạo – Động lực chủ yếu của phát triển!"
+  },
+  "vnedu:numberOfUndergraduates": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "14500"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:rector": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-van-nhuong"
+  },
+  "vnedu:website": {
+    "@id": "http://saodo.edu.vn"
+  }
+}

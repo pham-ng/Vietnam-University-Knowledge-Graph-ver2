@@ -1,0 +1,22 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+person:dieu-thuong-thi-trinh a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Dieu-Thuong Thi Trinh"@en ;
+    owl:sameAs wd:Q89667496 ;
+    prov:wasDerivedFrom wd:Q89667496 ;
+    foaf:name "Dieu-Thuong Thi Trinh" ;
+    vnedu:alumnusOf university:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh ;
+    schema:alumniOf university:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh ;
+    schema:hasOccupation wd:Q1650915 .
+

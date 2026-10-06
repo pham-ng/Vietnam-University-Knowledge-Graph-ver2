@@ -1,0 +1,35 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+province:thanh-pho-ho-chi-minh a vnedu:AdministrativeUnit,
+        vnedu:CentrallyGovernedCity,
+        vnedu:Province,
+        schema:AdministrativeArea ;
+    rdfs:label "Ho Chi Minh City"@en,
+        "Thành phố Hồ Chí Minh"@vi ;
+    owl:sameAs dbr:Ho_Chi_Minh_City,
+        wd:Q1854,
+        <https://sws.geonames.org/1566083/> ;
+    geo:lat 10.775555555 ;
+    geo:long 106.701944444 ;
+    prov:wasDerivedFrom wd:Q1854 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ho_Chi_Minh_City>,
+        <https://vi.wikipedia.org/wiki/Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> ;
+    vnedu:area 6772.59 ;
+    vnedu:mergedFrom province:ba-ria-vung-tau,
+        province:binh-duong ;
+    vnedu:partOf country:viet-nam,
+        region:nam-bo ;
+    vnedu:population "14002598"^^xsd:nonNegativeInteger .
+

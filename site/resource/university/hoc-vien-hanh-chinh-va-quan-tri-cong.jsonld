@@ -1,0 +1,168 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-hanh-chinh-va-quan-tri-cong",
+  "@type": [
+    "vnedu:HigherEducationInstitution",
+    "vnedu:Academy",
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:MemberInstitution",
+    "foaf:Organization"
+  ],
+  "foaf:homepage": {
+    "@id": "https://apag.edu.vn"
+  },
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0nh_ch%C3%ADnh_v%C3%A0_Qu%E1%BA%A3n_tr%E1%BB%8B_c%C3%B4ng"
+    },
+    {
+      "@id": "https://en.wikipedia.org/wiki/Academy_of_Public_Administration_and_Governance"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "21.026251"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "105.81153"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "wd:Q10771885"
+    },
+    {
+      "@id": "https://ror.org/02dg2kf02"
+    },
+    {
+      "@id": "dbr:National_Academy_of_Public_Administration_(Vietnam)"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75599552"
+    },
+    {
+      "@id": "wd:Q10771885"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Academy of Public Administration and Governance"
+    },
+    {
+      "@language": "vi",
+      "@value": "Học viện Hành chính và Quản trị công"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-chien"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    }
+  ],
+  "schema:parentOrganization": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
+  },
+  "skos:notation": "HCH",
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Học viện Hành chính và Quản trị công"
+  },
+  "vnedu:address": "số 77 đường Nguyễn Chí Thanh, phường Láng Thượng, quận Đống Đa, thủ đô Hà Nội, nước Việt Nam",
+  "vnedu:admissionCode": "HCH",
+  "vnedu:director": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-chien"
+  },
+  "vnedu:formerName": [
+    {
+      "@language": "vi",
+      "@value": "Học viện Hành chính"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Hành chính"
+    },
+    {
+      "@language": "vi",
+      "@value": "Học viện Hành chính Quốc gia"
+    }
+  ],
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1959"
+  },
+  "vnedu:hasAlumnus": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-van-doan"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-tan-sang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-dai-quang"
+    }
+  ],
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-chien"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    }
+  ],
+  "vnedu:memberOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
+  },
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Trí tuệ - Chất lượng - Hiện đại"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:shortName": [
+    "APAG",
+    "HVHC&QTC"
+  ],
+  "vnedu:website": {
+    "@id": "https://apag.edu.vn"
+  }
+}

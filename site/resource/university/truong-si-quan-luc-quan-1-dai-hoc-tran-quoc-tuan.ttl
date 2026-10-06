@@ -1,0 +1,52 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-si-quan-luc-quan-1-dai-hoc-tran-quoc-tuan a foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MilitaryInstitution,
+        vnedu:OfficerSchool,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Tran Quoc Tuan University"@en,
+        "Trường Sĩ quan Lục quân 1 – Đại học Trần Quốc Tuấn"@vi ;
+    owl:sameAs wd:Q10829150,
+        <https://ror.org/02afea422> ;
+    geo:lat 21.041597 ;
+    geo:long 105.462682 ;
+    skos:prefLabel "Trường Sĩ quan Lục quân 1 – Đại học Trần Quốc Tuấn"@vi ;
+    prov:wasDerivedFrom wd:Q10829150,
+        <https://vi.wikipedia.org/w/index.php?oldid=75566435> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_S%C4%A9_quan_L%E1%BB%A5c_qu%C3%A2n_1_%E2%80%93_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Tr%E1%BA%A7n_Qu%E1%BB%91c_Tu%E1%BA%A5n> ;
+    vnedu:address "Đoài Phương, Hà Nội" ;
+    vnedu:foundingYear "1945"^^xsd:gYear ;
+    vnedu:governedBy vnedu:MinistryOfNationalDefence ;
+    vnedu:hasAlumnus person:dam-minh-dien,
+        person:nguyen-minh-quang,
+        person:pham-huu-bong,
+        person:yen-thao ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:motto "Trung với nước, hiếu với dân"@vi ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

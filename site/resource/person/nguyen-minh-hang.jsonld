@@ -1,0 +1,68 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-hang",
+  "@type": [
+    "vnedu:Alumnus",
+    "foaf:Person",
+    "schema:Person",
+    "vnedu:Person"
+  ],
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Nguy%E1%BB%85n_Minh_H%E1%BA%B1ng_%28nh%C3%A0_ngo%E1%BA%A1i_giao%29"
+  },
+  "foaf:name": "Nguyễn Minh Hằng",
+  "owl:sameAs": {
+    "@id": "wd:Q140088193"
+  },
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q140088193"
+  },
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Nguyễn Minh Hằng"
+    },
+    {
+      "@language": "en",
+      "@value": "Nguyễn Minh Hằng"
+    }
+  ],
+  "schema:alumniOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ngoai-giao"
+  },
+  "schema:gender": {
+    "@id": "wd:Q6581072"
+  },
+  "schema:hasOccupation": [
+    {
+      "@id": "wd:Q82955"
+    },
+    {
+      "@id": "wd:Q193391"
+    }
+  ],
+  "vnedu:alumnusOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ngoai-giao"
+  },
+  "vnedu:birthDate": {
+    "@type": "xsd:date",
+    "@value": "1976-09-01"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-thanh-do",
+  "@type": [
+    "schema:EducationalOrganization",
+    "vnedu:Organization",
+    "foaf:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:PrivateInstitution",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "dbo:University"
+  ],
+  "foaf:homepage": {
+    "@id": "https://thanhdo.edu.vn/"
+  },
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A0nh_%C4%90%C3%B4"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "wd:Q10829137"
+    },
+    {
+      "@id": "https://ror.org/02scpdz59"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74962942"
+    },
+    {
+      "@id": "wd:Q10829137"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Thành Đô"
+    },
+    {
+      "@language": "en",
+      "@value": "Thanh Do University"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-thi-thanh-thao"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Đại học Thành Đô"
+  },
+  "vnedu:address": "Km 15, Quốc lộ 32, xã Kim Chung",
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+  },
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-thi-thanh-thao"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Trí Tuệ - Năng Lực - Nhân Cách - Hòa Hợp Sáng Tạo - Chuyên Nghiệp - Uy Tín"
+  },
+  "vnedu:numberOfUndergraduates": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "30000"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PrivateOwnership"
+  },
+  "vnedu:rector": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-thi-thanh-thao"
+  },
+  "vnedu:website": {
+    "@id": "https://thanhdo.edu.vn/"
+  }
+}

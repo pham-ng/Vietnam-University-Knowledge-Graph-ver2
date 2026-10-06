@@ -1,0 +1,29 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:ha-sy-huan a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Hà Sỹ Huân"@en,
+        "Hà Sỹ Huân"@vi ;
+    owl:sameAs wd:Q116858893 ;
+    prov:wasDerivedFrom wd:Q116858893 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/H%C3%A0_S%E1%BB%B9_Hu%C3%A2n> ;
+    foaf:name "Hà Sỹ Huân" ;
+    vnedu:alumnusOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh,
+        university:hoc-vien-nong-nghiep-viet-nam ;
+    vnedu:birthDate "1978-06-16"^^xsd:date ;
+    schema:alumniOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh,
+        university:hoc-vien-nong-nghiep-viet-nam ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q49055891 .
+

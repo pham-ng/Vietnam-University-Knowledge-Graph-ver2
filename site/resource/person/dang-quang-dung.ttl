@@ -1,0 +1,31 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:dang-quang-dung a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Đặng Quang Dũng"@en,
+        "Đặng Quang Dũng"@vi ;
+    owl:sameAs dbr:Đặng_Quang_Dũng,
+        wd:Q110268802 ;
+    prov:wasDerivedFrom wd:Q110268802 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/%C4%90%E1%BA%B7ng_Quang_D%C5%A9ng>,
+        <https://vi.wikipedia.org/wiki/%C4%90%E1%BA%B7ng_Quang_D%C5%A9ng> ;
+    foaf:name "Đặng Quang Dũng" ;
+    vnedu:alumnusOf university:truong-dai-hoc-ngoai-thuong ;
+    vnedu:birthDate "1992-10-21"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-ngoai-thuong ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q15949613,
+        wd:Q483501 .
+

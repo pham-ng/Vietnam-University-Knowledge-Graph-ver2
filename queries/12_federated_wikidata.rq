@@ -1,0 +1,22 @@
+# TRUY VẤN LIÊN KẾT (federated): theo owl:sameAs sang Wikidata lấy diện tích tỉnh, tính mật độ cơ sở GDĐH. Cần Internet.
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX wdt:   <http://www.wikidata.org/prop/direct/>
+
+SELECT ?tinh ?so_co_so ?dien_tich_km2 ?co_so_tren_1000km2
+WHERE {
+  {
+    SELECT ?wd ?tinh (COUNT(DISTINCT ?u) AS ?so_co_so) WHERE {
+      ?u a vnedu:HigherEducationInstitution ; vnedu:locatedIn ?t .
+      ?t a vnedu:Province ; rdfs:label ?tinh ; owl:sameAs ?wd .
+      FILTER(LANG(?tinh) = "vi" && STRSTARTS(STR(?wd), "http://www.wikidata.org/entity/"))
+    } GROUP BY ?wd ?tinh ORDER BY DESC(?so_co_so) LIMIT 6
+  }
+  # OPTIONAL { SERVICE … }: engine gửi từng ?wd đã biết sang Wikidata (bind join)
+  OPTIONAL { SERVICE <https://query.wikidata.org/sparql> { ?wd wdt:P2046 ?dien_tich_km2 } }
+  BIND(ROUND(100000 * ?so_co_so / ?dien_tich_km2) / 100 AS ?co_so_tren_1000km2)
+}
+ORDER BY DESC(?so_co_so)

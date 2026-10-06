@@ -1,0 +1,171 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kien-truc-thanh-pho-ho-chi-minh",
+  "@type": [
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:UniversitySchool",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization"
+  ],
+  "foaf:homepage": {
+    "@id": "https://ump.edu.vn/"
+  },
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://en.wikipedia.org/wiki/University_of_Architecture_Ho_Chi_Minh_City"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ki%E1%BA%BFn_tr%C3%BAc_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "10.7821"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "106.694"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "dbr:Ho_Chi_Minh_City_University_of_Architecture"
+    },
+    {
+      "@id": "wd:Q3037890"
+    },
+    {
+      "@id": "https://ror.org/02tyvzz27"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "wd:Q3037890"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75565008"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "University of Architecture Ho Chi Minh City"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Kiến trúc Thành phố Hồ Chí Minh"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-trong-thuat"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    }
+  ],
+  "skos:notation": "KTS",
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Đại học Kiến trúc Thành phố Hồ Chí Minh"
+  },
+  "vnedu:academicStaff": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "283"
+  },
+  "vnedu:address": "196 Pasteur, phường Xuân Hòa, Thành phố Hồ Chí Minh",
+  "vnedu:admissionCode": "KTS",
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1926"
+  },
+  "vnedu:governedBy": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-xay-dung"
+    }
+  ],
+  "vnedu:hasAlumnus": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thi-ngu-ngon"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieu-nguyen-van"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/midu"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-thu-trang"
+    }
+  ],
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-trong-thuat"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Truyền thống – Sáng tạo – Chuyên nghiệp"
+  },
+  "vnedu:numberOfPostgraduates": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "455"
+  },
+  "vnedu:numberOfUndergraduates": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "10935"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:rector": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-trong-thuat"
+  },
+  "vnedu:shortName": [
+    "UAH",
+    "HCMUARC"
+  ],
+  "vnedu:website": {
+    "@id": "https://ump.edu.vn/"
+  }
+}

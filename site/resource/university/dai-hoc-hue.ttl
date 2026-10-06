@@ -1,0 +1,97 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:dai-hoc-hue a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:RegionalUniversity,
+        vnedu:University,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Hue University"@en,
+        "Đại học Huế"@vi ;
+    owl:sameAs dbr:Huế_University,
+        wd:Q1310048,
+        <https://ror.org/00qaa6j11> ;
+    skos:prefLabel "Đại học Huế"@vi ;
+    prov:wasDerivedFrom wd:Q1310048,
+        <https://vi.wikipedia.org/w/index.php?oldid=75611271> ;
+    foaf:homepage <http://www.hueuni.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Hu%E1%BA%BF_University>,
+        <https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF> ;
+    vnedu:address "{" ;
+    vnedu:director person:nguyen-vu-quoc-huy ;
+    vnedu:foundingYear "1957"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
+    vnedu:hasAlumnus person:dan-nguyen,
+        person:do-minh-chau-tran,
+        person:doan-manh-dung,
+        person:dong-dao-tran,
+        person:duc-dung-banh,
+        person:hai-phan-vu,
+        person:hong-tin-phan,
+        person:huu-tuan-nguyen,
+        person:mau-trinh-dang,
+        person:nguyen-hoang-loc,
+        person:nguyen-quang-linh,
+        person:nguyen-thi-thanh-truc,
+        person:pham-huu-khanh,
+        person:quang-bao-le,
+        person:thai-thanh-thi-nguyen,
+        person:the-hai-phan,
+        person:thi-cuc-pham,
+        person:thoang-le-duc,
+        person:thong-ba-nguyen,
+        person:truong-cong-quynh,
+        person:v-thanh-ngo,
+        person:van-thang-vo,
+        person:van-trung-hoang,
+        person:vui-tran ;
+    vnedu:hasLeader person:nguyen-vu-quoc-huy ;
+    vnedu:hasMember university:truong-dai-hoc-khoa-hoc-dai-hoc-hue,
+        university:truong-dai-hoc-kinh-te-dai-hoc-hue,
+        university:truong-dai-hoc-luat-dai-hoc-hue,
+        university:truong-dai-hoc-nghe-thuat-dai-hoc-hue,
+        university:truong-dai-hoc-ngoai-ngu-dai-hoc-hue,
+        university:truong-dai-hoc-nong-lam-dai-hoc-hue,
+        university:truong-dai-hoc-su-pham-dai-hoc-hue,
+        university:truong-dai-hoc-y-duoc-dai-hoc-hue ;
+    vnedu:locatedIn country:viet-nam,
+        province:hue,
+        region:trung-bo ;
+    vnedu:motto "Chất lượng – Hội nhập – Phát triển"@vi ;
+    vnedu:numberOfStudents "50357"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:website <http://www.hueuni.edu.vn/> ;
+    schema:employee person:nguyen-vu-quoc-huy ;
+    schema:location country:viet-nam,
+        province:hue,
+        region:trung-bo ;
+    schema:subOrganization university:truong-dai-hoc-khoa-hoc-dai-hoc-hue,
+        university:truong-dai-hoc-kinh-te-dai-hoc-hue,
+        university:truong-dai-hoc-luat-dai-hoc-hue,
+        university:truong-dai-hoc-nghe-thuat-dai-hoc-hue,
+        university:truong-dai-hoc-ngoai-ngu-dai-hoc-hue,
+        university:truong-dai-hoc-nong-lam-dai-hoc-hue,
+        university:truong-dai-hoc-su-pham-dai-hoc-hue,
+        university:truong-dai-hoc-y-duoc-dai-hoc-hue .
+

@@ -1,0 +1,77 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ba-ria-vung-tau",
+  "@type": [
+    "vnedu:FormerProvince",
+    "vnedu:AdministrativeUnit",
+    "schema:AdministrativeArea"
+  ],
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://vi.wikipedia.org/wiki/B%C3%A0_R%E1%BB%8Ba_%E2%80%93_V%C5%A9ng_T%C3%A0u"
+    },
+    {
+      "@id": "https://en.wikipedia.org/wiki/B%C3%A0_R%E1%BB%8Ba%E2%80%93V%C5%A9ng_T%C3%A0u_province"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "10.583333333"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "107.25"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "dbr:Bà_Rịa–Vũng_Tàu_province"
+    },
+    {
+      "@id": "wd:Q36874"
+    },
+    {
+      "@id": "https://sws.geonames.org/1584534/"
+    }
+  ],
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q36874"
+  },
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Bà Rịa-Vũng Tàu"
+    },
+    {
+      "@language": "vi",
+      "@value": "Bà Rịa - Vũng Tàu"
+    }
+  ],
+  "vnedu:area": {
+    "@type": "xsd:decimal",
+    "@value": "1982.56"
+  },
+  "vnedu:mergedInto": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+  },
+  "vnedu:population": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "1178700"
+  }
+}

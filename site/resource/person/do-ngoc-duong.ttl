@@ -1,0 +1,27 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:do-ngoc-duong a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Đỗ Ngọc Dương"@en,
+        "Đỗ Ngọc Dương"@vi ;
+    owl:sameAs wd:Q138798930 ;
+    prov:wasDerivedFrom wd:Q138798930 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/%C4%90%E1%BB%97_Ng%E1%BB%8Dc_D%C6%B0%C6%A1ng> ;
+    foaf:name "Đỗ Ngọc Dương" ;
+    vnedu:alumnusOf university:hoc-vien-ngoai-giao ;
+    vnedu:birthDate "1930-01-10"^^xsd:date ;
+    schema:alumniOf university:hoc-vien-ngoai-giao ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q193391 .
+

@@ -1,0 +1,25 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+person:nguyen-van-phuong a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Văn Phương"@en,
+        "Nguyễn Văn Phương"@vi ;
+    owl:sameAs wd:Q109422839 ;
+    prov:wasDerivedFrom wd:Q109422839 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Nguy%E1%BB%85n_V%C4%83n_Ph%C6%B0%C6%A1ng> ;
+    foaf:name "Nguyễn Văn Phương" ;
+    vnedu:alumnusOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh ;
+    schema:alumniOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q82955 .
+

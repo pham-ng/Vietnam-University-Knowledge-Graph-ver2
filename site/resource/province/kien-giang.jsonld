@@ -1,0 +1,77 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/kien-giang",
+  "@type": [
+    "schema:AdministrativeArea",
+    "vnedu:FormerProvince",
+    "vnedu:AdministrativeUnit"
+  ],
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://vi.wikipedia.org/wiki/Ki%C3%AAn_Giang"
+    },
+    {
+      "@id": "https://en.wikipedia.org/wiki/Ki%C3%AAn_Giang_province"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "10.0"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "105.166666666"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "dbr:Kiên_Giang_province"
+    },
+    {
+      "@id": "https://sws.geonames.org/1579008/"
+    },
+    {
+      "@id": "wd:Q36576"
+    }
+  ],
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q36576"
+  },
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Kiên Giang"
+    },
+    {
+      "@language": "vi",
+      "@value": "Kiên Giang"
+    }
+  ],
+  "vnedu:area": {
+    "@type": "xsd:decimal",
+    "@value": "6352.92"
+  },
+  "vnedu:mergedInto": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang"
+  },
+  "vnedu:population": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "1751760"
+  }
+}

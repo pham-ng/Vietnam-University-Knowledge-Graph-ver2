@@ -1,0 +1,33 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+province:tay-ninh a vnedu:AdministrativeUnit,
+        vnedu:Province,
+        schema:AdministrativeArea ;
+    rdfs:label "Tây Ninh"@en,
+        "Tây Ninh"@vi ;
+    owl:sameAs dbr:Tây_Ninh_province,
+        wd:Q36608,
+        <https://sws.geonames.org/1566557/> ;
+    geo:lat 11.333333333 ;
+    geo:long 106.166666666 ;
+    prov:wasDerivedFrom wd:Q36608 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/T%C3%A2y_Ninh_province>,
+        <https://vi.wikipedia.org/wiki/T%C3%A2y_Ninh> ;
+    vnedu:area 8536.0 ;
+    vnedu:mergedFrom province:long-an ;
+    vnedu:partOf country:viet-nam,
+        region:nam-bo ;
+    vnedu:population "2959000"^^xsd:nonNegativeInteger .
+

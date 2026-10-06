@@ -1,0 +1,60 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:hoc-vien-ky-thuat-quan-su a foaf:Organization,
+        vnedu:Academy,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MilitaryInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Le Quy Don Technical University"@en,
+        "Học viện Kỹ thuật Quân sự"@vi ;
+    owl:sameAs dbr:Le_Quy_Don_Technical_University,
+        wd:Q4130078,
+        <https://ror.org/04wgyjv21> ;
+    geo:lat 21.0483 ;
+    geo:long 105.786 ;
+    skos:prefLabel "Học viện Kỹ thuật Quân sự"@vi ;
+    prov:wasDerivedFrom wd:Q4130078,
+        <https://vi.wikipedia.org/w/index.php?oldid=75614833> ;
+    foaf:homepage <http://www.lqdtu.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Le_Quy_Don_Technical_University>,
+        <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_K%E1%BB%B9_thu%E1%BA%ADt_Qu%C3%A2n_s%E1%BB%B1> ;
+    vnedu:address "số 236, đường Hoàng Quốc Việt, phường Nghĩa Đô, thành phố Hà Nội" ;
+    vnedu:foundingYear "1966"^^xsd:gYear ;
+    vnedu:governedBy vnedu:MinistryOfNationalDefence ;
+    vnedu:hasAlumnus person:hung-c-duong,
+        person:le-manh-ha,
+        person:nguyen-manh-hung-2,
+        person:nguyen-van-thai,
+        person:phan-van-hung,
+        person:phung-van-minh,
+        person:vo-minh-pho ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:motto "Trí tuệ tỏa sáng"@vi ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:website <http://www.lqdtu.edu.vn> ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

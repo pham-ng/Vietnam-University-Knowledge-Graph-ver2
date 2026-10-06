@@ -1,0 +1,47 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phuong-hoang-tran",
+  "@type": [
+    "vnedu:Alumnus",
+    "foaf:Person",
+    "schema:Person",
+    "vnedu:Person"
+  ],
+  "foaf:name": "Phuong Hoang Tran",
+  "owl:sameAs": {
+    "@id": "wd:Q100389648"
+  },
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q100389648"
+  },
+  "rdfs:label": {
+    "@language": "en",
+    "@value": "Phuong Hoang Tran"
+  },
+  "schema:alumniOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
+  },
+  "schema:hasOccupation": {
+    "@id": "wd:Q1650915"
+  },
+  "vnedu:alumnusOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
+  }
+}

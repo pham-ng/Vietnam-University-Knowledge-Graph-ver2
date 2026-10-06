@@ -1,0 +1,148 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ky-thuat-quan-su",
+  "@type": [
+    "schema:EducationalOrganization",
+    "vnedu:Organization",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:Academy",
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "vnedu:MilitaryInstitution"
+  ],
+  "foaf:homepage": {
+    "@id": "http://www.lqdtu.edu.vn"
+  },
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_K%E1%BB%B9_thu%E1%BA%ADt_Qu%C3%A2n_s%E1%BB%B1"
+    },
+    {
+      "@id": "https://en.wikipedia.org/wiki/Le_Quy_Don_Technical_University"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "21.0483"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "105.786"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "https://ror.org/04wgyjv21"
+    },
+    {
+      "@id": "dbr:Le_Quy_Don_Technical_University"
+    },
+    {
+      "@id": "wd:Q4130078"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75614833"
+    },
+    {
+      "@id": "wd:Q4130078"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Le Quy Don Technical University"
+    },
+    {
+      "@language": "vi",
+      "@value": "Học viện Kỹ thuật Quân sự"
+    }
+  ],
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Học viện Kỹ thuật Quân sự"
+  },
+  "vnedu:address": "số 236, đường Hoàng Quốc Việt, phường Nghĩa Đô, thành phố Hà Nội",
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1966"
+  },
+  "vnedu:governedBy": {
+    "@id": "vnedu:MinistryOfNationalDefence"
+  },
+  "vnedu:hasAlumnus": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-manh-hung-2"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-c-duong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phung-van-minh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-van-hung"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-thai"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vo-minh-pho"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-manh-ha"
+    }
+  ],
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Trí tuệ tỏa sáng"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:website": {
+    "@id": "http://www.lqdtu.edu.vn"
+  }
+}

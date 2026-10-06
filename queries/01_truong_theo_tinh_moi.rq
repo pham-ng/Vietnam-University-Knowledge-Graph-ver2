@@ -1,0 +1,16 @@
+# [Suy luận] Số cơ sở GDĐH theo 34 tỉnh/thành sau sắp xếp 2025 — trường ghi ở tỉnh cũ được tự quy về tỉnh mới
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?tinh (COUNT(DISTINCT ?u) AS ?so_co_so) (COUNT(DISTINCT ?u_tinh_cu) AS ?trong_do_ghi_o_tinh_cu)
+WHERE {
+  ?u a vnedu:HigherEducationInstitution ; vnedu:locatedIn ?t .
+  ?t a vnedu:Province ; rdfs:label ?tinh FILTER(LANG(?tinh) = "vi")
+  OPTIONAL { ?u vnedu:locatedIn ?cu . ?cu vnedu:mergedInto ?t . BIND(?u AS ?u_tinh_cu) }
+}
+GROUP BY ?tinh
+ORDER BY DESC(?so_co_so)
+LIMIT 15

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} · VN-Edu LOD{% endblock %}
+{% macro node(v) -%}
+  {%- if v.type == "uri" -%}
+    {%- if v.local -%}<a href="{{ v.value.replace(base, '/') }}">{{ v.label or v.short }}</a>
+    {%- else -%}<a href="{{ v.value }}" target="_blank" rel="noopener">{{ v.label or v.short }}</a><span class="pill ext">ngoài</span>
+    {%- endif -%}
+  {%- else -%}
+    {{ v.value }}{% if v.lang %} <span class="lang">@{{ v.lang }}</span>{% elif v.datatype %} <span class="lang">{{ v.datatype }}</span>{% endif %}
+  {%- endif -%}
+  {%- if v.inferred %} <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span>{% endif -%}
+{%- endmacro %}
+{% block main %}
+<p class="sub" style="margin:0 0 4px">{{ kind }}</p>
+<h1>{{ title }}</h1>
+<p class="uri">{{ uri }} · <a href="?format=ttl">Turtle</a> · <a href="?format=jsonld">JSON-LD</a>
+  {% if n_inferred %} · <span class="pill inf">suy luận</span> = {{ n_inferred }} triple do bộ suy luận sinh ra{% endif %}</p>
+
+<div class="card table-wrap">
+<table>
+  <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
+  {% for g in props %}
+  <tr>
+    <td class="p">{{ g.label or g.short }}<small>{{ g.short }}</small></td>
+    <td>{% for v in g["values"][:60] %}<div>{{ node(v) }}</div>{% endfor %}
+        {% if g["values"]|length > 60 %}<div class="lang">… và {{ g["values"]|length - 60 }} giá trị khác</div>{% endif %}</td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
+
+{% if incoming %}
+<h2>Được tham chiếu bởi</h2>
+<div class="card table-wrap">
+<table>
+  {% for g in incoming %}
+  <tr>
+    <td class="p">{{ g.label or g.short }}<small>{{ g.short }}</small></td>
+    <td>{% for v in g["values"][:60] %}<div>{{ node(v) }}</div>{% endfor %}
+        {% if g["values"]|length > 60 %}<div class="lang">… và {{ g["values"]|length - 60 }} giá trị khác</div>{% endif %}</td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,64 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-van-lang a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PrivateInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Van Lang University"@en,
+        "Trường Đại học Văn Lang"@vi ;
+    owl:sameAs dbr:Văn_Lang_University,
+        wd:Q7913477,
+        <https://ror.org/02ryrf141> ;
+    geo:lat 10.7634 ;
+    geo:long 106.693 ;
+    skos:prefLabel "Trường Đại học Văn Lang"@vi ;
+    prov:wasDerivedFrom wd:Q7913477,
+        <https://vi.wikipedia.org/w/index.php?oldid=75483193> ;
+    foaf:homepage <http://www.vanlanguni.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/V%C4%83n_Lang_University>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C4%83n_Lang> ;
+    vnedu:address "Cổng Bình Thạnh: 69/68 Đặng Thùy Trâm, Phường Bình Lợi Trung Cổng Gò Vấp: 80/68 Dương Quảng Hàm, Phường An Nhơn Cơ sở 1: 45 Nguyễn Khắc Nhu, Phường Cầu Ông Lãnh" ;
+    vnedu:foundingYear "1995"^^xsd:gYear ;
+    vnedu:hasAlumnus person:hua-kim-tuyen,
+        person:le-cong-hoang,
+        person:thao-p-h-ngo ;
+    vnedu:hasLeader person:tran-thi-my-dieu ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    vnedu:motto "Đạo đức - Ý chí - Sáng tạo Morality - Will - Creativity Moralitas - Voluntas - Creativitas"@vi ;
+    vnedu:numberOfStudents "145000"^^xsd:nonNegativeInteger ;
+    vnedu:ownedBy organization:tap-doan-giao-duc-van-lang ;
+    vnedu:ownership vnedu:PrivateOwnership ;
+    vnedu:rector person:tran-thi-my-dieu ;
+    vnedu:shortName "VLU" ;
+    vnedu:website <http://www.vanlanguni.edu.vn> ;
+    schema:employee person:tran-thi-my-dieu ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    schema:parentOrganization organization:tap-doan-giao-duc-van-lang .
+

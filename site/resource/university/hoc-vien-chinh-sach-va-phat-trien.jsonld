@@ -1,0 +1,126 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-sach-va-phat-trien",
+  "@type": [
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:Academy",
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "vnedu:Organization",
+    "schema:EducationalOrganization"
+  ],
+  "foaf:homepage": {
+    "@id": "http://apd.edu.vn"
+  },
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Ch%C3%ADnh_s%C3%A1ch_v%C3%A0_Ph%C3%A1t_tri%E1%BB%83n"
+  },
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "21.001131"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "105.716813"
+  },
+  "owl:sameAs": {
+    "@id": "wd:Q109440209"
+  },
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75594635"
+    },
+    {
+      "@id": "wd:Q109440209"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Học viện Chính sách và Phát triển"
+    },
+    {
+      "@language": "en",
+      "@value": "Academy of Policy and Development - APD"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-trong-nguyen"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    }
+  ],
+  "skos:notation": "HCP",
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Học viện Chính sách và Phát triển"
+  },
+  "vnedu:address": "Khu đô thị Nam An Khánh, xã An Khánh",
+  "vnedu:admissionCode": "HCP",
+  "vnedu:director": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-trong-nguyen"
+  },
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "2008"
+  },
+  "vnedu:governedBy": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-chinh"
+  },
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-trong-nguyen"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Trí tuệ và Phát triển"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:shortName": [
+    "APD",
+    "HVCSVPT"
+  ],
+  "vnedu:website": {
+    "@id": "http://apd.edu.vn"
+  }
+}

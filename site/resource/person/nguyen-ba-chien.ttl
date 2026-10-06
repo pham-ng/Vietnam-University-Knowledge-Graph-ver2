@@ -1,0 +1,17 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+
+person:nguyen-ba-chien a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Bá Chiến"@vi ;
+    foaf:name "Nguyễn Bá Chiến" ;
+    vnedu:honorific "Phó Giáo sư Tiến sĩ" ;
+    vnedu:leads university:hoc-vien-hanh-chinh-va-quan-tri-cong,
+        university:truong-dai-hoc-noi-vu-ha-noi .
+

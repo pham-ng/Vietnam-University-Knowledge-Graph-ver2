@@ -1,0 +1,61 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-kinh-te-tai-chinh-thanh-pho-ho-chi-minh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PrivateInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Ho Chi Minh City University of"@en,
+        "Trường Đại học Kinh tế – Tài chính Thành phố Hồ Chí Minh"@vi ;
+    owl:sameAs dbr:Ho_Chi_Minh_City_University_of_Economics_and_Finance,
+        wd:Q10829074,
+        <https://ror.org/00rpn1945> ;
+    geo:lat 10.798702 ;
+    geo:long 106.723092 ;
+    skos:notation "UEF" ;
+    skos:prefLabel "Trường Đại học Kinh tế – Tài chính Thành phố Hồ Chí Minh"@vi ;
+    prov:wasDerivedFrom wd:Q10829074,
+        <https://vi.wikipedia.org/w/index.php?oldid=74954564> ;
+    foaf:homepage <https://www.uef.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Economics_and_Finance>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_T%C3%A0i_ch%C3%ADnh_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> ;
+    vnedu:address "Số 276 Điện Biên Phủ, phường Gia Định, Thành phố Hồ Chí Minh" ;
+    vnedu:admissionCode "UEF" ;
+    vnedu:foundingYear "2007"^^xsd:gYear ;
+    vnedu:hasAlumnus person:nguyen-thi-ngoc-chau,
+        person:nguyen-van-canh,
+        person:nguyen-van-dang ;
+    vnedu:hasLeader person:nguyen-thanh-giang ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    vnedu:motto "Chất lượng - Hiệu quả - Hội nhập"@vi ;
+    vnedu:ownership vnedu:PrivateOwnership ;
+    vnedu:rector person:nguyen-thanh-giang ;
+    vnedu:website <https://www.uef.edu.vn/> ;
+    schema:employee person:nguyen-thanh-giang ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+

@@ -1,0 +1,145 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quoc-te-rmit-viet-nam",
+  "@type": [
+    "foaf:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "vnedu:Organization",
+    "schema:EducationalOrganization"
+  ],
+  "foaf:homepage": {
+    "@id": "http://www.rmit.edu.vn"
+  },
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_t%E1%BA%BF_RMIT_Vi%E1%BB%87t_Nam"
+    },
+    {
+      "@id": "https://en.wikipedia.org/wiki/Royal_Melbourne_Institute_of_Technology_Vietnam"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "10.75"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "106.666667"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "https://ror.org/004axh929"
+    },
+    {
+      "@id": "dbr:RMIT_University_Vietnam"
+    },
+    {
+      "@id": "wd:Q7277005"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "wd:Q7277005"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75045774"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Quốc tế RMIT Việt Nam"
+    },
+    {
+      "@language": "en",
+      "@value": "RMIT University Vietnam"
+    }
+  ],
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Đại học Quốc tế RMIT Việt Nam"
+  },
+  "vnedu:address": "Cổng chính, 702 Đường Nguyễn Văn Linh, Tân Hưng, Quận 7, Hồ Chí Minh 700000",
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "2000"
+  },
+  "vnedu:hasAlumnus": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duy-dang-pham"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/mai-phuong-thuy"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/cris-phan"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thuy-van"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duc-anh-hoang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-hoang-my"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/chi-pu"
+    }
+  ],
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Cultivated mind & Skillful hand"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:website": {
+    "@id": "http://www.rmit.edu.vn"
+  }
+}

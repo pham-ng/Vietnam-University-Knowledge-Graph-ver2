@@ -1,0 +1,48 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:hoc-vien-quan-ly-giao-duc a foaf:Organization,
+        vnedu:Academy,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Học viện Quản lý giáo dục"@vi ;
+    owl:sameAs wd:Q10771899 ;
+    geo:lat 20.991106 ;
+    geo:long 105.839408 ;
+    skos:prefLabel "Học viện Quản lý giáo dục"@vi ;
+    prov:wasDerivedFrom wd:Q10771899,
+        <https://vi.wikipedia.org/w/index.php?oldid=75455928> ;
+    foaf:homepage <http://naem.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Qu%E1%BA%A3n_l%C3%BD_gi%C3%A1o_d%E1%BB%A5c> ;
+    vnedu:address "số 31 phố Phan Đình Giót, phường Phương Liệt" ;
+    vnedu:director person:pham-van-thuan ;
+    vnedu:foundingYear "2006"^^xsd:gYear ;
+    vnedu:hasLeader person:pham-van-thuan ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:website <http://naem.edu.vn> ;
+    schema:employee person:pham-van-thuan ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

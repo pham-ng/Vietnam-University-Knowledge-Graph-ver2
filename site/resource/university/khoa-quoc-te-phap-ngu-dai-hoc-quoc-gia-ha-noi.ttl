@@ -1,0 +1,43 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:khoa-quoc-te-phap-ngu-dai-hoc-quoc-gia-ha-noi a foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:Organization,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Institut de la Francophonie pour l'Informatique"@en,
+        "Khoa Quốc tế Pháp ngữ, Đại học Quốc gia Hà Nội"@vi ;
+    owl:sameAs <http://dbpedia.org/resource/Institut_de_la_Francophonie_pour_l'Informatique>,
+        wd:Q2496369 ;
+    geo:lat 21.003122 ;
+    geo:long 105.847718 ;
+    skos:prefLabel "Khoa Quốc tế Pháp ngữ, Đại học Quốc gia Hà Nội"@vi ;
+    prov:wasDerivedFrom wd:Q2496369,
+        <https://vi.wikipedia.org/w/index.php?oldid=74477329> ;
+    foaf:homepage <http://www.ifi.auf.org> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Institut_de_la_Francophonie_pour_l%27Informatique>,
+        <https://vi.wikipedia.org/wiki/Khoa_Qu%E1%BB%91c_t%E1%BA%BF_Ph%C3%A1p_ng%E1%BB%AF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i> ;
+    vnedu:foundingYear "1995"^^xsd:gYear ;
+    vnedu:hasAlumnus person:kim-khoa-nguyen ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:website <http://www.ifi.auf.org> ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

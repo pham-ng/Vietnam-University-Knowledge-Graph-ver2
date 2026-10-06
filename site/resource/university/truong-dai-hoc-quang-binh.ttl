@@ -1,0 +1,57 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-quang-binh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Quang Binh University"@en,
+        "Trường Đại học Quảng Bình"@vi ;
+    owl:sameAs dbr:Quảng_Bình_University,
+        wd:Q2406422,
+        <https://ror.org/045jvzr81> ;
+    geo:lat 17.4858 ;
+    geo:long 106.604 ;
+    skos:prefLabel "Trường Đại học Quảng Bình"@vi ;
+    prov:wasDerivedFrom wd:Q2406422,
+        <https://vi.wikipedia.org/w/index.php?oldid=75544004> ;
+    foaf:homepage <http://www.quangbinhuni.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Qu%E1%BA%A3ng_B%C3%ACnh_University>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BA%A3ng_B%C3%ACnh> ;
+    vnedu:address "Số 312 Lý Thường Kiệt, phường Đồng Thuận, tỉnh Quảng Trị, Việt Nam" ;
+    vnedu:foundingYear "2006"^^xsd:gYear ;
+    vnedu:hasLeader person:nguyen-duc-vuong ;
+    vnedu:locatedIn country:viet-nam,
+        province:quang-binh,
+        province:quang-tri,
+        region:trung-bo ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:nguyen-duc-vuong ;
+    vnedu:website <http://www.quangbinhuni.edu.vn> ;
+    schema:employee person:nguyen-duc-vuong ;
+    schema:location country:viet-nam,
+        province:quang-binh,
+        province:quang-tri,
+        region:trung-bo .
+

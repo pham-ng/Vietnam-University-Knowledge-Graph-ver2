@@ -1,0 +1,113 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-can-bo-thanh-pho-ho-chi-minh",
+  "@type": [
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:Academy",
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution"
+  ],
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_C%C3%A1n_b%E1%BB%99_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+  },
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "10.812578"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "106.702581"
+  },
+  "prov:wasDerivedFrom": {
+    "@id": "https://vi.wikipedia.org/w/index.php?oldid=75492312"
+  },
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Ho Chi Minh Cadre Academy"
+    },
+    {
+      "@language": "vi",
+      "@value": "Học viện Cán bộ Thành phố Hồ Chí Minh"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-y"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    }
+  ],
+  "skos:notation": "HVC",
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Học viện Cán bộ Thành phố Hồ Chí Minh"
+  },
+  "vnedu:address": "Số 324 đường Chu Văn An, phường Bình Thạnh",
+  "vnedu:admissionCode": "HVC",
+  "vnedu:director": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-y"
+  },
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1965"
+  },
+  "vnedu:governedBy": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/thanh-uy-thanh-pho-ho-chi-minh"
+  },
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-y"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Trách nhiệm - Chuyên nghiệp - Sáng tạo - Bản lĩnh - Hiện đại"
+  },
+  "vnedu:numberOfUndergraduates": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "4000"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:shortName": "HCA"
+}

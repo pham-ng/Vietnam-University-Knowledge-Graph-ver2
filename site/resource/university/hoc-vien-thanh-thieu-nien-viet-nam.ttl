@@ -1,0 +1,49 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:hoc-vien-thanh-thieu-nien-viet-nam a foaf:Organization,
+        vnedu:Academy,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Vietnam Youth Academy"@en,
+        "Học viện Thanh thiếu niên Việt Nam"@vi ;
+    owl:sameAs wd:Q97166894,
+        <https://ror.org/03nz17e51> ;
+    skos:prefLabel "Học viện Thanh thiếu niên Việt Nam"@vi ;
+    prov:wasDerivedFrom wd:Q97166894,
+        <https://vi.wikipedia.org/w/index.php?oldid=74953907> ;
+    foaf:homepage <http://vya.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Thanh_thi%E1%BA%BFu_ni%C3%AAn_Vi%E1%BB%87t_Nam> ;
+    vnedu:foundingYear "1995"^^xsd:gYear ;
+    vnedu:governedBy organization:doan-thanh-nien-cong-san-ho-chi-minh ;
+    vnedu:hasAlumnus person:dang-hong-sy,
+        person:do-manh-hien,
+        person:nguyen-thi-thu-ha,
+        person:tran-van-sau ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:website <http://vya.edu.vn/> ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

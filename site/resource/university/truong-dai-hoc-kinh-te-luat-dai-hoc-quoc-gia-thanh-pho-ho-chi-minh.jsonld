@@ -1,0 +1,146 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-luat-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh",
+  "@type": [
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "schema:EducationalOrganization",
+    "vnedu:Organization",
+    "vnedu:MemberInstitution",
+    "foaf:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "schema:CollegeOrUniversity"
+  ],
+  "foaf:homepage": {
+    "@id": "http://www.uel.edu.vn/"
+  },
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_Lu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+    },
+    {
+      "@id": "https://en.wikipedia.org/wiki/University_of_Economics_and_Law"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "10.867874"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "106.781687"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "https://ror.org/0138jhg57"
+    },
+    {
+      "@id": "wd:Q10829073"
+    },
+    {
+      "@id": "dbr:University_of_Economics_and_Law"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "wd:Q10829073"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75498788"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Kinh tế – Luật, Đại học Quốc gia Thành phố Hồ Chí Minh"
+    },
+    {
+      "@language": "en",
+      "@value": "VNU-HCM University of Economics and Law"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-cong-gia-khanh"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    }
+  ],
+  "schema:parentOrganization": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
+  },
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Đại học Kinh tế – Luật, Đại học Quốc gia Thành phố Hồ Chí Minh"
+  },
+  "vnedu:address": "669 Đỗ Mười, Khu phố 3, Phường Linh Xuân",
+  "vnedu:formerName": {
+    "@language": "vi",
+    "@value": "Khoa Kinh tế - Đại học Quốc gia Thành phố Hồ Chí Minh"
+  },
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "2000"
+  },
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-cong-gia-khanh"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    }
+  ],
+  "vnedu:memberOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
+  },
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Thống nhất - Vượt trội - Tiên phong"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:rector": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-cong-gia-khanh"
+  },
+  "vnedu:shortName": [
+    "VNUHCM-UEL",
+    "UEL"
+  ],
+  "vnedu:website": {
+    "@id": "http://www.uel.edu.vn/"
+  }
+}

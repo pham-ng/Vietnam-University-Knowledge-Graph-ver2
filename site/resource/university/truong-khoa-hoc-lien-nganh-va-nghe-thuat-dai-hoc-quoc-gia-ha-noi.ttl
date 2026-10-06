@@ -1,0 +1,52 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-khoa-hoc-lien-nganh-va-nghe-thuat-dai-hoc-quoc-gia-ha-noi a foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "VNU School of Interdisciplinary Sciences and Arts"@en,
+        "Trường Khoa học liên ngành và Nghệ thuật, Đại học Quốc gia Hà Nội"@vi ;
+    geo:lat 21.038431 ;
+    geo:long 105.781252 ;
+    skos:notation "QHK" ;
+    skos:prefLabel "Trường Khoa học liên ngành và Nghệ thuật, Đại học Quốc gia Hà Nội"@vi ;
+    prov:wasDerivedFrom <https://vi.wikipedia.org/w/index.php?oldid=75591557> ;
+    foaf:homepage <https://sis.vnu.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i> ;
+    vnedu:address "G7, Đại học Quốc gia Hà Nội, 144 Xuân Thủy, Cầu Giấy" ;
+    vnedu:admissionCode "QHK" ;
+    vnedu:formerName "Khoa các Khoa học liên ngành"@vi ;
+    vnedu:foundingYear "2002"^^xsd:gYear ;
+    vnedu:hasLeader person:nguyen-van-hieu ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:memberOf university:dai-hoc-quoc-gia-ha-noi ;
+    vnedu:motto "Kiến tạo tương lai bằng tri thức liên ngành"@vi ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:nguyen-van-hieu ;
+    vnedu:shortName "VNU-SIS" ;
+    vnedu:website <https://sis.vnu.edu.vn/> ;
+    schema:employee person:nguyen-van-hieu ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    schema:parentOrganization university:dai-hoc-quoc-gia-ha-noi .
+

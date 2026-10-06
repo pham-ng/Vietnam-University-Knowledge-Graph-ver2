@@ -1,0 +1,52 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-khanh-hoa a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "University of Khanh Hoa"@en,
+        "Trường Đại học Khánh Hòa"@vi ;
+    owl:sameAs wd:Q10828807,
+        <https://ror.org/00a4nhr72> ;
+    geo:lat 12.245538 ;
+    geo:long 109.193122 ;
+    skos:prefLabel "Trường Đại học Khánh Hòa"@vi ;
+    prov:wasDerivedFrom wd:Q10828807,
+        <https://vi.wikipedia.org/w/index.php?oldid=74506015> ;
+    foaf:homepage <http://ukh.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kh%C3%A1nh_H%C3%B2a> ;
+    vnedu:address "01 Nguyễn Chánh, phường Nha Trang, tỉnh Khánh Hòa" ;
+    vnedu:foundingYear "2015"^^xsd:gYear ;
+    vnedu:hasLeader person:phan-phien ;
+    vnedu:locatedIn country:viet-nam,
+        province:khanh-hoa,
+        region:trung-bo ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:phan-phien ;
+    vnedu:website <http://ukh.edu.vn/> ;
+    schema:employee person:phan-phien ;
+    schema:location country:viet-nam,
+        province:khanh-hoa,
+        region:trung-bo .
+

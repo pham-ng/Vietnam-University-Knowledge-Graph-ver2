@@ -1,0 +1,146 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ngan-hang",
+  "@type": [
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:EducationalOrganization",
+    "vnedu:Organization",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:Academy",
+    "schema:Organization",
+    "schema:CollegeOrUniversity"
+  ],
+  "foaf:homepage": {
+    "@id": "https://hvnh.edu.vn/"
+  },
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Ng%C3%A2n_h%C3%A0ng_%28Vi%E1%BB%87t_Nam%29"
+  },
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "21.008848"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "105.828696"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "https://ror.org/00p5kn310"
+    },
+    {
+      "@id": "wd:Q10771894"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75612028"
+    },
+    {
+      "@id": "wd:Q10771894"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Banking Academy of Vietnam - BAV"
+    },
+    {
+      "@language": "vi",
+      "@value": "Học viện Ngân hàng"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-huu-toan"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    }
+  ],
+  "skos:notation": [
+    "NHH",
+    "NHS",
+    "NHP",
+    "NHB"
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Học viện Ngân hàng"
+  },
+  "vnedu:address": "12 phố Chùa Bộc, phường Kim Liên, TP.Hà Nội, Việt Nam",
+  "vnedu:admissionCode": [
+    "NHB",
+    "NHH",
+    "NHS",
+    "NHP"
+  ],
+  "vnedu:director": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-huu-toan"
+  },
+  "vnedu:formerName": {
+    "@language": "vi",
+    "@value": "Trường Cao cấp Nghiệp vụ Ngân hàng"
+  },
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1961"
+  },
+  "vnedu:governedBy": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ngan-hang-nha-nuoc-viet-nam"
+    }
+  ],
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-huu-toan"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    }
+  ],
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:shortName": [
+    "BAV",
+    "HVNH"
+  ],
+  "vnedu:website": {
+    "@id": "https://hvnh.edu.vn/"
+  }
+}

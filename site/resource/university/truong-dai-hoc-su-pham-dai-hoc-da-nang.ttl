@@ -1,0 +1,61 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-su-pham-dai-hoc-da-nang a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "UDN University of Science and Education"@en,
+        "Trường Đại học Sư phạm, Đại học Đà Nẵng"@vi ;
+    owl:sameAs wd:Q10829126,
+        <https://ror.org/03zq1xf40> ;
+    geo:lat 16.06165 ;
+    geo:long 108.159115 ;
+    skos:notation "DDS" ;
+    skos:prefLabel "Trường Đại học Sư phạm, Đại học Đà Nẵng"@vi ;
+    prov:wasDerivedFrom wd:Q10829126,
+        <https://vi.wikipedia.org/w/index.php?oldid=75610521> ;
+    foaf:homepage <http://ued.udn.vn> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng> ;
+    vnedu:academicStaff "267"^^xsd:nonNegativeInteger ;
+    vnedu:address "459 Tôn Đức Thắng, phường Hòa Khánh" ;
+    vnedu:admissionCode "DDS" ;
+    vnedu:foundingYear "1994"^^xsd:gYear ;
+    vnedu:hasLeader person:vo-van-minh ;
+    vnedu:locatedIn country:viet-nam,
+        province:da-nang,
+        region:trung-bo ;
+    vnedu:memberOf university:dai-hoc-da-nang ;
+    vnedu:motto "Giáo dục toàn diện - Khai phóng - Sáng tạo - Thực nghiệp"@vi ;
+    vnedu:numberOfPostgraduates "1550"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfUndergraduates "10000"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:vo-van-minh ;
+    vnedu:website <http://ued.udn.vn> ;
+    schema:employee person:vo-van-minh ;
+    schema:location country:viet-nam,
+        province:da-nang,
+        region:trung-bo ;
+    schema:parentOrganization university:dai-hoc-da-nang .
+

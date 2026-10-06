@@ -1,0 +1,19 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+organization:toa-an-nhan-dan-toi-cao a foaf:Organization,
+        vnedu:GoverningBody,
+        vnedu:Organization,
+        schema:GovernmentOrganization,
+        schema:Organization ;
+    rdfs:label "Tòa án nhân dân tối cao"@vi ;
+    owl:sameAs <http://dbpedia.org/resource/Supreme_People's_Court_of_Vietnam>,
+        wd:Q4120183 ;
+    vnedu:governs university:hoc-vien-toa-an .
+

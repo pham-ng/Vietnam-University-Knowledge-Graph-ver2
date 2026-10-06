@@ -1,0 +1,41 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:vien-dao-tao-y-hoc-du-phong-va-y-te-cong-cong a foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Institute for Preventive Medicine and Public Health"@en,
+        "Viện Đào tạo Y học dự phòng và Y tế công cộng"@vi ;
+    owl:sameAs wd:Q109340125 ;
+    geo:lat 21.00314 ;
+    geo:long 105.83066 ;
+    skos:prefLabel "Viện Đào tạo Y học dự phòng và Y tế công cộng"@vi ;
+    prov:wasDerivedFrom wd:Q109340125 ;
+    foaf:homepage <https://spmph.edu.vn/> ;
+    vnedu:hasAlumnus person:nguyen-xuan-binh-minh ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:memberOf university:truong-dai-hoc-y-ha-noi ;
+    vnedu:website <https://spmph.edu.vn/> ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    schema:parentOrganization university:truong-dai-hoc-y-ha-noi .
+

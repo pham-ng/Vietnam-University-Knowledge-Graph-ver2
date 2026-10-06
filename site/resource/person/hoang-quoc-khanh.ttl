@@ -1,0 +1,27 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:hoang-quoc-khanh a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Hoàng Quốc Khánh"@en,
+        "Hoàng Quốc Khánh"@vi ;
+    owl:sameAs wd:Q116941779 ;
+    prov:wasDerivedFrom wd:Q116941779 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Ho%C3%A0ng_Qu%E1%BB%91c_Kh%C3%A1nh_%28Cao_B%E1%BA%B1ng%29> ;
+    foaf:name "Hoàng Quốc Khánh" ;
+    vnedu:alumnusOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh ;
+    vnedu:birthDate "1974-09-30"^^xsd:date ;
+    schema:alumniOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q49055891 .
+

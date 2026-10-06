@@ -1,0 +1,92 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix program: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-duoc-ha-noi a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Hanoi University of Pharmacy"@en,
+        "Trường Đại học Dược Hà Nội"@vi ;
+    owl:sameAs dbr:Hanoi_University_of_Pharmacy,
+        wd:Q16944333,
+        <https://ror.org/03psjxz30> ;
+    geo:lat 21.021571 ;
+    geo:long 105.858077 ;
+    skos:notation "DKH" ;
+    skos:prefLabel "Trường Đại học Dược Hà Nội"@vi ;
+    prov:wasDerivedFrom wd:Q16944333,
+        <https://vi.wikipedia.org/w/index.php?oldid=75483524> ;
+    foaf:homepage <http://www.hup.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Hanoi_University_of_Pharmacy>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_D%C6%B0%E1%BB%A3c_H%C3%A0_N%E1%BB%99i> ;
+    vnedu:address "13 - 15 Lê Thánh Tông, phường Cửa Nam" ;
+    vnedu:admissionCode "DKH" ;
+    vnedu:formerName "Trường Y Dược khoa Đông Dương"@vi,
+        "Trường Y Dược toàn cấp Đông Dương"@vi,
+        "Trường Đại học Dược khoa Hà Nội"@vi,
+        "Trường Đại học Y Dược Hà Nội"@vi ;
+    vnedu:foundingYear "1902"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-y-te ;
+    vnedu:hasAlumnus person:cuong-viet-pham,
+        person:dat-t-tran,
+        person:duy-hieu-truong,
+        person:hai-pham-the,
+        person:hung-nguyen,
+        person:khac-dung-nguyen,
+        person:le-nguyen-thanh,
+        person:le-thi-huong-hoa,
+        person:le-thi-phuong-thao,
+        person:minh-thi-hong-le,
+        person:ngan-ha-tran,
+        person:nguyen-minh-duc-3,
+        person:nhung-phuong-nguyen,
+        person:phuong-thao-tran,
+        person:ta-ngoc-dung,
+        person:thu-ha-pham,
+        person:thu-thi-pham,
+        person:thu-thuy-le,
+        person:thuy-ngan-tran,
+        person:trong-tuan-dao,
+        person:tuan-hiep-tran,
+        person:tuan-nguyen,
+        person:van-t-h-ngo,
+        person:vu-dinh-hoa ;
+    vnedu:hasLeader person:nguyen-hai-nam-2 ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:offersProgram program:truong-dai-hoc-duoc-ha-noi-7720201 ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:nguyen-hai-nam-2 ;
+    vnedu:shortName "HUP" ;
+    vnedu:trainsMajor major:7720201 ;
+    vnedu:website <http://www.hup.edu.vn> ;
+    schema:employee person:nguyen-hai-nam-2 ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

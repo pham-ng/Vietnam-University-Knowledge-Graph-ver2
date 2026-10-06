@@ -1,0 +1,55 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-ngoai-ngu-dai-hoc-hue a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Hue University of Foreign Languages and International Studies"@en,
+        "Trường Đại học Ngoại ngữ, Đại học Huế"@vi ;
+    owl:sameAs dbr:Huế_College_of_Foreign_Languages,
+        wd:Q10829097 ;
+    geo:lat 16.466806 ;
+    geo:long 107.585621 ;
+    skos:prefLabel "Trường Đại học Ngoại ngữ, Đại học Huế"@vi ;
+    prov:wasDerivedFrom wd:Q10829097,
+        <https://vi.wikipedia.org/w/index.php?oldid=75434096> ;
+    foaf:homepage <http://hucfl.edu.vn/en/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Hu%E1%BA%BF_College_of_Foreign_Languages>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngo%E1%BA%A1i_ng%E1%BB%AF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF> ;
+    vnedu:address "57 Nguyễn Khoa Chiêm, phường An Cựu, quận Thuận Hóa" ;
+    vnedu:foundingYear "2004"^^xsd:gYear ;
+    vnedu:hasLeader person:nguyen-vu-quoc-huy ;
+    vnedu:locatedIn country:viet-nam,
+        province:hue,
+        region:trung-bo ;
+    vnedu:memberOf university:dai-hoc-hue ;
+    vnedu:rector person:nguyen-vu-quoc-huy ;
+    vnedu:website <http://hucfl.edu.vn/en/> ;
+    schema:employee person:nguyen-vu-quoc-huy ;
+    schema:location country:viet-nam,
+        province:hue,
+        region:trung-bo ;
+    schema:parentOrganization university:dai-hoc-hue .
+

@@ -1,0 +1,31 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:pham-nhat-vuong a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Phạm Nhật Vượng"@en,
+        "Phạm Nhật Vượng"@vi ;
+    owl:sameAs dbr:Phạm_Nhật_Vượng,
+        wd:Q10806972 ;
+    prov:wasDerivedFrom wd:Q10806972 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ph%E1%BA%A1m_Nh%E1%BA%ADt_V%C6%B0%E1%BB%A3ng>,
+        <https://vi.wikipedia.org/wiki/Ph%E1%BA%A1m_Nh%E1%BA%ADt_V%C6%B0%E1%BB%A3ng> ;
+    foaf:name "Phạm Nhật Vượng" ;
+    vnedu:alumnusOf university:truong-dai-hoc-mo-dia-chat ;
+    vnedu:birthDate "1968-08-05"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-mo-dia-chat ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q131524,
+        wd:Q43845 .
+

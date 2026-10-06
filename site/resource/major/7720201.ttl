@@ -1,0 +1,21 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix field: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/field/> .
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+major:7720201 a skos:Concept,
+        vnedu:Major ;
+    rdfs:label "Pharmacy"@en,
+        "Dược học"@vi ;
+    skos:broader field:772 ;
+    skos:closeMatch dbr:Pharmacy,
+        wd:Q614304 ;
+    skos:notation "7720201" ;
+    skos:prefLabel "Pharmacy"@en,
+        "Dược học"@vi ;
+    vnedu:code "7720201" ;
+    vnedu:inField field:772 .
+

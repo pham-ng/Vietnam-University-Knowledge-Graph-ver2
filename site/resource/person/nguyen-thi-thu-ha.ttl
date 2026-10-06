@@ -1,0 +1,29 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:nguyen-thi-thu-ha a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Thị Thu Hà"@en,
+        "Nguyễn Thị Thu Hà"@vi ;
+    owl:sameAs wd:Q116976085 ;
+    prov:wasDerivedFrom wd:Q116976085 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Nguy%E1%BB%85n_Th%E1%BB%8B_Thu_H%C3%A0_%28ch%C3%ADnh_tr%E1%BB%8B_gia%2C_sinh_1978%29> ;
+    foaf:name "Nguyễn Thị Thu Hà" ;
+    vnedu:alumnusOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh,
+        university:hoc-vien-thanh-thieu-nien-viet-nam ;
+    vnedu:birthDate "1978-02-04"^^xsd:date ;
+    schema:alumniOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh,
+        university:hoc-vien-thanh-thieu-nien-viet-nam ;
+    schema:gender wd:Q6581072 ;
+    schema:hasOccupation wd:Q49055891 .
+

@@ -1,0 +1,28 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:luong-bang-quang a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Lương Bằng Quang"@en,
+        "Lương Bằng Quang"@vi ;
+    owl:sameAs wd:Q127416661 ;
+    prov:wasDerivedFrom wd:Q127416661 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/L%C6%B0%C6%A1ng_B%E1%BA%B1ng_Quang> ;
+    foaf:name "Lương Bằng Quang" ;
+    vnedu:alumnusOf university:dai-hoc-quoc-gia-thanh-pho-ho-chi-minh ;
+    vnedu:birthDate "1982-01-28"^^xsd:date ;
+    schema:alumniOf university:dai-hoc-quoc-gia-thanh-pho-ho-chi-minh ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q177220,
+        wd:Q753110 .
+

@@ -1,0 +1,28 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:huynh-thi-thanh-thuy a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Huỳnh Thị Thanh Thủy"@en,
+        "Huỳnh Thị Thanh Thủy"@vi ;
+    owl:sameAs wd:Q115829217 ;
+    prov:wasDerivedFrom wd:Q115829217 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Hu%E1%BB%B3nh_Th%E1%BB%8B_Thanh_Th%E1%BB%A7y>,
+        <https://vi.wikipedia.org/wiki/Thanh_Th%E1%BB%A7y_%28ng%C6%B0%E1%BB%9Di_m%E1%BA%ABu%29> ;
+    foaf:name "Huỳnh Thị Thanh Thủy" ;
+    vnedu:alumnusOf university:truong-dai-hoc-ngoai-ngu-dai-hoc-da-nang ;
+    vnedu:birthDate "2002-07-01"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-ngoai-ngu-dai-hoc-da-nang ;
+    schema:gender wd:Q6581072 ;
+    schema:hasOccupation wd:Q4610556 .
+

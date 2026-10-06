@@ -1,0 +1,28 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+organization:bo-y-te a foaf:Organization,
+        vnedu:GoverningBody,
+        vnedu:Ministry,
+        vnedu:Organization,
+        schema:GovernmentOrganization,
+        schema:Organization ;
+    rdfs:label "Bộ Y tế"@vi ;
+    owl:sameAs dbr:Ministry_of_Health_\(Vietnam\),
+        wd:Q6867111 ;
+    vnedu:governs university:hoc-vien-y-duoc-hoc-co-truyen-viet-nam,
+        university:truong-dai-hoc-dieu-duong-nam-dinh,
+        university:truong-dai-hoc-duoc-ha-noi,
+        university:truong-dai-hoc-ky-thuat-y-duoc-da-nang,
+        university:truong-dai-hoc-y-duoc-can-tho,
+        university:truong-dai-hoc-y-duoc-ha-noi,
+        university:truong-dai-hoc-y-duoc-thai-binh,
+        university:truong-dai-hoc-y-ha-noi .
+

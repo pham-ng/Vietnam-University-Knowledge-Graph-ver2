@@ -1,0 +1,199 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix program: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:dai-hoc-bach-khoa-ha-noi a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:University,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Hanoi University of Science and Technology"@en,
+        "Đại học Bách khoa Hà Nội"@vi ;
+    owl:sameAs dbr:Hanoi_University_of_Science_and_Technology,
+        wd:Q3075696,
+        <https://ror.org/04nyv3z04> ;
+    geo:lat 21.006389 ;
+    geo:long 105.843056 ;
+    skos:notation "BKA" ;
+    skos:prefLabel "Đại học Bách khoa Hà Nội"@vi ;
+    prov:wasDerivedFrom wd:Q3075696,
+        <https://vi.wikipedia.org/w/index.php?oldid=75604914> ;
+    foaf:homepage <http://www.hust.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Hanoi_University_of_Science_and_Technology>,
+        <https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_B%C3%A1ch_khoa_H%C3%A0_N%E1%BB%99i> ;
+    vnedu:address "1 Đại Cồ Việt, phường Bạch Mai" ;
+    vnedu:admissionCode "BKA" ;
+    vnedu:director person:le-anh-tuan ;
+    vnedu:formerName "Trường Đại học Bách khoa Hà Nội"@vi,
+        "Trường Đại học Chuyên nghiệp Bách khoa"@vi ;
+    vnedu:foundingYear "1956"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
+    vnedu:hasAlumnus person:an-thi-binh-nguyen,
+        person:anh-tuan-vu,
+        person:anh-vang-tran,
+        person:anh-vu-le,
+        person:binh-p-nguyen,
+        person:binh-pham-duc,
+        person:binh-t-nguyen,
+        person:cao-minh-phuong,
+        person:chi-hai-vu,
+        person:chi-thanh-vi,
+        person:chung-thanh-nguyen,
+        person:cuong-m-nguyen,
+        person:dang-thuan-nguyen,
+        person:dang-van-dong,
+        person:dinh-tuan-tran,
+        person:dinh-van-hoang,
+        person:dinh-van-nam,
+        person:do-hoang-giang,
+        person:do-van-lam,
+        person:duc-anh-nguyen,
+        person:dung-t-nguyen,
+        person:duy-long-nguyen,
+        person:dzung-viet-dao,
+        person:h-anh-le,
+        person:hanh-phuc-le,
+        person:hieu-m-dang,
+        person:hoang-a-hoang,
+        person:hoang-thi-bich-thuy,
+        person:hoang-trung-hai,
+        person:hoang-van-nghien,
+        person:hong-t-pham,
+        person:hung-huy-nguyen,
+        person:hung-viet-nguyen,
+        person:huu-hiep-nguyen,
+        person:huy-le-nguyen,
+        person:huyen-t-dinh,
+        person:khuong-p-ong,
+        person:kim-khoa-nguyen,
+        person:la-viet-phuong,
+        person:le-hoai-bac,
+        person:le-hoang-hai,
+        person:le-manh-hung,
+        person:le-thi-thuy,
+        person:long-t-ho,
+        person:luong-hong-khanh,
+        person:lysander-minh-quang,
+        person:mai-lan-pham,
+        person:mai-n-nguyen,
+        person:manh-hong-duong,
+        person:minh-son-pham,
+        person:nam-tuan-le,
+        person:nga-nguyen-thi-thanh,
+        person:ngo-dinh-thuong,
+        person:ngo-van-tien,
+        person:ngoc-duy-pham,
+        person:ngoc-han-tran,
+        person:nguyen-huy-dung,
+        person:nguyen-ngoc-thinh,
+        person:nguyen-q-vinh,
+        person:nguyen-thanh-tung,
+        person:nguyen-tien-khi,
+        person:nguyen-van-du,
+        person:nhu-nguyen,
+        person:oberon-thien-vuong,
+        person:pham-kim-long,
+        person:pham-quang-tung,
+        person:pham-quoc-viet,
+        person:phong-a-tran,
+        person:phong-pham,
+        person:quang-hung-do,
+        person:quang-minh-ngo,
+        person:quang-thang-trinh,
+        person:quoc-cuong-do,
+        person:quoc-manh-nguyen,
+        person:sang-xuan-nguyen,
+        person:son-chu-ky,
+        person:tan-minh-le,
+        person:thang-manh-hoang,
+        person:thang-phan-nguyen,
+        person:thanh-h-nguyen,
+        person:thanh-h-nguyen-2,
+        person:thanh-hai-bui,
+        person:thanh-hung-duong,
+        person:thanh-nguyen,
+        person:thi-nhung-tran,
+        person:thien-kim-le,
+        person:tien-vinh-nguyen,
+        person:toan-dinh,
+        person:tran-minh-tu,
+        person:tran-quang-huy,
+        person:trang-trinh,
+        person:trung-dac-nguyen,
+        person:trung-do,
+        person:trung-dung-nghiem,
+        person:trung-thanh-nguyen,
+        person:trung-thien-tran,
+        person:truong-nghiem,
+        person:tuan-anh-nguyen,
+        person:van-luan-nguyen,
+        person:van-t-nghiem,
+        person:van-tang-nguyen,
+        person:vo-hai-son,
+        person:vu-ngoc-phan,
+        person:vu-xuan-hien,
+        person:xuan-don-nguyen,
+        person:xuan-manh-pham,
+        person:xuan-thang-vu ;
+    vnedu:hasLeader person:le-anh-tuan ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:motto "Một tình yêu, một tương lai (One Love, One Future)"@vi ;
+    vnedu:numberOfPostgraduates "8000"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfUndergraduates "30000"^^xsd:nonNegativeInteger ;
+    vnedu:offersProgram program:dai-hoc-bach-khoa-ha-noi-7220201,
+        program:dai-hoc-bach-khoa-ha-noi-7340101,
+        program:dai-hoc-bach-khoa-ha-noi-7420201,
+        program:dai-hoc-bach-khoa-ha-noi-7440112,
+        program:dai-hoc-bach-khoa-ha-noi-7480101,
+        program:dai-hoc-bach-khoa-ha-noi-7480106,
+        program:dai-hoc-bach-khoa-ha-noi-7480201,
+        program:dai-hoc-bach-khoa-ha-noi-7520103,
+        program:dai-hoc-bach-khoa-ha-noi-7520114,
+        program:dai-hoc-bach-khoa-ha-noi-7520201,
+        program:dai-hoc-bach-khoa-ha-noi-7520207,
+        program:dai-hoc-bach-khoa-ha-noi-7520216 ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:shortName "BKHN",
+        "HUST" ;
+    vnedu:trainsMajor major:7220201,
+        major:7340101,
+        major:7420201,
+        major:7440112,
+        major:7480101,
+        major:7480106,
+        major:7480201,
+        major:7520103,
+        major:7520114,
+        major:7520201,
+        major:7520207,
+        major:7520216 ;
+    vnedu:website <http://www.hust.edu.vn> ;
+    schema:employee person:le-anh-tuan ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

@@ -1,0 +1,118 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-chinh-marketing-phan-hieu-quang-ngai",
+  "@type": [
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:EducationalOrganization",
+    "vnedu:Organization",
+    "foaf:Organization",
+    "vnedu:Branch",
+    "schema:Organization"
+  ],
+  "foaf:homepage": {
+    "@id": "https://quangngai.ufm.edu.vn"
+  },
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_T%C3%A0i_ch%C3%ADnh_%E2%80%93_Marketing_ph%C3%A2n_hi%E1%BB%87u_Qu%E1%BA%A3ng_Ng%C3%A3i"
+  },
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "15.084689"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "108.827342"
+  },
+  "owl:sameAs": {
+    "@id": "wd:Q18460961"
+  },
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75566600"
+    },
+    {
+      "@id": "wd:Q18460961"
+    }
+  ],
+  "rdfs:label": {
+    "@language": "vi",
+    "@value": "Trường Đại học Tài chính – Marketing phân hiệu Quảng Ngãi"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-ngai"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Đại học Tài chính – Marketing phân hiệu Quảng Ngãi"
+  },
+  "vnedu:address": "02 Đ. Lê Quý Đôn, xã Tư Nghĩa, tỉnh Quảng Ngãi",
+  "vnedu:branchOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-chinh-marketing"
+  },
+  "vnedu:formerName": [
+    {
+      "@language": "vi",
+      "@value": "Trường Cao đẳng Tài chính – Kế toán Quảng Ngãi"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Trung học Tài chính Kế toán III"
+    },
+    {
+      "@language": "vi",
+      "@value": "Phân hiệu Trường Đại học Tài chính - Marketing tại Quảng Ngãi"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Tài chính – Kế toán"
+    }
+  ],
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1976"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-ngai"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    }
+  ],
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:shortName": "UFM",
+  "vnedu:website": {
+    "@id": "https://quangngai.ufm.edu.vn"
+  }
+}

@@ -1,0 +1,16 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+
+person:nguyen-van-hieu a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Văn Hiệu"@vi ;
+    foaf:name "Nguyễn Văn Hiệu" ;
+    vnedu:honorific "PGS TS" ;
+    vnedu:leads university:truong-khoa-hoc-lien-nganh-va-nghe-thuat-dai-hoc-quoc-gia-ha-noi .
+

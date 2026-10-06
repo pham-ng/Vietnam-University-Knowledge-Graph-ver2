@@ -1,0 +1,15 @@
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix program: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+
+program:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh-7460101 a vnedu:AcademicProgram,
+        schema:EducationalOccupationalProgram ;
+    rdfs:label "Toán học – Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Thành phố Hồ Chí Minh"@vi ;
+    vnedu:degreeLevel "Đại học"@vi ;
+    vnedu:ofMajor major:7460101 ;
+    vnedu:offeredBy university:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh ;
+    schema:provider university:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh .
+

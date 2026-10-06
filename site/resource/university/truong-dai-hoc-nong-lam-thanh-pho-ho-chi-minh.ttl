@@ -1,0 +1,72 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-nong-lam-thanh-pho-ho-chi-minh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Nong Lam University"@en,
+        "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh"@vi ;
+    owl:sameAs dbr:Ho_Chi_Minh_City_University_of_Agriculture_and_Forestry,
+        wd:Q5873976,
+        <https://ror.org/03030f487> ;
+    geo:lat 10.8713 ;
+    geo:long 106.7917 ;
+    skos:notation "NLS" ;
+    skos:prefLabel "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh"@vi ;
+    prov:wasDerivedFrom wd:Q5873976,
+        <https://vi.wikipedia.org/w/index.php?oldid=75596833> ;
+    foaf:homepage <http://www.hcmuaf.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Agriculture_and_Forestry>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> ;
+    vnedu:address "Khu phố 33, phường Linh Xuân" ;
+    vnedu:admissionCode "NLS" ;
+    vnedu:foundingYear "1955"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
+    vnedu:hasAlumnus person:dinh-chuong-pham,
+        person:doan-van-cuong,
+        person:hanh-ngoc-lam,
+        person:khang-huynh,
+        person:khon-c-huynh,
+        person:liem-d-nguyen,
+        person:nguyen-thanh-vu,
+        person:tran-quoc-nam,
+        person:tung-che,
+        person:tuyen-truong,
+        person:ut-v-nguyen ;
+    vnedu:hasLeader person:nguyen-tat-toan ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    vnedu:motto "Chất lượng - Hội nhập - Phát triển"@vi ;
+    vnedu:numberOfStudents "22000"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:nguyen-tat-toan ;
+    vnedu:website <http://www.hcmuaf.edu.vn/> ;
+    schema:employee person:nguyen-tat-toan ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+

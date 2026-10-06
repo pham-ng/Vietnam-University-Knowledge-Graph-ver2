@@ -1,0 +1,45 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:hoc-vien-khoa-hoc-va-cong-nghe a foaf:Organization,
+        vnedu:Academy,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Graduate University of Science and Technology"@en,
+        "Học viện Khoa học và Công nghệ"@vi ;
+    owl:sameAs wd:Q61128190,
+        <https://ror.org/03t0zs859> ;
+    skos:prefLabel "Học viện Khoa học và Công nghệ"@vi ;
+    prov:wasDerivedFrom wd:Q61128190,
+        <https://vi.wikipedia.org/w/index.php?oldid=75088455> ;
+    foaf:homepage <https://gust.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Khoa_h%E1%BB%8Dc_v%C3%A0_C%C3%B4ng_ngh%E1%BB%87> ;
+    vnedu:foundingYear "2014"^^xsd:gYear ;
+    vnedu:governedBy organization:vien-han-lam-khoa-hoc-va-cong-nghe-viet-nam ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:shortName "GUST" ;
+    vnedu:website <https://gust.edu.vn/> ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

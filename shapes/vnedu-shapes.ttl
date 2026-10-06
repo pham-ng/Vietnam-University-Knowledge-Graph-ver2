@@ -1,0 +1,116 @@
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix vnedu:  <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo:    <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix shapes: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/shapes#> .
+
+# Ràng buộc chất lượng dữ liệu (giả định thế giới ĐÓNG) — bổ sung cho ontology OWL (thế giới MỞ).
+# sh:Violation = dữ liệu sai;  sh:Warning = thiếu thông tin nên bổ sung.
+# Kiểm định chạy trên đồ thị ĐÃ SUY LUẬN (bước 5), nên các ràng buộc có thể dùng cả quan hệ suy ra.
+
+shapes:Institution a sh:NodeShape ;
+    sh:targetClass vnedu:EducationalOrganization ;
+    sh:property [
+        sh:path rdfs:label ; sh:languageIn ( "vi" "en" ) ;
+        sh:minCount 1 ; sh:severity sh:Violation ;
+        sh:message "Cơ sở phải có tên (rdfs:label)."@vi ] ;
+    sh:property [
+        sh:path rdfs:label ; sh:qualifiedValueShape [ sh:languageIn ( "vi" ) ] ;
+        sh:qualifiedMinCount 1 ; sh:qualifiedMaxCount 1 ; sh:severity sh:Violation ;
+        sh:message "Cơ sở phải có đúng một tên tiếng Việt."@vi ] ;
+    sh:property [
+        sh:path vnedu:foundingYear ; sh:datatype xsd:gYear ; sh:maxCount 1 ;
+        sh:message "Năm thành lập phải là xsd:gYear và duy nhất."@vi ] ;
+    sh:property [
+        sh:path vnedu:foundingYear ; sh:minCount 1 ; sh:severity sh:Warning ;
+        sh:message "Thiếu năm thành lập."@vi ] ;
+    sh:property [
+        sh:path vnedu:locatedIn ; sh:minCount 1 ; sh:severity sh:Warning ;
+        sh:message "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ] ;
+    sh:property [
+        sh:path vnedu:ownership ; sh:maxCount 1 ; sh:in ( vnedu:PublicOwnership vnedu:PrivateOwnership ) ;
+        sh:message "Loại hình sở hữu phải là công lập hoặc tư thục (một giá trị)."@vi ] ;
+    sh:property [
+        sh:path vnedu:website ; sh:nodeKind sh:IRI ; sh:pattern "^https?://" ;
+        sh:message "Website phải là IRI http(s)."@vi ] ;
+    sh:property [
+        sh:path vnedu:admissionCode ; sh:datatype xsd:string ; sh:pattern "^[A-Z]{3}$" ;
+        sh:message "Mã trường tuyển sinh gồm 3 chữ cái in hoa."@vi ] ;
+    sh:property [
+        sh:path vnedu:numberOfStudents ; sh:datatype xsd:nonNegativeInteger ; sh:maxInclusive 500000 ;
+        sh:message "Số sinh viên không hợp lệ."@vi ] ;
+    sh:property [
+        sh:path geo:lat ; sh:datatype xsd:decimal ; sh:minInclusive 8.0 ; sh:maxInclusive 23.5 ; sh:maxCount 1 ;
+        sh:message "Vĩ độ phải nằm trong lãnh thổ Việt Nam (8–23.5°N)."@vi ] ;
+    sh:property [
+        sh:path geo:long ; sh:datatype xsd:decimal ; sh:minInclusive 102.0 ; sh:maxInclusive 110.0 ; sh:maxCount 1 ;
+        sh:message "Kinh độ phải nằm trong lãnh thổ Việt Nam (102–110°E)."@vi ] .
+
+# Năm thành lập không ở tương lai và không sau năm giải thể
+shapes:FoundingYearRange a sh:NodeShape ;
+    sh:targetSubjectsOf vnedu:foundingYear ;
+    sh:sparql [
+        sh:message "Năm thành lập {?y} nằm ngoài khoảng hợp lệ (1800 – năm hiện tại) hoặc sau năm giải thể."@vi ;
+        sh:prefixes vnedu: ;
+        sh:select """
+            SELECT $this ?y WHERE {
+              $this vnedu:foundingYear ?y .
+              BIND(xsd:integer(SUBSTR(STR(?y), 1, 4)) AS ?n)
+              OPTIONAL { $this vnedu:dissolutionYear ?d BIND(xsd:integer(SUBSTR(STR(?d), 1, 4)) AS ?dn) }
+              FILTER(?n < 1800 || ?n > YEAR(NOW()) || (BOUND(?dn) && ?dn < ?n))
+            }""" ] .
+
+# Trường thành viên phải đặt cùng tỉnh hoặc được ghi nhận khác tỉnh có chủ đích -> chỉ cảnh báo
+shapes:MemberSameProvince a sh:NodeShape ;
+    sh:targetSubjectsOf vnedu:memberOf ;
+    sh:severity sh:Info ;
+    sh:sparql [
+        sh:message "Trường thành viên đặt ở tỉnh khác với đại học chủ quản ({?p1} ≠ {?p2})."@vi ;
+        sh:prefixes vnedu: ;
+        sh:select """
+            SELECT $this ?p1 ?p2 WHERE {
+              $this vnedu:memberOf ?u ; vnedu:locatedIn ?p1 . ?p1 a vnedu:Province .
+              ?u vnedu:locatedIn ?p2 . ?p2 a vnedu:Province .
+              FILTER NOT EXISTS { $this vnedu:locatedIn ?p2 }
+            }""" ] .
+
+# Cơ sở tư thục không có cơ quan chủ quản nhà nước (Bộ, UBND) — dấu hiệu dữ liệu mâu thuẫn
+shapes:PrivateNotGoverned a sh:NodeShape ;
+    sh:targetClass vnedu:PrivateInstitution ;
+    sh:severity sh:Warning ;
+    sh:property [
+        sh:path vnedu:governedBy ; sh:qualifiedValueShape [ sh:class vnedu:Ministry ] ; sh:qualifiedMaxCount 0 ;
+        sh:severity sh:Warning ;
+        sh:message "Cơ sở tư thục lại có Bộ làm cơ quan chủ quản — cần kiểm tra."@vi ] .
+
+shapes:Province a sh:NodeShape ;
+    sh:targetClass vnedu:Province ;
+    sh:property [ sh:path vnedu:partOf ; sh:qualifiedValueShape [ sh:class vnedu:Region ] ;
+                  sh:qualifiedMinCount 1 ; sh:qualifiedMaxCount 1 ;
+                  sh:message "Tỉnh hiện hành phải thuộc đúng một miền."@vi ] ;
+    sh:property [ sh:path vnedu:population ; sh:minCount 1 ; sh:severity sh:Warning ;
+                  sh:message "Thiếu dân số."@vi ] .
+
+shapes:FormerProvince a sh:NodeShape ;
+    sh:targetClass vnedu:FormerProvince ;
+    sh:property [ sh:path vnedu:mergedInto ; sh:class vnedu:Province ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "Tỉnh cũ phải được sáp nhập vào đúng một tỉnh mới (NQ 202/2025/QH15)."@vi ] .
+
+shapes:Person a sh:NodeShape ;
+    sh:targetClass vnedu:Person ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:message "Người phải có tên."@vi ] ;
+    sh:property [ sh:path vnedu:birthDate ; sh:datatype xsd:date ; sh:maxCount 1 ;
+                  sh:message "Ngày sinh phải là xsd:date và duy nhất."@vi ] .
+
+shapes:Program a sh:NodeShape ;
+    sh:targetClass vnedu:AcademicProgram ;
+    sh:property [ sh:path vnedu:ofMajor ; sh:class vnedu:Major ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "Chương trình phải thuộc đúng một ngành."@vi ] ;
+    sh:property [ sh:path vnedu:offeredBy ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "Chương trình phải do đúng một cơ sở đào tạo."@vi ] .
+
+vnedu: sh:declare [ sh:prefix "vnedu" ; sh:namespace "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#"^^xsd:anyURI ] ,
+                  [ sh:prefix "xsd" ; sh:namespace "http://www.w3.org/2001/XMLSchema#"^^xsd:anyURI ] .

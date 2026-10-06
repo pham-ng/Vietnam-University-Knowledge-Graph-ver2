@@ -1,0 +1,64 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-thuy-loi a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Thuyloi University"@en,
+        "Trường Đại học Thủy lợi"@vi ;
+    owl:sameAs dbr:Thuyloi_University,
+        wd:Q7973360,
+        <https://ror.org/04afshy24> ;
+    geo:lat 21.007381 ;
+    geo:long 105.824519 ;
+    skos:prefLabel "Trường Đại học Thủy lợi"@vi ;
+    prov:wasDerivedFrom wd:Q7973360,
+        <https://vi.wikipedia.org/w/index.php?oldid=75154006> ;
+    foaf:homepage <http://tlu.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Thuyloi_University>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%E1%BB%A7y_l%E1%BB%A3i> ;
+    vnedu:address "Số 175 Tây Sơn, Phường Kim Liên" ;
+    vnedu:formerName "Học Viện Thủy Lợi Điện Lực, WRU"@vi ;
+    vnedu:foundingYear "1959"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-nong-nghiep-va-moi-truong ;
+    vnedu:hasAlumnus person:dang-an-tran,
+        person:hong-t-pham,
+        person:pham-van-lap,
+        person:quang-viet-ly,
+        person:tran-huy-tuan ;
+    vnedu:hasLeader person:nguyen-trung-viet ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:motto "Học tập vì ngày mai lập nghiệp"@vi ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:nguyen-trung-viet ;
+    vnedu:website <http://tlu.edu.vn> ;
+    schema:employee person:nguyen-trung-viet ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

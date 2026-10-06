@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block main %}
+<h1>Dữ liệu liên kết mở về giáo dục đại học Việt Nam</h1>
+<p class="sub">{{ "{:,}".format(total).replace(",", ".") }} triple (trong đó {{ "{:,}".format(inferred).replace(",", ".") }} triple do suy luận OWL 2 RL) · backend: {{ backend }}</p>
+
+<div class="grid">
+  {% for key, label, inf in [("vnedu:HigherEducationInstitution","Cơ sở giáo dục đại học",0),
+                        ("vnedu:PublicInstitution","Công lập",1),("vnedu:PrivateInstitution","Tư thục",1),
+                        ("vnedu:MemberInstitution","Trường/đơn vị thành viên",1),
+                        ("vnedu:MilitaryInstitution","Trường quân đội",1),("vnedu:PoliceInstitution","Trường công an",1),
+                        ("vnedu:Province","Tỉnh/thành (2025)",0),("vnedu:FormerProvince","Tỉnh cũ đã sáp nhập",0),
+                        ("vnedu:GoverningBody","Cơ quan chủ quản",0),("vnedu:InstitutionLeader","Lãnh đạo",1),
+                        ("vnedu:Alumnus","Cựu sinh viên",1),("vnedu:Major","Ngành đào tạo",0)] %}
+  <div class="card stat"><b>{{ counts.get(key, 0) }}</b><span>{{ label }}{% if inf %} <span class="pill">suy luận</span>{% endif %}</span></div>
+  {% endfor %}
+</div>
+
+<h2>Liên kết ra ngoài (5 sao)</h2>
+<div class="grid">
+  {% for l in links %}
+  <div class="card stat"><b>{{ l.n.value }}</b><span>liên kết tới {{ l.t.value }}</span></div>
+  {% endfor %}
+</div>
+
+<h2>Truy vấn mẫu</h2>
+<div class="card">
+  <ul class="plain">
+    {% for q in queries %}
+    <li><a href="/query?file={{ q.file }}">{{ q.title }}</a>
+      {% if q.federated %}<span class="pill ext">federated</span>{% endif %}
+      <span class="uri"> — {{ q.file }}</span></li>
+    {% endfor %}
+  </ul>
+  <p style="margin:14px 0 0"><a class="btn" href="/query">Mở trình soạn truy vấn</a></p>
+</div>
+
+<h2>Truy cập dữ liệu</h2>
+<div class="card">
+  <ul class="plain">
+    <li>SPARQL endpoint: <code>{{ base }}sparql</code> (GET/POST theo SPARQL 1.1 Protocol)</li>
+    <li>Mọi URI đều tra cứu được, ví dụ <a href="/resource/province/ha-noi">{{ base }}resource/province/ha-noi</a>
+      — thêm <code>?format=ttl</code> hoặc gửi <code>Accept: text/turtle</code> để nhận RDF</li>
+    {% for d in dumps %}<li>Tải dump: <a href="/download/{{ d }}">{{ d }}</a></li>{% endfor %}
+  </ul>
+</div>
+{% endblock %}

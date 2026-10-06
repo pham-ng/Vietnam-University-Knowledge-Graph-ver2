@@ -1,0 +1,56 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-su-pham-dai-hoc-thai-nguyen a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Thai Nguyen University of Education"@en,
+        "Trường Đại học Sư phạm, Đại học Thái Nguyên"@vi ;
+    owl:sameAs wd:Q10829125,
+        <https://ror.org/044deqz63> ;
+    skos:prefLabel "Trường Đại học Sư phạm, Đại học Thái Nguyên"@vi ;
+    prov:wasDerivedFrom wd:Q10829125,
+        <https://vi.wikipedia.org/w/index.php?oldid=75592828> ;
+    foaf:homepage <http://tnue.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn> ;
+    vnedu:address "Số 20, Đường Lương Ngọc Quyến, phường Phan Đình Phùng" ;
+    vnedu:formerName "Trường Đại học Sư phạm Việt Bắc"@vi ;
+    vnedu:foundingYear "1966"^^xsd:gYear ;
+    vnedu:hasAlumnus person:hung-m-nguyen,
+        person:vinh-d-nguyen ;
+    vnedu:hasLeader person:mai-xuan-truong ;
+    vnedu:locatedIn country:viet-nam,
+        province:thai-nguyen,
+        region:bac-bo ;
+    vnedu:memberOf university:dai-hoc-thai-nguyen ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:mai-xuan-truong ;
+    vnedu:shortName "TNUE" ;
+    vnedu:website <http://tnue.edu.vn> ;
+    schema:employee person:mai-xuan-truong ;
+    schema:location country:viet-nam,
+        province:thai-nguyen,
+        region:bac-bo ;
+    schema:parentOrganization university:dai-hoc-thai-nguyen .
+

@@ -1,0 +1,18 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix field: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/field/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+field:742 a skos:Concept,
+        vnedu:FieldOfStudy ;
+    rdfs:label "Life sciences"@en,
+        "Khoa học sự sống"@vi ;
+    skos:closeMatch dbr:List_of_life_sciences,
+        wd:Q864928 ;
+    skos:notation "742" ;
+    skos:prefLabel "Life sciences"@en,
+        "Khoa học sự sống"@vi ;
+    vnedu:code "742" .
+

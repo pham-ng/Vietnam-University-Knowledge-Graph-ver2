@@ -1,0 +1,82 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-tri",
+  "@type": [
+    "vnedu:AdministrativeUnit",
+    "schema:AdministrativeArea",
+    "vnedu:Province"
+  ],
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://vi.wikipedia.org/wiki/Qu%E1%BA%A3ng_Tr%E1%BB%8B"
+    },
+    {
+      "@id": "https://en.wikipedia.org/wiki/Qu%E1%BA%A3ng_Tr%E1%BB%8B_province"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "16.75"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "107.0"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "wd:Q36579"
+    },
+    {
+      "@id": "https://sws.geonames.org/1568733/"
+    }
+  ],
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q36579"
+  },
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Quảng Trị"
+    },
+    {
+      "@language": "en",
+      "@value": "Quảng Trị"
+    }
+  ],
+  "vnedu:area": {
+    "@type": "xsd:decimal",
+    "@value": "12700.0"
+  },
+  "vnedu:mergedFrom": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-binh"
+  },
+  "vnedu:partOf": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    }
+  ],
+  "vnedu:population": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "1584000"
+  }
+}

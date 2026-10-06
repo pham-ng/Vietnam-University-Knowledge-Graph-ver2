@@ -1,0 +1,21 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+organization:quan-doi-nhan-dan-viet-nam a foaf:Organization,
+        vnedu:GoverningBody,
+        vnedu:Organization,
+        schema:GovernmentOrganization,
+        schema:Organization ;
+    rdfs:label "People's Army of Vietnam"@en,
+        "Quân đội nhân dân Việt Nam"@vi ;
+    owl:sameAs <http://dbpedia.org/resource/People's_Army_of_Vietnam>,
+        wd:Q3936506 ;
+    vnedu:governs university:hoc-vien-chinh-tri ;
+    vnedu:subordinateTo vnedu:MinistryOfNationalDefence .
+

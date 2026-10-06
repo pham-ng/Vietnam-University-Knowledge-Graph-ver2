@@ -1,0 +1,84 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vo-nguyen-giap",
+  "@type": [
+    "vnedu:Alumnus",
+    "foaf:Person",
+    "schema:Person",
+    "vnedu:Person"
+  ],
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://en.wikipedia.org/wiki/V%C3%B5_Nguy%C3%AAn_Gi%C3%A1p"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/wiki/V%C3%B5_Nguy%C3%AAn_Gi%C3%A1p"
+    }
+  ],
+  "foaf:name": "Võ Nguyên Giáp",
+  "owl:sameAs": [
+    {
+      "@id": "dbr:Vo_Nguyen_Giap"
+    },
+    {
+      "@id": "wd:Q179910"
+    }
+  ],
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q179910"
+  },
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Võ Nguyên Giáp"
+    },
+    {
+      "@language": "vi",
+      "@value": "Võ Nguyên Giáp"
+    }
+  ],
+  "schema:alumniOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+  },
+  "schema:gender": {
+    "@id": "wd:Q6581097"
+  },
+  "schema:hasOccupation": [
+    {
+      "@id": "wd:Q189290"
+    },
+    {
+      "@id": "wd:Q1930187"
+    },
+    {
+      "@id": "wd:Q372436"
+    },
+    {
+      "@id": "wd:Q36180"
+    }
+  ],
+  "vnedu:alumnusOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+  },
+  "vnedu:birthDate": {
+    "@type": "xsd:date",
+    "@value": "1911-08-25"
+  }
+}

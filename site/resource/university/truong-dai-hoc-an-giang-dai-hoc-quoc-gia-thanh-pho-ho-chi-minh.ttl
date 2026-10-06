@@ -1,0 +1,64 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-an-giang-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "An Giang University - Vietnam National University Ho Chi Minh City"@en,
+        "Trường Đại học An Giang, Đại học Quốc gia Thành phố Hồ Chí Minh"@vi ;
+    owl:sameAs dbr:An_Giang_University,
+        wd:Q4750013,
+        <https://ror.org/023pm6532> ;
+    geo:lat 10.3718 ;
+    geo:long 105.431 ;
+    skos:notation "QSA" ;
+    skos:prefLabel "Trường Đại học An Giang, Đại học Quốc gia Thành phố Hồ Chí Minh"@vi ;
+    prov:wasDerivedFrom wd:Q4750013,
+        <https://vi.wikipedia.org/w/index.php?oldid=75612886> ;
+    foaf:homepage <http://www.agu.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/An_Giang_University>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_An_Giang%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> ;
+    vnedu:academicStaff "490"^^xsd:nonNegativeInteger ;
+    vnedu:address "18 Ung Văn Khiêm, phường Long Xuyên" ;
+    vnedu:admissionCode "QSA" ;
+    vnedu:formerName "Trường Cao đẳng Sư phạm An Giang"@vi,
+        "Trường Sư phạm Long Xuyên"@vi,
+        "Trường Đại học An Giang"@vi ;
+    vnedu:foundingYear "1999"^^xsd:gYear ;
+    vnedu:locatedIn country:viet-nam,
+        province:an-giang,
+        region:nam-bo ;
+    vnedu:memberOf university:dai-hoc-quoc-gia-thanh-pho-ho-chi-minh ;
+    vnedu:motto "Chính trực - Tận tâm - Sáng tạo"@vi ;
+    vnedu:numberOfPostgraduates "75"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfUndergraduates "9926"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:shortName "AGU - VNUHCM" ;
+    vnedu:website <http://www.agu.edu.vn> ;
+    schema:location country:viet-nam,
+        province:an-giang,
+        region:nam-bo ;
+    schema:parentOrganization university:dai-hoc-quoc-gia-thanh-pho-ho-chi-minh .
+

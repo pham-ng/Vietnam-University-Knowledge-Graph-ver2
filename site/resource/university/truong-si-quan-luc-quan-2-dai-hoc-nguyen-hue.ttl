@@ -1,0 +1,51 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-si-quan-luc-quan-2-dai-hoc-nguyen-hue a foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MilitaryInstitution,
+        vnedu:OfficerSchool,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Trường Sĩ quan Lục quân 2 – Đại học Nguyễn Huệ"@vi ;
+    owl:sameAs wd:Q10829101 ;
+    skos:prefLabel "Trường Sĩ quan Lục quân 2 – Đại học Nguyễn Huệ"@vi ;
+    prov:wasDerivedFrom wd:Q10829101,
+        <https://vi.wikipedia.org/w/index.php?oldid=75566425> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_S%C4%A9_quan_L%E1%BB%A5c_qu%C3%A2n_2_%E2%80%93_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Nguy%E1%BB%85n_Hu%E1%BB%87> ;
+    vnedu:address "Đường số 6, Khu phố Long Đức 1, phường Tam Phước, Thành phố Đồng Nai, Việt Nam" ;
+    vnedu:foundingYear "1961"^^xsd:gYear ;
+    vnedu:governedBy vnedu:MinistryOfNationalDefence ;
+    vnedu:hasAlumnus person:dang-van-lam,
+        person:dinh-van-the,
+        person:nguyen-huu-dan,
+        person:nguyen-tam-hung,
+        person:pham-dinh-thanh,
+        person:pham-xuan-truong,
+        person:thai-dai-ngoc,
+        person:vo-van-hoi ;
+    vnedu:locatedIn country:viet-nam,
+        province:dong-nai,
+        region:nam-bo ;
+    vnedu:motto "Trung với nước, hiếu với dân"@vi ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    schema:location country:viet-nam,
+        province:dong-nai,
+        region:nam-bo .
+

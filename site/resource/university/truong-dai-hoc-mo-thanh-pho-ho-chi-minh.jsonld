@@ -1,0 +1,153 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-mo-thanh-pho-ho-chi-minh",
+  "@type": [
+    "foaf:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "schema:EducationalOrganization",
+    "vnedu:Organization"
+  ],
+  "foaf:homepage": {
+    "@id": "http://www.ou.edu.vn/"
+  },
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%9F_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+    },
+    {
+      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_Open_University"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "10.761111"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "106.692222"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "https://ror.org/00tean533"
+    },
+    {
+      "@id": "wd:Q10829094"
+    },
+    {
+      "@id": "dbr:Ho_Chi_Minh_City_Open_University"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085482"
+    },
+    {
+      "@id": "wd:Q10829094"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Ho Chi Minh City Open University"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Mở Thành phố Hồ Chí Minh"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-ha-2"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    }
+  ],
+  "skos:notation": "MBS",
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Đại học Mở Thành phố Hồ Chí Minh"
+  },
+  "vnedu:address": "35-37 Hồ Hảo Hớn, phường Cầu Ông Lãnh, Thành phố Hồ Chí Minh",
+  "vnedu:admissionCode": "MBS",
+  "vnedu:formerName": [
+    {
+      "@language": "vi",
+      "@value": "Đại học Mở Bán Công Thành phố Hồ Chí Minh"
+    },
+    {
+      "@language": "vi",
+      "@value": "Viện Đào Tạo Mở Rộng Thành phố Hồ Chí Minh"
+    }
+  ],
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1990"
+  },
+  "vnedu:governedBy": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+  },
+  "vnedu:hasAlumnus": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-van-huong"
+  },
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-ha-2"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Cơ hội học tập cho mọi người"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:rector": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-ha-2"
+  },
+  "vnedu:shortName": [
+    "HCMCOU",
+    "OU"
+  ],
+  "vnedu:website": {
+    "@id": "http://www.ou.edu.vn/"
+  }
+}

@@ -1,0 +1,29 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+province:ninh-thuan a vnedu:AdministrativeUnit,
+        vnedu:FormerProvince,
+        schema:AdministrativeArea ;
+    rdfs:label "Ninh Thuận"@en,
+        "Ninh Thuận"@vi ;
+    owl:sameAs dbr:Ninh_Thuận_Province,
+        wd:Q36903,
+        <https://sws.geonames.org/1559971/> ;
+    geo:lat 11.75 ;
+    geo:long 108.833333333 ;
+    prov:wasDerivedFrom wd:Q36903 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ninh_Thu%E1%BA%ADn_province>,
+        <https://vi.wikipedia.org/wiki/Ninh_Thu%E1%BA%ADn> ;
+    vnedu:area 3355.7 ;
+    vnedu:mergedInto province:khanh-hoa ;
+    vnedu:population "598680"^^xsd:nonNegativeInteger .
+

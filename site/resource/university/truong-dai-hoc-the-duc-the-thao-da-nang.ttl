@@ -1,0 +1,52 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-the-duc-the-thao-da-nang a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Da Nang University of Physical Education and Sports"@en,
+        "Trường Đại học Thể dục Thể thao Đà Nẵng"@vi ;
+    owl:sameAs wd:Q10829144 ;
+    geo:lat 16.07078 ;
+    geo:long 108.181015 ;
+    skos:prefLabel "Trường Đại học Thể dục Thể thao Đà Nẵng"@vi ;
+    prov:wasDerivedFrom wd:Q10829144,
+        <https://vi.wikipedia.org/w/index.php?oldid=75227020> ;
+    foaf:homepage <https://dsu.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%E1%BB%83_d%E1%BB%A5c_Th%E1%BB%83_thao_%C4%90%C3%A0_N%E1%BA%B5ng> ;
+    vnedu:address "44 đường Dũng Sĩ Thanh Khê, phường Thanh Khê" ;
+    vnedu:foundingYear "2007"^^xsd:gYear ;
+    vnedu:hasAlumnus person:cao-xuan-tai ;
+    vnedu:hasLeader person:phan-thanh-hai ;
+    vnedu:locatedIn country:viet-nam,
+        province:da-nang,
+        region:trung-bo ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:phan-thanh-hai ;
+    vnedu:website <https://dsu.edu.vn/> ;
+    schema:employee person:phan-thanh-hai ;
+    schema:location country:viet-nam,
+        province:da-nang,
+        region:trung-bo .
+

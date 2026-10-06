@@ -1,0 +1,21 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix field: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/field/> .
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+major:7520201 a skos:Concept,
+        vnedu:Major ;
+    rdfs:label "Electrical engineering"@en,
+        "Kỹ thuật điện"@vi ;
+    skos:broader field:752 ;
+    skos:closeMatch dbr:Electrical_engineering,
+        wd:Q43035 ;
+    skos:notation "7520201" ;
+    skos:prefLabel "Electrical engineering"@en,
+        "Kỹ thuật điện"@vi ;
+    vnedu:code "7520201" ;
+    vnedu:inField field:752 .
+

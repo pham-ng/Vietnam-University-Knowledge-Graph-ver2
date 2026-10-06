@@ -1,0 +1,40 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:phan-hieu-dai-hoc-kinh-te-thanh-pho-ho-chi-minh-tai-vinh-long a foaf:Organization,
+        vnedu:Branch,
+        vnedu:EducationalOrganization,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Phân hiệu Đại học Kinh tế Thành phố Hồ Chí Minh tại Vĩnh Long"@vi ;
+    geo:lat 10.240809 ;
+    geo:long 105.960643 ;
+    skos:prefLabel "Phân hiệu Đại học Kinh tế Thành phố Hồ Chí Minh tại Vĩnh Long"@vi ;
+    prov:wasDerivedFrom <https://vi.wikipedia.org/w/index.php?oldid=75085387> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Ph%C3%A2n_hi%E1%BB%87u_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh_t%E1%BA%A1i_V%C4%A9nh_Long> ;
+    vnedu:address "1B Nguyễn Trung Trực, phường Tân Hạnh" ;
+    vnedu:branchOf university:dai-hoc-kinh-te-thanh-pho-ho-chi-minh ;
+    vnedu:formerName "Trường Cao đẳng Kinh tế - Tài chính Vĩnh Long"@vi ;
+    vnedu:foundingYear "2004"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
+    vnedu:locatedIn country:viet-nam,
+        province:vinh-long,
+        region:nam-bo ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    schema:location country:viet-nam,
+        province:vinh-long,
+        region:nam-bo .
+

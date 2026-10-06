@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Ontology · VN-Edu LOD{% endblock %}
+{% block main %}
+<h1>VN-Edu Ontology</h1>
+<p class="uri">{{ ns }} · <a href="?format=ttl">Turtle</a></p>
+{% for kind, heading in [("http://www.w3.org/2002/07/owl#Class", "Lớp (Classes)"),
+                         ("http://www.w3.org/2002/07/owl#ObjectProperty", "Thuộc tính quan hệ (Object properties)"),
+                         ("http://www.w3.org/2002/07/owl#DatatypeProperty", "Thuộc tính dữ liệu (Datatype properties)")] %}
+<h2>{{ heading }}</h2>
+<div class="card table-wrap">
+<table>
+  <tr><th>Thuật ngữ</th><th>Nhãn</th><th>Liên hệ</th></tr>
+  {% for t in terms if t.kind == kind and t.t.startswith(ns) %}
+  <tr id="{{ t.name }}">
+    <td><code>vnedu:{{ t.name }}</code></td>
+    <td>{{ t.vi }}<div class="lang">{{ t.en }}</div>{% if t.comment %}<div class="lang">{{ t.comment }}</div>{% endif %}</td>
+    <td class="mono">
+      {% for s in t.supers %}<div>⊑ {{ s }}</div>{% endfor %}
+      {% if t.domain %}<div>domain: {{ t.domain }}</div>{% endif %}
+      {% if t.range %}<div>range: {{ t.range }}</div>{% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,15 @@
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix program: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+
+program:dai-hoc-bach-khoa-ha-noi-7340101 a vnedu:AcademicProgram,
+        schema:EducationalOccupationalProgram ;
+    rdfs:label "Quản trị kinh doanh – Đại học Bách khoa Hà Nội"@vi ;
+    vnedu:degreeLevel "Đại học"@vi ;
+    vnedu:ofMajor major:7340101 ;
+    vnedu:offeredBy university:dai-hoc-bach-khoa-ha-noi ;
+    schema:provider university:dai-hoc-bach-khoa-ha-noi .
+

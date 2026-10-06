@@ -1,0 +1,28 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:bui-nhu-lai a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Bùi Như Lai"@en,
+        "Bùi Như Lai"@vi ;
+    owl:sameAs wd:Q134017278 ;
+    prov:wasDerivedFrom wd:Q134017278 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/B%C3%B9i_Nh%C6%B0_Lai> ;
+    foaf:name "Bùi Như Lai" ;
+    vnedu:alumnusOf university:truong-dai-hoc-san-khau-dien-anh-ha-noi ;
+    vnedu:birthDate "1975-12-28"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-san-khau-dien-anh-ha-noi ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q33999,
+        wd:Q93438884 .
+

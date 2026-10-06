@@ -1,0 +1,28 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:hoang-lam-tung a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Lâm Tùng"@en,
+        "Hoàng Lâm Tùng"@vi ;
+    owl:sameAs wd:Q128883969 ;
+    prov:wasDerivedFrom wd:Q128883969 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Ho%C3%A0ng_L%C3%A2m_T%C3%B9ng> ;
+    foaf:name "Hoàng Lâm Tùng" ;
+    vnedu:alumnusOf university:truong-dai-hoc-san-khau-dien-anh-ha-noi ;
+    vnedu:birthDate "1974-06-29"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-san-khau-dien-anh-ha-noi ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q3387717,
+        wd:Q33999 .
+

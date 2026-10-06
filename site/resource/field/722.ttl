@@ -1,0 +1,16 @@
+@prefix field: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/field/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+field:722 a skos:Concept,
+        vnedu:FieldOfStudy ;
+    rdfs:label "Humanities"@en,
+        "Nhân văn"@vi ;
+    skos:closeMatch wd:Q80083 ;
+    skos:notation "722" ;
+    skos:prefLabel "Humanities"@en,
+        "Nhân văn"@vi ;
+    vnedu:code "722" .
+

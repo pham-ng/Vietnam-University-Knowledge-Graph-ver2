@@ -1,0 +1,121 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/phan-hieu-truong-dai-hoc-ngoai-thuong-tai-thanh-pho-ho-chi-minh",
+  "@type": [
+    "schema:Organization",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "foaf:Organization",
+    "vnedu:Branch"
+  ],
+  "foaf:homepage": {
+    "@id": "https://hcmc.ftu.edu.vn/"
+  },
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Ph%C3%A2n_hi%E1%BB%87u_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngo%E1%BA%A1i_th%C6%B0%C6%A1ng_t%E1%BA%A1i_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+  },
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "10.799291"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "106.717844"
+  },
+  "owl:sameAs": {
+    "@id": "wd:Q10829100"
+  },
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75238908"
+    },
+    {
+      "@id": "wd:Q10829100"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Phân hiệu Trường Đại học Ngoại thương tại Thành phố Hồ Chí Minh"
+    },
+    {
+      "@language": "en",
+      "@value": "Foreign Trade University, Ho Chi Minh City Branch"
+    }
+  ],
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Phân hiệu Trường Đại học Ngoại thương tại Thành phố Hồ Chí Minh"
+  },
+  "vnedu:academicStaff": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "528"
+  },
+  "vnedu:address": "15 D5, phường Thạnh Mỹ Tây",
+  "vnedu:branchOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ngoai-thuong"
+  },
+  "vnedu:formerName": {
+    "@language": "vi",
+    "@value": "Trường Cán bộ Ngoại giao – Ngoại thương"
+  },
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1993"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Chất lượng – Uy tín – Hiệu quả – Chuyên nghiệp – Hiện đại"
+  },
+  "vnedu:numberOfStudents": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "3500"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:website": {
+    "@id": "https://hcmc.ftu.edu.vn/"
+  }
+}

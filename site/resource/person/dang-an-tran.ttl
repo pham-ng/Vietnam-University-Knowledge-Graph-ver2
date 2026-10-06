@@ -1,0 +1,22 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+person:dang-an-tran a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Dang An Tran"@en ;
+    owl:sameAs wd:Q90444603 ;
+    prov:wasDerivedFrom wd:Q90444603 ;
+    foaf:name "Dang An Tran" ;
+    vnedu:alumnusOf university:truong-dai-hoc-thuy-loi ;
+    schema:alumniOf university:truong-dai-hoc-thuy-loi ;
+    schema:hasOccupation wd:Q1650915 .
+

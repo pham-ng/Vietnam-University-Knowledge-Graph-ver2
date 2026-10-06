@@ -1,0 +1,70 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-nha-trang a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Nha Trang University"@en,
+        "Trường Đại học Nha Trang"@vi ;
+    owl:sameAs dbr:Nha_Trang_University,
+        wd:Q2740474,
+        <https://ror.org/047van922> ;
+    geo:lat 12.2703 ;
+    geo:long 109.2 ;
+    skos:prefLabel "Trường Đại học Nha Trang"@vi ;
+    prov:wasDerivedFrom wd:Q2740474,
+        <https://vi.wikipedia.org/w/index.php?oldid=75611189> ;
+    foaf:homepage <http://www.ntu.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Nha_Trang_University>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Nha_Trang> ;
+    vnedu:academicStaff "472"^^xsd:nonNegativeInteger ;
+    vnedu:address "02 Nguyễn Đình Chiểu, phường Bắc Nha Trang" ;
+    vnedu:formerName "Trường Đại học Thủy sản"@vi ;
+    vnedu:foundingYear "1959"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
+    vnedu:hasAlumnus person:ha-thanh-dong,
+        person:hoang-minh-le,
+        person:hong-ngoc-thuy-pham,
+        person:hung-quoc-pham,
+        person:minh-thai,
+        person:nguyen-dinh-cuong,
+        person:pham-phu-quoc ;
+    vnedu:hasLeader person:quach-hoai-nam ;
+    vnedu:locatedIn country:viet-nam,
+        province:khanh-hoa,
+        region:trung-bo ;
+    vnedu:motto "Khai phóng – Dụng hành – Phụng sự"@vi ;
+    vnedu:numberOfPostgraduates "873"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfUndergraduates "14553"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:quach-hoai-nam ;
+    vnedu:shortName "NTU" ;
+    vnedu:website <http://www.ntu.edu.vn/> ;
+    schema:employee person:quach-hoai-nam ;
+    schema:location country:viet-nam,
+        province:khanh-hoa,
+        region:trung-bo .
+

@@ -1,0 +1,147 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-chinh-marketing",
+  "@type": [
+    "schema:EducationalOrganization",
+    "vnedu:Organization",
+    "foaf:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "dbo:University"
+  ],
+  "foaf:homepage": {
+    "@id": "http://ufm.edu.vn/"
+  },
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_T%C3%A0i_ch%C3%ADnh_%E2%80%93_Marketing"
+  },
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "10.811472"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "106.680583"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "https://ror.org/00ycry713"
+    },
+    {
+      "@id": "wd:Q10829152"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75566607"
+    },
+    {
+      "@id": "wd:Q10829152"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "University of Finance - Marketing"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Tài chính – Marketing"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-tien-dat"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    }
+  ],
+  "skos:notation": "DMS",
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Đại học Tài chính – Marketing"
+  },
+  "vnedu:address": "778 Nguyễn Kiệm, phường Đức Nhuận",
+  "vnedu:admissionCode": "DMS",
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1976"
+  },
+  "vnedu:governedBy": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-chinh"
+  },
+  "vnedu:hasAlumnus": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/abal1412"
+  },
+  "vnedu:hasBranch": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-chinh-marketing-phan-hieu-quang-ngai"
+  },
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-tien-dat"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Sáng tạo - Khác biệt - Hiệu quả - Bền vững"
+  },
+  "vnedu:numberOfPostgraduates": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "7000"
+  },
+  "vnedu:numberOfStudents": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "85000"
+  },
+  "vnedu:numberOfUndergraduates": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "80000"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:rector": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-tien-dat"
+  },
+  "vnedu:shortName": "UFM",
+  "vnedu:website": {
+    "@id": "http://ufm.edu.vn/"
+  }
+}

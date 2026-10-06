@@ -1,0 +1,50 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-ha-long a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Ha Long University"@en,
+        "Trường Đại học Hạ Long"@vi ;
+    owl:sameAs wd:Q65165392 ;
+    skos:prefLabel "Trường Đại học Hạ Long"@vi ;
+    prov:wasDerivedFrom wd:Q65165392,
+        <https://vi.wikipedia.org/w/index.php?oldid=75564205> ;
+    foaf:homepage <http://www.uhl.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_H%E1%BA%A1_Long> ;
+    vnedu:address "258, Bạch Đằng, Uông Bí" ;
+    vnedu:foundingYear "2014"^^xsd:gYear ;
+    vnedu:hasLeader person:nguyen-duc-tiep ;
+    vnedu:locatedIn country:viet-nam,
+        province:quang-ninh,
+        region:bac-bo ;
+    vnedu:motto "Học để thành công"@vi ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:nguyen-duc-tiep ;
+    vnedu:shortName "UHL" ;
+    vnedu:website <http://www.uhl.edu.vn> ;
+    schema:employee person:nguyen-duc-tiep ;
+    schema:location country:viet-nam,
+        province:quang-ninh,
+        region:bac-bo .
+

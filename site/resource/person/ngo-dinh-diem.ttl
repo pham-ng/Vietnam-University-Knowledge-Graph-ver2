@@ -1,0 +1,30 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:ngo-dinh-diem a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Ngô Đình Diệm"@en,
+        "Ngô Đình Diệm"@vi ;
+    owl:sameAs dbr:Ngo_Dinh_Diem,
+        wd:Q192502 ;
+    prov:wasDerivedFrom wd:Q192502 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ngo_Dinh_Diem>,
+        <https://vi.wikipedia.org/wiki/Ng%C3%B4_%C4%90%C3%ACnh_Di%E1%BB%87m> ;
+    foaf:name "Ngô Đình Diệm" ;
+    vnedu:alumnusOf university:truong-hau-bo ;
+    vnedu:birthDate "1901-01-03"^^xsd:date ;
+    schema:alumniOf university:truong-hau-bo ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q82955 .
+

@@ -1,0 +1,26 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:the-hiep-nguyen a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "The-Hiep Nguyen"@en ;
+    owl:sameAs wd:Q106114482 ;
+    prov:wasDerivedFrom wd:Q106114482 ;
+    foaf:name "The-Hiep Nguyen" ;
+    vnedu:alumnusOf university:truong-dai-hoc-sai-gon ;
+    vnedu:birthDate "1950-09-10"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-sai-gon ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q1622272,
+        wd:Q188094 .
+

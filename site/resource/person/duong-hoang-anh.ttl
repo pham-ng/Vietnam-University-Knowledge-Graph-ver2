@@ -1,0 +1,28 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:duong-hoang-anh a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Dương Hoàng Anh"@en,
+        "Dương Hoàng Anh"@vi ;
+    owl:sameAs wd:Q108124159 ;
+    prov:wasDerivedFrom wd:Q108124159 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/D%C6%B0%C6%A1ng_Ho%C3%A0ng_Anh> ;
+    foaf:name "Dương Hoàng Anh" ;
+    vnedu:alumnusOf university:truong-dai-hoc-kien-truc-ha-noi ;
+    vnedu:birthDate "1980-09-03"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-kien-truc-ha-noi ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q33999,
+        wd:Q4610556 .
+

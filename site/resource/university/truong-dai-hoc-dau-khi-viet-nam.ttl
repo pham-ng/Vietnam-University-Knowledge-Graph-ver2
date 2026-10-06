@@ -1,0 +1,53 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-dau-khi-viet-nam a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "PetroVietnam University"@en,
+        "Trường Đại học Dầu khí Việt Nam"@vi ;
+    owl:sameAs wd:Q10829040,
+        <https://ror.org/03vwaan51> ;
+    geo:lat 10.493519 ;
+    geo:long 107.178424 ;
+    skos:prefLabel "Trường Đại học Dầu khí Việt Nam"@vi ;
+    prov:wasDerivedFrom wd:Q10829040,
+        <https://vi.wikipedia.org/w/index.php?oldid=75345610> ;
+    foaf:homepage <http://www.pvu.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_D%E1%BA%A7u_kh%C3%AD_Vi%E1%BB%87t_Nam> ;
+    vnedu:address "762 Cách Mạng Tháng Tám, phường Bà Rịa, Thành phố Hồ Chí Minh" ;
+    vnedu:foundingYear "2010"^^xsd:gYear ;
+    vnedu:hasLeader person:phan-minh-quoc-binh ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    vnedu:motto "Nhân tài cho phát triển"@vi ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:phan-minh-quoc-binh ;
+    vnedu:website <http://www.pvu.edu.vn/> ;
+    schema:employee person:phan-minh-quoc-binh ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+

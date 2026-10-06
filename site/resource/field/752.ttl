@@ -1,0 +1,16 @@
+@prefix field: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/field/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+field:752 a skos:Concept,
+        vnedu:FieldOfStudy ;
+    rdfs:label "Engineering"@en,
+        "Kỹ thuật"@vi ;
+    skos:closeMatch wd:Q11023 ;
+    skos:notation "752" ;
+    skos:prefLabel "Engineering"@en,
+        "Kỹ thuật"@vi ;
+    vnedu:code "752" .
+

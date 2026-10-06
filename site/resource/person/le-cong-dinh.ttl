@@ -1,0 +1,32 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:le-cong-dinh a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Lê Công Định"@en,
+        "Lê Công Định"@vi ;
+    owl:sameAs dbr:Le_Cong_Dinh,
+        wd:Q10787599 ;
+    prov:wasDerivedFrom wd:Q10787599 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/L%C3%AA_C%C3%B4ng_%C4%90%E1%BB%8Bnh>,
+        <https://vi.wikipedia.org/wiki/L%C3%AA_C%C3%B4ng_%C4%90%E1%BB%8Bnh> ;
+    foaf:name "Lê Công Định" ;
+    vnedu:alumnusOf university:dai-hoc-quoc-gia-thanh-pho-ho-chi-minh ;
+    vnedu:birthDate "1968-10-01"^^xsd:date ;
+    schema:alumniOf university:dai-hoc-quoc-gia-thanh-pho-ho-chi-minh ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q1476215,
+        wd:Q40348,
+        wd:Q82955 .
+

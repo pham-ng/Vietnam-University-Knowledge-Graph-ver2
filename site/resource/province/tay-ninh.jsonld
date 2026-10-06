@@ -1,0 +1,85 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/tay-ninh",
+  "@type": [
+    "vnedu:AdministrativeUnit",
+    "schema:AdministrativeArea",
+    "vnedu:Province"
+  ],
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://en.wikipedia.org/wiki/T%C3%A2y_Ninh_province"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/wiki/T%C3%A2y_Ninh"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "11.333333333"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "106.166666666"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "wd:Q36608"
+    },
+    {
+      "@id": "dbr:Tây_Ninh_province"
+    },
+    {
+      "@id": "https://sws.geonames.org/1566557/"
+    }
+  ],
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q36608"
+  },
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Tây Ninh"
+    },
+    {
+      "@language": "vi",
+      "@value": "Tây Ninh"
+    }
+  ],
+  "vnedu:area": {
+    "@type": "xsd:decimal",
+    "@value": "8536.0"
+  },
+  "vnedu:mergedFrom": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/long-an"
+  },
+  "vnedu:partOf": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    }
+  ],
+  "vnedu:population": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "2959000"
+  }
+}

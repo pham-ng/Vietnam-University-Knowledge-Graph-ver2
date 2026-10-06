@@ -1,0 +1,31 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:nguyen-thi-loan a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Thị Loan"@en,
+        "Nguyễn Thị Loan"@vi ;
+    owl:sameAs wd:Q124609143 ;
+    prov:wasDerivedFrom wd:Q124609143 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Nguy%E1%BB%85n_Th%E1%BB%8B_Loan>,
+        <https://vi.wikipedia.org/wiki/Nguy%E1%BB%85n_Th%E1%BB%8B_Loan_%28%C3%A1_h%E1%BA%ADu%29> ;
+    foaf:name "Nguyễn Thị Loan" ;
+    vnedu:alumnusOf university:truong-dai-hoc-thuong-mai ;
+    vnedu:birthDate "1990-07-24"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-thuong-mai ;
+    schema:gender wd:Q6581072 ;
+    schema:hasOccupation wd:Q12803959,
+        wd:Q2066131,
+        wd:Q33999,
+        wd:Q4610556 .
+

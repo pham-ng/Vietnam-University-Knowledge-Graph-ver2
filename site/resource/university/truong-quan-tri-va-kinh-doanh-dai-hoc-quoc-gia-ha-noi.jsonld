@@ -1,0 +1,125 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-quan-tri-va-kinh-doanh-dai-hoc-quoc-gia-ha-noi",
+  "@type": [
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:MemberInstitution",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization"
+  ],
+  "foaf:homepage": {
+    "@id": "https://www.hsb.edu.vn/"
+  },
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_Qu%E1%BA%A3n_tr%E1%BB%8B_v%C3%A0_Kinh_doanh%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i"
+  },
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "21.036807"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "105.785613"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "wd:Q10779338"
+    },
+    {
+      "@id": "https://ror.org/04w94d148"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75480938"
+    },
+    {
+      "@id": "wd:Q10779338"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Trường Quản trị và Kinh doanh, Đại học Quốc gia Hà Nội"
+    },
+    {
+      "@language": "en",
+      "@value": "VNU School of Business and Management"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-phi"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    }
+  ],
+  "schema:parentOrganization": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+  },
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Quản trị và Kinh doanh, Đại học Quốc gia Hà Nội"
+  },
+  "vnedu:address": "Nhà B1 - Số 144, đường Xuân Thủy, Quận Cầu Giấy",
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+  },
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-phi"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    }
+  ],
+  "vnedu:memberOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+  },
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Sáng tạo - Tiên phong - Chất lượng"
+  },
+  "vnedu:rector": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-phi"
+  },
+  "vnedu:shortName": "HSB",
+  "vnedu:website": {
+    "@id": "https://www.hsb.edu.vn/"
+  }
+}

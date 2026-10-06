@@ -1,0 +1,72 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-ha-noi a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "VNU University of Social Sciences and Humanities"@en,
+        "Trường Đại học Khoa học Xã hội và Nhân văn, Đại học Quốc gia Hà Nội"@vi ;
+    owl:sameAs dbr:VNU_University_of_Social_Sciences_and_Humanities,
+        wd:Q10829064,
+        <https://ror.org/011109p83> ;
+    geo:lat 20.993488 ;
+    geo:long 105.805671 ;
+    skos:prefLabel "Trường Đại học Khoa học Xã hội và Nhân văn, Đại học Quốc gia Hà Nội"@vi ;
+    prov:wasDerivedFrom wd:Q10829064,
+        <https://vi.wikipedia.org/w/index.php?oldid=75596839> ;
+    foaf:homepage <http://ussh.vnu.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/VNU_University_of_Social_Sciences_and_Humanities>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_X%C3%A3_h%E1%BB%99i_v%C3%A0_Nh%C3%A2n_v%C4%83n%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i> ;
+    vnedu:address "Số 336 Nguyễn Trãi, phường Thanh Xuân" ;
+    vnedu:formerName "Ban Đại học Văn khoa"@vi,
+        "Trường Đại học Tổng hợp Hà Nội"@vi,
+        "Trường Đại học Văn khoa"@vi ;
+    vnedu:foundingYear "1945"^^xsd:gYear ;
+    vnedu:hasAlumnus person:aaron-toronto,
+        person:amelia-pham,
+        person:anh-ngoc,
+        person:bui-hoai-son,
+        person:ha-le-diem,
+        person:hoang-thi-thuy-lan,
+        person:joseph-samuel-williams,
+        person:le-quoc-minh,
+        person:pham-thi-thanh-ha,
+        person:silas-thanh-son ;
+    vnedu:hasLeader person:hoang-anh-tuan ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:motto "Trân trọng quá khứ, nắm giữ tuơng lai"@vi ;
+    vnedu:numberOfPostgraduates "3392"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfStudents "13000"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfUndergraduates "9600"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:hoang-anh-tuan ;
+    vnedu:website <http://ussh.vnu.edu.vn> ;
+    schema:employee person:hoang-anh-tuan ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

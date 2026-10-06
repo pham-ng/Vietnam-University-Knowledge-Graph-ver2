@@ -1,0 +1,25 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+person:vuong-khanh-tran-linh a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Vương Khánh Trần Linh"@en,
+        "Vương Khánh Trần Linh"@vi ;
+    owl:sameAs wd:Q134547079 ;
+    prov:wasDerivedFrom wd:Q134547079 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/V%C6%B0%C6%A1ng_Kh%C3%A1nh_Tr%E1%BA%A7n_Linh> ;
+    foaf:name "Vương Khánh Trần Linh" ;
+    vnedu:alumnusOf university:truong-dai-hoc-san-khau-dien-anh-ha-noi ;
+    schema:alumniOf university:truong-dai-hoc-san-khau-dien-anh-ha-noi ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q222344 .
+

@@ -1,0 +1,125 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-si-quan-luc-quan-1-dai-hoc-tran-quoc-tuan",
+  "@type": [
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "vnedu:MilitaryInstitution",
+    "vnedu:OfficerSchool",
+    "schema:EducationalOrganization",
+    "vnedu:Organization",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization"
+  ],
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_S%C4%A9_quan_L%E1%BB%A5c_qu%C3%A2n_1_%E2%80%93_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Tr%E1%BA%A7n_Qu%E1%BB%91c_Tu%E1%BA%A5n"
+  },
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "21.041597"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "105.462682"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "https://ror.org/02afea422"
+    },
+    {
+      "@id": "wd:Q10829150"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75566435"
+    },
+    {
+      "@id": "wd:Q10829150"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Trường Sĩ quan Lục quân 1 – Đại học Trần Quốc Tuấn"
+    },
+    {
+      "@language": "en",
+      "@value": "Tran Quoc Tuan University"
+    }
+  ],
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Sĩ quan Lục quân 1 – Đại học Trần Quốc Tuấn"
+  },
+  "vnedu:address": "Đoài Phương, Hà Nội",
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1945"
+  },
+  "vnedu:governedBy": {
+    "@id": "vnedu:MinistryOfNationalDefence"
+  },
+  "vnedu:hasAlumnus": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-quang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dam-minh-dien"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-huu-bong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/yen-thao"
+    }
+  ],
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Trung với nước, hiếu với dân"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  }
+}

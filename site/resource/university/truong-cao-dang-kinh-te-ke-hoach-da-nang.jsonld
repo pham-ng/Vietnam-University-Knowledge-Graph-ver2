@@ -1,0 +1,94 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-kinh-te-ke-hoach-da-nang",
+  "@type": [
+    "foaf:Organization",
+    "schema:Organization",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "vnedu:Organization",
+    "vnedu:VocationalCollege",
+    "schema:EducationalOrganization"
+  ],
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_Cao_%C4%91%E1%BA%B3ng_Kinh_t%E1%BA%BF_%E2%80%93_K%E1%BA%BF_ho%E1%BA%A1ch_%C4%90%C3%A0_N%E1%BA%B5ng"
+  },
+  "owl:sameAs": {
+    "@id": "wd:Q61128899"
+  },
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "wd:Q61128899"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75561834"
+    }
+  ],
+  "rdfs:label": {
+    "@language": "vi",
+    "@value": "Trường Cao đẳng Kinh tế – Kế hoạch Đà Nẵng"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Cao đẳng Kinh tế – Kế hoạch Đà Nẵng"
+  },
+  "vnedu:academicStaff": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "133"
+  },
+  "vnedu:address": "143 Nguyễn Lương Bằng, Quận Liên Chiểu, TP Đà Nẵng",
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1976"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    }
+  ],
+  "vnedu:numberOfStudents": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "4000"
+  },
+  "vnedu:numberOfUndergraduates": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "450"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  }
+}

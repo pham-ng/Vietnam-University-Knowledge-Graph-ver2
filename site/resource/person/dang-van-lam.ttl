@@ -1,0 +1,35 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:dang-van-lam a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Đặng Văn Lẫm"@en,
+        "Đặng Văn Lẫm"@vi ;
+    owl:sameAs wd:Q116691801 ;
+    prov:wasDerivedFrom wd:Q116691801 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/%C4%90%E1%BA%B7ng_V%C4%83n_L%E1%BA%ABm> ;
+    foaf:name "Đặng Văn Lẫm" ;
+    vnedu:alumnusOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh,
+        university:hoc-vien-luc-quan,
+        university:hoc-vien-quoc-phong,
+        university:truong-dai-hoc-da-lat,
+        university:truong-si-quan-luc-quan-2-dai-hoc-nguyen-hue ;
+    vnedu:birthDate "1968-10-18"^^xsd:date ;
+    schema:alumniOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh,
+        university:hoc-vien-luc-quan,
+        university:hoc-vien-quoc-phong,
+        university:truong-dai-hoc-da-lat,
+        university:truong-si-quan-luc-quan-2-dai-hoc-nguyen-hue ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q1402561 .
+

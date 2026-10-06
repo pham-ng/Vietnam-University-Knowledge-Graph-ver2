@@ -1,0 +1,52 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-ky-thuat-y-te-hai-duong a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Hai Duong Medical Technical University"@en,
+        "Trường Đại học Kỹ thuật Y tế Hải Dương"@vi ;
+    owl:sameAs wd:Q10829084,
+        <https://ror.org/00gg7ff92> ;
+    skos:prefLabel "Trường Đại học Kỹ thuật Y tế Hải Dương"@vi ;
+    prov:wasDerivedFrom wd:Q10829084,
+        <https://vi.wikipedia.org/w/index.php?oldid=74669435> ;
+    foaf:homepage <https://hmtu.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_K%E1%BB%B9_thu%E1%BA%ADt_Y_t%E1%BA%BF_H%E1%BA%A3i_D%C6%B0%C6%A1ng> ;
+    vnedu:address "Số 1 Vũ Hựu, thành phố Hải Dương, tỉnh Hải Dương, Việt Nam" ;
+    vnedu:foundingYear "2007"^^xsd:gYear ;
+    vnedu:hasLeader person:pham-thi-cam-hung ;
+    vnedu:locatedIn country:viet-nam,
+        province:hai-duong,
+        province:hai-phong,
+        region:bac-bo ;
+    vnedu:motto "Đa cấp đa ngành, Hợp tác phát triển, Kỷ cương trách nhiệm, Thực hành chuyên nghiệp, Y đức - Lễ phép, Tư duy đổi mới, Học tập suốt đời và Dịch vụ chu đáo (Đ-H-K-T-Y-T-H-D)"@vi ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:pham-thi-cam-hung ;
+    vnedu:website <https://hmtu.edu.vn/> ;
+    schema:employee person:pham-thi-cam-hung ;
+    schema:location country:viet-nam,
+        province:hai-duong,
+        province:hai-phong,
+        region:bac-bo .
+

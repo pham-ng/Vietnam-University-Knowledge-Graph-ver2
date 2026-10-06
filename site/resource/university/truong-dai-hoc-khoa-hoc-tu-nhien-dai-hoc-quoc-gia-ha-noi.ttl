@@ -1,0 +1,124 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix program: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-ha-noi a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "VNU University of Science"@en,
+        "Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Hà Nội"@vi ;
+    owl:sameAs dbr:VNU_University_of_Science,
+        wd:Q5649339,
+        <https://ror.org/05w54hk79> ;
+    geo:lat 20.9959 ;
+    geo:long 105.808 ;
+    skos:prefLabel "Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Hà Nội"@vi ;
+    prov:wasDerivedFrom wd:Q5649339,
+        <https://vi.wikipedia.org/w/index.php?oldid=75564288> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/VNU_University_of_Science>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_T%E1%BB%B1_nhi%C3%AAn%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i> ;
+    vnedu:academicStaff "392"^^xsd:nonNegativeInteger ;
+    vnedu:address "334 Nguyễn Trãi, phường Thanh Xuân" ;
+    vnedu:formerName "Trường Đại học Tổng hợp Hà Nội"@vi ;
+    vnedu:foundingYear "1904"^^xsd:gYear ;
+    vnedu:hasAlumnus person:anh-duc-pham,
+        person:anh-huy-tuan-le,
+        person:anh-phuong-tran,
+        person:anh-tuan-nguyen,
+        person:bo-dao,
+        person:chamara-arachchighe-lahiru-weerasinghe,
+        person:diep-t-n-tran,
+        person:duc-trung-nguyen,
+        person:ha-hai-nguyen,
+        person:hai-dang-nguyen,
+        person:hoang-anh-le,
+        person:hoang-hai-bui,
+        person:hoi-b-dinh,
+        person:hong-hanh-nguyen,
+        person:hung-n-nguyen-2,
+        person:huyen-dinh,
+        person:khanh-hoang-nguyen,
+        person:lan-t-m-dao,
+        person:le-dac-nhuong,
+        person:le-t-t-phuong,
+        person:le-van-tan,
+        person:luan-luong-chu,
+        person:ly-thi-huong-nguyen,
+        person:minh-hai-nguyen,
+        person:minh-phuong-do,
+        person:minh-tan-man,
+        person:nguyen-huy-thuan,
+        person:nguyen-ngoc-thinh,
+        person:nguyen-tien-dat,
+        person:phu-pham,
+        person:phuongloan-nguyen,
+        person:son-hoang,
+        person:tan-phan-van,
+        person:thai-pham,
+        person:thang-n-dinh,
+        person:thi-hoang-ngan-le,
+        person:thinh-nguyen-thi,
+        person:thuy-p-nguyen-2,
+        person:thuy-t-lai,
+        person:thuy-t-to,
+        person:thuy-thi-thanh-pham,
+        person:toan-t-nguyen,
+        person:tong-sy-tien,
+        person:trong-khoa-dao,
+        person:tu-t-truong,
+        person:tung-t-dang,
+        person:tuoc-cong-tran,
+        person:van-duy-nguyen,
+        person:van-hoang-nguyen,
+        person:van-manh-pham,
+        person:van-tuan-tran,
+        person:van-tuan-vu,
+        person:vu-hoai-nam,
+        person:yet-nguyen ;
+    vnedu:hasLeader person:le-thanh-son-2 ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:memberOf university:dai-hoc-quoc-gia-ha-noi ;
+    vnedu:offersProgram program:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-ha-noi-7420201,
+        program:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-ha-noi-7440102,
+        program:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-ha-noi-7440112,
+        program:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-ha-noi-7460101 ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:le-thanh-son-2 ;
+    vnedu:shortName "HUS",
+        "VNU-HUS" ;
+    vnedu:trainsMajor major:7420201,
+        major:7440102,
+        major:7440112,
+        major:7460101 ;
+    schema:employee person:le-thanh-son-2 ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    schema:parentOrganization university:dai-hoc-quoc-gia-ha-noi .
+

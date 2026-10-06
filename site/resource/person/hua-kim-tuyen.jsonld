@@ -1,0 +1,71 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hua-kim-tuyen",
+  "@type": [
+    "foaf:Person",
+    "schema:Person",
+    "vnedu:Person",
+    "vnedu:Alumnus"
+  ],
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%A9a_Kim_Tuy%E1%BB%81n"
+  },
+  "foaf:name": "Hứa Kim Tuyền",
+  "owl:sameAs": {
+    "@id": "wd:Q109429593"
+  },
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q109429593"
+  },
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Hứa Kim Tuyền"
+    },
+    {
+      "@language": "vi",
+      "@value": "Hứa Kim Tuyền"
+    }
+  ],
+  "schema:alumniOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-lang"
+  },
+  "schema:gender": {
+    "@id": "wd:Q6581097"
+  },
+  "schema:hasOccupation": [
+    {
+      "@id": "wd:Q183945"
+    },
+    {
+      "@id": "wd:Q177220"
+    },
+    {
+      "@id": "wd:Q753110"
+    }
+  ],
+  "vnedu:alumnusOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-lang"
+  },
+  "vnedu:birthDate": {
+    "@type": "xsd:date",
+    "@value": "1995-01-08"
+  }
+}

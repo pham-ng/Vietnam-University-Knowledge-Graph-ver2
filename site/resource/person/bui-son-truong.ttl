@@ -1,0 +1,30 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:bui-son-truong a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Son Truong Bui"@en,
+        "Bùi Sơn Trường"@vi ;
+    owl:sameAs wd:Q124958087 ;
+    prov:wasDerivedFrom wd:Q124958087 ;
+    foaf:name "Bùi Sơn Trường" ;
+    vnedu:alumnusOf university:hoc-vien-tu-phap,
+        university:truong-dai-hoc-cong-nghe-thanh-pho-ho-chi-minh ;
+    vnedu:birthDate "2000-07-07"^^xsd:date ;
+    schema:alumniOf university:hoc-vien-tu-phap,
+        university:truong-dai-hoc-cong-nghe-thanh-pho-ho-chi-minh ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q131524,
+        wd:Q40348,
+        wd:Q484876 .
+

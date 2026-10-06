@@ -1,0 +1,46 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-tai-chinh-ke-toan a dbo:University,
+        foaf:Organization,
+        vnedu:DefunctInstitution,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Trường Đại học Tài chính - Kế toán"@vi ;
+    owl:sameAs wd:Q118446437 ;
+    skos:prefLabel "Trường Đại học Tài chính - Kế toán"@vi ;
+    prov:wasDerivedFrom wd:Q118446437,
+        <https://vi.wikipedia.org/w/index.php?oldid=74506049> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_T%C3%A0i_ch%C3%ADnh_-_K%E1%BA%BF_to%C3%A1n_%28H%C3%A0_N%E1%BB%99i%29> ;
+    vnedu:dissolutionYear "2001"^^xsd:gYear ;
+    vnedu:foundingYear "1976"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-tai-chinh ;
+    vnedu:hasAlumnus person:tran-sy-thanh ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

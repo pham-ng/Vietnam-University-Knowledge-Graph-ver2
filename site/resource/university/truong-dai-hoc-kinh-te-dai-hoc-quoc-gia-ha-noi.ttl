@@ -1,0 +1,59 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-kinh-te-dai-hoc-quoc-gia-ha-noi a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "VNU University of Economics and Business"@en,
+        "Trường Đại học Kinh tế, Đại học Quốc gia Hà Nội"@vi ;
+    owl:sameAs <http://dbpedia.org/resource/College_of_Economics,_Vietnam_National_University>,
+        wd:Q5146680,
+        <https://ror.org/00wdqh079> ;
+    skos:notation "QHE" ;
+    skos:prefLabel "Trường Đại học Kinh tế, Đại học Quốc gia Hà Nội"@vi ;
+    prov:wasDerivedFrom wd:Q5146680,
+        <https://vi.wikipedia.org/w/index.php?oldid=75592643> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/VNU_University_of_Economics_and_Business>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i> ;
+    vnedu:academicStaff "300"^^xsd:nonNegativeInteger ;
+    vnedu:address "Nhà E4, số 144 đường Xuân Thủy, phường Cầu Giấy" ;
+    vnedu:admissionCode "QHE" ;
+    vnedu:foundingYear "1974"^^xsd:gYear ;
+    vnedu:hasLeader person:nguyen-truc-le ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:memberOf university:dai-hoc-quoc-gia-ha-noi ;
+    vnedu:motto "Đường đến Thành công The Road to Success"@vi ;
+    vnedu:numberOfPostgraduates "1500"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfUndergraduates "12000"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:nguyen-truc-le ;
+    vnedu:shortName "VNU - UEB" ;
+    schema:employee person:nguyen-truc-le ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    schema:parentOrganization university:dai-hoc-quoc-gia-ha-noi .
+

@@ -1,0 +1,103 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix program: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:dai-hoc-kinh-te-quoc-dan a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:University,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "National Economics University"@en,
+        "Đại học Kinh tế Quốc dân"@vi ;
+    owl:sameAs dbr:National_Economics_University,
+        wd:Q6972380,
+        <https://ror.org/021xbwv17> ;
+    geo:lat 20.999722 ;
+    geo:long 105.844814 ;
+    skos:notation "KHA" ;
+    skos:prefLabel "Đại học Kinh tế Quốc dân"@vi ;
+    prov:wasDerivedFrom wd:Q6972380,
+        <https://vi.wikipedia.org/w/index.php?oldid=75520429> ;
+    foaf:homepage <http://www.en.neu.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/National_Economics_University>,
+        <https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_Qu%E1%BB%91c_d%C3%A2n> ;
+    vnedu:academicStaff "1086"^^xsd:nonNegativeInteger ;
+    vnedu:address "207 đường Giải Phóng, phường Bạch Mai" ;
+    vnedu:admissionCode "KHA" ;
+    vnedu:director person:bui-duc-tho ;
+    vnedu:formerName "Trường Kinh tế Tài chính"@vi,
+        "Trường Đại học Kinh tế - Kế hoạch"@vi,
+        "Trường Đại học Kinh tế Quốc dân"@vi ;
+    vnedu:foundingYear "1956"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
+    vnedu:hasAlumnus person:bui-nhat-quang,
+        person:bui-phuong-nga,
+        person:do-ngoc-minh,
+        person:doan-anh-dung,
+        person:ha-duc-chu,
+        person:hoa-nguyen-2,
+        person:lo-van-phuong,
+        person:nguyen-hai-nam,
+        person:nguyen-manh-hung,
+        person:nguyen-xuan-phuc,
+        person:nhue-van-dam,
+        person:pham-anh-tuan,
+        person:pham-duc-an,
+        person:pham-van-thinh,
+        person:ta-dinh-thi,
+        person:thai-quynh-mai-dung,
+        person:thong-khon,
+        person:tran-dinh-long,
+        person:trid-minh,
+        person:truong-quoc-huy ;
+    vnedu:hasLeader person:bui-duc-tho ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:motto "Đổi mới, hội nhập, phát triển"@vi ;
+    vnedu:numberOfStudents "40000"^^xsd:nonNegativeInteger ;
+    vnedu:offersProgram program:dai-hoc-kinh-te-quoc-dan-7310101,
+        program:dai-hoc-kinh-te-quoc-dan-7340101,
+        program:dai-hoc-kinh-te-quoc-dan-7340115,
+        program:dai-hoc-kinh-te-quoc-dan-7340201,
+        program:dai-hoc-kinh-te-quoc-dan-7340301,
+        program:dai-hoc-kinh-te-quoc-dan-7480201,
+        program:dai-hoc-kinh-te-quoc-dan-7510605 ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:shortName "NEU",
+        "ĐHKTQD" ;
+    vnedu:trainsMajor major:7310101,
+        major:7340101,
+        major:7340115,
+        major:7340201,
+        major:7340301,
+        major:7480201,
+        major:7510605 ;
+    vnedu:website <http://www.en.neu.edu.vn/> ;
+    schema:employee person:bui-duc-tho ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

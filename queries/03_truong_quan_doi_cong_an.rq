@@ -1,0 +1,18 @@
+# [Suy luận] Trường quân đội & công an — phân loại tự động bằng lớp định nghĩa (governedBy ∘ subordinateTo)
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?loai ?truong (GROUP_CONCAT(DISTINCT ?cq; separator=", ") AS ?co_quan_truc_tiep)
+WHERE {
+  VALUES (?c ?loai) { (vnedu:MilitaryInstitution "Quân đội") (vnedu:PoliceInstitution "Công an") }
+  ?u a ?c ; rdfs:label ?truong FILTER(LANG(?truong) = "vi")
+  OPTIONAL {
+    ?u vnedu:governedBy ?b . ?b rdfs:label ?l FILTER(LANG(?l) = "vi")
+    FILTER(?b NOT IN (vnedu:MinistryOfNationalDefence, vnedu:MinistryOfPublicSecurity))
+  }
+  BIND(COALESCE(?l, "—") AS ?cq)
+}
+GROUP BY ?loai ?truong ORDER BY ?loai ?truong

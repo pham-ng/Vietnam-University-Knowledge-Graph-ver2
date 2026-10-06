@@ -1,0 +1,59 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-van-hoa-nghe-thuat-quan-doi a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MilitaryInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Military University of Culture and Arts"@en,
+        "Trường Đại học Văn hóa – Nghệ thuật Quân đội"@vi ;
+    owl:sameAs wd:Q10829163 ;
+    geo:lat 21.018366 ;
+    geo:long 105.807098 ;
+    skos:prefLabel "Trường Đại học Văn hóa – Nghệ thuật Quân đội"@vi ;
+    prov:wasDerivedFrom wd:Q10829163,
+        <https://vi.wikipedia.org/w/index.php?oldid=75582098> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C4%83n_h%C3%B3a_%E2%80%93_Ngh%E1%BB%87_thu%E1%BA%ADt_Qu%C3%A2n_%C4%91%E1%BB%99i> ;
+    vnedu:address "số 101 đường Nguyễn Chí Thanh, phường Láng, Hà Nội" ;
+    vnedu:foundingYear "1955"^^xsd:gYear ;
+    vnedu:governedBy vnedu:MinistryOfNationalDefence,
+        organization:tong-cuc-chinh-tri ;
+    vnedu:hasAlumnus person:congb,
+        person:ha-pham-phu,
+        person:luong-thuy-linh,
+        person:minh-chuyen,
+        person:quan-a-p,
+        person:thai-thuy-linh,
+        person:tiep,
+        person:to-nga,
+        person:y-phon-ksor ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

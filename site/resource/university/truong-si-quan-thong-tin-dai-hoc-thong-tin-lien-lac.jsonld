@@ -1,0 +1,109 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-si-quan-thong-tin-dai-hoc-thong-tin-lien-lac",
+  "@type": [
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "vnedu:MilitaryInstitution",
+    "vnedu:OfficerSchool",
+    "vnedu:Organization",
+    "schema:EducationalOrganization"
+  ],
+  "foaf:homepage": {
+    "@id": "https://tcu.edu.vn/"
+  },
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_S%C4%A9_quan_Th%C3%B4ng_tin_%E2%80%93_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%B4ng_tin_Li%C3%AAn_l%E1%BA%A1c"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "https://ror.org/00a3esw81"
+    },
+    {
+      "@id": "wd:Q16480503"
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "wd:Q16480503"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75566443"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Trường Sĩ quan Thông tin – Đại học Thông tin Liên lạc"
+    },
+    {
+      "@language": "en",
+      "@value": "Telecommunications University"
+    }
+  ],
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Sĩ quan Thông tin – Đại học Thông tin Liên lạc"
+  },
+  "vnedu:address": "số 101 Mai Xuân Thưởng, Vĩnh Hòa, Nha Trang, Khánh Hòa, Việt Nam",
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1951"
+  },
+  "vnedu:governedBy": {
+    "@id": "vnedu:MinistryOfNationalDefence"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "CHỦ ĐỘNG SÁNG TẠO, ĐOÀN KẾT KỶ LUẬT, VƯỢT KHÓ VƯƠN LÊN LÀM CHỦ KỸ THUẬT, DẠY TỐT HỌC TỐT"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:website": {
+    "@id": "https://tcu.edu.vn/"
+  }
+}

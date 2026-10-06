@@ -1,0 +1,75 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-my-thuat-viet-nam a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Hanoi College of Fine Arts"@en,
+        "Trường Đại học Mỹ thuật Việt Nam"@vi ;
+    owl:sameAs dbr:Vietnam_University_of_Fine_Arts,
+        wd:Q3815307,
+        <https://ror.org/00pnmpx53> ;
+    geo:lat 21.022136 ;
+    geo:long 105.842789 ;
+    skos:prefLabel "Trường Đại học Mỹ thuật Việt Nam"@vi ;
+    prov:wasDerivedFrom wd:Q3815307,
+        <https://vi.wikipedia.org/w/index.php?oldid=75164823> ;
+    foaf:homepage <http://mythuatvietnam.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Vietnam_University_of_Fine_Arts>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%B9_thu%E1%BA%ADt_Vi%E1%BB%87t_Nam> ;
+    vnedu:foundingYear "1924"^^xsd:gYear ;
+    vnedu:hasAlumnus person:cat-tuong,
+        person:dang-thi-khue,
+        person:do-thi-ninh,
+        person:goerges-khanh,
+        person:hoang-dinh-tai,
+        person:hoang-thuy-linh,
+        person:huynh-van-gam,
+        person:jean-delpech,
+        person:le-duy-ung,
+        person:le-pho,
+        person:le-quoc-loc,
+        person:nguyen-cao-luyen,
+        person:nguyen-gia-tri,
+        person:nguyen-huu-bao,
+        person:nguyen-huu-tuan,
+        person:nguyen-phan-chanh,
+        person:nguyen-quy-vien,
+        person:nguyen-sang,
+        person:nguyen-thi-phuong-hoa,
+        person:pham-hau,
+        person:to-ngoc-van,
+        person:ton-duc-luong,
+        person:tran-van-can,
+        person:vuong-duy-bien ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:website <http://mythuatvietnam.edu.vn/> ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

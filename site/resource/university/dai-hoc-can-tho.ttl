@@ -1,0 +1,90 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:dai-hoc-can-tho a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:University,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Can Tho University"@en,
+        "Đại học Cần Thơ"@vi ;
+    owl:sameAs dbr:Can_Tho_University,
+        wd:Q5029090,
+        <https://ror.org/0071qz696> ;
+    geo:lat 10.0323 ;
+    geo:long 105.768 ;
+    skos:prefLabel "Đại học Cần Thơ"@vi ;
+    prov:wasDerivedFrom wd:Q5029090,
+        <https://vi.wikipedia.org/w/index.php?oldid=75566300> ;
+    foaf:homepage <https://www.ctu.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Can_Tho_University>,
+        <https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%E1%BA%A7n_Th%C6%A1> ;
+    vnedu:academicStaff "1104"^^xsd:nonNegativeInteger ;
+    vnedu:address "Khu 2, Đường 3/2, phường Ninh Kiều, Thành phố Cần Thơ, Việt Nam" ;
+    vnedu:director person:tran-ngoc-hai ;
+    vnedu:formerName "Viện Đại học Cần Thơ"@vi ;
+    vnedu:foundingYear "1966"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
+    vnedu:hasAlumnus person:buu-minh-tran,
+        person:cuong-t-nguyen,
+        person:d-p-le,
+        person:do-tan-khang,
+        person:duy-tien-ta,
+        person:ha-l-nguyen,
+        person:isaac,
+        person:le-pham-tan-quoc,
+        person:loc-nguyen,
+        person:men-nguyen-van,
+        person:nguyen-hieu-thao,
+        person:nguyen-xuan-thanh-le,
+        person:phan-nhu-nguyen,
+        person:phuoc-tung-trieu,
+        person:quang-nghia-pham,
+        person:song-toan-tran,
+        person:thai-son-dinh,
+        person:thanh-hai-nguyen,
+        person:thao-nguyen-trang,
+        person:thiet-nguyen,
+        person:tran-le-huu-nghia,
+        person:trung-nghia-vo,
+        person:uyen-nguyen,
+        person:van-linh-nguyen,
+        person:van-thao-huynh,
+        person:vu-h-nguyen,
+        person:yen-d-h-nguyen ;
+    vnedu:hasLeader person:tran-ngoc-hai ;
+    vnedu:locatedIn country:viet-nam,
+        province:can-tho,
+        region:nam-bo ;
+    vnedu:motto "Đồng thuận - Tận tâm - Chuẩn mực - Sáng tạo"@vi ;
+    vnedu:numberOfPostgraduates "2546"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfUndergraduates "33190"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:shortName "CTU" ;
+    vnedu:website <https://www.ctu.edu.vn> ;
+    schema:employee person:tran-ngoc-hai ;
+    schema:location country:viet-nam,
+        province:can-tho,
+        region:nam-bo .
+

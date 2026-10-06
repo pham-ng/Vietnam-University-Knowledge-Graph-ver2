@@ -1,0 +1,118 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-si-quan-tang-thiet-giap",
+  "@type": [
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "vnedu:MilitaryInstitution",
+    "vnedu:OfficerSchool",
+    "schema:EducationalOrganization",
+    "vnedu:Organization",
+    "foaf:Organization"
+  ],
+  "foaf:homepage": {
+    "@id": "http://siquantangthietgiap.vn"
+  },
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_S%C4%A9_quan_T%C4%83ng_%E2%80%93_Thi%E1%BA%BFt_gi%C3%A1p"
+  },
+  "owl:sameAs": {
+    "@id": "wd:Q10828883"
+  },
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "wd:Q10828883"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75607232"
+    }
+  ],
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Armored and Tank Officer School (Vietnam)"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Sĩ quan Tăng – Thiết giáp"
+    }
+  ],
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-phuc"
+    }
+  ],
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Sĩ quan Tăng – Thiết giáp"
+  },
+  "vnedu:address": "Tỉnh lộ + Km 06 đường Vĩnh Yên - Tam Đảo, Kim Long, Tam Dương, Vĩnh Phúc, Việt Nam",
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "1965"
+  },
+  "vnedu:governedBy": [
+    {
+      "@id": "vnedu:MinistryOfNationalDefence"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tu-lenh-tang-thiet-giap-cua-bo-quoc-phong"
+    }
+  ],
+  "vnedu:hasAlumnus": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-van-giang"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-phuc"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho"
+    }
+  ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "\"Đoàn kết, tự lực, sáng tạo, chủ động vượt khó, dạy tốt, chính quy, mẫu mực - Đã ra quân là đánh thắng\""
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:website": {
+    "@id": "http://siquantangthietgiap.vn"
+  }
+}

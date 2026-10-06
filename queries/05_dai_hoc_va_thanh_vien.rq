@@ -1,0 +1,14 @@
+# [Suy luận] Các cơ sở có đơn vị thành viên — hasMember là nghịch đảo được suy ra từ memberOf
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?co_so (COUNT(DISTINCT ?tv) AS ?so_thanh_vien) (GROUP_CONCAT(DISTINCT ?ten_tv; separator=" · ") AS ?thanh_vien)
+WHERE {
+  ?dh vnedu:hasMember ?tv ; rdfs:label ?co_so .
+  ?tv rdfs:label ?ten_tv .
+  FILTER(LANG(?co_so) = "vi" && LANG(?ten_tv) = "vi")
+}
+GROUP BY ?co_so ORDER BY DESC(?so_thanh_vien)

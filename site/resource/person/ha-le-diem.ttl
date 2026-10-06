@@ -1,0 +1,26 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+person:ha-le-diem a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Hà Lệ Diễm"@en,
+        "Hà Lệ Diễm"@vi ;
+    owl:sameAs wd:Q133894359 ;
+    prov:wasDerivedFrom wd:Q133894359 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/H%C3%A0_L%E1%BB%87_Di%E1%BB%85m> ;
+    foaf:name "Hà Lệ Diễm" ;
+    vnedu:alumnusOf university:truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-ha-noi ;
+    schema:alumniOf university:truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-ha-noi ;
+    schema:gender wd:Q6581072 ;
+    schema:hasOccupation wd:Q1235146,
+        wd:Q222344 .
+

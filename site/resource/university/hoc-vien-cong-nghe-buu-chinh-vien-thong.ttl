@@ -1,0 +1,68 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix program: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:hoc-vien-cong-nghe-buu-chinh-vien-thong a foaf:Organization,
+        vnedu:Academy,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Posts and Telecommunications Institute of Technology"@en,
+        "Học viện Công nghệ Bưu chính Viễn thông"@vi ;
+    owl:sameAs wd:Q10771881,
+        <https://ror.org/0363rtq22> ;
+    geo:lat 20.981 ;
+    geo:long 105.78708 ;
+    skos:prefLabel "Học viện Công nghệ Bưu chính Viễn thông"@vi ;
+    prov:wasDerivedFrom wd:Q10771881,
+        <https://vi.wikipedia.org/w/index.php?oldid=75517491> ;
+    foaf:homepage <http://www.ptit.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_C%C3%B4ng_ngh%E1%BB%87_B%C6%B0u_ch%C3%ADnh_Vi%E1%BB%85n_th%C3%B4ng> ;
+    vnedu:academicStaff "900"^^xsd:nonNegativeInteger ;
+    vnedu:address "Số 96A Trần Phú, phường Hà Đông" ;
+    vnedu:director person:dang-hoai-bac ;
+    vnedu:foundingYear "1953"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-khoa-hoc-va-cong-nghe ;
+    vnedu:hasAlumnus person:duong-fg,
+        person:lan-v-truong,
+        person:luong-hong-khanh,
+        person:vi-nguyen-thanh-le ;
+    vnedu:hasLeader person:dang-hoai-bac ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:numberOfStudents "29000"^^xsd:nonNegativeInteger ;
+    vnedu:offersProgram program:hoc-vien-cong-nghe-buu-chinh-vien-thong-7340115,
+        program:hoc-vien-cong-nghe-buu-chinh-vien-thong-7480201,
+        program:hoc-vien-cong-nghe-buu-chinh-vien-thong-7480202,
+        program:hoc-vien-cong-nghe-buu-chinh-vien-thong-7520207 ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:trainsMajor major:7340115,
+        major:7480201,
+        major:7480202,
+        major:7520207 ;
+    vnedu:website <http://www.ptit.edu.vn/> ;
+    schema:employee person:dang-hoai-bac ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

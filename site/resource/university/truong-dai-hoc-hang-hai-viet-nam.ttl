@@ -1,0 +1,62 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-hang-hai-viet-nam a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Vietnam Maritime University"@en,
+        "Trường Đại học Hàng hải Việt Nam"@vi ;
+    owl:sameAs dbr:Vietnam_Maritime_University,
+        wd:Q7928523,
+        <https://ror.org/03z9fzp04> ;
+    geo:lat 20.837335 ;
+    geo:long 106.695632 ;
+    skos:prefLabel "Trường Đại học Hàng hải Việt Nam"@vi ;
+    prov:wasDerivedFrom wd:Q7928523,
+        <https://vi.wikipedia.org/w/index.php?oldid=75526007> ;
+    foaf:homepage <http://vimaru.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Vietnam_Maritime_University>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam> ;
+    vnedu:address "484, Lạch Tray, Phường Lê Chân" ;
+    vnedu:foundingYear "1956"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-xay-dung ;
+    vnedu:hasAlumnus person:dang-thanh-tam,
+        person:mac-trung-kien,
+        person:nguyen-nhat,
+        person:xuan-quang-duong ;
+    vnedu:hasLeader person:pham-xuan-duong ;
+    vnedu:locatedIn country:viet-nam,
+        province:hai-phong,
+        region:bac-bo ;
+    vnedu:motto "trường đại học hàng hải Việt Nam tại thành phố Hải Phòng"@vi ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:pham-xuan-duong ;
+    vnedu:website <http://vimaru.edu.vn> ;
+    schema:employee person:pham-xuan-duong ;
+    schema:location country:viet-nam,
+        province:hai-phong,
+        region:bac-bo .
+

@@ -1,0 +1,166 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix program: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-y-ha-noi a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Hanoi Medical University"@en,
+        "Trường Đại học Y Hà Nội"@vi ;
+    owl:sameAs dbr:Hanoi_Medical_University,
+        wd:Q4383725,
+        <https://ror.org/01n2t3x97> ;
+    geo:lat 21.002778 ;
+    geo:long 105.831667 ;
+    skos:notation "YHB" ;
+    skos:prefLabel "Trường Đại học Y Hà Nội"@vi ;
+    prov:wasDerivedFrom wd:Q4383725,
+        <https://vi.wikipedia.org/w/index.php?oldid=75305973> ;
+    foaf:homepage <http://www.hmu.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Hanoi_Medical_University>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_H%C3%A0_N%E1%BB%99i> ;
+    vnedu:address "01 Tôn Thất Tùng, P. Kim Liên, Hà Nội" ;
+    vnedu:admissionCode "YHB" ;
+    vnedu:formerName "Ban Y Dược - Đại học Quốc gia Việt Nam"@vi,
+        "Trường Y Dược khoa Đông Dương"@vi,
+        "Trường Y Dược toàn cấp Đông Dương"@vi,
+        "Trường Y khoa Hà Nội"@vi,
+        "Trường Y khoa Đông Dương"@vi,
+        "Trường Đại học Y khoa Hà Nội"@vi ;
+    vnedu:foundingYear "1902"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-y-te ;
+    vnedu:hasAlumnus person:ba-hung-do,
+        person:bao-ngoc-vu,
+        person:bui-cam-nhung,
+        person:chinh-quoc-luong,
+        person:chung-truong-nguyen,
+        person:cong-luat-nguyen,
+        person:cu-huy-dao,
+        person:cuong-d-do,
+        person:diem-phung-thi,
+        person:dinh-thi-nguyen,
+        person:doan-nguyen,
+        person:dung-phung,
+        person:duong-duy-nguyen,
+        person:duong-ngoc-le-mai,
+        person:ha-ngoc-thi-doan,
+        person:ha-song-vu,
+        person:ha-van-mao,
+        person:hai-le-thanh-nguyen,
+        person:hai-thanh-pham,
+        person:hai-viet-nguyen-2,
+        person:hang-nga-mai,
+        person:hiep-nguyen-canh,
+        person:hoa-thanh-thi-tran,
+        person:hoang-tran,
+        person:hung-m-ngo,
+        person:huong-thi-thu-nguyen,
+        person:huong-thi-thu-nguyen-2,
+        person:le-dai-minh,
+        person:le-khac-quyen,
+        person:le-luong-dong,
+        person:le-minh-dat,
+        person:le-van-kham,
+        person:linh-bui,
+        person:long-b-hoang,
+        person:long-hoang-luong,
+        person:long-vo-hoang,
+        person:ly-thuy-nguyen,
+        person:mai-do,
+        person:mai-phuong-nguyen,
+        person:my-hanh-bui,
+        person:ngan-t-d-hoang,
+        person:nghiem-xuan-hoan,
+        person:ngoc-hoat-luu,
+        person:ngoc-thanh-kim,
+        person:nguyen-cong-hoang,
+        person:nguyen-h-tu,
+        person:nguyen-minh-duc,
+        person:nguyen-thanh-long,
+        person:nguyen-van-dinh,
+        person:nguyen-vu,
+        person:nguyen-xuan-thanh,
+        person:nhon-bui-van,
+        person:pham-ngoc-thach,
+        person:pham-van-toan,
+        person:phong-tran-nhu,
+        person:phung-lam-toi,
+        person:phung-tran,
+        person:phuong-nguyen,
+        person:quang-ngoc-dong,
+        person:quang-thai-pham,
+        person:sang-nguyen,
+        person:thi-hai-linh-ngo,
+        person:thi-hoa-nguyen,
+        person:thi-mai-nguyen,
+        person:thi-minh-tam-ta,
+        person:thi-minh-thi-ha,
+        person:thi-thanh-tinh-giap,
+        person:thi-thuy-van-nguyen,
+        person:tho-tran-thi-anh,
+        person:thu-thi-hoai-nguyen,
+        person:thuy-tc-le,
+        person:toan-khanh-tran,
+        person:toan-thanh-thi-do,
+        person:tran-quang-binh,
+        person:tran-thi-nhi-ha,
+        person:tran-v-ha,
+        person:trung-nguyen,
+        person:truong-viet-binh,
+        person:tuan-anh-le,
+        person:tuan-quang-nguyen,
+        person:tung-nguyen,
+        person:tung-t-hoang,
+        person:van-hai-hoang,
+        person:van-lan-hoang,
+        person:van-minh-hoang,
+        person:vu-h-luong,
+        person:vu-manh-ha,
+        person:vu-quoc-dat,
+        person:vu-toan-thinh,
+        person:vu-van-can ;
+    vnedu:hasLeader person:nguyen-huu-tu ;
+    vnedu:hasMember university:vien-dao-tao-y-hoc-du-phong-va-y-te-cong-cong ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:offersProgram program:truong-dai-hoc-y-ha-noi-7720101,
+        program:truong-dai-hoc-y-ha-noi-7720301,
+        program:truong-dai-hoc-y-ha-noi-7720501 ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:nguyen-huu-tu ;
+    vnedu:shortName "HMU" ;
+    vnedu:trainsMajor major:7720101,
+        major:7720301,
+        major:7720501 ;
+    vnedu:website <http://www.hmu.edu.vn> ;
+    schema:employee person:nguyen-huu-tu ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    schema:subOrganization university:vien-dao-tao-y-hoc-du-phong-va-y-te-cong-cong .
+

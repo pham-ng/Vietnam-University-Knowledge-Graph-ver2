@@ -1,0 +1,59 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-bac-lieu a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Bac Lieu University"@en,
+        "Trường Đại học Bạc Liêu"@vi ;
+    owl:sameAs wd:Q10829021,
+        <https://ror.org/0447bxp64> ;
+    geo:lat 9.291609 ;
+    geo:long 105.712491 ;
+    skos:prefLabel "Trường Đại học Bạc Liêu"@vi ;
+    prov:wasDerivedFrom wd:Q10829021,
+        <https://vi.wikipedia.org/w/index.php?oldid=74669284> ;
+    foaf:homepage <https://blu.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_B%E1%BA%A1c_Li%C3%AAu> ;
+    vnedu:academicStaff "215"^^xsd:nonNegativeInteger ;
+    vnedu:address "178 Võ Thị Sáu, phường Bạc Liêu, tỉnh Cà Mau" ;
+    vnedu:foundingYear "2006"^^xsd:gYear ;
+    vnedu:governedBy organization:ubnd-tinh-ca-mau ;
+    vnedu:hasLeader person:tu-diep-cong-thanh ;
+    vnedu:locatedIn country:viet-nam,
+        province:bac-lieu,
+        province:ca-mau,
+        region:nam-bo ;
+    vnedu:numberOfStudents "3500"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:tu-diep-cong-thanh ;
+    vnedu:shortName "BLU" ;
+    vnedu:website <https://blu.edu.vn/> ;
+    schema:employee person:tu-diep-cong-thanh ;
+    schema:location country:viet-nam,
+        province:bac-lieu,
+        province:ca-mau,
+        region:nam-bo .
+

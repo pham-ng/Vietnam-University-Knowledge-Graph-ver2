@@ -1,0 +1,91 @@
+<!-- title: SPARQL trong trình duyệt · VN-Edu LOD -->
+<!-- desc: Chạy truy vấn SPARQL 1.1 trên toàn bộ dataset VN-Edu ngay trong trình duyệt (Oxigraph WebAssembly). -->
+<!--HEAD-->
+<style>
+  .slay { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 14px; }
+  @media (max-width: 900px) { .slay { grid-template-columns: 1fr; } }
+  .ex a { display: block; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; cursor: pointer; }
+  .ex .fed { color: var(--muted); }
+  textarea#q { width: 100%; min-height: 240px; font: 13px/1.5 var(--mono); resize: vertical; tab-size: 2; }
+  .run { display: flex; gap: 10px; align-items: center; margin: 10px 0; flex-wrap: wrap; }
+  #status { color: var(--ink-2); font-size: 13px; }
+  #out td { font-size: 13px; max-width: 420px; overflow-wrap: anywhere; }
+  #out td .lang { white-space: nowrap; }
+</style>
+<!--/HEAD-->
+<h1>SPARQL trong trình duyệt</h1>
+<p class="sub">Toàn bộ <a href="{{ROOT}}download/vnedu-all.ttl">dataset</a> (ontology + dữ liệu + liên kết + suy luận) được nạp vào
+  <a href="https://github.com/oxigraph/oxigraph">Oxigraph</a> chạy bằng WebAssembly — SPARQL 1.1 đầy đủ, không cần máy chủ.
+  Bản có SPARQL endpoint HTTP (Apache Jena Fuseki) chạy cục bộ theo hướng dẫn trong <a href="https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2">repo</a>.</p>
+<div class="slay">
+  <aside class="card ex"><h3>Truy vấn mẫu</h3><div id="ex"></div>
+    <p class="lang" style="margin:10px 0 0">Truy vấn <i>federated</i> (SERVICE tới Wikidata/DBpedia) cần chạy trên Fuseki; trong trình duyệt bị bỏ qua.</p></aside>
+  <div>
+    <textarea id="q" spellcheck="false" aria-label="Truy vấn SPARQL"></textarea>
+    <div class="run"><button class="btn" id="go" disabled>Chạy (Ctrl+Enter)</button><span id="status">Đang tải dataset…</span></div>
+    <div class="card table-wrap" id="out"></div>
+  </div>
+</div>
+<script type="module">
+import init, { Store } from "https://cdn.jsdelivr.net/npm/oxigraph@0.5.11/web.js";
+const $ = id => document.getElementById(id);
+const PREFIXES = `PREFIX vnedu: <{{BASE}}ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+`;
+const params = new URLSearchParams(location.search);
+const queries = await (await fetch("{{ROOT}}data/queries.json")).json();
+$("ex").innerHTML = queries.map((q, i) => `<a data-i="${i}" class="${q.text.includes("SERVICE") ? "fed" : ""}">${VN.esc(q.title)}</a>`).join("");
+$("ex").addEventListener("click", e => { if (e.target.dataset.i) { $("q").value = queries[e.target.dataset.i].text; run(); } });
+if (params.get("q")) $("q").value = params.get("q");
+else if (params.get("describe")) $("q").value = `${PREFIXES}SELECT ?p ?o WHERE {\n  <${params.get("describe")}> ?p ?o\n}`;
+else $("q").value = queries[1].text;
+
+const t0 = performance.now();
+await init();
+const store = new Store();
+const ttl = await (await fetch("{{ROOT}}download/vnedu-all.ttl")).text();
+store.load(ttl, { format: "text/turtle", base_iri: "{{BASE}}" });
+$("status").textContent = `Đã nạp ${store.size.toLocaleString("vi-VN")} triple trong ${((performance.now() - t0) / 1000).toFixed(1)} giây.`;
+$("go").disabled = false;
+$("go").addEventListener("click", run);
+$("q").addEventListener("keydown", e => { if ((e.ctrlKey || e.metaKey) && e.key === "Enter") run(); });
+if (params.get("q") || params.get("describe")) run();
+
+function cell(t) {
+  if (!t) return "";
+  if (t.termType === "NamedNode") {
+    const v = t.value, local = v.startsWith("{{BASE}}");
+    const href = local ? v.replace("{{BASE}}", "{{ROOT}}") : v;
+    const short = local ? v.slice("{{BASE}}".length) : v;
+    return `<a href="${VN.esc(href)}">${VN.esc(short)}</a>`;
+  }
+  if (t.termType === "Literal") return VN.esc(t.value) + (t.language ? ` <span class="lang">@${t.language}</span>` : "");
+  return VN.esc(t.value);
+}
+function run() {
+  const q = $("q").value;
+  if (/\bSERVICE\b/i.test(q)) { $("out").innerHTML = `<p class="lang" style="margin:0">Truy vấn có SERVICE (federated) cần chạy trên Fuseki: <code>py query.py ${VN.esc(queries.find(x => x.text === q)?.file ? "queries/" + queries.find(x => x.text === q).file : "…")}</code></p>`; return; }
+  const t = performance.now();
+  try {
+    const res = store.query(q, { use_default_graph_as_union: true });
+    const ms = (performance.now() - t).toFixed(0);
+    if (typeof res === "boolean") { $("out").innerHTML = `<b>${res}</b>`; }
+    else if (Array.isArray(res) && res.length && !(res[0] instanceof Map)) {
+      $("out").innerHTML = `<table><tr><th>subject</th><th>predicate</th><th>object</th></tr>${res.slice(0, 2000).map(qd =>
+        `<tr><td>${cell(qd.subject)}</td><td>${cell(qd.predicate)}</td><td>${cell(qd.object)}</td></tr>`).join("")}</table>`;
+    } else {
+      const vars = res.length ? [...res[0].keys()] : (q.match(/\?\w+/g) || []).map(v => v.slice(1)).filter((v, i, a) => a.indexOf(v) === i);
+      const allVars = [...new Set(res.flatMap(r => [...r.keys()]))];
+      const cols = allVars.length ? allVars : vars;
+      $("out").innerHTML = `<table><tr>${cols.map(v => `<th>${VN.esc(v)}</th>`).join("")}</tr>${res.slice(0, 2000).map(r =>
+        `<tr>${cols.map(v => `<td>${cell(r.get(v))}</td>`).join("")}</tr>`).join("")}</table>`;
+    }
+    $("status").textContent = `${Array.isArray(res) ? res.length.toLocaleString("vi-VN") + " kết quả" : ""} · ${ms} ms`;
+    const u = new URL(location); u.searchParams.set("q", q); u.searchParams.delete("describe"); history.replaceState(null, "", u);
+  } catch (e) {
+    $("out").innerHTML = `<p style="margin:0;color:var(--warn)">Lỗi: ${VN.esc(e.message || e)}</p>`;
+  }
+}
+</script>

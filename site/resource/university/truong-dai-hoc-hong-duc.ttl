@@ -1,0 +1,56 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-hong-duc a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Hong Duc University"@en,
+        "Trường Đại học Hồng Đức"@vi ;
+    owl:sameAs dbr:Hồng_Đức_University,
+        wd:Q10829017,
+        <https://ror.org/05dp8mg49> ;
+    skos:prefLabel "Trường Đại học Hồng Đức"@vi ;
+    prov:wasDerivedFrom wd:Q10829017,
+        <https://vi.wikipedia.org/w/index.php?oldid=75611739> ;
+    foaf:homepage <http://www.hdu.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/H%E1%BB%93ng_%C4%90%E1%BB%A9c_University>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_H%E1%BB%93ng_%C4%90%E1%BB%A9c> ;
+    vnedu:academicStaff "900"^^xsd:nonNegativeInteger ;
+    vnedu:address "Số 565 đường Quang Trung, phường Hạc Thành" ;
+    vnedu:foundingYear "1997"^^xsd:gYear ;
+    vnedu:hasAlumnus person:vu-tu ;
+    vnedu:hasLeader person:le-hoang-ba-huyen ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-hoa,
+        region:trung-bo ;
+    vnedu:motto "Hiền tài - Đổi mới sáng tạo - Trách nhiệm - Hội nhập"@vi ;
+    vnedu:numberOfStudents "9000"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:le-hoang-ba-huyen ;
+    vnedu:website <http://www.hdu.edu.vn/> ;
+    schema:employee person:le-hoang-ba-huyen ;
+    schema:location country:viet-nam,
+        province:thanh-hoa,
+        region:trung-bo .
+

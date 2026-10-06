@@ -1,0 +1,30 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:thuy-van a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Pham Hong Thuy Van (Beauty Queen Vietnam)"@en,
+        "Thúy Vân"@vi ;
+    owl:sameAs wd:Q49081380 ;
+    prov:wasDerivedFrom wd:Q49081380 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Th%C3%BAy_V%C3%A2n>,
+        <https://vi.wikipedia.org/wiki/Ph%E1%BA%A1m_H%E1%BB%93ng_Th%C3%BAy_V%C3%A2n> ;
+    foaf:name "Thúy Vân" ;
+    vnedu:alumnusOf university:truong-dai-hoc-quoc-te-rmit-viet-nam ;
+    vnedu:birthDate "1993-10-06"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-quoc-te-rmit-viet-nam ;
+    schema:gender wd:Q6581072 ;
+    schema:hasOccupation wd:Q177220,
+        wd:Q18581305,
+        wd:Q4610556 .
+

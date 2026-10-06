@@ -1,0 +1,15 @@
+# [Suy luận] Trường đào tạo ngành Công nghệ thông tin (trainsMajor = offersProgram ∘ ofMajor; chương trình là dữ liệu mẫu)
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?mien ?tinh ?truong
+WHERE {
+  ?u vnedu:trainsMajor ?n . ?n vnedu:code "7480201" .
+  ?u rdfs:label ?truong FILTER(LANG(?truong) = "vi")
+  OPTIONAL { ?u vnedu:locatedIn ?t . ?t a vnedu:Province ; rdfs:label ?tinh FILTER(LANG(?tinh) = "vi") }
+  OPTIONAL { ?u vnedu:locatedIn ?m . ?m a vnedu:Region ; rdfs:label ?mien FILTER(LANG(?mien) = "vi") }
+}
+ORDER BY ?mien ?truong

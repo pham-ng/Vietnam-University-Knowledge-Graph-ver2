@@ -1,0 +1,31 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:nguyen-thanh-nam a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Thành Nam"@en,
+        "Nguyễn Thành Nam"@vi ;
+    owl:sameAs wd:Q116959533 ;
+    prov:wasDerivedFrom wd:Q116959533 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Nguy%E1%BB%85n_Th%C3%A0nh_Nam_%28Ph%C3%BA_Th%E1%BB%8D%29> ;
+    foaf:name "Nguyễn Thành Nam" ;
+    vnedu:alumnusOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh,
+        university:hoc-vien-nong-nghiep-viet-nam,
+        university:truong-dai-hoc-tong-hop-ha-noi ;
+    vnedu:birthDate "1966-08-13"^^xsd:date ;
+    schema:alumniOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh,
+        university:hoc-vien-nong-nghiep-viet-nam,
+        university:truong-dai-hoc-tong-hop-ha-noi ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q49055891 .
+

@@ -1,0 +1,30 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:pham-thi-hong-yen a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Phạm Thị Hồng Yến"@en,
+        "Phạm Thị Hồng Yến"@vi ;
+    owl:sameAs wd:Q116872722 ;
+    prov:wasDerivedFrom wd:Q116872722 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Ph%E1%BA%A1m_Th%E1%BB%8B_H%E1%BB%93ng_Y%E1%BA%BFn> ;
+    foaf:name "Phạm Thị Hồng Yến" ;
+    vnedu:alumnusOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh,
+        university:truong-dai-hoc-ngoai-thuong ;
+    vnedu:birthDate "1975-08-07"^^xsd:date ;
+    schema:alumniOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh,
+        university:truong-dai-hoc-ngoai-thuong ;
+    schema:gender wd:Q6581072 ;
+    schema:hasOccupation wd:Q1569495,
+        wd:Q82955 .
+

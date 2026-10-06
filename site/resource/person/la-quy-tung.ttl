@@ -1,0 +1,26 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+person:la-quy-tung a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Lã Quý Tùng"@en,
+        "Lã Quý Tùng"@vi ;
+    owl:sameAs wd:Q134097000 ;
+    prov:wasDerivedFrom wd:Q134097000 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/L%C3%A3_Qu%C3%BD_T%C3%B9ng> ;
+    foaf:name "Lã Quý Tùng" ;
+    vnedu:alumnusOf university:truong-dai-hoc-my-thuat-thanh-pho-ho-chi-minh ;
+    schema:alumniOf university:truong-dai-hoc-my-thuat-thanh-pho-ho-chi-minh ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q1028181,
+        wd:Q2962070 .
+

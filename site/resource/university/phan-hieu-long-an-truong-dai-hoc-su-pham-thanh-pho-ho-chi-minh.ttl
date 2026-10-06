@@ -1,0 +1,32 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+university:phan-hieu-long-an-truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh a foaf:Organization,
+        vnedu:Branch,
+        vnedu:EducationalOrganization,
+        vnedu:Organization,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Phân hiệu Long An, Trường Đại học Sư phạm Thành phố Hồ Chí Minh"@vi ;
+    owl:sameAs wd:Q10828805 ;
+    skos:prefLabel "Phân hiệu Long An, Trường Đại học Sư phạm Thành phố Hồ Chí Minh"@vi ;
+    prov:wasDerivedFrom wd:Q10828805,
+        <https://vi.wikipedia.org/w/index.php?oldid=75102025> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Ph%C3%A2n_hi%E1%BB%87u_Long_An%2C_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+

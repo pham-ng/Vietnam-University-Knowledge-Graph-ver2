@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Truy vấn SPARQL · VN-Edu LOD{% endblock %}
+{% block head %}
+<link href="https://cdn.jsdelivr.net/npm/@zazuko/yasgui@4.6.2/build/yasgui.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@zazuko/yasgui@4.6.2/build/yasgui.min.js"></script>
+<style>
+  .layout { display: grid; grid-template-columns: 260px 1fr; gap: 18px; }
+  @media (max-width: 860px) { .layout { grid-template-columns: 1fr; } }
+  .examples a { display: block; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+  #yasgui { background: #fff; border-radius: 10px; overflow: hidden; color: #222; }
+  .yasgui .autocompleteWrapper { display: none !important; }
+</style>
+{% endblock %}
+{% block main %}
+<h1>Truy vấn SPARQL</h1>
+<p class="sub">Endpoint: <code id="ep"></code> · Ctrl+Enter để chạy</p>
+<div class="layout">
+  <aside class="card examples">
+    <strong>Truy vấn mẫu</strong>
+    {% for q in queries %}
+      <a href="#" data-file="{{ q.file }}">{{ q.title }}{% if q.federated %} <span class="pill ext">federated</span>{% endif %}</a>
+    {% endfor %}
+  </aside>
+  <div id="yasgui"></div>
+</div>
+<script>
+  const endpoint = location.origin + "/sparql";
+  document.getElementById("ep").textContent = endpoint;
+  const initial = {{ (initial or "") | tojson }};
+  const yasgui = new Yasgui(document.getElementById("yasgui"), {
+    requestConfig: { endpoint, method: "POST" },
+    copyEndpointOnNewTab: true,
+    persistenceId: null,
+    endpointCatalogueOptions: { getData: () => [{ endpoint }] },
+  });
+  const tab = yasgui.getTab();
+  if (initial) tab.setQuery(initial);
+  document.querySelectorAll("[data-file]").forEach(a => a.addEventListener("click", async e => {
+    e.preventDefault();
+    const text = await (await fetch("/queries/" + a.dataset.file)).text();
+    yasgui.getTab().setQuery(text);
+    yasgui.getTab().query();
+  }));
+</script>
+{% endblock %}

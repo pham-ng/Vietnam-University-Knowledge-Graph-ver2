@@ -1,0 +1,58 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-tai-nguyen-va-moi-truong-thanh-pho-ho-chi-minh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Ho Chi Minh University of Natural Resources and Environment"@en,
+        "Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh"@vi ;
+    owl:sameAs wd:Q10829153,
+        <https://ror.org/05hdqw609> ;
+    geo:lat 10.799246 ;
+    geo:long 106.661606 ;
+    skos:prefLabel "Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh"@vi ;
+    prov:wasDerivedFrom wd:Q10829153,
+        <https://vi.wikipedia.org/w/index.php?oldid=75449876> ;
+    foaf:homepage <http://www.hcmunre.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_T%C3%A0i_nguy%C3%AAn_v%C3%A0_M%C3%B4i_tr%C6%B0%E1%BB%9Dng_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> ;
+    vnedu:academicStaff "240"^^xsd:nonNegativeInteger ;
+    vnedu:address "236B Lê Văn Sỹ, phường Tân Sơn Hòa, Thành phố Hồ Chí Minh" ;
+    vnedu:foundingYear "1976"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-nong-nghiep-va-moi-truong ;
+    vnedu:hasLeader person:huynh-quyen ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    vnedu:motto "Sáng tạo - Chất lượng - Hiệu quả"@vi ;
+    vnedu:numberOfUndergraduates "7451"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:huynh-quyen ;
+    vnedu:shortName "HCMUNRE" ;
+    vnedu:website <http://www.hcmunre.edu.vn/> ;
+    schema:employee person:huynh-quyen ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+

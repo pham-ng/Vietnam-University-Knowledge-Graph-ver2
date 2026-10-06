@@ -1,0 +1,29 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+province:yen-bai a vnedu:AdministrativeUnit,
+        vnedu:FormerProvince,
+        schema:AdministrativeArea ;
+    rdfs:label "Yên Bái"@en,
+        "Yên Bái"@vi ;
+    owl:sameAs dbr:Yên_Bái_province,
+        wd:Q36349,
+        <https://sws.geonames.org/1559978/> ;
+    geo:lat 21.5 ;
+    geo:long 104.666666666 ;
+    prov:wasDerivedFrom wd:Q36349 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Y%C3%AAn_B%C3%A1i_province>,
+        <https://vi.wikipedia.org/wiki/Y%C3%AAn_B%C3%A1i_%28t%E1%BB%89nh%29> ;
+    vnedu:area 6892.67 ;
+    vnedu:mergedInto province:lao-cai ;
+    vnedu:population "847250"^^xsd:nonNegativeInteger .
+

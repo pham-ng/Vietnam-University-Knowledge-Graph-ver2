@@ -1,0 +1,26 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:do-ngoc-minh a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Đỗ Ngọc Minh"@en,
+        "Đỗ Ngọc Minh"@vi ;
+    owl:sameAs wd:Q10842142 ;
+    prov:wasDerivedFrom wd:Q10842142 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/%C4%90%E1%BB%97_Ng%E1%BB%8Dc_Minh> ;
+    foaf:name "Đỗ Ngọc Minh" ;
+    vnedu:alumnusOf university:dai-hoc-kinh-te-quoc-dan ;
+    vnedu:birthDate "1977-02-05"^^xsd:date ;
+    schema:alumniOf university:dai-hoc-kinh-te-quoc-dan ;
+    schema:gender wd:Q6581097 .
+

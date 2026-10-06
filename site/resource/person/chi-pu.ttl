@@ -1,0 +1,33 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:chi-pu a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Chi Pu"@en,
+        "Chi Pu"@vi ;
+    owl:sameAs dbr:Chi_Pu,
+        wd:Q27868221 ;
+    prov:wasDerivedFrom wd:Q27868221 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Chi_Pu>,
+        <https://vi.wikipedia.org/wiki/Chi_Pu> ;
+    foaf:name "Chi Pu" ;
+    vnedu:alumnusOf university:truong-dai-hoc-quoc-te-rmit-viet-nam ;
+    vnedu:birthDate "1993-06-14"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-quoc-te-rmit-viet-nam ;
+    schema:gender wd:Q6581072 ;
+    schema:hasOccupation wd:Q177220,
+        wd:Q33999,
+        wd:Q44508716,
+        wd:Q4610556 .
+

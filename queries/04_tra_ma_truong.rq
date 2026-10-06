@@ -1,0 +1,17 @@
+# Tra cứu theo mã trường tuyển sinh (VD: BKA, KHA, NTH, YHB, QHI)
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?ma ?truong ?so_huu ?tinh ?nam_tl ?web
+WHERE {
+  VALUES ?ma { "BKA" "KHA" "NTH" "NTS" "YHB" "QHI" }
+  ?u vnedu:admissionCode ?ma ; rdfs:label ?truong FILTER(LANG(?truong) = "vi")
+  OPTIONAL { ?u vnedu:ownership/rdfs:label ?so_huu FILTER(LANG(?so_huu) = "vi") }
+  OPTIONAL { ?u vnedu:locatedIn ?t . ?t a vnedu:Province ; rdfs:label ?tinh FILTER(LANG(?tinh) = "vi") }
+  OPTIONAL { ?u vnedu:foundingYear ?y BIND(STR(?y) AS ?nam_tl) }
+  OPTIONAL { ?u vnedu:website ?web }
+}
+ORDER BY ?ma

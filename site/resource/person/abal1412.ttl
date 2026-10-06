@@ -1,0 +1,26 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+person:abal1412 a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "ABAL1412"@en,
+        "ABAL1412"@vi ;
+    owl:sameAs wd:Q120002026 ;
+    prov:wasDerivedFrom wd:Q120002026 ;
+    foaf:name "ABAL1412" ;
+    vnedu:alumnusOf university:truong-dai-hoc-tai-chinh-marketing ;
+    schema:alumniOf university:truong-dai-hoc-tai-chinh-marketing ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q23038345,
+        wd:Q3922505,
+        wd:Q48282 .
+

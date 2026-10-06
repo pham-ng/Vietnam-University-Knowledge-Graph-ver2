@@ -1,0 +1,29 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+province:tien-giang a vnedu:AdministrativeUnit,
+        vnedu:FormerProvince,
+        schema:AdministrativeArea ;
+    rdfs:label "Tiền Giang"@en,
+        "Tiền Giang"@vi ;
+    owl:sameAs dbr:Tiền_Giang_province,
+        wd:Q36666,
+        <https://sws.geonames.org/1564676/> ;
+    geo:lat 10.416666666 ;
+    geo:long 106.166666666 ;
+    prov:wasDerivedFrom wd:Q36666 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ti%E1%BB%81n_Giang_province>,
+        <https://vi.wikipedia.org/wiki/Ti%E1%BB%81n_Giang> ;
+    vnedu:area 2556.36 ;
+    vnedu:mergedInto province:dong-thap ;
+    vnedu:population "1785240"^^xsd:nonNegativeInteger .
+

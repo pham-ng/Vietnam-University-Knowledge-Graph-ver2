@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+# Fuseki tải về bằng fuseki/run_fuseki.ps1 (≈58 MB)
+fuseki/apache-jena-fuseki-*/
+# Cache HTTP thô (≈30 MB) — tái tạo bằng run_all.ps1 -Fresh; ảnh chụp bronze (*.json + *.meta.json) vẫn được commit
+data/bronze/http_cache/
+.claude/

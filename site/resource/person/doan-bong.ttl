@@ -1,0 +1,24 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:doan-bong a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Đoàn Bổng"@vi ;
+    owl:sameAs wd:Q24956807 ;
+    prov:wasDerivedFrom wd:Q24956807 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/%C4%90o%C3%A0n_B%E1%BB%95ng> ;
+    foaf:name "Đoàn Bổng" ;
+    vnedu:alumnusOf university:hoc-vien-am-nhac-quoc-gia-viet-nam ;
+    vnedu:birthDate "1943-04-02"^^xsd:date ;
+    schema:alumniOf university:hoc-vien-am-nhac-quoc-gia-viet-nam .
+

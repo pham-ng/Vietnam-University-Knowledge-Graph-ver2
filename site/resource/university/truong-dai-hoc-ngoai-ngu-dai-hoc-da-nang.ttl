@@ -1,0 +1,52 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-ngoai-ngu-dai-hoc-da-nang a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "UDN University of Foreign Language Studies"@en,
+        "Trường Đại học Ngoại ngữ, Đại học Đà Nẵng"@vi ;
+    owl:sameAs wd:Q10829099 ;
+    skos:prefLabel "Trường Đại học Ngoại ngữ, Đại học Đà Nẵng"@vi ;
+    prov:wasDerivedFrom wd:Q10829099,
+        <https://vi.wikipedia.org/w/index.php?oldid=75456843> ;
+    foaf:homepage <http://www.ufl.udn.vn/> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngo%E1%BA%A1i_ng%E1%BB%AF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng> ;
+    vnedu:address "131 - Lương Nhữ Hộc, Quận Cẩm Lệ" ;
+    vnedu:foundingYear "2002"^^xsd:gYear ;
+    vnedu:hasAlumnus person:huynh-thi-thanh-thuy ;
+    vnedu:hasLeader person:nguyen-van-long ;
+    vnedu:locatedIn country:viet-nam,
+        province:da-nang,
+        region:trung-bo ;
+    vnedu:memberOf university:dai-hoc-da-nang ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:nguyen-van-long ;
+    vnedu:website <http://www.ufl.udn.vn/> ;
+    schema:employee person:nguyen-van-long ;
+    schema:location country:viet-nam,
+        province:da-nang,
+        region:trung-bo ;
+    schema:parentOrganization university:dai-hoc-da-nang .
+

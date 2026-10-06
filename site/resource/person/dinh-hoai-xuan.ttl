@@ -1,0 +1,26 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+person:dinh-hoai-xuan a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Đinh Hoài Xuân"@vi ;
+    owl:sameAs wd:Q98095226 ;
+    prov:wasDerivedFrom wd:Q98095226 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/%C4%90inh_Ho%C3%A0i_Xu%C3%A2n> ;
+    foaf:name "Đinh Hoài Xuân" ;
+    vnedu:alumnusOf university:hoc-vien-am-nhac-hue,
+        university:hoc-vien-am-nhac-quoc-gia-viet-nam ;
+    schema:alumniOf university:hoc-vien-am-nhac-hue,
+        university:hoc-vien-am-nhac-quoc-gia-viet-nam ;
+    schema:gender wd:Q6581072 ;
+    schema:hasOccupation wd:Q639669 .
+

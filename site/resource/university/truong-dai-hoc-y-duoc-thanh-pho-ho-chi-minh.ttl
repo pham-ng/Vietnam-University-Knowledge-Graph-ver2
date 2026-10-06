@@ -1,0 +1,127 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix program: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "University of Medicine and Pharmacy at Ho Chi Minh City"@en,
+        "Trường Đại học Y Dược Thành phố Hồ Chí Minh"@vi ;
+    owl:sameAs dbr:Ho_Chi_Minh_City_Medicine_and_Pharmacy_University,
+        wd:Q986462,
+        <https://ror.org/025kb2624> ;
+    geo:lat 10.7556 ;
+    geo:long 106.663 ;
+    skos:prefLabel "Trường Đại học Y Dược Thành phố Hồ Chí Minh"@vi ;
+    prov:wasDerivedFrom wd:Q986462,
+        <https://vi.wikipedia.org/w/index.php?oldid=75539355> ;
+    foaf:homepage <http://yds.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Medicine_and_Pharmacy>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> ;
+    vnedu:address "217 Hồng Bàng, phường Chợ Lớn" ;
+    vnedu:foundingYear "1947"^^xsd:gYear ;
+    vnedu:hasAlumnus person:chi-huu-nguyen,
+        person:chi-thanh-ma,
+        person:dao-ngoc-hien-tam,
+        person:dao-thanh-tu,
+        person:dieu-t-x-nguyen,
+        person:dieu-thuong-thi-trinh,
+        person:duy-le-pham,
+        person:giang-nhat-m,
+        person:hai-nguyen-duc,
+        person:hang-tran-thi-thu,
+        person:hieu-kim-huynh,
+        person:hoa-h-nguyen,
+        person:hung-thanh-nguyen,
+        person:huu-hoai-le,
+        person:huy-bang-nguyen,
+        person:huynh-giao,
+        person:khanh-v-doan,
+        person:kien-g-to,
+        person:lan-n-vuong,
+        person:le-huu-nhat-minh,
+        person:le-van-thanh,
+        person:long-quynh-khuong,
+        person:luu-ho-thanh-lam,
+        person:minh-dien-duong,
+        person:minh-tung-phung,
+        person:ngoc-chau-tran,
+        person:ngoc-t-b-tran,
+        person:ngoc-uyen-nhi-nguyen,
+        person:nguyen-hoang-tuan,
+        person:nguyen-thi-thuy-trang,
+        person:nguyen-tu-dang-le,
+        person:nguyen-tung-lam,
+        person:nguyen-van-tho,
+        person:pham-le-an,
+        person:pham-minh-hai,
+        person:quang-duy-pham,
+        person:quoc-thai-nguyen,
+        person:quoc-thang-pham,
+        person:quynh-khoa-pham,
+        person:tan-van-nguyen,
+        person:thach-s-tran,
+        person:thang-dao-phuoc,
+        person:thang-nguyen,
+        person:thanh-hoa-vo,
+        person:thao-b-dang,
+        person:thi-ngoc-han-nguyen,
+        person:thi-thao-linh-nguyen,
+        person:thu-ngoc-yen-nguyen,
+        person:thuy-van-thao-nguyen,
+        person:toi-pham-van,
+        person:tran-anh-minh,
+        person:trang-t-h-tu,
+        person:tri-nguyen,
+        person:truc-thanh-thai,
+        person:trung-quang-vo,
+        person:truong-trong-tin,
+        person:tu-n-nguyen,
+        person:tung-d-x-tran,
+        person:van-an-duong,
+        person:van-hung-tran,
+        person:van-minh-tu-hoang,
+        person:vo-linh-tu ;
+    vnedu:hasLeader person:tran-diep-tuan ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    vnedu:offersProgram program:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh-7720101,
+        program:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh-7720201,
+        program:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh-7720301,
+        program:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh-7720501 ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:tran-diep-tuan ;
+    vnedu:trainsMajor major:7720101,
+        major:7720201,
+        major:7720301,
+        major:7720501 ;
+    vnedu:website <http://yds.edu.vn> ;
+    schema:employee person:tran-diep-tuan ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+

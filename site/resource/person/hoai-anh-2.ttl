@@ -1,0 +1,29 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:hoai-anh-2 a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Hoài Anh"@vi ;
+    owl:sameAs wd:Q125316313 ;
+    prov:wasDerivedFrom wd:Q125316313 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Ho%C3%A0i_Anh_%28bi%C3%AAn_%C4%91%E1%BA%A1o_m%C3%BAa%29> ;
+    foaf:name "Hoài Anh" ;
+    vnedu:alumnusOf university:hoc-vien-mua-viet-nam,
+        university:truong-dai-hoc-san-khau-dien-anh-ha-noi ;
+    vnedu:birthDate "1982-08-16"^^xsd:date ;
+    schema:alumniOf university:hoc-vien-mua-viet-nam,
+        university:truong-dai-hoc-san-khau-dien-anh-ha-noi ;
+    schema:gender wd:Q6581072 ;
+    schema:hasOccupation wd:Q2490358,
+        wd:Q5716684 .
+

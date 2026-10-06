@@ -1,0 +1,122 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-khoa-hoc-lien-nganh-va-nghe-thuat-dai-hoc-quoc-gia-ha-noi",
+  "@type": [
+    "schema:EducationalOrganization",
+    "vnedu:Organization",
+    "vnedu:MemberInstitution",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "schema:CollegeOrUniversity",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution"
+  ],
+  "foaf:homepage": {
+    "@id": "https://sis.vnu.edu.vn/"
+  },
+  "foaf:isPrimaryTopicOf": {
+    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i"
+  },
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "21.038431"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "105.781252"
+  },
+  "prov:wasDerivedFrom": {
+    "@id": "https://vi.wikipedia.org/w/index.php?oldid=75591557"
+  },
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Trường Khoa học liên ngành và Nghệ thuật, Đại học Quốc gia Hà Nội"
+    },
+    {
+      "@language": "en",
+      "@value": "VNU School of Interdisciplinary Sciences and Arts"
+    }
+  ],
+  "schema:employee": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hieu"
+  },
+  "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    }
+  ],
+  "schema:parentOrganization": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+  },
+  "skos:notation": "QHK",
+  "skos:prefLabel": {
+    "@language": "vi",
+    "@value": "Trường Khoa học liên ngành và Nghệ thuật, Đại học Quốc gia Hà Nội"
+  },
+  "vnedu:address": "G7, Đại học Quốc gia Hà Nội, 144 Xuân Thủy, Cầu Giấy",
+  "vnedu:admissionCode": "QHK",
+  "vnedu:formerName": {
+    "@language": "vi",
+    "@value": "Khoa các Khoa học liên ngành"
+  },
+  "vnedu:foundingYear": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+  },
+  "vnedu:hasLeader": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hieu"
+  },
+  "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    }
+  ],
+  "vnedu:memberOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+  },
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Kiến tạo tương lai bằng tri thức liên ngành"
+  },
+  "vnedu:ownership": {
+    "@id": "vnedu:PublicOwnership"
+  },
+  "vnedu:rector": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hieu"
+  },
+  "vnedu:shortName": "VNU-SIS",
+  "vnedu:website": {
+    "@id": "https://sis.vnu.edu.vn/"
+  }
+}

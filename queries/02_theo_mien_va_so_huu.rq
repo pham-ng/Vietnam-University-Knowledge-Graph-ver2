@@ -1,0 +1,15 @@
+# [Suy luận] Cơ sở GDĐH theo miền và loại hình sở hữu (miền suy ra qua chuỗi locatedIn ∘ partOf)
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?mien (COUNT(DISTINCT ?u) AS ?tong) (COUNT(DISTINCT ?cl) AS ?cong_lap) (COUNT(DISTINCT ?tt) AS ?tu_thuc)
+WHERE {
+  ?u a vnedu:HigherEducationInstitution ; vnedu:locatedIn ?m .
+  ?m a vnedu:Region ; rdfs:label ?mien FILTER(LANG(?mien) = "vi")
+  OPTIONAL { ?u a vnedu:PublicInstitution  BIND(?u AS ?cl) }
+  OPTIONAL { ?u a vnedu:PrivateInstitution BIND(?u AS ?tt) }
+}
+GROUP BY ?mien ORDER BY DESC(?tong)

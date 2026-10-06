@@ -1,0 +1,38 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-cao-dang-sai-gon a foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:Organization,
+        vnedu:VocationalCollege,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "SaigonTech"@en,
+        "Trường Cao đẳng Sài Gòn"@vi ;
+    owl:sameAs wd:Q137737155 ;
+    geo:lat 10.856049 ;
+    geo:long 106.629858 ;
+    skos:prefLabel "Trường Cao đẳng Sài Gòn"@vi ;
+    prov:wasDerivedFrom wd:Q137737155 ;
+    foaf:homepage <https://caodangsaigon.edu.vn> ;
+    vnedu:foundingYear "2001"^^xsd:gYear ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    vnedu:website <https://caodangsaigon.edu.vn> ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+

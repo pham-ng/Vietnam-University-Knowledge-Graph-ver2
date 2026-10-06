@@ -1,0 +1,29 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+province:kien-giang a vnedu:AdministrativeUnit,
+        vnedu:FormerProvince,
+        schema:AdministrativeArea ;
+    rdfs:label "Kiên Giang"@en,
+        "Kiên Giang"@vi ;
+    owl:sameAs dbr:Kiên_Giang_province,
+        wd:Q36576,
+        <https://sws.geonames.org/1579008/> ;
+    geo:lat 10.0 ;
+    geo:long 105.166666666 ;
+    prov:wasDerivedFrom wd:Q36576 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ki%C3%AAn_Giang_province>,
+        <https://vi.wikipedia.org/wiki/Ki%C3%AAn_Giang> ;
+    vnedu:area 6352.92 ;
+    vnedu:mergedInto province:an-giang ;
+    vnedu:population "1751760"^^xsd:nonNegativeInteger .
+

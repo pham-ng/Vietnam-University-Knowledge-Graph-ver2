@@ -1,0 +1,31 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:phan-thi-nguyet-thu a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Phan Thị Nguyệt Thu"@en,
+        "Phan Thị Nguyệt Thu"@vi ;
+    owl:sameAs wd:Q116909726 ;
+    prov:wasDerivedFrom wd:Q116909726 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Phan_Th%E1%BB%8B_Nguy%E1%BB%87t_Thu> ;
+    foaf:name "Phan Thị Nguyệt Thu" ;
+    vnedu:alumnusOf university:hoc-vien-canh-sat-nhan-dan,
+        university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh,
+        university:truong-dai-hoc-luat-dai-hoc-quoc-gia-ha-noi ;
+    vnedu:birthDate "1974-09-29"^^xsd:date ;
+    schema:alumniOf university:hoc-vien-canh-sat-nhan-dan,
+        university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh,
+        university:truong-dai-hoc-luat-dai-hoc-quoc-gia-ha-noi ;
+    schema:gender wd:Q6581072 ;
+    schema:hasOccupation wd:Q49055699 .
+

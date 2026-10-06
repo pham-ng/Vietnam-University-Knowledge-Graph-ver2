@@ -1,0 +1,101 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix program: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:hoc-vien-nong-nghiep-viet-nam a foaf:Organization,
+        vnedu:Academy,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "VNUA - Vietnam National University of Agriculture"@en,
+        "Học viện Nông nghiệp Việt Nam"@vi ;
+    owl:sameAs dbr:Vietnam_National_University_of_Agriculture,
+        wd:Q5649335,
+        <https://ror.org/01abaah21> ;
+    geo:lat 21.0046 ;
+    geo:long 105.938652 ;
+    skos:notation "HVN" ;
+    skos:prefLabel "Học viện Nông nghiệp Việt Nam"@vi ;
+    prov:wasDerivedFrom wd:Q5649335,
+        <https://vi.wikipedia.org/w/index.php?oldid=75086175> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Vietnam_National_University_of_Agriculture>,
+        <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_N%C3%B4ng_nghi%E1%BB%87p_Vi%E1%BB%87t_Nam> ;
+    vnedu:academicStaff "800"^^xsd:nonNegativeInteger ;
+    vnedu:address "Đường Ngô Xuân Quảng, xã Gia Lâm" ;
+    vnedu:admissionCode "HVN" ;
+    vnedu:director person:nguyen-thi-lan ;
+    vnedu:formerName "Trường Đại học Nông nghiệp I – Hà Nội"@vi ;
+    vnedu:foundingYear "1956"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-nong-nghiep-va-moi-truong ;
+    vnedu:hasAlumnus person:bang-nguyen-tran,
+        person:bui-tran-anh-dao,
+        person:don-v-nguyen,
+        person:duc-anh-truong,
+        person:ha-sy-huan,
+        person:hien-t-t-ngo,
+        person:hieu-huu-le,
+        person:hieu-nguyen-ba,
+        person:hoa-mai-nguyen,
+        person:hung-n-nguyen,
+        person:minh-ha-ngo,
+        person:ngan-thi-phan,
+        person:nguyen-ba-thanh,
+        person:nguyen-khac-than,
+        person:nguyen-n-bang,
+        person:nguyen-thanh-lam,
+        person:nguyen-thanh-nam,
+        person:nguyen-v-son,
+        person:nguyen-van-phong,
+        person:thi-hao-vu,
+        person:thi-thanh-thao-pham,
+        person:thi-xuan-nguyen,
+        person:tien-dat-pham,
+        person:tran-bac-le,
+        person:tran-manh-bao,
+        person:tran-van-tuy,
+        person:truong-dinh-hoai,
+        person:viet-linh-nguyen,
+        person:vu-quang-hoi,
+        person:xuan-dang-vu,
+        person:xuan-hoa-nguyen,
+        person:xuan-trach-nguyen ;
+    vnedu:hasLeader person:nguyen-thi-lan ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:motto "Đoàn kết (Solidarity) Đạo đức (Morality) Đi đầu (Advancement) Đáp ứng (Response) Đẳng cấp (Transcendence)"@vi ;
+    vnedu:numberOfPostgraduates "600"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfStudents "40000"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfUndergraduates "40000"^^xsd:nonNegativeInteger ;
+    vnedu:offersProgram program:hoc-vien-nong-nghiep-viet-nam-7340301,
+        program:hoc-vien-nong-nghiep-viet-nam-7420201,
+        program:hoc-vien-nong-nghiep-viet-nam-7620110 ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:trainsMajor major:7340301,
+        major:7420201,
+        major:7620110 ;
+    schema:employee person:nguyen-thi-lan ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

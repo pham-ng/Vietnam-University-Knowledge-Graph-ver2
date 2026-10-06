@@ -1,0 +1,37 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:jean-delpech a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Jean Delpech"@en,
+        "Jean Delpech"@vi ;
+    owl:sameAs dbr:Jean_Delpech,
+        wd:Q3171652 ;
+    prov:wasDerivedFrom wd:Q3171652 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Jean_Delpech> ;
+    foaf:name "Jean Delpech" ;
+    vnedu:alumnusOf university:truong-dai-hoc-my-thuat-viet-nam ;
+    vnedu:birthDate "1916-05-01"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-my-thuat-viet-nam ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q1028181,
+        wd:Q11569986,
+        wd:Q11613590,
+        wd:Q16947657,
+        wd:Q1708232,
+        wd:Q1925963,
+        wd:Q2000124,
+        wd:Q37226,
+        wd:Q644687 .
+

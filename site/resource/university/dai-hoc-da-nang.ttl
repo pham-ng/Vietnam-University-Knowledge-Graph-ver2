@@ -1,0 +1,80 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:dai-hoc-da-nang a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:RegionalUniversity,
+        vnedu:University,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "University of Da Nang"@en,
+        "Đại học Đà Nẵng"@vi ;
+    owl:sameAs dbr:University_of_Da_Nang,
+        wd:Q945839,
+        <https://ror.org/03ecpp171> ;
+    geo:lat 16.070939 ;
+    geo:long 108.219435 ;
+    skos:prefLabel "Đại học Đà Nẵng"@vi ;
+    prov:wasDerivedFrom wd:Q945839,
+        <https://vi.wikipedia.org/w/index.php?oldid=75610520> ;
+    foaf:homepage <http://www.udn.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/University_of_Da_Nang>,
+        <https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng> ;
+    vnedu:address "41 Lê Duẩn, phường Hải Châu" ;
+    vnedu:director person:nguyen-ngoc-vu ;
+    vnedu:foundingYear "1994"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
+    vnedu:hasAlumnus person:bui-van-ga,
+        person:dinh-son-tran,
+        person:nguyen-xuan-tien,
+        person:quang-x-le,
+        person:tran-tin-nghi,
+        person:van-duy-nguyen ;
+    vnedu:hasBranch university:phan-hieu-dai-hoc-da-nang-tai-kon-tum ;
+    vnedu:hasLeader person:nguyen-ngoc-vu ;
+    vnedu:hasMember university:truong-dai-hoc-bach-khoa-dai-hoc-da-nang,
+        university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang,
+        university:truong-dai-hoc-kinh-te-dai-hoc-da-nang,
+        university:truong-dai-hoc-ngoai-ngu-dai-hoc-da-nang,
+        university:truong-dai-hoc-su-pham-dai-hoc-da-nang,
+        university:truong-dai-hoc-su-pham-ky-thuat-dai-hoc-da-nang ;
+    vnedu:locatedIn country:viet-nam,
+        province:da-nang,
+        region:trung-bo ;
+    vnedu:motto "Nơi hun đúc trí tuệ và tài năng, vì sự phát triển của miền Trung - Tây Nguyên và cả nước"@vi ;
+    vnedu:numberOfStudents "60000"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:shortName "UDN" ;
+    vnedu:website <http://www.udn.vn/> ;
+    schema:employee person:nguyen-ngoc-vu ;
+    schema:location country:viet-nam,
+        province:da-nang,
+        region:trung-bo ;
+    schema:subOrganization university:truong-dai-hoc-bach-khoa-dai-hoc-da-nang,
+        university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang,
+        university:truong-dai-hoc-kinh-te-dai-hoc-da-nang,
+        university:truong-dai-hoc-ngoai-ngu-dai-hoc-da-nang,
+        university:truong-dai-hoc-su-pham-dai-hoc-da-nang,
+        university:truong-dai-hoc-su-pham-ky-thuat-dai-hoc-da-nang .
+

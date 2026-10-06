@@ -1,0 +1,131 @@
+{
+ "bronze": {
+  "data/bronze/dbp_years.json": {
+   "count": 72,
+   "generated_at": "2026-10-06T11:01:36",
+   "license": "CC BY-SA 3.0",
+   "sha256": "7a669856282ba9c2b4f21e06cf1a7887733631ecf3f8a49206bd7ff0d1956dc1",
+   "source": "https://dbpedia.org/sparql",
+   "unit": "records"
+  },
+  "data/bronze/viwiki_pages.json": {
+   "count": 279,
+   "generated_at": "2026-10-06T11:01:35",
+   "license": "CC BY-SA 4.0",
+   "sha256": "bdf7dd176216ff5e4cb2dcee6b18e3fc7c7afbf4dff079f5119cd8a478a7af81",
+   "source": "https://vi.wikipedia.org/w/api.php",
+   "unit": "records"
+  },
+  "data/bronze/wd_alumni.json": {
+   "count": 1531,
+   "generated_at": "2026-10-06T11:02:02",
+   "license": "CC0 1.0",
+   "sha256": "05c0781d29f82f890461d0603a0ed09100b53c2fe3d82aae0973846fdc81c59a",
+   "source": "https://query.wikidata.org/sparql",
+   "unit": "records"
+  },
+  "data/bronze/wd_entities.json": {
+   "count": 5,
+   "generated_at": "2026-10-06T11:01:36",
+   "license": "CC0 1.0",
+   "sha256": "e52e8701c307ab756356b7050b73cea875caf60ac6b02a8ce08715b9019c47b3",
+   "source": "https://query.wikidata.org/sparql",
+   "unit": "records"
+  },
+  "data/bronze/wd_institutions.json": {
+   "count": 363,
+   "generated_at": "2026-10-06T11:01:36",
+   "license": "CC0 1.0",
+   "sha256": "0bb7368d5b1d65bdcc6e59bc012ec12e4edb4c3b75c1619ceffec1ab216400ce",
+   "source": "https://query.wikidata.org/sparql",
+   "unit": "records"
+  },
+  "data/bronze/wd_provinces.json": {
+   "count": 63,
+   "generated_at": "2026-10-06T11:01:36",
+   "license": "CC0 1.0",
+   "sha256": "e27588d03d6080904b83234d043343bc43e03df1b0cbe1a08be80da062c60807",
+   "source": "https://query.wikidata.org/sparql",
+   "unit": "records"
+  }
+ },
+ "gold": {
+  "data/gold/vnedu-all.ttl": {
+   "consistent": true,
+   "count": 36750,
+   "generated_at": "2026-10-06T14:05:40",
+   "sha256": "555d18b750f585491055f679935c24cdada53ab085c585005b545ab383c8442b",
+   "shacl_conforms": true,
+   "shacl_results": {
+    "Info": 1,
+    "Warning": 36
+   },
+   "unit": "triples"
+  },
+  "data/gold/vnedu-data.ttl": {
+   "count": 17940,
+   "derived_from": "data/silver/*.json",
+   "generated_at": "2026-10-06T14:04:55",
+   "sha256": "5fe1bf47ca64fad56f518f212f116f78bd6e1fd1ab2c39696f79b574f555f95d",
+   "unit": "triples"
+  },
+  "data/gold/vnedu-inferred.ttl": {
+   "count": 14484,
+   "generated_at": "2026-10-06T14:05:27",
+   "reasoner": "owlrl OWL 2 RL",
+   "sha256": "51428252484d07389230f4269dc5577476ca682b359cf49934e64f3e508246c7",
+   "unit": "triples"
+  },
+  "data/gold/vnedu-links.ttl": {
+   "count": 3670,
+   "generated_at": "2026-10-06T14:04:57",
+   "linksets": {
+    "dbpedia|owl:sameAs": 258,
+    "dbpedia|skos:closeMatch": 37,
+    "geonames|owl:sameAs": 63,
+    "ror|owl:sameAs": 195,
+    "wikidata|owl:sameAs": 1878,
+    "wikidata|skos:closeMatch": 51,
+    "wikipedia|foaf:isPrimaryTopicOf": 1188
+   },
+   "sha256": "e313f8b31c6832f8be8e315591f347a80838524dcbe6b60a8892da044035e353",
+   "unit": "triples"
+  },
+  "data/gold/void.ttl": {
+   "count": 96,
+   "generated_at": "2026-10-06T14:04:57",
+   "sha256": "639e70eead3d780e4fc9bca2dc3f4713196a2056b8cb9c07d378be7885b30684",
+   "unit": "triples"
+  }
+ },
+ "silver": {
+  "data/silver/governing_bodies.json": {
+   "count": 47,
+   "generated_at": "2026-10-06T11:05:20",
+   "schema": "schemas/silver.schema.json",
+   "sha256": "ccffa0054580219f280e7dd2467856f64b2a0a1daaeffcaeabf97767acad0d5e",
+   "unit": "records"
+  },
+  "data/silver/institutions.json": {
+   "count": 300,
+   "generated_at": "2026-10-06T11:05:20",
+   "schema": "schemas/silver.schema.json",
+   "sha256": "ab01a17c40afcf09c725626c0d22fdb7fbca015515242e31c64e738c66df9068",
+   "unit": "records"
+  },
+  "data/silver/people.json": {
+   "count": 1668,
+   "generated_at": "2026-10-06T11:05:21",
+   "schema": "schemas/silver.schema.json",
+   "sha256": "e97912df19c1b3f5c64e5ace9345f4c7154415d1342e12ad991836cc275835ac",
+   "unit": "records"
+  },
+  "data/silver/provinces.json": {
+   "count": 63,
+   "generated_at": "2026-10-06T11:05:21",
+   "schema": "schemas/silver.schema.json",
+   "sha256": "a3275bbe296d39000f1a5270afc88757a423ca27eb0a1cc08c3244313ad3e2ea",
+   "unit": "records"
+  }
+ }
+}

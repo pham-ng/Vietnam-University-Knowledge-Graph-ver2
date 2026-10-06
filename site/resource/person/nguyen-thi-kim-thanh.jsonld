@@ -1,0 +1,77 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-kim-thanh",
+  "@type": [
+    "vnedu:Alumnus",
+    "foaf:Person",
+    "schema:Person",
+    "vnedu:Person"
+  ],
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://en.wikipedia.org/wiki/Nguyen_TK_Thanh"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/wiki/Nguy%E1%BB%85n_Th%E1%BB%8B_Kim_Thanh"
+    }
+  ],
+  "foaf:name": "Nguyễn Thị Kim Thanh",
+  "owl:sameAs": [
+    {
+      "@id": "wd:Q65658655"
+    },
+    {
+      "@id": "dbr:Nguyen_TK_Thanh"
+    }
+  ],
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q65658655"
+  },
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Nguyễn Thị Kim Thanh"
+    },
+    {
+      "@language": "en",
+      "@value": "Nguyen TK Thanh"
+    }
+  ],
+  "schema:alumniOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+  },
+  "schema:gender": {
+    "@id": "wd:Q6581072"
+  },
+  "schema:hasOccupation": [
+    {
+      "@id": "wd:Q2919046"
+    },
+    {
+      "@id": "wd:Q901"
+    },
+    {
+      "@id": "wd:Q1622272"
+    }
+  ],
+  "vnedu:alumnusOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+  }
+}

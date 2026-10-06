@@ -1,0 +1,73 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-da-lat a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Dalat University"@en,
+        "Trường Đại học Đà Lạt"@vi ;
+    owl:sameAs dbr:Dalat_University,
+        wd:Q3177493,
+        <https://ror.org/014cke235> ;
+    geo:lat 11.955639 ;
+    geo:long 108.442858 ;
+    skos:prefLabel "Trường Đại học Đà Lạt"@vi ;
+    prov:wasDerivedFrom wd:Q3177493,
+        <https://vi.wikipedia.org/w/index.php?oldid=75490315> ;
+    foaf:homepage <http://www.dlu.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Dalat_University>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_L%E1%BA%A1t> ;
+    vnedu:address "Số 1, Phù Đổng Thiên Vương, Phường Lâm Viên - Đà Lạt" ;
+    vnedu:formerName "Viện Đại học Đà Lạt"@vi ;
+    vnedu:foundingYear "1957"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
+    vnedu:hasAlumnus person:dang-van-lam,
+        person:hai-doan-nhu,
+        person:hoang-thi-binh,
+        person:huy-q-pham,
+        person:le-nguyen-quoc-khanh,
+        person:le-van-hieu-2,
+        person:nguyen-huu-toan-phan,
+        person:nguyen-van-ngoc,
+        person:phuong-t-n-hoang,
+        person:quang-trung-nguyen,
+        person:tai-thien-huynh,
+        person:thi-thanh-thao-pham,
+        person:tran-gia-loc,
+        person:tran-trinh-minh-son ;
+    vnedu:hasLeader person:mai-minh-nhat ;
+    vnedu:locatedIn country:viet-nam,
+        province:lam-dong,
+        region:trung-bo ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:mai-minh-nhat ;
+    vnedu:shortName "DLU" ;
+    vnedu:website <http://www.dlu.edu.vn/> ;
+    schema:employee person:mai-minh-nhat ;
+    schema:location country:viet-nam,
+        province:lam-dong,
+        region:trung-bo .
+

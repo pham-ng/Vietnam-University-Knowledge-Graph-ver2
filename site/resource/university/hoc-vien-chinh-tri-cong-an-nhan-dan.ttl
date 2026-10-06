@@ -1,0 +1,44 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:hoc-vien-chinh-tri-cong-an-nhan-dan a foaf:Organization,
+        vnedu:Academy,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PoliceInstitution,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Học viện Chính trị Công an nhân dân"@vi ;
+    owl:sameAs wd:Q122143828 ;
+    geo:lat 21.259716 ;
+    geo:long 105.850804 ;
+    skos:prefLabel "Học viện Chính trị Công an nhân dân"@vi ;
+    prov:wasDerivedFrom wd:Q122143828,
+        <https://vi.wikipedia.org/w/index.php?oldid=75563808> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Ch%C3%ADnh_tr%E1%BB%8B_C%C3%B4ng_an_nh%C3%A2n_d%C3%A2n_%28Vi%E1%BB%87t_Nam%29> ;
+    vnedu:address "Sóc Sơn, Hà Nội" ;
+    vnedu:foundingYear "1971"^^xsd:gYear ;
+    vnedu:governedBy vnedu:MinistryOfPublicSecurity ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

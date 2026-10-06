@@ -1,0 +1,23 @@
+# Chất lượng dữ liệu: tỉ lệ cơ sở GDĐH có từng thuộc tính
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?thuoc_tinh ?so_co_so ?tong ((ROUND(1000 * ?so_co_so / ?tong) / 10) AS ?phan_tram)
+WHERE {
+  { SELECT (COUNT(?x) AS ?tong) WHERE { ?x a vnedu:HigherEducationInstitution } }
+  {
+    SELECT ?thuoc_tinh (COUNT(DISTINCT ?u) AS ?so_co_so) WHERE {
+      VALUES (?p ?thuoc_tinh) {
+        (vnedu:foundingYear "năm thành lập") (vnedu:ownership "loại hình sở hữu") (vnedu:locatedIn "tỉnh/thành")
+        (vnedu:website "website") (vnedu:hasLeader "lãnh đạo") (vnedu:admissionCode "mã trường")
+        (owl:sameAs "liên kết ngoài") (<http://www.w3.org/2003/01/geo/wgs84_pos#lat> "toạ độ")
+        (vnedu:motto "khẩu hiệu") (vnedu:shortName "tên viết tắt")
+      }
+      ?u a vnedu:HigherEducationInstitution ; ?p ?o .
+    } GROUP BY ?thuoc_tinh
+  }
+}
+ORDER BY DESC(?so_co_so)

@@ -1,0 +1,29 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:le-duy-ung a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Le Duy Ung"@en,
+        "Lê Duy Ứng"@vi ;
+    owl:sameAs wd:Q30920784 ;
+    prov:wasDerivedFrom wd:Q30920784 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/L%C3%AA_Duy_%E1%BB%A8ng> ;
+    foaf:name "Lê Duy Ứng" ;
+    vnedu:alumnusOf university:truong-dai-hoc-my-thuat-viet-nam ;
+    vnedu:birthDate "1947-07-08"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-my-thuat-viet-nam ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q1028181,
+        wd:Q1281618,
+        wd:Q47064 .
+

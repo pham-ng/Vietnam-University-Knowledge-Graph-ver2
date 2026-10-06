@@ -1,0 +1,56 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "UDN Vietnam–Korea University of Information Technology and Communication Technology"@en,
+        "Trường Đại học Công nghệ Thông tin và Truyền thông Việt – Hàn, Đại học Đà Nẵng"@vi ;
+    owl:sameAs wd:Q16480474,
+        <https://ror.org/0561fmp23> ;
+    geo:lat 15.991771 ;
+    geo:long 108.257906 ;
+    skos:prefLabel "Trường Đại học Công nghệ Thông tin và Truyền thông Việt – Hàn, Đại học Đà Nẵng"@vi ;
+    prov:wasDerivedFrom wd:Q16480474,
+        <https://vi.wikipedia.org/w/index.php?oldid=75494607> ;
+    foaf:homepage <https://vku.udn.vn> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng_Vi%E1%BB%87t_%E2%80%93_H%C3%A0n%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng> ;
+    vnedu:address "470 Trần Đại Nghĩa, phường Ngũ Hành Sơn" ;
+    vnedu:foundingYear "2020"^^xsd:gYear ;
+    vnedu:hasLeader person:huynh-cong-phap ;
+    vnedu:locatedIn country:viet-nam,
+        province:da-nang,
+        region:trung-bo ;
+    vnedu:memberOf university:dai-hoc-da-nang ;
+    vnedu:motto "Nhân bản - Phụng sự - Khai phóng"@vi ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:huynh-cong-phap ;
+    vnedu:website <https://vku.udn.vn> ;
+    schema:employee person:huynh-cong-phap ;
+    schema:location country:viet-nam,
+        province:da-nang,
+        region:trung-bo ;
+    schema:parentOrganization university:dai-hoc-da-nang .
+

@@ -1,0 +1,73 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngo-dinh-diem",
+  "@type": [
+    "vnedu:Alumnus",
+    "foaf:Person",
+    "schema:Person",
+    "vnedu:Person"
+  ],
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://en.wikipedia.org/wiki/Ngo_Dinh_Diem"
+    },
+    {
+      "@id": "https://vi.wikipedia.org/wiki/Ng%C3%B4_%C4%90%C3%ACnh_Di%E1%BB%87m"
+    }
+  ],
+  "foaf:name": "Ngô Đình Diệm",
+  "owl:sameAs": [
+    {
+      "@id": "wd:Q192502"
+    },
+    {
+      "@id": "dbr:Ngo_Dinh_Diem"
+    }
+  ],
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q192502"
+  },
+  "rdfs:label": [
+    {
+      "@language": "vi",
+      "@value": "Ngô Đình Diệm"
+    },
+    {
+      "@language": "en",
+      "@value": "Ngô Đình Diệm"
+    }
+  ],
+  "schema:alumniOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-hau-bo"
+  },
+  "schema:gender": {
+    "@id": "wd:Q6581097"
+  },
+  "schema:hasOccupation": {
+    "@id": "wd:Q82955"
+  },
+  "vnedu:alumnusOf": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-hau-bo"
+  },
+  "vnedu:birthDate": {
+    "@type": "xsd:date",
+    "@value": "1901-01-03"
+  }
+}

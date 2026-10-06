@@ -1,0 +1,68 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-kien-truc-ha-noi a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Hanoi Architectural University"@en,
+        "Trường Đại học Kiến trúc Hà Nội"@vi ;
+    owl:sameAs dbr:Hanoi_Architectural_University,
+        wd:Q6131246,
+        <https://ror.org/03c8sfz84> ;
+    geo:lat 20.98067 ;
+    geo:long 105.78977 ;
+    skos:notation "KTA" ;
+    skos:prefLabel "Trường Đại học Kiến trúc Hà Nội"@vi ;
+    prov:wasDerivedFrom wd:Q6131246,
+        <https://vi.wikipedia.org/w/index.php?oldid=75147163> ;
+    foaf:homepage <http://hau.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Hanoi_Architectural_University>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ki%E1%BA%BFn_tr%C3%BAc_H%C3%A0_N%E1%BB%99i> ;
+    vnedu:academicStaff "507"^^xsd:nonNegativeInteger ;
+    vnedu:admissionCode "KTA" ;
+    vnedu:foundingYear "1969"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-xay-dung ;
+    vnedu:hasAlumnus person:dang-quoc-khanh,
+        person:do-duc-duy,
+        person:duong-hoang-anh,
+        person:nguyen-ha-nam,
+        person:pham-hong-ha,
+        person:pham-ngoc-lan,
+        person:tran-van-khai,
+        person:tran-viet-anh,
+        person:trinh-xuan-thanh ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:motto "Chất lượng cao - Sáng tạo - Tiên phong - Tích hợp - Trách nhiệm - Phát triển bền vững"@vi ;
+    vnedu:numberOfPostgraduates "227"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfUndergraduates "14281"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:website <http://hau.edu.vn/> ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

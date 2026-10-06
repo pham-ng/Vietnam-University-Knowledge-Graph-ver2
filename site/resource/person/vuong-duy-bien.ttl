@@ -1,0 +1,29 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:vuong-duy-bien a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Vương Duy Biên"@en,
+        "Vương Duy Biên"@vi ;
+    owl:sameAs wd:Q136461325 ;
+    prov:wasDerivedFrom wd:Q136461325 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/V%C6%B0%C6%A1ng_Duy_Bi%C3%AAn> ;
+    foaf:name "Vương Duy Biên" ;
+    vnedu:alumnusOf university:truong-dai-hoc-my-thuat-viet-nam ;
+    vnedu:birthDate "1958-08-22"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-my-thuat-viet-nam ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q1028181,
+        wd:Q1281618,
+        wd:Q82955 .
+

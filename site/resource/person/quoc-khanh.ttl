@@ -1,0 +1,30 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:quoc-khanh a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Quốc Khánh"@en,
+        "Quốc Khánh"@vi ;
+    owl:sameAs wd:Q137711574 ;
+    prov:wasDerivedFrom wd:Q137711574 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Qu%E1%BB%91c_Kh%C3%A1nh_%28bi%C3%AAn_t%E1%BA%ADp_vi%C3%AAn%29> ;
+    foaf:name "Quốc Khánh" ;
+    vnedu:alumnusOf university:truong-dai-hoc-ha-noi ;
+    vnedu:birthDate "1979-04-22"^^xsd:date ;
+    schema:alumniOf university:truong-dai-hoc-ha-noi ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q1930187,
+        wd:Q270389,
+        wd:Q2986228,
+        wd:Q947873 .
+

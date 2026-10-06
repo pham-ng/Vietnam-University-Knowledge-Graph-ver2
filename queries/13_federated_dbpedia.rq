@@ -1,0 +1,26 @@
+# TRUY VẤN LIÊN KẾT (federated): theo owl:sameAs sang DBpedia lấy ảnh, khẩu hiệu, số SV. Cần Internet.
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbo:   <http://dbpedia.org/ontology/>
+
+SELECT ?truong ?dbp ?anh ?khau_hieu ?so_sv_dbpedia
+WHERE {
+  {
+    SELECT ?dbp WHERE {
+      VALUES ?ma { "BKA" "KHA" "NTH" "YHB" }
+      ?u vnedu:admissionCode ?ma ; owl:sameAs ?dbp .
+      FILTER(STRSTARTS(STR(?dbp), "http://dbpedia.org/resource/"))
+    }
+  }
+  OPTIONAL { SERVICE <https://dbpedia.org/sparql> {
+    ?dbp rdfs:label ?ten_en FILTER(LANG(?ten_en) = "en")   # mẫu bắt buộc chứa ?dbp -> engine thay biến (bind join)
+    OPTIONAL { ?dbp dbo:thumbnail ?anh }
+    OPTIONAL { ?dbp dbo:motto ?khau_hieu }
+    OPTIONAL { ?dbp dbo:numberOfStudents ?so_sv_dbpedia }
+  } }
+  ?u owl:sameAs ?dbp ; rdfs:label ?truong .
+  FILTER(LANG(?truong) = "vi")
+}

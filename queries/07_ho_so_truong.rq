@@ -1,0 +1,16 @@
+# Hồ sơ đầy đủ của Đại học Bách khoa Hà Nội (mã BKA) — gồm thông tin suy luận và liên kết ra ngoài
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?thuoc_tinh (GROUP_CONCAT(DISTINCT ?v; separator=" | ") AS ?gia_tri)
+WHERE {
+  ?u vnedu:admissionCode "BKA" ; ?p ?o .
+  FILTER(?p NOT IN (vnedu:hasAlumnus, <https://schema.org/alumni>))
+  OPTIONAL { ?o rdfs:label ?ol FILTER(LANG(?ol) = "vi") }
+  BIND(COALESCE(?ol, STR(?o)) AS ?v)
+  BIND(REPLACE(STR(?p), "^.*[#/]", "") AS ?thuoc_tinh)
+}
+GROUP BY ?thuoc_tinh ORDER BY ?thuoc_tinh

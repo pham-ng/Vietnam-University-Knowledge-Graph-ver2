@@ -1,0 +1,72 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-mo-dia-chat a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Hanoi University of Mining and Geology"@en,
+        "Trường Đại học Mỏ – Địa chất"@vi ;
+    owl:sameAs dbr:Hanoi_University_of_Mining_and_Geology,
+        wd:Q10829093,
+        <https://ror.org/01rw3qm79> ;
+    geo:lat 21.0734 ;
+    geo:long 105.7738 ;
+    skos:prefLabel "Trường Đại học Mỏ – Địa chất"@vi ;
+    prov:wasDerivedFrom wd:Q10829093,
+        <https://vi.wikipedia.org/w/index.php?oldid=75598045> ;
+    foaf:homepage <http://humg.edu.vn/Pages/home.aspx> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Hanoi_University_of_Mining_and_Geology>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%8F_%E2%80%93_%C4%90%E1%BB%8Ba_ch%E1%BA%A5t> ;
+    vnedu:address "Số 18 phố Viên, phường Đông Ngạc" ;
+    vnedu:formerName "Khoa Mỏ – Địa chất, Trường Đại học Bách Khoa Hà Nội"@vi ;
+    vnedu:foundingYear "1966"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
+    vnedu:hasAlumnus person:cao-thang-dinh,
+        person:chim-se-di-nang,
+        person:nguyen-hai-dien-vien,
+        person:nguyen-tien-thanh-2,
+        person:pham-nhat-vuong,
+        person:phuong-thao-thi-ngo,
+        person:quang-khanh-nguyen,
+        person:tran-duc-luong,
+        person:viet-ha-nhu,
+        person:xuan-nam-bui,
+        person:xuan-nui-pham ;
+    vnedu:hasLeader person:tran-xuan-truong ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:motto "Đoàn kết - Liêm chính - Trách nhiệm - Sáng tạo - Chất lượng"@vi ;
+    vnedu:numberOfStudents "16000"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:tran-xuan-truong ;
+    vnedu:shortName "HUMG (MDC)" ;
+    vnedu:website <http://humg.edu.vn/Pages/home.aspx> ;
+    schema:employee person:tran-xuan-truong ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

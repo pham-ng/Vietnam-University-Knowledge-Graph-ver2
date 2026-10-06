@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Giới thiệu · VN-Edu LOD</title>
+<meta name="description" content="Kiến trúc dữ liệu, chiến lược URI (tái sử dụng &amp; owl:sameAs), cách truy cập máy-đọc-được và bằng chứng 5 sao.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/Vietnam-University-Knowledge-Graph-ver2/assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230f6e64'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'>VN</text></svg>">
+
+<style>
+  .prose { max-width: 860px; }
+  .prose p, .prose li { color: var(--ink); }
+  pre { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; overflow-x: auto; font: 13px/1.5 var(--mono); }
+  .flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 14px; }
+  .flow span { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 6px 10px; }
+  .flow b { color: var(--muted); font-weight: 400; }
+</style>
+
+<script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
+</head>
+<body>
+<header class="top"><div class="bar">
+  <a class="brand" href="/Vietnam-University-Knowledge-Graph-ver2/">VN-Edu <span>LOD</span></a>
+  <nav class="main">
+    <a href="/Vietnam-University-Knowledge-Graph-ver2/" class="">Tổng quan</a><a href="/Vietnam-University-Knowledge-Graph-ver2/map" class="">Bản đồ</a><a href="/Vietnam-University-Knowledge-Graph-ver2/explore" class="">Tra cứu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology" class="">Ontology</a><a href="/Vietnam-University-Knowledge-Graph-ver2/sparql" class="">SPARQL</a><a href="/Vietnam-University-Knowledge-Graph-ver2/dataset" class="">Dataset</a><a href="/Vietnam-University-Knowledge-Graph-ver2/about" class="on">Giới thiệu</a>
+  </nav>
+  <button class="theme-btn" type="button" aria-label="Đổi giao diện sáng/tối">◐ Giao diện</button>
+</div></header>
+<main class="">
+<div class="prose">
+<h1>Giới thiệu</h1>
+<p class="sub">VN-Edu LOD là đồ thị tri thức về giáo dục đại học Việt Nam, công bố theo các nguyên tắc Linked Data.</p>
+
+<h2>Kiến trúc dữ liệu (Medallion)</h2>
+<div class="flow"><span>Wikidata · Wikipedia · DBpedia · OSM · văn bản pháp lý</span><b>→</b><span>🟫 Bronze: ảnh chụp gốc + metadata</span><b>→</b>
+  <span>⬜ Silver: tích hợp, đối chiếu, <b>JSON Schema</b></span><b>→</b><span>🟨 Gold: RDF + liên kết + suy luận OWL 2 RL, <b>SHACL</b></span><b>→</b><span>Web này · Fuseki</span></div>
+<p>Mỗi giá trị đều truy được nguồn: <code>prov:wasDerivedFrom</code> trỏ tới item Wikidata và <b>bản sửa đổi cụ thể</b> của bài Wikipedia;
+  giá trị lấy từ nguồn dự phòng, mâu thuẫn giữa nguồn, thực thể bị loại đều có báo cáo trong
+  <a href="https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/tree/main/data/reports">data/reports</a>.</p>
+
+<h2>Tạo URI mới hay dùng lại URI đã có?</h2>
+<p><b>Dùng lại ở mọi chỗ có thể</b>, chỉ tạo mới cho thực thể mà dataset tự công bố dữ kiện — rồi khẳng định đồng nhất bằng <code>owl:sameAs</code>:</p>
+<ul>
+  <li><b>Từ vựng:</b> 72% số triple dùng thuộc tính chuẩn (<code>rdfs</code>, <code>schema</code>, <code>prov</code>, <code>foaf</code>, <code>geo</code>, <code>skos</code>); mọi lớp riêng đều <code>rdfs:subClassOf</code> lớp của schema.org / FOAF / DBpedia.</li>
+  <li><b>Giá trị:</b> nghề nghiệp và giới tính dùng thẳng URI Wikidata (217 URI, ví dụ <a href="http://www.wikidata.org/entity/Q82955">wd:Q82955</a> = chính khách) qua <code>schema:hasOccupation</code>, <code>schema:gender</code> — không tạo URI riêng vì ta không mô tả gì thêm về chúng.</li>
+  <li><b>Thực thể được mô tả</b> (300 cơ sở, 63 tỉnh, 1.668 người, 45 cơ quan…): có URI riêng vì (1) tra cứu URI phải trả về <i>dữ kiện của ta</i> — mã tuyển sinh, loại hình pháp lý, tỉnh sau sáp nhập 2025, kết quả suy luận — điều URI Wikidata không làm được; (2) không trộn nguồn gốc dữ kiện; (3) nhiều thực thể không có trên Wikidata (ngành theo TT 09/2022, quan hệ sáp nhập tỉnh, lãnh đạo từ infobox); (4) ta chịu trách nhiệm cho không gian tên của mình.</li>
+  <li><b>owl:sameAs:</b> 85% thực thể tự tạo trỏ về URI đã có — 1.878 Wikidata, 258 DBpedia, 195 ROR, 63 GeoNames — đều đã xác minh (quốc gia, nhãn, tính duy nhất). Item trùng trên Wikidata được <i>gộp</i> về một URI của ta kèm <code>owl:sameAs</code> tới cả hai. Ngành học dùng <code>skos:closeMatch</code> vì không đồng nhất hoàn toàn.</li>
+</ul>
+<p>Chi tiết & số liệu: <a href="https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/docs/uri-strategy.md">docs/uri-strategy.md</a>.</p>
+
+<h2>Truy cập bằng máy</h2>
+<p>Mỗi URI trả về trang HTML có nhúng <b>JSON-LD</b> (chuẩn JSON-LD 1.1); thêm đuôi <code>.ttl</code> / <code>.jsonld</code> để nhận RDF thuần:</p>
+<pre>curl https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi.ttl
+curl https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh.jsonld
+curl -O https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl          # dump đầy đủ (Turtle)
+curl -O https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-lod-rdf.zip      # mọi tệp RDF</pre>
+<pre># Python: đọc trực tiếp từ URI công khai
+from rdflib import Graph
+g = Graph().parse("https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi.ttl")
+for p, o in g.predicate_objects(): print(p, o)</pre>
+
+<h2>Bằng chứng 5 sao</h2>
+<table class="card">
+  <tr><th>Sao</th><th>Yêu cầu</th><th>Bằng chứng</th></tr>
+  <tr><td>★</td><td>Trên Web, giấy phép mở</td><td>Site này; <code>dct:license</code> CC BY-SA 4.0 trong <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a>; tệp LICENSE trong repo</td></tr>
+  <tr><td>★★</td><td>Có cấu trúc</td><td>RDF, JSON, CSV</td></tr>
+  <tr><td>★★★</td><td>Định dạng mở</td><td><a href="/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl">Turtle</a>, <a href="/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.nt">N-Triples</a>, JSON-LD</td></tr>
+  <tr><td>★★★★</td><td>Chuẩn W3C, URI tra cứu được</td><td>RDF, OWL 2 RL, SHACL, SPARQL 1.1, PROV-O, VoID, DCAT; 2.211 URI dưới <code>https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/</code> đều tra cứu được</td></tr>
+  <tr><td>★★★★★</td><td>Liên kết tới dataset khác</td><td>owl:sameAs / skos:closeMatch / foaf:isPrimaryTopicOf tới Wikidata, DBpedia, ROR, GeoNames, Wikipedia — mô tả bằng <code>void:Linkset</code></td></tr>
+</table>
+<p class="lang">Hạn chế đã biết và đánh giá trung thực: <a href="https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/docs/audit.md">docs/audit.md</a>.</p>
+</div>
+</main>
+<footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·
+<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · nguồn: Wikidata (CC0), Wikipedia tiếng Việt (CC BY-SA)
+· <a href="https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2">mã nguồn</a></footer>
+</body>
+</html>

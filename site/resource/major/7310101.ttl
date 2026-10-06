@@ -1,0 +1,21 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix field: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/field/> .
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+major:7310101 a skos:Concept,
+        vnedu:Major ;
+    rdfs:label "Economics"@en,
+        "Kinh tế"@vi ;
+    skos:broader field:731 ;
+    skos:closeMatch dbr:Economics,
+        wd:Q8134 ;
+    skos:notation "7310101" ;
+    skos:prefLabel "Economics"@en,
+        "Kinh tế"@vi ;
+    vnedu:code "7310101" ;
+    vnedu:inField field:731 .
+

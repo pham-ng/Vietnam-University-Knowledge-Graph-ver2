@@ -1,0 +1,21 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix field: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/field/> .
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+major:7520207 a skos:Concept,
+        vnedu:Major ;
+    rdfs:label "Telecommunications engineering"@en,
+        "Kỹ thuật điện tử - viễn thông"@vi ;
+    skos:broader field:752 ;
+    skos:closeMatch dbr:Telecommunications_engineering,
+        wd:Q1061219 ;
+    skos:notation "7520207" ;
+    skos:prefLabel "Telecommunications engineering"@en,
+        "Kỹ thuật điện tử - viễn thông"@vi ;
+    vnedu:code "7520207" ;
+    vnedu:inField field:752 .
+

@@ -1,0 +1,49 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-van-hoa-the-thao-va-du-lich-thanh-hoa a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Thanh Hoa University of Culture, Sports and Tourism"@en,
+        "Trường Đại học Văn hóa, Thể thao và Du lịch Thanh Hóa"@vi ;
+    owl:sameAs wd:Q10829162,
+        <https://ror.org/04k3bmm60> ;
+    skos:prefLabel "Trường Đại học Văn hóa, Thể thao và Du lịch Thanh Hóa"@vi ;
+    prov:wasDerivedFrom wd:Q10829162,
+        <https://vi.wikipedia.org/w/index.php?oldid=75452450> ;
+    foaf:homepage <https://tucst.edu.vn> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C4%83n_h%C3%B3a%2C_Th%E1%BB%83_thao_v%C3%A0_Du_l%E1%BB%8Bch_Thanh_H%C3%B3a> ;
+    vnedu:address "561 Quang Trung 3, phường Hạc Thành, tỉnh Thanh Hóa" ;
+    vnedu:foundingYear "1967"^^xsd:gYear ;
+    vnedu:hasLeader person:le-thanh-ha ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-hoa,
+        region:trung-bo ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:le-thanh-ha ;
+    vnedu:website <https://tucst.edu.vn> ;
+    schema:employee person:le-thanh-ha ;
+    schema:location country:viet-nam,
+        province:thanh-hoa,
+        region:trung-bo .
+

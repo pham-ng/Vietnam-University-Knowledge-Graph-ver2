@@ -1,0 +1,21 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+organization:bo-tai-nguyen-va-moi-truong a foaf:Organization,
+        vnedu:GoverningBody,
+        vnedu:Ministry,
+        vnedu:Organization,
+        schema:GovernmentOrganization,
+        schema:Organization ;
+    rdfs:label "Bộ Tài nguyên và Môi trường"@vi ;
+    owl:sameAs dbr:Ministry_of_Natural_Resources_and_Environment_\(Vietnam\),
+        wd:Q10743678 ;
+    vnedu:governs university:truong-dai-hoc-tai-nguyen-va-moi-truong-ha-noi .
+

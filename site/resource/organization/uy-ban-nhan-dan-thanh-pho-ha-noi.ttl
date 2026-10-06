@@ -1,0 +1,19 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+organization:uy-ban-nhan-dan-thanh-pho-ha-noi a foaf:Organization,
+        vnedu:GoverningBody,
+        vnedu:Organization,
+        vnedu:ProvincialPeoplesCommittee,
+        schema:GovernmentOrganization,
+        schema:Organization ;
+    rdfs:label "Ủy ban nhân dân thành phố Hà Nội"@vi ;
+    owl:sameAs wd:Q10843014 ;
+    vnedu:governs university:truong-dai-hoc-thu-do-ha-noi .
+

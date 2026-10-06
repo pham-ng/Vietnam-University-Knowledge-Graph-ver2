@@ -1,0 +1,163 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:dai-hoc-quoc-gia-ha-noi a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:NationalUniversity,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:University,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Vietnam National University, Hanoi"@en,
+        "Đại học Quốc gia Hà Nội"@vi ;
+    owl:sameAs <http://dbpedia.org/resource/Vietnam_National_University,_Hanoi>,
+        wd:Q1076729,
+        <https://ror.org/02jmfj006> ;
+    geo:lat 20.99177 ;
+    geo:long 105.7968 ;
+    skos:prefLabel "Đại học Quốc gia Hà Nội"@vi ;
+    prov:wasDerivedFrom wd:Q1076729,
+        <https://vi.wikipedia.org/w/index.php?oldid=75608895> ;
+    foaf:homepage <http://vnu.edu.vn/eng/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Vietnam_National_University%2C_Hanoi>,
+        <https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i> ;
+    vnedu:address "Số 144, đường Xuân Thủy, phường Cầu Giấy" ;
+    vnedu:director person:bui-the-duy ;
+    vnedu:foundingYear "1906"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
+    vnedu:hasAlumnus person:anderson-cooper,
+        person:anh-d-luong,
+        person:anh-nhat-tran,
+        person:anh-t-n-dao,
+        person:bui-quang-minh,
+        person:cam-chau-nguyen,
+        person:chien-dang,
+        person:cong-son-ho,
+        person:cuong-v-duong,
+        person:danh-bich-do,
+        person:dinh-ngoc-quy-2,
+        person:doan-pham-minh,
+        person:doan-trung-cuong,
+        person:duong-nguyen-nguyen-2,
+        person:ha-dinh-duc,
+        person:hanoi-hannah,
+        person:ho-viet-hieu,
+        person:hoa-q-do,
+        person:hoa-tri-phan,
+        person:hoang-trung-dung,
+        person:hoang-van-tong,
+        person:hong-ha-thi-vu,
+        person:hong-t-pham,
+        person:hung-ho-xuan,
+        person:hung-nguyen-van,
+        person:hung-v-trinh,
+        person:huu-duc-luong,
+        person:le-quang-binh,
+        person:le-tuan-anh-2,
+        person:linh-nguyen-kieu,
+        person:mai-thanh-nguyen,
+        person:mai-trong-nhuan,
+        person:minh-ngoc-nguyen,
+        person:minh-tan-man,
+        person:ngo-thi-thu-hien,
+        person:ngoc-hoan-le,
+        person:ngoc-tung-nguyen,
+        person:nguyen-huu-viet-hung,
+        person:nguyen-khac-than,
+        person:nguyen-manh-cuong,
+        person:nguyen-ngoc-minh,
+        person:nguyen-phu-trong,
+        person:nguyen-thai-hoa,
+        person:nguyen-thanh-cuong,
+        person:nguyen-thi-kim-thanh,
+        person:nguyen-tuan-phong,
+        person:nguyen-van-hop,
+        person:nhu-nguyen,
+        person:pham-anh-minh,
+        person:phan-quang-thang,
+        person:phuong-bac-dao,
+        person:phuong-nguyen-tri,
+        person:phuong-tran,
+        person:quang-tran-vuong,
+        person:sa-hoang-huynh,
+        person:son-tung-ha,
+        person:tam-d-nguyen,
+        person:tan-duy-nguyen,
+        person:tang-van-duong,
+        person:thang,
+        person:thang-dang-hung,
+        person:thinh-d-pham,
+        person:thuong-t-m-pham,
+        person:tran-lap,
+        person:tran-quang-duc,
+        person:tran-quang-hung,
+        person:tran-quang-huy,
+        person:tran-quoc-vuong,
+        person:trong-on-do,
+        person:trong-the-nguyen,
+        person:tuan-anh-duong,
+        person:uy-thai-nguyen,
+        person:viet-cuong-nguyen,
+        person:viet-duoc-trinh,
+        person:vinh-d-nguyen,
+        person:vo-nguyen-giap,
+        person:vu-phuong-nhung,
+        person:xuan-thang-vu ;
+    vnedu:hasLeader person:bui-the-duy ;
+    vnedu:hasMember university:truong-dai-hoc-cong-nghe-dai-hoc-quoc-gia-ha-noi,
+        university:truong-dai-hoc-giao-duc-dai-hoc-quoc-gia-ha-noi,
+        university:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-ha-noi,
+        university:truong-dai-hoc-kinh-te-dai-hoc-quoc-gia-ha-noi,
+        university:truong-dai-hoc-luat-dai-hoc-quoc-gia-ha-noi,
+        university:truong-dai-hoc-ngoai-ngu-dai-hoc-quoc-gia-ha-noi,
+        university:truong-dai-hoc-viet-nhat-dai-hoc-quoc-gia-ha-noi,
+        university:truong-dai-hoc-y-duoc-dai-hoc-quoc-gia-ha-noi,
+        university:truong-khoa-hoc-lien-nganh-va-nghe-thuat-dai-hoc-quoc-gia-ha-noi,
+        university:truong-quan-tri-va-kinh-doanh-dai-hoc-quoc-gia-ha-noi,
+        university:truong-quoc-te-dai-hoc-quoc-gia-ha-noi,
+        university:vien-tran-nhan-tong-dai-hoc-quoc-gia-ha-noi ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:motto "Ab uno disce omnes Đạt đỉnh cao dựa vào tri thức"@vi ;
+    vnedu:numberOfPostgraduates "7511"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfUndergraduates "71845"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:shortName "VNU" ;
+    vnedu:website <http://vnu.edu.vn/eng/> ;
+    schema:employee person:bui-the-duy ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    schema:subOrganization university:truong-dai-hoc-cong-nghe-dai-hoc-quoc-gia-ha-noi,
+        university:truong-dai-hoc-giao-duc-dai-hoc-quoc-gia-ha-noi,
+        university:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-ha-noi,
+        university:truong-dai-hoc-kinh-te-dai-hoc-quoc-gia-ha-noi,
+        university:truong-dai-hoc-luat-dai-hoc-quoc-gia-ha-noi,
+        university:truong-dai-hoc-ngoai-ngu-dai-hoc-quoc-gia-ha-noi,
+        university:truong-dai-hoc-viet-nhat-dai-hoc-quoc-gia-ha-noi,
+        university:truong-dai-hoc-y-duoc-dai-hoc-quoc-gia-ha-noi,
+        university:truong-khoa-hoc-lien-nganh-va-nghe-thuat-dai-hoc-quoc-gia-ha-noi,
+        university:truong-quan-tri-va-kinh-doanh-dai-hoc-quoc-gia-ha-noi,
+        university:truong-quoc-te-dai-hoc-quoc-gia-ha-noi,
+        university:vien-tran-nhan-tong-dai-hoc-quoc-gia-ha-noi .
+

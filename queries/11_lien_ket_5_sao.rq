@@ -1,0 +1,18 @@
+# Thống kê liên kết ra các dataset bên ngoài (tiêu chí 5 sao)
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf:  <http://xmlns.com/foaf/0.1/>
+
+SELECT ?dataset ?vi_tu (COUNT(*) AS ?so_lien_ket)
+WHERE {
+  VALUES ?p { owl:sameAs skos:closeMatch foaf:isPrimaryTopicOf }
+  ?s ?p ?o . FILTER(STRSTARTS(STR(?s), "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/"))
+  BIND(REPLACE(STR(?p), "^.*[#/]", "") AS ?vi_tu)
+  BIND(IF(CONTAINS(STR(?o), "wikidata.org"), "Wikidata", IF(CONTAINS(STR(?o), "dbpedia.org"), "DBpedia",
+       IF(CONTAINS(STR(?o), "geonames.org"), "GeoNames", IF(CONTAINS(STR(?o), "ror.org"), "ROR",
+       IF(CONTAINS(STR(?o), "wikipedia.org"), "Wikipedia", "khác"))))) AS ?dataset)
+}
+GROUP BY ?dataset ?vi_tu ORDER BY DESC(?so_lien_ket)

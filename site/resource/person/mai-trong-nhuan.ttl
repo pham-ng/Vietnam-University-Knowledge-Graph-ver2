@@ -1,0 +1,25 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+person:mai-trong-nhuan a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Trọng Nhuận Mai"@en,
+        "Mai Trọng Nhuận"@vi ;
+    owl:sameAs wd:Q6773036 ;
+    prov:wasDerivedFrom wd:Q6773036 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Mai_Tr%E1%BB%8Dng_Nhu%E1%BA%ADn> ;
+    foaf:name "Mai Trọng Nhuận" ;
+    vnedu:alumnusOf university:dai-hoc-quoc-gia-ha-noi ;
+    schema:alumniOf university:dai-hoc-quoc-gia-ha-noi ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q82955 .
+

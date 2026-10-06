@@ -1,0 +1,16 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+
+person:nguyen-huy-phuong a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Huy Phương"@vi ;
+    foaf:name "Nguyễn Huy Phương" ;
+    vnedu:honorific "PGS TS" ;
+    vnedu:leads university:hoc-vien-am-nhac-quoc-gia-viet-nam .
+

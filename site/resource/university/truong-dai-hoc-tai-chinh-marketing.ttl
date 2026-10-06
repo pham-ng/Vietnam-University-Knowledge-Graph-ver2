@@ -1,0 +1,63 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-tai-chinh-marketing a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "University of Finance - Marketing"@en,
+        "Trường Đại học Tài chính – Marketing"@vi ;
+    owl:sameAs wd:Q10829152,
+        <https://ror.org/00ycry713> ;
+    geo:lat 10.811472 ;
+    geo:long 106.680583 ;
+    skos:notation "DMS" ;
+    skos:prefLabel "Trường Đại học Tài chính – Marketing"@vi ;
+    prov:wasDerivedFrom wd:Q10829152,
+        <https://vi.wikipedia.org/w/index.php?oldid=75566607> ;
+    foaf:homepage <http://ufm.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_T%C3%A0i_ch%C3%ADnh_%E2%80%93_Marketing> ;
+    vnedu:address "778 Nguyễn Kiệm, phường Đức Nhuận" ;
+    vnedu:admissionCode "DMS" ;
+    vnedu:foundingYear "1976"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-tai-chinh ;
+    vnedu:hasAlumnus person:abal1412 ;
+    vnedu:hasBranch university:truong-dai-hoc-tai-chinh-marketing-phan-hieu-quang-ngai ;
+    vnedu:hasLeader person:pham-tien-dat ;
+    vnedu:locatedIn country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    vnedu:motto "Sáng tạo - Khác biệt - Hiệu quả - Bền vững"@vi ;
+    vnedu:numberOfPostgraduates "7000"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfStudents "85000"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfUndergraduates "80000"^^xsd:nonNegativeInteger ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:pham-tien-dat ;
+    vnedu:shortName "UFM" ;
+    vnedu:website <http://ufm.edu.vn/> ;
+    schema:employee person:pham-tien-dat ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+

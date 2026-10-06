@@ -1,0 +1,77 @@
+{
+  "@context": {
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "res": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vnedu": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+    "void": "http://rdfs.org/ns/void#",
+    "wd": "http://www.wikidata.org/entity/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/tien-giang",
+  "@type": [
+    "vnedu:FormerProvince",
+    "vnedu:AdministrativeUnit",
+    "schema:AdministrativeArea"
+  ],
+  "foaf:isPrimaryTopicOf": [
+    {
+      "@id": "https://vi.wikipedia.org/wiki/Ti%E1%BB%81n_Giang"
+    },
+    {
+      "@id": "https://en.wikipedia.org/wiki/Ti%E1%BB%81n_Giang_province"
+    }
+  ],
+  "geo:lat": {
+    "@type": "xsd:decimal",
+    "@value": "10.416666666"
+  },
+  "geo:long": {
+    "@type": "xsd:decimal",
+    "@value": "106.166666666"
+  },
+  "owl:sameAs": [
+    {
+      "@id": "dbr:Tiền_Giang_province"
+    },
+    {
+      "@id": "https://sws.geonames.org/1564676/"
+    },
+    {
+      "@id": "wd:Q36666"
+    }
+  ],
+  "prov:wasDerivedFrom": {
+    "@id": "wd:Q36666"
+  },
+  "rdfs:label": [
+    {
+      "@language": "en",
+      "@value": "Tiền Giang"
+    },
+    {
+      "@language": "vi",
+      "@value": "Tiền Giang"
+    }
+  ],
+  "vnedu:area": {
+    "@type": "xsd:decimal",
+    "@value": "2556.36"
+  },
+  "vnedu:mergedInto": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-thap"
+  },
+  "vnedu:population": {
+    "@type": "xsd:nonNegativeInteger",
+    "@value": "1785240"
+  }
+}

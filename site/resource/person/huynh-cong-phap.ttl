@@ -1,0 +1,17 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+
+person:huynh-cong-phap a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Huỳnh Công Pháp"@vi ;
+    foaf:name "Huỳnh Công Pháp" ;
+    vnedu:honorific "PGS TS" ;
+    vnedu:leads university:truong-cao-dang-cong-nghe-thong-tin-da-nang,
+        university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang .
+

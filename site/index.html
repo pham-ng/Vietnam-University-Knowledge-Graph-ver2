@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VN-Edu LOD — Dữ liệu liên kết mở Giáo dục đại học Việt Nam</title>
+<meta name="description" content="Đồ thị tri thức 5 sao về các cơ sở giáo dục đại học Việt Nam: thống kê, bản đồ, tra cứu, SPARQL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/Vietnam-University-Knowledge-Graph-ver2/assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230f6e64'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'>VN</text></svg>">
+
+<style>
+  .hero { display: grid; gap: 18px; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); align-items: start; margin-bottom: 8px; }
+  @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
+  .search { display: flex; gap: 8px; margin: 14px 0 0; }
+  .search input { flex: 1; min-width: 0; }
+  .stars td { padding: 6px 8px; font-size: 14px; }
+  .stars td:first-child { white-space: nowrap; color: #c98500; letter-spacing: 1px; }
+  .hint { color: var(--muted); font-size: 12px; margin: -6px 0 10px; }
+</style>
+
+<script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
+</head>
+<body>
+<header class="top"><div class="bar">
+  <a class="brand" href="/Vietnam-University-Knowledge-Graph-ver2/">VN-Edu <span>LOD</span></a>
+  <nav class="main">
+    <a href="/Vietnam-University-Knowledge-Graph-ver2/" class="on">Tổng quan</a><a href="/Vietnam-University-Knowledge-Graph-ver2/map" class="">Bản đồ</a><a href="/Vietnam-University-Knowledge-Graph-ver2/explore" class="">Tra cứu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology" class="">Ontology</a><a href="/Vietnam-University-Knowledge-Graph-ver2/sparql" class="">SPARQL</a><a href="/Vietnam-University-Knowledge-Graph-ver2/dataset" class="">Dataset</a><a href="/Vietnam-University-Knowledge-Graph-ver2/about" class="">Giới thiệu</a>
+  </nav>
+  <button class="theme-btn" type="button" aria-label="Đổi giao diện sáng/tối">◐ Giao diện</button>
+</div></header>
+<main class="">
+<section class="hero">
+  <div>
+    <h1>Dữ liệu liên kết mở về giáo dục đại học Việt Nam</h1>
+    <p class="sub">Tích hợp và đối chiếu chéo Wikidata, Wikipedia tiếng Việt, DBpedia, OpenStreetMap và văn bản pháp lý;
+      mô hình hoá bằng ontology OWL 2 RL, kiểm định bằng SHACL, liên kết 5★ tới Wikidata · DBpedia · ROR · GeoNames.</p>
+    <form class="search" action="/Vietnam-University-Knowledge-Graph-ver2/explore">
+      <input type="search" name="q" placeholder="Tìm trường, mã tuyển sinh (BKA, NTH…), tỉnh…" aria-label="Tìm kiếm">
+      <button class="btn">Tìm</button>
+    </form>
+    <p style="margin-top:10px;font-size:14px">
+      <a href="/Vietnam-University-Knowledge-Graph-ver2/map">Bản đồ</a> · <a href="/Vietnam-University-Knowledge-Graph-ver2/ontology">Cây ontology</a> ·
+      <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql">SPARQL trong trình duyệt</a> · <a href="/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl">Tải dump (Turtle)</a></p>
+  </div>
+  <div class="card">
+    <h3>Thang 5 sao (Tim Berners-Lee)</h3>
+    <table class="stars">
+      <tr><td>★</td><td>Trên Web, giấy phép mở <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></td></tr>
+      <tr><td>★★</td><td>Có cấu trúc, máy đọc được</td></tr>
+      <tr><td>★★★</td><td>Định dạng mở: <a href="/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl">Turtle</a>, <a href="/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.nt">N-Triples</a>, JSON-LD</td></tr>
+      <tr><td>★★★★</td><td>Chuẩn W3C + URI tra cứu được, VD
+        <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi">…/dai-hoc-bach-khoa-ha-noi</a>
+        (<a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi.ttl">.ttl</a>)</td></tr>
+      <tr><td>★★★★★</td><td>Liên kết <span id="nlinks">…</span> tới dataset khác — <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID linksets</a></td></tr>
+    </table>
+  </div>
+</section>
+
+<div class="grid" id="tiles" style="margin-top:18px"></div>
+
+<h2>Thống kê</h2>
+<div class="grid2">
+  <div class="card"><h3>Số cơ sở GDĐH theo tỉnh/thành (34 đơn vị từ 01/07/2025)</h3>
+    <p class="hint">Cơ sở ghi ở tỉnh cũ được suy luận về tỉnh mới (locatedIn ∘ mergedInto). Bấm tên tỉnh để xem URI.</p><div id="c-prov"></div></div>
+  <div class="card"><h3>Theo miền và loại hình sở hữu</h3>
+    <p class="hint">Miền suy luận qua chuỗi locatedIn ∘ partOf; công lập/tư thục là lớp định nghĩa OWL.</p><div id="c-region"></div></div>
+  <div class="card"><h3>Năm thành lập (tính từ tiền thân) theo thập kỷ</h3><div id="c-decade"></div></div>
+  <div class="card"><h3>Loại hình pháp lý (Luật Giáo dục đại học)</h3><div id="c-kind"></div></div>
+  <div class="card"><h3>Cơ quan chủ quản nhiều cơ sở nhất</h3><div id="c-gov"></div></div>
+  <div class="card"><h3>Liên kết ra ngoài (5★)</h3><div id="c-links"></div></div>
+</div>
+
+<h2>Chất lượng dữ liệu</h2>
+<div class="grid2">
+  <div class="card"><h3>Độ đầy đủ theo thuộc tính (cơ sở GDĐH)</h3><div id="c-complete"></div></div>
+  <div class="card"><h3>Các cổng kiểm định</h3><div id="gates"></div></div>
+</div>
+
+<script>
+(async () => {
+  const D = await (await fetch("/Vietnam-University-Knowledge-Graph-ver2/data/app.json")).json();
+  const hei = D.institutions.filter(i => i.hei && !i.end);
+  const by = (arr, f) => arr.reduce((m, x) => { const k = f(x); if (k != null) m[k] = (m[k] || 0) + 1; return m; }, {});
+  const totalLinks = Object.values(D.linksets).reduce((a, b) => a + b, 0);
+  document.getElementById("nlinks").textContent = VN.fmt(totalLinks);
+  const tiles = [
+    [hei.length, "cơ sở GDĐH đang hoạt động"], [hei.filter(i => i.own === "public").length, "công lập"],
+    [hei.filter(i => i.own === "private").length, "tư thục"], [hei.filter(i => i.military || i.police).length, "quân đội & công an"],
+    [D.provinces.length, "tỉnh/thành (2025)"], [D.people, "người (cựu SV, lãnh đạo)"],
+    [D.triples["vnedu-all.ttl"], "triple RDF"], [totalLinks, "liên kết ra ngoài"],
+  ];
+  document.getElementById("tiles").innerHTML = tiles.map(([n, l]) => `<div class="card stat"><b>${VN.fmt(n)}</b><span>${l}</span></div>`).join("");
+
+  function draw() {
+    const prov = by(hei, i => i.prov);
+    const provHref = Object.fromEntries(D.provinces.map(p => [p.name, p.href]));
+    const top = Object.entries(prov).sort((a, b) => b[1] - a[1]).slice(0, 15);
+    VN.hbar(document.getElementById("c-prov"), top.map(([k, v]) => ({ label: k, values: { n: v }, href: provHref[k] })),
+      [{ key: "n", label: "Số cơ sở", color: "--s1" }], { title: "Số cơ sở theo tỉnh", labelW: 170 });
+
+    const regions = ["Bắc Bộ", "Trung Bộ", "Nam Bộ"];
+    VN.hbar(document.getElementById("c-region"), regions.map(r => {
+      const xs = hei.filter(i => i.region === r);
+      return { label: r, values: { pub: xs.filter(i => i.own === "public").length, pri: xs.filter(i => i.own === "private").length,
+                                   unk: xs.filter(i => !i.own).length } };
+    }), [{ key: "pub", label: "Công lập", color: "--s1" }, { key: "pri", label: "Tư thục", color: "--s2" },
+         { key: "unk", label: "Chưa rõ", color: "--neutral" }], { title: "Theo miền và sở hữu", labelW: 90 });
+
+    const dec = by(hei.filter(i => i.year), i => Math.floor(i.year / 10) * 10);
+    const keys = []; for (let d = 1890; d <= 2020; d += 10) keys.push(d);
+    VN.vbar(document.getElementById("c-decade"), keys.map(d => ({ label: `${d}–${d + 9}`, short: `${d}s`.replace(/^19|^20/, "'"), value: dec[d] || 0 })),
+      "--s1", { every: 2, title: "Theo thập kỷ thành lập" });
+
+    const kind = by(hei, i => i.kindVi);
+    VN.hbar(document.getElementById("c-kind"), Object.entries(kind).sort((a, b) => b[1] - a[1]).map(([k, v]) => ({ label: k, values: { n: v } })),
+      [{ key: "n", label: "Số cơ sở", color: "--s1" }], { labelW: 160 });
+
+    const gov = {}; hei.forEach(i => i.gov.forEach(g => gov[g] = (gov[g] || 0) + 1));
+    VN.hbar(document.getElementById("c-gov"), Object.entries(gov).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([k, v]) => ({ label: k, values: { n: v } })),
+      [{ key: "n", label: "Số cơ sở", color: "--s1" }], { labelW: 230 });
+
+    const ls = {}; Object.entries(D.linksets).forEach(([k, v]) => { const t = k.split("|")[0]; ls[t] = (ls[t] || 0) + v; });
+    const tname = { wikidata: "Wikidata", wikipedia: "Wikipedia", dbpedia: "DBpedia", ror: "ROR", geonames: "GeoNames" };
+    VN.hbar(document.getElementById("c-links"), Object.entries(ls).sort((a, b) => b[1] - a[1]).map(([k, v]) => ({ label: tname[k] || k, values: { n: v } })),
+      [{ key: "n", label: "Số liên kết", color: "--s1" }], { labelW: 110 });
+
+    const fields = [["year", "năm thành lập"], ["prov", "tỉnh/thành"], ["own", "loại hình sở hữu"], ["web", "website"],
+                    ["gov", "cơ quan chủ quản"], ["lat", "toạ độ"], ["codes", "mã tuyển sinh"]];
+    const all = D.institutions.filter(i => i.hei);
+    VN.hbar(document.getElementById("c-complete"), fields.map(([f, l]) => {
+      const n = all.filter(i => Array.isArray(i[f]) ? i[f].length : i[f]).length;
+      return { label: l, values: { p: Math.round(1000 * n / all.length) / 10 } };
+    }), [{ key: "p", label: "% có giá trị", color: "--s1" }], { labelW: 150, unit: "%" });
+  }
+  draw();
+  document.addEventListener("themechange", draw);
+
+  const sh = D.shacl || {};
+  document.getElementById("gates").innerHTML = `<table>
+    <tr><td>JSON Schema (tầng silver)</td><td class="ok">✓ đạt</td></tr>
+    <tr><td>Nhất quán logic OWL 2 RL</td><td class="${D.consistent ? "ok" : ""}">${D.consistent ? "✓ nhất quán" : "✗"}</td></tr>
+    <tr><td>SHACL (tầng gold)</td><td class="${sh.Violation ? "" : "ok"}">${sh.Violation ? "✗ " + sh.Violation + " vi phạm" : "✓ conforms"}
+      <div class="lang">${sh.Warning || 0} cảnh báo thiếu thông tin · ${sh.Info || 0} thông tin</div></td></tr>
+    <tr><td>Liên kết ngoài (mẫu 150)</td><td class="ok">✓ 150/150 tra cứu được</td></tr>
+    <tr><td>Kiểm thử tự động</td><td class="ok">✓ 46 test</td></tr></table>
+    <p class="lang" style="margin:10px 0 0">Chi tiết: <a href="https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/data/reports/quality_report.md">báo cáo chất lượng</a> ·
+    <a href="https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/docs/audit.md">đánh giá trung thực</a></p>`;
+})();
+</script>
+</main>
+<footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·
+<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · nguồn: Wikidata (CC0), Wikipedia tiếng Việt (CC BY-SA)
+· <a href="https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2">mã nguồn</a></footer>
+</body>
+</html>

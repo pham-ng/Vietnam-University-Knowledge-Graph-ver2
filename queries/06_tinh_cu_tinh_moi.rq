@@ -1,0 +1,14 @@
+# Sắp xếp đơn vị hành chính 2025 (NQ 202/2025/QH15): tỉnh mới, các tỉnh cũ hợp nhất vào, số cơ sở ghi ở tỉnh cũ
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?tinh_moi (GROUP_CONCAT(DISTINCT ?ten_cu; separator=", ") AS ?hop_nhat_tu) (COUNT(DISTINCT ?u) AS ?co_so_ghi_o_tinh_cu)
+WHERE {
+  ?cu vnedu:mergedInto ?moi ; rdfs:label ?ten_cu . ?moi rdfs:label ?tinh_moi .
+  FILTER(LANG(?ten_cu) = "vi" && LANG(?tinh_moi) = "vi")
+  OPTIONAL { ?u a vnedu:EducationalOrganization ; vnedu:locatedIn ?cu }
+}
+GROUP BY ?tinh_moi ORDER BY DESC(?co_so_ghi_o_tinh_cu)

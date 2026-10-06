@@ -1,0 +1,87 @@
+@prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix major: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix program: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+university:truong-dai-hoc-ngoai-thuong a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        vnedu:UniversitySchool,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    rdfs:label "Foreign Trade University"@en,
+        "Trường Đại học Ngoại thương"@vi ;
+    owl:sameAs dbr:Foreign_Trade_University,
+        wd:Q5468340,
+        <https://ror.org/03a8q7p75> ;
+    geo:lat 21.023 ;
+    geo:long 105.805 ;
+    skos:notation "NTH",
+        "NTS" ;
+    skos:prefLabel "Trường Đại học Ngoại thương"@vi ;
+    prov:wasDerivedFrom wd:Q5468340,
+        <https://vi.wikipedia.org/w/index.php?oldid=75544972> ;
+    foaf:homepage <https://www.ftu.edu.vn/> ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Foreign_Trade_University>,
+        <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngo%E1%BA%A1i_th%C6%B0%C6%A1ng> ;
+    vnedu:academicStaff "850"^^xsd:nonNegativeInteger ;
+    vnedu:address "91 Chùa Láng, Láng, Hà Nội" ;
+    vnedu:admissionCode "NTH",
+        "NTS" ;
+    vnedu:formerName "Trường Cán bộ Ngoại giao – Ngoại thương"@vi ;
+    vnedu:foundingYear "1960"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
+    vnedu:hasAlumnus person:chau-bui,
+        person:dang-quang-dung,
+        person:dao-bach-lien,
+        person:hoang-dung,
+        person:pham-thi-hong-yen,
+        person:phuc-nguyen,
+        person:vu-tien-loc,
+        person:vuong-dam-minh ;
+    vnedu:hasBranch university:phan-hieu-truong-dai-hoc-ngoai-thuong-tai-thanh-pho-ho-chi-minh ;
+    vnedu:hasLeader person:pham-thu-huong ;
+    vnedu:locatedIn country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    vnedu:motto "Khác biệt để dẫn đầu"@vi ;
+    vnedu:numberOfPostgraduates "550"^^xsd:nonNegativeInteger ;
+    vnedu:numberOfUndergraduates "18500"^^xsd:nonNegativeInteger ;
+    vnedu:offersProgram program:truong-dai-hoc-ngoai-thuong-7220201,
+        program:truong-dai-hoc-ngoai-thuong-7310101,
+        program:truong-dai-hoc-ngoai-thuong-7340101,
+        program:truong-dai-hoc-ngoai-thuong-7340201 ;
+    vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:pham-thu-huong ;
+    vnedu:shortName "FTU",
+        "ĐHNT" ;
+    vnedu:trainsMajor major:7220201,
+        major:7310101,
+        major:7340101,
+        major:7340201 ;
+    vnedu:website <https://www.ftu.edu.vn/> ;
+    schema:employee person:pham-thu-huong ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+

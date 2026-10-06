@@ -1,0 +1,27 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+person:ho-van-muoi a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Hồ Văn Mười"@en,
+        "Hồ Văn Mười"@vi ;
+    owl:sameAs wd:Q109779486 ;
+    prov:wasDerivedFrom wd:Q109779486 ;
+    foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/H%E1%BB%93_V%C4%83n_M%C6%B0%E1%BB%9Di_%28sinh_1969%29> ;
+    foaf:name "Hồ Văn Mười" ;
+    vnedu:alumnusOf university:hoc-vien-an-ninh-nhan-dan,
+        university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh ;
+    schema:alumniOf university:hoc-vien-an-ninh-nhan-dan,
+        university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q82955 .
+

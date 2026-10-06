@@ -1,0 +1,30 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+person:hoang-trung-hai a foaf:Person,
+        vnedu:Alumnus,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Hoang Trung Hai"@en,
+        "Hoàng Trung Hải"@vi ;
+    owl:sameAs dbr:Hoàng_Trung_Hải,
+        wd:Q10769050 ;
+    prov:wasDerivedFrom wd:Q10769050 ;
+    foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ho%C3%A0ng_Trung_H%E1%BA%A3i>,
+        <https://vi.wikipedia.org/wiki/Ho%C3%A0ng_Trung_H%E1%BA%A3i> ;
+    foaf:name "Hoàng Trung Hải" ;
+    vnedu:alumnusOf university:dai-hoc-bach-khoa-ha-noi ;
+    vnedu:birthDate "1959-09-27"^^xsd:date ;
+    schema:alumniOf university:dai-hoc-bach-khoa-ha-noi ;
+    schema:gender wd:Q6581097 ;
+    schema:hasOccupation wd:Q82955 .
+
