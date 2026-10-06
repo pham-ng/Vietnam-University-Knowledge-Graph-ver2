@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-noi-vu-ha-noi",
   "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "dbo:University",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
     "vnedu:UniversitySchool",
     "foaf:Organization",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity"
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization"
   ],
   "foaf:homepage": {
     "@id": "https://huha.edu.vn/"
@@ -49,12 +49,12 @@
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Hanoi University of Home Affairs - HUHA"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Nội vụ Hà Nội"
+    },
+    {
+      "@language": "en",
+      "@value": "Hanoi University of Home Affairs - HUHA"
     }
   ],
   "schema:employee": {
@@ -62,13 +62,13 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:notation": "DNV",
@@ -93,13 +93,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:motto": {

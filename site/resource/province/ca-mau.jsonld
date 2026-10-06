@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ca-mau",
   "@type": [
-    "vnedu:AdministrativeUnit",
     "schema:AdministrativeArea",
-    "vnedu:Province"
+    "vnedu:Province",
+    "vnedu:AdministrativeUnit"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/C%C3%A0_Mau_province"
+      "@id": "https://vi.wikipedia.org/wiki/C%C3%A0_Mau"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/C%C3%A0_Mau"
+      "@id": "https://en.wikipedia.org/wiki/C%C3%A0_Mau_province"
     }
   ],
   "geo:lat": {
@@ -44,10 +44,10 @@
       "@id": "wd:Q33354"
     },
     {
-      "@id": "https://sws.geonames.org/1905678/"
+      "@id": "dbr:Cà_Mau_province"
     },
     {
-      "@id": "dbr:Cà_Mau_province"
+      "@id": "https://sws.geonames.org/1905678/"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -55,11 +55,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Cà Mau"
     },
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Cà Mau"
     }
   ],

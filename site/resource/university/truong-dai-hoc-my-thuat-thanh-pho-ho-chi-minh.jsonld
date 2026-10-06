@@ -19,26 +19,26 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-my-thuat-thanh-pho-ho-chi-minh",
   "@type": [
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "dbo:University",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
     "foaf:Organization",
     "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution"
+    "vnedu:HigherEducationInstitution",
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization"
   ],
   "foaf:homepage": {
     "@id": "http://hcmufa.edu.vn/"
   },
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%B9_thu%E1%BA%ADt_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Fine_Arts"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Fine_Arts"
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%B9_thu%E1%BA%ADt_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
     }
   ],
   "geo:lat": {
@@ -51,31 +51,31 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q877269"
+      "@id": "dbr:Ho_Chi_Minh_City_University_of_Fine_Arts"
     },
     {
       "@id": "https://ror.org/05cwygk15"
     },
     {
-      "@id": "dbr:Ho_Chi_Minh_City_University_of_Fine_Arts"
+      "@id": "wd:Q877269"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085614"
+      "@id": "wd:Q877269"
     },
     {
-      "@id": "wd:Q877269"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085614"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Mỹ thuật Thành phố Hồ Chí Minh"
-    },
-    {
       "@language": "en",
       "@value": "Ho Chi Minh City University of Fine Arts"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Mỹ thuật Thành phố Hồ Chí Minh"
     }
   ],
   "schema:employee": {
@@ -86,10 +86,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:notation": "MTS",
@@ -106,18 +106,6 @@
     },
     {
       "@language": "vi",
-      "@value": "Trường Trung học Trang trí Mỹ thuật Gia Định"
-    },
-    {
-      "@language": "vi",
-      "@value": "Cao đẳng Mỹ thuật Thành phố Hồ Chí Minh"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Quốc gia Trang trí Mỹ thuật Gia Định"
-    },
-    {
-      "@language": "vi",
       "@value": "Trường Vẽ Gia Định"
     },
     {
@@ -127,6 +115,18 @@
     {
       "@language": "vi",
       "@value": "Trường Mỹ nghệ Thực hành Gia Định"
+    },
+    {
+      "@language": "vi",
+      "@value": "Cao đẳng Mỹ thuật Thành phố Hồ Chí Minh"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Trung học Trang trí Mỹ thuật Gia Định"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Quốc gia Trang trí Mỹ thuật Gia Định"
     }
   ],
   "vnedu:foundingYear": {
@@ -138,16 +138,10 @@
   },
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-sang"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/chanh-trung-truong"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/la-quy-tung"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duong"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-hong-phong"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/luong-dong"
@@ -156,10 +150,16 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-phuong-hoa"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-hong-phong"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/la-quy-tung"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duong"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/do-quang-em"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-sang"
     }
   ],
   "vnedu:hasLeader": {
@@ -167,10 +167,10 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"

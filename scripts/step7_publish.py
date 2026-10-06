@@ -76,7 +76,7 @@ LAYOUT = env.from_string("""<!doctype html>
 </body>
 </html>""")
 NAV = [("", "Tổng quan"), ("map", "Bản đồ"), ("explore", "Tra cứu"), ("ontology", "Ontology"),
-       ("sparql", "SPARQL"), ("dataset", "Dataset"), ("about", "Giới thiệu")]
+       ("sparql", "SPARQL"), ("dataset", "Dataset"), ("about", "Giới thiệu"), ("demo", "Demo")]
 
 
 def page(path: str, title: str, body: str, active: str = "", head: str = "", desc: str = "",

@@ -19,9 +19,9 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-long",
   "@type": [
+    "schema:AdministrativeArea",
     "vnedu:Province",
-    "vnedu:AdministrativeUnit",
-    "schema:AdministrativeArea"
+    "vnedu:AdministrativeUnit"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -41,13 +41,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q7333405"
-    },
-    {
       "@id": "https://sws.geonames.org/1559977/"
     },
     {
       "@id": "dbr:Vĩnh_Long_province"
+    },
+    {
+      "@id": "wd:Q7333405"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -55,11 +55,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Vĩnh Long"
     },
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Vĩnh Long"
     }
   ],
@@ -69,10 +69,10 @@
   },
   "vnedu:mergedFrom": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ben-tre"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/tra-vinh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/tra-vinh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ben-tre"
     }
   ],
   "vnedu:partOf": [

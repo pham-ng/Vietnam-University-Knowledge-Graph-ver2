@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho",
   "@type": [
-    "vnedu:AdministrativeUnit",
     "schema:AdministrativeArea",
-    "vnedu:Province"
+    "vnedu:Province",
+    "vnedu:AdministrativeUnit"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Ph%C3%BA_Th%E1%BB%8D"
+      "@id": "https://en.wikipedia.org/wiki/Ph%C3%BA_Th%E1%BB%8D_province"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Ph%C3%BA_Th%E1%BB%8D_province"
+      "@id": "https://vi.wikipedia.org/wiki/Ph%C3%BA_Th%E1%BB%8D"
     }
   ],
   "geo:lat": {
@@ -41,13 +41,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "dbr:Phú_Thọ_province"
-    },
-    {
       "@id": "wd:Q36610"
     },
     {
       "@id": "https://sws.geonames.org/1905577/"
+    },
+    {
+      "@id": "dbr:Phú_Thọ_province"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -77,10 +77,10 @@
   ],
   "vnedu:partOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:population": {

@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-xay-dung-mien-trung",
   "@type": [
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "dbo:University",
     "vnedu:Organization",
-    "schema:EducationalOrganization"
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
+    "foaf:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution",
+    "dbo:University",
+    "vnedu:EducationalOrganization"
   ],
   "foaf:homepage": {
     "@id": "http://muce.edu.vn/"
@@ -54,20 +54,20 @@
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085685"
+      "@id": "wd:Q10829166"
     },
     {
-      "@id": "wd:Q10829166"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085685"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Mientrung University Of Civil Engineering"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Xây dựng Miền Trung"
+    },
+    {
+      "@language": "en",
+      "@value": "Mientrung University Of Civil Engineering"
     }
   ],
   "schema:employee": {
@@ -75,13 +75,13 @@
   },
   "schema:location": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dak-lak"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dak-lak"
     }
   ],
   "skos:prefLabel": {
@@ -101,13 +101,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dak-lak"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:ownership": {

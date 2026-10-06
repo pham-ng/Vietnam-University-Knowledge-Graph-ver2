@@ -20,8 +20,8 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-nam",
   "@type": [
     "vnedu:FormerProvince",
-    "vnedu:AdministrativeUnit",
-    "schema:AdministrativeArea"
+    "schema:AdministrativeArea",
+    "vnedu:AdministrativeUnit"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -41,13 +41,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q33356"
+      "@id": "https://sws.geonames.org/1905516/"
     },
     {
       "@id": "dbr:Quảng_Nam_province"
     },
     {
-      "@id": "https://sws.geonames.org/1905516/"
+      "@id": "wd:Q33356"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -55,11 +55,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Quảng Nam"
     },
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Quảng Nam"
     }
   ],

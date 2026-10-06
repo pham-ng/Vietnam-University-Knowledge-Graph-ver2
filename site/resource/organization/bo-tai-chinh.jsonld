@@ -19,19 +19,19 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-chinh",
   "@type": [
-    "schema:GovernmentOrganization",
-    "foaf:Organization",
-    "vnedu:Ministry",
-    "schema:Organization",
     "vnedu:GoverningBody",
-    "vnedu:Organization"
+    "vnedu:Organization",
+    "schema:Organization",
+    "vnedu:Ministry",
+    "foaf:Organization",
+    "schema:GovernmentOrganization"
   ],
   "owl:sameAs": [
     {
-      "@id": "wd:Q6866962"
+      "@id": "dbr:Ministry_of_Finance_(Vietnam)"
     },
     {
-      "@id": "dbr:Ministry_of_Finance_(Vietnam)"
+      "@id": "wd:Q6866962"
     }
   ],
   "rdfs:label": {
@@ -40,22 +40,22 @@
   },
   "vnedu:governs": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-boi-duong-can-bo-kinh-te-tai-chinh"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-chinh-marketing"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-chinh-quan-tri-kinh-doanh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-tai-chinh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-boi-duong-can-bo-kinh-te-tai-chinh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-chinh-ke-toan"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-sach-va-phat-trien"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-chinh-ke-toan"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-tai-chinh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-chinh-quan-tri-kinh-doanh"
     }
   ]
 }

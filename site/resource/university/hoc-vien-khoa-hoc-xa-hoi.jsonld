@@ -19,15 +19,15 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-khoa-hoc-xa-hoi",
   "@type": [
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
     "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
     "vnedu:Organization",
     "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "vnedu:Academy",
+    "schema:Organization",
     "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:Academy"
+    "vnedu:HigherEducationInstitution"
   ],
   "foaf:homepage": {
     "@id": "https://gass.edu.vn/"
@@ -37,10 +37,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q10771889"
+      "@id": "https://ror.org/0226brd56"
     },
     {
-      "@id": "https://ror.org/0226brd56"
+      "@id": "wd:Q10771889"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -63,10 +63,10 @@
   ],
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
@@ -85,10 +85,10 @@
   },
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-danh-tu"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-van-kham"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-van-kham"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-danh-tu"
     }
   ],
   "vnedu:locatedIn": [
@@ -96,10 +96,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:ownership": {

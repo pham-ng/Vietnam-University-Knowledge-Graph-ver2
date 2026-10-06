@@ -19,27 +19,27 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quoc-te-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh",
   "@type": [
-    "dbo:University",
     "vnedu:Organization",
     "schema:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "schema:Organization",
+    "vnedu:PublicInstitution",
     "schema:CollegeOrUniversity",
+    "schema:Organization",
+    "foaf:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution",
+    "dbo:University",
     "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution"
+    "vnedu:MemberInstitution"
   ],
   "foaf:homepage": {
     "@id": "http://www.hcmiu.edu.vn/"
   },
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_t%E1%BA%BF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_International_University"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_International_University"
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_t%E1%BA%BF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
     }
   ],
   "geo:lat": {
@@ -52,13 +52,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/003szmg30"
+      "@id": "wd:Q5873959"
     },
     {
       "@id": "dbr:Ho_Chi_Minh_City_International_University"
     },
     {
-      "@id": "wd:Q5873959"
+      "@id": "https://ror.org/003szmg30"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -71,12 +71,12 @@
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Quốc tế, Đại học Quốc gia Thành phố Hồ Chí Minh"
-    },
-    {
       "@language": "en",
       "@value": "International University - Vietnam National University Ho Chi Minh City"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Quốc tế, Đại học Quốc gia Thành phố Hồ Chí Minh"
     }
   ],
   "schema:employee": {
@@ -84,10 +84,10 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
@@ -107,43 +107,43 @@
   },
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nha-k-huynh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-van-canh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tung-nguyen-thanh-uong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thanh-truc-nguyen"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tri-huynh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dat-nguyen"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bao-t-le"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vy-thi-lan-nguyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nha-k-huynh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/khanh-l-ly"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/khoa-van-nguyen"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bao-le"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tri-huynh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-van-canh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-phuc-dang"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bao-t-le"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/diem-huong-nguyen-tran"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vy-thi-lan-nguyen"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thanh-truc-nguyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tung-nguyen-thanh-uong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/khoa-van-nguyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-phuc-dang"
     }
   ],
   "vnedu:hasLeader": {
@@ -151,13 +151,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     }
   ],
   "vnedu:memberOf": {

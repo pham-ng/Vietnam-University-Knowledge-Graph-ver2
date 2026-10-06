@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri",
   "@type": [
-    "vnedu:MilitaryInstitution",
-    "schema:EducationalOrganization",
-    "vnedu:Organization",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
     "vnedu:Academy",
     "schema:Organization",
-    "schema:CollegeOrUniversity",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
     "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution"
+    "vnedu:Organization",
+    "vnedu:MilitaryInstitution",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity"
   ],
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Ch%C3%ADnh_tr%E1%BB%8B_%28Qu%C3%A2n_%C4%91%E1%BB%99i_nh%C3%A2n_d%C3%A2n_Vi%E1%BB%87t_Nam%29"
@@ -46,10 +46,10 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75498298"
+      "@id": "wd:Q16480519"
     },
     {
-      "@id": "wd:Q16480519"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75498298"
     }
   ],
   "rdfs:label": {
@@ -61,13 +61,13 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:prefLabel": {
@@ -101,10 +101,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:ownership": {

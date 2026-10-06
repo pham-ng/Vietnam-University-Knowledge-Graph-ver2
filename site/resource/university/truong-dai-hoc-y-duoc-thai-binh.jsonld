@@ -20,15 +20,15 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-y-duoc-thai-binh",
   "@type": [
     "dbo:University",
+    "vnedu:EducationalOrganization",
     "vnedu:Organization",
     "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "vnedu:UniversitySchool",
     "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution"
+    "vnedu:HigherEducationInstitution"
   ],
   "foaf:homepage": {
     "@id": "http://www.tbump.edu.vn/"
@@ -38,28 +38,28 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q10829173"
+      "@id": "https://ror.org/04wtn5j93"
     },
     {
-      "@id": "https://ror.org/04wtn5j93"
+      "@id": "wd:Q10829173"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10829173"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75485454"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75485454"
+      "@id": "wd:Q10829173"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Thaibinh Medical University"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Y Dược Thái Bình"
+    },
+    {
+      "@language": "en",
+      "@value": "Thaibinh Medical University"
     }
   ],
   "schema:employee": {
@@ -67,16 +67,16 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-binh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hung-yen"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-binh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "skos:notation": "YTB",
@@ -102,16 +102,16 @@
   },
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-thi-dung"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/cu-huy-dao"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-sok"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-thi-dung"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-xuan-huan"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/cu-huy-dao"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-sok"
     }
   ],
   "vnedu:hasLeader": {
@@ -122,13 +122,13 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hung-yen"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-binh"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-binh"
     }
   ],
   "vnedu:numberOfPostgraduates": {

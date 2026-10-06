@@ -20,25 +20,25 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-nha-trang",
   "@type": [
     "dbo:University",
+    "vnedu:EducationalOrganization",
     "vnedu:Organization",
     "schema:EducationalOrganization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "schema:Organization",
+    "vnedu:PublicInstitution",
     "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution"
+    "schema:Organization",
+    "foaf:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution"
   ],
   "foaf:homepage": {
     "@id": "http://www.ntu.edu.vn/"
   },
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Nha_Trang_University"
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Nha_Trang"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Nha_Trang"
+      "@id": "https://en.wikipedia.org/wiki/Nha_Trang_University"
     }
   ],
   "geo:lat": {
@@ -51,13 +51,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/047van922"
+      "@id": "dbr:Nha_Trang_University"
     },
     {
       "@id": "wd:Q2740474"
     },
     {
-      "@id": "dbr:Nha_Trang_University"
+      "@id": "https://ror.org/047van922"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -117,22 +117,22 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-minh-le"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-phu-quoc"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ha-thanh-dong"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-dinh-cuong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hong-ngoc-thuy-pham"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-phu-quoc"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-quoc-pham"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-thai"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hong-ngoc-thuy-pham"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ha-thanh-dong"
     }
   ],
   "vnedu:hasLeader": {

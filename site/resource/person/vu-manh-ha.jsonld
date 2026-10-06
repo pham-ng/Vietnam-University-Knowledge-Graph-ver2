@@ -20,9 +20,9 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-manh-ha",
   "@type": [
     "foaf:Person",
+    "vnedu:Alumnus",
     "schema:Person",
-    "vnedu:Person",
-    "vnedu:Alumnus"
+    "vnedu:Person"
   ],
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/V%C5%A9_M%E1%BA%A1nh_H%C3%A0"
@@ -36,20 +36,20 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Vu Manh Ha"
-    },
-    {
       "@language": "vi",
       "@value": "Vũ Mạnh Hà"
+    },
+    {
+      "@language": "en",
+      "@value": "Vu Manh Ha"
     }
   ],
   "schema:alumniOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-y-ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-y-ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
@@ -68,13 +68,13 @@
   ],
   "vnedu:alumnusOf": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-y-ha-noi"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-y-ha-noi"
     }
   ]
 }

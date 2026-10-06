@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-si-quan-thong-tin-dai-hoc-thong-tin-lien-lac",
   "@type": [
+    "schema:Organization",
+    "vnedu:OfficerSchool",
     "foaf:Organization",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
     "vnedu:EducationalOrganization",
+    "vnedu:Organization",
     "vnedu:PublicInstitution",
     "vnedu:MilitaryInstitution",
-    "vnedu:OfficerSchool",
-    "vnedu:Organization",
-    "schema:EducationalOrganization"
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity"
   ],
   "foaf:homepage": {
     "@id": "https://tcu.edu.vn/"
@@ -64,13 +64,13 @@
   ],
   "schema:location": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     }
   ],
   "skos:prefLabel": {
@@ -87,13 +87,13 @@
   },
   "vnedu:locatedIn": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     }
   ],
   "vnedu:motto": {

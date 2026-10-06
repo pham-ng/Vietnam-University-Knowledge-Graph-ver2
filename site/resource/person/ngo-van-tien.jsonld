@@ -19,10 +19,10 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngo-van-tien",
   "@type": [
-    "foaf:Person",
-    "schema:Person",
     "vnedu:Person",
-    "vnedu:Alumnus"
+    "foaf:Person",
+    "vnedu:Alumnus",
+    "schema:Person"
   ],
   "foaf:name": "Ngô Văn Tiến",
   "owl:sameAs": {
@@ -33,12 +33,12 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Ngô Văn Tiến"
-    },
-    {
       "@language": "en",
       "@value": "Ngo Van Tien"
+    },
+    {
+      "@language": "vi",
+      "@value": "Ngô Văn Tiến"
     }
   ],
   "schema:alumniOf": {
@@ -49,13 +49,13 @@
   },
   "schema:hasOccupation": [
     {
-      "@id": "wd:Q381160"
-    },
-    {
       "@id": "wd:Q81096"
     },
     {
       "@id": "wd:Q1294626"
+    },
+    {
+      "@id": "wd:Q381160"
     }
   ],
   "vnedu:alumnusOf": {

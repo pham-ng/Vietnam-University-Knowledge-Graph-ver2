@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-dai-hoc-da-nang",
   "@type": [
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "dbo:University",
     "vnedu:Organization",
+    "vnedu:PublicInstitution",
     "schema:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:UniversitySchool",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution",
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:MemberInstitution"
   ],
   "foaf:homepage": {
     "@id": "http://due.udn.vn/"
@@ -55,10 +55,10 @@
       "@id": "dbr:Da_Nang_University_of_Economics"
     },
     {
-      "@id": "wd:Q5207273"
+      "@id": "https://ror.org/056sktz68"
     },
     {
-      "@id": "https://ror.org/056sktz68"
+      "@id": "wd:Q5207273"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -87,10 +87,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "schema:parentOrganization": {
@@ -116,10 +116,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     }
   ],
   "vnedu:memberOf": {

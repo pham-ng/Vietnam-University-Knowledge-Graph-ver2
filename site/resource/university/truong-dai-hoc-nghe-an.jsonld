@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-nghe-an",
   "@type": [
-    "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
     "dbo:University",
+    "vnedu:EducationalOrganization",
     "vnedu:Organization",
+    "vnedu:PublicInstitution",
     "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
+    "foaf:Organization",
     "vnedu:UniversitySchool",
-    "foaf:Organization"
+    "vnedu:HigherEducationInstitution"
   ],
   "foaf:homepage": {
     "@id": "https://nau.edu.vn/"
@@ -38,10 +38,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q16481176"
+      "@id": "https://ror.org/04v5ws439"
     },
     {
-      "@id": "https://ror.org/04v5ws439"
+      "@id": "wd:Q16481176"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -67,10 +67,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     }
   ],
   "skos:prefLabel": {
@@ -82,13 +82,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:ownership": {

@@ -20,25 +20,25 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-thuy-loi",
   "@type": [
     "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "dbo:University",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
     "vnedu:UniversitySchool",
     "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
+    "vnedu:HigherEducationInstitution",
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity"
   ],
   "foaf:homepage": {
     "@id": "http://tlu.edu.vn"
   },
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%E1%BB%A7y_l%E1%BB%A3i"
+      "@id": "https://en.wikipedia.org/wiki/Thuyloi_University"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Thuyloi_University"
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%E1%BB%A7y_l%E1%BB%A3i"
     }
   ],
   "geo:lat": {
@@ -62,10 +62,10 @@
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q7973360"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75154006"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75154006"
+      "@id": "wd:Q7973360"
     }
   ],
   "rdfs:label": [
@@ -110,19 +110,19 @@
   },
   "vnedu:hasAlumnus": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-van-lap"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-huy-tuan"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quang-viet-ly"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-van-lap"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-an-tran"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hong-t-pham"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-an-tran"
     }
   ],
   "vnedu:hasLeader": {
@@ -133,10 +133,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:motto": {

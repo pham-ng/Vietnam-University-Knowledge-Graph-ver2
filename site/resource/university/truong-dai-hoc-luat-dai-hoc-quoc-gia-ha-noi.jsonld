@@ -20,16 +20,16 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-luat-dai-hoc-quoc-gia-ha-noi",
   "@type": [
     "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:MemberInstitution",
     "vnedu:Organization",
     "schema:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "schema:Organization",
+    "vnedu:PublicInstitution",
     "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution"
+    "schema:Organization",
+    "foaf:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution"
   ],
   "foaf:homepage": {
     "@id": "https://law.vnu.edu.vn"
@@ -47,10 +47,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q114132145"
+      "@id": "https://ror.org/04z6cm680"
     },
     {
-      "@id": "https://ror.org/04z6cm680"
+      "@id": "wd:Q114132145"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -79,10 +79,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "schema:parentOrganization": {
@@ -99,10 +99,10 @@
   },
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-thi-nguyet-thu"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-trong-nghia"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-trong-nghia"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-thi-nguyet-thu"
     }
   ],
   "vnedu:hasLeader": {
@@ -113,10 +113,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:memberOf": {

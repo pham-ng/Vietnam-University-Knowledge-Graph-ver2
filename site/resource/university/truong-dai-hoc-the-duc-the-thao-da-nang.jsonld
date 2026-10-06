@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-the-duc-the-thao-da-nang",
   "@type": [
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "vnedu:UniversitySchool",
     "foaf:Organization",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
     "dbo:University",
-    "vnedu:Organization",
-    "schema:EducationalOrganization"
+    "vnedu:EducationalOrganization"
   ],
   "foaf:homepage": {
     "@id": "https://dsu.edu.vn/"
@@ -49,20 +49,20 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75227020"
+      "@id": "wd:Q10829144"
     },
     {
-      "@id": "wd:Q10829144"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75227020"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Da Nang University of Physical Education and Sports"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Thể dục Thể thao Đà Nẵng"
+    },
+    {
+      "@language": "en",
+      "@value": "Da Nang University of Physical Education and Sports"
     }
   ],
   "schema:employee": {
@@ -73,10 +73,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:prefLabel": {
@@ -99,10 +99,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:ownership": {

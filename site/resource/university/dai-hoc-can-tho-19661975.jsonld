@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-can-tho-19661975",
   "@type": [
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "dbo:University",
-    "schema:EducationalOrganization",
-    "vnedu:Organization",
     "foaf:Organization",
-    "vnedu:University",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "vnedu:DefunctInstitution"
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
+    "vnedu:PublicInstitution",
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:University",
+    "vnedu:DefunctInstitution",
+    "schema:Organization"
   ],
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%E1%BA%A7n_Th%C6%A1_%28%C4%91%E1%BB%8Bnh_h%C6%B0%E1%BB%9Bng%29"
@@ -39,28 +39,28 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=73687349"
+      "@id": "wd:Q10841214"
     },
     {
-      "@id": "wd:Q10841214"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=73687349"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Can Tho University"
-    },
-    {
       "@language": "vi",
       "@value": "Đại học Cần Thơ (1966–1975)"
+    },
+    {
+      "@language": "en",
+      "@value": "Can Tho University"
     }
   ],
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
@@ -86,10 +86,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     }
   ],
   "vnedu:ownership": {

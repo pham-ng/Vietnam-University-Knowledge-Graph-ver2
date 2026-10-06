@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-si-quan-tang-thiet-giap",
   "@type": [
-    "vnedu:HigherEducationInstitution",
     "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "vnedu:MilitaryInstitution",
     "vnedu:OfficerSchool",
-    "schema:EducationalOrganization",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:EducationalOrganization",
     "vnedu:Organization",
-    "foaf:Organization"
+    "vnedu:MilitaryInstitution",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity"
   ],
   "foaf:homepage": {
     "@id": "http://siquantangthietgiap.vn"
@@ -41,25 +41,25 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10828883"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75607232"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75607232"
+      "@id": "wd:Q10828883"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Armored and Tank Officer School (Vietnam)"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Sĩ quan Tăng – Thiết giáp"
+    },
+    {
+      "@language": "en",
+      "@value": "Armored and Tank Officer School (Vietnam)"
     }
   ],
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-phuc"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
@@ -68,7 +68,7 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-phuc"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho"
     }
   ],
   "skos:prefLabel": {
@@ -93,13 +93,13 @@
   },
   "vnedu:locatedIn": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-phuc"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-phuc"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho"

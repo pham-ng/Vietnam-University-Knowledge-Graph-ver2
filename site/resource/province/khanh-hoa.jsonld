@@ -19,9 +19,9 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa",
   "@type": [
+    "vnedu:Province",
     "vnedu:AdministrativeUnit",
-    "schema:AdministrativeArea",
-    "vnedu:Province"
+    "schema:AdministrativeArea"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -41,13 +41,13 @@
   },
   "owl:sameAs": [
     {
+      "@id": "dbr:Khánh_Hòa_province"
+    },
+    {
       "@id": "wd:Q33369"
     },
     {
       "@id": "https://sws.geonames.org/1579634/"
-    },
-    {
-      "@id": "dbr:Khánh_Hòa_province"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -72,10 +72,10 @@
   },
   "vnedu:partOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     }
   ],
   "vnedu:population": {

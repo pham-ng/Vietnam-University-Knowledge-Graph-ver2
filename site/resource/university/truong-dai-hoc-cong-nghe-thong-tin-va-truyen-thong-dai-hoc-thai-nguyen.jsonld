@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-dai-hoc-thai-nguyen",
   "@type": [
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
     "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
+    "vnedu:UniversitySchool",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
     "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:MemberInstitution",
     "vnedu:Organization",
+    "vnedu:PublicInstitution",
     "schema:EducationalOrganization",
-    "vnedu:MemberInstitution"
+    "schema:CollegeOrUniversity"
   ],
   "foaf:homepage": {
     "@id": "https://ictu.edu.vn"
@@ -47,10 +47,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/04gv3mr75"
+      "@id": "wd:Q10829030"
     },
     {
-      "@id": "wd:Q10829030"
+      "@id": "https://ror.org/04gv3mr75"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -76,13 +76,13 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "schema:parentOrganization": {
@@ -105,13 +105,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:memberOf": {

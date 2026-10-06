@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-dai-nam",
   "@type": [
-    "foaf:Organization",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "vnedu:UniversitySchool",
+    "foaf:Organization",
     "vnedu:PrivateInstitution",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
     "dbo:University",
-    "schema:EducationalOrganization",
-    "vnedu:Organization"
+    "vnedu:EducationalOrganization"
   ],
   "foaf:homepage": {
     "@id": "https://dainam.edu.vn/"
@@ -54,20 +54,20 @@
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75195862"
+      "@id": "wd:Q10829182"
     },
     {
-      "@id": "wd:Q10829182"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75195862"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Đại Nam"
-    },
-    {
       "@language": "en",
       "@value": "Dai Nam University"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Đại Nam"
     }
   ],
   "schema:employee": {
@@ -78,10 +78,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:prefLabel": {
@@ -101,10 +101,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:motto": {

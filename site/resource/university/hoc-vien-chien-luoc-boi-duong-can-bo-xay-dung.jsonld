@@ -19,14 +19,14 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chien-luoc-boi-duong-can-bo-xay-dung",
   "@type": [
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity",
     "vnedu:Academy",
     "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "schema:EducationalOrganization",
-    "vnedu:Organization"
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:EducationalOrganization"
   ],
   "foaf:homepage": {
     "@id": "https://acst.edu.vn/"

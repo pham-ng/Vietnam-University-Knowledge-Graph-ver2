@@ -19,10 +19,10 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vo-van-hoi",
   "@type": [
-    "vnedu:Alumnus",
+    "vnedu:Person",
     "foaf:Person",
-    "schema:Person",
-    "vnedu:Person"
+    "vnedu:Alumnus",
+    "schema:Person"
   ],
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/V%C3%B5_V%C4%83n_H%E1%BB%99i"
@@ -36,23 +36,23 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Võ Văn Hội"
     },
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Võ Văn Hội"
     }
   ],
   "schema:alumniOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-quoc-phong"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-luc-quan"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-si-quan-luc-quan-2-dai-hoc-nguyen-hue"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-quoc-phong"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
@@ -66,16 +66,16 @@
   },
   "vnedu:alumnusOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-luc-quan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-si-quan-luc-quan-2-dai-hoc-nguyen-hue"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-quoc-phong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-luc-quan"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-si-quan-luc-quan-2-dai-hoc-nguyen-hue"
     }
   ],
   "vnedu:birthDate": {

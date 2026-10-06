@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-vo-truong-toan",
   "@type": [
-    "dbo:University",
-    "schema:EducationalOrganization",
-    "vnedu:Organization",
+    "schema:Organization",
     "foaf:Organization",
     "vnedu:UniversitySchool",
     "vnedu:PrivateInstitution",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization"
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity"
   ],
   "foaf:homepage": {
     "@id": "http://vttu.edu.vn"
@@ -57,12 +57,12 @@
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Vo Truong Toàn University"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Võ Trường Toản"
+    },
+    {
+      "@language": "en",
+      "@value": "Vo Truong Toàn University"
     }
   ],
   "schema:employee": {
@@ -73,10 +73,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
     }
   ],
   "skos:prefLabel": {
@@ -93,13 +93,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     }
   ],
   "vnedu:ownership": {

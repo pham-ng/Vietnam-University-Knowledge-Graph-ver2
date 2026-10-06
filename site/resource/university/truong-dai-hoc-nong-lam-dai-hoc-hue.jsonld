@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-nong-lam-dai-hoc-hue",
   "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "dbo:University",
-    "schema:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:MemberInstitution",
+    "schema:Organization",
     "vnedu:UniversitySchool",
     "foaf:Organization",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:MemberInstitution",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
     "schema:CollegeOrUniversity"
   ],
   "foaf:homepage": {
@@ -50,20 +50,20 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75498898"
+      "@id": "wd:Q10829105"
     },
     {
-      "@id": "wd:Q10829105"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75498898"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Nông Lâm, Đại học Huế"
-    },
-    {
       "@language": "en",
       "@value": "Hue University of Agriculture and Forestry"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Nông Lâm, Đại học Huế"
     }
   ],
   "schema:employee": {
@@ -71,13 +71,13 @@
   },
   "schema:location": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     }
   ],
   "schema:parentOrganization": {
@@ -100,10 +100,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
     }
   ],
   "vnedu:memberOf": {

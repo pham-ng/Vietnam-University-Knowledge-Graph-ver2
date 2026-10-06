@@ -32,16 +32,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-hoa-ha-noi",
   "@type": [
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
+    "schema:Organization",
     "vnedu:UniversitySchool",
     "foaf:Organization",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
+    "dbo:University",
     "vnedu:EducationalOrganization",
+    "vnedu:Organization",
     "vnedu:PublicInstitution",
-    "dbo:University"
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity"
   ],
   "foaf:homepage": {
     "@id": "http://www.huc.edu.vn"
@@ -51,28 +51,28 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q10829164"
+      "@id": "https://ror.org/01hxe3g21"
     },
     {
-      "@id": "https://ror.org/01hxe3g21"
+      "@id": "wd:Q10829164"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10829164"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75467635"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75467635"
+      "@id": "wd:Q10829164"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Hanoi University of Culture"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Văn hóa Hà Nội"
+    },
+    {
+      "@language": "en",
+      "@value": "Hanoi University of Culture"
     }
   ],
   "schema:employee": {
@@ -80,10 +80,10 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
@@ -103,6 +103,15 @@
   },
   "vnedu:hasAlumnus": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-tien-dung"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/kieu-my"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vi-hoa"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/serenity-minh-nguyet"
     },
     {
@@ -110,15 +119,6 @@
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/cirna"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-tien-dung"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vi-hoa"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/kieu-my"
     }
   ],
   "vnedu:hasLeader": {
@@ -126,10 +126,10 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
@@ -151,7 +151,7 @@
 <header class="top"><div class="bar">
   <a class="brand" href="/Vietnam-University-Knowledge-Graph-ver2/">VN-Edu <span>LOD</span></a>
   <nav class="main">
-    <a href="/Vietnam-University-Knowledge-Graph-ver2/" class="on">Tổng quan</a><a href="/Vietnam-University-Knowledge-Graph-ver2/map" class="">Bản đồ</a><a href="/Vietnam-University-Knowledge-Graph-ver2/explore" class="">Tra cứu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology" class="">Ontology</a><a href="/Vietnam-University-Knowledge-Graph-ver2/sparql" class="">SPARQL</a><a href="/Vietnam-University-Knowledge-Graph-ver2/dataset" class="">Dataset</a><a href="/Vietnam-University-Knowledge-Graph-ver2/about" class="">Giới thiệu</a>
+    <a href="/Vietnam-University-Knowledge-Graph-ver2/" class="on">Tổng quan</a><a href="/Vietnam-University-Knowledge-Graph-ver2/map" class="">Bản đồ</a><a href="/Vietnam-University-Knowledge-Graph-ver2/explore" class="">Tra cứu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology" class="">Ontology</a><a href="/Vietnam-University-Knowledge-Graph-ver2/sparql" class="">SPARQL</a><a href="/Vietnam-University-Knowledge-Graph-ver2/dataset" class="">Dataset</a><a href="/Vietnam-University-Knowledge-Graph-ver2/about" class="">Giới thiệu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/demo" class="">Demo</a>
   </nav>
   <button class="theme-btn" type="button" aria-label="Đổi giao diện sáng/tối">◐ Giao diện</button>
 </div></header>

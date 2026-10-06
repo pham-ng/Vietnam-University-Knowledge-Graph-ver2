@@ -19,12 +19,12 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-quoc-te-dai-hoc-quoc-gia-ha-noi",
   "@type": [
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
     "vnedu:EducationalOrganization",
+    "vnedu:MemberInstitution",
     "vnedu:Organization",
     "schema:EducationalOrganization",
-    "vnedu:MemberInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "foaf:Organization",
     "vnedu:HigherEducationInstitution"
   ],
@@ -41,31 +41,31 @@
   ],
   "owl:sameAs": [
     {
+      "@id": "dbr:Vietnam_National_University,_Hanoi_–_International_School"
+    },
+    {
       "@id": "wd:Q24902367"
     },
     {
       "@id": "https://ror.org/05n473c60"
-    },
-    {
-      "@id": "dbr:Vietnam_National_University,_Hanoi_–_International_School"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q24902367"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75313286"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75313286"
+      "@id": "wd:Q24902367"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Quốc tế, Đại học Quốc gia Hà Nội"
-    },
-    {
       "@language": "en",
       "@value": "VNU International School"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Quốc tế, Đại học Quốc gia Hà Nội"
     }
   ],
   "schema:employee": {
@@ -73,10 +73,10 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
@@ -102,13 +102,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:memberOf": {

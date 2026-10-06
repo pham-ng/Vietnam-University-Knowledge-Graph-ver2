@@ -19,14 +19,14 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ky-thuat-va-cong-nghe-an-ninh",
   "@type": [
-    "vnedu:Academy",
-    "schema:Organization",
-    "vnedu:PoliceInstitution",
-    "schema:CollegeOrUniversity",
     "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
     "vnedu:Organization",
     "schema:EducationalOrganization",
+    "vnedu:PoliceInstitution",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "vnedu:Academy",
+    "schema:Organization",
     "foaf:Organization",
     "vnedu:HigherEducationInstitution"
   ],
@@ -38,10 +38,10 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q24956646"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75614837"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75614837"
+      "@id": "wd:Q24956646"
     }
   ],
   "rdfs:label": {
@@ -50,10 +50,10 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/bac-ninh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/bac-ninh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
@@ -68,13 +68,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/bac-ninh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "vnedu:ownership": {

@@ -19,9 +19,9 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-nam",
   "@type": [
-    "foaf:Person",
     "schema:Person",
     "vnedu:Person",
+    "foaf:Person",
     "vnedu:Alumnus"
   ],
   "foaf:isPrimaryTopicOf": {
@@ -36,23 +36,23 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Nguyễn Thành Nam"
     },
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Nguyễn Thành Nam"
     }
   ],
   "schema:alumniOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tong-hop-ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-nong-nghiep-viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tong-hop-ha-noi"
     }
   ],
   "schema:gender": {
@@ -63,13 +63,13 @@
   },
   "vnedu:alumnusOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-nong-nghiep-viet-nam"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tong-hop-ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-nong-nghiep-viet-nam"
     }
   ],
   "vnedu:birthDate": {

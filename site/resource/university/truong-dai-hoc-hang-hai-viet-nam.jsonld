@@ -19,26 +19,26 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-hang-hai-viet-nam",
   "@type": [
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
+    "vnedu:PublicInstitution",
     "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "vnedu:UniversitySchool",
     "foaf:Organization",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "dbo:University",
-    "vnedu:Organization"
+    "dbo:University"
   ],
   "foaf:homepage": {
     "@id": "http://vimaru.edu.vn"
   },
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam"
+      "@id": "https://en.wikipedia.org/wiki/Vietnam_Maritime_University"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Vietnam_Maritime_University"
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam"
     }
   ],
   "geo:lat": {
@@ -51,21 +51,21 @@
   },
   "owl:sameAs": [
     {
+      "@id": "wd:Q7928523"
+    },
+    {
       "@id": "dbr:Vietnam_Maritime_University"
     },
     {
       "@id": "https://ror.org/03z9fzp04"
-    },
-    {
-      "@id": "wd:Q7928523"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75526007"
+      "@id": "wd:Q7928523"
     },
     {
-      "@id": "wd:Q7928523"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75526007"
     }
   ],
   "rdfs:label": [
@@ -83,13 +83,13 @@
   },
   "schema:location": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "skos:prefLabel": {
@@ -109,13 +109,13 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-nhat"
     },
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thanh-tam"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-quang-duong"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/mac-trung-kien"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thanh-tam"
     }
   ],
   "vnedu:hasLeader": {
@@ -123,13 +123,13 @@
   },
   "vnedu:locatedIn": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "vnedu:motto": {

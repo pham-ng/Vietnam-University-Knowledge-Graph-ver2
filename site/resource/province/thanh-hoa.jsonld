@@ -19,9 +19,9 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-hoa",
   "@type": [
-    "vnedu:AdministrativeUnit",
     "schema:AdministrativeArea",
-    "vnedu:Province"
+    "vnedu:Province",
+    "vnedu:AdministrativeUnit"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -41,13 +41,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "dbr:Thanh_Hóa_province"
-    },
-    {
       "@id": "https://sws.geonames.org/1566165/"
     },
     {
       "@id": "wd:Q36512"
+    },
+    {
+      "@id": "dbr:Thanh_Hóa_province"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -55,11 +55,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Thanh Hóa"
     },
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Thanh Hóa"
     }
   ],
@@ -69,10 +69,10 @@
   },
   "vnedu:partOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     }
   ],
   "vnedu:population": {

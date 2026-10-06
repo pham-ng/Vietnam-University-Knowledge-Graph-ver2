@@ -19,10 +19,10 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-minh-tam-ta",
   "@type": [
-    "vnedu:Alumnus",
-    "foaf:Person",
     "schema:Person",
-    "vnedu:Person"
+    "vnedu:Person",
+    "foaf:Person",
+    "vnedu:Alumnus"
   ],
   "foaf:name": "Thi Minh Tam Ta",
   "owl:sameAs": {
@@ -43,6 +43,9 @@
   },
   "schema:hasOccupation": [
     {
+      "@id": "wd:Q131850943"
+    },
+    {
       "@id": "wd:Q183257"
     },
     {
@@ -50,9 +53,6 @@
     },
     {
       "@id": "wd:Q1650915"
-    },
-    {
-      "@id": "wd:Q131850943"
     }
   ],
   "vnedu:alumnusOf": {

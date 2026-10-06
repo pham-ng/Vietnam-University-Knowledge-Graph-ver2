@@ -19,26 +19,26 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/y-nhi",
   "@type": [
-    "vnedu:Alumnus",
+    "vnedu:Person",
     "foaf:Person",
-    "schema:Person",
-    "vnedu:Person"
+    "vnedu:Alumnus",
+    "schema:Person"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/%C3%9D_Nhi_%28nh%C3%A0_th%C6%A1%29"
+      "@id": "https://en.wikipedia.org/wiki/%C3%9D_Nhi"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/%C3%9D_Nhi"
+      "@id": "https://vi.wikipedia.org/wiki/%C3%9D_Nhi_%28nh%C3%A0_th%C6%A1%29"
     }
   ],
   "foaf:name": "Ý Nhi",
   "owl:sameAs": [
     {
-      "@id": "wd:Q8046162"
+      "@id": "dbr:Ý_Nhi"
     },
     {
-      "@id": "dbr:Ý_Nhi"
+      "@id": "wd:Q8046162"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -46,12 +46,12 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Y Nhi"
-    },
-    {
       "@language": "vi",
       "@value": "Ý Nhi"
+    },
+    {
+      "@language": "en",
+      "@value": "Y Nhi"
     }
   ],
   "schema:alumniOf": {
@@ -62,10 +62,10 @@
   },
   "schema:hasOccupation": [
     {
-      "@id": "wd:Q36180"
+      "@id": "wd:Q49757"
     },
     {
-      "@id": "wd:Q49757"
+      "@id": "wd:Q36180"
     }
   ],
   "vnedu:alumnusOf": {

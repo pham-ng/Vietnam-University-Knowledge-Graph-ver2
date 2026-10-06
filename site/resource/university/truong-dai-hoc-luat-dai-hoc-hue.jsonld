@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-luat-dai-hoc-hue",
   "@type": [
-    "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
     "vnedu:PublicInstitution",
-    "dbo:University",
     "schema:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:MemberInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "foaf:Organization",
-    "vnedu:UniversitySchool"
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution",
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:MemberInstitution",
+    "vnedu:Organization"
   ],
   "foaf:homepage": {
     "@id": "http://hul.edu.vn/"
@@ -42,10 +42,10 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q61128742"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75224909"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75224909"
+      "@id": "wd:Q61128742"
     }
   ],
   "rdfs:label": [

@@ -19,10 +19,10 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-thi-nguyet-thu",
   "@type": [
-    "vnedu:Alumnus",
+    "vnedu:Person",
     "foaf:Person",
-    "schema:Person",
-    "vnedu:Person"
+    "vnedu:Alumnus",
+    "schema:Person"
   ],
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/Phan_Th%E1%BB%8B_Nguy%E1%BB%87t_Thu"
@@ -46,13 +46,13 @@
   ],
   "schema:alumniOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-canh-sat-nhan-dan"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-luat-dai-hoc-quoc-gia-ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-canh-sat-nhan-dan"
     }
   ],
   "schema:gender": {
@@ -63,13 +63,13 @@
   },
   "vnedu:alumnusOf": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-luat-dai-hoc-quoc-gia-ha-noi"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-canh-sat-nhan-dan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-luat-dai-hoc-quoc-gia-ha-noi"
     }
   ],
   "vnedu:birthDate": {

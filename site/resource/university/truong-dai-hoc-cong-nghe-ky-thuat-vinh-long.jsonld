@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-ky-thuat-vinh-long",
   "@type": [
-    "vnedu:HigherEducationInstitution",
     "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "dbo:University",
-    "schema:EducationalOrganization",
-    "vnedu:Organization",
     "foaf:Organization",
-    "vnedu:UniversitySchool"
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution",
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
+    "vnedu:PublicInstitution",
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity"
   ],
   "foaf:homepage": {
     "@id": "http://vlute.edu.vn/vi"
@@ -54,20 +54,20 @@
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75540456"
+      "@id": "wd:Q108737605"
     },
     {
-      "@id": "wd:Q108737605"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75540456"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Công nghệ Kỹ thuật Vĩnh Long"
-    },
-    {
       "@language": "en",
       "@value": "Vinh Long University of"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Công nghệ Kỹ thuật Vĩnh Long"
     }
   ],
   "schema:employee": {
@@ -75,13 +75,13 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-long"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     }
   ],
   "skos:notation": "VLU",

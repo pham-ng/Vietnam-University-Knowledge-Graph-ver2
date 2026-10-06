@@ -19,26 +19,26 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-hoa-thanh-pho-ho-chi-minh",
   "@type": [
+    "schema:Organization",
+    "foaf:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution",
     "dbo:University",
+    "vnedu:EducationalOrganization",
     "vnedu:Organization",
     "schema:EducationalOrganization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution"
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity"
   ],
   "foaf:homepage": {
     "@id": "https://www.hcmuc.edu.vn"
   },
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Culture"
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C4%83n_h%C3%B3a_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C4%83n_h%C3%B3a_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Culture"
     }
   ],
   "geo:lat": {
@@ -51,10 +51,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q5873981"
+      "@id": "dbr:Ho_Chi_Minh_City_University_of_Culture"
     },
     {
-      "@id": "dbr:Ho_Chi_Minh_City_University_of_Culture"
+      "@id": "wd:Q5873981"
     },
     {
       "@id": "https://ror.org/02xpmtg36"
@@ -70,12 +70,12 @@
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Ho Chi Minh City University of Culture"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Văn hóa Thành phố Hồ Chí Minh"
+    },
+    {
+      "@language": "en",
+      "@value": "Ho Chi Minh City University of Culture"
     }
   ],
   "schema:employee": {
@@ -83,10 +83,10 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
@@ -117,10 +117,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     }
   ],
   "vnedu:motto": {

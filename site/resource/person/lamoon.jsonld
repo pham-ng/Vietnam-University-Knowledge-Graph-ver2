@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/lamoon",
   "@type": [
-    "vnedu:Person",
-    "vnedu:Alumnus",
     "foaf:Person",
-    "schema:Person"
+    "vnedu:Alumnus",
+    "schema:Person",
+    "vnedu:Person"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Lamoon"
+      "@id": "https://en.wikipedia.org/wiki/Lamoon"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Lamoon"
+      "@id": "https://vi.wikipedia.org/wiki/Lamoon"
     }
   ],
   "foaf:name": "Lamoon",
@@ -41,11 +41,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Lamoon"
     },
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Lamoon"
     }
   ],

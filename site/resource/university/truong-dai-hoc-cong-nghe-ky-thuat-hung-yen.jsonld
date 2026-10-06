@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-ky-thuat-hung-yen",
   "@type": [
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
     "dbo:University",
+    "vnedu:EducationalOrganization",
     "vnedu:Organization",
-    "schema:EducationalOrganization"
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
+    "vnedu:UniversitySchool",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution"
   ],
   "foaf:homepage": {
     "@id": "http://www.utehy.edu.vn"
@@ -51,13 +51,13 @@
   },
   "owl:sameAs": [
     {
+      "@id": "https://ror.org/052yjgk16"
+    },
+    {
       "@id": "dbr:Hung_Yen_University_of_Technology_and_Education"
     },
     {
       "@id": "wd:Q7896405"
-    },
-    {
-      "@id": "https://ror.org/052yjgk16"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -83,13 +83,13 @@
   },
   "schema:location": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hung-yen"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hung-yen"
     }
   ],
   "skos:prefLabel": {
@@ -112,13 +112,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hung-yen"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hung-yen"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "vnedu:motto": {

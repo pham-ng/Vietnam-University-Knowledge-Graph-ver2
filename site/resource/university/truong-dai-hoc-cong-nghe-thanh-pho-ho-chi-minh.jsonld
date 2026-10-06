@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-thanh-pho-ho-chi-minh",
   "@type": [
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
     "vnedu:EducationalOrganization",
-    "dbo:University",
-    "schema:EducationalOrganization",
     "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "foaf:Organization",
     "vnedu:UniversitySchool",
     "vnedu:PrivateInstitution",
-    "vnedu:HigherEducationInstitution"
+    "vnedu:HigherEducationInstitution",
+    "dbo:University"
   ],
   "foaf:homepage": {
     "@id": "http://www.hutech.edu.vn/"
@@ -46,20 +46,20 @@
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75132523"
+      "@id": "wd:Q10829029"
     },
     {
-      "@id": "wd:Q10829029"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75132523"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Công nghệ Thành phố Hồ Chí Minh"
-    },
-    {
       "@language": "en",
       "@value": "Ho Chi Minh City University of Technology"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Công nghệ Thành phố Hồ Chí Minh"
     }
   ],
   "schema:location": [
@@ -67,10 +67,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:notation": "DKC",
@@ -92,21 +92,21 @@
   },
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-son-truong"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/mono"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/mono"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-son-truong"
     }
   ],
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:ownership": {

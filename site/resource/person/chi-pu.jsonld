@@ -19,10 +19,10 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/chi-pu",
   "@type": [
-    "vnedu:Alumnus",
+    "vnedu:Person",
     "foaf:Person",
-    "schema:Person",
-    "vnedu:Person"
+    "vnedu:Alumnus",
+    "schema:Person"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -35,10 +35,10 @@
   "foaf:name": "Chi Pu",
   "owl:sameAs": [
     {
-      "@id": "wd:Q27868221"
+      "@id": "dbr:Chi_Pu"
     },
     {
-      "@id": "dbr:Chi_Pu"
+      "@id": "wd:Q27868221"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -62,16 +62,16 @@
   },
   "schema:hasOccupation": [
     {
-      "@id": "wd:Q33999"
-    },
-    {
       "@id": "wd:Q44508716"
     },
     {
-      "@id": "wd:Q4610556"
+      "@id": "wd:Q177220"
     },
     {
-      "@id": "wd:Q177220"
+      "@id": "wd:Q33999"
+    },
+    {
+      "@id": "wd:Q4610556"
     }
   ],
   "vnedu:alumnusOf": {

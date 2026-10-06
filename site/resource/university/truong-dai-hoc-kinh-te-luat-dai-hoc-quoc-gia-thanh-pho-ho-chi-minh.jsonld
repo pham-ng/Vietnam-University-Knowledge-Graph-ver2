@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-luat-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh",
   "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "dbo:University",
-    "schema:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:MemberInstitution",
     "foaf:Organization",
-    "vnedu:UniversitySchool",
     "vnedu:HigherEducationInstitution",
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:MemberInstitution",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
     "schema:Organization",
-    "schema:CollegeOrUniversity"
+    "vnedu:UniversitySchool"
   ],
   "foaf:homepage": {
     "@id": "http://www.uel.edu.vn/"
@@ -55,10 +55,10 @@
       "@id": "https://ror.org/0138jhg57"
     },
     {
-      "@id": "wd:Q10829073"
+      "@id": "dbr:University_of_Economics_and_Law"
     },
     {
-      "@id": "dbr:University_of_Economics_and_Law"
+      "@id": "wd:Q10829073"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -71,12 +71,12 @@
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Kinh tế – Luật, Đại học Quốc gia Thành phố Hồ Chí Minh"
-    },
-    {
       "@language": "en",
       "@value": "VNU-HCM University of Economics and Law"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Kinh tế – Luật, Đại học Quốc gia Thành phố Hồ Chí Minh"
     }
   ],
   "schema:employee": {
@@ -84,10 +84,10 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
@@ -114,10 +114,10 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"

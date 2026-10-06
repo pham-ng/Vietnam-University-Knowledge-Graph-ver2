@@ -19,26 +19,26 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-lac-hong",
   "@type": [
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
     "vnedu:PrivateInstitution",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
     "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
     "schema:EducationalOrganization",
-    "vnedu:Organization"
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
+    "vnedu:UniversitySchool",
+    "foaf:Organization"
   ],
   "foaf:homepage": {
     "@id": "http://lhu.edu.vn/"
   },
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_L%E1%BA%A1c_H%E1%BB%93ng"
+      "@id": "https://en.wikipedia.org/wiki/L%E1%BA%A1c_H%E1%BB%93ng_University"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/L%E1%BA%A1c_H%E1%BB%93ng_University"
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_L%E1%BA%A1c_H%E1%BB%93ng"
     }
   ],
   "geo:lat": {
@@ -51,21 +51,21 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q10829092"
+      "@id": "https://ror.org/03nypmk85"
     },
     {
       "@id": "dbr:Lạc_Hồng_University"
     },
     {
-      "@id": "https://ror.org/03nypmk85"
+      "@id": "wd:Q10829092"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10829092"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75483132"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75483132"
+      "@id": "wd:Q10829092"
     }
   ],
   "rdfs:label": [
@@ -83,13 +83,13 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-nai"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-nai"
     }
   ],
   "skos:prefLabel": {

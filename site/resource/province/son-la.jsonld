@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/son-la",
   "@type": [
+    "vnedu:Province",
     "vnedu:AdministrativeUnit",
-    "schema:AdministrativeArea",
-    "vnedu:Province"
+    "schema:AdministrativeArea"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/S%C6%A1n_La"
+      "@id": "https://en.wikipedia.org/wiki/S%C6%A1n_La_province"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/S%C6%A1n_La_province"
+      "@id": "https://vi.wikipedia.org/wiki/S%C6%A1n_La"
     }
   ],
   "geo:lat": {
@@ -41,13 +41,13 @@
   },
   "owl:sameAs": [
     {
+      "@id": "dbr:Sơn_La_province"
+    },
+    {
       "@id": "https://sws.geonames.org/1567643/"
     },
     {
       "@id": "wd:Q33379"
-    },
-    {
-      "@id": "dbr:Sơn_La_province"
     }
   ],
   "prov:wasDerivedFrom": {

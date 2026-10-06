@@ -19,10 +19,10 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-hoai-bac",
   "@type": [
-    "vnedu:Alumnus",
+    "vnedu:Person",
     "foaf:Person",
-    "schema:Person",
-    "vnedu:Person"
+    "vnedu:Alumnus",
+    "schema:Person"
   ],
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/L%C3%AA_Ho%C3%A0i_B%E1%BA%AFc"
@@ -36,20 +36,20 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Le Hoai Bac"
-    },
-    {
       "@language": "vi",
       "@value": "Lê Hoài Bắc"
+    },
+    {
+      "@language": "en",
+      "@value": "Le Hoai Bac"
     }
   ],
   "schema:alumniOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quy-nhon"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quy-nhon"
     }
   ],
   "schema:gender": {
@@ -60,10 +60,10 @@
   },
   "vnedu:alumnusOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quy-nhon"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quy-nhon"
     }
   ],
   "vnedu:birthDate": {

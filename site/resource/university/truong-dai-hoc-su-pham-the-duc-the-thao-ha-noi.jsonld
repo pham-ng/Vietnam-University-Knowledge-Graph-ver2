@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-the-duc-the-thao-ha-noi",
   "@type": [
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
     "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "dbo:University",
     "vnedu:Organization",
     "schema:EducationalOrganization",
-    "foaf:Organization"
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
+    "foaf:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution",
+    "dbo:University"
   ],
   "foaf:homepage": {
     "@id": "http://dhsptdtthanoi.edu.vn/"
@@ -38,28 +38,28 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q10829134"
+      "@id": "https://ror.org/058gswg76"
     },
     {
-      "@id": "https://ror.org/058gswg76"
+      "@id": "wd:Q10829134"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085454"
+      "@id": "wd:Q10829134"
     },
     {
-      "@id": "wd:Q10829134"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085454"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Sư phạm Thể dục Thể thao Hà Nội"
-    },
-    {
       "@language": "en",
       "@value": "Hanoi University of Education and Sport"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Sư phạm Thể dục Thể thao Hà Nội"
     }
   ],
   "schema:employee": {
@@ -70,10 +70,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:prefLabel": {
@@ -93,10 +93,10 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"

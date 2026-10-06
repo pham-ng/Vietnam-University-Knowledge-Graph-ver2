@@ -20,15 +20,15 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-doan",
   "@type": [
     "foaf:Organization",
-    "vnedu:UniversitySchool",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
     "dbo:University",
+    "vnedu:EducationalOrganization",
     "vnedu:Organization",
-    "schema:EducationalOrganization"
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
+    "vnedu:UniversitySchool"
   ],
   "foaf:homepage": {
     "@id": "http://www.dhcd.edu.vn/"
@@ -38,28 +38,28 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q16480704"
+      "@id": "https://ror.org/05g81h903"
     },
     {
-      "@id": "https://ror.org/05g81h903"
+      "@id": "wd:Q16480704"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q16480704"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085720"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085720"
+      "@id": "wd:Q16480704"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Công đoàn"
-    },
-    {
       "@language": "en",
       "@value": "Trade Union University"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Công đoàn"
     }
   ],
   "schema:employee": {
@@ -67,10 +67,10 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
@@ -86,11 +86,11 @@
   "vnedu:formerName": [
     {
       "@language": "vi",
-      "@value": "Trường Cao cấp Công đoàn"
+      "@value": "Trường Công đoàn Việt Nam"
     },
     {
       "@language": "vi",
-      "@value": "Trường Công đoàn Việt Nam"
+      "@value": "Trường Cao cấp Công đoàn"
     }
   ],
   "vnedu:foundingYear": {
@@ -108,10 +108,10 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"

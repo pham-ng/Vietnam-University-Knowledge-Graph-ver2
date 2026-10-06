@@ -20,14 +20,14 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-khoa-hoc-dai-hoc-hue",
   "@type": [
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
     "dbo:University",
-    "schema:EducationalOrganization",
-    "vnedu:Organization",
+    "vnedu:EducationalOrganization",
     "vnedu:MemberInstitution",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "foaf:Organization",
     "vnedu:UniversitySchool"
   ],
@@ -47,10 +47,10 @@
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10829059"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75580795"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75580795"
+      "@id": "wd:Q10829059"
     }
   ],
   "rdfs:label": [
@@ -68,13 +68,13 @@
   },
   "schema:location": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "schema:parentOrganization": {

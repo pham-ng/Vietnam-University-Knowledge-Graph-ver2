@@ -32,17 +32,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ngoai-ngu-dai-hoc-quoc-gia-ha-noi",
   "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
     "dbo:University",
-    "schema:EducationalOrganization",
-    "vnedu:Organization",
+    "vnedu:EducationalOrganization",
     "vnedu:MemberInstitution",
+    "vnedu:Organization",
+    "vnedu:PublicInstitution",
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "foaf:Organization",
     "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity"
+    "vnedu:HigherEducationInstitution"
   ],
   "foaf:homepage": {
     "@id": "http://www.ulis.vnu.edu.vn/"
@@ -76,20 +76,20 @@
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75506979"
+      "@id": "wd:Q7895616"
     },
     {
-      "@id": "wd:Q7895616"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75506979"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Viet Nam National University of Languages and International Studies"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Ngoại ngữ, Đại học Quốc gia Hà Nội"
+    },
+    {
+      "@language": "en",
+      "@value": "Viet Nam National University of Languages and International Studies"
     }
   ],
   "schema:location": [
@@ -97,10 +97,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "schema:parentOrganization": {
@@ -120,11 +120,11 @@
   "vnedu:formerName": [
     {
       "@language": "vi",
-      "@value": "Trường Ngoại ngữ"
+      "@value": "Trường Đại học Sư phạm Ngoại ngữ Hà Nội"
     },
     {
       "@language": "vi",
-      "@value": "Trường Đại học Sư phạm Ngoại ngữ Hà Nội"
+      "@value": "Trường Ngoại ngữ"
     }
   ],
   "vnedu:foundingYear": {
@@ -136,10 +136,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-quoc-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-thi-minh-hong"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-minh-duc"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-minh-duc"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-thi-minh-hong"
     }
   ],
   "vnedu:locatedIn": [
@@ -147,10 +147,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:memberOf": {
@@ -182,7 +182,7 @@
 <header class="top"><div class="bar">
   <a class="brand" href="/Vietnam-University-Knowledge-Graph-ver2/">VN-Edu <span>LOD</span></a>
   <nav class="main">
-    <a href="/Vietnam-University-Knowledge-Graph-ver2/" class="on">Tổng quan</a><a href="/Vietnam-University-Knowledge-Graph-ver2/map" class="">Bản đồ</a><a href="/Vietnam-University-Knowledge-Graph-ver2/explore" class="">Tra cứu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology" class="">Ontology</a><a href="/Vietnam-University-Knowledge-Graph-ver2/sparql" class="">SPARQL</a><a href="/Vietnam-University-Knowledge-Graph-ver2/dataset" class="">Dataset</a><a href="/Vietnam-University-Knowledge-Graph-ver2/about" class="">Giới thiệu</a>
+    <a href="/Vietnam-University-Knowledge-Graph-ver2/" class="on">Tổng quan</a><a href="/Vietnam-University-Knowledge-Graph-ver2/map" class="">Bản đồ</a><a href="/Vietnam-University-Knowledge-Graph-ver2/explore" class="">Tra cứu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology" class="">Ontology</a><a href="/Vietnam-University-Knowledge-Graph-ver2/sparql" class="">SPARQL</a><a href="/Vietnam-University-Knowledge-Graph-ver2/dataset" class="">Dataset</a><a href="/Vietnam-University-Knowledge-Graph-ver2/about" class="">Giới thiệu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/demo" class="">Demo</a>
   </nav>
   <button class="theme-btn" type="button" aria-label="Đổi giao diện sáng/tối">◐ Giao diện</button>
 </div></header>
@@ -276,16 +276,16 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">có đơn vị thành viên<small>vnedu:hasMember</small></td><td>
+<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-thi-minh-hong">Hoàng Thị Minh Hồng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-minh-duc">Lê Minh Đức</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-quoc-minh">Lê Quốc Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">schema:subOrganization<small>schema:subOrganization</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi">Đại học Quốc gia Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-thi-minh-hong">Hoàng Thị Minh Hồng</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-minh-duc">Lê Minh Đức</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-quoc-minh">Lê Quốc Minh</a></div>
 </td></tr>
-<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-thi-minh-hong">Hoàng Thị Minh Hồng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-minh-duc">Lê Minh Đức</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-quoc-minh">Lê Quốc Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
-<tr><td class="p">schema:subOrganization<small>schema:subOrganization</small></td><td>
+<tr><td class="p">có đơn vị thành viên<small>vnedu:hasMember</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi">Đại học Quốc gia Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>

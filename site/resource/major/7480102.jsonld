@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7480102",
   "@type": [
-    "vnedu:Major",
-    "skos:Concept"
+    "skos:Concept",
+    "vnedu:Major"
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Mạng máy tính và truyền thông dữ liệu"
-    },
-    {
       "@language": "en",
       "@value": "Computer network"
+    },
+    {
+      "@language": "vi",
+      "@value": "Mạng máy tính và truyền thông dữ liệu"
     }
   ],
   "skos:broader": {
@@ -37,10 +37,10 @@
   },
   "skos:closeMatch": [
     {
-      "@id": "dbr:Computer_network"
+      "@id": "wd:Q1301371"
     },
     {
-      "@id": "wd:Q1301371"
+      "@id": "dbr:Computer_network"
     }
   ],
   "skos:notation": "7480102",

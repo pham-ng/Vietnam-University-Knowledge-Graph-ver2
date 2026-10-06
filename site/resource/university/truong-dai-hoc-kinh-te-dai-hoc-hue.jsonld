@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-dai-hoc-hue",
   "@type": [
-    "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
     "vnedu:PublicInstitution",
-    "dbo:University",
     "schema:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:MemberInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "foaf:Organization",
-    "vnedu:UniversitySchool"
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution",
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:MemberInstitution",
+    "vnedu:Organization"
   ],
   "foaf:homepage": {
     "@id": "http://hce.edu.vn/"
@@ -50,12 +50,12 @@
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Hue University of Economics"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Kinh tế, Đại học Huế"
+    },
+    {
+      "@language": "en",
+      "@value": "Hue University of Economics"
     }
   ],
   "schema:employee": {

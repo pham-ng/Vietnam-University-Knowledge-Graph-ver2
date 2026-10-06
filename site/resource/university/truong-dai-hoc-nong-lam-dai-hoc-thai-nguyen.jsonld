@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-nong-lam-dai-hoc-thai-nguyen",
   "@type": [
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
     "vnedu:PublicInstitution",
-    "dbo:University"
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
+    "foaf:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:HigherEducationInstitution",
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:MemberInstitution",
+    "vnedu:Organization"
   ],
   "foaf:homepage": {
     "@id": "http://tuaf.edu.vn/en-Us"
@@ -47,28 +47,28 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/028zxrr95"
+      "@id": "wd:Q10829106"
     },
     {
-      "@id": "wd:Q10829106"
+      "@id": "https://ror.org/028zxrr95"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10829106"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75267393"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75267393"
+      "@id": "wd:Q10829106"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Nông Lâm, Đại học Thái Nguyên"
-    },
-    {
       "@language": "en",
       "@value": "TNU University of Agriculture and Forestry"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Nông Lâm, Đại học Thái Nguyên"
     }
   ],
   "schema:employee": {
@@ -76,13 +76,13 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "schema:parentOrganization": {
@@ -99,10 +99,10 @@
   },
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/do-van-chien"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/trinh-viet-hung"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/trinh-viet-hung"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/do-van-chien"
     }
   ],
   "vnedu:hasLeader": {
@@ -110,13 +110,13 @@
   },
   "vnedu:locatedIn": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "vnedu:memberOf": {

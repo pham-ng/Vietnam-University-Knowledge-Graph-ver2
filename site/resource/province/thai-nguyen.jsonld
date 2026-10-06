@@ -19,9 +19,9 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen",
   "@type": [
-    "vnedu:AdministrativeUnit",
     "schema:AdministrativeArea",
-    "vnedu:Province"
+    "vnedu:Province",
+    "vnedu:AdministrativeUnit"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -41,13 +41,13 @@
   },
   "owl:sameAs": [
     {
+      "@id": "https://sws.geonames.org/1905497/"
+    },
+    {
       "@id": "wd:Q26575"
     },
     {
       "@id": "dbr:Thái_Nguyên_province"
-    },
-    {
-      "@id": "https://sws.geonames.org/1905497/"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -72,10 +72,10 @@
   },
   "vnedu:partOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:population": {

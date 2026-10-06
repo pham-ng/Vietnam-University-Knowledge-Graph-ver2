@@ -19,15 +19,15 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-mien-dong",
   "@type": [
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
     "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
     "schema:EducationalOrganization",
-    "vnedu:Organization"
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
+    "vnedu:UniversitySchool",
+    "foaf:Organization"
   ],
   "foaf:isPrimaryTopicOf": {
     "@id": "https://en.wikipedia.org/wiki/MIT_University_Vietnam"
@@ -42,10 +42,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q134695487"
+      "@id": "https://ror.org/058hj4z31"
     },
     {
-      "@id": "https://ror.org/058hj4z31"
+      "@id": "wd:Q134695487"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -63,13 +63,13 @@
   ],
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-nai"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-nai"
     }
   ],
   "skos:prefLabel": {

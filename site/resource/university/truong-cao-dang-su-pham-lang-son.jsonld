@@ -19,12 +19,12 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-su-pham-lang-son",
   "@type": [
-    "schema:EducationalOrganization",
-    "foaf:Organization",
     "schema:Organization",
-    "vnedu:EducationalOrganization",
+    "foaf:Organization",
     "vnedu:VocationalCollege",
-    "vnedu:Organization"
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
+    "schema:EducationalOrganization"
   ],
   "foaf:homepage": {
     "@id": "https://lce.edu.vn/"
@@ -45,12 +45,12 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Lang Son College of Education"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Cao đẳng Sư phạm Lạng Sơn"
+    },
+    {
+      "@language": "en",
+      "@value": "Lang Son College of Education"
     }
   ],
   "schema:location": [

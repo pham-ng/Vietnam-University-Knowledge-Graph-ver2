@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-khanh-hoa",
   "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
     "dbo:University",
+    "vnedu:EducationalOrganization",
     "vnedu:Organization",
+    "vnedu:PublicInstitution",
     "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "vnedu:UniversitySchool",
     "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity"
+    "vnedu:HigherEducationInstitution"
   ],
   "foaf:homepage": {
     "@id": "http://ukh.edu.vn/"
@@ -46,10 +46,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q10828807"
+      "@id": "https://ror.org/00a4nhr72"
     },
     {
-      "@id": "https://ror.org/00a4nhr72"
+      "@id": "wd:Q10828807"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -62,12 +62,12 @@
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Khánh Hòa"
-    },
-    {
       "@language": "en",
       "@value": "University of Khanh Hoa"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Khánh Hòa"
     }
   ],
   "schema:employee": {
@@ -98,13 +98,13 @@
   },
   "vnedu:locatedIn": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     }
   ],
   "vnedu:ownership": {

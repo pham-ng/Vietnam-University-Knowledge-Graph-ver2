@@ -32,16 +32,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ngoai-thuong",
   "@type": [
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
     "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
+    "vnedu:UniversitySchool",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
     "dbo:University",
-    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
     "vnedu:Organization",
-    "foaf:Organization"
+    "schema:EducationalOrganization"
   ],
   "foaf:homepage": {
     "@id": "https://www.ftu.edu.vn/"
@@ -96,10 +96,10 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
@@ -119,8 +119,8 @@
   },
   "vnedu:address": "91 Chùa Láng, Láng, Hà Nội",
   "vnedu:admissionCode": [
-    "NTS",
-    "NTH"
+    "NTH",
+    "NTS"
   ],
   "vnedu:formerName": {
     "@language": "vi",
@@ -135,25 +135,25 @@
   },
   "vnedu:hasAlumnus": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-tien-loc"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-thi-hong-yen"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/chau-bui"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dung"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-quang-dung"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vuong-dam-minh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phuc-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dung"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-tien-loc"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-quang-dung"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-thi-hong-yen"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dao-bach-lien"
@@ -167,10 +167,10 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
@@ -190,10 +190,10 @@
   },
   "vnedu:offersProgram": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7310101"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7340101"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7340101"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7310101"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7220201"
@@ -217,13 +217,13 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7340101"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7310101"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7340201"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7220201"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7310101"
     }
   ],
   "vnedu:website": {
@@ -236,7 +236,7 @@
 <header class="top"><div class="bar">
   <a class="brand" href="/Vietnam-University-Knowledge-Graph-ver2/">VN-Edu <span>LOD</span></a>
   <nav class="main">
-    <a href="/Vietnam-University-Knowledge-Graph-ver2/" class="on">Tổng quan</a><a href="/Vietnam-University-Knowledge-Graph-ver2/map" class="">Bản đồ</a><a href="/Vietnam-University-Knowledge-Graph-ver2/explore" class="">Tra cứu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology" class="">Ontology</a><a href="/Vietnam-University-Knowledge-Graph-ver2/sparql" class="">SPARQL</a><a href="/Vietnam-University-Knowledge-Graph-ver2/dataset" class="">Dataset</a><a href="/Vietnam-University-Knowledge-Graph-ver2/about" class="">Giới thiệu</a>
+    <a href="/Vietnam-University-Knowledge-Graph-ver2/" class="on">Tổng quan</a><a href="/Vietnam-University-Knowledge-Graph-ver2/map" class="">Bản đồ</a><a href="/Vietnam-University-Knowledge-Graph-ver2/explore" class="">Tra cứu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology" class="">Ontology</a><a href="/Vietnam-University-Knowledge-Graph-ver2/sparql" class="">SPARQL</a><a href="/Vietnam-University-Knowledge-Graph-ver2/dataset" class="">Dataset</a><a href="/Vietnam-University-Knowledge-Graph-ver2/about" class="">Giới thiệu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/demo" class="">Demo</a>
   </nav>
   <button class="theme-btn" type="button" aria-label="Đổi giao diện sáng/tối">◐ Giao diện</button>
 </div></header>
@@ -348,8 +348,8 @@
 <tr><td class="p">do ... đào tạo<small>vnedu:offeredBy</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7220201">Ngôn ngữ Anh – Trường Đại học Ngoại thương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7310101">Kinh tế – Trường Đại học Ngoại thương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7340101">Quản trị kinh doanh – Trường Đại học Ngoại thương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7340201">Tài chính - Ngân hàng – Trường Đại học Ngoại thương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
-<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-thu-huong">Phạm Thu Hương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<tr><td class="p">schema:provider<small>schema:provider</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7220201">Ngôn ngữ Anh – Trường Đại học Ngoại thương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7310101">Kinh tế – Trường Đại học Ngoại thương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7340101">Quản trị kinh doanh – Trường Đại học Ngoại thương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7340201">Tài chính - Ngân hàng – Trường Đại học Ngoại thương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/chau-bui">Châu Bùi</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-quang-dung">Đặng Quang Dũng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dao-bach-lien">Đào Bạch Liên</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dung">Hoàng Dũng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-thi-hong-yen">Phạm Thị Hồng Yến</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/phuc-nguyen">Phuc Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-tien-loc">Vũ Tiến Lộc</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vuong-dam-minh">Vương Đảm Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -360,8 +360,8 @@
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/chau-bui">Châu Bùi</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-quang-dung">Đặng Quang Dũng</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dao-bach-lien">Đào Bạch Liên</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dung">Hoàng Dũng</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-thi-hong-yen">Phạm Thị Hồng Yến</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/phuc-nguyen">Phuc Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-tien-loc">Vũ Tiến Lộc</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vuong-dam-minh">Vương Đảm Minh</a></div>
 </td></tr>
-<tr><td class="p">schema:provider<small>schema:provider</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7220201">Ngôn ngữ Anh – Trường Đại học Ngoại thương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7310101">Kinh tế – Trường Đại học Ngoại thương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7340101">Quản trị kinh doanh – Trường Đại học Ngoại thương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-ngoai-thuong-7340201">Tài chính - Ngân hàng – Trường Đại học Ngoại thương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-thu-huong">Phạm Thu Hương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">là phân hiệu của<small>vnedu:branchOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/phan-hieu-truong-dai-hoc-ngoai-thuong-tai-thanh-pho-ho-chi-minh">Phân hiệu Trường Đại học Ngoại thương tại Thành phố Hồ Chí Minh</a></div>

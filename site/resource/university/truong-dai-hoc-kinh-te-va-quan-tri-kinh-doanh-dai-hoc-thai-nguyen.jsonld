@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-va-quan-tri-kinh-doanh-dai-hoc-thai-nguyen",
   "@type": [
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "dbo:University",
+    "vnedu:MemberInstitution",
     "vnedu:Organization",
     "schema:EducationalOrganization",
-    "vnedu:MemberInstitution",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "vnedu:UniversitySchool",
     "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
+    "vnedu:HigherEducationInstitution",
+    "dbo:University",
+    "vnedu:EducationalOrganization"
   ],
   "foaf:homepage": {
     "@id": "https://tueba.edu.vn/"
@@ -47,28 +47,28 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q10829077"
+      "@id": "https://ror.org/05c275b22"
     },
     {
-      "@id": "https://ror.org/05c275b22"
+      "@id": "wd:Q10829077"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75592822"
+      "@id": "wd:Q10829077"
     },
     {
-      "@id": "wd:Q10829077"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75592822"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Kinh tế và Quản trị kinh doanh, Đại học Thái Nguyên"
-    },
-    {
       "@language": "en",
       "@value": "TNU University of Economics and Business Administration"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Kinh tế và Quản trị kinh doanh, Đại học Thái Nguyên"
     }
   ],
   "schema:employee": {
@@ -76,13 +76,13 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "schema:parentOrganization": {
@@ -104,13 +104,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:memberOf": {

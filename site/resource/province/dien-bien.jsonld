@@ -19,9 +19,9 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dien-bien",
   "@type": [
-    "vnedu:AdministrativeUnit",
     "schema:AdministrativeArea",
-    "vnedu:Province"
+    "vnedu:Province",
+    "vnedu:AdministrativeUnit"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -41,10 +41,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q36955"
+      "@id": "dbr:Điện_Biên_province"
     },
     {
-      "@id": "dbr:Điện_Biên_province"
+      "@id": "wd:Q36955"
     },
     {
       "@id": "https://sws.geonames.org/1905099/"
@@ -69,10 +69,10 @@
   },
   "vnedu:partOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:population": {

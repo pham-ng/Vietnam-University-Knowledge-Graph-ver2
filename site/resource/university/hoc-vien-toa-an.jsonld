@@ -20,14 +20,14 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-toa-an",
   "@type": [
     "vnedu:Organization",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
     "vnedu:Academy",
     "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization"
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:EducationalOrganization"
   ],
   "foaf:homepage": {
     "@id": "https://hvta.toaan.gov.vn/"
@@ -53,12 +53,12 @@
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Học viện Tòa án"
-    },
-    {
       "@language": "en",
       "@value": "Vietnam Court Academy - VCA"
+    },
+    {
+      "@language": "vi",
+      "@value": "Học viện Tòa án"
     }
   ],
   "schema:employee": {
@@ -101,10 +101,10 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
@@ -118,8 +118,8 @@
     "@id": "vnedu:PublicOwnership"
   },
   "vnedu:shortName": [
-    "VCA",
-    "HVTA"
+    "HVTA",
+    "VCA"
   ],
   "vnedu:website": {
     "@id": "https://hvta.toaan.gov.vn/"

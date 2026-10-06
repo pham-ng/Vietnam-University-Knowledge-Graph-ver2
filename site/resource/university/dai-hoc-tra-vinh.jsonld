@@ -19,26 +19,26 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-tra-vinh",
   "@type": [
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "dbo:University",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
+    "schema:Organization",
+    "vnedu:University",
     "foaf:Organization",
     "vnedu:HigherEducationInstitution",
-    "vnedu:University",
-    "schema:Organization"
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity"
   ],
   "foaf:homepage": {
     "@id": "http://www.tvu.edu.vn/"
   },
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Tr%C3%A0_Vinh"
+      "@id": "https://en.wikipedia.org/wiki/Tra_Vinh_University"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Tra_Vinh_University"
+      "@id": "https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Tr%C3%A0_Vinh"
     }
   ],
   "geo:lat": {
@@ -54,18 +54,18 @@
       "@id": "dbr:Tra_Vinh_University"
     },
     {
-      "@id": "wd:Q10829149"
+      "@id": "https://ror.org/05ghhgs79"
     },
     {
-      "@id": "https://ror.org/05ghhgs79"
+      "@id": "wd:Q10829149"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75556505"
+      "@id": "wd:Q10829149"
     },
     {
-      "@id": "wd:Q10829149"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75556505"
     }
   ],
   "rdfs:label": [
@@ -83,9 +83,6 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
@@ -93,6 +90,9 @@
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/tra-vinh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     }
   ],
   "skos:prefLabel": {

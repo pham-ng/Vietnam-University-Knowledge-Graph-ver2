@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/long-an",
   "@type": [
-    "vnedu:FormerProvince",
     "vnedu:AdministrativeUnit",
-    "schema:AdministrativeArea"
+    "schema:AdministrativeArea",
+    "vnedu:FormerProvince"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Long_An_province"
+      "@id": "https://vi.wikipedia.org/wiki/Long_An_%28t%E1%BB%89nh%29"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Long_An_%28t%E1%BB%89nh%29"
+      "@id": "https://en.wikipedia.org/wiki/Long_An_province"
     }
   ],
   "geo:lat": {
@@ -41,13 +41,13 @@
   },
   "owl:sameAs": [
     {
+      "@id": "dbr:Long_An_province"
+    },
+    {
       "@id": "wd:Q26573"
     },
     {
       "@id": "https://sws.geonames.org/1575788/"
-    },
-    {
-      "@id": "dbr:Long_An_province"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -55,11 +55,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Long An"
     },
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Long An"
     }
   ],

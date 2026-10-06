@@ -32,16 +32,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-tai-chinh-thanh-pho-ho-chi-minh",
   "@type": [
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "dbo:University",
-    "vnedu:Organization",
     "schema:EducationalOrganization",
-    "foaf:Organization",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "vnedu:UniversitySchool",
+    "foaf:Organization",
     "vnedu:PrivateInstitution",
-    "vnedu:HigherEducationInstitution"
+    "vnedu:HigherEducationInstitution",
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization"
   ],
   "foaf:homepage": {
     "@id": "https://www.uef.edu.vn/"
@@ -64,10 +64,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q10829074"
+      "@id": "https://ror.org/00rpn1945"
     },
     {
-      "@id": "https://ror.org/00rpn1945"
+      "@id": "wd:Q10829074"
     },
     {
       "@id": "dbr:Ho_Chi_Minh_City_University_of_Economics_and_Finance"
@@ -75,20 +75,20 @@
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10829074"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74954564"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74954564"
+      "@id": "wd:Q10829074"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Ho Chi Minh City University of"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Kinh tế – Tài chính Thành phố Hồ Chí Minh"
+    },
+    {
+      "@language": "en",
+      "@value": "Ho Chi Minh City University of"
     }
   ],
   "schema:employee": {
@@ -96,13 +96,13 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     }
   ],
   "skos:notation": "UEF",
@@ -118,13 +118,13 @@
   },
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-ngoc-chau"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-canh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-dang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-ngoc-chau"
     }
   ],
   "vnedu:hasLeader": {
@@ -132,10 +132,10 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
@@ -161,7 +161,7 @@
 <header class="top"><div class="bar">
   <a class="brand" href="/Vietnam-University-Knowledge-Graph-ver2/">VN-Edu <span>LOD</span></a>
   <nav class="main">
-    <a href="/Vietnam-University-Knowledge-Graph-ver2/" class="on">Tổng quan</a><a href="/Vietnam-University-Knowledge-Graph-ver2/map" class="">Bản đồ</a><a href="/Vietnam-University-Knowledge-Graph-ver2/explore" class="">Tra cứu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology" class="">Ontology</a><a href="/Vietnam-University-Knowledge-Graph-ver2/sparql" class="">SPARQL</a><a href="/Vietnam-University-Knowledge-Graph-ver2/dataset" class="">Dataset</a><a href="/Vietnam-University-Knowledge-Graph-ver2/about" class="">Giới thiệu</a>
+    <a href="/Vietnam-University-Knowledge-Graph-ver2/" class="on">Tổng quan</a><a href="/Vietnam-University-Knowledge-Graph-ver2/map" class="">Bản đồ</a><a href="/Vietnam-University-Knowledge-Graph-ver2/explore" class="">Tra cứu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology" class="">Ontology</a><a href="/Vietnam-University-Knowledge-Graph-ver2/sparql" class="">SPARQL</a><a href="/Vietnam-University-Knowledge-Graph-ver2/dataset" class="">Dataset</a><a href="/Vietnam-University-Knowledge-Graph-ver2/about" class="">Giới thiệu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/demo" class="">Demo</a>
   </nav>
   <button class="theme-btn" type="button" aria-label="Đổi giao diện sáng/tối">◐ Giao diện</button>
 </div></header>
@@ -243,11 +243,11 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-ngoc-chau">Nguyễn Thị Ngọc Châu</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-canh">Nguyễn Văn Cảnh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-dang">Nguyễn Văn Đáng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-ngoc-chau">Nguyễn Thị Ngọc Châu</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-canh">Nguyễn Văn Cảnh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-dang">Nguyễn Văn Đáng</a></div>
+</td></tr>
+<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-ngoc-chau">Nguyễn Thị Ngọc Châu</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-canh">Nguyễn Văn Cảnh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-dang">Nguyễn Văn Đáng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-giang">Nguyễn Thanh Giang</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

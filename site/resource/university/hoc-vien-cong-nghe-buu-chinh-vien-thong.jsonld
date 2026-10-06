@@ -19,14 +19,14 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-cong-nghe-buu-chinh-vien-thong",
   "@type": [
-    "vnedu:PublicInstitution",
     "vnedu:Organization",
     "schema:EducationalOrganization",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
     "vnedu:Academy",
     "schema:Organization",
-    "schema:CollegeOrUniversity",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
     "vnedu:EducationalOrganization"
   ],
   "foaf:homepage": {
@@ -45,10 +45,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/0363rtq22"
+      "@id": "wd:Q10771881"
     },
     {
-      "@id": "wd:Q10771881"
+      "@id": "https://ror.org/0363rtq22"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -74,10 +74,10 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
@@ -107,13 +107,13 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duong-fg"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vi-nguyen-thanh-le"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/lan-v-truong"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/luong-hong-khanh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vi-nguyen-thanh-le"
     }
   ],
   "vnedu:hasLeader": {
@@ -121,13 +121,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     }
   ],
   "vnedu:numberOfStudents": {
@@ -136,13 +136,13 @@
   },
   "vnedu:offersProgram": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-cong-nghe-buu-chinh-vien-thong-7340115"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-cong-nghe-buu-chinh-vien-thong-7520207"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-cong-nghe-buu-chinh-vien-thong-7480202"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-cong-nghe-buu-chinh-vien-thong-7340115"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-cong-nghe-buu-chinh-vien-thong-7480201"
@@ -153,9 +153,6 @@
   },
   "vnedu:trainsMajor": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7340115"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7480202"
     },
     {
@@ -163,6 +160,9 @@
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7520207"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7340115"
     }
   ],
   "vnedu:website": {

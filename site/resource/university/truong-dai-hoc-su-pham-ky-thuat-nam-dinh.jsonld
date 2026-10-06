@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-ky-thuat-nam-dinh",
   "@type": [
-    "schema:EducationalOrganization",
-    "vnedu:Organization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
     "schema:Organization",
-    "schema:CollegeOrUniversity",
+    "vnedu:UniversitySchool",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
+    "dbo:University",
     "vnedu:EducationalOrganization",
+    "vnedu:Organization",
     "vnedu:PublicInstitution",
-    "dbo:University"
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity"
   ],
   "foaf:homepage": {
     "@id": "http://www.nute.edu.vn"
@@ -41,20 +41,20 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10829129"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75373300"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75373300"
+      "@id": "wd:Q10829129"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Sư phạm Kỹ thuật Nam Định"
-    },
-    {
       "@language": "en",
       "@value": "Nam Dinh University of"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Sư phạm Kỹ thuật Nam Định"
     }
   ],
   "schema:employee": {
@@ -85,10 +85,10 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ninh-binh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ninh-binh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"

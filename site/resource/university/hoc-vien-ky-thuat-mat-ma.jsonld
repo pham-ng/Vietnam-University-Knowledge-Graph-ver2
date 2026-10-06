@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ky-thuat-mat-ma",
   "@type": [
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
     "vnedu:PublicInstitution",
     "vnedu:MilitaryInstitution",
-    "vnedu:Organization",
     "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:Academy",
+    "schema:Organization",
     "foaf:Organization",
     "vnedu:HigherEducationInstitution",
-    "vnedu:Academy",
-    "schema:Organization"
+    "vnedu:EducationalOrganization"
   ],
   "foaf:homepage": {
     "@id": "http://actvn.edu.vn/"
@@ -54,20 +54,20 @@
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10771890"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75584030"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75584030"
+      "@id": "wd:Q10771890"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Academy of Cryptography Techniques"
-    },
-    {
       "@language": "vi",
       "@value": "Học viện Kỹ thuật Mật mã"
+    },
+    {
+      "@language": "en",
+      "@value": "Academy of Cryptography Techniques"
     }
   ],
   "schema:location": [
@@ -75,10 +75,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "skos:prefLabel": {
@@ -92,10 +92,10 @@
   },
   "vnedu:governedBy": [
     {
-      "@id": "vnedu:MinistryOfNationalDefence"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ban-co-yeu-chinh-phu-cua-bo-quoc-phong"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ban-co-yeu-chinh-phu-cua-bo-quoc-phong"
+      "@id": "vnedu:MinistryOfNationalDefence"
     }
   ],
   "vnedu:hasAlumnus": {
@@ -106,10 +106,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "vnedu:motto": {

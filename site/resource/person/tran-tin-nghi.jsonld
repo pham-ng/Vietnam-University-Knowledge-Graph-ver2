@@ -21,8 +21,8 @@
   "@type": [
     "schema:Person",
     "vnedu:Person",
-    "vnedu:Alumnus",
-    "foaf:Person"
+    "foaf:Person",
+    "vnedu:Alumnus"
   ],
   "foaf:name": "Trần Tín Nghị",
   "owl:sameAs": {
@@ -33,12 +33,12 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Tran Tin Nghi"
-    },
-    {
       "@language": "vi",
       "@value": "Trần Tín Nghị"
+    },
+    {
+      "@language": "en",
+      "@value": "Tran Tin Nghi"
     }
   ],
   "schema:alumniOf": [
@@ -65,13 +65,13 @@
   ],
   "vnedu:alumnusOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-da-nang"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quy-nhon"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-vinh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-da-nang"
     }
   ],
   "vnedu:birthDate": {

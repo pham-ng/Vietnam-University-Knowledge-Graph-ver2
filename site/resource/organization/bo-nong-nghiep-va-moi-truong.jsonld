@@ -19,12 +19,12 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-nong-nghiep-va-moi-truong",
   "@type": [
-    "vnedu:GoverningBody",
-    "vnedu:Organization",
+    "schema:Organization",
     "vnedu:Ministry",
-    "schema:GovernmentOrganization",
     "foaf:Organization",
-    "schema:Organization"
+    "schema:GovernmentOrganization",
+    "vnedu:GoverningBody",
+    "vnedu:Organization"
   ],
   "owl:sameAs": {
     "@id": "wd:Q135267696"
@@ -35,10 +35,10 @@
   },
   "vnedu:governs": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-lam-nghiep"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-thuy-loi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-thuy-loi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-lam-nghiep"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-nong-nghiep-viet-nam"

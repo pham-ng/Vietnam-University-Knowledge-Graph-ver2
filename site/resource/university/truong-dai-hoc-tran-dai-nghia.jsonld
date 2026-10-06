@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tran-dai-nghia",
   "@type": [
+    "vnedu:Organization",
+    "vnedu:MilitaryInstitution",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "vnedu:UniversitySchool",
     "foaf:Organization",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "vnedu:MilitaryInstitution",
     "dbo:University",
-    "vnedu:Organization",
-    "schema:EducationalOrganization"
+    "vnedu:EducationalOrganization"
   ],
   "foaf:homepage": {
     "@id": "http://tdnu.edu.vn/"
@@ -39,10 +39,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q10829151"
+      "@id": "https://ror.org/05qq5b157"
     },
     {
-      "@id": "https://ror.org/05qq5b157"
+      "@id": "wd:Q10829151"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -55,23 +55,23 @@
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Trần Đại Nghĩa"
-    },
-    {
       "@language": "en",
       "@value": "University of Tran Dai Nghia"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Trần Đại Nghĩa"
     }
   ],
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:prefLabel": {
@@ -84,10 +84,10 @@
   },
   "vnedu:governedBy": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tong-cuc-hau-canky-thuat"
+      "@id": "vnedu:MinistryOfNationalDefence"
     },
     {
-      "@id": "vnedu:MinistryOfNationalDefence"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tong-cuc-hau-canky-thuat"
     }
   ],
   "vnedu:locatedIn": [
@@ -95,10 +95,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:ownership": {

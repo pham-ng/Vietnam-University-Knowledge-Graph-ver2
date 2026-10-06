@@ -19,19 +19,19 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-van-hoa-the-thao-va-du-lich",
   "@type": [
-    "schema:GovernmentOrganization",
-    "foaf:Organization",
     "schema:Organization",
+    "vnedu:Ministry",
+    "foaf:Organization",
+    "schema:GovernmentOrganization",
     "vnedu:GoverningBody",
-    "vnedu:Organization",
-    "vnedu:Ministry"
+    "vnedu:Organization"
   ],
   "owl:sameAs": [
     {
-      "@id": "wd:Q10743686"
+      "@id": "dbr:Ministry_of_Culture,_Sports_and_Tourism_(Vietnam)"
     },
     {
-      "@id": "dbr:Ministry_of_Culture,_Sports_and_Tourism_(Vietnam)"
+      "@id": "wd:Q10743686"
     }
   ],
   "rdfs:label": {
@@ -40,13 +40,13 @@
   },
   "vnedu:governs": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-my-thuat-thanh-pho-ho-chi-minh"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-hoa-thanh-pho-ho-chi-minh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-am-nhac-quoc-gia-viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-my-thuat-thanh-pho-ho-chi-minh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-hoa-ha-noi"

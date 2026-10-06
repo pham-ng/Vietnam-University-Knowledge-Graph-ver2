@@ -19,12 +19,12 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/vien-tran-nhan-tong-dai-hoc-quoc-gia-ha-noi",
   "@type": [
-    "schema:Organization",
+    "foaf:Organization",
     "vnedu:EducationalOrganization",
-    "schema:EducationalOrganization",
-    "vnedu:Organization",
     "vnedu:MemberInstitution",
-    "foaf:Organization"
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "schema:Organization"
   ],
   "foaf:homepage": {
     "@id": "https://tnti.vnu.edu.vn"
@@ -42,12 +42,12 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Viện Trần Nhân Tông, Đại học Quốc gia Hà Nội"
-    },
-    {
       "@language": "en",
       "@value": "Tran Nhan Tong Institute"
+    },
+    {
+      "@language": "vi",
+      "@value": "Viện Trần Nhân Tông, Đại học Quốc gia Hà Nội"
     }
   ],
   "schema:location": [
@@ -55,10 +55,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "schema:parentOrganization": {
@@ -73,10 +73,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:memberOf": {

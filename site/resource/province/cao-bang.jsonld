@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/cao-bang",
   "@type": [
+    "schema:AdministrativeArea",
     "vnedu:Province",
-    "vnedu:AdministrativeUnit",
-    "schema:AdministrativeArea"
+    "vnedu:AdministrativeUnit"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Cao_B%E1%BA%B1ng"
+      "@id": "https://en.wikipedia.org/wiki/Cao_B%E1%BA%B1ng_province"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Cao_B%E1%BA%B1ng_province"
+      "@id": "https://vi.wikipedia.org/wiki/Cao_B%E1%BA%B1ng"
     }
   ],
   "geo:lat": {
@@ -41,13 +41,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://sws.geonames.org/1586182/"
+      "@id": "wd:Q36865"
     },
     {
       "@id": "dbr:Cao_Bằng_province"
     },
     {
-      "@id": "wd:Q36865"
+      "@id": "https://sws.geonames.org/1586182/"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -55,11 +55,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Cao Bằng"
     },
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Cao Bằng"
     }
   ],

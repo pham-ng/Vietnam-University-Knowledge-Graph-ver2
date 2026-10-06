@@ -1,0 +1,163 @@
+<!-- title: Kịch bản demo · VN-Edu LOD -->
+<!-- desc: Trình bày VN-Edu LOD trong khoảng 10 phút: tra cứu URI, dữ liệu máy đọc, tái sử dụng URI và owl:sameAs, suy luận OWL 2 RL, truy vấn SPARQL, bằng chứng 5 sao. -->
+<!--HEAD-->
+<style>
+  .demo { max-width: 920px; }
+  .step { border: 1px solid var(--line); background: var(--surface); border-radius: 12px; padding: 16px 18px; margin: 14px 0; }
+  .step h2 { margin: 0 0 4px; font-size: 18px; display: flex; gap: 10px; align-items: baseline; }
+  .step h2 .n { flex: none; width: 28px; height: 28px; border-radius: 50%; display: inline-grid; place-items: center;
+    background: var(--accent, #2a78d6); color: #fff; font-size: 14px; font-weight: 600; }
+  .step h2 .t { color: var(--muted); font-weight: 400; font-size: 13px; margin-left: auto; }
+  .say { border-left: 3px solid var(--accent, #2a78d6); padding: 2px 0 2px 12px; margin: 10px 0; color: var(--ink); }
+  .say::before { content: "Nói: "; font-weight: 600; }
+  .see { color: var(--muted); font-size: 14px; margin: 6px 0 0; }
+  .see::before { content: "Kết quả mong đợi: "; font-weight: 600; color: var(--ink); }
+  .btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .btns a { border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; text-decoration: none; font-size: 14px; background: var(--bg); }
+  .btns a:hover { border-color: var(--accent, #2a78d6); }
+  .btns a.q::before { content: "▶ "; }
+  .qa { border: 2px solid var(--accent, #2a78d6); }
+  .qa blockquote { margin: 8px 0; font-style: italic; color: var(--muted); }
+  ol.points li { margin: 6px 0; }
+  @media print { .btns a { border: 0; padding: 0; } .btns a::after { content: " (" attr(href) ")"; font-size: 11px; } }
+</style>
+<!--/HEAD-->
+<div class="demo">
+<h1>Kịch bản demo</h1>
+<p class="sub">Trình bày khoảng 10 phút. Mỗi bước có câu nói gợi ý, nút mở đúng trang hoặc chạy sẵn truy vấn, và kết quả mong đợi.
+  Các truy vấn chạy ngay trong trình duyệt (Oxigraph WebAssembly), không cần máy chủ.</p>
+
+<div class="step">
+  <h2><span class="n">1</span>Tổng quan dataset<span class="t">1 phút</span></h2>
+  <p class="say">Đây là đồ thị tri thức mở về giáo dục đại học Việt Nam: 300 cơ sở, 63 tỉnh (34 tỉnh mới và 29 tỉnh cũ),
+    1.668 người, 36.750 triple. Dữ liệu thu từ Wikidata, Wikipedia, DBpedia, OSM, đi qua ba tầng bronze, silver, gold và được kiểm định bằng JSON Schema, SHACL.</p>
+  <div class="btns"><a href="{{ROOT}}">Trang tổng quan</a><a href="{{ROOT}}map">Bản đồ</a><a href="{{ROOT}}explore?q=bach khoa">Tra cứu "bach khoa"</a></div>
+  <p class="see">biểu đồ theo tỉnh 2025, miền, thập kỷ; bản đồ có lớp mật độ theo tỉnh; tra cứu không cần gõ dấu.</p>
+</div>
+
+<div class="step">
+  <h2><span class="n">2</span>Một URI — cho người và cho máy<span class="t">1,5 phút</span></h2>
+  <p class="say">Mỗi thực thể có một HTTP URI công khai, cố định. Mở bằng trình duyệt thì ra trang HTML; thêm đuôi
+    <code>.ttl</code> hoặc <code>.jsonld</code> thì ra RDF. Trong trang HTML cũng nhúng sẵn JSON-LD cho máy đọc.</p>
+  <div class="btns">
+    <a href="{{ROOT}}resource/university/dai-hoc-bach-khoa-ha-noi">ĐH Bách khoa Hà Nội (HTML)</a>
+    <a href="{{ROOT}}resource/university/dai-hoc-bach-khoa-ha-noi.ttl">.ttl</a>
+    <a href="{{ROOT}}resource/university/dai-hoc-bach-khoa-ha-noi.jsonld">.jsonld</a>
+  </div>
+  <p class="see">nhãn vi/en, mã tuyển sinh BKA, loại hình công lập, chủ quản, lãnh đạo, nguồn gốc <code>prov:wasDerivedFrom</code> tới đúng bản sửa đổi Wikipedia, và các liên kết ra ngoài.</p>
+</div>
+
+<div class="step qa">
+  <h2><span class="n">3</span>Câu hỏi của thầy: vì sao không dùng lại URI đã có?<span class="t">3 phút</span></h2>
+  <blockquote>"Tại sao lại tạo URI mới mà không dùng lại các URI đã có?"</blockquote>
+  <p><b>Trả lời ngắn:</b> dự án <b>có dùng lại ở mọi chỗ có thể</b>, và <b>chỉ tạo URI mới cho thực thể mà mình tự công bố dữ kiện</b>,
+    rồi dùng <code>owl:sameAs</code> để khẳng định đó cùng là một thực thể với URI đã có. Đây là khuyến nghị của W3C
+    (<i>Best Practices for Publishing Linked Data</i>).</p>
+  <ol class="points">
+    <li><b>Dùng lại từ vựng:</b> 72% triple dùng thuộc tính chuẩn (rdfs, schema.org, foaf, prov, geo, skos); mọi lớp riêng
+      đều là <code>rdfs:subClassOf</code> lớp của schema.org / FOAF / DBpedia.
+      <div class="btns"><a class="q" data-q="vocab" href="#">Đếm triple: từ vựng chuẩn và vnedu</a></div></li>
+    <li><b>Dùng lại URI làm giá trị:</b> nghề nghiệp và giới tính trỏ thẳng tới URI Wikidata (217 URI), không tạo URI riêng
+      vì mình không mô tả gì thêm về chúng.
+      <div class="btns"><a class="q" data-q="reuse" href="#">Nghề nghiệp = URI Wikidata</a></div></li>
+    <li><b>owl:sameAs — trỏ về cùng một thực thể:</b> 85% thực thể tự tạo có <code>owl:sameAs</code> tới Wikidata (1.878), DBpedia (258),
+      ROR (195), GeoNames (63), đều đã kiểm chứng.
+      <div class="btns"><a class="q" data-q="sameas" href="#">sameAs của ĐH Bách khoa HN</a>
+        <a href="https://www.wikidata.org/wiki/Q3075696">Mở Q3075696 trên Wikidata</a></div></li>
+    <li><b>sameAs còn dùng để gộp trùng:</b> Wikidata có item trùng nhau; mình gộp về <b>một</b> URI, kèm sameAs tới tất cả.
+      <div class="btns"><a class="q" data-q="merged" href="#">Thực thể khớp nhiều QID</a></div></li>
+    <li><b>Vì sao vẫn cần URI riêng:</b> (a) nguyên tắc Linked Data số 3, tức tra cứu URI phải trả về dữ kiện <i>của mình</i>
+      (mã tuyển sinh, tỉnh sau sáp nhập 2025, kết quả suy luận), điều mình không làm được trên URI Wikidata;
+      (b) không trộn nguồn gốc dữ kiện của hai dataset; (c) nhiều thực thể Wikidata không có (ngành theo TT 09/2022, quan hệ sáp nhập tỉnh);
+      (d) mình chịu trách nhiệm cho không gian tên của mình; (e) ngành đào tạo chỉ <i>gần giống</i> ngành khoa học nên dùng
+      <code>skos:closeMatch</code>, không phải sameAs.</li>
+    <li><b>Lợi ích của sameAs khi truy vấn:</b> đi theo sameAs sang Wikidata để lấy diện tích tỉnh, rồi tính mật độ trường, là dữ kiện
+      mình không lưu (truy vấn federated 12–13, chạy trên Fuseki).</li>
+  </ol>
+  <p class="see">truy vấn nghề nghiệp ra <code>wd:Q1650915</code> nhà nghiên cứu (740 người), <code>wd:Q82955</code> chính khách (164)…;
+    ĐH Luật Hà Nội khớp 3 QID; từ vựng chuẩn 28.623 triple so với vnedu 8.127.</p>
+  <div class="btns"><a href="{{ROOT}}about">Trang Giới thiệu</a>
+    <a href="https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/docs/uri-strategy.md">docs/uri-strategy.md</a></div>
+</div>
+
+<div class="step">
+  <h2><span class="n">4</span>Ontology và suy luận<span class="t">2 phút</span></h2>
+  <p class="say">Ontology theo OWL 2 RL, có lớp định nghĩa, chuỗi thuộc tính, lớp rời nhau. Ví dụ: dữ liệu gốc chỉ ghi Trường ĐH Thủ Dầu Một
+    ở <b>Bình Dương</b>; nhờ chuỗi <code>locatedIn ∘ mergedInto</code> và <code>locatedIn ∘ partOf</code>, máy tự suy ra trường
+    thuộc <b>TP. Hồ Chí Minh</b> (sau sáp nhập 2025) và <b>Nam Bộ</b>. Trang thực thể đánh dấu rõ triple nào do suy luận sinh ra.</p>
+  <div class="btns">
+    <a href="{{ROOT}}ontology">Cây ontology</a>
+    <a href="{{ROOT}}resource/university/truong-dai-hoc-thu-dau-mot">ĐH Thủ Dầu Một</a>
+    <a href="{{ROOT}}resource/university/hoc-vien-ky-thuat-quan-su">HV Kỹ thuật Quân sự (tự xếp vào MilitaryInstitution)</a>
+    <a class="q" data-i="0" href="#">Số trường theo 34 tỉnh mới</a>
+    <a class="q" data-i="2" href="#">Trường quân đội & công an</a>
+  </div>
+  <p class="see">dữ liệu khẳng định 17.940 triple, suy luận thêm 14.484 triple; kiểm tra nhất quán 0 mâu thuẫn (repo cũ có 349).</p>
+</div>
+
+<div class="step">
+  <h2><span class="n">5</span>Câu hỏi phức tạp: tổng hợp, so sánh<span class="t">1,5 phút</span></h2>
+  <div class="btns">
+    <a class="q" data-i="1" href="#">Theo miền × loại hình sở hữu</a>
+    <a class="q" data-i="5" href="#">Tỉnh cũ → tỉnh mới (NQ 202/2025)</a>
+    <a class="q" data-i="3" href="#">Tra mã trường tuyển sinh</a>
+    <a class="q" data-i="8" href="#">Cựu sinh viên nổi tiếng</a>
+    <a class="q" data-i="10" href="#">Thống kê liên kết 5 sao</a>
+  </div>
+  <p class="see">Bắc Bộ 136, Nam Bộ 79, Trung Bộ 48 cơ sở, tách công lập / tư thục; kết quả trùng với Fuseki.</p>
+</div>
+
+<div class="step">
+  <h2><span class="n">6</span>Bằng chứng 5 sao<span class="t">1 phút</span></h2>
+  <p class="say">★ có trên Web, giấy phép mở CC BY-SA 4.0. ★★ ★★★ có cấu trúc, định dạng mở. ★★★★ chuẩn W3C (RDF, OWL, SHACL, SPARQL,
+    PROV-O, VoID/DCAT, JSON-LD) và 2.211 URI công khai tra cứu được. ★★★★★ liên kết tới Wikidata, DBpedia, ROR, GeoNames;
+    đã kiểm tra mẫu 150/150 liên kết còn sống.</p>
+  <div class="btns">
+    <a href="{{ROOT}}dataset">VoID + DCAT (giấy phép, linkset)</a>
+    <a href="{{ROOT}}download/vnedu-all.ttl">Tải dump Turtle</a>
+    <a href="https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2">Mã nguồn GitHub</a>
+  </div>
+  <p class="say">Hạn chế, nói trung thực: GitHub Pages là hosting tĩnh nên không có SPARQL endpoint HTTP công khai và không có content negotiation;
+    truy vấn federated chạy trên Fuseki cục bộ; ngành và chương trình đào tạo mới là dữ liệu mẫu.</p>
+  <div class="btns"><a href="https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/docs/audit.md">docs/audit.md</a></div>
+</div>
+</div>
+
+<script>
+(async () => {
+  const P = `PREFIX vnedu: <{{BASE}}ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <https://schema.org/>
+`;
+  const Q = {
+    reuse: P + `# Tái sử dụng URI Wikidata làm GIÁ TRỊ: nghề nghiệp không tạo URI mới
+SELECT ?nghe_nghiep ?ten (COUNT(?nguoi) AS ?so_nguoi) WHERE {
+  ?nguoi schema:hasOccupation ?nghe_nghiep .
+  ?nghe_nghiep rdfs:label ?ten . FILTER(lang(?ten) = "vi")
+} GROUP BY ?nghe_nghiep ?ten ORDER BY DESC(?so_nguoi) LIMIT 10`,
+    sameas: P + `# Một thực thể của ta — nhiều URI đã có trỏ về cùng nó (owl:sameAs)
+SELECT ?truong ?dich WHERE {
+  ?truong vnedu:admissionCode "BKA" ; owl:sameAs ?dich .
+}`,
+    merged: P + `# Gộp trùng: một URI của ta khớp với NHIỀU item Wikidata
+SELECT ?thuc_the ?ten (COUNT(?wd) AS ?so_qid) (GROUP_CONCAT(STR(?wd); separator=" ") AS ?qids) WHERE {
+  ?thuc_the owl:sameAs ?wd ; rdfs:label ?ten . FILTER(lang(?ten) = "vi")
+  FILTER(STRSTARTS(STR(?wd), "http://www.wikidata.org/entity/"))
+} GROUP BY ?thuc_the ?ten HAVING (COUNT(?wd) > 1)`,
+    vocab: P + `# Số triple dùng từ vựng chuẩn tái sử dụng so với từ vựng vnedu tự định nghĩa
+SELECT ?tu_vung (COUNT(*) AS ?so_triple) WHERE {
+  ?s ?p ?o .
+  BIND(IF(STRSTARTS(STR(?p), STR(vnedu:)), "vnedu (tự định nghĩa)", "từ vựng chuẩn tái sử dụng") AS ?tu_vung)
+} GROUP BY ?tu_vung`,
+  };
+  let examples = [];
+  try { examples = await (await fetch("{{ROOT}}data/queries.json")).json(); } catch (e) {}
+  document.querySelectorAll("a.q").forEach(a => {
+    const text = a.dataset.q ? Q[a.dataset.q] : (examples[+a.dataset.i] || {}).text;
+    if (!text) return;
+    a.href = "{{ROOT}}sparql?q=" + encodeURIComponent(text);
+    if (!a.dataset.q && examples[+a.dataset.i]) a.title = examples[+a.dataset.i].title;
+  });
+})();
+</script>

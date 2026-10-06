@@ -19,26 +19,26 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-nguyen-va-moi-truong-ha-noi",
   "@type": [
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
     "dbo:University",
-    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
     "vnedu:Organization",
+    "vnedu:PublicInstitution",
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "foaf:Organization",
     "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "schema:Organization"
+    "vnedu:HigherEducationInstitution"
   ],
   "foaf:homepage": {
     "@id": "http://hunre.edu.vn"
   },
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Hanoi_University_of_Natural_Resources_and_Environment"
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_T%C3%A0i_nguy%C3%AAn_v%C3%A0_M%C3%B4i_tr%C6%B0%E1%BB%9Dng_H%C3%A0_N%E1%BB%99i"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_T%C3%A0i_nguy%C3%AAn_v%C3%A0_M%C3%B4i_tr%C6%B0%E1%BB%9Dng_H%C3%A0_N%E1%BB%99i"
+      "@id": "https://en.wikipedia.org/wiki/Hanoi_University_of_Natural_Resources_and_Environment"
     }
   ],
   "geo:lat": {
@@ -51,31 +51,31 @@
   },
   "owl:sameAs": [
     {
-      "@id": "dbr:Hanoi_University_of_Natural_Resources_and_Environment"
+      "@id": "https://ror.org/00gxs8147"
     },
     {
       "@id": "wd:Q18461615"
     },
     {
-      "@id": "https://ror.org/00gxs8147"
+      "@id": "dbr:Hanoi_University_of_Natural_Resources_and_Environment"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q18461615"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75594680"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75594680"
+      "@id": "wd:Q18461615"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Hanoi University of Natural Resources and Environment"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Tài nguyên và Môi trường Hà Nội"
+    },
+    {
+      "@language": "en",
+      "@value": "Hanoi University of Natural Resources and Environment"
     }
   ],
   "schema:employee": {
@@ -86,10 +86,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "skos:prefLabel": {
@@ -116,10 +116,10 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"

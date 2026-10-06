@@ -19,13 +19,13 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/phan-hieu-truong-dai-hoc-ngoai-thuong-tai-thanh-pho-ho-chi-minh",
   "@type": [
-    "schema:Organization",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
     "foaf:Organization",
-    "vnedu:Branch"
+    "vnedu:Branch",
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
+    "vnedu:PublicInstitution",
+    "schema:EducationalOrganization",
+    "schema:Organization"
   ],
   "foaf:homepage": {
     "@id": "https://hcmc.ftu.edu.vn/"
@@ -46,20 +46,20 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75238908"
+      "@id": "wd:Q10829100"
     },
     {
-      "@id": "wd:Q10829100"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75238908"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Phân hiệu Trường Đại học Ngoại thương tại Thành phố Hồ Chí Minh"
-    },
-    {
       "@language": "en",
       "@value": "Foreign Trade University, Ho Chi Minh City Branch"
+    },
+    {
+      "@language": "vi",
+      "@value": "Phân hiệu Trường Đại học Ngoại thương tại Thành phố Hồ Chí Minh"
     }
   ],
   "schema:location": [
@@ -67,10 +67,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:prefLabel": {
@@ -95,13 +95,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:motto": {

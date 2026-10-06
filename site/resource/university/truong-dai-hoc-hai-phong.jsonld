@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-hai-phong",
   "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "dbo:University",
-    "schema:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:UniversitySchool",
     "foaf:Organization",
+    "vnedu:UniversitySchool",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity"
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization"
   ],
   "foaf:homepage": {
     "@id": "http://www.dhhp.edu.vn/"
@@ -51,10 +51,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q5638944"
+      "@id": "dbr:Haiphong_University"
     },
     {
-      "@id": "dbr:Haiphong_University"
+      "@id": "wd:Q5638944"
     },
     {
       "@id": "https://ror.org/0227kwk61"
@@ -70,12 +70,12 @@
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Hải Phòng"
-    },
-    {
       "@language": "en",
       "@value": "Hai Phong University"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Hải Phòng"
     }
   ],
   "schema:employee": {
@@ -109,13 +109,13 @@
   },
   "vnedu:locatedIn": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "vnedu:ownership": {

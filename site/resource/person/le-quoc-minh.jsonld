@@ -19,26 +19,26 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-quoc-minh",
   "@type": [
-    "foaf:Person",
     "schema:Person",
     "vnedu:Person",
+    "foaf:Person",
     "vnedu:Alumnus"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/L%C3%AA_Qu%E1%BB%91c_Minh"
+      "@id": "https://vi.wikipedia.org/wiki/L%C3%AA_Qu%E1%BB%91c_Minh"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/L%C3%AA_Qu%E1%BB%91c_Minh"
+      "@id": "https://en.wikipedia.org/wiki/L%C3%AA_Qu%E1%BB%91c_Minh"
     }
   ],
   "foaf:name": "Lê Quốc Minh",
   "owl:sameAs": [
     {
-      "@id": "dbr:Lê_Quốc_Minh"
+      "@id": "wd:Q98748545"
     },
     {
-      "@id": "wd:Q98748545"
+      "@id": "dbr:Lê_Quốc_Minh"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -56,13 +56,13 @@
   ],
   "schema:alumniOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ngoai-ngu-dai-hoc-quoc-gia-ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-ha-noi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
     }
   ],
   "schema:gender": {
@@ -78,13 +78,13 @@
   ],
   "vnedu:alumnusOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ngoai-ngu-dai-hoc-quoc-gia-ha-noi"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ngoai-ngu-dai-hoc-quoc-gia-ha-noi"
     }
   ]
 }

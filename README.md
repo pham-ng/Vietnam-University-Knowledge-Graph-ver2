@@ -7,7 +7,7 @@ tiếng Việt), được **đối chiếu chéo**, mô hình hoá bằng một 
 
 🌐 **Bản công bố:** <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/> — [bản đồ](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/map) ·
 [tra cứu](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/explore) · [cây ontology](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology) ·
-[SPARQL trong trình duyệt](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/sparql) · [VoID/DCAT](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset) ·
+[SPARQL trong trình duyệt](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/sparql) · [VoID/DCAT](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset) · [**kịch bản demo**](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/demo) ·
 ví dụ URI: [`…/resource/university/dai-hoc-bach-khoa-ha-noi`](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi)
 ([.ttl](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi.ttl))
 

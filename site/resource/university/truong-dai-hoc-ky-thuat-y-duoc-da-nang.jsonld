@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ky-thuat-y-duoc-da-nang",
   "@type": [
-    "dbo:University",
-    "schema:EducationalOrganization",
     "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "foaf:Organization",
     "vnedu:UniversitySchool",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution"
+    "dbo:University",
+    "vnedu:EducationalOrganization"
   ],
   "foaf:homepage": {
     "@id": "https://dhktyduocdn.edu.vn/"
@@ -46,20 +46,20 @@
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75539276"
+      "@id": "wd:Q109435303"
     },
     {
-      "@id": "wd:Q109435303"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75539276"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Da Nang University of Medical Technology and Pharmacy"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Kỹ thuật Y Dược Đà Nẵng"
+    },
+    {
+      "@language": "en",
+      "@value": "Da Nang University of Medical Technology and Pharmacy"
     }
   ],
   "schema:employee": {
@@ -67,13 +67,13 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     }
   ],
   "skos:notation": "YDN",
@@ -90,7 +90,7 @@
   "vnedu:formerName": [
     {
       "@language": "vi",
-      "@value": "Trường Cán bộ Quân - Dân y Trung Trung Bộ"
+      "@value": "Trường Đại học Kỹ thuật Y - Dược Đà Nẵng"
     },
     {
       "@language": "vi",
@@ -98,7 +98,7 @@
     },
     {
       "@language": "vi",
-      "@value": "Trường Đại học Kỹ thuật Y - Dược Đà Nẵng"
+      "@value": "Trường Cán bộ Quân - Dân y Trung Trung Bộ"
     },
     {
       "@language": "vi",
@@ -117,10 +117,10 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"

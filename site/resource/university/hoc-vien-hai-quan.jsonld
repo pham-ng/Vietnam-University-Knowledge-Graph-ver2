@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-hai-quan",
   "@type": [
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
     "vnedu:MilitaryInstitution",
     "schema:EducationalOrganization",
-    "vnedu:Organization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "vnedu:Academy",
+    "schema:Organization",
     "foaf:Organization",
     "vnedu:HigherEducationInstitution",
-    "vnedu:Academy",
-    "schema:Organization"
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization"
   ],
   "foaf:homepage": {
     "@id": "http://hocvienhaiquan.edu.vn/"
@@ -54,18 +54,18 @@
       "@id": "https://ror.org/02wqs8977"
     },
     {
-      "@id": "wd:Q7928533"
+      "@id": "dbr:Vietnam_Naval_Academy"
     },
     {
-      "@id": "dbr:Vietnam_Naval_Academy"
+      "@id": "wd:Q7928533"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q7928533"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75022945"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75022945"
+      "@id": "wd:Q7928533"
     }
   ],
   "rdfs:label": [
@@ -100,21 +100,21 @@
   },
   "vnedu:governedBy": [
     {
-      "@id": "vnedu:MinistryOfNationalDefence"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/quan-chung-hai-quan"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/quan-chung-hai-quan"
+      "@id": "vnedu:MinistryOfNationalDefence"
     }
   ],
   "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:ownership": {

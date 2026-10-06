@@ -19,12 +19,12 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/vien-dao-tao-y-hoc-du-phong-va-y-te-cong-cong",
   "@type": [
-    "schema:EducationalOrganization",
     "vnedu:MemberInstitution",
-    "foaf:Organization",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
     "schema:Organization",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization"
+    "foaf:Organization",
+    "vnedu:EducationalOrganization"
   ],
   "foaf:homepage": {
     "@id": "https://spmph.edu.vn/"
@@ -45,12 +45,12 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Institute for Preventive Medicine and Public Health"
-    },
-    {
       "@language": "vi",
       "@value": "Viện Đào tạo Y học dự phòng và Y tế công cộng"
+    },
+    {
+      "@language": "en",
+      "@value": "Institute for Preventive Medicine and Public Health"
     }
   ],
   "schema:location": [
@@ -58,10 +58,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "schema:parentOrganization": {

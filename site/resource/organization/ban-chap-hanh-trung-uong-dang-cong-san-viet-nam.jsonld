@@ -19,18 +19,18 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ban-chap-hanh-trung-uong-dang-cong-san-viet-nam",
   "@type": [
-    "vnedu:GoverningBody",
-    "vnedu:Organization",
+    "schema:Organization",
     "foaf:Organization",
     "schema:GovernmentOrganization",
-    "schema:Organization"
+    "vnedu:Organization",
+    "vnedu:GoverningBody"
   ],
   "owl:sameAs": [
     {
-      "@id": "dbr:Central_Committee_of_the_Communist_Party_of_Vietnam"
+      "@id": "wd:Q5060621"
     },
     {
-      "@id": "wd:Q5060621"
+      "@id": "dbr:Central_Committee_of_the_Communist_Party_of_Vietnam"
     }
   ],
   "rdfs:label": [

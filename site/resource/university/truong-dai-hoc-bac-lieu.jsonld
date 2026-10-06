@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-bac-lieu",
   "@type": [
+    "vnedu:Organization",
+    "vnedu:PublicInstitution",
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "vnedu:UniversitySchool",
     "foaf:Organization",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
     "dbo:University",
-    "vnedu:Organization",
-    "schema:EducationalOrganization"
+    "vnedu:EducationalOrganization"
   ],
   "foaf:homepage": {
     "@id": "https://blu.edu.vn/"
@@ -46,28 +46,28 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/0447bxp64"
+      "@id": "wd:Q10829021"
     },
     {
-      "@id": "wd:Q10829021"
+      "@id": "https://ror.org/0447bxp64"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10829021"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74669284"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74669284"
+      "@id": "wd:Q10829021"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Bạc Liêu"
-    },
-    {
       "@language": "en",
       "@value": "Bac Lieu University"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Bạc Liêu"
     }
   ],
   "schema:employee": {
@@ -75,7 +75,7 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/bac-lieu"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ca-mau"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
@@ -84,7 +84,7 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ca-mau"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/bac-lieu"
     }
   ],
   "skos:prefLabel": {
@@ -108,7 +108,7 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/bac-lieu"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ca-mau"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
@@ -117,7 +117,7 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ca-mau"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/bac-lieu"
     }
   ],
   "vnedu:numberOfStudents": {

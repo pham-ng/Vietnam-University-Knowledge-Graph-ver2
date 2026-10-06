@@ -19,13 +19,13 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-quoc-gia-am-nhac-va-kich-nghe",
   "@type": [
-    "vnedu:HigherEducationInstitution",
     "schema:Organization",
-    "schema:CollegeOrUniversity",
+    "foaf:Organization",
+    "vnedu:HigherEducationInstitution",
     "vnedu:EducationalOrganization",
     "vnedu:Organization",
     "schema:EducationalOrganization",
-    "foaf:Organization"
+    "schema:CollegeOrUniversity"
   ],
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_Qu%E1%BB%91c_gia_%C3%82m_nh%E1%BA%A1c_v%C3%A0_K%E1%BB%8Bch_ngh%E1%BB%87"
@@ -35,10 +35,10 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10828875"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75480943"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75480943"
+      "@id": "wd:Q10828875"
     }
   ],
   "rdfs:label": {
@@ -55,13 +55,13 @@
   },
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-cuong"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ngoc-ngan"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dieu-duc"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ngoc-ngan"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-cuong"
     }
   ]
 }

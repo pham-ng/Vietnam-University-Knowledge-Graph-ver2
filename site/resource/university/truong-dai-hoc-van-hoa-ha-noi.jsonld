@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-hoa-ha-noi",
   "@type": [
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
+    "schema:Organization",
     "vnedu:UniversitySchool",
     "foaf:Organization",
     "vnedu:HigherEducationInstitution",
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
+    "dbo:University",
     "vnedu:EducationalOrganization",
+    "vnedu:Organization",
     "vnedu:PublicInstitution",
-    "dbo:University"
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity"
   ],
   "foaf:homepage": {
     "@id": "http://www.huc.edu.vn"
@@ -38,28 +38,28 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q10829164"
+      "@id": "https://ror.org/01hxe3g21"
     },
     {
-      "@id": "https://ror.org/01hxe3g21"
+      "@id": "wd:Q10829164"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10829164"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75467635"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75467635"
+      "@id": "wd:Q10829164"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Hanoi University of Culture"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Văn hóa Hà Nội"
+    },
+    {
+      "@language": "en",
+      "@value": "Hanoi University of Culture"
     }
   ],
   "schema:employee": {
@@ -67,10 +67,10 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
@@ -90,6 +90,15 @@
   },
   "vnedu:hasAlumnus": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-tien-dung"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/kieu-my"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vi-hoa"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/serenity-minh-nguyet"
     },
     {
@@ -97,15 +106,6 @@
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/cirna"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-tien-dung"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vi-hoa"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/kieu-my"
     }
   ],
   "vnedu:hasLeader": {
@@ -113,10 +113,10 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"

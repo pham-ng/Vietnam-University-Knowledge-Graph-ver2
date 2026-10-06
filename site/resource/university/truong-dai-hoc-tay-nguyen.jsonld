@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tay-nguyen",
   "@type": [
-    "vnedu:HigherEducationInstitution",
     "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "dbo:University",
-    "schema:EducationalOrganization",
-    "vnedu:Organization",
+    "vnedu:UniversitySchool",
     "foaf:Organization",
-    "vnedu:UniversitySchool"
+    "vnedu:HigherEducationInstitution",
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
+    "vnedu:PublicInstitution",
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity"
   ],
   "foaf:homepage": {
     "@id": "https://www.ttn.edu.vn/"
@@ -46,20 +46,20 @@
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75533243"
+      "@id": "wd:Q16480583"
     },
     {
-      "@id": "wd:Q16480583"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75533243"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Tay Nguyen University"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Tây Nguyên"
+    },
+    {
+      "@language": "en",
+      "@value": "Tay Nguyen University"
     }
   ],
   "schema:employee": {
@@ -67,13 +67,13 @@
   },
   "schema:location": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dak-lak"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     }
   ],
   "skos:notation": "TTN",

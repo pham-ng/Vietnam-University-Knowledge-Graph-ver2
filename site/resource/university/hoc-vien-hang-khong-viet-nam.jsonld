@@ -19,25 +19,25 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-hang-khong-viet-nam",
   "@type": [
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
     "vnedu:PublicInstitution",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:Academy",
+    "schema:Organization",
     "foaf:Organization",
     "vnedu:HigherEducationInstitution",
-    "vnedu:Academy",
-    "schema:Organization"
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
+    "schema:EducationalOrganization"
   ],
   "foaf:homepage": {
     "@id": "https://vaa.edu.vn/"
   },
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Vietnam_Aviation_Academy"
+      "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam"
+      "@id": "https://en.wikipedia.org/wiki/Vietnam_Aviation_Academy"
     }
   ],
   "geo:lat": {
@@ -50,13 +50,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/05da5vm76"
+      "@id": "dbr:Vietnam_Aviation_Academy"
     },
     {
       "@id": "wd:Q302448"
     },
     {
-      "@id": "dbr:Vietnam_Aviation_Academy"
+      "@id": "https://ror.org/05da5vm76"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -79,13 +79,13 @@
   ],
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:prefLabel": {
@@ -101,13 +101,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:ownership": {

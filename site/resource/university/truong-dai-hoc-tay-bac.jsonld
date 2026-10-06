@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tay-bac",
   "@type": [
-    "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
+    "vnedu:HigherEducationInstitution",
     "dbo:University",
-    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
     "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
+    "schema:Organization",
     "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
+    "foaf:Organization"
   ],
   "foaf:homepage": {
     "@id": "https://utb.edu.vn/"
@@ -49,20 +49,20 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10829156"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085529"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085529"
+      "@id": "wd:Q10829156"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Tây Bắc"
-    },
-    {
       "@language": "en",
       "@value": "Tay Bac University"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Tây Bắc"
     }
   ],
   "schema:employee": {
@@ -70,13 +70,13 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/son-la"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/son-la"
     }
   ],
   "skos:notation": "TTB",

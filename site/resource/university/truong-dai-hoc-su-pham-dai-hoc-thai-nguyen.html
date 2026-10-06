@@ -32,17 +32,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-dai-hoc-thai-nguyen",
   "@type": [
-    "schema:Organization",
     "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "dbo:University",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:MemberInstitution",
+    "schema:Organization",
     "vnedu:UniversitySchool",
     "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
+    "vnedu:HigherEducationInstitution",
+    "dbo:University",
+    "vnedu:EducationalOrganization",
+    "vnedu:MemberInstitution",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution"
   ],
   "foaf:homepage": {
     "@id": "http://tnue.edu.vn"
@@ -52,18 +52,18 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/044deqz63"
+      "@id": "wd:Q10829125"
     },
     {
-      "@id": "wd:Q10829125"
+      "@id": "https://ror.org/044deqz63"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75592828"
+      "@id": "wd:Q10829125"
     },
     {
-      "@id": "wd:Q10829125"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75592828"
     }
   ],
   "rdfs:label": [
@@ -81,13 +81,13 @@
   },
   "schema:location": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
     }
   ],
   "schema:parentOrganization": {
@@ -119,13 +119,13 @@
   },
   "vnedu:locatedIn": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
     }
   ],
   "vnedu:memberOf": {
@@ -148,7 +148,7 @@
 <header class="top"><div class="bar">
   <a class="brand" href="/Vietnam-University-Knowledge-Graph-ver2/">VN-Edu <span>LOD</span></a>
   <nav class="main">
-    <a href="/Vietnam-University-Knowledge-Graph-ver2/" class="on">Tổng quan</a><a href="/Vietnam-University-Knowledge-Graph-ver2/map" class="">Bản đồ</a><a href="/Vietnam-University-Knowledge-Graph-ver2/explore" class="">Tra cứu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology" class="">Ontology</a><a href="/Vietnam-University-Knowledge-Graph-ver2/sparql" class="">SPARQL</a><a href="/Vietnam-University-Knowledge-Graph-ver2/dataset" class="">Dataset</a><a href="/Vietnam-University-Knowledge-Graph-ver2/about" class="">Giới thiệu</a>
+    <a href="/Vietnam-University-Knowledge-Graph-ver2/" class="on">Tổng quan</a><a href="/Vietnam-University-Knowledge-Graph-ver2/map" class="">Bản đồ</a><a href="/Vietnam-University-Knowledge-Graph-ver2/explore" class="">Tra cứu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology" class="">Ontology</a><a href="/Vietnam-University-Knowledge-Graph-ver2/sparql" class="">SPARQL</a><a href="/Vietnam-University-Knowledge-Graph-ver2/dataset" class="">Dataset</a><a href="/Vietnam-University-Knowledge-Graph-ver2/about" class="">Giới thiệu</a><a href="/Vietnam-University-Knowledge-Graph-ver2/demo" class="">Demo</a>
   </nav>
   <button class="theme-btn" type="button" aria-label="Đổi giao diện sáng/tối">◐ Giao diện</button>
 </div></header>
@@ -227,17 +227,17 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">có đơn vị thành viên<small>vnedu:hasMember</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen">Đại học Thái Nguyên</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
-<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-m-nguyen">Hung M Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vinh-d-nguyen">Vinh D Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-m-nguyen">Hung M Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vinh-d-nguyen">Vinh D Nguyen</a></div>
 </td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/mai-xuan-truong">Mai Xuân Trường</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
-<tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-m-nguyen">Hung M Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vinh-d-nguyen">Vinh D Nguyen</a></div>
+<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-m-nguyen">Hung M Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vinh-d-nguyen">Vinh D Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">có đơn vị thành viên<small>vnedu:hasMember</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen">Đại học Thái Nguyên</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">schema:subOrganization<small>schema:subOrganization</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen">Đại học Thái Nguyên</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

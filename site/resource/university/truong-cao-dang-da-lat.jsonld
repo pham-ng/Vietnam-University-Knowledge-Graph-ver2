@@ -19,12 +19,12 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-da-lat",
   "@type": [
-    "vnedu:VocationalCollege",
-    "vnedu:Organization",
     "schema:EducationalOrganization",
-    "foaf:Organization",
     "schema:Organization",
-    "vnedu:EducationalOrganization"
+    "foaf:Organization",
+    "vnedu:EducationalOrganization",
+    "vnedu:VocationalCollege",
+    "vnedu:Organization"
   ],
   "foaf:isPrimaryTopicOf": {
     "@id": "https://en.wikipedia.org/wiki/Lyc%C3%A9e_Yersin"
@@ -39,10 +39,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q10828808"
+      "@id": "dbr:Lycée_Yersin"
     },
     {
-      "@id": "dbr:Lycée_Yersin"
+      "@id": "wd:Q10828808"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -60,13 +60,13 @@
   ],
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/lam-dong"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:prefLabel": {
@@ -82,13 +82,13 @@
   },
   "vnedu:locatedIn": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/lam-dong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     }
   ]
 }

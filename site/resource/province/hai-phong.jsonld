@@ -19,10 +19,10 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong",
   "@type": [
-    "vnedu:AdministrativeUnit",
     "schema:AdministrativeArea",
     "vnedu:CentrallyGovernedCity",
-    "vnedu:Province"
+    "vnedu:Province",
+    "vnedu:AdministrativeUnit"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -42,13 +42,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q72818"
-    },
-    {
       "@id": "dbr:Haiphong"
     },
     {
       "@id": "https://sws.geonames.org/1581297/"
+    },
+    {
+      "@id": "wd:Q72818"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -73,10 +73,10 @@
   },
   "vnedu:partOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:population": {

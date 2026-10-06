@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-khoa-diem",
   "@type": [
+    "schema:Person",
     "vnedu:Person",
-    "vnedu:Alumnus",
     "foaf:Person",
-    "schema:Person"
+    "vnedu:Alumnus"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Nguy%E1%BB%85n_Khoa_%C4%90i%E1%BB%81m"
+      "@id": "https://vi.wikipedia.org/wiki/Nguy%E1%BB%85n_Khoa_%C4%90i%E1%BB%81m"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Nguy%E1%BB%85n_Khoa_%C4%90i%E1%BB%81m"
+      "@id": "https://en.wikipedia.org/wiki/Nguy%E1%BB%85n_Khoa_%C4%90i%E1%BB%81m"
     }
   ],
   "foaf:name": "Nguyễn Khoa Điềm",
@@ -46,11 +46,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Nguyễn Khoa Điềm"
     },
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Nguyễn Khoa Điềm"
     }
   ],
@@ -62,10 +62,10 @@
   },
   "schema:hasOccupation": [
     {
-      "@id": "wd:Q82955"
+      "@id": "wd:Q49757"
     },
     {
-      "@id": "wd:Q49757"
+      "@id": "wd:Q82955"
     }
   ],
   "vnedu:alumnusOf": {

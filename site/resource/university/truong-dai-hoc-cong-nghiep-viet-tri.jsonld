@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghiep-viet-tri",
   "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
+    "vnedu:HigherEducationInstitution",
     "dbo:University",
+    "vnedu:EducationalOrganization",
     "vnedu:Organization",
     "schema:EducationalOrganization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
     "schema:Organization",
-    "schema:CollegeOrUniversity"
+    "foaf:Organization",
+    "vnedu:UniversitySchool"
   ],
   "foaf:homepage": {
     "@id": "http://vui.edu.vn"
@@ -41,10 +41,10 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10829016"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75299201"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75299201"
+      "@id": "wd:Q10829016"
     }
   ],
   "rdfs:label": {
@@ -56,13 +56,13 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:prefLabel": {

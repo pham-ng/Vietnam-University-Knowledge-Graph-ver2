@@ -19,9 +19,9 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/gia-lai",
   "@type": [
+    "schema:AdministrativeArea",
     "vnedu:Province",
-    "vnedu:AdministrativeUnit",
-    "schema:AdministrativeArea"
+    "vnedu:AdministrativeUnit"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -41,10 +41,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q36662"
+      "@id": "https://sws.geonames.org/1581088/"
     },
     {
-      "@id": "https://sws.geonames.org/1581088/"
+      "@id": "wd:Q36662"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -69,10 +69,10 @@
   },
   "vnedu:partOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:population": {

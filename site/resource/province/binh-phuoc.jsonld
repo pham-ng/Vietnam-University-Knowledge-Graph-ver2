@@ -20,8 +20,8 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/binh-phuoc",
   "@type": [
     "vnedu:FormerProvince",
-    "vnedu:AdministrativeUnit",
-    "schema:AdministrativeArea"
+    "schema:AdministrativeArea",
+    "vnedu:AdministrativeUnit"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -41,13 +41,13 @@
   },
   "owl:sameAs": [
     {
+      "@id": "dbr:Bình_Phước_province"
+    },
+    {
       "@id": "wd:Q36672"
     },
     {
       "@id": "https://sws.geonames.org/1905480/"
-    },
-    {
-      "@id": "dbr:Bình_Phước_province"
     }
   ],
   "prov:wasDerivedFrom": {

@@ -19,49 +19,65 @@
   },
   "@graph": [
     {
-      "@id": "vnedu:birthDate",
-      "@type": [
-        "owl:DatatypeProperty",
-        "owl:FunctionalProperty"
-      ],
-      "rdfs:domain": {
-        "@id": "vnedu:Person"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "birth date"
-        },
-        {
-          "@language": "vi",
-          "@value": "ngày sinh"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "xsd:date"
-      }
-    },
-    {
-      "@id": "vnedu:Organization",
+      "@id": "vnedu:EducationalOrganization",
       "@type": "owl:Class",
       "rdfs:label": [
         {
           "@language": "en",
-          "@value": "Organization"
+          "@value": "Educational organization"
         },
         {
           "@language": "vi",
-          "@value": "Tổ chức"
+          "@value": "Cơ sở giáo dục"
         }
       ],
       "rdfs:subClassOf": [
         {
-          "@id": "foaf:Organization"
+          "@id": "vnedu:Organization"
         },
         {
-          "@id": "schema:Organization"
+          "@id": "schema:EducationalOrganization"
         }
       ]
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology",
+      "@type": "owl:Ontology",
+      "dct:created": {
+        "@type": "xsd:date",
+        "@value": "2026-10-05"
+      },
+      "dct:description": {
+        "@language": "vi",
+        "@value": "Mô tả các cơ sở giáo dục đại học Việt Nam (đại học, trường đại học, học viện theo\nLuật Giáo dục đại học 2012, sửa đổi 2018), cơ quan chủ quản, lãnh đạo, cựu sinh viên, đơn vị hành chính\n(gồm cả sắp xếp tỉnh năm 2025), ngành đào tạo theo Thông tư 09/2022/TT-BGDĐT."
+      },
+      "dct:license": {
+        "@id": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "dct:modified": {
+        "@type": "xsd:date",
+        "@value": "2026-10-06"
+      },
+      "dct:title": [
+        {
+          "@language": "en",
+          "@value": "VN-Edu Ontology"
+        },
+        {
+          "@language": "vi",
+          "@value": "Ontology Giáo dục đại học Việt Nam"
+        }
+      ],
+      "http://purl.org/vocab/vann/preferredNamespacePrefix": "vnedu",
+      "http://purl.org/vocab/vann/preferredNamespaceUri": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
+      "owl:versionIRI": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology/2.0"
+      },
+      "owl:versionInfo": "2.0",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Profile: OWL 2 RL."
+      }
     },
     {
       "@id": "vnedu:Province",
@@ -85,35 +101,605 @@
       }
     },
     {
-      "@id": "vnedu:mergedFrom",
+      "@id": "vnedu:formerName",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "former name"
+        },
+        {
+          "@language": "vi",
+          "@value": "tên cũ"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      }
+    },
+    {
+      "@id": "vnedu:director",
       "@type": "owl:ObjectProperty",
       "rdfs:label": [
         {
           "@language": "en",
-          "@value": "merged from"
+          "@value": "director / president"
         },
         {
           "@language": "vi",
-          "@value": "hình thành từ"
+          "@value": "giám đốc"
+        }
+      ],
+      "rdfs:subPropertyOf": {
+        "@id": "vnedu:hasLeader"
+      }
+    },
+    {
+      "@id": "vnedu:dissolutionYear",
+      "@type": [
+        "owl:DatatypeProperty",
+        "owl:FunctionalProperty"
+      ],
+      "rdfs:domain": {
+        "@id": "vnedu:Organization"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "dissolution year"
+        },
+        {
+          "@language": "vi",
+          "@value": "năm giải thể / sáp nhập"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "xsd:gYear"
+      }
+    },
+    {
+      "@id": "vnedu:Academy",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Academy"
+        },
+        {
+          "@language": "vi",
+          "@value": "Học viện"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "vnedu:HigherEducationInstitution"
+      }
+    },
+    {
+      "@id": "vnedu:governedBy",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": {
+        "@id": "vnedu:governs"
+      },
+      "owl:propertyChainAxiom": {
+        "@list": [
+          {
+            "@id": "vnedu:governedBy"
+          },
+          {
+            "@id": "vnedu:subordinateTo"
+          }
+        ]
+      },
+      "rdfs:domain": {
+        "@id": "vnedu:EducationalOrganization"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "governed by"
+        },
+        {
+          "@language": "vi",
+          "@value": "có cơ quan chủ quản"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "vnedu:GoverningBody"
+      }
+    },
+    {
+      "@id": "vnedu:Region",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "vi",
+        "@value": "Ba miền Bắc Bộ, Trung Bộ, Nam Bộ."
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Region"
+        },
+        {
+          "@language": "vi",
+          "@value": "Miền"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "vnedu:AdministrativeUnit"
+      }
+    },
+    {
+      "@id": "vnedu:hasMember",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "has member"
+        },
+        {
+          "@language": "vi",
+          "@value": "có đơn vị thành viên"
+        }
+      ],
+      "rdfs:subPropertyOf": {
+        "@id": "schema:subOrganization"
+      }
+    },
+    {
+      "@id": "vnedu:hasLeader",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "has leader"
+        },
+        {
+          "@language": "vi",
+          "@value": "có người đứng đầu"
+        }
+      ],
+      "rdfs:subPropertyOf": {
+        "@id": "schema:employee"
+      }
+    },
+    {
+      "@id": "vnedu:InstitutionLeader",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Institution leader"
+        },
+        {
+          "@language": "vi",
+          "@value": "Người đứng đầu cơ sở giáo dục"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "vnedu:Person"
+      }
+    },
+    {
+      "@id": "vnedu:HigherEducationInstitution",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "vi",
+        "@value": "Theo Điều 4 Luật GDĐH: gồm đại học, trường đại học, học viện (và các trường sĩ quan đào tạo trình độ đại học)."
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Higher education institution"
+        },
+        {
+          "@language": "vi",
+          "@value": "Cơ sở giáo dục đại học"
+        }
+      ],
+      "rdfs:subClassOf": [
+        {
+          "@id": "vnedu:EducationalOrganization"
+        },
+        {
+          "@id": "schema:CollegeOrUniversity"
         }
       ]
     },
     {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb49",
+      "@id": "vnedu:ownership",
+      "@type": [
+        "owl:ObjectProperty",
+        "owl:FunctionalProperty"
+      ],
+      "rdfs:domain": {
+        "@id": "vnedu:EducationalOrganization"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "ownership"
+        },
+        {
+          "@language": "vi",
+          "@value": "loại hình sở hữu"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "vnedu:OwnershipType"
+      }
+    },
+    {
+      "@id": "vnedu:honorific",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "vnedu:Person"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "academic title / rank"
+        },
+        {
+          "@language": "vi",
+          "@value": "học hàm, học vị, quân hàm"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "vnedu:address",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "address"
+        },
+        {
+          "@language": "vi",
+          "@value": "địa chỉ"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "vnedu:ProvincialPeoplesCommittee",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Provincial People's Committee"
+        },
+        {
+          "@language": "vi",
+          "@value": "Ủy ban nhân dân cấp tỉnh"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "vnedu:GoverningBody"
+      }
+    },
+    {
+      "@id": "vnedu:hasBranch",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "has branch"
+        },
+        {
+          "@language": "vi",
+          "@value": "có phân hiệu"
+        }
+      ]
+    },
+    {
+      "@id": "vnedu:numberOfPostgraduates",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "vnedu:EducationalOrganization"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "number of postgraduate students"
+        },
+        {
+          "@language": "vi",
+          "@value": "số học viên sau đại học"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "xsd:nonNegativeInteger"
+      }
+    },
+    {
+      "@id": "vnedu:ownedBy",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "vnedu:EducationalOrganization"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "owned by"
+        },
+        {
+          "@language": "vi",
+          "@value": "thuộc sở hữu / đầu tư của"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "vnedu:Company"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:parentOrganization"
+      }
+    },
+    {
+      "@id": "vnedu:Branch",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "vi",
+        "@value": "Đơn vị trực thuộc một cơ sở GDĐH, đặt ở địa phương khác; không phải pháp nhân độc lập."
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Branch campus"
+        },
+        {
+          "@language": "vi",
+          "@value": "Phân hiệu"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "vnedu:EducationalOrganization"
+      }
+    },
+    {
+      "@id": "vnedu:numberOfUndergraduates",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "vnedu:EducationalOrganization"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "number of undergraduate students"
+        },
+        {
+          "@language": "vi",
+          "@value": "số sinh viên đại học"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "xsd:nonNegativeInteger"
+      }
+    },
+    {
+      "@id": "vnedu:MemberInstitution",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "vi",
+        "@value": "Cơ sở là thành viên của một cơ sở GDĐH khác (VD: các trường thuộc ĐHQG). Suy ra từ vnedu:memberOf."
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Member institution"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường/đơn vị thành viên"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "vnedu:EducationalOrganization"
+      }
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b37",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "vnedu:EducationalOrganization"
+          },
+          {
+            "@id": "_:n42641f7d7c79480cb24739c217af5a17b38"
+          }
+        ]
+      },
+      "rdfs:subClassOf": {
+        "@id": "vnedu:DefunctInstitution"
+      }
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b38",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "vnedu:dissolutionYear"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:gYear"
+      }
+    },
+    {
+      "@id": "vnedu:GoverningBody",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "vi",
+        "@value": "Cơ quan nhà nước / tổ chức chính trị quản lý trực tiếp một cơ sở giáo dục công lập."
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Governing body"
+        },
+        {
+          "@language": "vi",
+          "@value": "Cơ quan chủ quản"
+        }
+      ],
+      "rdfs:subClassOf": [
+        {
+          "@id": "vnedu:Organization"
+        },
+        {
+          "@id": "schema:GovernmentOrganization"
+        }
+      ]
+    },
+    {
+      "@id": "vnedu:Ministry",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Ministry"
+        },
+        {
+          "@language": "vi",
+          "@value": "Bộ / cơ quan ngang bộ"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "vnedu:GoverningBody"
+      }
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b33",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "vnedu:EducationalOrganization"
+          },
+          {
+            "@id": "_:n42641f7d7c79480cb24739c217af5a17b34"
+          }
+        ]
+      },
+      "rdfs:subClassOf": {
+        "@id": "vnedu:MemberInstitution"
+      }
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b34",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "vnedu:memberOf"
+      },
+      "owl:someValuesFrom": {
+        "@id": "vnedu:HigherEducationInstitution"
+      }
+    },
+    {
+      "@id": "vnedu:University",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "vi",
+        "@value": "Cơ sở GDĐH đa ngành, có thể gồm các trường/khoa thành viên (VD: Đại học Quốc gia, Đại học Bách khoa Hà Nội)."
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "University (đại học)"
+        },
+        {
+          "@language": "vi",
+          "@value": "Đại học"
+        }
+      ],
+      "rdfs:subClassOf": [
+        {
+          "@id": "vnedu:HigherEducationInstitution"
+        },
+        {
+          "@id": "dbo:University"
+        }
+      ]
+    },
+    {
+      "@id": "vnedu:Company",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "vi",
+        "@value": "Chủ sở hữu / nhà đầu tư của cơ sở giáo dục tư thục."
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Company / education group"
+        },
+        {
+          "@language": "vi",
+          "@value": "Doanh nghiệp / tập đoàn giáo dục"
+        }
+      ],
+      "rdfs:subClassOf": [
+        {
+          "@id": "vnedu:Organization"
+        },
+        {
+          "@id": "schema:Corporation"
+        }
+      ]
+    },
+    {
+      "@id": "vnedu:DefunctInstitution",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Defunct institution"
+        },
+        {
+          "@language": "vi",
+          "@value": "Cơ sở đã giải thể / sáp nhập"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "vnedu:EducationalOrganization"
+      }
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b1",
       "@type": "owl:AllDisjointClasses",
       "owl:members": {
         "@list": [
           {
-            "@id": "vnedu:Country"
+            "@id": "vnedu:University"
           },
           {
-            "@id": "vnedu:Region"
+            "@id": "vnedu:UniversitySchool"
           },
           {
-            "@id": "vnedu:Province"
+            "@id": "vnedu:Academy"
           },
           {
-            "@id": "vnedu:FormerProvince"
+            "@id": "vnedu:OfficerSchool"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b54",
+      "@type": "owl:AllDisjointClasses",
+      "owl:members": {
+        "@list": [
+          {
+            "@id": "vnedu:Organization"
+          },
+          {
+            "@id": "vnedu:Person"
+          },
+          {
+            "@id": "vnedu:AdministrativeUnit"
           }
         ]
       }
@@ -146,64 +732,435 @@
       }
     },
     {
-      "@id": "vnedu:PublicOwnership",
+      "@id": "vnedu:branchOf",
       "@type": [
-        "owl:NamedIndividual",
-        "vnedu:OwnershipType"
+        "owl:ObjectProperty",
+        "owl:FunctionalProperty"
       ],
+      "owl:inverseOf": {
+        "@id": "vnedu:hasBranch"
+      },
+      "rdfs:domain": {
+        "@id": "vnedu:Branch"
+      },
       "rdfs:label": [
         {
           "@language": "en",
-          "@value": "public"
+          "@value": "branch of"
         },
         {
           "@language": "vi",
-          "@value": "công lập"
+          "@value": "là phân hiệu của"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "vnedu:HigherEducationInstitution"
+      }
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b64",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "vnedu:ownedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "vnedu:Company"
+      },
+      "rdfs:subClassOf": {
+        "@id": "_:n42641f7d7c79480cb24739c217af5a17b65"
+      }
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b65",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "vnedu:PrivateOwnership"
+      },
+      "owl:onProperty": {
+        "@id": "vnedu:ownership"
+      }
+    },
+    {
+      "@id": "vnedu:website",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "website"
+        },
+        {
+          "@language": "vi",
+          "@value": "trang web"
+        }
+      ],
+      "rdfs:subPropertyOf": {
+        "@id": "foaf:homepage"
+      }
+    },
+    {
+      "@id": "vnedu:shortName",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "short name"
+        },
+        {
+          "@language": "vi",
+          "@value": "tên viết tắt"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "vnedu:Alumnus",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Alumnus"
+        },
+        {
+          "@language": "vi",
+          "@value": "Cựu sinh viên"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "vnedu:Person"
+      }
+    },
+    {
+      "@id": "vnedu:hasPart",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "has part"
+        },
+        {
+          "@language": "vi",
+          "@value": "gồm"
         }
       ]
     },
     {
-      "@id": "vnedu:MemberInstitution",
+      "@id": "vnedu:Person",
       "@type": "owl:Class",
-      "rdfs:comment": {
-        "@language": "vi",
-        "@value": "Cơ sở là thành viên của một cơ sở GDĐH khác (VD: các trường thuộc ĐHQG). Suy ra từ vnedu:memberOf."
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Person"
+        },
+        {
+          "@language": "vi",
+          "@value": "Người"
+        }
+      ],
+      "rdfs:subClassOf": [
+        {
+          "@id": "foaf:Person"
+        },
+        {
+          "@id": "schema:Person"
+        }
+      ]
+    },
+    {
+      "@id": "vnedu:mergedInto",
+      "@type": [
+        "owl:ObjectProperty",
+        "owl:FunctionalProperty"
+      ],
+      "owl:inverseOf": {
+        "@id": "vnedu:mergedFrom"
+      },
+      "rdfs:domain": {
+        "@id": "vnedu:FormerProvince"
       },
       "rdfs:label": [
         {
           "@language": "en",
-          "@value": "Member institution"
+          "@value": "merged into"
         },
         {
           "@language": "vi",
-          "@value": "Trường/đơn vị thành viên"
+          "@value": "sáp nhập vào"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "vnedu:Province"
+      }
+    },
+    {
+      "@id": "vnedu:degreeLevel",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "vnedu:AcademicProgram"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "degree level"
+        },
+        {
+          "@language": "vi",
+          "@value": "trình độ đào tạo"
+        }
+      ]
+    },
+    {
+      "@id": "vnedu:numberOfStudents",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "vnedu:EducationalOrganization"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "number of students"
+        },
+        {
+          "@language": "vi",
+          "@value": "số sinh viên"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "xsd:nonNegativeInteger"
+      }
+    },
+    {
+      "@id": "vnedu:academicStaff",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "vnedu:EducationalOrganization"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "academic staff"
+        },
+        {
+          "@language": "vi",
+          "@value": "số giảng viên"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "xsd:nonNegativeInteger"
+      }
+    },
+    {
+      "@id": "vnedu:mergedFrom",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "merged from"
+        },
+        {
+          "@language": "vi",
+          "@value": "hình thành từ"
+        }
+      ]
+    },
+    {
+      "@id": "vnedu:birthDate",
+      "@type": [
+        "owl:DatatypeProperty",
+        "owl:FunctionalProperty"
+      ],
+      "rdfs:domain": {
+        "@id": "vnedu:Person"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "birth date"
+        },
+        {
+          "@language": "vi",
+          "@value": "ngày sinh"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "xsd:date"
+      }
+    },
+    {
+      "@id": "vnedu:CentrallyGovernedCity",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Centrally-governed city"
+        },
+        {
+          "@language": "vi",
+          "@value": "Thành phố trực thuộc trung ương"
         }
       ],
       "rdfs:subClassOf": {
+        "@id": "vnedu:Province"
+      }
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b45",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "vnedu:Person"
+          },
+          {
+            "@id": "_:n42641f7d7c79480cb24739c217af5a17b46"
+          }
+        ]
+      },
+      "rdfs:subClassOf": {
+        "@id": "vnedu:InstitutionLeader"
+      }
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b46",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "vnedu:leads"
+      },
+      "owl:someValuesFrom": {
         "@id": "vnedu:EducationalOrganization"
       }
     },
     {
-      "@id": "vnedu:subordinateTo",
-      "@type": [
-        "owl:ObjectProperty",
-        "owl:TransitiveProperty"
-      ],
-      "rdfs:domain": {
-        "@id": "vnedu:GoverningBody"
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b14",
+      "@type": "owl:AllDifferent",
+      "owl:distinctMembers": {
+        "@list": [
+          {
+            "@id": "vnedu:PublicOwnership"
+          },
+          {
+            "@id": "vnedu:PrivateOwnership"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "vnedu:MilitaryInstitution",
+      "@type": "owl:Class",
+      "owl:equivalentClass": {
+        "@id": "_:n42641f7d7c79480cb24739c217af5a17b25"
       },
       "rdfs:label": [
         {
           "@language": "en",
-          "@value": "subordinate to"
+          "@value": "Military institution"
         },
         {
           "@language": "vi",
-          "@value": "trực thuộc (cơ quan cấp trên)"
+          "@value": "Cơ sở đào tạo quân đội"
+        }
+      ]
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b25",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "vnedu:EducationalOrganization"
+          },
+          {
+            "@id": "_:n42641f7d7c79480cb24739c217af5a17b26"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b26",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "vnedu:MinistryOfNationalDefence"
+      },
+      "owl:onProperty": {
+        "@id": "vnedu:governedBy"
+      }
+    },
+    {
+      "@id": "vnedu:offersProgram",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": {
+        "@id": "vnedu:offeredBy"
+      },
+      "rdfs:domain": {
+        "@id": "vnedu:EducationalOrganization"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "offers program"
+        },
+        {
+          "@language": "vi",
+          "@value": "đào tạo chương trình"
         }
       ],
       "rdfs:range": {
-        "@id": "vnedu:GoverningBody"
+        "@id": "vnedu:AcademicProgram"
+      }
+    },
+    {
+      "@id": "vnedu:AcademicProgram",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Academic program"
+        },
+        {
+          "@language": "vi",
+          "@value": "Chương trình đào tạo"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "schema:EducationalOccupationalProgram"
+      }
+    },
+    {
+      "@id": "vnedu:Major",
+      "@type": "owl:Class",
+      "owl:disjointWith": {
+        "@id": "vnedu:FieldOfStudy"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Major"
+        },
+        {
+          "@language": "vi",
+          "@value": "Ngành đào tạo"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "skos:Concept"
+      }
+    },
+    {
+      "@id": "vnedu:OfficerSchool",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Officer school"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường sĩ quan"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "vnedu:HigherEducationInstitution"
       }
     },
     {
@@ -230,30 +1187,522 @@
       }
     },
     {
-      "@id": "vnedu:University",
-      "@type": "owl:Class",
+      "@id": "vnedu:MinistryOfNationalDefence",
+      "@type": [
+        "owl:NamedIndividual",
+        "vnedu:Ministry"
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Bộ Quốc phòng"
+        },
+        {
+          "@language": "en",
+          "@value": "Ministry of National Defence"
+        }
+      ]
+    },
+    {
+      "@id": "vnedu:offeredBy",
+      "@type": [
+        "owl:ObjectProperty",
+        "owl:FunctionalProperty"
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "offered by"
+        },
+        {
+          "@language": "vi",
+          "@value": "do ... đào tạo"
+        }
+      ],
+      "rdfs:subPropertyOf": {
+        "@id": "schema:provider"
+      }
+    },
+    {
+      "@id": "vnedu:hasAlumnus",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "has alumnus"
+        },
+        {
+          "@language": "vi",
+          "@value": "có cựu sinh viên"
+        }
+      ]
+    },
+    {
+      "@id": "schema:hasOccupation",
+      "@type": "owl:ObjectProperty",
       "rdfs:comment": {
         "@language": "vi",
-        "@value": "Cơ sở GDĐH đa ngành, có thể gồm các trường/khoa thành viên (VD: Đại học Quốc gia, Đại học Bách khoa Hà Nội)."
+        "@value": "Tái sử dụng từ schema.org; giá trị là item Wikidata về nghề nghiệp."
       },
       "rdfs:label": [
         {
           "@language": "en",
-          "@value": "University (đại học)"
+          "@value": "has occupation"
         },
         {
           "@language": "vi",
-          "@value": "Đại học"
+          "@value": "nghề nghiệp"
+        }
+      ]
+    },
+    {
+      "@id": "vnedu:governs",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "governs"
+        },
+        {
+          "@language": "vi",
+          "@value": "là cơ quan chủ quản của"
+        }
+      ]
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b41",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "vnedu:Person"
+          },
+          {
+            "@id": "_:n42641f7d7c79480cb24739c217af5a17b42"
+          }
+        ]
+      },
+      "rdfs:subClassOf": {
+        "@id": "vnedu:Alumnus"
+      }
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b42",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "vnedu:alumnusOf"
+      },
+      "owl:someValuesFrom": {
+        "@id": "vnedu:EducationalOrganization"
+      }
+    },
+    {
+      "@id": "vnedu:AdministrativeUnit",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Administrative unit"
+        },
+        {
+          "@language": "vi",
+          "@value": "Đơn vị hành chính / vùng"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "schema:AdministrativeArea"
+      }
+    },
+    {
+      "@id": "vnedu:PrivateOwnership",
+      "@type": [
+        "owl:NamedIndividual",
+        "vnedu:OwnershipType"
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "private"
+        },
+        {
+          "@language": "vi",
+          "@value": "tư thục / ngoài công lập"
+        }
+      ]
+    },
+    {
+      "@id": "vnedu:population",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "vnedu:AdministrativeUnit"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "population"
+        },
+        {
+          "@language": "vi",
+          "@value": "dân số"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "xsd:nonNegativeInteger"
+      }
+    },
+    {
+      "@id": "vnedu:RegionalUniversity",
+      "@type": "owl:Class",
+      "owl:disjointWith": {
+        "@id": "vnedu:NationalUniversity"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Regional university"
+        },
+        {
+          "@language": "vi",
+          "@value": "Đại học vùng"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "vnedu:University"
+      }
+    },
+    {
+      "@id": "vnedu:code",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "code"
+        },
+        {
+          "@language": "vi",
+          "@value": "mã ngành / mã lĩnh vực"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "skos:notation"
+      }
+    },
+    {
+      "@id": "vnedu:motto",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "vnedu:EducationalOrganization"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "motto"
+        },
+        {
+          "@language": "vi",
+          "@value": "khẩu hiệu"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      }
+    },
+    {
+      "@id": "vnedu:MinistryOfPublicSecurity",
+      "@type": [
+        "owl:NamedIndividual",
+        "vnedu:Ministry"
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Bộ Công an"
+        },
+        {
+          "@language": "en",
+          "@value": "Ministry of Public Security"
+        }
+      ]
+    },
+    {
+      "@id": "vnedu:FormerProvince",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Former province"
+        },
+        {
+          "@language": "vi",
+          "@value": "Tỉnh cũ (trước 01/07/2025)"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "vnedu:AdministrativeUnit"
+      }
+    },
+    {
+      "@id": "vnedu:FieldOfStudy",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Field of study"
+        },
+        {
+          "@language": "vi",
+          "@value": "Lĩnh vực đào tạo"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "skos:Concept"
+      }
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b10",
+      "@type": "owl:AllDisjointClasses",
+      "owl:members": {
+        "@list": [
+          {
+            "@id": "vnedu:EducationalOrganization"
+          },
+          {
+            "@id": "vnedu:GoverningBody"
+          },
+          {
+            "@id": "vnedu:Company"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "vnedu:PoliceInstitution",
+      "@type": "owl:Class",
+      "owl:equivalentClass": {
+        "@id": "_:n42641f7d7c79480cb24739c217af5a17b29"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "People's Public Security institution"
+        },
+        {
+          "@language": "vi",
+          "@value": "Cơ sở đào tạo Công an nhân dân"
+        }
+      ]
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b29",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "vnedu:EducationalOrganization"
+          },
+          {
+            "@id": "_:n42641f7d7c79480cb24739c217af5a17b30"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b30",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "vnedu:MinistryOfPublicSecurity"
+      },
+      "owl:onProperty": {
+        "@id": "vnedu:governedBy"
+      }
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b49",
+      "@type": "owl:AllDisjointClasses",
+      "owl:members": {
+        "@list": [
+          {
+            "@id": "vnedu:Country"
+          },
+          {
+            "@id": "vnedu:Region"
+          },
+          {
+            "@id": "vnedu:Province"
+          },
+          {
+            "@id": "vnedu:FormerProvince"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "vnedu:alumnusOf",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": {
+        "@id": "vnedu:hasAlumnus"
+      },
+      "rdfs:domain": {
+        "@id": "vnedu:Person"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "alumnus of"
+        },
+        {
+          "@language": "vi",
+          "@value": "cựu sinh viên của"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "vnedu:EducationalOrganization"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:alumniOf"
+      }
+    },
+    {
+      "@id": "vnedu:NationalUniversity",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "National university"
+        },
+        {
+          "@language": "vi",
+          "@value": "Đại học quốc gia"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "vnedu:University"
+      }
+    },
+    {
+      "@id": "vnedu:Country",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Country"
+        },
+        {
+          "@language": "vi",
+          "@value": "Quốc gia"
         }
       ],
       "rdfs:subClassOf": [
         {
-          "@id": "vnedu:HigherEducationInstitution"
+          "@id": "vnedu:AdministrativeUnit"
         },
         {
-          "@id": "dbo:University"
+          "@id": "schema:Country"
         }
       ]
+    },
+    {
+      "@id": "vnedu:OwnershipType",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Ownership type"
+        },
+        {
+          "@language": "vi",
+          "@value": "Loại hình sở hữu"
+        }
+      ]
+    },
+    {
+      "@id": "vnedu:subordinateTo",
+      "@type": [
+        "owl:ObjectProperty",
+        "owl:TransitiveProperty"
+      ],
+      "rdfs:domain": {
+        "@id": "vnedu:GoverningBody"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "subordinate to"
+        },
+        {
+          "@language": "vi",
+          "@value": "trực thuộc (cơ quan cấp trên)"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "vnedu:GoverningBody"
+      }
+    },
+    {
+      "@id": "vnedu:inField",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "vnedu:Major"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "in field"
+        },
+        {
+          "@language": "vi",
+          "@value": "thuộc lĩnh vực"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "vnedu:FieldOfStudy"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "skos:broader"
+      }
+    },
+    {
+      "@id": "vnedu:rector",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "rector"
+        },
+        {
+          "@language": "vi",
+          "@value": "hiệu trưởng"
+        }
+      ],
+      "rdfs:subPropertyOf": {
+        "@id": "vnedu:hasLeader"
+      }
+    },
+    {
+      "@id": "vnedu:foundingYear",
+      "@type": [
+        "owl:DatatypeProperty",
+        "owl:FunctionalProperty"
+      ],
+      "rdfs:domain": {
+        "@id": "vnedu:Organization"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "founding year"
+        },
+        {
+          "@language": "vi",
+          "@value": "năm thành lập"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "xsd:gYear"
+      }
     },
     {
       "@id": "vnedu:ofMajor",
@@ -279,60 +1728,81 @@
       }
     },
     {
-      "@id": "vnedu:HigherEducationInstitution",
-      "@type": "owl:Class",
-      "rdfs:comment": {
-        "@language": "vi",
-        "@value": "Theo Điều 4 Luật GDĐH: gồm đại học, trường đại học, học viện (và các trường sĩ quan đào tạo trình độ đại học)."
+      "@id": "vnedu:area",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "vnedu:AdministrativeUnit"
       },
       "rdfs:label": [
         {
           "@language": "en",
-          "@value": "Higher education institution"
+          "@value": "area (km²)"
         },
         {
           "@language": "vi",
-          "@value": "Cơ sở giáo dục đại học"
+          "@value": "diện tích (km²)"
         }
       ],
-      "rdfs:subClassOf": [
-        {
-          "@id": "vnedu:EducationalOrganization"
-        },
-        {
-          "@id": "schema:CollegeOrUniversity"
-        }
-      ]
+      "rdfs:range": {
+        "@id": "xsd:decimal"
+      }
     },
     {
-      "@id": "vnedu:hasAlumnus",
-      "@type": "owl:ObjectProperty",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "has alumnus"
-        },
-        {
-          "@language": "vi",
-          "@value": "có cựu sinh viên"
-        }
-      ]
-    },
-    {
-      "@id": "vnedu:Branch",
+      "@id": "vnedu:PublicInstitution",
       "@type": "owl:Class",
-      "rdfs:comment": {
-        "@language": "vi",
-        "@value": "Đơn vị trực thuộc một cơ sở GDĐH, đặt ở địa phương khác; không phải pháp nhân độc lập."
+      "owl:equivalentClass": {
+        "@id": "_:n42641f7d7c79480cb24739c217af5a17b17"
       },
       "rdfs:label": [
         {
           "@language": "en",
-          "@value": "Branch campus"
+          "@value": "Public institution"
         },
         {
           "@language": "vi",
-          "@value": "Phân hiệu"
+          "@value": "Cơ sở công lập"
+        }
+      ]
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b17",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "vnedu:EducationalOrganization"
+          },
+          {
+            "@id": "_:n42641f7d7c79480cb24739c217af5a17b18"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b18",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "owl:onProperty": {
+        "@id": "vnedu:ownership"
+      }
+    },
+    {
+      "@id": "vnedu:VocationalCollege",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "vi",
+        "@value": "Thuộc hệ thống giáo dục nghề nghiệp, không phải cơ sở GDĐH."
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Vocational college"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường cao đẳng"
         }
       ],
       "rdfs:subClassOf": {
@@ -340,27 +1810,133 @@
       }
     },
     {
-      "@id": "vnedu:foundingYear",
-      "@type": [
-        "owl:DatatypeProperty",
-        "owl:FunctionalProperty"
+      "@id": "vnedu:UniversitySchool",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "University-level school (trường đại học)"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường đại học"
+        }
       ],
-      "rdfs:domain": {
-        "@id": "vnedu:Organization"
+      "rdfs:subClassOf": [
+        {
+          "@id": "vnedu:HigherEducationInstitution"
+        },
+        {
+          "@id": "dbo:University"
+        }
+      ]
+    },
+    {
+      "@id": "schema:gender",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "vi",
+        "@value": "Tái sử dụng từ schema.org; giá trị là item Wikidata (Q6581097 nam, Q6581072 nữ)."
       },
       "rdfs:label": [
         {
           "@language": "en",
-          "@value": "founding year"
+          "@value": "gender"
         },
         {
           "@language": "vi",
-          "@value": "năm thành lập"
+          "@value": "giới tính"
+        }
+      ]
+    },
+    {
+      "@id": "vnedu:memberOf",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": {
+        "@id": "vnedu:hasMember"
+      },
+      "rdfs:domain": {
+        "@id": "vnedu:EducationalOrganization"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "member of"
+        },
+        {
+          "@language": "vi",
+          "@value": "là thành viên của"
         }
       ],
       "rdfs:range": {
-        "@id": "xsd:gYear"
+        "@id": "vnedu:HigherEducationInstitution"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:parentOrganization"
       }
+    },
+    {
+      "@id": "vnedu:PublicOwnership",
+      "@type": [
+        "owl:NamedIndividual",
+        "vnedu:OwnershipType"
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "public"
+        },
+        {
+          "@language": "vi",
+          "@value": "công lập"
+        }
+      ]
+    },
+    {
+      "@id": "vnedu:trainsMajor",
+      "@type": "owl:ObjectProperty",
+      "owl:propertyChainAxiom": {
+        "@list": [
+          {
+            "@id": "vnedu:offersProgram"
+          },
+          {
+            "@id": "vnedu:ofMajor"
+          }
+        ]
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "trains major"
+        },
+        {
+          "@language": "vi",
+          "@value": "đào tạo ngành"
+        }
+      ]
+    },
+    {
+      "@id": "vnedu:Organization",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Organization"
+        },
+        {
+          "@language": "vi",
+          "@value": "Tổ chức"
+        }
+      ],
+      "rdfs:subClassOf": [
+        {
+          "@id": "foaf:Organization"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ]
     },
     {
       "@id": "vnedu:locatedIn",
@@ -412,182 +1988,44 @@
       }
     },
     {
-      "@id": "vnedu:NationalUniversity",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "National university"
-        },
-        {
-          "@language": "vi",
-          "@value": "Đại học quốc gia"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "vnedu:University"
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b6",
+      "@type": "owl:AllDisjointClasses",
+      "owl:members": {
+        "@list": [
+          {
+            "@id": "vnedu:HigherEducationInstitution"
+          },
+          {
+            "@id": "vnedu:Branch"
+          },
+          {
+            "@id": "vnedu:VocationalCollege"
+          }
+        ]
       }
     },
     {
-      "@id": "vnedu:rector",
-      "@type": "owl:ObjectProperty",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "rector"
-        },
-        {
-          "@language": "vi",
-          "@value": "hiệu trưởng"
-        }
-      ],
-      "rdfs:subPropertyOf": {
-        "@id": "vnedu:hasLeader"
-      }
-    },
-    {
-      "@id": "vnedu:FieldOfStudy",
+      "@id": "vnedu:PrivateInstitution",
       "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Field of study"
-        },
-        {
-          "@language": "vi",
-          "@value": "Lĩnh vực đào tạo"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "skos:Concept"
-      }
-    },
-    {
-      "@id": "vnedu:Country",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Country"
-        },
-        {
-          "@language": "vi",
-          "@value": "Quốc gia"
-        }
-      ],
-      "rdfs:subClassOf": [
-        {
-          "@id": "vnedu:AdministrativeUnit"
-        },
-        {
-          "@id": "schema:Country"
-        }
-      ]
-    },
-    {
-      "@id": "vnedu:hasBranch",
-      "@type": "owl:ObjectProperty",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "has branch"
-        },
-        {
-          "@language": "vi",
-          "@value": "có phân hiệu"
-        }
-      ]
-    },
-    {
-      "@id": "vnedu:CentrallyGovernedCity",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Centrally-governed city"
-        },
-        {
-          "@language": "vi",
-          "@value": "Thành phố trực thuộc trung ương"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "vnedu:Province"
-      }
-    },
-    {
-      "@id": "vnedu:degreeLevel",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": {
-        "@id": "vnedu:AcademicProgram"
+      "owl:disjointWith": {
+        "@id": "vnedu:PublicInstitution"
       },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "degree level"
-        },
-        {
-          "@language": "vi",
-          "@value": "trình độ đào tạo"
-        }
-      ]
-    },
-    {
-      "@id": "vnedu:PrivateOwnership",
-      "@type": [
-        "owl:NamedIndividual",
-        "vnedu:OwnershipType"
-      ],
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "private"
-        },
-        {
-          "@language": "vi",
-          "@value": "tư thục / ngoài công lập"
-        }
-      ]
-    },
-    {
-      "@id": "vnedu:population",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": {
-        "@id": "vnedu:AdministrativeUnit"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "population"
-        },
-        {
-          "@language": "vi",
-          "@value": "dân số"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "xsd:nonNegativeInteger"
-      }
-    },
-    {
-      "@id": "vnedu:PublicInstitution",
-      "@type": "owl:Class",
       "owl:equivalentClass": {
-        "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb17"
+        "@id": "_:n42641f7d7c79480cb24739c217af5a17b21"
       },
       "rdfs:label": [
         {
           "@language": "en",
-          "@value": "Public institution"
+          "@value": "Private institution"
         },
         {
           "@language": "vi",
-          "@value": "Cơ sở công lập"
+          "@value": "Cơ sở tư thục"
         }
       ]
     },
     {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb17",
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b21",
       "@type": "owl:Class",
       "owl:intersectionOf": {
         "@list": [
@@ -595,261 +2033,20 @@
             "@id": "vnedu:EducationalOrganization"
           },
           {
-            "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb18"
+            "@id": "_:n42641f7d7c79480cb24739c217af5a17b22"
           }
         ]
       }
     },
     {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb18",
+      "@id": "_:n42641f7d7c79480cb24739c217af5a17b22",
       "@type": "owl:Restriction",
       "owl:hasValue": {
-        "@id": "vnedu:PublicOwnership"
+        "@id": "vnedu:PrivateOwnership"
       },
       "owl:onProperty": {
         "@id": "vnedu:ownership"
       }
-    },
-    {
-      "@id": "vnedu:address",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "address"
-        },
-        {
-          "@language": "vi",
-          "@value": "địa chỉ"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "xsd:string"
-      }
-    },
-    {
-      "@id": "vnedu:inField",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "vnedu:Major"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "in field"
-        },
-        {
-          "@language": "vi",
-          "@value": "thuộc lĩnh vực"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "vnedu:FieldOfStudy"
-      },
-      "rdfs:subPropertyOf": {
-        "@id": "skos:broader"
-      }
-    },
-    {
-      "@id": "vnedu:Major",
-      "@type": "owl:Class",
-      "owl:disjointWith": {
-        "@id": "vnedu:FieldOfStudy"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Major"
-        },
-        {
-          "@language": "vi",
-          "@value": "Ngành đào tạo"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "skos:Concept"
-      }
-    },
-    {
-      "@id": "schema:hasOccupation",
-      "@type": "owl:ObjectProperty",
-      "rdfs:comment": {
-        "@language": "vi",
-        "@value": "Tái sử dụng từ schema.org; giá trị là item Wikidata về nghề nghiệp."
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "has occupation"
-        },
-        {
-          "@language": "vi",
-          "@value": "nghề nghiệp"
-        }
-      ]
-    },
-    {
-      "@id": "vnedu:offersProgram",
-      "@type": "owl:ObjectProperty",
-      "owl:inverseOf": {
-        "@id": "vnedu:offeredBy"
-      },
-      "rdfs:domain": {
-        "@id": "vnedu:EducationalOrganization"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "offers program"
-        },
-        {
-          "@language": "vi",
-          "@value": "đào tạo chương trình"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "vnedu:AcademicProgram"
-      }
-    },
-    {
-      "@id": "vnedu:offeredBy",
-      "@type": [
-        "owl:ObjectProperty",
-        "owl:FunctionalProperty"
-      ],
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "offered by"
-        },
-        {
-          "@language": "vi",
-          "@value": "do ... đào tạo"
-        }
-      ],
-      "rdfs:subPropertyOf": {
-        "@id": "schema:provider"
-      }
-    },
-    {
-      "@id": "vnedu:branchOf",
-      "@type": [
-        "owl:ObjectProperty",
-        "owl:FunctionalProperty"
-      ],
-      "owl:inverseOf": {
-        "@id": "vnedu:hasBranch"
-      },
-      "rdfs:domain": {
-        "@id": "vnedu:Branch"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "branch of"
-        },
-        {
-          "@language": "vi",
-          "@value": "là phân hiệu của"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "vnedu:HigherEducationInstitution"
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb33",
-      "@type": "owl:Class",
-      "owl:intersectionOf": {
-        "@list": [
-          {
-            "@id": "vnedu:EducationalOrganization"
-          },
-          {
-            "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb34"
-          }
-        ]
-      },
-      "rdfs:subClassOf": {
-        "@id": "vnedu:MemberInstitution"
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb34",
-      "@type": "owl:Restriction",
-      "owl:onProperty": {
-        "@id": "vnedu:memberOf"
-      },
-      "owl:someValuesFrom": {
-        "@id": "vnedu:HigherEducationInstitution"
-      }
-    },
-    {
-      "@id": "vnedu:RegionalUniversity",
-      "@type": "owl:Class",
-      "owl:disjointWith": {
-        "@id": "vnedu:NationalUniversity"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Regional university"
-        },
-        {
-          "@language": "vi",
-          "@value": "Đại học vùng"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "vnedu:University"
-      }
-    },
-    {
-      "@id": "vnedu:VocationalCollege",
-      "@type": "owl:Class",
-      "rdfs:comment": {
-        "@language": "vi",
-        "@value": "Thuộc hệ thống giáo dục nghề nghiệp, không phải cơ sở GDĐH."
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Vocational college"
-        },
-        {
-          "@language": "vi",
-          "@value": "Trường cao đẳng"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "vnedu:EducationalOrganization"
-      }
-    },
-    {
-      "@id": "vnedu:GoverningBody",
-      "@type": "owl:Class",
-      "rdfs:comment": {
-        "@language": "vi",
-        "@value": "Cơ quan nhà nước / tổ chức chính trị quản lý trực tiếp một cơ sở giáo dục công lập."
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Governing body"
-        },
-        {
-          "@language": "vi",
-          "@value": "Cơ quan chủ quản"
-        }
-      ],
-      "rdfs:subClassOf": [
-        {
-          "@id": "vnedu:Organization"
-        },
-        {
-          "@id": "schema:GovernmentOrganization"
-        }
-      ]
     },
     {
       "@id": "vnedu:partOf",
@@ -875,1203 +2072,6 @@
       ],
       "rdfs:range": {
         "@id": "vnedu:AdministrativeUnit"
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb1",
-      "@type": "owl:AllDisjointClasses",
-      "owl:members": {
-        "@list": [
-          {
-            "@id": "vnedu:University"
-          },
-          {
-            "@id": "vnedu:UniversitySchool"
-          },
-          {
-            "@id": "vnedu:Academy"
-          },
-          {
-            "@id": "vnedu:OfficerSchool"
-          }
-        ]
-      }
-    },
-    {
-      "@id": "vnedu:Academy",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Academy"
-        },
-        {
-          "@language": "vi",
-          "@value": "Học viện"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "vnedu:HigherEducationInstitution"
-      }
-    },
-    {
-      "@id": "vnedu:code",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "code"
-        },
-        {
-          "@language": "vi",
-          "@value": "mã ngành / mã lĩnh vực"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "xsd:string"
-      },
-      "rdfs:subPropertyOf": {
-        "@id": "skos:notation"
-      }
-    },
-    {
-      "@id": "vnedu:numberOfStudents",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": {
-        "@id": "vnedu:EducationalOrganization"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "number of students"
-        },
-        {
-          "@language": "vi",
-          "@value": "số sinh viên"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "xsd:nonNegativeInteger"
-      }
-    },
-    {
-      "@id": "vnedu:AdministrativeUnit",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Administrative unit"
-        },
-        {
-          "@language": "vi",
-          "@value": "Đơn vị hành chính / vùng"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "schema:AdministrativeArea"
-      }
-    },
-    {
-      "@id": "vnedu:Ministry",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Ministry"
-        },
-        {
-          "@language": "vi",
-          "@value": "Bộ / cơ quan ngang bộ"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "vnedu:GoverningBody"
-      }
-    },
-    {
-      "@id": "vnedu:numberOfUndergraduates",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": {
-        "@id": "vnedu:EducationalOrganization"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "number of undergraduate students"
-        },
-        {
-          "@language": "vi",
-          "@value": "số sinh viên đại học"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "xsd:nonNegativeInteger"
-      }
-    },
-    {
-      "@id": "vnedu:UniversitySchool",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "University-level school (trường đại học)"
-        },
-        {
-          "@language": "vi",
-          "@value": "Trường đại học"
-        }
-      ],
-      "rdfs:subClassOf": [
-        {
-          "@id": "vnedu:HigherEducationInstitution"
-        },
-        {
-          "@id": "dbo:University"
-        }
-      ]
-    },
-    {
-      "@id": "vnedu:OwnershipType",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Ownership type"
-        },
-        {
-          "@language": "vi",
-          "@value": "Loại hình sở hữu"
-        }
-      ]
-    },
-    {
-      "@id": "vnedu:Company",
-      "@type": "owl:Class",
-      "rdfs:comment": {
-        "@language": "vi",
-        "@value": "Chủ sở hữu / nhà đầu tư của cơ sở giáo dục tư thục."
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Company / education group"
-        },
-        {
-          "@language": "vi",
-          "@value": "Doanh nghiệp / tập đoàn giáo dục"
-        }
-      ],
-      "rdfs:subClassOf": [
-        {
-          "@id": "vnedu:Organization"
-        },
-        {
-          "@id": "schema:Corporation"
-        }
-      ]
-    },
-    {
-      "@id": "vnedu:Region",
-      "@type": "owl:Class",
-      "rdfs:comment": {
-        "@language": "vi",
-        "@value": "Ba miền Bắc Bộ, Trung Bộ, Nam Bộ."
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Region"
-        },
-        {
-          "@language": "vi",
-          "@value": "Miền"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "vnedu:AdministrativeUnit"
-      }
-    },
-    {
-      "@id": "schema:gender",
-      "@type": "owl:ObjectProperty",
-      "rdfs:comment": {
-        "@language": "vi",
-        "@value": "Tái sử dụng từ schema.org; giá trị là item Wikidata (Q6581097 nam, Q6581072 nữ)."
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "gender"
-        },
-        {
-          "@language": "vi",
-          "@value": "giới tính"
-        }
-      ]
-    },
-    {
-      "@id": "vnedu:numberOfPostgraduates",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": {
-        "@id": "vnedu:EducationalOrganization"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "number of postgraduate students"
-        },
-        {
-          "@language": "vi",
-          "@value": "số học viên sau đại học"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "xsd:nonNegativeInteger"
-      }
-    },
-    {
-      "@id": "vnedu:MilitaryInstitution",
-      "@type": "owl:Class",
-      "owl:equivalentClass": {
-        "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb25"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Military institution"
-        },
-        {
-          "@language": "vi",
-          "@value": "Cơ sở đào tạo quân đội"
-        }
-      ]
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb25",
-      "@type": "owl:Class",
-      "owl:intersectionOf": {
-        "@list": [
-          {
-            "@id": "vnedu:EducationalOrganization"
-          },
-          {
-            "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb26"
-          }
-        ]
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb26",
-      "@type": "owl:Restriction",
-      "owl:hasValue": {
-        "@id": "vnedu:MinistryOfNationalDefence"
-      },
-      "owl:onProperty": {
-        "@id": "vnedu:governedBy"
-      }
-    },
-    {
-      "@id": "vnedu:ownership",
-      "@type": [
-        "owl:ObjectProperty",
-        "owl:FunctionalProperty"
-      ],
-      "rdfs:domain": {
-        "@id": "vnedu:EducationalOrganization"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "ownership"
-        },
-        {
-          "@language": "vi",
-          "@value": "loại hình sở hữu"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "vnedu:OwnershipType"
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb14",
-      "@type": "owl:AllDifferent",
-      "owl:distinctMembers": {
-        "@list": [
-          {
-            "@id": "vnedu:PublicOwnership"
-          },
-          {
-            "@id": "vnedu:PrivateOwnership"
-          }
-        ]
-      }
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology",
-      "@type": "owl:Ontology",
-      "dct:created": {
-        "@type": "xsd:date",
-        "@value": "2026-10-05"
-      },
-      "dct:description": {
-        "@language": "vi",
-        "@value": "Mô tả các cơ sở giáo dục đại học Việt Nam (đại học, trường đại học, học viện theo\nLuật Giáo dục đại học 2012, sửa đổi 2018), cơ quan chủ quản, lãnh đạo, cựu sinh viên, đơn vị hành chính\n(gồm cả sắp xếp tỉnh năm 2025), ngành đào tạo theo Thông tư 09/2022/TT-BGDĐT."
-      },
-      "dct:license": {
-        "@id": "https://creativecommons.org/licenses/by-sa/4.0/"
-      },
-      "dct:modified": {
-        "@type": "xsd:date",
-        "@value": "2026-10-06"
-      },
-      "dct:title": [
-        {
-          "@language": "en",
-          "@value": "VN-Edu Ontology"
-        },
-        {
-          "@language": "vi",
-          "@value": "Ontology Giáo dục đại học Việt Nam"
-        }
-      ],
-      "http://purl.org/vocab/vann/preferredNamespacePrefix": "vnedu",
-      "http://purl.org/vocab/vann/preferredNamespaceUri": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#",
-      "owl:versionIRI": {
-        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology/2.0"
-      },
-      "owl:versionInfo": "2.0",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "Profile: OWL 2 RL."
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb6",
-      "@type": "owl:AllDisjointClasses",
-      "owl:members": {
-        "@list": [
-          {
-            "@id": "vnedu:HigherEducationInstitution"
-          },
-          {
-            "@id": "vnedu:Branch"
-          },
-          {
-            "@id": "vnedu:VocationalCollege"
-          }
-        ]
-      }
-    },
-    {
-      "@id": "vnedu:shortName",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "short name"
-        },
-        {
-          "@language": "vi",
-          "@value": "tên viết tắt"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "xsd:string"
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb41",
-      "@type": "owl:Class",
-      "owl:intersectionOf": {
-        "@list": [
-          {
-            "@id": "vnedu:Person"
-          },
-          {
-            "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb42"
-          }
-        ]
-      },
-      "rdfs:subClassOf": {
-        "@id": "vnedu:Alumnus"
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb42",
-      "@type": "owl:Restriction",
-      "owl:onProperty": {
-        "@id": "vnedu:alumnusOf"
-      },
-      "owl:someValuesFrom": {
-        "@id": "vnedu:EducationalOrganization"
-      }
-    },
-    {
-      "@id": "vnedu:PoliceInstitution",
-      "@type": "owl:Class",
-      "owl:equivalentClass": {
-        "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb29"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "People's Public Security institution"
-        },
-        {
-          "@language": "vi",
-          "@value": "Cơ sở đào tạo Công an nhân dân"
-        }
-      ]
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb29",
-      "@type": "owl:Class",
-      "owl:intersectionOf": {
-        "@list": [
-          {
-            "@id": "vnedu:EducationalOrganization"
-          },
-          {
-            "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb30"
-          }
-        ]
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb30",
-      "@type": "owl:Restriction",
-      "owl:hasValue": {
-        "@id": "vnedu:MinistryOfPublicSecurity"
-      },
-      "owl:onProperty": {
-        "@id": "vnedu:governedBy"
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb37",
-      "@type": "owl:Class",
-      "owl:intersectionOf": {
-        "@list": [
-          {
-            "@id": "vnedu:EducationalOrganization"
-          },
-          {
-            "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb38"
-          }
-        ]
-      },
-      "rdfs:subClassOf": {
-        "@id": "vnedu:DefunctInstitution"
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb38",
-      "@type": "owl:Restriction",
-      "owl:onProperty": {
-        "@id": "vnedu:dissolutionYear"
-      },
-      "owl:someValuesFrom": {
-        "@id": "xsd:gYear"
-      }
-    },
-    {
-      "@id": "vnedu:academicStaff",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": {
-        "@id": "vnedu:EducationalOrganization"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "academic staff"
-        },
-        {
-          "@language": "vi",
-          "@value": "số giảng viên"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "xsd:nonNegativeInteger"
-      }
-    },
-    {
-      "@id": "vnedu:ProvincialPeoplesCommittee",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Provincial People's Committee"
-        },
-        {
-          "@language": "vi",
-          "@value": "Ủy ban nhân dân cấp tỉnh"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "vnedu:GoverningBody"
-      }
-    },
-    {
-      "@id": "vnedu:MinistryOfPublicSecurity",
-      "@type": [
-        "owl:NamedIndividual",
-        "vnedu:Ministry"
-      ],
-      "rdfs:label": [
-        {
-          "@language": "vi",
-          "@value": "Bộ Công an"
-        },
-        {
-          "@language": "en",
-          "@value": "Ministry of Public Security"
-        }
-      ]
-    },
-    {
-      "@id": "vnedu:mergedInto",
-      "@type": [
-        "owl:ObjectProperty",
-        "owl:FunctionalProperty"
-      ],
-      "owl:inverseOf": {
-        "@id": "vnedu:mergedFrom"
-      },
-      "rdfs:domain": {
-        "@id": "vnedu:FormerProvince"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "merged into"
-        },
-        {
-          "@language": "vi",
-          "@value": "sáp nhập vào"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "vnedu:Province"
-      }
-    },
-    {
-      "@id": "vnedu:website",
-      "@type": "owl:ObjectProperty",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "website"
-        },
-        {
-          "@language": "vi",
-          "@value": "trang web"
-        }
-      ],
-      "rdfs:subPropertyOf": {
-        "@id": "foaf:homepage"
-      }
-    },
-    {
-      "@id": "vnedu:governs",
-      "@type": "owl:ObjectProperty",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "governs"
-        },
-        {
-          "@language": "vi",
-          "@value": "là cơ quan chủ quản của"
-        }
-      ]
-    },
-    {
-      "@id": "vnedu:OfficerSchool",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Officer school"
-        },
-        {
-          "@language": "vi",
-          "@value": "Trường sĩ quan"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "vnedu:HigherEducationInstitution"
-      }
-    },
-    {
-      "@id": "vnedu:InstitutionLeader",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Institution leader"
-        },
-        {
-          "@language": "vi",
-          "@value": "Người đứng đầu cơ sở giáo dục"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "vnedu:Person"
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb54",
-      "@type": "owl:AllDisjointClasses",
-      "owl:members": {
-        "@list": [
-          {
-            "@id": "vnedu:Organization"
-          },
-          {
-            "@id": "vnedu:Person"
-          },
-          {
-            "@id": "vnedu:AdministrativeUnit"
-          }
-        ]
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb45",
-      "@type": "owl:Class",
-      "owl:intersectionOf": {
-        "@list": [
-          {
-            "@id": "vnedu:Person"
-          },
-          {
-            "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb46"
-          }
-        ]
-      },
-      "rdfs:subClassOf": {
-        "@id": "vnedu:InstitutionLeader"
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb46",
-      "@type": "owl:Restriction",
-      "owl:onProperty": {
-        "@id": "vnedu:leads"
-      },
-      "owl:someValuesFrom": {
-        "@id": "vnedu:EducationalOrganization"
-      }
-    },
-    {
-      "@id": "vnedu:DefunctInstitution",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Defunct institution"
-        },
-        {
-          "@language": "vi",
-          "@value": "Cơ sở đã giải thể / sáp nhập"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "vnedu:EducationalOrganization"
-      }
-    },
-    {
-      "@id": "vnedu:AcademicProgram",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Academic program"
-        },
-        {
-          "@language": "vi",
-          "@value": "Chương trình đào tạo"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "schema:EducationalOccupationalProgram"
-      }
-    },
-    {
-      "@id": "vnedu:ownedBy",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "vnedu:EducationalOrganization"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "owned by"
-        },
-        {
-          "@language": "vi",
-          "@value": "thuộc sở hữu / đầu tư của"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "vnedu:Company"
-      },
-      "rdfs:subPropertyOf": {
-        "@id": "schema:parentOrganization"
-      }
-    },
-    {
-      "@id": "vnedu:area",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": {
-        "@id": "vnedu:AdministrativeUnit"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "area (km²)"
-        },
-        {
-          "@language": "vi",
-          "@value": "diện tích (km²)"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "xsd:decimal"
-      }
-    },
-    {
-      "@id": "vnedu:Alumnus",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Alumnus"
-        },
-        {
-          "@language": "vi",
-          "@value": "Cựu sinh viên"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "vnedu:Person"
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb10",
-      "@type": "owl:AllDisjointClasses",
-      "owl:members": {
-        "@list": [
-          {
-            "@id": "vnedu:EducationalOrganization"
-          },
-          {
-            "@id": "vnedu:GoverningBody"
-          },
-          {
-            "@id": "vnedu:Company"
-          }
-        ]
-      }
-    },
-    {
-      "@id": "vnedu:hasPart",
-      "@type": "owl:ObjectProperty",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "has part"
-        },
-        {
-          "@language": "vi",
-          "@value": "gồm"
-        }
-      ]
-    },
-    {
-      "@id": "vnedu:motto",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": {
-        "@id": "vnedu:EducationalOrganization"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "motto"
-        },
-        {
-          "@language": "vi",
-          "@value": "khẩu hiệu"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "rdf:langString"
-      }
-    },
-    {
-      "@id": "vnedu:EducationalOrganization",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Educational organization"
-        },
-        {
-          "@language": "vi",
-          "@value": "Cơ sở giáo dục"
-        }
-      ],
-      "rdfs:subClassOf": [
-        {
-          "@id": "vnedu:Organization"
-        },
-        {
-          "@id": "schema:EducationalOrganization"
-        }
-      ]
-    },
-    {
-      "@id": "vnedu:Person",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Person"
-        },
-        {
-          "@language": "vi",
-          "@value": "Người"
-        }
-      ],
-      "rdfs:subClassOf": [
-        {
-          "@id": "foaf:Person"
-        },
-        {
-          "@id": "schema:Person"
-        }
-      ]
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb64",
-      "@type": "owl:Restriction",
-      "owl:onProperty": {
-        "@id": "vnedu:ownedBy"
-      },
-      "owl:someValuesFrom": {
-        "@id": "vnedu:Company"
-      },
-      "rdfs:subClassOf": {
-        "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb65"
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb65",
-      "@type": "owl:Restriction",
-      "owl:hasValue": {
-        "@id": "vnedu:PrivateOwnership"
-      },
-      "owl:onProperty": {
-        "@id": "vnedu:ownership"
-      }
-    },
-    {
-      "@id": "vnedu:PrivateInstitution",
-      "@type": "owl:Class",
-      "owl:disjointWith": {
-        "@id": "vnedu:PublicInstitution"
-      },
-      "owl:equivalentClass": {
-        "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb21"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Private institution"
-        },
-        {
-          "@language": "vi",
-          "@value": "Cơ sở tư thục"
-        }
-      ]
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb21",
-      "@type": "owl:Class",
-      "owl:intersectionOf": {
-        "@list": [
-          {
-            "@id": "vnedu:EducationalOrganization"
-          },
-          {
-            "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb22"
-          }
-        ]
-      }
-    },
-    {
-      "@id": "_:ncfbcc4a55d8c46ca94fe531f56a7cc3fb22",
-      "@type": "owl:Restriction",
-      "owl:hasValue": {
-        "@id": "vnedu:PrivateOwnership"
-      },
-      "owl:onProperty": {
-        "@id": "vnedu:ownership"
-      }
-    },
-    {
-      "@id": "vnedu:formerName",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "former name"
-        },
-        {
-          "@language": "vi",
-          "@value": "tên cũ"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "rdf:langString"
-      }
-    },
-    {
-      "@id": "vnedu:governedBy",
-      "@type": "owl:ObjectProperty",
-      "owl:inverseOf": {
-        "@id": "vnedu:governs"
-      },
-      "owl:propertyChainAxiom": {
-        "@list": [
-          {
-            "@id": "vnedu:governedBy"
-          },
-          {
-            "@id": "vnedu:subordinateTo"
-          }
-        ]
-      },
-      "rdfs:domain": {
-        "@id": "vnedu:EducationalOrganization"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "governed by"
-        },
-        {
-          "@language": "vi",
-          "@value": "có cơ quan chủ quản"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "vnedu:GoverningBody"
-      }
-    },
-    {
-      "@id": "vnedu:honorific",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": {
-        "@id": "vnedu:Person"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "academic title / rank"
-        },
-        {
-          "@language": "vi",
-          "@value": "học hàm, học vị, quân hàm"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "xsd:string"
-      }
-    },
-    {
-      "@id": "vnedu:alumnusOf",
-      "@type": "owl:ObjectProperty",
-      "owl:inverseOf": {
-        "@id": "vnedu:hasAlumnus"
-      },
-      "rdfs:domain": {
-        "@id": "vnedu:Person"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "alumnus of"
-        },
-        {
-          "@language": "vi",
-          "@value": "cựu sinh viên của"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "vnedu:EducationalOrganization"
-      },
-      "rdfs:subPropertyOf": {
-        "@id": "schema:alumniOf"
-      }
-    },
-    {
-      "@id": "vnedu:dissolutionYear",
-      "@type": [
-        "owl:DatatypeProperty",
-        "owl:FunctionalProperty"
-      ],
-      "rdfs:domain": {
-        "@id": "vnedu:Organization"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "dissolution year"
-        },
-        {
-          "@language": "vi",
-          "@value": "năm giải thể / sáp nhập"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "xsd:gYear"
-      }
-    },
-    {
-      "@id": "vnedu:MinistryOfNationalDefence",
-      "@type": [
-        "owl:NamedIndividual",
-        "vnedu:Ministry"
-      ],
-      "rdfs:label": [
-        {
-          "@language": "vi",
-          "@value": "Bộ Quốc phòng"
-        },
-        {
-          "@language": "en",
-          "@value": "Ministry of National Defence"
-        }
-      ]
-    },
-    {
-      "@id": "vnedu:FormerProvince",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Former province"
-        },
-        {
-          "@language": "vi",
-          "@value": "Tỉnh cũ (trước 01/07/2025)"
-        }
-      ],
-      "rdfs:subClassOf": {
-        "@id": "vnedu:AdministrativeUnit"
-      }
-    },
-    {
-      "@id": "vnedu:hasMember",
-      "@type": "owl:ObjectProperty",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "has member"
-        },
-        {
-          "@language": "vi",
-          "@value": "có đơn vị thành viên"
-        }
-      ],
-      "rdfs:subPropertyOf": {
-        "@id": "schema:subOrganization"
-      }
-    },
-    {
-      "@id": "vnedu:hasLeader",
-      "@type": "owl:ObjectProperty",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "has leader"
-        },
-        {
-          "@language": "vi",
-          "@value": "có người đứng đầu"
-        }
-      ],
-      "rdfs:subPropertyOf": {
-        "@id": "schema:employee"
-      }
-    },
-    {
-      "@id": "vnedu:trainsMajor",
-      "@type": "owl:ObjectProperty",
-      "owl:propertyChainAxiom": {
-        "@list": [
-          {
-            "@id": "vnedu:offersProgram"
-          },
-          {
-            "@id": "vnedu:ofMajor"
-          }
-        ]
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "trains major"
-        },
-        {
-          "@language": "vi",
-          "@value": "đào tạo ngành"
-        }
-      ]
-    },
-    {
-      "@id": "vnedu:director",
-      "@type": "owl:ObjectProperty",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "director / president"
-        },
-        {
-          "@language": "vi",
-          "@value": "giám đốc"
-        }
-      ],
-      "rdfs:subPropertyOf": {
-        "@id": "vnedu:hasLeader"
-      }
-    },
-    {
-      "@id": "vnedu:memberOf",
-      "@type": "owl:ObjectProperty",
-      "owl:inverseOf": {
-        "@id": "vnedu:hasMember"
-      },
-      "rdfs:domain": {
-        "@id": "vnedu:EducationalOrganization"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "member of"
-        },
-        {
-          "@language": "vi",
-          "@value": "là thành viên của"
-        }
-      ],
-      "rdfs:range": {
-        "@id": "vnedu:HigherEducationInstitution"
-      },
-      "rdfs:subPropertyOf": {
-        "@id": "schema:parentOrganization"
       }
     }
   ]

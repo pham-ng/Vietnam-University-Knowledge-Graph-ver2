@@ -19,9 +19,9 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-yen",
   "@type": [
-    "vnedu:AdministrativeUnit",
     "schema:AdministrativeArea",
-    "vnedu:FormerProvince"
+    "vnedu:FormerProvince",
+    "vnedu:AdministrativeUnit"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -55,12 +55,12 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Phu Yen"
-    },
-    {
       "@language": "vi",
       "@value": "Phú Yên"
+    },
+    {
+      "@language": "en",
+      "@value": "Phu Yen"
     }
   ],
   "vnedu:area": {

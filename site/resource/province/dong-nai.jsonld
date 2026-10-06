@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-nai",
   "@type": [
-    "vnedu:AdministrativeUnit",
     "schema:AdministrativeArea",
     "vnedu:CentrallyGovernedCity",
-    "vnedu:Province"
+    "vnedu:Province",
+    "vnedu:AdministrativeUnit"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/%C4%90%E1%BB%93ng_Nai"
+      "@id": "https://vi.wikipedia.org/wiki/%C4%90%E1%BB%93ng_Nai"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/%C4%90%E1%BB%93ng_Nai"
+      "@id": "https://en.wikipedia.org/wiki/%C4%90%E1%BB%93ng_Nai"
     }
   ],
   "geo:lat": {
@@ -45,10 +45,10 @@
       "@id": "dbr:Đồng_Nai_province"
     },
     {
-      "@id": "wd:Q33271"
+      "@id": "https://sws.geonames.org/1582720/"
     },
     {
-      "@id": "https://sws.geonames.org/1582720/"
+      "@id": "wd:Q33271"
     }
   ],
   "prov:wasDerivedFrom": {

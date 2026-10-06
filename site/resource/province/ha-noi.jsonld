@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi",
   "@type": [
+    "vnedu:Province",
     "vnedu:AdministrativeUnit",
     "schema:AdministrativeArea",
-    "vnedu:CentrallyGovernedCity",
-    "vnedu:Province"
+    "vnedu:CentrallyGovernedCity"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i"
+      "@id": "https://en.wikipedia.org/wiki/Hanoi"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Hanoi"
+      "@id": "https://vi.wikipedia.org/wiki/H%C3%A0_N%E1%BB%99i"
     }
   ],
   "geo:lat": {
@@ -45,10 +45,10 @@
       "@id": "wd:Q1858"
     },
     {
-      "@id": "dbr:Hanoi"
+      "@id": "https://sws.geonames.org/1581130/"
     },
     {
-      "@id": "https://sws.geonames.org/1581130/"
+      "@id": "dbr:Hanoi"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -56,12 +56,12 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Hà Nội"
-    },
-    {
       "@language": "en",
       "@value": "Hanoi"
+    },
+    {
+      "@language": "vi",
+      "@value": "Hà Nội"
     }
   ],
   "vnedu:area": {

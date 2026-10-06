@@ -20,13 +20,13 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-dan-toc",
   "@type": [
     "schema:Organization",
-    "schema:CollegeOrUniversity",
-    "vnedu:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "vnedu:Organization",
     "foaf:Organization",
     "vnedu:HigherEducationInstitution",
+    "vnedu:EducationalOrganization",
+    "vnedu:Organization",
+    "schema:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "schema:CollegeOrUniversity",
     "vnedu:Academy"
   ],
   "foaf:homepage": {
@@ -45,10 +45,10 @@
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q65164557"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75586345"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75586345"
+      "@id": "wd:Q65164557"
     }
   ],
   "rdfs:label": [
@@ -63,10 +63,10 @@
   ],
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
@@ -82,11 +82,11 @@
   "vnedu:formerName": [
     {
       "@language": "vi",
-      "@value": "Trường Cán bộ Dân tộc"
+      "@value": "Viện Dân tộc"
     },
     {
       "@language": "vi",
-      "@value": "Viện Dân tộc"
+      "@value": "Trường Cán bộ Dân tộc"
     }
   ],
   "vnedu:foundingYear": {
@@ -98,10 +98,10 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
@@ -111,8 +111,8 @@
     "@id": "vnedu:PublicOwnership"
   },
   "vnedu:shortName": [
-    "HVDT",
-    "VAEM"
+    "VAEM",
+    "HVDT"
   ],
   "vnedu:website": {
     "@id": "https://hvdt.edu.vn/"

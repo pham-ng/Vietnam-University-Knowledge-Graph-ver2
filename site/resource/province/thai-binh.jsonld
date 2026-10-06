@@ -20,8 +20,8 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-binh",
   "@type": [
     "vnedu:FormerProvince",
-    "vnedu:AdministrativeUnit",
-    "schema:AdministrativeArea"
+    "schema:AdministrativeArea",
+    "vnedu:AdministrativeUnit"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -41,13 +41,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q36681"
-    },
-    {
       "@id": "https://sws.geonames.org/1566338/"
     },
     {
       "@id": "dbr:Thái_Bình_province"
+    },
+    {
+      "@id": "wd:Q36681"
     }
   ],
   "prov:wasDerivedFrom": {

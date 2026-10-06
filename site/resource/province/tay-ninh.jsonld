@@ -19,9 +19,9 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/tay-ninh",
   "@type": [
-    "vnedu:AdministrativeUnit",
     "schema:AdministrativeArea",
-    "vnedu:Province"
+    "vnedu:Province",
+    "vnedu:AdministrativeUnit"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -41,13 +41,13 @@
   },
   "owl:sameAs": [
     {
+      "@id": "https://sws.geonames.org/1566557/"
+    },
+    {
       "@id": "wd:Q36608"
     },
     {
       "@id": "dbr:Tây_Ninh_province"
-    },
-    {
-      "@id": "https://sws.geonames.org/1566557/"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -55,11 +55,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Tây Ninh"
     },
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Tây Ninh"
     }
   ],
