@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+\node[auditbox,text width=2.6cm] (u) at (0,0) {Organization $U$};
+\node[auditbox,text width=2.6cm] (old) at (4.7,0) {FormerProvince\\$P_o$};
+\node[auditbox,text width=2.6cm] (new) at (9.4,0) {Province $P_n$};
+\node[auditbox,text width=2.6cm] (region) at (9.4,-2.5) {Region $R$};
+\draw[auditarr] (u)--node[auditlabel,above]{locatedIn}(old);
+\draw[auditarr] (old)--node[auditlabel,above]{mergedInto}(new);
+\draw[auditarr] (new)--node[auditlabel,right]{partOf}(region);
+\draw[auditarr,dashed] (u.north) to[out=55,in=125] node[auditlabel,above]{inferred locatedIn} (new.north);
+\draw[auditarr,dashed] (u.south)|-node[auditlabel,pos=0.7,above]{inferred locatedIn}(region.west);
+\node[font=\small,align=center] at (4.7,-3.6) {A current-boundary crosswalk is not a dated history.\\The analogous bornIn chain does not prove that $P_n$ existed at birth.};
+\end{tikzpicture}

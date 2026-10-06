@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+\node[auditbox,text width=4cm] (gold) at (0,0) {Validated union\\vnedu-all.ttl};
+\node[auditbox,text width=4.3cm] (static) at (8.5,0) {Static publisher / GitHub Pages\\Canonical entity HTML + RDF documents};
+\node[auditbox,text width=4cm] (rdf) at (0,-2.5) {RDFLib child processes\\Default Render execution path};
+\node[auditbox,text width=4.3cm] (flask) at (8.5,-2.5) {Flask /sparql and /resource/...\\Query guard + response handling};
+\node[auditbox,text width=4cm] (fuseki) at (0,-5.3) {Optional Fuseki /vnedu\\In-memory file OR persistent TDB2};
+\node[auditbox,text width=4.3cm] (client) at (8.5,-5.3) {Client: browser or RDF consumer\\Chooses a document or query endpoint};
+\draw[auditarr] (gold)--node[auditlabel,above]{build}(static);
+\draw[auditarr] (gold)--node[auditlabel,right]{read}(rdf);
+\draw[auditarr] (flask)--node[auditlabel,above]{local query}(rdf);
+\draw[auditarr,dashed] (gold.west) -- ++(-0.7,0) |- node[auditlabel,pos=0.65,left]{file load /\\explicit PUT}(fuseki.west);
+\draw[auditarr,dashed] (flask.south west)--node[auditlabel,sloped,above]{optional proxy}(fuseki.north east);
+\draw[auditarr] (client)--node[auditlabel,right]{HTTP query}(flask);
+\draw[auditarr] (client.east)--++(0.7,0)|-node[auditlabel,pos=0.45,right]{HTTP GET}(static.east);
+\end{tikzpicture}

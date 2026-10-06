@@ -1,0 +1,146 @@
+\section{URI publication and the Apache Jena Fuseki integration}
+\label{sec:fuseki}
+Apache Jena Fuseki is a SPARQL server, with query, update and graph-store capabilities
+depending on configuration~\cite{fuseki}. It is not the component that assigns this
+project's resource identifiers. The same university IRI remains in the triples whether
+the graph is queried using RDFLib, browser-side Oxigraph or Fuseki.
+
+\Needspace{18\baselineskip}
+\subsection{Resource identifiers are not endpoint URLs}
+Three addresses serve different purposes:
+\begin{code}
+# Identity of a university, stored as the RDF subject:
+https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi
+
+# Query endpoint of the optional local Fuseki dataset:
+http://localhost:3030/vnedu/sparql
+
+# Graph Store Protocol target for its default graph:
+http://localhost:3030/vnedu/data?default
+\end{code}
+Moving storage to Fuseki does not require rewriting the first address as a localhost
+address. Nor does uploading triples automatically make that resource IRI dereferenceable:
+the canonical HTTP origin must publish a representation separately. The project uses
+\term{ontology\#ClassName} hash identifiers for terms and slash identifiers under
+\term{resource/} for entities. The static publisher creates related \term{.ttl} and
+\term{.jsonld} documents and HTML with embedded JSON-LD.
+
+The canonical GitHub Pages origin is different from the Flask service. The latter's
+content negotiation cannot change GitHub Pages responses. The implementation does not
+provide the classic entity-to-document HTTP 303 pattern at the canonical entity URI;
+this is an architectural limitation relative to the distinction explained in
+\emph{Cool URIs}~\cite{uris}, not evidence that no machine-readable RDF exists.
+
+\begin{figure}[htbp]\centering
+\resizebox{\textwidth}{!}{\input{figures/deployment-en.tex}}
+\caption[URI publication and optional Fuseki execution]{Publication and execution paths in the repository. Solid arrows show implemented
+data/request paths; the dashed Fuseki branch is optional. Render explicitly starts the
+local RDFLib backend. Storage and query endpoints do not replace the canonical RDF identifiers.}
+\label{fig:deployment}
+\end{figure}
+
+\subsection{What the repository actually implements}
+\begin{table}[htbp]\centering\small
+\caption{Implementation evidence and verification status for Fuseki.}\label{tab:fuseki-status}
+\begin{tabularx}{\textwidth}{p{3.9cm}XX}\toprule
+Component & Implemented behavior & Evidence boundary \\\midrule
+\term{fuseki/run\_fuseki.ps1} & Selects an archived Fuseki distribution and starts \term{--file} on \term{/vnedu}. & Read-only in-memory file load; no persistent TDB2 storage in this mode. Not executed in this audit. \\
+\term{fuseki/docker-compose.yml} & Third-party \term{stain/jena-fuseki:latest}, persistent volume, TDB2 setting, dataset name and port 3030. & Configuration exists; image behavior and persistence were not integration-tested. \\
+\term{step5\_load\_fuseki.py} & Ping, dataset lookup/creation, HTTP PUT of \term{vnedu-all.ttl}, then triple-count query. & Optional loader, absent from \term{run\_all.py}; not called against a live store. \\
+\term{app/server.py} & \term{FusekiBackend} proxies SPARQL; \term{auto} selects it after a ping succeeds. & Ping is not a dataset-version check. HTTP behavior has regression coverage, not a live Fuseki certification. \\
+\term{render.yaml} & Starts \term{--backend local}. & The declared public deployment is RDFLib-backed, not Fuseki-backed. \\
+\bottomrule\end{tabularx}
+\end{table}
+
+The launcher chooses version 3.17.0 for detected Java 8 and 4.10.0 otherwise. It therefore
+does not implement a current-release policy or a complete Java compatibility check. Apache
+recommends current official releases where possible~\cite{fuseki}. The launcher also
+downloads without checking an expected digest. These facts must not be described as a
+hardened, reproducible production installation.
+
+\subsection{Load/query sequence and safety gaps}
+For an already running, update-enabled local store, the loader first checks
+\term{/\$/ping}, inspects \term{/\$/datasets/vnedu}, and requests dataset creation if
+the response is 404. Fuseki's administration API supports a dataset name and a TDB2
+type~\cite{fadmin}. The loader then sends the union as Turtle using Graph Store HTTP PUT.
+For the selected default graph, PUT is replacement rather than incremental addition~\cite{gsp}.
+This can erase existing statements in that graph. Named graphs are not loaded by this
+particular request. The final count query alone does not prove graph equivalence.
+
+The legacy loader has no pre-upload \term{require\_validated\_release} call, explicit
+replacement confirmation, backup, or semantic post-upload comparison. Non-404 errors
+from the dataset lookup are not rejected immediately, and the final query response is
+decoded without a preceding \term{raise\_for\_status}. These are remaining implementation
+gaps, not features supplied by Fuseki automatically. No real dataset was overwritten as
+part of this follow-up review.
+
+The Docker example publishes \term{3030:3030}, which is not limited to loopback, and
+contains a fixed demonstration administrator password. Authentication on administration
+routes does not automatically protect query or update routes; access rules must be
+configured explicitly~\cite{fsecurity}. Use a private bind/network, a reviewed and pinned
+image, externally supplied credentials, update restrictions, backups, and backend-level
+query/egress controls before production exposure. The current Flask proxy does not provide
+credentials for a query endpoint requiring authentication.
+
+An end-to-end acceptance run should use a disposable dataset: validate the release; load
+it; compare triple counts and representative query results with the local graph; restart
+the TDB2 service and check persistence; then exercise authorized query access and denied
+updates. Expensive-query cancellation, memory bounds and remote SERVICE policy need
+separate checks. This report does not replace these tests with a successful local RDFLib run.
+
+\section{Five-star Linked Open Data assessment}
+\label{sec:five-star}
+The five-star scheme evaluates how data is published and connected, not the overall
+quality of a program or the correctness of every ontology axiom~\cite{five}. There is no
+Fuseki-specific requirement: RDFLib or static RDF publication can support the relevant
+mechanisms. Table~\ref{tab:five-stars} assesses the project's data publication rather than
+assigning an unsupported software-quality score.
+
+\begin{table}[htbp]\centering\small
+\caption{Evidence against the cumulative five-star publication scheme.}\label{tab:five-stars}
+\begin{tabularx}{\textwidth}{p{1cm}p{3.8cm}X}\toprule
+Level & Criterion, summarized & Project evidence and qualification \\\midrule
+1 & Publicly accessible, openly licensed & Public sample accessible; dataset metadata declares CC BY-SA 4.0. Upstream media retain their own licenses. \\
+2 & Structured, machine-readable & JSON records and parsed RDF graphs, not only screen images or PDFs. \\
+3 & Non-proprietary format & JSON, Turtle and JSON-LD artifacts. \\
+4 & Web identifiers and open Semantic Web standards & Stable-registry HTTP IRIs, RDF descriptions and query interfaces; sampled entity documents parse. Canonical negotiation and version-URI gaps remain. \\
+5 & Connections to other datasets & Corrected local link graph contains 2,398 \term{owl:sameAs}, 88 \term{skos:closeMatch} and 1,188 document-topic links. Existence is measured; every identity assertion is not independently verified. \\
+\bottomrule\end{tabularx}
+\end{table}
+
+\textbf{Verdict.} The implementation and sampled public RDF support the basic five-star
+publication pattern, subject to the declared licensing scope. This is not an independent
+certification, proof of factual accuracy, or proof that the corrected branch is deployed.
+The URI-version, semantics and operations gaps should be reported alongside the claim,
+not hidden by a five-star badge. Failing a single endpoint probe does not automatically
+reduce an otherwise accessible RDF dataset to a lower star level.
+
+\subsection{Dated HTTP evidence}
+\term{audit/check\_publication.py} performs seven read-only requests with bounded timeouts;
+the result is saved in \term{data/reports/publication-check.json}. The sample was recorded
+on 7 October 2026 at 00:10 ICT (UTC+7). The institution tested was
+\term{resource/university/dai-hoc-bach-khoa-ha-noi}; this is not a random or exhaustive sample.
+
+\begin{table}[htbp]\centering\small
+\caption{Observed HTTP behavior; deployed content may predate the corrected branch.}\label{tab:http-check}
+\begin{tabularx}{\textwidth}{p{4.5cm}X}\toprule
+Request & Observation \\\midrule
+Canonical entity, Accept HTML & HTTP 200, HTML, embedded JSON-LD and alternate RDF links. \\
+Canonical entity, Accept Turtle & HTTP 200, still HTML; no HTTP redirect. \\
+Entity's \term{.ttl} document & HTTP 200, Turtle, 204 triples; graph describes the entity IRI. \\
+Entity's \term{.jsonld} document & HTTP 200, JSON-LD, 204 triples; graph describes the entity IRI. \\
+Declared \term{ontology/2.1} version & HTTP 404. \\
+Render \term{/healthz} & Read timeout after 15 seconds; health and deployed commit were not established. \\
+Local Fuseki \term{/\$/ping} & Connection refused on port 3030; no reachable service at the configured address. \\
+\bottomrule\end{tabularx}
+\end{table}
+
+A Render timeout can reflect a cold start or a network/service problem; it is not proof of
+permanent downtime. The probe did not test SPARQL federation, persistence, admin credentials,
+or all 2,248 local resource identifiers. The existing public deployment remains distinct
+from the audited branch, whose Linux CI and local tests validate a different scope.
+
+The media distinction also matters. For example, the shipped HUST logo metadata records
+``fair use'' while its campus photograph records CC0. Describing or linking such an image
+does not relicense the image under the dataset license. A data publication claim must not
+be expanded into a blanket claim that every remotely displayed asset is openly licensed.

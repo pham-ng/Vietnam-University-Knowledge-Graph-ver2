@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+\node[auditbox] (org) at (0,0) {Organization};
+\node[auditbox] (body) at (-5,-1.6) {GoverningBody};
+\node[auditbox,text width=4cm] (edu) at (0,-1.6) {EducationalOrganization};
+\node[auditbox] (company) at (5,-1.6) {Company};
+\node[auditbox,text width=3.5cm] (hei) at (0,-3.4) {HigherEducation\\Institution};
+\node[auditbox] (branch) at (5,-3.4) {Branch};
+\node[auditbox] (min) at (-5,-3.4) {Ministry / Provincial\\People's Committee};
+\node[auditbox,text width=2.7cm] (u) at (-5.25,-5.5) {University};
+\node[auditbox,text width=2.7cm] (s) at (-1.75,-5.5) {UniversitySchool};
+\node[auditbox,text width=2.7cm] (a) at (1.75,-5.5) {Academy};
+\node[auditbox,text width=2.7cm] (o) at (5.25,-5.5) {OfficerSchool};
+\foreach \n in {body,edu,company} \draw[auditarr] (\n.north)--(org.south);
+\draw[auditarr] (hei)--(edu);
+\draw[auditarr] (branch.north)--(edu.south east);
+\draw[auditarr] (min)--(body);
+\foreach \n in {u,s,a,o} \draw[auditarr] (\n.north)--(hei.south);
+\node[font=\small,align=center] at (0,-6.6) {PublicInstitution and PrivateInstitution are defined by ownership values;\\they are orthogonal to the four legal-type classes, not their replacements.};
+\end{tikzpicture}

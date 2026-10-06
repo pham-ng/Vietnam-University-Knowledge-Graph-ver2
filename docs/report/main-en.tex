@@ -8,12 +8,14 @@
 \usepackage[margin=25mm]{geometry}
 \usepackage{microtype,amsmath,amssymb,graphicx,booktabs,tabularx,longtable,array}
 \usepackage{xcolor,tikz,fvextra,enumitem}
-\usetikzlibrary{arrows.meta,positioning}
+\usetikzlibrary{arrows.meta,positioning,calc}
 \usepackage[section]{placeins}
+\usepackage{needspace}
 \usepackage[hidelinks]{hyperref}
 \usepackage{xurl,fancyhdr}
 \usepackage[font=small,labelfont=bf]{caption}
 \definecolor{accent}{HTML}{126B65}
+\tikzset{auditbox/.style={draw=accent,rounded corners=2pt,fill=accent!5,align=center,font=\small,text width=3cm,minimum height=10mm},auditarr/.style={-{Stealth},thick,draw=accent},auditlabel/.style={font=\scriptsize,fill=white,inner sep=2pt,align=center}}
 \pagestyle{fancy}\fancyhf{}
 \fancyhead[L]{\small VN-Edu LOD}\fancyhead[R]{\small Audited technical report}
 \fancyfoot[C]{\thepage}
@@ -24,7 +26,9 @@
 \clubpenalty=10000
 \setlist{itemsep=3pt,topsep=4pt}
 \newcommand{\term}[1]{\texttt{#1}}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 \DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\small,breaklines=true,breakanywhere=true,frame=single,rulecolor=\color{black!20}}
+\BeforeBeginEnvironment{code}{\Needspace{12\baselineskip}}
 \input{tables/audit-metrics.tex}
 \hypersetup{pdftitle={VN-Edu LOD: Design, Implementation, and Critical Evaluation},pdfauthor={VN-Edu LOD project}}
 \begin{document}
@@ -43,7 +47,7 @@
 {\color{accent}\rule{0.65\textwidth}{1pt}\par}
 \vspace{10mm}
 {\large Revised English technical report\par}
-{\large 6 October 2026\par}
+{\large Expanded edition: 7 October 2026\par}
 \vfill
 \begin{minipage}{0.9\textwidth}\small
 This edition incorporates an independent code and data audit of repository revision
@@ -74,13 +78,14 @@ review identified defects in SPARQL request validation, query cancellation, publ
 gates, entity identity, persistent URI allocation, and the interpretation of evaluation
 results. The revised implementation addresses these defects and adds targeted regression
 tests. Evaluation distinguishes local structural validity, reference-link agreement, and
-factual accuracy. No independent population-level accuracy estimate, formal OWL-profile
-certificate, or current public-service availability measurement is claimed. The result is
+factual accuracy. No independent population-level accuracy estimate or formal OWL-profile
+certificate is claimed. A dated seven-request publication check has limited scope. The result is
 a reproducible educational Linked Data system with explicit operational and epistemic limits.
 \end{abstract}
 \noindent\textbf{Keywords:} knowledge graph; RDF; ontology; SHACL; SPARQL; entity resolution;
 data provenance; Vietnamese higher education.
 \clearpage\tableofcontents\clearpage
+\listoffigures\clearpage
 
 \section{Introduction and scope}
 Information about a university can appear under different names and identifiers across
@@ -195,7 +200,7 @@ be interpreted with that limitation.
 \draw[arr] (gold)--node[right,font=\small]{reasoner diagnostics and SHACL}(release);
 \draw[arr] (release)--(web);
 \end{tikzpicture}
-\caption{Release flow. A failed validation prevents replacement of validated inference and the serving graph; changed inputs invalidate the publication fingerprint.}
+\caption[Validated release flow]{Release flow. A failed validation prevents replacement of validated inference and the serving graph; changed inputs invalidate the publication fingerprint.}
 \end{figure}
 
 \subsection{Layers and contracts}
@@ -212,7 +217,7 @@ references, and invalid leadership references. These checks complement, rather t
 replace, semantic review of the extraction policy.
 
 After RDF generation, literal ranges and functional-field cardinalities are validated
-before reasoning can merge object values through equality. The rule engine's own error
+on the raw asserted graph, independently of equality in the closure. The rule engine's own error
 messages are retained in the consistency diagnostics. SHACL then checks the asserted and
 retained inferred graph. A failure stops the release step. On success, a validation record
 binds the checked release to its ontology, shapes, Silver files, component RDF files, and
@@ -253,11 +258,16 @@ without pretending that the historical ambiguity has been adjudicated. Distingui
 predecessor origin, legal establishment, and opening would require dated event records
 and authoritative supporting sources.
 
+\input{sections/transformation-en.tex}
+
 \section{Ontology design and relationship semantics}
 \subsection{Modules}
 The ontology has \metricClasses{} named local classes, \metricObjectProperties{} local
 object properties, and \metricDataProperties{} local datatype properties in the audited
 release. Table~\ref{tab:modules} summarizes the main relationship choices.
+Figures~\ref{fig:taxonomy}--\ref{fig:geo-chain} visualize selected implemented axioms,
+not a proposed replacement ontology. Classes, property signatures and individual-level
+inferences are distinguished explicitly.
 \begin{table}[htbp]\centering\small
 \caption{Main modules and intended distinctions.}\label{tab:modules}
 \begin{tabularx}{\textwidth}{p{2.6cm}XX}\toprule
@@ -281,6 +291,8 @@ carry logical implications; choosing a weaker alignment than equivalence does no
 it semantically harmless. The current inference run does not import and validate the
 complete external ontologies. Its absence of detected conflicts therefore applies to the
 local reasoning scope, not every possible external combination.
+
+\input{sections/ontology-review-en.tex}
 
 \subsection{Materialization}
 The system computes a rule closure over the local ontology and asserted data and retains
@@ -342,17 +354,18 @@ currently belongs to GitHub Pages; the dynamic service has another origin. Conte
 negotiation at the dynamic service does not establish that the canonical static URI
 performs the same negotiation.
 
-The implementation supports several practices associated with five-star Linked Open Data:
-open formats, HTTP identifiers, RDF descriptions, and outward links. This report treats
-that as a design assessment, not a certification. It does not reassert the previous
-report's live availability measurements. Operational claims need dated requests to the
-actual deployed revision. The repository declares data licensing and retains media
-metadata; this audit is not a legal verification of the license of every upstream asset.
+The implementation supports practices associated with five-star Linked Open Data.
+Section~\ref{sec:five-star} assesses each level and reports a small, dated HTTP sample;
+it does not reuse the earlier report's live availability measurements. The repository
+declares data licensing and retains media metadata; this audit is not a legal verification
+of the license of every upstream asset.
 
 The publisher now checks its output path before recursive replacement. It refuses the
 project root, external paths, symbolic links, and existing directories without generated-site
 markers. This prevents a misconfigured output environment variable from deleting source
 data or the project itself.
+
+\input{sections/fuseki-publication-en.tex}
 
 \section{Query execution and security review}
 The original SPARQL policy searched for textual patterns containing whitespace after
@@ -572,12 +585,19 @@ The example illustrates an essential reporting distinction: a query can execute 
 against the model while its answer remains dependent on the completeness and meaning of
 the underlying evidence.
 
-\begin{thebibliography}{9}
+\clearpage
+\begin{thebibliography}{99}
 \bibitem{rdf} R. Cyganiak, D. Wood, and M. Lanthaler, eds. \emph{RDF 1.1 Concepts and Abstract Syntax}. W3C Recommendation, 2014. \url{https://www.w3.org/TR/rdf11-concepts/}.
 \bibitem{owl} B. Motik et al., eds. \emph{OWL 2 Web Ontology Language Profiles}, second edition. W3C Recommendation, 2012. \url{https://www.w3.org/TR/owl2-profiles/}.
 \bibitem{shacl} H. Knublauch and D. Kontokostas, eds. \emph{Shapes Constraint Language (SHACL)}. W3C Recommendation, 2017. \url{https://www.w3.org/TR/shacl/}.
 \bibitem{sparql} S. Harris and A. Seaborne, eds. \emph{SPARQL 1.1 Query Language}. W3C Recommendation, 2013. \url{https://www.w3.org/TR/sparql11-query/}.
 \bibitem{prov} T. Lebo, S. Sahoo, and D. McGuinness, eds. \emph{PROV-O: The PROV Ontology}. W3C Recommendation, 2013. \url{https://www.w3.org/TR/prov-o/}.
 \bibitem{uris} L. Sauermann and R. Cyganiak, eds. \emph{Cool URIs for the Semantic Web}. W3C Interest Group Note, 2008. \url{https://www.w3.org/TR/cooluris/}.
+\bibitem{five} T. Berners-Lee. \emph{Linked Data}, including the five-star scheme. Design Issues, 2006, scheme added 2010. \url{https://www.w3.org/DesignIssues/LinkedData.html}.
+\bibitem{fuseki} Apache Jena. \emph{Apache Jena Fuseki}. Project documentation, accessed 7 October 2026. \url{https://jena.apache.org/documentation/fuseki2/}.
+\bibitem{fadmin} Apache Jena. \emph{Fuseki HTTP Administration Protocol}. \url{https://jena.apache.org/documentation/fuseki2/fuseki-server-protocol.html}.
+\bibitem{gsp} C. Ogbuji, ed. \emph{SPARQL 1.1 Graph Store HTTP Protocol}. W3C Recommendation, 2013. \url{https://www.w3.org/TR/sparql11-http-rdf-update/}.
+\bibitem{fsecurity} Apache Jena. \emph{Security in Fuseki2}. \url{https://jena.apache.org/documentation/fuseki2/fuseki-security.html}.
+\bibitem{parentorg} Schema.org. \emph{parentOrganization; employee}. Vocabulary definitions, accessed 7 October 2026. \url{https://schema.org/parentOrganization}; \url{https://schema.org/employee}.
 \end{thebibliography}
 \end{document}

@@ -1,61 +1,46 @@
-# Chiến lược URI: khi nào tái sử dụng, khi nào tạo mới?
+# URI strategy: identity, publication and storage are different
 
-> Câu hỏi: *"Sao không dùng lại các URI đã có mà lại tạo mới?"*
+Reviewed 7 October 2026. This replaces the earlier rationale and its unverified percentages.
 
-**Trả lời ngắn:** dự án **tái sử dụng ở mọi chỗ có thể**: từ vựng, thuộc tính, và những giá trị mà ta không mô tả thêm.
-Dự án **chỉ tạo URI mới cho những thực thể mà nó tự công bố dữ kiện**, rồi dùng `owl:sameAs` để khẳng định đó cùng là
-một thực thể với URI đã có trên Wikidata, DBpedia, ROR, GeoNames. Đây chính là khuyến nghị của W3C trong *Best Practices
-for Publishing Linked Data* và *Linked Data Patterns*: "re-use vocabularies", "mint URIs for your own resources and link
-them with owl:sameAs".
+## What is implemented
 
-## 1. Những gì được TÁI SỬ DỤNG (đo trên `data/gold/vnedu-data.ttl`)
+- Canonical base: `https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/`.
+- Terms: `ontology#University`, `ontology#locatedIn`, etc.
+- Entities: `resource/university/<registered-slug>`, `resource/person/<registered-slug>`, etc.
+- `scripts/step3_transform.py` assigns identifiers using `data/silver/uri_map.json` and the persistent minter in `scripts/common.py`. Existing source-key mappings survive label changes; retired URI values remain reserved.
+- Existing vocabulary predicates and selected Wikidata value IRIs are reused. Local entities are linked outward through identity, concept-mapping or document-topic relations, according to their intended meanings.
+- Source-key changes still need an explicit migration; the registry does not automatically decide that a new QID denotes an old entity.
+- Program identifiers currently combine institution slug and major code. They cannot distinguish multiple program variants or academic years for the same pair.
 
-| Mức | Tái sử dụng | Số liệu |
-|---|---|---|
-| Từ vựng (thuộc tính) | `rdfs:label`, `schema:hasOccupation`, `schema:gender`, `prov:wasDerivedFrom`, `foaf:name`, `geo:lat/long`, `skos:prefLabel`… | **69%** số triple dùng thuộc tính của từ vựng chuẩn (15.821/22.903) |
-| Lớp | Mọi lớp `vnedu:` đều được căn chỉnh `rdfs:subClassOf` sang `schema:`, `foaf:`, `dbo:` | 26 tiên đề căn chỉnh (rdfs:subClassOf/subPropertyOf sang từ vựng ngoài); sau suy luận mỗi cơ sở cũng có kiểu `schema:CollegeOrUniversity`, `dbo:University`… |
-| **Giá trị** | Nghề nghiệp, giới tính: dùng **thẳng URI Wikidata** (`wd:Q82955` = politician, `wd:Q6581097` = male) | **562 URI Wikidata** được dùng lại làm giá trị trong 3.161 triple (cùng 5 URI đối tác `dbo:affiliation`); **không** tạo `vnedu:occupation/…` |
-| Danh mục pháp lý | Cá thể `vnedu:MinistryOfNationalDefence` có `owl:sameAs wd:Q6866771` | — |
+## Why local identifiers can be useful, but are not mandatory
 
-## 2. Những gì được TẠO MỚI và vì sao
+Local identifiers give the publisher control of its own descriptions and accommodate entities without an established external identifier. They do not confer ownership of facts or guarantee long-term persistence by themselves.
 
-2.241 URI mới gồm: 300 cơ sở, 63 tỉnh, 1.695 người, 50 cơ quan, 37 ngành, 78 chương trình, 16 lĩnh vực, 3 miền, 1 quốc gia.
-**1.874 trong số đó (84%) có `owl:sameAs`** tới URI đã có. Lý do không ghi thẳng dữ kiện lên URI của Wikidata:
+It is entirely valid RDF to publish statements whose subject is a Wikidata URI. This does **not** edit Wikidata, and does **not** inherently destroy provenance. Provenance depends on the publication and graph/assertion model. The earlier argument that such statements must not be made was too strong.
 
-1. **Nguyên tắc Linked Data số 3**: tra cứu một URI phải trả về thông tin hữu ích *từ người công bố*. Ta không điều
-   khiển được `http://www.wikidata.org/entity/Q3075696` trả gì; dữ kiện riêng của ta (mã tuyển sinh BKA, loại hình pháp
-   lý, tỉnh sau sáp nhập 2025, kết quả suy luận) chỉ tra cứu được qua URI của ta.
-2. **Dữ kiện khác nguồn**: ta có quy ước riêng (năm thành lập tính từ tiền thân, loại hình theo Luật GDĐH), và có cả kết
-   quả đối chiếu chéo. Ghi chúng lên URI Wikidata sẽ trộn lẫn nguồn gốc (provenance) của hai dataset.
-3. **Có thực thể Wikidata không có**: ngành theo mã TT 09/2022, quan hệ tỉnh cũ → tỉnh mới 2025, lãnh đạo lấy từ
-   infobox, chương trình đào tạo, cơ sở chỉ có bài viwiki. Với các thực thể này, bắt buộc phải tạo URI mới.
-4. **Ổn định và trách nhiệm**: URI của ta nằm dưới không gian tên ta quản lý (`https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/`),
-   nên cam kết được việc tra cứu luôn hoạt động.
-5. **Đồng nhất không hoàn toàn**: ngành đào tạo ≠ ngành khoa học, nên dùng `skos:closeMatch` chứ không phải
-   `owl:sameAs`. Nếu dùng chung URI thì không diễn đạt được sắc thái này.
+`owl:sameAs` asserts full identity, not merely a useful reference. A name match, similar school, predecessor organization or related administrative area is insufficient evidence by itself. `skos:closeMatch` is for appropriately scoped concept mappings, not a universal weak-identity fallback. Wikipedia article URLs refer to documents; use a document-topic relation, not identity with the institution.
 
-## 3. `owl:sameAs` được dùng thế nào ("trỏ về cùng một thực thể")
+## Fuseki does not mint or serve every resource URI automatically
 
-| Đích | Số liên kết | Cách đảm bảo đúng |
-|---|---|---|
-| Wikidata | 1.880 | theo nguồn gốc dữ liệu; cơ quan và miền thì tìm theo nhãn **và xác minh `P17 = Việt Nam`** |
-| DBpedia | 260 | lấy từ `owl:sameAs` của DBpedia, **loại 14 ca DBpedia trỏ một tài nguyên tới nhiều item** (ví dụ `dbr:Pleiku` → tỉnh Gia Lai) |
-| ROR | 195 | mã P6782 của Wikidata; kiểm tra mẫu 30/30 đúng tổ chức ở Việt Nam |
-| GeoNames | 63 | mã P1566 của Wikidata |
+| Address | Purpose |
+|---|---|
+| `<base>resource/university/dai-hoc-bach-khoa-ha-noi` | Canonical RDF identifier of a university |
+| `http://localhost:3030/vnedu/sparql` | Optional local query endpoint |
+| `http://localhost:3030/vnedu/data?default` | Graph Store Protocol target for the default graph |
 
-- **Gộp thực thể trùng trong chính dataset**: 3 cặp item Wikidata trùng nhau (ví dụ *Hanoi Law University* có 2 QID) được
-  gộp về **một** URI của ta, kèm `owl:sameAs` tới **cả hai** QID.
-- **Tận dụng `sameAs` khi truy vấn** (smushing): truy vấn
-  [12](../queries/12_federated_wikidata.rq)/[13](../queries/13_federated_dbpedia.rq) đi theo `owl:sameAs` sang
-  Wikidata/DBpedia để lấy diện tích tỉnh, ảnh, khẩu hiệu, những dữ kiện **ta không lưu**. Đó chính là lợi ích của việc
-  "trỏ về cùng một thực thể".
-- **Vì sao không đưa `owl:sameAs` vào bộ suy luận**: ngữ nghĩa của `owl:sameAs` sẽ chép **mọi** triple sang URI
-  Wikidata/DBpedia, làm dữ liệu phình gấp nhiều lần và trộn lẫn nguồn gốc. Ta để bên dùng dữ liệu quyết định khi nào gộp.
+Uploading the graph to Fuseki leaves all absolute RDF identifiers unchanged. Dereferencing the canonical URL still depends on GitHub Pages or another server controlling that origin. A default-graph upload does not preserve the component-file boundaries as named graphs.
 
-## 4. So với repo cũ
+The static publisher provides HTML with embedded JSON-LD and alternate `.ttl` / `.jsonld` documents. Flask additionally negotiates representations at its own origin. This does not add negotiation to GitHub Pages. The canonical entity path does not implement the classic 303 entity-to-document pattern.
 
-Repo cũ cũng tạo URI riêng và dùng `owl:sameAs` (305 liên kết, chỉ tới Wikidata), nhưng:
-- URI nằm dưới `http://vi.dbpedia.org/resource/`, **một tên miền không thuộc quyền dự án**, nên không ai tra cứu được.
-  Đây là "chiếm dụng" không gian tên của DBpedia tiếng Việt.
-- Định nghĩa `vio:wikidataEntity rdfs:subPropertyOf owl:sameAs` là không hợp lệ trong OWL DL.
-- Nghề nghiệp, giới tính, chức danh lưu dạng chuỗi, tức không tái sử dụng URI có sẵn.
+## Observed publication and remaining work
+
+The seven-request read-only sample in `data/reports/publication-check.json` on 7 October 2026 found:
+
+- Sample canonical URI: HTTP 200 with HTML and embedded JSON-LD, including when requesting Turtle.
+- Sample `.ttl` and `.jsonld`: HTTP 200; each parsed into 204 triples describing the canonical subject.
+- Declared `ontology/2.1` version URI: HTTP 404. Publish immutable versioned ontology documents before claiming working version dereferencing.
+- Configured local Fuseki: connection refused. Render health: 15-second read timeout, not proof of permanent downtime.
+
+This sample does not verify every URI, every external identity mapping, or the corrected branch's deployment. Long-term persistence also needs namespace stewardship, immutable version artifacts, and migration/redirect decisions for retired identifiers.
+
+References: [W3C Cool URIs](https://www.w3.org/TR/cooluris/), [RDF concepts](https://www.w3.org/TR/rdf11-concepts/), [five-star publication scheme](https://www.w3.org/DesignIssues/LinkedData.html), [Graph Store HTTP Protocol](https://www.w3.org/TR/sparql11-http-rdf-update/).

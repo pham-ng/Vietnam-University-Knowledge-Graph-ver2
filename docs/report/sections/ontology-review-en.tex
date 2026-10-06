@@ -1,0 +1,81 @@
+\subsection{Visual specification of the implemented model}
+\begin{figure}[htbp]\centering
+\input{figures/taxonomy-en.tex}
+\caption[Organizational class hierarchy]{Selected organizational class hierarchy. Arrows point from subclass to superclass.
+The four bottom classes are declared pairwise disjoint; that choice requires time-aware
+interpretation when an institution changes type. This is a selected view, not all 34 classes.}
+\label{fig:taxonomy}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\input{figures/relations-en.tex}
+\caption[Property signatures across ontology modules]{Selected property signatures. Boxes are classes; arrows summarize domain--property--range,
+not assertions between classes and not mandatory database foreign keys. Inverses are named
+below each lane. F denotes a functional property; it is an OWL equality constraint, not
+the same mechanism as SHACL maximum cardinality.}\label{fig:relations}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\input{figures/geography-en.tex}
+\caption[Geographic property-chain inference]{Schematic individual-level geographic inference. Solid edges are premise assertions;
+dashed edges are consequences of the implemented chains. Symbols denote an organization
+and administrative units, not a new historical claim about a real institution. The chain
+does not carry a validity interval.}\label{fig:geo-chain}
+\end{figure}
+
+\subsection{Assessment: standards-based, but not semantically complete}
+The design is credible for an educational knowledge-graph prototype. It separates people,
+organizations and geography; distinguishes membership, branch affiliation, ownership and
+state oversight; reuses external vocabularies; and combines inference with explicit SHACL
+validation. The two-layer validation design is appropriate because open-world entailment
+does not implement closed-world data entry rules. Avoiding an area-property alignment with
+incompatible units is also a good design decision.
+
+However, valid Turtle and passing tests do not certify the domain model. Table~\ref{tab:design-review}
+identifies semantic decisions still requiring revision or evidence. These findings concern
+what axioms entail, even when the current snapshot produces no contradiction. They are
+not silently presented as already repaired.
+
+{\small
+\begin{longtable}{P{4cm}P{5.2cm}P{5.4cm}}
+\caption{Remaining ontology-design risks and recommended changes.}\label{tab:design-review}\\
+\toprule Decision & Consequence & Recommended treatment \\\midrule\endfirsthead
+\toprule Decision & Consequence & Recommended treatment \\\midrule\endhead
+\term{governedBy} chain through \term{subordinateTo} & A direct supervising body and its superior are returned through the same predicate. A query cannot read every resulting edge as direct management. & Separate \term{directlyGovernedBy} from a broader governance relation; preserve asserted versus derived context. \\
+\term{ownedBy} and \term{governedBy} aligned to \term{schema:}\allowbreak\term{parentOrganization} & Ownership/investment and administrative supervision do not always establish organizational inclusion. Schema.org's parent relation is stronger than mere association~\cite{parentorg}. & Remove or narrow these alignments unless source evidence establishes a true parent--suborganization relation. \\
+\term{hasLeader} aligned to \term{schema:employee} & Every council chair reached through a role subproperty also becomes an employee. External or non-employee governance roles are not distinguished. & Represent a dated appointment with a role, organization and person; assert employment only with evidence. \\
+Disjoint legal-type classes & Asserting both historical and current types on one enduring organization can create a contradiction after a type change. Name-based classification is weaker evidence than the axiom assumes. & Define the snapshot scope; use dated legal-status records for historical queries and verify classifications against dated sources. \\
+\term{alumnusOf} from recorded education & The source may establish attendance, not graduation. The current class label can be read more strongly than the evidence. & Use a neutral education/attendance relation; add degree completion only when documented. \\
+\term{offeredBy} and \term{ofMajor} functional & Joint providers or interdisciplinary programs can imply unwanted identity equalities; the generated identifier also collapses variants of one institution--major pair. & Define a program offering and curriculum version; decide which multiplicities are actually exclusive. \\
+\term{mergedInto} functional & Models one successor per former province; it cannot describe a split or transfer to multiple units. & Keep the restricted merger-snapshot scope explicit; use dated administrative-change events for general history. \\
+Counts and leadership without time & Student populations from different years and successive leaders can appear simultaneously current. & Add measurement date/unit/source and appointment intervals; do not invent missing values. \\
+\term{owl:versionIRI} & The declared version URL has no generated version page in the current publisher, and the public sample returns 404. & Publish immutable versioned ontology artifacts before advertising dereferenceable version identifiers. \\
+\bottomrule
+\end{longtable}}
+
+These issues have different severities. Over-strong vocabulary alignments can assert facts
+not supported by their source relation, whereas missing temporal qualifiers mainly limit
+which questions are answerable. A migration should preserve old URIs, update affected
+queries and shapes, regenerate the graph, and add negative competency tests. Merely editing
+a diagram or replacing labels would not correct the underlying semantics.
+
+\Needspace{8\baselineskip}
+\subsection{Competency questions as a design contract}
+Useful design tests should cover both answers and prohibited conclusions:
+\begin{enumerate}
+\item Which institutions are members of a university, and which are branches? Check that
+the two relations remain distinct after materialization.
+\item Which body directly governs a school, and which ministry is an indirect superior?
+The current \term{governedBy} closure does not preserve this distinction in the predicate.
+\item Which organization offers a program, and which major does that offering concern?
+The current chain answers this for the illustrative single-provider program model.
+\item Where is an institution under the chosen administrative crosswalk, and where was
+it located at a historical date? Only the first question is supported reliably by the model.
+\item Who held a leadership role on a specified date, and how many students were enrolled
+in a specified year? The current unqualified edges and counts cannot establish these answers.
+\end{enumerate}
+
+Thus the verdict is \emph{standards-based and useful, with significant semantic and temporal
+limitations}, not ``fully standardized'' or ``formally certified OWL 2 RL.'' The evaluation
+does not claim a formal OWL 2 DL profile check either. Rule-engine execution, syntax parsing,
+profile membership and domain correctness are separate questions.

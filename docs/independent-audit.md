@@ -51,9 +51,40 @@ as an accuracy estimate in the new report.
 - Final full suite: `python -m pytest tests -q -p no:cacheprovider` — **125 passed, 0 skipped**, 1 upstream RDFLib deprecation warning, 123.97 seconds. This includes a real failing-validation run that confirms the previous serving and inferred files are preserved.
 - `python audit/release_metrics.py`: verifies graph-isomorphic equality between the serving union and its components and generates the report metrics.
 - Corrected release: 300 institution records; 271 HEI classifications; 1,702 person records; 48,492 serving triples; 0 SHACL violations, 34 warnings, 1 informational result.
-- The 13-page English PDF is compiled with LuaLaTeX and its rendered pages inspected. The final log has no overfull boxes, missing glyphs, or undefined references.
+- The initial 13-page English PDF was compiled with LuaLaTeX and visually inspected. The expanded 25-page edition (7 October) was recompiled and all rendered pages reviewed; its final log has no overfull boxes, missing glyphs, or undefined references. The expansion is documentation and read-only diagnostics, not a new runtime-fix release.
 
 ## Remaining limitations requiring new evidence or deployment controls
+
+### Follow-up: ontology design, URI publication and Fuseki (7 October 2026)
+
+The expanded English report adds five vector figures to the original architecture figure
+and distinguishes implemented mechanisms from deployment evidence. It corrects the earlier
+URI-strategy claim: publishing RDF statements about an external URI is valid and does not
+in itself lose provenance or change the external dataset.
+
+Additional design risks, **not silently fixed by this documentation follow-up**:
+
+- `governedBy` propagates up `subordinateTo`, mixing direct and indirect governance.
+- `ownedBy` / `governedBy` imply `schema:parentOrganization`; investment or oversight alone
+  is insufficient evidence for that stronger organizational relationship.
+- `hasLeader` implies `schema:employee`, including council chairs whose employment is not established.
+- Disjoint legal-type classes lack temporal qualification; program identifiers and functional
+  provider/major properties exclude multiple variants or joint programs without a model change.
+- The Fuseki loader is optional and absent from `run_all.py`. It does not enforce the release
+  fingerprint gate, back up/confirm default-graph replacement, or verify graph equivalence after loading.
+- Docker uses an unpinned third-party `latest` image, a fixed demonstration password and a
+  non-loopback port binding. The launcher selects old versions and does not verify download digests.
+  These are not production-ready deployment defaults.
+
+Read-only publication evidence: the sample HUST entity's HTML/Turtle/JSON-LD documents are
+accessible; canonical Accept negotiation remains HTML; the ontology version IRI returns 404;
+local Fuseki is unreachable; Render health timed out after 15 seconds. Details and timestamps:
+`data/reports/publication-check.json`. These observations are not a full availability study.
+
+Verdict: basic five-star publication mechanisms are present, with limited public evidence;
+this is not an ontology-quality, factual-accuracy, licensing or production-security certificate.
+
+### Previously recorded limitations
 
 1. Independently adjudicated institution identities, legal classifications, historical foundation events and reference links are still needed. Entity splitting prevents unsupported identity merges but does not itself establish identity.
 2. Birth-date precision is not retained by the original collector. The January-1 suppression heuristic loses real birthdays and does not establish precision for remaining dates. Do not use this dataset as an authoritative biographical registry.

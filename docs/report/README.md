@@ -5,6 +5,13 @@ The current technical report is **[main-en.pdf](main-en.pdf)**, with editable so
 complete provenance, certified OWL 2 RL conformance, byte-identical reproduction and comprehensive security.
 It documents the implementation, measured release, audit findings and unresolved limitations.
 
+The expanded edition (7 October 2026) includes six vector diagrams, a concrete Silver-to-RDF
+mapping, a critical ontology-design assessment, a URI/Fuseki implementation walkthrough,
+and a criterion-by-criterion five-star assessment. Five-star publication is not a certificate
+of ontology correctness or production security. The dated seven-request HTTP sample is
+in `data/reports/publication-check.json`; it does not establish deployment of the audited branch.
+Additional editable sections and diagrams are under `sections/` and `figures/*-en.tex`.
+
 From the project root, run `python audit/release_metrics.py` after validating the data;
 then run `latexmk -lualatex -interaction=nonstopmode -halt-on-error main-en.tex` in this directory.
 Counts come from `tables/audit-metrics.tex` and `data/reports/audit-metrics.json`.

@@ -1,0 +1,16 @@
+\begin{tikzpicture}[node distance=10mm]
+\node[auditbox,text width=5.8cm] (b) {\textbf{Bronze snapshots}\\Wikidata / Wikipedia JSON + cached responses};
+\node[auditbox,below=of b,text width=5.8cm] (i) {\textbf{Integrate: step3\_integrate.py}\\Identity, field selection, relation resolution};
+\node[auditbox,below=of i,text width=5.8cm] (s) {\textbf{Silver JSON}\\Institutions, people, bodies, provinces};
+\node[auditbox,below=of s,text width=5.8cm] (t) {\textbf{Transform: step3\_transform.py}\\URI registry + typed RDFLib triples};
+\node[auditbox,below=of t,text width=5.8cm] (r) {\textbf{Reason and validate}\\step5\_reason.py\\Asserted checks + owlrl diagnostics + SHACL};
+\node[auditbox,below=of r,text width=5.8cm] (g) {\textbf{Validated serving artifact}\\vnedu-all.ttl + release fingerprints};
+\node[auditbox,right=14mm of i,text width=4.5cm] (c) {Conflict / unresolved logs\\JSON Schema and reference checks};
+\node[auditbox,right=14mm of t,text width=4.5cm] (a) {Reference tables + uri\_map.json\\vnedu-data.ttl is asserted output};
+\node[auditbox,right=14mm of r,text width=4.5cm] (l) {step4\_link.py outputs\\vnedu-links.ttl + void.ttl};
+\draw[auditarr] (b)--(i);\draw[auditarr] (i)--(s);\draw[auditarr] (s)--(t);
+\draw[auditarr] (t)--(r);\draw[auditarr] (r)--(g);
+\draw[auditarr] (i)--(c);
+\draw[auditarr,dashed] (a)--(t);
+\draw[auditarr,dashed] (l.south)|-(g.east);
+\end{tikzpicture}

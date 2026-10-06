@@ -1,0 +1,71 @@
+{
+  "checked_at_utc": "2026-10-06T17:10:42.229053+00:00",
+  "scope": "Seven read-only requests; deployment can differ from the audited branch.",
+  "checks": [
+    {
+      "name": "canonical_html",
+      "url": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi",
+      "accept": "text/html",
+      "status": 200,
+      "final_url": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi",
+      "content_type": "text/html; charset=utf-8",
+      "redirects": [],
+      "embedded_jsonld": true,
+      "alternate_rdf_link": true
+    },
+    {
+      "name": "canonical_accept_turtle",
+      "url": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi",
+      "accept": "text/turtle",
+      "status": 200,
+      "final_url": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi",
+      "content_type": "text/html; charset=utf-8",
+      "redirects": [],
+      "embedded_jsonld": true,
+      "alternate_rdf_link": true
+    },
+    {
+      "name": "sample_turtle_document",
+      "url": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi.ttl",
+      "accept": "text/turtle",
+      "status": 200,
+      "final_url": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi.ttl",
+      "content_type": "text/turtle; charset=utf-8",
+      "redirects": [],
+      "triples": 204,
+      "describes_sample_uri": true
+    },
+    {
+      "name": "sample_jsonld_document",
+      "url": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi.jsonld",
+      "accept": "application/ld+json",
+      "status": 200,
+      "final_url": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi.jsonld",
+      "content_type": "application/ld+json",
+      "redirects": [],
+      "triples": 204,
+      "describes_sample_uri": true
+    },
+    {
+      "name": "ontology_version",
+      "url": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology/2.1",
+      "accept": "text/turtle",
+      "status": 404,
+      "final_url": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology/2.1",
+      "content_type": "text/html; charset=utf-8",
+      "redirects": []
+    },
+    {
+      "name": "public_health",
+      "url": "https://vnedu-lod.onrender.com/healthz",
+      "accept": "application/json",
+      "error": "ReadTimeout: HTTPSConnectionPool(host='vnedu-lod.onrender.com', port=443): Read timed out. (read timeout=15)"
+    },
+    {
+      "name": "local_fuseki_ping",
+      "url": "http://localhost:3030/$/ping",
+      "accept": "text/plain",
+      "error": "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /$/ping (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=3030): Failed to establish a new connection: [WinError 10061] No connection could be made bec"
+    }
+  ]
+}
