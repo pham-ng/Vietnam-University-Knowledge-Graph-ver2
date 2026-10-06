@@ -1,0 +1,27 @@
+\Cref{tab:perf} trình bày độ trễ đo được. Trong trình duyệt, toàn bộ 48{,}428 triple được nạp trong 1,9 giây và các truy
+vấn mẫu chạy trong 5--44 ms. Máy chủ Web (Waitress + rdflib trong bộ nhớ, 141 MB RAM) trả lời các truy vấn tổng hợp trong
+0,06--0,53 giây và tra cứu URI trong vài chục mili-giây khi chạy cục bộ; trên gói miễn phí của Render (CPU dùng chung) độ
+trễ cao hơn khoảng 5--7 lần. Truy vấn liên kết bị chi phối bởi thời gian phản hồi của endpoint bên ngoài.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Độ trễ đo được (trung vị của 5 lần chạy, trừ khi ghi chú).}
+\label{tab:perf}
+\begin{tabular}{llrr}
+\toprule
+Kênh & Thao tác & Cục bộ (v2.1) & Render\textsuperscript{a} \\
+\midrule
+Trình duyệt (Oxigraph/WASM) & nạp 48{,}428 triple & 1,9 s & -- \\
+                            & truy vấn mẫu 1--10 & 5--44 ms & -- \\
+Máy chủ (rdflib)            & Q01 tổng hợp theo 34 tỉnh & 0,25 s & 1,7 s \\
+                            & Q02 miền \(\times\) loại hình & 0,16 s & 1,1 s \\
+                            & Q03 trường quân đội, công an & 0,06 s & 0,6 s \\
+                            & Q09 xếp hạng cựu sinh viên & 0,53 s & 3,5 s \\
+                            & tra cứu URI dạng Turtle / HTML & 0,03 / 0,02 s & 0,18 / 0,22 s \\
+                            & Q12 liên kết Wikidata / Q13 DBpedia (1 lần) & 16,6 / 11,4 s & 5,9 / 8,7 s \\
+\bottomrule
+\end{tabular}
+\par\smallskip\raggedright\footnotesize
+\textsuperscript{a} đo trên phiên bản 2.0 (39{,}507 triple), gói miễn phí, CPU dùng chung; độ trễ truy vấn liên kết
+phụ thuộc tải của Wikidata/DBpedia tại thời điểm đo.
+\end{table}

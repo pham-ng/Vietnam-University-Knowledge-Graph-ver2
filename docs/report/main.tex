@@ -1,19 +1,24 @@
-% VN-Edu LOD — final project report (compile with: latexmk -lualatex main.tex)
-\documentclass[11pt,a4paper]{article}
+% Báo cáo cuối kỳ VN-Edu LOD — biên dịch: latexmk -lualatex main.tex
+% Bảng thuộc tính tables/properties.tex sinh tự động từ ontology: python docs/report/gen_tables.py
+\documentclass[12pt,a4paper]{article}
 
-% ---------------------------------------------------------------- fonts & layout
+% ---------------------------------------------------------------- ngôn ngữ, phông chữ, trang
+\usepackage[vietnamese]{babel}
 \usepackage{fontspec}
 \setmainfont{Libertinus Serif}
 \setsansfont{Libertinus Sans}
-\setmonofont{DejaVu Sans Mono}[Scale=0.82]
-\usepackage[a4paper,margin=2.4cm]{geometry}
+\setmonofont{Noto Sans Mono}[Scale=0.8]
+\usepackage[section]{placeins}   % hình/bảng không trôi ra khỏi mục của nó
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=3cm,right=2cm]{geometry}
 \usepackage{microtype}
+\usepackage{setspace}
+\setstretch{1.15}
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
-\usepackage{booktabs,tabularx,multirow,array}
+\usepackage{booktabs,tabularx,longtable,multirow,array}
 \usepackage{xcolor}
 \usepackage{enumitem}
-\usepackage[font=small,labelfont=bf]{caption}
+\usepackage[font=small,labelfont=bf,labelsep=period]{caption}
 \usepackage{subcaption}
 \usepackage{fvextra}
 \usepackage{tikz}
@@ -24,7 +29,19 @@
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage[hidelinks]{hyperref}
 \usepackage{xurl}
-\usepackage[capitalise,noabbrev]{cleveref}
+\usepackage[nameinlink]{cleveref}
+\usepackage{fancyhdr}
+
+\crefname{figure}{Hình}{Hình}
+\crefname{table}{Bảng}{Bảng}
+\crefname{section}{Mục}{Mục}
+\crefname{subsection}{Mục}{Mục}
+\crefname{appendix}{Phụ lục}{Phụ lục}
+\addto\captionsvietnamese{%
+  \renewcommand{\figurename}{Hình}\renewcommand{\tablename}{Bảng}%
+  \renewcommand{\contentsname}{Mục lục}\renewcommand{\listfigurename}{Danh mục hình}%
+  \renewcommand{\listtablename}{Danh mục bảng}\renewcommand{\refname}{Tài liệu tham khảo}%
+  \renewcommand{\abstractname}{Tóm tắt}\renewcommand{\appendixname}{Phụ lục}}
 
 \definecolor{acc}{HTML}{0F6E64}
 \definecolor{s1}{HTML}{2A78D6}
@@ -33,252 +50,329 @@
 \definecolor{bronze}{HTML}{B07A4A}
 \definecolor{silver}{HTML}{8C939C}
 \definecolor{gold}{HTML}{C9A227}
-\definecolor{codebg}{HTML}{F6F7F8}
 
 \setlist{itemsep=2pt,topsep=4pt}
-\setlength{\parskip}{3pt}
+\setlength{\parskip}{4pt}
 \setlength{\emergencystretch}{3em}
-\renewcommand{\arraystretch}{1.12}
+\renewcommand{\arraystretch}{1.15}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small VN-Edu LOD}\fancyhead[R]{\small Báo cáo cuối kỳ}\fancyfoot[C]{\thepage}
 
-\newcommand{\vn}[1]{\texttt{vnedu:#1}}
-\newcommand{\proj}{VN-Edu LOD}
-\newcommand{\base}{\url{https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/}}
-
-% ---------------------------------------------------------------- code blocks (fvextra: an toàn với Unicode)
 \DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\footnotesize, frame=single, rulecolor=\color{black!20},
   framesep=2.5mm, breaklines=true, breakanywhere=true}
-\newcommand{\codetitle}[1]{\par\smallskip\noindent{\footnotesize #1}\par\nopagebreak}
+\newcommand{\codetitle}[1]{\par\smallskip\noindent{\small #1}\par\nopagebreak}
+\newcommand{\vn}[1]{\texttt{vnedu:#1}}
+\newcommand{\proj}{VN-Edu LOD}
+\newcommand{\RQ}[1]{\textbf{RQ#1}}
+\makeatletter\newcommand{\inputtable}[1]{\@@input #1 }\makeatother
+\urldef{\ontons}\url{https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#}
 
-\hypersetup{pdftitle={VN-Edu LOD: A Five-Star Linked Open Dataset of Vietnamese Higher Education},
-            pdfauthor={[Author Name]}}
+\hypersetup{pdftitle={VN-Edu LOD: Bộ dữ liệu liên kết mở 5 sao về giáo dục đại học Việt Nam}, pdfauthor={[Họ và tên]}}
 
-% ================================================================= document
 \begin{document}
 
+% ================================================================= trang bìa
 \begin{titlepage}
+\thispagestyle{empty}
 \centering
-\vspace*{0.5cm}
-{\large [University Name]\par}
-{\large [Faculty / School]\par}
-\vspace{0.4cm}
-{\normalsize Course: Semantic Web \& Linked Data \quad [Course code]\par}
+{\large\bfseries [TÊN TRƯỜNG ĐẠI HỌC]\par}
+{\large [TÊN KHOA / VIỆN]\par}
+\vspace{0.3cm}\rule{0.55\textwidth}{0.4pt}\par
 \vspace{2.2cm}
-{\Large\bfseries FINAL PROJECT REPORT\par}
-\vspace{0.8cm}
-{\huge\bfseries VN-Edu LOD\par}
+{\Large\bfseries BÁO CÁO CUỐI KỲ\par}
 \vspace{0.3cm}
-{\LARGE A Five-Star Linked Open Dataset of\\[2pt] Vietnamese Higher Education Institutions\par}
-\vspace{0.6cm}
-{\large Ontology Engineering, Multi-source Integration, OWL~2~RL Reasoning,\\ Quality Validation and Web Publication\par}
+{\large Học phần: Web ngữ nghĩa (Semantic Web) \quad Mã học phần: [Mã HP]\par}
+\vspace{1.6cm}
+{\LARGE\bfseries VN-Edu LOD\par}
+\vspace{0.4cm}
+{\Large\bfseries XÂY DỰNG BỘ DỮ LIỆU LIÊN KẾT MỞ 5 SAO\\[3pt] VỀ CÁC CƠ SỞ GIÁO DỤC ĐẠI HỌC VIỆT NAM\par}
+\vspace{0.5cm}
+{\large Thiết kế ontology OWL 2 RL, tích hợp đa nguồn, suy luận,\\ kiểm định chất lượng và công bố trên Web\par}
 \vspace{2.2cm}
 \begin{tabular}{rl}
-Student:     & [Full Name] \\
-Student ID:  & [Student ID] \\
-Email:       & [Email] \\[4pt]
-Instructor:  & [Instructor Name] \\
+Sinh viên thực hiện: & [Họ và tên] \\
+Mã số sinh viên:    & [MSSV] \\
+Email:              & [Email] \\[6pt]
+Giảng viên hướng dẫn: & [Họ tên giảng viên] \\
 \end{tabular}
 \vfill
+{\small
 \begin{tabular}{rl}
-Live dataset:     & \url{https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/} \\
-SPARQL endpoint:  & \url{https://vnedu-lod.onrender.com/sparql} \\
-Source code:      & \url{https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2} \\
-\end{tabular}
-\vspace{1cm}
+Dữ liệu công bố: & \url{https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/} \\
+SPARQL endpoint: & \url{https://vnedu-lod.onrender.com/sparql} \\
+Mã nguồn:        & \url{https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2} \\
+\end{tabular}}
+\vspace{0.9cm}
 
-{\large [City], October 2026\par}
+{\large [Thành phố], tháng 10 năm 2026\par}
 \end{titlepage}
 
-% ---------------------------------------------------------------- abstract
+% ================================================================= tóm tắt
+\pagenumbering{roman}
 \begin{abstract}
 \noindent
-Information about Vietnamese higher education institutions is scattered across Wikipedia articles, Wikidata items
-and administrative documents, and it became partly obsolete when the country reorganised its provinces in July~2025.
-This report presents \proj{}, an open knowledge graph of \textbf{300 Vietnamese educational institutions} (271 of them
-higher education institutions), together with their 63 current and former provinces, 50 governing bodies and
-1{,}695 people, published according to the \emph{five-star Linked Open Data} scheme. We designed an OWL~2~RL ontology
-of 34 classes and 47 properties whose defined classes and property chains let a rule reasoner classify
-institutions (public/private, military/police, member institutions) and propagate locations through the 2025 province
-mergers; data-quality constraints are expressed separately in SHACL. A medallion (bronze/silver/gold) pipeline
-collects data from Wikidata and Vietnamese Wikipedia, resolves entities by Wikidata identifiers, records every
-conflict and fallback value, and enforces a JSON-Schema data contract before RDF generation. The resulting graph contains
-39{,}507 triples (14{,}666 of them inferred), reuses standard vocabularies for 74\% of asserted triples, and links
-84\% of its entities via \texttt{owl:sameAs} to Wikidata, DBpedia, ROR and GeoNames. Every one of its 2{,}241 HTTP URIs
-dereferences to HTML with embedded JSON-LD, Turtle and JSON-LD, and a hardened SPARQL~1.1 endpoint supports
-federated queries. Compared with a previous version of the project, \proj{} answers 21/21 benchmark facts correctly
-(vs.\ 14/21), is logically consistent (0 vs.\ 349 violations), and answers aggregate and multi-hop questions that the
-earlier model could not express. An empirical comparison also shows why identifier-based linking was preferred over
-string-similarity linking (100\% vs.\ at most 98.3\% precision, with 66--84\% recall for the latter).
-\par\medskip
-\noindent\textbf{Keywords:} Linked Open Data, knowledge graph, ontology engineering, OWL 2 RL, SHACL, data integration,
-owl:sameAs, Wikidata, higher education, Vietnam.
+Thông tin về các cơ sở giáo dục đại học (GDĐH) Việt Nam hiện nằm rải rác trong bài viết Wikipedia, mục từ Wikidata
+và văn bản hành chính, ở dạng bán cấu trúc hoặc không cấu trúc, và một phần đã lỗi thời sau đợt sắp xếp đơn vị
+hành chính cấp tỉnh tháng 7/2025. Báo cáo này trình bày \proj{} -- một đồ thị tri thức mở về \textbf{300 cơ sở giáo
+dục} (trong đó 271 cơ sở GDĐH), 63 đơn vị cấp tỉnh (34 hiện hành, 29 đã sáp nhập), 50 cơ quan chủ quản và 1{,}695 người,
+được công bố theo \emph{thang 5 sao của dữ liệu mở liên kết}. Chúng tôi thiết kế ontology \vn{} theo profile OWL~2~RL
+gồm 34 lớp, 33 quan hệ (tất cả có miền và đích xác định) và 20 thuộc tính dữ liệu, với 6 lớp định nghĩa, 6 chuỗi thuộc
+tính và 56 tiên đề căn chỉnh sang DBpedia, schema.org, FOAF; ràng buộc chất lượng dữ liệu được tách riêng thành 8 SHACL
+shape. Một pipeline ba tầng (bronze/silver/gold) thu thập dữ liệu từ Wikidata và Wikipedia tiếng Việt, nhận diện thực
+thể theo định danh Wikidata, ghi lại mọi mâu thuẫn và giá trị lấy từ nguồn dự phòng, và kiểm tra hợp đồng dữ liệu
+(JSON Schema) trước khi sinh RDF. Đồ thị kết quả có 48{,}428 triple (20{,}990 triple do suy luận), 84\% thực thể được
+liên kết \texttt{owl:sameAs} tới Wikidata, DBpedia, ROR, GeoNames; mỗi thực thể trong số 2{,}241 URI đều tra cứu
+được trên Web, kèm SPARQL endpoint công khai hỗ trợ truy vấn liên kết (federated). So với phiên bản trước của dự án,
+\proj{} trả lời đúng 21/21 câu hỏi kiểm chứng (so với 14/21), nhất quán logic (0 so với 349 mâu thuẫn), có độ kết nối đồ
+thị cao hơn (bậc trung bình 3,36 so với 2,99) và biểu diễn được các câu hỏi tổng hợp, so sánh, nhiều bước mà mô hình cũ
+không diễn đạt được.
+
+\medskip\noindent\textbf{Từ khoá:} dữ liệu mở liên kết, đồ thị tri thức, ontology, OWL 2 RL, SHACL, tích hợp dữ liệu,
+owl:sameAs, Wikidata, giáo dục đại học, Việt Nam.
 \end{abstract}
 
+\clearpage
 \tableofcontents
-\newpage
+\clearpage
+\listoffigures
+\listoftables
+
+\section*{Danh mục từ viết tắt}
+\begin{tabular}{@{}ll@{}}
+CSGDĐH, GDĐH & Cơ sở giáo dục đại học, giáo dục đại học \\
+LOD          & Linked Open Data -- dữ liệu mở liên kết \\
+RDF          & Resource Description Framework -- mô hình dữ liệu bộ ba của W3C \\
+OWL 2 RL     & Web Ontology Language 2, profile dựa trên luật (Rule Language) \\
+SHACL        & Shapes Constraint Language -- ngôn ngữ ràng buộc hình dạng đồ thị \\
+SPARQL       & Ngôn ngữ truy vấn và giao thức cho RDF \\
+URI / IRI    & Định danh tài nguyên thống nhất (quốc tế hoá) \\
+QID          & Định danh mục từ Wikidata (VD: Q86012411) \\
+VoID, DCAT   & Từ vựng mô tả bộ dữ liệu liên kết / danh mục dữ liệu \\
+PROV-O       & Ontology mô tả nguồn gốc dữ liệu của W3C \\
+SSRF         & Server-Side Request Forgery -- tấn công giả mạo yêu cầu phía máy chủ \\
+\end{tabular}
+
+\clearpage
+\pagenumbering{arabic}
 
 % ================================================================= 1
-\section{Introduction}
+\section{Giới thiệu}
 \label{sec:intro}
 
-Vietnam has more than 250 higher education institutions (HEIs) of very different legal types: national and regional
-universities, universities, academies, officer schools, and their member schools and branches. Basic facts about them
--- founding year, governing ministry, public or private ownership, location, leadership, admission codes -- are
-published in many places but rarely in a form that machines can query, compare and combine. Two recent events make the
-problem more pressing. First, Resolution 202/2025/QH15 \cite{vn2025nq202} merged the 63 provinces into 34 from
-1~July~2025, so the location of many institutions in existing datasets is now obsolete. Second, community knowledge
-bases such as Wikidata \cite{vrandecic2014wikidata} and DBpedia \cite{lehmann2015dbpedia} cover Vietnamese institutions
-only partially and inconsistently, while the richer Vietnamese Wikipedia infoboxes are semi-structured text.
+\subsection{Bối cảnh}
+Việt Nam có hơn 250 cơ sở GDĐH với nhiều loại hình pháp lý khác nhau: đại học quốc gia, đại học vùng, đại học, trường
+đại học, học viện, trường sĩ quan, cùng các trường thành viên và phân hiệu. Những thông tin cơ bản -- năm thành lập,
+cơ quan chủ quản, loại hình công lập hay tư thục, địa điểm, lãnh đạo, mã trường tuyển sinh -- được công bố ở nhiều nơi
+nhưng hiếm khi ở dạng máy có thể truy vấn, so sánh và kết hợp. Hai yếu tố khiến bài toán trở nên cấp thiết. Thứ nhất,
+Nghị quyết 202/2025/QH15 \cite{vn2025nq202} sắp xếp 63 tỉnh, thành thành 34 đơn vị từ ngày 1/7/2025, làm nhiều dữ liệu
+về địa điểm của các trường bị lỗi thời. Thứ hai, các cơ sở tri thức cộng đồng như Wikidata \cite{vrandecic2014wikidata}
+và DBpedia \cite{lehmann2015dbpedia} chỉ mô tả các trường Việt Nam một cách rời rạc, còn infobox của Wikipedia tiếng
+Việt -- nguồn phong phú nhất -- lại ở dạng văn bản bán cấu trúc.
 
-The Linked Data principles \cite{bernerslee2006linked,bizer2009linked} and the five-star open data scheme provide a
-well-established way to publish such information: give every entity an HTTP URI, return useful RDF when the URI is
-looked up, use W3C standards, and link to other datasets. This project applies them to Vietnamese higher education
-and, in doing so, addresses the weaknesses of an earlier version of the same project
-\cite{phamng2025vukg,ha2025viodbpedia}, whose ontology produced 349 logical contradictions under reasoning and whose
-URIs could not be dereferenced.
+Các nguyên tắc dữ liệu liên kết \cite{bernerslee2006linked,bizer2009linked} và thang 5 sao của dữ liệu mở cung cấp cách
+làm đã được kiểm chứng: đặt cho mỗi thực thể một HTTP URI, trả về RDF khi tra cứu URI, dùng chuẩn W3C và liên kết tới
+bộ dữ liệu khác. Đồ án áp dụng các nguyên tắc này cho lĩnh vực GDĐH Việt Nam, đồng thời khắc phục các điểm yếu của
+phiên bản trước \cite{phamng2025vukg,ha2025viodbpedia}: ontology sinh 349 mâu thuẫn khi suy luận, URI không tra cứu được,
+và dữ liệu chỉ lấy từ một nguồn.
 
-\paragraph{Research questions.} The work is organised around four questions:
-\begin{description}[leftmargin=1.2cm,style=nextline]
-  \item[RQ1] How can an ontology for Vietnamese higher education be designed so that standard rule-based reasoning is
-             both \emph{correct} (no spurious contradictions) and \emph{useful} (it derives facts users ask for)?
-  \item[RQ2] How can two heterogeneous community sources be integrated into accurate, traceable data, and how much
-             more accurate is the result than a single-source approach?
-  \item[RQ3] How should the dataset be linked to existing Linked Data -- in particular, when should existing URIs be
-             reused and when should new URIs be minted?
-  \item[RQ4] Does the published dataset actually satisfy all five stars, and is it usable by external people and
-             programs?
+\subsection{Câu hỏi nghiên cứu}
+\begin{description}[leftmargin=1.3cm,style=nextline]
+  \item[\RQ{1}] Thiết kế ontology cho GDĐH Việt Nam như thế nào để suy luận theo luật vừa \emph{đúng} (không sinh mâu
+        thuẫn giả) vừa \emph{hữu ích} (suy ra được thông tin người dùng cần), đồng thời đủ \emph{giàu quan hệ} để dữ liệu
+        là một đồ thị liên thông chứ không chỉ là cây phân loại?
+  \item[\RQ{2}] Tích hợp hai nguồn dữ liệu cộng đồng không đồng nhất ra sao để được dữ liệu chính xác, truy được nguồn
+        gốc; độ chính xác tăng bao nhiêu so với cách tiếp cận một nguồn?
+  \item[\RQ{3}] Liên kết bộ dữ liệu tới Linked Data hiện có như thế nào -- khi nào tái sử dụng URI có sẵn, khi nào tạo
+        URI mới?
+  \item[\RQ{4}] Bộ dữ liệu công bố có thực sự đạt cả 5 sao và người/máy bên ngoài có dùng được không?
 \end{description}
 
-\paragraph{Contributions.}
+\subsection{Đóng góp}
 \begin{enumerate}
-  \item An OWL~2~RL ontology (34 classes, 27 object and 20 datatype properties) with defined classes, four property
-        chains and disjointness axioms, aligned to schema.org, FOAF and DBpedia, plus 8 SHACL shapes (\cref{sec:onto}).
-  \item A reproducible bronze/silver/gold integration pipeline with an explicit conflict-resolution policy,
-        provenance at the level of individual Wikipedia revisions, and a JSON-Schema data contract (\cref{sec:integration}).
-  \item A URI and linking strategy that reuses existing vocabularies and IRIs wherever possible, mints URIs only for
-        described entities, and links them with \texttt{owl:sameAs} after explicit verification (\cref{sec:linking}).
-  \item A public, five-star publication: 2{,}241 dereferenceable URIs, a hardened SPARQL endpoint with federated
-        queries, interactive maps, statistics and an ontology browser (\cref{sec:publication}).
-  \item A quantitative evaluation of completeness, correctness, consistency, link quality, performance and security,
-        including a comparison with the previous version and with string-similarity linking (\cref{sec:eval}).
+  \item Ontology \vn{} phiên bản 2.1 theo OWL~2~RL: 34 lớp, 33 quan hệ đều có miền/đích, 20 thuộc tính dữ liệu, lớp
+        định nghĩa, chuỗi thuộc tính, tiên đề phân biệt, 56 tiên đề căn chỉnh và 8 SHACL shape (\cref{sec:onto}).
+  \item Pipeline tích hợp tái lập được, có chính sách giải quyết mâu thuẫn tường minh, nguồn gốc dữ liệu đến từng bản
+        sửa đổi Wikipedia và hợp đồng dữ liệu JSON Schema (\cref{sec:impl}).
+  \item Chiến lược URI và liên kết: tái sử dụng từ vựng và IRI có sẵn ở mọi chỗ có thể, chỉ tạo URI cho thực thể được
+        mô tả và liên kết \texttt{owl:sameAs} sau khi kiểm chứng (\cref{sec:link}).
+  \item Bản công bố 5 sao: 2{,}241 URI tra cứu được, SPARQL endpoint công khai đã gia cố bảo mật, bản đồ, thống kê và
+        trình duyệt ontology (\cref{sec:publish}).
+  \item Đánh giá định lượng về độ đầy đủ, độ chính xác, tính nhất quán, độ kết nối đồ thị, chất lượng liên kết, hiệu năng
+        và bảo mật, có so sánh với phiên bản trước (\cref{sec:eval}).
 \end{enumerate}
 
+\subsection{Bố cục báo cáo}
+\Cref{sec:background} trình bày cơ sở lý thuyết; \cref{sec:method} phân tích nguồn dữ liệu và phương pháp;
+\cref{sec:onto} mô tả ontology; \cref{sec:impl,sec:link,sec:publish} trình bày phần triển khai; \cref{sec:eval} đánh
+giá; \cref{sec:discussion} thảo luận hạn chế; \cref{sec:conclusion} kết luận và demo.
+
 % ================================================================= 2
-\section{Background and Related Work}
+\section{Cơ sở lý thuyết và các nghiên cứu liên quan}
 \label{sec:background}
 
-\subsection{Linked Data and the five-star scheme}
-Linked Data \cite{bernerslee2006linked,heath2011linked} rests on four principles: use URIs as names for things; use HTTP
-URIs so that people can look them up; return useful information in standard formats (RDF \cite{w3c2014rdf},
-SPARQL \cite{w3c2013sparql}) when a URI is looked up; and include links to other URIs. The five-star scheme grades open
-data from \emph{available on the Web under an open licence} (\(\star\)) to \emph{machine-readable} (\(\star\star\)),
-\emph{non-proprietary format} (\(\star\star\star\)), \emph{W3C standards and URIs} (\(\star\star\star\star\)) and
-\emph{linked to other data} (\(\star\star\star\star\star\)). The W3C Best Practices \cite{w3c2014bp} and Cool URIs
-\cite{w3c2008cooluris} recommend reusing vocabularies, minting stable HTTP URIs in a namespace the publisher controls,
-and describing datasets with VoID \cite{w3c2011void} and DCAT \cite{w3c2020dcat}. Empirical studies show that
-conformance to these practices is far from universal \cite{hogan2012conformance}.
+\subsection{Web ngữ nghĩa và dữ liệu liên kết}
+Web ngữ nghĩa mở rộng Web hiện tại để máy có thể hiểu ý nghĩa của dữ liệu. Nền tảng là mô hình RDF \cite{w3c2014rdf}:
+mọi dữ kiện được biểu diễn thành bộ ba \emph{(chủ thể, vị từ, đối tượng)}, trong đó chủ thể và vị từ là URI. Dữ liệu
+liên kết \cite{bernerslee2006linked,heath2011linked} là tập thực hành tốt dựa trên bốn nguyên tắc: (1) dùng URI làm tên
+cho sự vật; (2) dùng HTTP URI để có thể tra cứu; (3) khi tra cứu URI, trả về thông tin hữu ích theo chuẩn (RDF, SPARQL
+\cite{w3c2013sparql}); (4) đưa vào liên kết tới URI khác để có thể khám phá thêm.
 
-\subsection{Ontologies, reasoning and validation}
-OWL~2~RL \cite{w3c2012owlprofiles} is the OWL profile designed for rule-based implementation: reasoning can be
-performed by forward chaining in polynomial time, which makes it practical to \emph{materialise} all consequences and
-serve them from an ordinary triple store. Because OWL follows the open-world assumption, cardinality restrictions do
-not detect missing data; SHACL \cite{w3c2017shacl} closes this gap by validating RDF graphs against shapes. PROV-O
-\cite{w3c2013provo} records provenance and JSON-LD \cite{w3c2020jsonld} embeds RDF into Web pages.
+\subsection{Thang 5 sao của dữ liệu mở}
+Thang 5 sao xếp hạng dữ liệu mở: \(\star\) có trên Web với giấy phép mở; \(\star\star\) có cấu trúc, máy đọc được;
+\(\star\star\star\) định dạng không độc quyền; \(\star\star\star\star\) dùng chuẩn W3C và URI để định danh;
+\(\star\star\star\star\star\) liên kết tới dữ liệu khác. Hướng dẫn thực hành tốt của W3C \cite{w3c2014bp} và
+\emph{Cool URIs} \cite{w3c2008cooluris} khuyến nghị tái sử dụng từ vựng, tạo HTTP URI ổn định trong không gian tên do
+người công bố kiểm soát, và mô tả bộ dữ liệu bằng VoID \cite{w3c2011void}, DCAT \cite{w3c2020dcat}. Khảo sát thực
+nghiệm cho thấy việc tuân thủ các thực hành này còn rất hạn chế \cite{hogan2012conformance}.
 
-\subsection{Knowledge graphs extracted from Wikipedia}
-DBpedia \cite{lehmann2015dbpedia} and YAGO \cite{suchanek2007yago} extract knowledge graphs from Wikipedia infoboxes and
-categories; Wikidata \cite{vrandecic2014wikidata} is a collaboratively edited knowledge base that now serves as a hub of
-identifiers. Hogan et al.\ \cite{hogan2021kg} survey the broader field of knowledge graphs. Schema.org
-\cite{guha2016schemaorg} provides widely used classes such as \texttt{CollegeOrUniversity}.
+\subsection{Ontology, suy luận và kiểm định}
+OWL~2~RL \cite{w3c2012owlprofiles} là profile của OWL thiết kế cho suy luận bằng luật: có thể suy diễn tiến trong thời
+gian đa thức, nên có thể \emph{vật chất hoá} toàn bộ hệ quả và phục vụ bằng kho bộ ba thông thường. Vì OWL theo giả định
+thế giới mở, ràng buộc bản số không phát hiện được dữ liệu thiếu; SHACL \cite{w3c2017shacl} bổ sung bằng cách kiểm tra
+đồ thị theo các ``hình dạng''. PROV-O \cite{w3c2013provo} mô tả nguồn gốc dữ liệu; JSON-LD \cite{w3c2020jsonld} nhúng RDF
+vào trang Web.
 
-\subsection{Identity links and link discovery}
-\texttt{owl:sameAs} asserts that two URIs denote the same individual; Halpin et al.\ \cite{halpin2010sameas} showed
-that it is frequently misused for mere similarity, which propagates errors under reasoning. Link discovery frameworks
-such as Silk \cite{volz2009silk} generate links from similarity metrics and thresholds. Zaveri et al.\
-\cite{zaveri2016quality} survey Linked Data quality dimensions, several of which (completeness, consistency,
-interlinking, licensing, provenance) we measure in \cref{sec:eval}.
+\subsection{Đồ thị tri thức trích xuất từ Wikipedia}
+DBpedia \cite{lehmann2015dbpedia} và YAGO \cite{suchanek2007yago} trích xuất đồ thị tri thức từ infobox và thể loại
+của Wikipedia; Wikidata \cite{vrandecic2014wikidata} là cơ sở tri thức do cộng đồng biên tập, hiện là trung tâm định danh
+của Linked Data. Hogan và cộng sự \cite{hogan2021kg} tổng quan về đồ thị tri thức; schema.org \cite{guha2016schemaorg}
+cung cấp các lớp phổ biến như \texttt{CollegeOrUniversity}. Một đồ thị tri thức có giá trị cho tìm kiếm, hỏi đáp hay
+sinh văn bản có tăng cường truy xuất trên đồ thị (Graph RAG) khi các thực thể được nối với nhau bằng nhiều loại quan hệ
+có ngữ nghĩa rõ ràng, thay vì chỉ có phân cấp lớp.
 
-\subsection{Prior course projects (baselines)}
+\subsection{Liên kết định danh và phát hiện liên kết}
+\texttt{owl:sameAs} khẳng định hai URI chỉ cùng một cá thể; Halpin và cộng sự \cite{halpin2010sameas} chỉ ra rằng nó
+thường bị dùng sai cho quan hệ ``tương tự'', gây lan truyền lỗi khi suy luận. Các khung phát hiện liên kết như Silk
+\cite{volz2009silk} sinh liên kết từ độ đo tương đồng và ngưỡng. Zaveri và cộng sự \cite{zaveri2016quality} hệ thống
+hoá các chiều chất lượng của Linked Data (đầy đủ, nhất quán, liên kết, giấy phép, nguồn gốc\ldots), được dùng làm khung
+đánh giá ở \cref{sec:eval}.
+
+\subsection{Các dự án trước (mốc so sánh)}
 \label{sec:baselines}
-\emph{vio} \cite{ha2025viodbpedia,phamng2025vukg} built a Vietnamese DBpedia-style ontology and a dataset of
-universities from Vietnamese Wikipedia; it is the direct predecessor of this work and serves as our main baseline.
-\emph{hust-semantic-web} \cite{phuongbv2025hust} built a smartphone dataset using a medallion architecture and Silk
-linking; we adopted its medallion idea and used its linking approach as a comparison point.
+\emph{vio} \cite{ha2025viodbpedia,phamng2025vukg} xây dựng ontology kiểu DBpedia tiếng Việt và bộ dữ liệu về các trường
+đại học từ Wikipedia tiếng Việt; đây là tiền thân trực tiếp và là mốc so sánh chính của đồ án. \emph{hust-semantic-web}
+\cite{phuongbv2025hust} xây dựng bộ dữ liệu điện thoại thông minh với kiến trúc Medallion và liên kết bằng Silk; đồ án
+học theo ý tưởng Medallion và dùng cách liên kết của dự án này làm điểm so sánh.
 
 % ================================================================= 3
-\section{System Architecture and Methodology}
-\label{sec:arch}
+\section{Phương pháp và phân tích nguồn dữ liệu}
+\label{sec:method}
 
-\Cref{fig:arch} shows the overall architecture. It follows the \emph{medallion} pattern \cite{databricks2023medallion}:
-raw snapshots (bronze), cleaned and integrated records (silver) and RDF (gold), with a \emph{quality gate} at every
-boundary so that defective data stops the pipeline instead of reaching publication.
+\subsection{Phân tích Wikipedia tiếng Việt}
+Wikipedia gồm ba thành phần có thể khai thác: \textbf{bài viết} (mỗi bài mô tả một thực thể, gồm đoạn mở đầu, infobox
+và các mục nội dung), \textbf{thể loại} (cây phân loại có thể duyệt đệ quy) và \textbf{liên kết} giữa các bài. Khảo sát
+279 bài về cơ sở GDĐH cho thấy các khó khăn sau:
+\begin{itemize}
+  \item \textbf{Infobox không đồng nhất:} cùng là trường đại học nhưng dùng nhiều bản mẫu khác nhau (\emph{Thông tin
+        trường học}, \emph{Thông tin trường đại học}, \emph{Infobox university}, \emph{Thông tin đơn vị quân sự}\ldots), có
+        bản mẫu dùng tên tham số tiếng Anh (\texttt{principal}, \texttt{parent}).
+  \item \textbf{Giá trị bán cấu trúc:} xuống dòng bằng \texttt{<br>} làm dính chữ (``BKHN<br>HUST''), ngày tháng nằm
+        trong bản mẫu (\texttt{\{\{start date|1956|3|6\}\}}), toạ độ dạng độ--phút--giây, chú thích \texttt{<ref>}, học hàm
+        lẫn trong họ tên (``GS.TS.NGND Nguyễn Văn A'').
+  \item \textbf{Thể loại thiếu nhất quán:} có trường không thuộc thể loại nào trong cây ``Đại học Việt Nam''; ngược lại
+        thể loại lại chứa trường phổ thông, danh sách, bài lịch sử.
+  \item \textbf{Chất lượng thay đổi:} thông tin lãnh đạo, quy mô có thể cũ; năm xuất hiện trong bài có thể là năm của
+        sự kiện khác (chú thích ảnh, tiền thân).
+\end{itemize}
 
-\begin{figure}[ht]
+\subsection{Phân tích Wikidata}
+Wikidata cung cấp dữ liệu có cấu trúc và định danh ổn định (QID), nhưng: lớp \texttt{P31} trộn lẫn đại học, cao đẳng,
+khoa; có mục từ trùng lặp (Trường Đại học Luật Hà Nội có 3 QID); nhiều mục từ chỉ có nhãn tiếng Anh; quan hệ đơn vị hành
+chính chưa cập nhật sắp xếp tỉnh 2025; và các thuộc tính lịch sử tổ chức như P1365/P1366 (tiền thân/kế tục) gần như
+không được khai báo cho trường Việt Nam (chỉ 1 trường).
+
+\subsection{Phương pháp thu thập}
+Đồ án kết hợp ba phương pháp để bù trừ điểm yếu của nhau:
+\begin{enumerate}
+  \item \textbf{Theo thể loại:} duyệt đệ quy 164 thể loại (\emph{Đại học Việt Nam}, \emph{Học viện Việt Nam}, \emph{Trường
+        đại học và cao đẳng quân sự Việt Nam}\ldots) bằng API \texttt{categorymembers}, loại các thể loại con không liên quan
+        (giảng viên, cựu sinh viên, biểu trưng\ldots).
+  \item \textbf{Theo bản mẫu (infobox):} đọc wikitext, phân tích bằng \texttt{mwparserfromhell}, chuẩn hoá tên tham số
+        tiếng Anh về tiếng Việt, giữ lại liên kết trong infobox (để phân giải ra QID) và tên tệp ảnh; lấy thêm đoạn mở đầu và
+        mục ``Lịch sử''.
+  \item \textbf{Theo Wikidata (SPARQL):} tập cơ sở GDĐH là \texttt{?u wdt:P31/wdt:P279* wd:Q38723; wdt:P17 wd:Q881};
+        mỗi thuộc tính được truy vấn riêng với khối \texttt{VALUES} để tránh tích Descartes và quá thời gian. Mọi bài viết
+        được Wikidata trỏ tới cũng được đọc, nên trường thiếu thể loại không bị bỏ sót.
+\end{enumerate}
+
+\subsection{Kiến trúc Medallion và cổng chất lượng}
+Dữ liệu đi qua ba tầng (\cref{fig:arch}) theo mẫu Medallion \cite{databricks2023medallion}: \textbf{bronze} lưu nguyên
+bản phản hồi của nguồn kèm tệp \texttt{.meta.json} (nguồn, thời điểm, giấy phép, số bản ghi); \textbf{silver} chứa bản ghi
+đã nhận diện, hợp nhất, làm sạch; \textbf{gold} chứa RDF. Ở mỗi ranh giới tầng có một \emph{cổng chất lượng}: dữ liệu vi
+phạm sẽ dừng pipeline thay vì lọt vào bản công bố. Mọi phản hồi HTTP được lưu đệm nên chạy lại cho kết quả giống hệt;
+\texttt{data/manifest.json} ghi số bản ghi/triple và mã SHA-256 của mọi tệp ở mọi tầng.
+
+\begin{figure}[htbp]
 \centering
 \resizebox{\textwidth}{!}{%
-\begin{tikzpicture}[
-  node distance=6mm and 15mm,
-  box/.style={draw, rounded corners=3pt, align=center, font=\footnotesize, minimum height=1.6cm, text width=2.4cm, thick},
-  gate/.style={font=\scriptsize\itshape, text=acc, align=center},
-  arr/.style={-{Stealth[length=2.2mm]}, thick}]
-  \node[box, fill=black!4]                    (src) {\textbf{Open sources}\\Wikidata, Vietnamese Wikipedia, DBpedia, OSM, legal texts};
-  \node[box, fill=bronze!18, right=of src]    (br)  {\textbf{Bronze}\\JSON snapshots + source, time, licence};
-  \node[box, fill=silver!22, right=of br]     (sv)  {\textbf{Silver}\\300 institutions, 63 provinces, 50 bodies, 1{,}695 people};
-  \node[box, fill=gold!22, right=of sv]       (gd)  {\textbf{Gold}\\RDF + links + OWL 2 RL closure + VoID/DCAT};
-  \node[box, fill=acc!12, right=of gd]        (out) {\textbf{Access}\\LD site, SPARQL endpoint, Fuseki, CLI};
-  \draw[arr] (src) -- node[above, gate]{collect} (br);
-  \draw[arr] (br)  -- node[above, gate]{integrate} node[below, gate]{JSON Schema} (sv);
-  \draw[arr] (sv)  -- node[above, gate]{RDF, link} (gd);
-  \draw[arr] (gd)  -- node[above, gate]{reason} node[below, gate]{SHACL,\\consistency} (out);
-  \node[below=9mm of sv, draw, dashed, rounded corners, font=\scriptsize, align=center, text width=7.6cm] (ref)
-     {\textbf{Reference data} (hand-curated, legally grounded): province mergers (Res.~202/2025),
-      regions, training fields and majors (Circular 09/2022), link overrides};
+\begin{tikzpicture}[node distance=6mm and 14mm,
+  box/.style={draw, rounded corners=3pt, align=center, font=\footnotesize, minimum height=1.6cm, text width=2.5cm, thick},
+  gate/.style={font=\scriptsize\itshape, text=acc, align=center}, arr/.style={-{Stealth[length=2.2mm]}, thick}]
+  \node[box, fill=black!4]                 (src) {\textbf{Nguồn mở}\\Wikidata, Wikipedia tiếng Việt, DBpedia, OSM, văn bản pháp lý};
+  \node[box, fill=bronze!18, right=of src] (br)  {\textbf{Bronze}\\ảnh chụp JSON + nguồn, thời điểm, giấy phép};
+  \node[box, fill=silver!22, right=of br]  (sv)  {\textbf{Silver}\\300 cơ sở, 63 tỉnh, 50 cơ quan, 1{,}695 người};
+  \node[box, fill=gold!22, right=of sv]    (gd)  {\textbf{Gold}\\RDF + liên kết + bao đóng OWL 2 RL + VoID/DCAT};
+  \node[box, fill=acc!12, right=of gd]     (out) {\textbf{Sử dụng}\\trang Web LD, SPARQL endpoint, Fuseki, CLI};
+  \draw[arr] (src) -- node[above, gate]{thu thập} (br);
+  \draw[arr] (br)  -- node[above, gate]{tích hợp} node[below, gate]{JSON Schema} (sv);
+  \draw[arr] (sv)  -- node[above, gate]{RDF, liên kết} (gd);
+  \draw[arr] (gd)  -- node[above, gate]{suy luận} node[below, gate]{SHACL,\\nhất quán} (out);
+  \node[below=9mm of sv, draw, dashed, rounded corners, font=\scriptsize, align=center, text width=8cm] (ref)
+     {\textbf{Dữ liệu tham chiếu} (nhập tay, có căn cứ pháp lý): sáp nhập tỉnh (NQ 202/2025), vùng miền,
+      lĩnh vực và ngành đào tạo (TT 09/2022)};
   \draw[arr, dashed] (ref.north) -- (sv.south);
-  \node[above=7mm of sv, font=\scriptsize, align=center, text width=12cm] {\texttt{manifest.json}: lineage of every file (records, SHA-256, timestamp) \quad\textbullet\quad HTTP cache for reproducibility};
 \end{tikzpicture}}
-\caption{Architecture of the \proj{} pipeline. Each arrow is a script (\texttt{step2\_collect.py} \ldots{}
-\texttt{step7\_publish.py}); gates in italics must pass before data moves to the next layer.}
+\caption{Kiến trúc pipeline của \proj{}. Mỗi mũi tên là một script (\texttt{step2\_collect.py} \ldots
+\texttt{step7\_publish.py}); chữ nghiêng là cổng chất lượng phải vượt qua.}
 \label{fig:arch}
 \end{figure}
 
-\paragraph{Reproducibility.} All HTTP responses are cached on disk, so re-running the pipeline yields identical output;
-every bronze snapshot has a \texttt{.meta.json} file recording source endpoint, retrieval time, user agent and licence;
-and \texttt{data/manifest.json} records, for every file in every layer, its record or triple count and SHA-256 hash.
-A continuous-integration workflow runs the full test suite (100 tests) and rebuilds the published site on every commit.
-
-\paragraph{Technology.} The pipeline is written in Python (\(\approx\)5{,}100 lines) using RDFLib, OWL-RL and pySHACL
-\cite{rdflib}; Apache Jena Fuseki \cite{jenafuseki} serves SPARQL locally; Oxigraph \cite{oxigraph} compiled to
-WebAssembly provides SPARQL in the browser; a Flask/Waitress server provides the public endpoint.
-
 % ================================================================= 4
-\section{Ontology Design}
+\section{Ontology VN-Edu}
 \label{sec:onto}
 
-\subsection{Design principles}
-The ontology (namespace \texttt{vnedu:}) was designed to fix the specific failures we observed when running a rule
-reasoner over the baseline:
+\subsection{Thông tin chung}
+\begin{table}[htbp]
+\centering\small
+\caption{Siêu dữ liệu của ontology.}
+\label{tab:ontometa}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+Tên & VN-Edu Ontology -- Ontology Giáo dục đại học Việt Nam \\
+Không gian tên & \ontons{} (tiền tố \texttt{vnedu:}) \\
+Phiên bản & 2.1 (\texttt{owl:versionIRI} \ldots\texttt{/ontology/2.1}, \texttt{owl:priorVersion} 2.0) \\
+Profile & OWL 2 RL \\
+Giấy phép & CC BY-SA 4.0 \\
+Quy mô & 34 lớp, 33 quan hệ, 20 thuộc tính dữ liệu, 769 triple \\
+Căn chỉnh & DBpedia Ontology, schema.org, FOAF, SKOS, W3C Geo, PROV-O \\
+Ràng buộc & 8 SHACL node shape, 23 ràng buộc thuộc tính, 2 ràng buộc SPARQL (\texttt{shapes/vnedu-shapes.ttl}) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Nguyên tắc thiết kế}
+Các nguyên tắc dưới đây được rút ra trực tiếp từ những lỗi quan sát được khi chạy bộ suy luận trên phiên bản trước:
 \begin{enumerate}
-  \item \textbf{Stay inside OWL~2~RL} so that materialisation is sound and complete and the closure can be served by
-        any triple store.
-  \item \textbf{Never redefine external vocabularies.} The baseline declared \texttt{geo:lat rdfs:domain vio:Site};
-        since provinces also have coordinates, the reasoner typed them as \texttt{Site}, which was disjoint with
-        \texttt{Place} -- 344 of the baseline's 349 contradictions came from this single axiom.
-  \item \textbf{Align, do not equate.} Our classes are connected to schema.org, FOAF and DBpedia only through
-        \texttt{rdfs:subClassOf}/\texttt{rdfs:subPropertyOf} (26 alignment axioms), never
-        \texttt{owl:equivalentClass}, so external semantics cannot leak in.
-  \item \textbf{Property chains range over common super-classes}, so that chaining never forces an individual into an
-        incompatible class.
-  \item \textbf{Constraints belong in SHACL}, because OWL's open-world semantics cannot detect missing values.
-  \item \textbf{Defined classes for classification, disjointness and functional properties for error detection.}
+  \item \textbf{Nằm trong OWL 2 RL} để vật chất hoá vừa đúng (sound) vừa đủ (complete).
+  \item \textbf{Không định nghĩa lại từ vựng ngoài.} Phiên bản trước khai báo \texttt{geo:lat rdfs:domain vio:Site}; vì
+        tỉnh cũng có toạ độ nên bộ suy luận xếp tỉnh vào lớp \texttt{Site}, vốn rời nhau với \texttt{Place} -- riêng tiên
+        đề này gây 344/349 mâu thuẫn.
+  \item \textbf{Căn chỉnh, không đồng nhất.} Chỉ dùng \texttt{rdfs:subClassOf}/\texttt{rdfs:subPropertyOf} sang từ vựng
+        ngoài (56 tiên đề), không dùng \texttt{owl:equivalentClass}, để ngữ nghĩa bên ngoài không ``tràn'' vào.
+  \item \textbf{Mọi quan hệ có miền và đích}, kể cả quan hệ nghịch đảo và quan hệ con, để tài liệu không mơ hồ và đồ
+        thị lớp--quan hệ (\cref{fig:ontograph}) phản ánh đúng ontology.
+  \item \textbf{Chuỗi thuộc tính có đích là lớp cha chung}, để việc nối chuỗi không ép cá thể vào lớp không tương thích.
+  \item \textbf{Ràng buộc ``phải có'' đặt trong SHACL}, vì OWL theo giả định thế giới mở.
+  \item \textbf{Phân biệt khái niệm dễ nhầm:} ``cơ quan chủ quản'' (\vn{governedBy}) khác ``cơ quan quản lý nhà nước''
+        (\vn{stateManagedBy}, áp dụng cho trường tư thục); ``trường thành viên của đại học'' (\vn{memberOf}) khác ``thành
+        viên hiệp hội'' (\texttt{schema:memberOf}).
 \end{enumerate}
 
-\subsection{Class hierarchy}
-\Cref{fig:classes} shows the class hierarchy. Institution types follow the Law on Higher Education
-\cite{vn2018law34} and are determined from the institution's official name (\emph{Đại học}, \emph{Trường Đại học},
-\emph{Học viện}, \emph{Trường Sĩ quan}) rather than from Wikidata's \texttt{P31}, which mixes universities, colleges and
-faculties. The four legal types are pairwise disjoint (\texttt{owl:AllDisjointClasses}). Six \emph{defined classes} are
-populated by the reasoner only.
+\subsection{Phân cấp lớp}
+\Cref{fig:classes} trình bày phân cấp lớp. Loại hình cơ sở GDĐH theo Luật Giáo dục đại học \cite{vn2018law34} và được
+xác định từ tên chính thức (\emph{Đại học}, \emph{Trường Đại học}, \emph{Học viện}, \emph{Trường Sĩ quan}) chứ không từ
+\texttt{P31} của Wikidata. Bốn loại hình đôi một rời nhau; sáu \emph{lớp định nghĩa} chỉ do bộ suy luận điền cá thể.
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 \centering
 \resizebox{\textwidth}{!}{%
 \begin{forest}
@@ -290,643 +384,653 @@ populated by the reasoner only.
   [Organization
     [EducationalOrganization
       [HigherEducationInstitution
-        [University [NationalUniversity] [RegionalUniversity]]
-        [UniversitySchool]
-        [Academy]
-        [OfficerSchool]]
-      [Branch]
-      [VocationalCollege]
+        [University {\color{gray}(đại học)} [NationalUniversity] [RegionalUniversity]]
+        [UniversitySchool {\color{gray}(trường đại học)}]
+        [Academy {\color{gray}(học viện)}]
+        [OfficerSchool {\color{gray}(trường sĩ quan)}]]
+      [Branch {\color{gray}(phân hiệu)}]
+      [VocationalCollege {\color{gray}(cao đẳng)}]
       [{PublicInstitution, PrivateInstitution,\\ MilitaryInstitution, PoliceInstitution,\\ MemberInstitution, DefunctInstitution}, def]]
     [GoverningBody [Ministry] [ProvincialPeoplesCommittee]]
     [Company]]
   [Person [{Alumnus, InstitutionLeader}, def]]
   [AdministrativeUnit [Country] [Region] [Province [CentrallyGovernedCity]] [FormerProvince]]
-  [FieldOfStudy] [Major] [AcademicProgram]
+  [FieldOfStudy] [Major] [AcademicProgram] [OwnershipType]
 ]
 \end{forest}}
-\caption{Class hierarchy of the \vn{} ontology (34 classes). Classes in orange italics are \emph{defined} classes whose
-members are inferred by the reasoner. Organization, Person and AdministrativeUnit are mutually disjoint, as are the four
-legal HEI types; Branch and VocationalCollege are disjoint with HigherEducationInstitution. Alignments
-(\(\sqsubseteq\)): Organization to \texttt{foaf:Organization} and \texttt{schema:Organization}; HigherEducationInstitution
-to \texttt{schema:CollegeOrUniversity}; University and UniversitySchool to \texttt{dbo:University}; Person to
-\texttt{foaf:Person} and \texttt{schema:Person}; Major and FieldOfStudy to \texttt{skos:Concept}.}
+\caption{Phân cấp lớp của ontology \vn{}. Lớp chữ nghiêng màu cam là lớp định nghĩa (cá thể do bộ suy luận xếp loại).
+Organization, Person, AdministrativeUnit đôi một rời nhau; bốn loại hình GDĐH rời nhau; Branch và VocationalCollege rời
+với HigherEducationInstitution.}
 \label{fig:classes}
 \end{figure}
 
-\subsection{Key axioms}
-\Cref{tab:axioms} lists the axioms that drive reasoning, each with a real example from the data. All are covered by
-unit tests that check both the positive inference and the detection of erroneous data.
+\subsection{Đồ thị quan hệ giữa các lớp}
+Phân cấp lớp chỉ cho biết ``cái gì là loại gì''; giá trị của một đồ thị tri thức nằm ở các \emph{quan hệ} nối thực thể
+với nhau. \Cref{fig:ontograph} vẽ toàn bộ quan hệ giữa các lớp theo đúng miền và đích khai báo trong ontology: một cơ sở
+giáo dục được nối tới cơ quan chủ quản, chủ sở hữu, loại hình, tỉnh, cơ sở khác (thành viên, phân hiệu, tiền thân), người
+(lãnh đạo, cựu sinh viên), chương trình đào tạo và các bộ dữ liệu ngoài; một người được nối tới trường, tỉnh nơi sinh,
+quốc gia và các khái niệm của Wikidata. Cạnh nét đứt là quan hệ do suy luận sinh ra.
 
-\begin{table}[ht]
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{\input{figures/ontograph.tex}}
+\caption{Đồ thị quan hệ của ontology \vn{} 2.1: nút là lớp, cạnh là quan hệ (miền \(\rightarrow\) đích). Nét đứt: quan
+hệ suy luận; hình trụ: URI bên ngoài được tái sử dụng.}
+\label{fig:ontograph}
+\end{figure}
+
+\subsection{Các thuộc tính}
+\Cref{tab:props} liệt kê đầy đủ 53 thuộc tính của ontology theo năm nhóm, mỗi thuộc tính kèm miền \(\rightarrow\) đích,
+đặc tính logic (hàm, bắc cầu, nghịch đảo, chuỗi, quan hệ con) và căn chỉnh sang từ vựng ngoài. Bảng được sinh tự động từ
+tệp ontology nên luôn khớp với ontology thực tế. Một số thuộc tính \emph{cố ý} không căn chỉnh: \vn{area} (đơn vị km\(^2\),
+trong khi \texttt{dbo:areaTotal} dùng m\(^2\)), \vn{funding} (chuỗi kèm đơn vị tiền tệ), \vn{director}
+(\texttt{dbo:director} là ``đạo diễn'').
+
+\input{tables/properties.tex}
+
+\subsection{Tiên đề suy luận}
+\Cref{tab:axioms} liệt kê các tiên đề chính, mỗi tiên đề kèm ví dụ có thật trong dữ liệu. Tất cả đều có kiểm thử tự động
+cho cả chiều suy ra đúng và chiều phát hiện dữ liệu sai.
+
+\begin{table}[htbp]
 \centering\small
-\caption{Main OWL 2 RL axioms and what they derive in the dataset.}
+\caption{Các tiên đề OWL 2 RL chính và kết quả suy luận trên dữ liệu thật.}
 \label{tab:axioms}
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{6.1cm}X}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{6.4cm}X}
 \toprule
-Axiom (DL notation) & Effect on real data \\
+Tiên đề (ký hiệu logic mô tả) & Kết quả trên dữ liệu \\
 \midrule
-\(\mathit{locatedIn} \circ \mathit{mergedInto} \sqsubseteq \mathit{locatedIn}\) &
-  Thu Dau Mot University is recorded in Bình Dương (former province) \(\Rightarrow\) located in Ho Chi Minh City. \\
-\(\mathit{locatedIn} \circ \mathit{partOf} \sqsubseteq \mathit{locatedIn}\), \(\mathit{partOf}\) transitive &
-  \(\Rightarrow\) located in Nam Bộ (region) and Vietnam. \\
-\(\mathit{governedBy} \circ \mathit{subordinateTo} \sqsubseteq \mathit{governedBy}\) &
-  Naval Academy is governed by the Navy \(\Rightarrow\) governed by the Ministry of National Defence. \\
-\(\mathit{MilitaryInstitution} \equiv \mathit{EduOrg} \sqcap \exists \mathit{governedBy}.\{\mathit{MoND}\}\) &
-  \(\Rightarrow\) 21 military institutions (7 police institutions analogously). \\
-\(\exists \mathit{ownedBy}.\mathit{Company} \sqsubseteq \exists \mathit{ownership}.\{\mathit{Private}\}\) &
-  FPT University is owned by FPT Education \(\Rightarrow\) private. \\
-\(\mathit{PublicInstitution} \equiv \mathit{EduOrg} \sqcap \exists \mathit{ownership}.\{\mathit{Public}\}\) &
-  \(\Rightarrow\) 221 public / 35 private institutions. \\
+\(\mathit{locatedIn}\circ\mathit{mergedInto} \sqsubseteq \mathit{locatedIn}\) &
+  ĐH Thủ Dầu Một ghi ở Bình Dương (tỉnh cũ) \(\Rightarrow\) thuộc TP. Hồ Chí Minh. \\
+\(\mathit{locatedIn}\circ\mathit{partOf} \sqsubseteq \mathit{locatedIn}\), \(\mathit{partOf}\) bắc cầu &
+  \(\Rightarrow\) thuộc Nam Bộ và Việt Nam. \\
+\(\mathit{bornIn}\circ\mathit{mergedInto} \sqsubseteq \mathit{bornIn}\), \(\mathit{bornIn}\circ\mathit{partOf} \sqsubseteq \mathit{bornIn}\) &
+  Người sinh ở tỉnh cũ \(\Rightarrow\) sinh ra tại tỉnh mới, miền, quốc gia (512 người có tỉnh nơi sinh). \\
+\(\mathit{governedBy}\circ\mathit{subordinateTo} \sqsubseteq \mathit{governedBy}\) &
+  HV Hải quân thuộc Quân chủng Hải quân \(\Rightarrow\) thuộc Bộ Quốc phòng. \\
+\(\mathit{MilitaryInstitution} \equiv \mathit{EduOrg} \sqcap \exists\mathit{governedBy}.\{\mathit{MoND}\}\) &
+  \(\Rightarrow\) 21 trường quân đội (7 trường công an tương tự). \\
+\(\exists\mathit{ownedBy}.\mathit{Company} \sqsubseteq \exists\mathit{ownership}.\{\mathit{Private}\}\) &
+  ĐH FPT thuộc sở hữu FPT Education \(\Rightarrow\) tư thục. \\
+\(\mathit{PublicInstitution} \equiv \mathit{EduOrg} \sqcap \exists\mathit{ownership}.\{\mathit{Public}\}\) &
+  \(\Rightarrow\) 221 cơ sở công lập, 35 tư thục. \\
 \(\mathit{rector}, \mathit{director}, \mathit{councilChair} \sqsubseteq \mathit{hasLeader} \equiv \mathit{leads}^{-}\) &
-  \(\Rightarrow\) 214 \textit{InstitutionLeader}s. \\
-\(\mathit{offersProgram} \circ \mathit{ofMajor} \sqsubseteq \mathit{trainsMajor}\) &
-  Majors taught by an institution derived from its programmes. \\
-8 inverse pairs (\(\mathit{memberOf}/\mathit{hasMember}\), \(\mathit{alumnusOf}/\mathit{hasAlumnus}\), \ldots) &
-  Only one direction needs to be asserted. \\
-\(\mathit{ownership}\), \(\mathit{foundingYear}\) functional; \(\mathit{AllDifferent}(\mathit{Public},\mathit{Private})\);
-  legal types \(\mathit{AllDisjointClasses}\); \(\mathit{Organization} \sqcap \mathit{Person} \sqsubseteq \bot\) &
-  Detect contradictory data: an institution both public and private, two founding years, both an academy and a
-  university, or a person used as a governing body. \\
+  \(\Rightarrow\) 214 \emph{InstitutionLeader}. \\
+\(\mathit{offersProgram}\circ\mathit{ofMajor} \sqsubseteq \mathit{trainsMajor}\) & Ngành mà trường đào tạo suy ra từ chương trình. \\
+9 cặp nghịch đảo (\(\mathit{memberOf}/\mathit{hasMember}\), \(\mathit{predecessor}/\mathit{successor}\)\ldots) &
+  Chỉ cần khẳng định một chiều. \\
+\(\mathit{ownership}\), \(\mathit{foundingYear}\) là hàm; \(\mathit{AllDifferent}(\mathit{Public},\mathit{Private})\);
+  loại hình \(\mathit{AllDisjointClasses}\); \(\mathit{Organization}\sqcap\mathit{Person}\sqsubseteq\bot\) &
+  Phát hiện dữ liệu sai: vừa công lập vừa tư thục, hai năm thành lập, vừa là học viện vừa là trường đại học, dùng một
+  người làm cơ quan chủ quản. \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\subsection{SHACL shapes}
-Eight node shapes with 23 property constraints and 2 SPARQL-based constraints check what OWL cannot: language-tagged
-labels in Vietnamese and English, \texttt{xsd:gYear} founding years between 1800 and the current year, admission codes
-matching \texttt{\^{}[A-Z]\{3\}\$}, coordinates inside Vietnam's bounding box, exactly one region per province, member
-institutions in the same province as their parent (informational), and a warning when a private institution lists a
-ministry as its governing body.
+\subsection{Ràng buộc chất lượng bằng SHACL}
+Tám node shape kiểm tra những gì OWL không làm được: nhãn tiếng Việt và tiếng Anh; năm thành lập kiểu
+\texttt{xsd:gYear} trong khoảng 1800 -- năm hiện tại; mã trường khớp \texttt{\^{}[A-Z]\{3\}\$}; toạ độ nằm trong lãnh thổ
+Việt Nam; mỗi tỉnh thuộc đúng một miền; email, ngày thành lập, biểu trưng đúng định dạng; trường thành viên cùng tỉnh với
+đại học chủ quản (mức thông tin); và cảnh báo khi trường tư thục có Bộ làm cơ quan chủ quản.
 
-\subsection{URI design}
-All URIs live under the namespace controlled by the project, \base{}, with the pattern
-\texttt{resource/\{type\}/\{slug\}}, where the slug is the accent-free official Vietnamese name
-(e.g.\ \texttt{resource/university/dai-hoc-bach-khoa-ha-noi}). Slugs are stable (they do not encode database keys) and
-human-readable; homonyms of defunct institutions receive their period of activity, e.g.\ ``Đại học Cần Thơ
-(1966--1975)''. The ontology itself is published at \texttt{\ldots/ontology} with hash URIs for terms.
+\subsection{So sánh với ontology vio}
+\label{sec:onto-compare}
+\Cref{tab:ontocmp} so sánh khách quan ontology \vn{} với ontology vio, cả bản trình bày trong báo cáo
+\cite{ha2025viodbpedia} (v0.2) lẫn bản cài đặt trong repo \cite{phamng2025vukg}. Ontology vio có ưu điểm về
+\emph{cách trình bày} -- siêu dữ liệu, thuộc tính nhóm theo chủ đề kèm miền/đích, hình đồ thị ontology -- và hầu hết thuộc
+tính được căn chỉnh sang DBpedia; phiên bản 2.1 của \vn{} đã học theo các điểm này (\cref{tab:ontometa,tab:props},
+\cref{fig:ontograph}). Ngược lại, vio có lỗi chiều quan hệ: \texttt{headOfUniversity} (Trường \(\rightarrow\) Người) và
+\texttt{isHeadOf} (Người \(\rightarrow\) Trường) là nghịch đảo của nhau nhưng \emph{cùng} là con của \texttt{dbo:leader},
+nên ít nhất một khai báo bị ngược chiều; cặp \texttt{employs}/\texttt{employedBy} cùng là con của \texttt{dbo:employer}
+có lỗi tương tự; \texttt{nationality} có đích là \texttt{Place} thay vì quốc gia.
+
+\begin{table}[htbp]
+\centering\small
+\caption{So sánh ontology vio và VN-Edu 2.1 (đếm từ tệp ontology và dữ liệu).}
+\label{tab:ontocmp}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}Xccc}
+\toprule
+Tiêu chí & vio (báo cáo v0.2) & vio (repo) & VN-Edu 2.1 \\
+\midrule
+Số lớp & 8 & 22 & 34 \\
+Số quan hệ (object property) & 15 & 14 & 33 \\
+Quan hệ có đủ miền và đích & 15/15 & 12/14 & 31/33\textsuperscript{a} \\
+Căn chỉnh sang từ vựng ngoài & 16/24 thuộc tính & có & 38/53 thuộc tính, 56 tiên đề \\
+Lỗi chiều quan hệ (cặp nghịch đảo cùng thuộc tính cha) & 2 & 2 & 0 \\
+Định nghĩa lại miền của từ vựng ngoài & không & có (\texttt{geo:lat}) & không \\
+\texttt{owl:equivalentClass} sang ontology ngoài & không & có & không \\
+Mâu thuẫn khi suy luận OWL 2 RL & -- & 349 & 0 \\
+Loại hình pháp lý, sở hữu, cơ quan chủ quản & không & một phần & có \\
+Sắp xếp tỉnh 2025 & không & không & có \\
+Lớp định nghĩa / chuỗi thuộc tính & 0 / 1 & 0 / 2 & 6 / 6 \\
+Ràng buộc dữ liệu & -- & OWL min-cardinality\textsuperscript{b} & 8 SHACL shape \\
+Siêu dữ liệu ontology (tiêu đề, giấy phép, phiên bản, ngày) & có & có & có \\
+Bậc trung bình của đồ thị dữ liệu\textsuperscript{c} & -- & 2,99 & 3,36 \\
+\bottomrule
+\end{tabularx}
+\par\smallskip\raggedright\footnotesize
+\textsuperscript{a} hai quan hệ cố ý không có đích vì trỏ tới IRI bên ngoài: \vn{website}, \vn{birthPlace}.
+\textsuperscript{b} không có tác dụng dưới giả định thế giới mở.
+\textsuperscript{c} số liên kết trung bình mỗi thực thể, chỉ tính dữ liệu khẳng định và thực thể nội bộ (\cref{sec:density}).
+\end{table}
 
 % ================================================================= 5
-\section{Data Acquisition and Integration}
-\label{sec:integration}
+\section{Triển khai: thu thập, tích hợp và chuyển đổi 4 sao}
+\label{sec:impl}
 
-\subsection{Sources}
-\Cref{tab:sources} summarises the bronze layer. Wikidata is queried with one SPARQL query per property using
-\texttt{VALUES} blocks (avoiding Cartesian products and time-outs); Vietnamese Wikipedia is crawled recursively through
-164 categories (e.g.\ \emph{Đại học Việt Nam}, \emph{Học viện Việt Nam}) \emph{and} through every article linked from
-Wikidata, so that institutions missing from categories are not lost.
-
-\begin{table}[ht]
+\subsection{Dữ liệu thu thập (tầng bronze)}
+\begin{table}[htbp]
 \centering\small
-\caption{Bronze-layer snapshots.}
+\caption{Các ảnh chụp dữ liệu tầng bronze.}
 \label{tab:sources}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}Xlrl}
 \toprule
-Snapshot & Source & Records & Licence \\
+Nội dung & Nguồn & Bản ghi & Giấy phép \\
 \midrule
-Institution facts (labels, types, inception, website, coordinates, ROR, leaders, \ldots) & Wikidata SPARQL & 363 & CC0 \\
-Infoboxes, lead sections, \emph{History} sections & Vietnamese Wikipedia API & 279 & CC BY-SA 4.0 \\
-Image/logo metadata (URL, licence, author) & Wikipedia/Commons API & 280 & per file \\
-Organisations linked from infoboxes (title \(\to\) QID) & Wikipedia API & 80 & CC BY-SA 4.0 \\
-Notable alumni (gender, occupation, birth date) & Wikidata SPARQL & 1{,}531 & CC0 \\
-Provinces (population, area, GeoNames) & Wikidata SPARQL & 63 & CC0 \\
-Founding years (cross-check) & DBpedia SPARQL & 72 & CC BY-SA 3.0 \\
-Province mergers, regions, training fields & Res.~202/2025, Circ.~09/2022 & curated & public law \\
+Thông tin cơ sở (nhãn, loại, năm thành lập, website, toạ độ, ROR, lãnh đạo, hiệp hội\ldots) & Wikidata SPARQL & 363 & CC0 \\
+Infobox, đoạn mở đầu, mục Lịch sử & API Wikipedia tiếng Việt & 279 & CC BY-SA 4.0 \\
+Siêu dữ liệu ảnh/biểu trưng (URL, giấy phép, tác giả) & API Wikipedia/Commons & 280 & theo từng tệp \\
+Tổ chức được liên kết trong infobox (tên bài \(\rightarrow\) QID) & API Wikipedia & 80 & CC BY-SA 4.0 \\
+Cựu sinh viên (giới tính, nghề nghiệp, ngày sinh, nơi sinh, quốc tịch) & Wikidata SPARQL & 1{,}531 & CC0 \\
+Tỉnh/thành (dân số, diện tích, GeoNames) & Wikidata SPARQL & 63 & CC0 \\
+Năm thành lập (đối chiếu chéo) & DBpedia SPARQL & 72 & CC BY-SA 3.0 \\
+Sáp nhập tỉnh, vùng miền, ngành đào tạo & NQ 202/2025, TT 09/2022 & nhập tay & văn bản pháp luật \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\subsection{Cleaning semi-structured infoboxes}
-Infobox values are wikitext, not data. The parser (based on \texttt{mwparserfromhell}) handles line-break templates
-whose removal would glue tokens together (\texttt{BKHN<br>HUST} \(\to\) ``BKHN | HUST''), list templates, date
-templates (\texttt{\{\{start date|1956|3|6\}\}} \(\to\) \texttt{1956-03-06}), degree--minute--second coordinates,
-references, invisible soft hyphens and image captions. Infobox templates with English parameter names
-(\texttt{principal}, \texttt{parent}, \texttt{affiliation}) are normalised to their Vietnamese equivalents; before this
-normalisation one institution (VinUni) silently lost its rector, owner, council chair and partners. Person names are
-separated from academic titles and ranks (e.g.\ ``GS.TS.NGND'' \(\to\) \vn{honorific}).
+\subsection{Làm sạch và tích hợp (tầng silver)}
+\paragraph{Nhận diện thực thể.} QID của Wikidata là khoá chính. Liên kết bài viết bị thiếu được sửa bằng tìm kiếm theo
+tiêu đề (chỉ nhận bài chưa gắn với mục từ khác); ba nhóm mục từ trùng lặp được gộp thành một thực thể giữ
+\texttt{owl:sameAs} tới tất cả QID. \textbf{68 thực thể bị loại} với lý do ghi rõ (khoa/bộ môn, trường phổ thông, bài danh
+sách/lịch sử, mục từ chỉ có tiếng Anh không kiểm chứng được).
 
-\subsection{Entity resolution and scope}
-Wikidata QIDs are the primary key. Missing sitelinks are repaired by title search (accepting only articles not
-attached to another item); three groups of duplicate Wikidata items (e.g.\ Hanoi Law University has three QIDs) are
-merged into one entity that keeps \texttt{owl:sameAs} to all of them. \textbf{68 candidate entities were excluded}, each
-with a recorded reason: faculties and departments, high schools, list and history articles, and English-only items
-that could not be cross-checked.
+\paragraph{Chính sách giải quyết mâu thuẫn.} \Cref{tab:policy} nêu thứ tự ưu tiên nguồn cho từng trường thông tin. 42
+trường hợp các nguồn không khớp được ghi vào \texttt{conflicts.csv}; 176 giá trị lấy từ nguồn dự phòng được ghi vào
+\texttt{filled.csv} kèm nguồn, để người rà soát biết chính xác dữ kiện nào không đến từ trường có cấu trúc.
 
-\subsection{Conflict resolution and fallbacks}
-\Cref{tab:policy} states the resolution policy per field. All 42 cases where sources disagree are written to
-\texttt{conflicts.csv}; every value obtained from a lower-priority fallback (176 values, mostly coordinates, governing
-bodies and ownership) is written to \texttt{filled.csv} with its source, so a reviewer can audit exactly which facts
-were not taken from a structured field.
-
-\begin{table}[ht]
+\begin{table}[htbp]
 \centering\small
-\caption{Source priority per field (first available wins; disagreements are logged).}
+\caption{Thứ tự ưu tiên nguồn theo trường thông tin (nguồn đầu tiên có giá trị được chọn; mâu thuẫn được ghi lại).}
 \label{tab:policy}
 \begin{tabularx}{\textwidth}{lX}
 \toprule
-Field & Priority \\
+Trường & Thứ tự ưu tiên \\
 \midrule
-Province & infobox city/province \(\to\) Wikidata P131 \(\to\) headquarters address \(\to\) Wikidata P159/P276 \(\to\) lead
-  sentence near ``trụ sở/đặt tại'' \(\to\) reverse geocoding of coordinates (OSM) \(\to\) place name in the official name \\
-Founding year & earliest of Wikidata, infobox and DBpedia (institutions date themselves from their predecessor);
-  then ``thành lập năm \ldots'' in the lead, taking the year nearest to the keyword \\
-Ownership & infobox type \(\to\) Wikidata class (public/private university) \(\to\) strict pattern in the lead;
-  plus the OWL rule for company-owned institutions \\
-Leaders & infobox (usually more current) \(\to\) Wikidata statements without end date (P582) \\
-Coordinates & Wikidata \(\to\) infobox \(\to\) geocoded address, accepted \emph{only} if inside the chosen province \\
-Relations & a ``member of / under'' target is typed by what it resolves to: HEI \(\to\) \vn{memberOf}/\vn{branchOf};
-  ministry or committee \(\to\) \vn{governedBy}; company \(\to\) \vn{ownedBy} \\
+Tỉnh/thành & infobox (thành phố/tỉnh) \(\rightarrow\) Wikidata P131 \(\rightarrow\) địa chỉ trụ sở \(\rightarrow\) Wikidata P159/P276
+  \(\rightarrow\) câu ``trụ sở/đặt tại'' trong đoạn mở đầu \(\rightarrow\) toạ độ (tra ngược OSM) \(\rightarrow\) địa danh trong tên \\
+Năm thành lập & năm sớm nhất giữa Wikidata, infobox, DBpedia (trường thường tính từ tiền thân); dự phòng: câu ``thành lập năm\ldots'',
+  lấy năm gần từ khoá nhất \\
+Loại hình sở hữu & infobox \(\rightarrow\) lớp Wikidata (công lập/tư thục) \(\rightarrow\) mẫu câu chặt trong đoạn mở đầu; cộng luật OWL cho trường do doanh nghiệp sở hữu \\
+Lãnh đạo & infobox (thường cập nhật hơn) \(\rightarrow\) Wikidata (bỏ người đã có ngày kết thúc P582) \\
+Toạ độ & Wikidata \(\rightarrow\) infobox \(\rightarrow\) địa chỉ được geocode, \emph{chỉ nhận} nếu rơi đúng tỉnh đã chọn \\
+Quan hệ tổ chức & đích của ``thành viên của / trực thuộc'' được phân loại theo thứ nó phân giải tới: cơ sở GDĐH \(\rightarrow\)
+  \vn{memberOf}/\vn{branchOf}; Bộ, UBND \(\rightarrow\) \vn{governedBy} (với trường tư thục: \vn{stateManagedBy}); doanh nghiệp
+  \(\rightarrow\) \vn{ownedBy} \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\subsection{Data contract}
-Before RDF generation every silver record is validated against a JSON Schema
-(file \url{schemas/silver.schema.json}) covering identifiers, enumerations, value ranges, URL and email formats, image URLs, and cross-field rules (e.g.\ a
-former province must have a successor). Any violation stops the pipeline.
+\paragraph{Hợp đồng dữ liệu.} Trước khi sinh RDF, mọi bản ghi silver được kiểm tra theo JSON Schema (định danh, giá trị
+liệt kê, khoảng giá trị, định dạng URL/email/ảnh, ràng buộc liên trường như ``tỉnh cũ phải có tỉnh kế thừa''). Vi phạm
+bất kỳ sẽ dừng pipeline.
 
-\subsection{Worked example}
-\Cref{lst:vinuni} follows VinUni through the layers: the infobox (bronze), the cleaned record (silver) and the RDF
-(gold). The founding year (2018, approval of the project, from Wikidata) and the founding date (17~December~2019,
-licensing, from the infobox) are both kept, and the difference is logged as a conflict rather than silently resolved.
+\paragraph{Nguyên tắc chính xác trước số lượng.} Thông tin tiền thân của trường thường chỉ có trong văn bản (``tiền thân
+là\ldots'', ``trên cơ sở sáp nhập\ldots''). Thử nghiệm trích xuất bằng mẫu câu chỉ khớp được 6 quan hệ, trong đó khoảng
+một nửa sai (VD: ``Trường Đại học Tổng hợp Hà Nội'' là tên cũ của \emph{hai} trường hiện nay nên bị nối nhầm). Vì vậy
+đồ án \emph{không} đưa các quan hệ này vào dữ liệu, mà chỉ dùng nguồn có cấu trúc (Wikidata P1365/P1366 và liên kết
+``tiền thân'' trong infobox).
 
-\begin{figure}[ht]
-\begin{subfigure}{\textwidth}
-\codetitle{\footnotesize\textbf{Bronze} -- infobox wikitext (English parameter names)}
+\subsection{Chuyển đổi sang RDF 4 sao (tầng gold)}
+Mỗi thực thể có URI dạng \texttt{resource/\{loại\}/\{slug\}} dưới không gian tên do đồ án kiểm soát; slug là tên chính
+thức tiếng Việt bỏ dấu (VD \texttt{resource/university/dai-hoc-bach-khoa-ha-noi}), ổn định và dễ đọc. \Cref{fig:vinuni}
+theo chân Trường Đại học VinUni qua các tầng: infobox dùng tên tham số tiếng Anh được chuẩn hoá, liên kết
+\texttt{[[Đại học Cornell]]} được phân giải thành QID, năm thành lập 2018 (phê duyệt chủ trương, từ Wikidata) và ngày
+thành lập 17/12/2019 (cấp phép, từ infobox) đều được giữ và chênh lệch được ghi nhận thay vì bị âm thầm xoá bỏ.
+
+\begin{figure}[htbp]
+\codetitle{\textbf{Bronze} -- wikitext của infobox (tên tham số tiếng Anh)}
 \begin{code}
 | other_name = VinUniversity     | established = {{Start date and age|2019|12|17}}
 | parent = [[Tập đoàn Vingroup]] | affiliation = [[Đại học Cornell]]{{·}}[[Đại học Pennsylvania]]{{·}}...
 | chairman = Lê Mai Lan          | principal = Tan Yap-Peng    | image = Trường Đại học VinUni logo.png
 \end{code}
-\end{subfigure}
-\begin{subfigure}{\textwidth}
-\codetitle{\footnotesize\textbf{Gold} -- RDF (excerpt), reusing standard vocabularies}
+\codetitle{\textbf{Gold} -- RDF (trích), tái sử dụng từ vựng chuẩn}
 \begin{code}
 university:truong-dai-hoc-vinuni a vnedu:UniversitySchool ;
     rdfs:label "Trường Đại học VinUni"@vi , "VinUni"@en ;   skos:altLabel "VinUniversity" ;
     schema:foundingDate "2019-12-17"^^xsd:date ;  vnedu:foundingYear "2018"^^xsd:gYear ;
     vnedu:ownership vnedu:PrivateOwnership ;      vnedu:ownedBy organization:tap-doan-vingroup ;
     vnedu:rector person:tan-yap-peng ;            vnedu:councilChair person:le-mai-lan ;
-    dbo:affiliation wd:Q49115 , wd:Q49117 ;       # partners = existing Wikidata IRIs
-    schema:logo <https://upload.wikimedia.org/wikipedia/vi/4/4b/...VinUni_logo.png> ;
+    dbo:affiliation wd:Q49115 , wd:Q49117 ;       # đối tác = IRI Wikidata có sẵn
+    vnedu:locatedIn province:ha-noi ;
     owl:sameAs wd:Q86012411 , dbr:VinUniversity , <https://ror.org/052dmdr17> ;
     prov:wasDerivedFrom wd:Q86012411 , <https://vi.wikipedia.org/w/index.php?oldid=75478634> .
 \end{code}
-\end{subfigure}
-\caption{One institution through the pipeline. After reasoning the entity additionally becomes a
-\vn{PrivateInstitution}, a \texttt{schema:CollegeOrUniversity} and is located in Bắc Bộ and Vietnam.}
-\label{lst:vinuni}
+\caption{Một cơ sở đi qua pipeline. Sau suy luận, thực thể còn là \vn{PrivateInstitution}, \texttt{schema:CollegeOrUniversity},
+thuộc Bắc Bộ và Việt Nam.}
+\label{fig:vinuni}
 \end{figure}
 
 % ================================================================= 6
-\section{RDF Generation and Linking}
-\label{sec:linking}
+\section{Liên kết 5 sao và chiến lược URI}
+\label{sec:link}
 
-\subsection{Vocabulary reuse and provenance}
-RDF is generated from silver records by \texttt{step3\_transform.py}. Standard vocabularies are used wherever an
-appropriate term exists -- RDFS, SKOS, FOAF, schema.org, DBpedia ontology, W3C Geo, PROV-O -- so that \textbf{74\% of
-asserted triples} (15{,}083 of 20{,}446) use externally defined predicates. Every institution carries
-\texttt{prov:wasDerivedFrom} links to its Wikidata item \emph{and to the exact Wikipedia revision} (\texttt{oldid}) that
-was parsed, so any value can be traced to the text it came from. Textual descriptions (\texttt{dbo:abstract},
-\vn{history}) are attributed to that revision under CC BY-SA.
+\subsection{Tái sử dụng từ vựng và nguồn gốc dữ liệu}
+69\% triple khẳng định (15{,}821/22{,}903) dùng vị từ của từ vựng chuẩn (RDFS, SKOS, FOAF, schema.org, DBpedia, W3C Geo,
+PROV-O). Mỗi cơ sở có \texttt{prov:wasDerivedFrom} trỏ tới mục từ Wikidata \emph{và đúng bản sửa đổi} (\texttt{oldid})
+của bài Wikipedia đã đọc, nên mọi giá trị đều truy được tới văn bản gốc.
 
-\subsection{URI strategy: when to reuse and when to mint}
+\subsection{Khi nào tái sử dụng URI, khi nào tạo URI mới}
 \label{sec:uristrategy}
-A natural question is why the project mints its own URIs instead of using Wikidata's. Our answer follows the W3C
-best practices \cite{w3c2014bp}:
 \begin{itemize}
-  \item \textbf{Reuse whenever we only \emph{refer} to something.} Occupations and genders of alumni, partner
-        universities and image files are referenced directly by their existing IRIs (222 Wikidata IRIs in 2{,}523
-        triples), with only a label added for display. We do not mint \texttt{vnedu:occupation/politician}.
-  \item \textbf{Mint only for entities we \emph{describe}.} The 2{,}241 entities we publish facts about need URIs whose
-        lookup returns \emph{our} description (Linked Data principle~3): admission codes, legal type, post-2025
-        province, inferred classification. A Wikidata URI cannot be made to return that. Keeping our assertions
-        under our own URIs also keeps their provenance separate, covers entities Wikidata does not have (training
-        majors, province-merger relations), and lets the project guarantee dereferenceability of its namespace.
-  \item \textbf{Assert identity explicitly.} \textbf{84\%} of minted entities (1{,}874/2{,}241) carry
-        \texttt{owl:sameAs} to existing URIs; where identity is not exact (a training \emph{major} vs.\ an academic
-        \emph{discipline}) we use \texttt{skos:closeMatch} instead, following \cite{halpin2010sameas}.
+  \item \textbf{Tái sử dụng khi chỉ \emph{nhắc tới}.} Nghề nghiệp, giới tính, nơi sinh, quốc tịch nước ngoài của người;
+        hiệp hội, đối tác của trường; tệp ảnh -- đều dùng thẳng IRI có sẵn (562 IRI Wikidata trong 3{,}161 triple), chỉ
+        thêm nhãn để hiển thị. Đồ án không tạo \texttt{vnedu:occupation/politician}.
+  \item \textbf{Tạo URI mới cho thực thể được mô tả.} 2{,}241 thực thể mà đồ án công bố dữ kiện cần URI để khi tra
+        cứu trả về \emph{mô tả của đồ án} (nguyên tắc Linked Data số 3): mã tuyển sinh, loại hình pháp lý, tỉnh sau 2025,
+        kết quả suy luận. URI Wikidata không thể trả về những điều đó. Đồng thời, nguồn gốc dữ kiện được tách bạch, có
+        thực thể Wikidata không có (ngành theo TT 09/2022, quan hệ sáp nhập tỉnh), và đồ án chịu trách nhiệm cho không gian tên.
+  \item \textbf{Khẳng định đồng nhất tường minh.} 84\% thực thể (1{,}874/2{,}241) có \texttt{owl:sameAs}; khi không đồng
+        nhất hoàn toàn (ngành đào tạo so với ngành khoa học) dùng \texttt{skos:closeMatch} \cite{halpin2010sameas}.
 \end{itemize}
 
-\subsection{Identifier-based linking with verification}
-Links are derived from shared identifiers rather than name similarity (\cref{tab:links}). Wikidata links come from the
-data's own provenance; ROR and GeoNames links from Wikidata properties P6782 and P1566; DBpedia links from DBpedia's
-own \texttt{owl:sameAs} to Wikidata. Two verification steps guard against wrong identity links: governing bodies and
-regions without a QID are searched by Vietnamese label \emph{and} must satisfy \texttt{P17 = Vietnam} (this rejected,
-e.g., a Korean ministry with the same name); and DBpedia resources that DBpedia maps to several Wikidata items are
-rejected (14 cases, e.g.\ \texttt{dbr:Pleiku} wrongly mapped to Gia Lai province). Links are not fed to the reasoner,
-because \texttt{owl:sameAs} semantics would copy every triple onto the external URIs.
+\subsection{Liên kết theo định danh có kiểm chứng}
+Liên kết được lấy từ định danh dùng chung thay vì so khớp tên (\cref{tab:links}). Hai bước kiểm chứng ngăn liên kết
+sai: cơ quan và miền chưa có QID được tìm theo nhãn tiếng Việt \emph{và} phải có \texttt{P17 = Việt Nam} (đã loại một Bộ
+của Hàn Quốc trùng tên); tài nguyên DBpedia mà DBpedia ánh xạ tới nhiều mục từ Wikidata bị loại (14 trường hợp, VD
+\texttt{dbr:Pleiku} bị gắn nhầm vào tỉnh Gia Lai). Liên kết không được đưa vào bộ suy luận, vì ngữ nghĩa \texttt{owl:sameAs}
+sẽ chép mọi triple sang URI ngoài.
 
-\begin{table}[ht]
+\begin{table}[htbp]
 \centering\small
-\caption{Outgoing links (gold layer), described as \texttt{void:Linkset}s in the dataset description.}
+\caption{Liên kết ra ngoài (mô tả bằng \texttt{void:Linkset}).}
 \label{tab:links}
 \begin{tabular}{llrl}
 \toprule
-Target & Predicate & Links & Derivation \\
+Đích & Vị từ & Số liên kết & Cách tìm \\
 \midrule
-Wikidata  & \texttt{owl:sameAs} & 1{,}880 & provenance; label search + country check \\
-Wikipedia (vi, en) & \texttt{foaf:isPrimaryTopicOf} & 1{,}188 & sitelinks \\
-DBpedia   & \texttt{owl:sameAs} & 260 & DBpedia \texttt{owl:sameAs} \(\to\) QID, ambiguity filter \\
+Wikidata  & \texttt{owl:sameAs} & 1{,}880 & theo nguồn gốc; tìm theo nhãn + kiểm tra quốc gia \\
+Wikipedia (vi, en) & \texttt{foaf:isPrimaryTopicOf} & 1{,}188 & sitelink \\
+DBpedia   & \texttt{owl:sameAs} & 260 & \texttt{owl:sameAs} của DBpedia \(\rightarrow\) QID, lọc mơ hồ \\
 ROR       & \texttt{owl:sameAs} & 195 & Wikidata P6782 \\
 GeoNames  & \texttt{owl:sameAs} & 63 & Wikidata P1566 \\
-Wikidata, DBpedia & \texttt{skos:closeMatch} & 88 & majors; exact label + manual overrides \\
+Wikidata, DBpedia & \texttt{skos:closeMatch} & 88 & ngành; khớp nhãn + ghi đè thủ công \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 % ================================================================= 7
-\section{Reasoning and Validation}
-\label{sec:reasoning}
+\section{Suy luận, kiểm định và công bố}
+\label{sec:publish}
 
-The asserted data, ontology and VoID description (21{,}071 triples) are materialised with OWL-RL \cite{rdflib} in about
-30~seconds, producing a closure of 59{,}880 triples. From the closure we keep only \emph{instance-level} triples whose
-subject belongs to the dataset (14{,}666 new triples), which avoids publishing tautologies about the vocabularies.
-A set of SPARQL checks then looks for \texttt{owl:Nothing} members, violations of disjointness and
-\texttt{AllDifferent}, and functional-property clashes: \textbf{the dataset is consistent (0 violations)}.
-SHACL validation of asserted plus inferred data \textbf{conforms} and reports 37 warnings and 1 informational result
-(\cref{tab:shacl}); the warnings are genuine gaps in the open sources, deliberately not filled by guesswork.
+\subsection{Suy luận và kiểm định}
+Dữ liệu khẳng định, ontology và mô tả VoID (23{,}670 triple) được vật chất hoá bằng OWL-RL \cite{rdflib} trong khoảng 50
+giây, cho bao đóng 70{,}013 triple; chỉ giữ \emph{triple về cá thể} của bộ dữ liệu (20{,}990 triple mới) để không công bố
+các khẳng định hiển nhiên về từ vựng. Bộ kiểm tra nhất quán (thành viên \texttt{owl:Nothing}, vi phạm phân biệt lớp,
+\texttt{AllDifferent}, thuộc tính hàm) cho kết quả \textbf{0 vi phạm}. Kiểm định SHACL \textbf{đạt} với 34 cảnh báo (22 thiếu
+năm thành lập, 12 thiếu tỉnh) và 1 thông tin -- đều là khoảng trống thật của nguồn mở, được để nguyên thay vì đoán.
+104 kiểm thử tự động chạy trong CI: 18 về suy luận, 29 về trích xuất, 3 về hợp đồng dữ liệu, 11 về infobox/ảnh, 43 về
+máy chủ Web.
 
-\begin{table}[ht]
-\centering\small
-\caption{SHACL validation report (severity \(\ge\) Warning does not block publication).}
-\label{tab:shacl}
-\begin{tabular}{lrl}
-\toprule
-Message & Count & Severity \\
-\midrule
-Missing founding year & 22 & Warning \\
-Missing province of headquarters & 12 & Warning \\
-Private institution lists a ministry as governing body & 3 & Warning \\
-Member institution located in a different province from its university & 1 & Info \\
-\bottomrule
-\end{tabular}
-\end{table}
+\subsection{URI tra cứu được}
+Mỗi URI trên GitHub Pages trả về (i) trang HTML cho người, có JSON-LD nhúng, infobox, đoạn giới thiệu và lịch sử (ghi
+nguồn tới bản sửa đổi Wikipedia), bản đồ nhỏ và đánh dấu giá trị do suy luận sinh ra; (ii) tệp \texttt{.ttl} và (iii)
+\texttt{.jsonld}, được khai báo bằng \texttt{<link rel="alternate">} (\cref{fig:resource}). Máy chủ
+\url{https://vnedu-lod.onrender.com} phục vụ cùng giao diện và thêm \emph{content negotiation}: trả HTML, Turtle, JSON-LD,
+N-Triples hoặc RDF/XML theo header \texttt{Accept}. Bộ dữ liệu được mô tả bằng VoID và DCAT (giấy phép, nguồn, linkset,
+phân phối, SPARQL endpoint).
 
-\paragraph{Test suite.} 100 automated tests run in continuous integration: 14 reasoning tests (each axiom of
-\cref{tab:axioms}, five tests that inject erroneous data and expect a contradiction, and one test asserting that the
-real dataset is consistent), 29 extraction tests using real Wikipedia sentences, 3 data-contract tests, 11 infobox/media
-tests, and 43 web-server tests (content negotiation, SPARQL protocol, security).
-
-% ================================================================= 8
-\section{Publication and Access}
-\label{sec:publication}
-
-\subsection{Dereferenceable URIs}
-Every one of the 2{,}241 URIs resolves on GitHub Pages to (i) an HTML page for people, with an embedded JSON-LD
-description, a Wikipedia-style infobox, introduction and history text, a mini-map and markers on every inferred value;
-(ii) \texttt{.ttl} and (iii) \texttt{.jsonld} representations announced by \texttt{<link rel="alternate">}
-(\cref{fig:resource}). Because GitHub Pages is static, content negotiation is provided by a second deployment of the
-same pages behind a Flask/Waitress server (\url{https://vnedu-lod.onrender.com}), which returns HTML, Turtle, JSON-LD,
-N-Triples or RDF/XML according to the \texttt{Accept} header. The dataset is described with VoID and DCAT (licence,
-sources, linksets, distributions, SPARQL endpoint).
-
-\begin{figure}[ht]
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=0.92\textwidth]{figures/resource.png}
-\caption{The URI of VinUni looked up in a browser: introduction and history text (with revision-level attribution),
-and an infobox generated from the RDF (logo, legal type, founding date, owner, rector, council chair, partners linked to
-Wikidata).}
+\includegraphics[width=0.95\textwidth]{figures/resource.png}
+\caption{Tra cứu URI của Trường Đại học VinUni: đoạn giới thiệu, lịch sử (ghi nguồn bản sửa đổi) và infobox sinh từ RDF.}
 \label{fig:resource}
 \end{figure}
 
-\subsection{Querying}
-Three query channels are offered: (1) a public SPARQL~1.1 Protocol endpoint (\url{https://vnedu-lod.onrender.com/sparql})
-that supports federated queries \cite{w3c2013sparqlfed} to Wikidata and DBpedia; (2) SPARQL in the browser, where
-Oxigraph compiled to WebAssembly loads the full dataset client-side (\cref{fig:sparql}); and (3) Apache Jena Fuseki
-plus a command-line client for local use. Fifteen documented competency queries ship with the dataset (\cref{tab:cq}).
+\subsection{Truy vấn}
+Có ba kênh truy vấn: (1) SPARQL endpoint công khai theo SPARQL 1.1 Protocol, hỗ trợ truy vấn liên kết
+\cite{w3c2013sparqlfed} tới Wikidata và DBpedia; (2) SPARQL ngay trong trình duyệt bằng Oxigraph \cite{oxigraph} biên dịch
+sang WebAssembly (\cref{fig:ui}); (3) Apache Jena Fuseki \cite{jenafuseki} và công cụ dòng lệnh khi chạy cục bộ.
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 \centering
 \begin{subfigure}[t]{0.49\textwidth}\centering
   \includegraphics[width=\textwidth]{figures/ontology.png}
-  \caption{Interactive ontology browser with instance counts.}
+  \caption{Trình duyệt ontology, kèm số cá thể mỗi lớp.}
 \end{subfigure}\hfill
 \begin{subfigure}[t]{0.49\textwidth}\centering
   \includegraphics[width=\textwidth]{figures/sparql.png}
-  \caption{SPARQL in the browser: institutions per region and ownership, where the region is inferred.}
-  \label{fig:sparql}
+  \caption{SPARQL trong trình duyệt: cơ sở theo miền và loại hình (miền do suy luận).}
 \end{subfigure}
-\caption{Ontology and query interfaces of the published site.}
+\caption{Giao diện ontology và truy vấn của bản công bố.}
 \label{fig:ui}
 \end{figure}
 
-\subsection{Securing a public SPARQL endpoint}
-An open endpoint executes arbitrary user queries, so we audited the server and reproduced two real vulnerabilities in
-the first version: a \textbf{server-side request forgery} (a query with \texttt{SERVICE <http://127.0.0.1:\ldots>} made
-the server issue requests to internal addresses) and a \textbf{SPARQL injection} through the resource path. The
-hardened server only allows \texttt{SERVICE} calls to an allow-list (Wikidata, DBpedia), rejects variable endpoints and
-\texttt{FROM} clauses, validates resource paths against the dataset's URI pattern before building queries, limits
-query length (20{,}000 characters) and execution time (30~s), returns generic error messages, and sets security
-headers. A further practical issue was that RDFLib hard-codes a User-Agent that Wikimedia rate-limits; the server
-replaces it with a descriptive one so that federated queries work. All of these behaviours are covered by tests.
+\subsection{Bảo mật SPARQL endpoint công khai}
+Endpoint công khai thực thi truy vấn tuỳ ý của người dùng nên đã được rà soát. Hai lỗ hổng có thật trong phiên bản đầu đã
+được tái hiện rồi khắc phục: \textbf{SSRF} -- truy vấn \texttt{SERVICE <http://127.0.0.1:\ldots>} khiến máy chủ gửi yêu cầu
+tới địa chỉ nội bộ; và \textbf{chèn SPARQL} qua đường dẫn \texttt{/resource/\ldots}. Máy chủ hiện chỉ cho \texttt{SERVICE}
+tới danh sách cho phép (Wikidata, DBpedia), cấm \texttt{SERVICE ?biến} và \texttt{FROM}, kiểm tra đường dẫn theo mẫu URI
+trước khi tạo truy vấn, giới hạn độ dài (20{,}000 ký tự) và thời gian (30 giây), ẩn chi tiết lỗi nội bộ và đặt header bảo
+mật. Ngoài ra, RDFLib gắn cứng User-Agent bị Wikimedia giới hạn tốc độ; máy chủ thay bằng User-Agent có thông tin liên
+hệ để truy vấn liên kết hoạt động.
 
-% ================================================================= 9
-\section{Evaluation}
+% ================================================================= 8
+\section{Thực nghiệm và đánh giá}
 \label{sec:eval}
 
-\subsection{Dataset statistics}
-\Cref{tab:stats} and \cref{fig:charts} summarise the dataset.
+\subsection{Thiết lập}
+Mọi số liệu trong mục này được đo bằng các script trong repo (\texttt{audit/}, \texttt{scripts/eval\_linking.py},
+\texttt{data/reports/}) trên dữ liệu thu thập tháng 10/2026. Mốc so sánh là repo vio (\cref{sec:baselines}), được suy
+luận bằng cùng bộ máy OWL-RL. Hiệu năng trình duyệt đo trên máy tính xách tay; hiệu năng máy chủ đo trên gói miễn phí của
+Render (CPU dùng chung).
 
-\begin{table}[ht]
+\subsection{Thống kê bộ dữ liệu}
+\begin{table}[htbp]
 \centering\small
-\caption{Dataset size.}
+\caption{Quy mô bộ dữ liệu.}
 \label{tab:stats}
-\begin{tabular}{lr@{\hspace{1.4cm}}lr}
+\begin{tabular}{lr@{\hspace{1.2cm}}lr}
 \toprule
-Entities & Count & RDF & Triples \\
+Thực thể & Số lượng & RDF & Triple \\
 \midrule
-Educational institutions & 300 & Asserted data & 20{,}446 \\
-\quad of which HEIs & 271 & Outgoing links & 3{,}674 \\
-Provinces (current / former) & 34 / 29 & Inferred (instance level) & 14{,}666 \\
-Governing bodies and companies & 50 & VoID/DCAT & 96 \\
-People (alumni / leaders) & 1{,}481 / 214 & Ontology & 629 \\
-Majors / fields / programmes & 37 / 16 / 78 & \textbf{Total served} & \textbf{39{,}507} \\
+Cơ sở giáo dục & 300 & Dữ kiện khẳng định & 22{,}903 \\
+\quad trong đó cơ sở GDĐH & 271 & Liên kết ra ngoài & 3{,}674 \\
+Tỉnh (hiện hành / đã sáp nhập) & 34 / 29 & Suy luận (mức cá thể) & 20{,}990 \\
+Cơ quan chủ quản, doanh nghiệp & 50 & VoID/DCAT & 96 \\
+Người (cựu SV / lãnh đạo) & 1{,}481 / 214 & Ontology & 769 \\
+Ngành / lĩnh vực / chương trình & 37 / 16 / 78 & \textbf{Tổng phục vụ} & \textbf{48{,}428} \\
 \midrule
-Dereferenceable URIs & 2{,}241 & Entities with \texttt{owl:sameAs} & 84\% \\
+URI tra cứu được & 2{,}241 & Thực thể có \texttt{owl:sameAs} & 84\% \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 \centering
 \begin{subfigure}[t]{0.47\textwidth}\centering
 \begin{tikzpicture}
-\begin{axis}[ybar stacked, width=\textwidth, height=5.2cm, bar width=16pt,
-  symbolic x coords={Bắc Bộ,Nam Bộ,Trung Bộ}, xtick=data, ymin=0, ymax=150,
-  ylabel={HEIs}, legend style={font=\scriptsize, at={(0.98,0.97)}, anchor=north east, draw=none},
+\begin{axis}[ybar stacked, width=\textwidth, height=5.4cm, bar width=16pt,
+  symbolic x coords={Bắc Bộ,Nam Bộ,Trung Bộ}, xtick=data, ymin=0, ymax=150, ylabel={Số cơ sở GDĐH},
+  legend style={font=\scriptsize, at={(0.98,0.97)}, anchor=north east, draw=none},
   tick label style={font=\scriptsize}, label style={font=\scriptsize},
   nodes near coords, every node near coord/.append style={font=\tiny}]
 \addplot[fill=s1!75, draw=none] coordinates {(Bắc Bộ,116) (Nam Bộ,56) (Trung Bộ,37)};
 \addplot[fill=s2!75, draw=none] coordinates {(Bắc Bộ,10) (Nam Bộ,17) (Trung Bộ,7)};
 \addplot[fill=black!25, draw=none] coordinates {(Bắc Bộ,10) (Nam Bộ,6) (Trung Bộ,4)};
-\legend{public, private, unknown}
+\legend{công lập, tư thục, chưa rõ}
 \end{axis}
 \end{tikzpicture}
-\caption{HEIs by region (inferred via \(\mathit{locatedIn}\circ\mathit{partOf}\)) and ownership.}
+\caption{Theo miền (suy luận qua \(\mathit{locatedIn}\circ\mathit{partOf}\)) và loại hình.}
 \end{subfigure}\hfill
 \begin{subfigure}[t]{0.5\textwidth}\centering
 \begin{tikzpicture}
-\begin{axis}[ybar, width=\textwidth, height=5.2cm, bar width=7pt, ymin=0, ymax=65,
-  symbolic x coords={1890s,1900s,1910s,1920s,1930s,1940s,1950s,1960s,1970s,1980s,1990s,2000s,2010s,2020s},
-  xtick=data, x tick label style={rotate=60, anchor=east, font=\tiny}, ylabel={HEIs},
+\begin{axis}[ybar, width=\textwidth, height=5.4cm, bar width=7pt, ymin=0, ymax=65,
+  symbolic x coords={1890,1900,1910,1920,1930,1940,1950,1960,1970,1980,1990,2000,2010,2020},
+  xtick=data, x tick label style={rotate=60, anchor=east, font=\tiny}, ylabel={Số cơ sở GDĐH},
   tick label style={font=\scriptsize}, label style={font=\scriptsize},
   nodes near coords, every node near coord/.append style={font=\tiny}]
-\addplot[fill=s3!75, draw=none] coordinates {(1890s,2) (1900s,9) (1910s,1) (1920s,2) (1930s,0) (1940s,10) (1950s,49)
-  (1960s,43) (1970s,34) (1980s,5) (1990s,28) (2000s,57) (2010s,19) (2020s,2)};
+\addplot[fill=s3!75, draw=none] coordinates {(1890,2) (1900,9) (1910,1) (1920,2) (1930,0) (1940,10) (1950,49)
+  (1960,43) (1970,34) (1980,5) (1990,28) (2000,57) (2010,19) (2020,2)};
 \end{axis}
 \end{tikzpicture}
-\caption{HEIs by decade of (earliest recorded) foundation.}
+\caption{Theo thập kỷ thành lập (mốc sớm nhất ghi nhận).}
 \end{subfigure}
-\caption{Two views of the data, both produced by SPARQL over the inferred graph. Hà Nội (103) and Ho Chi Minh City (58)
-host 60\% of HEIs.}
+\caption{Hai góc nhìn về dữ liệu, đều là kết quả SPARQL trên đồ thị đã suy luận. Hà Nội (103) và TP. Hồ Chí Minh (58)
+chiếm 59\% số cơ sở GDĐH.}
 \label{fig:charts}
 \end{figure}
 
-\subsection{Completeness}
-\Cref{fig:complete} reports the share of the 300 institutions that have each property. Identity and classification
-properties are nearly complete; scale figures (students, staff) and admission codes are sparse because the open
-sources rarely provide them -- a limitation we report rather than fill with unverifiable values.
+\subsection{Độ đầy đủ}
+\Cref{fig:complete} cho biết tỉ lệ trong 300 cơ sở có từng thuộc tính. Các thuộc tính định danh và phân loại gần như đầy
+đủ; số liệu quy mô (sinh viên, giảng viên) và mã tuyển sinh còn thưa vì nguồn mở hiếm khi cung cấp -- đây là hạn chế được
+báo cáo thay vì được lấp bằng giá trị không kiểm chứng.
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}
-\begin{axis}[xbar, width=0.82\textwidth, height=8.4cm, bar width=6pt, xmin=0, xmax=100,
-  symbolic y coords={students,admission code,email,image,founding date,logo,coordinates,phone,leaders,history,website,ownership,abstract,founding year,province},
-  ytick=data, xlabel={\% of 300 institutions}, tick label style={font=\scriptsize}, label style={font=\scriptsize},
-  nodes near coords, nodes near coords align={horizontal}, every node near coord/.append style={font=\tiny},
-  enlarge y limits=0.04]
+\begin{axis}[xbar, width=0.8\textwidth, height=8.6cm, bar width=6pt, xmin=0, xmax=100,
+  symbolic y coords={sinh viên,mã tuyển sinh,email,ảnh,ngày thành lập,biểu trưng,toạ độ,điện thoại,lãnh đạo,lịch sử,website,loại hình sở hữu,giới thiệu chung,năm thành lập,tỉnh/thành},
+  ytick=data, xlabel={\% trong 300 cơ sở}, tick label style={font=\scriptsize}, label style={font=\scriptsize},
+  nodes near coords, nodes near coords align={horizontal}, every node near coord/.append style={font=\tiny}, enlarge y limits=0.04]
 \addplot[fill=acc!70, draw=none] coordinates {
-  (9.3,students) (20.0,admission code) (30.7,email) (32.3,image) (38.3,founding date) (49.7,logo) (58.3,coordinates)
-  (60.3,phone) (66.3,leaders) (74.3,history) (79.0,website) (85.3,ownership) (90.3,abstract) (92.7,founding year) (96.0,province)};
+  (9.3,sinh viên) (20.0,mã tuyển sinh) (30.7,email) (32.3,ảnh) (38.3,ngày thành lập) (49.7,biểu trưng) (58.3,toạ độ)
+  (60.3,điện thoại) (66.3,lãnh đạo) (74.3,lịch sử) (79.0,website) (85.3,loại hình sở hữu) (90.3,giới thiệu chung)
+  (92.7,năm thành lập) (96.0,tỉnh/thành)};
 \end{axis}
 \end{tikzpicture}
-\caption{Property completeness over the 300 institutions (asserted data).}
+\caption{Độ đầy đủ theo thuộc tính (dữ liệu khẳng định).}
 \label{fig:complete}
 \end{figure}
 
-\subsection{Correctness against the baseline}
-We built a benchmark of 21 facts with verified answers (12 founding years, 5 headquarters provinces after the 2025
-reform, 4 governing bodies, including ones requiring inference) and ran both datasets through the same OWL~2~RL
-reasoner. \proj{} answers \textbf{21/21} correctly, the baseline \textbf{14/21} (\cref{tab:bench}). The baseline errors
-are typical of single-source extraction from free text: a year mentioned in the article but unrelated to the founding
-(Hanoi Law University ``1727''; Naval Academy ``2022''), missing entities, and an obsolete or wrong province.
+\subsection{Độ chính xác so với phiên bản trước}
+Bộ kiểm chứng gồm 21 dữ kiện có đáp án đã xác minh (12 năm thành lập, 5 tỉnh trụ sở sau 2025, 4 cơ quan chủ quản -- có
+câu cần suy luận). \proj{} trả lời đúng \textbf{21/21}, repo vio đúng \textbf{14/21} (\cref{tab:bench}); với vio, nếu
+nhiều thực thể trùng tên thì lấy hợp giá trị của tất cả -- cách tính có lợi cho vio. Lỗi của vio là lỗi điển hình khi
+trích từ văn bản một nguồn: một năm có trong bài nhưng không phải năm thành lập (ĐH Luật Hà Nội ``1727'', HV Hải quân
+``2022''), thiếu thực thể, tỉnh sai hoặc lỗi thời. Ở các câu hỏi tổng hợp, vio liệt kê 62 thành viên của ĐHQG Hà Nội
+(thực tế 12, do không phân biệt ``thành viên của'' với ``thuộc Bộ'') và 40 trường quân đội (21 sau khi phân loại đúng cơ
+quan), và không biểu diễn được loại hình sở hữu, miền, trường đã giải thể hay mã tuyển sinh.
 
-\begin{table}[ht]
+\begin{table}[htbp]
 \centering\small
-\caption{Benchmark of 21 verified facts (both datasets reasoned with the same engine).}
+\caption{Kết quả bộ kiểm chứng 21 dữ kiện (cả hai bộ dữ liệu suy luận bằng cùng bộ máy).}
 \label{tab:bench}
 \begin{tabularx}{\textwidth}{lccX}
 \toprule
-Category & Baseline & \proj{} & Examples of baseline errors \\
+Nhóm & vio & VN-Edu & Ví dụ lỗi của vio \\
 \midrule
-Founding year (12) & 6 & 12 & Hanoi Law Univ.\ 1727 (true 1979); Naval Academy 2022 (1955); An Giang Univ.\ 1976 (1999);
-  Hanoi Nat.\ Univ.\ of Education 1950 (1951); 2 institutions missing \\
-Province after 2025 (5) & 4 & 5 & Thu Dau Mot Univ.\ placed in Bình Phước (true: Bình Dương \(\to\) Ho Chi Minh City) \\
-Governing body (4) & 4 & 4 & -- \\
+Năm thành lập (12) & 6 & 12 & ĐH Luật HN 1727 (đúng 1979); HV Hải quân 2022 (1955); ĐH An Giang 1976 (1999);
+  ĐHSP HN 1950 (1951); thiếu 2 thực thể \\
+Tỉnh sau 2025 (5) & 4 & 5 & ĐH Thủ Dầu Một ở Bình Phước (đúng: Bình Dương \(\rightarrow\) TP.HCM) \\
+Cơ quan chủ quản (4) & 4 & 4 & -- \\
 \midrule
-\textbf{Total (21)} & \textbf{14} & \textbf{21} & \\
+\textbf{Tổng (21)} & \textbf{14} & \textbf{21} & \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-Beyond these facts, aggregate questions reveal modelling errors in the baseline: it lists 62 members of Vietnam
-National University, Hanoi (true: 12, because ``member of'' and ``governed by the Ministry'' were not distinguished)
-and 40 military schools (21 after correctly typing governing bodies), and it cannot express public/private ownership,
-regions, dissolved institutions or admission codes at all.
+\subsection{Tính nhất quán logic}
+Khi vật chất hoá OWL~2~RL, vio sinh \textbf{349 mâu thuẫn} (344 do định nghĩa lại miền của \texttt{geo:lat}, 5 cơ sở có hai
+năm thành lập); \proj{} sinh \textbf{0}.
 
-\subsection{Logical consistency}
-Under OWL~2~RL materialisation the baseline produces \textbf{349 contradictions} (344 from the redefined domain of
-\texttt{geo:lat}, 5 institutions with two founding years); \proj{} produces \textbf{none}. The baseline also equated its
-classes with external ones (\texttt{owl:equivalentClass} to \texttt{dbo:University} and
-\texttt{schema:CollegeOrUniversity}) and declared a sub-property of \texttt{owl:sameAs}, which is not allowed in OWL~DL.
+\subsection{Độ kết nối của đồ thị}
+\label{sec:density}
+Để trả lời phần ``giàu quan hệ'' của \RQ{1}, đồ án đo đồ thị dữ liệu khẳng định: hai thực thể được tính là liên kết nếu có
+ít nhất một quan hệ (không tính \texttt{rdf:type}, nguồn gốc, trang chủ, ảnh) giữa chúng. \Cref{tab:density} cho thấy bản
+2.1 tăng bậc trung bình từ 2,34 lên 3,36 -- vượt vio (2,99) -- nhờ các quan hệ mới về nơi sinh, quốc tịch, hiệp hội và
+quản lý nhà nước; tỉ lệ thực thể gần như cô lập (\(\le 1\) liên kết) giảm từ 73\% xuống 48\%. Khi tính cả các nút Wikidata
+được tái sử dụng (nghề nghiệp, nơi sinh, hiệp hội) -- đồ thị mà một hệ Graph RAG thực sự nạp -- bậc trung bình là 4,79 và
+chỉ 15\% thực thể có \(\le 1\) liên kết.
 
-\subsection{Link quality}
-\paragraph{Identifier-based vs.\ string-similarity linking.} To justify the linking strategy we simulated a Silk-style
-\cite{volz2009silk} matcher -- Jaccard similarity over lower-cased tokens of English names, best candidate above a
-threshold \(\theta\) -- on 86 HEIs whose correct DBpedia resource is known from identifiers (\cref{tab:linkeval}). At
-the threshold used by the hust-semantic-web baseline (\(\theta=0.2\)) one link in six is wrong; raising \(\theta\) buys
-precision at a steep cost in recall. The root cause is structural: Vietnamese university names share most tokens.
-\emph{Hanoi University of Science and Technology} and \emph{University of Science and Technology of Hanoi} are two
-different institutions with \emph{identical} token sets (Jaccard \(=1.0\)); no threshold separates them, whereas shared
-identifiers (QID, ROR) do.
-
-\begin{table}[ht]
+\begin{table}[htbp]
 \centering\small
-\caption{String-similarity linking vs.\ identifier-based linking on 86 HEIs (ground truth from identifiers).}
+\caption{Độ kết nối của đồ thị dữ liệu khẳng định.}
+\label{tab:density}
+\begin{tabular}{lrrrr}
+\toprule
+& vio (repo) & VN-Edu 2.0 & \multicolumn{2}{c}{VN-Edu 2.1} \\
+\cmidrule(lr){4-5}
+& & & nội bộ & + nút Wikidata \\
+\midrule
+Số thực thể & 1{,}045 & 2{,}241 & 2{,}241 & 2{,}241 \\
+Số cặp thực thể có liên kết & 1{,}560 & 2{,}621 & 3{,}770 & 6{,}965 \\
+Số loại quan hệ dùng & 10 & 14 & 19 & 25 \\
+Bậc trung bình mỗi thực thể & 2,99 & 2,34 & 3,36 & 4,79 \\
+Bậc trung bình của \emph{người} & -- & 1,12 & 1,80 & 3,62 \\
+Thực thể có \(\le 1\) liên kết & -- & 73\% & 48\% & 15\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Chất lượng liên kết}
+\paragraph{Liên kết theo định danh so với so khớp chuỗi.} Đồ án mô phỏng cách liên kết kiểu Silk \cite{volz2009silk}
+(độ tương đồng Jaccard trên token tên tiếng Anh, chọn ứng viên tốt nhất vượt ngưỡng \(\theta\)) trên 86 cơ sở có đáp án
+xác định theo định danh (\cref{tab:linkeval}). Ở ngưỡng mà hust-semantic-web dùng (\(\theta=0.2\)), cứ sáu liên kết có một
+liên kết sai; tăng ngưỡng thì precision tăng nhưng recall giảm mạnh. Nguyên nhân mang tính cấu trúc: tên trường Việt Nam
+có rất nhiều token chung. \emph{Hanoi University of Science and Technology} và \emph{University of Science and Technology
+of Hanoi} là hai trường khác nhau nhưng có \emph{cùng} tập token (Jaccard \(=1{,}0\)); không ngưỡng nào tách được, trong
+khi định danh dùng chung (QID, ROR) thì tách được.
+
+\begin{table}[htbp]
+\centering\small
+\caption{So khớp chuỗi so với liên kết theo định danh (86 cơ sở, đáp án theo định danh).}
 \label{tab:linkeval}
 \begin{tabular}{lrrrrrr}
 \toprule
-Method & \(\theta\) & Links & Wrong & Precision & Recall & F1 \\
+Phương pháp & \(\theta\) & Liên kết & Sai & Precision & Recall & F1 \\
 \midrule
-Token Jaccard (Silk-style) & 0.2 & 85 & 13 & 84.7\% & 83.7\% & 0.842 \\
-                           & 0.4 & 80 & 8  & 90.0\% & 83.7\% & 0.867 \\
-                           & 0.6 & 76 & 6  & 92.1\% & 81.4\% & 0.864 \\
-                           & 0.8 & 68 & 4  & 94.1\% & 74.4\% & 0.831 \\
-                           & 1.0 & 58 & 1  & 98.3\% & 66.3\% & 0.792 \\
+Jaccard token (kiểu Silk) & 0,2 & 85 & 13 & 84,7\% & 83,7\% & 0,842 \\
+                          & 0,4 & 80 & 8  & 90,0\% & 83,7\% & 0,867 \\
+                          & 0,6 & 76 & 6  & 92,1\% & 81,4\% & 0,864 \\
+                          & 0,8 & 68 & 4  & 94,1\% & 74,4\% & 0,831 \\
+                          & 1,0 & 58 & 1  & 98,3\% & 66,3\% & 0,792 \\
 \midrule
-Shared identifiers (this work) & -- & 86 & 0 & 100\% & 100\% & 1.000 \\
+Định danh dùng chung (đồ án) & -- & 86 & 0 & 100\% & 100\% & 1,000 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\paragraph{Link validity.} We dereferenced a random sample of 30 links per target (150 links). All 150 returned
-HTTP~200; Wikidata, DBpedia and GeoNames returned RDF when RDF was requested; 30/30 ROR records were the correct
-Vietnamese organisation; and 29/30 Wikidata labels matched (the remaining item is the correct entity under a former
-name).
+\paragraph{Liên kết còn sống.} Lấy ngẫu nhiên 30 liên kết mỗi đích (150 liên kết): cả 150 trả HTTP~200; Wikidata, DBpedia,
+GeoNames trả RDF khi yêu cầu RDF; 30/30 bản ghi ROR đúng tổ chức Việt Nam; 29/30 nhãn Wikidata khớp (trường hợp còn lại
+đúng thực thể nhưng dùng tên cũ).
 
-\paragraph{External usability.} Acting as an external client, we parsed the live Turtle and embedded JSON-LD of
-sample resources (identical, 192 triples for HUST), followed all 162 internal URIs mentioned on that page (162/162
-dereferenceable), and parsed 40 randomly sampled resources out of 2{,}241 (40/40 valid RDF).
+\paragraph{Người dùng bên ngoài.} Đóng vai một chương trình bên ngoài: đọc Turtle và JSON-LD nhúng của trang ĐH Bách khoa
+Hà Nội (khớp nhau), đi theo mọi URI nội bộ được nhắc tới trong trang (tất cả tra cứu được), và đọc 40 tài nguyên chọn
+ngẫu nhiên (40/40 RDF hợp lệ).
 
-\subsection{Competency questions}
-\Cref{tab:cq} lists the documented queries. Nine of them depend on inferred triples; two are federated and retrieve
-facts the dataset does not store (province area from Wikidata to compute HEI density; logos and mottos from DBpedia),
-which is the practical benefit of the \texttt{owl:sameAs} links.
-
-\begin{table}[ht]
+\subsection{Câu hỏi năng lực}
+\begin{table}[htbp]
 \centering\small
-\caption{Competency questions shipped with the dataset (\texttt{queries/*.rq}).}
+\caption{Các truy vấn mẫu đi kèm bộ dữ liệu (\texttt{queries/*.rq}).}
 \label{tab:cq}
 \begin{tabularx}{\textwidth}{rXcl}
 \toprule
-\# & Question & Inference & Example answer \\
+\# & Câu hỏi & Suy luận & Ví dụ kết quả \\
 \midrule
-1 & HEIs per post-2025 province (old-province records mapped to new) & \checkmark & Hà Nội 103, HCMC 58 \\
-2 & HEIs per region \(\times\) ownership & \checkmark & Bắc Bộ 136 (116 public) \\
-3 & Military and police institutions & \checkmark & 21 + 7 \\
-4 & Lookup by admission code (BKA, KHA, \ldots) & & BKA \(\to\) HUST, public, Hà Nội \\
-5 & Universities and their member institutions & \checkmark & VNU Hanoi: 12 \\
-6 & Old provinces merged into each new province & & Res.~202/2025 \\
-7 & Full profile of HUST including inferred facts and links & \checkmark & 192 triples \\
-8 & Institutions training IT, by region & \checkmark & (sample programme data) \\
-9 & Institutions with most notable alumni & \checkmark & ranked list \\
-10 & Leaders of national and regional universities & \checkmark & 5 universities \\
-11 & Link statistics per target dataset & & \cref{tab:links} \\
-12 & \textbf{Federated}: HEI density per 1{,}000 km\(^2\) using Wikidata areas & & Hà Nội 30.7 \\
-13 & \textbf{Federated}: logo, motto, students from DBpedia & & HUST motto \\
-14 & Training-field catalogue with \texttt{skos:closeMatch} & & 16 fields \\
-15 & Data quality: share of HEIs with each property & & \cref{fig:complete} \\
+1 & Số cơ sở GDĐH theo 34 tỉnh mới (cơ sở ghi ở tỉnh cũ tự quy về tỉnh mới) & \checkmark & Hà Nội 103, TP.HCM 58 \\
+2 & Cơ sở GDĐH theo miền \(\times\) loại hình sở hữu & \checkmark & Bắc Bộ 136 (116 công lập) \\
+3 & Trường quân đội và công an & \checkmark & 21 + 7 \\
+4 & Tra cứu theo mã tuyển sinh (BKA, KHA\ldots) & & BKA \(\rightarrow\) ĐHBK HN, công lập \\
+5 & Đại học và các trường thành viên & \checkmark & ĐHQG HN: 12 \\
+6 & Các tỉnh cũ sáp nhập vào mỗi tỉnh mới & & NQ 202/2025 \\
+7 & Hồ sơ đầy đủ ĐHBK Hà Nội, gồm suy luận và liên kết & \checkmark & -- \\
+8 & Trường đào tạo ngành CNTT theo miền & \checkmark & (dữ liệu mẫu) \\
+9 & Trường có nhiều cựu sinh viên nổi tiếng nhất & \checkmark & danh sách xếp hạng \\
+10 & Lãnh đạo các đại học quốc gia và vùng & \checkmark & 5 đại học \\
+11 & Thống kê liên kết theo đích & & \cref{tab:links} \\
+12 & \textbf{Liên kết}: mật độ cơ sở/1.000 km\(^2\) dùng diện tích từ Wikidata & & Hà Nội 30,7 \\
+13 & \textbf{Liên kết}: biểu trưng, khẩu hiệu, số SV từ DBpedia & & khẩu hiệu ĐHBK HN \\
+14 & Danh mục ngành với \texttt{skos:closeMatch} & & 16 lĩnh vực \\
+15 & Chất lượng dữ liệu: tỉ lệ cơ sở có từng thuộc tính & & \cref{fig:complete} \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\subsection{Performance}
-\Cref{tab:perf} reports measured latencies. In the browser the whole dataset (39{,}507 triples) loads in 2.3~s and the
-competency queries run in 2--34~ms. On the public server (free tier, single shared CPU, rdflib in memory, 121~MB
-resident memory, 3.5~s start-up) typical queries take 1--3.5~s and URI dereferencing about 0.2~s. Federated queries are
-dominated by the remote endpoints.
+Chín truy vấn phụ thuộc triple suy luận; hai truy vấn liên kết lấy dữ kiện mà bộ dữ liệu không lưu (diện tích tỉnh từ
+Wikidata, khẩu hiệu từ DBpedia) -- đây là lợi ích thực tế của liên kết \texttt{owl:sameAs}. Quan hệ mới của bản 2.1 cũng
+mở ra câu hỏi nhiều bước như ``cựu sinh viên sinh ra ở Nam Bộ học ở những trường nào'' (đi qua chuỗi \(\mathit{bornIn}\)).
 
-\begin{table}[ht]
+\subsection{Hiệu năng}
+\input{tables/perf.tex}
+
+\subsection{Bảo mật}
+Mọi đòn tấn công đã tái hiện trên phiên bản đầu được chạy lại trên máy chủ công khai và đều bị chặn: \texttt{SERVICE} tới
+địa chỉ metadata của đám mây và localhost (HTTP 400), chèn SPARQL qua đường dẫn (404), truy vấn quá dài (413), path
+traversal (400). Truy vấn liên kết hợp lệ tới Wikidata, DBpedia vẫn thành công.
+
+\subsection{Đánh giá theo thang 5 sao}
+\begin{table}[htbp]
 \centering\small
-\caption{Measured latency (median of 5 runs unless noted).}
-\label{tab:perf}
-\begin{tabular}{llr}
-\toprule
-Channel & Operation & Time \\
-\midrule
-Browser (Oxigraph/WASM) & load 39{,}507 triples & 2.3 s \\
-                        & competency queries 1--10 & 2--34 ms \\
-Public server (rdflib)  & Q01 per-province aggregation & 1.7 s \\
-                        & Q02 region \(\times\) ownership & 1.1 s \\
-                        & Q09 alumni ranking & 3.5 s \\
-                        & dereference URI as Turtle / HTML & 0.18 / 0.22 s \\
-                        & Q12 federated (Wikidata) / Q13 (DBpedia), single run & 5.9 / 8.7 s \\
-Local server (Waitress) & 20 concurrent dereferences & 0.83 s total \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\subsection{Security}
-All attacks reproduced against the first server version were re-run against the deployed endpoint and are rejected:
-\texttt{SERVICE} to a cloud metadata address and to localhost (HTTP~400), SPARQL injection through the resource path
-(404), over-long queries (413) and path traversal (400). Normal federated queries to Wikidata and DBpedia still
-succeed.
-
-\subsection{Five-star compliance}
-\begin{table}[ht]
-\centering\small
-\caption{Five-star assessment of the published dataset.}
+\caption{Đánh giá 5 sao của bộ dữ liệu công bố.}
 \label{tab:stars}
 \begin{tabularx}{\textwidth}{lXX}
 \toprule
-Star & Requirement & Evidence \\
+Sao & Yêu cầu & Bằng chứng \\
 \midrule
-\(\star\) & On the Web, open licence & Public at \base{}; CC BY-SA 4.0 (required by Wikipedia share-alike) declared in DCAT, licence file and every bronze snapshot \\
-\(\star\star\) & Machine-readable & JSON, CSV, RDF \\
-\(\star\star\star\) & Non-proprietary formats & Turtle, N-Triples, JSON-LD, CSV \\
-\(\star\star\star\star\) & W3C standards, URIs & RDF, OWL~2~RL, SHACL, SPARQL~1.1, PROV-O, VoID, DCAT, JSON-LD; 2{,}241 HTTP URIs that dereference (verified externally) \\
-\(\star\star\star\star\star\) & Linked to other data & 3{,}674 links to Wikidata, DBpedia, ROR, GeoNames, Wikipedia, verified (150/150 sample); federated queries exploit them \\
+\(\star\) & Có trên Web, giấy phép mở & Công khai trên GitHub Pages; CC BY-SA 4.0 (bắt buộc do dẫn xuất từ Wikipedia) khai báo trong DCAT, tệp giấy phép và từng ảnh chụp bronze \\
+\(\star\star\) & Có cấu trúc & JSON, CSV, RDF \\
+\(\star\star\star\) & Định dạng mở & Turtle, N-Triples, JSON-LD, CSV \\
+\(\star\star\star\star\) & Chuẩn W3C và URI & RDF, OWL 2 RL, SHACL, SPARQL 1.1, PROV-O, VoID, DCAT, JSON-LD; 2{,}241 HTTP URI tra cứu được (kiểm chứng từ bên ngoài); content negotiation tại máy chủ \\
+\(\star\star\star\star\star\) & Liên kết dữ liệu khác & 3{,}674 liên kết tới Wikidata, DBpedia, ROR, GeoNames, Wikipedia, đã kiểm chứng (150/150 mẫu); truy vấn liên kết khai thác chúng \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-% ================================================================= 10
-\section{Discussion}
+% ================================================================= 9
+\section{Thảo luận}
 \label{sec:discussion}
 
-\paragraph{Lessons learned.}
-(1) \emph{Most reasoning failures were design failures, not data failures}: a single domain declaration on an
-external property caused 98\% of the baseline's contradictions. Keeping the ontology in OWL~2~RL, aligning instead of
-equating, and moving completeness checks to SHACL removed all of them. (2) \emph{Two independent sources are worth more
-than one large source}: most baseline errors were values that one source states and another contradicts; logging
-conflicts makes these visible. (3) \emph{For identity, identifiers beat similarity}: with name-similarity matching the
-best achievable F1 on our data was 0.867, while identifiers gave exact links. (4) \emph{Publishing is engineering}:
-the first public endpoint had an SSRF and an injection vulnerability, and federated queries failed because of a
-third-party User-Agent policy; neither was visible until the system was tested as an external client would use it.
+\paragraph{Bài học.}
+(1) \emph{Phần lớn lỗi suy luận là lỗi thiết kế, không phải lỗi dữ liệu}: một khai báo miền trên thuộc tính ngoài gây
+98\% mâu thuẫn của vio. (2) \emph{Ontology tốt cần cả logic đúng lẫn trình bày rõ}: bản 2.0 của đồ án đúng về logic nhưng
+13 quan hệ thiếu miền/đích và báo cáo chỉ vẽ cây lớp; học theo cách trình bày của vio (bảng thuộc tính, đồ thị quan hệ,
+căn chỉnh thuộc tính) giúp ontology dễ hiểu và dễ tái sử dụng hơn. (3) \emph{Hai nguồn độc lập giá trị hơn một nguồn lớn}:
+phần lớn lỗi của vio là giá trị mà một nguồn nêu và nguồn kia mâu thuẫn. (4) \emph{Định danh tốt hơn độ tương đồng}: F1
+cao nhất của so khớp chuỗi là 0,867. (5) \emph{Độ dày của đồ thị phải đến từ dữ liệu đúng}: trích quan hệ tiền thân từ
+văn bản tăng số cạnh nhưng sai một nửa nên bị loại. (6) \emph{Công bố là bài toán kỹ thuật}: lỗ hổng SSRF, chèn truy vấn
+và chính sách User-Agent chỉ lộ ra khi kiểm thử hệ thống như người dùng bên ngoài.
 
-\paragraph{Limitations.}
+\paragraph{Hạn chế.}
 \begin{itemize}
-  \item \textbf{Coverage is bounded by the open sources.} There is no machine-readable official register of
-        Vietnamese HEIs, so completeness cannot be proven; private institutions (35 identified) are probably
-        under-represented, and 24 HEIs have unknown ownership.
-  \item \textbf{Sparse quantitative attributes:} students (9\%), admission codes (20\%), staff counts.
-  \item \textbf{Programmes are sample data:} 37 majors and 78 programmes were curated by hand for 16 institutions;
-        queries about ``who trains major X'' are illustrative, not statistics.
-  \item \textbf{Limited temporal modelling:} leader terms, dated student counts and renaming events are not modelled
-        as time-indexed facts.
-  \item \textbf{Hosting:} primary URIs are on static hosting; content negotiation and the SPARQL endpoint run on a
-        free-tier server that sleeps when idle and keeps the graph in memory, which suits a dataset of this size but
-        not heavy load. Timed-out queries cannot be forcibly stopped by rdflib.
+  \item \textbf{Độ phủ phụ thuộc nguồn mở:} chưa có danh sách chính thức máy đọc được của Bộ GD\&ĐT nên chưa chứng minh
+        được độ đầy đủ; số trường tư thục (35) có thể thấp hơn thực tế; 24 cơ sở GDĐH chưa rõ loại hình sở hữu.
+  \item \textbf{Số liệu định lượng thưa:} số sinh viên (9\%), mã tuyển sinh (20\%), số giảng viên.
+  \item \textbf{Quan hệ lịch sử giữa các trường gần như trống} (1 quan hệ tiền thân) vì nguồn có cấu trúc không ghi.
+  \item \textbf{Chương trình đào tạo là dữ liệu mẫu} (37 ngành, 78 chương trình nhập tay cho 16 trường).
+  \item \textbf{Chưa mô hình hoá thời gian:} nhiệm kỳ lãnh đạo, quy mô theo năm, sự kiện đổi tên/sáp nhập chưa là dữ kiện
+        có mốc thời gian.
+  \item \textbf{Hạ tầng:} URI chính trên hosting tĩnh; content negotiation và SPARQL endpoint chạy trên gói miễn phí (ngủ
+        khi không dùng, giữ đồ thị trong bộ nhớ), phù hợp quy mô hiện tại nhưng không cho tải lớn.
 \end{itemize}
 
-\paragraph{Threats to validity.}
-The correctness benchmark is small (21 facts) and biased towards well-known institutions, so it demonstrates the kind
-of errors avoided rather than estimating an error rate for the whole dataset; a random sample of about 50 institutions
-checked against official websites would give such an estimate. Wikipedia and Wikidata are community-edited and may be
-outdated (e.g.\ leaders); revision-level provenance makes every value auditable but does not make it correct.
-Server latencies were measured on a shared free-tier instance and vary with load.
+\paragraph{Các yếu tố ảnh hưởng độ tin cậy.}
+Bộ kiểm chứng nhỏ (21 dữ kiện) và thiên về các trường nổi tiếng, nên nó minh hoạ loại lỗi được tránh chứ không ước lượng
+tỉ lệ lỗi của toàn bộ dữ liệu; một mẫu ngẫu nhiên khoảng 50 trường đối chiếu với website chính thức sẽ cho ước lượng đó.
+Wikipedia và Wikidata do cộng đồng biên tập nên có thể chưa cập nhật; nguồn gốc đến từng bản sửa đổi giúp kiểm chứng được
+nhưng không đảm bảo đúng. Độ trễ máy chủ đo trên gói dùng chung nên thay đổi theo tải.
 
-% ================================================================= 11
-\section{Conclusion and Future Work}
+% ================================================================= 10
+\section{Kết luận, demo và hướng phát triển}
 \label{sec:conclusion}
 
-\proj{} shows that a small team can publish a genuinely five-star dataset by combining careful ontology design,
-multi-source integration with explicit provenance and quality gates, identifier-based linking, and an engineering
-approach to publication. The resulting knowledge graph of 300 institutions and 39{,}507 triples is logically
-consistent, answers all benchmark facts correctly, supports aggregate, multi-hop and federated questions, and is usable
-by external clients through dereferenceable URIs and a public SPARQL endpoint.
+\proj{} cho thấy có thể xây dựng một bộ dữ liệu thực sự đạt 5 sao bằng cách kết hợp thiết kế ontology cẩn thận, tích hợp
+đa nguồn có nguồn gốc và cổng chất lượng, liên kết theo định danh, và cách tiếp cận kỹ thuật cho khâu công bố. Đồ thị tri
+thức 300 cơ sở, 48{,}428 triple nhất quán logic, trả lời đúng mọi dữ kiện kiểm chứng, hỗ trợ câu hỏi tổng hợp, nhiều bước,
+liên kết, và dùng được bởi người lẫn máy bên ngoài.
 
-Future work includes: integrating the Ministry of Education and Training's official lists and admission data to
-measure and improve coverage; modelling time-indexed facts (leadership terms, enrolment by year, renaming and merger
-events) with an n-ary or RDF-star pattern; replacing the sample programme data with programme catalogues; registering
-a persistent namespace (e.g.\ \texttt{w3id.org/vnedu}) with server-side content negotiation; and contributing verified
-corrections (e.g.\ missing sitelinks and ambiguous DBpedia mappings found in this work) back to Wikidata.
+\paragraph{Demo.} Bản công bố gồm: trang thống kê, bản đồ, tra cứu không dấu, trình duyệt ontology, SPARQL trong trình
+duyệt và trang ``Kịch bản demo'' hướng dẫn trình bày trong khoảng 10 phút
+(\url{https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/demo}); máy chủ
+\url{https://vnedu-lod.onrender.com} cung cấp SPARQL endpoint và content negotiation.
 
-% ---------------------------------------------------------------- references
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/home.png}
+\caption{Trang tổng quan của bản công bố: thống kê theo tỉnh 2025, miền, loại hình, thập kỷ thành lập và chất lượng dữ liệu.}
+\label{fig:home}
+\end{figure}
+
+\paragraph{Hướng phát triển.} Tích hợp danh sách và dữ liệu tuyển sinh chính thức của Bộ GD\&ĐT để đo và tăng độ phủ;
+mô hình hoá dữ kiện có thời gian (nhiệm kỳ, quy mô theo năm, sự kiện đổi tên, sáp nhập) bằng mẫu n-ary hoặc RDF-star; bổ
+sung quan hệ lịch sử giữa các trường bằng trích xuất có kiểm duyệt thủ công; thay dữ liệu chương trình mẫu bằng danh mục
+chương trình thật; đăng ký không gian tên bền vững (\texttt{w3id.org/vnedu}) có content negotiation phía máy chủ; và đóng
+góp ngược các sửa lỗi phát hiện được (sitelink thiếu, ánh xạ DBpedia mơ hồ) cho Wikidata.
+
+% ---------------------------------------------------------------- tài liệu tham khảo
 \bibliographystyle{plainnat}
 \bibliography{references}
 
-% ================================================================= appendix
+% ================================================================= phụ lục
 \appendix
-\section{Namespaces}
-\begin{table}[ht]
-\centering\small
-\begin{tabular}{>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{11.4cm}}
+\section{Không gian tên}
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.4cm}>{\raggedright\arraybackslash}p{11.2cm}}
 \toprule
-Prefix & IRI \\
+Tiền tố & IRI \\
 \midrule
 \texttt{vnedu:} & \url{https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#} \\
-\texttt{university:}, \texttt{province:}, \ldots & \url{https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/...} \\
+\texttt{university:}, \texttt{province:}\ldots & \url{https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/...} \\
 \texttt{schema:} & \url{https://schema.org/} \\
 \texttt{dbo:} & \url{http://dbpedia.org/ontology/} \\
 \texttt{dbr:} & \url{http://dbpedia.org/resource/} \\
@@ -934,11 +1038,30 @@ Prefix & IRI \\
 \texttt{prov:} & \url{http://www.w3.org/ns/prov#} \\
 \bottomrule
 \end{tabular}
-\end{table}
 
-\section{Example federated query}
+\section{Trích đoạn ontology (Turtle)}
 \begin{code}
-# HEI density per province: our data + area fetched from Wikidata through owl:sameAs
+vnedu:bornIn a owl:ObjectProperty ;
+    rdfs:label "born in (administrative unit)"@en , "sinh ra tại (đơn vị hành chính)"@vi ;
+    rdfs:domain vnedu:Person ;
+    rdfs:range vnedu:AdministrativeUnit .
+vnedu:bornIn owl:propertyChainAxiom ( vnedu:bornIn vnedu:mergedInto ) .
+vnedu:bornIn owl:propertyChainAxiom ( vnedu:bornIn vnedu:partOf ) .
+
+vnedu:stateManagedBy a owl:ObjectProperty ;
+    rdfs:label "chịu quản lý nhà nước của"@vi ;
+    rdfs:comment "Khác cơ quan chủ quản (vnedu:governedBy): trường tư không có cơ quan chủ quản nhà nước."@vi ;
+    rdfs:domain vnedu:EducationalOrganization ;
+    rdfs:range vnedu:GoverningBody .
+
+vnedu:MilitaryInstitution a owl:Class ;
+    owl:equivalentClass [ owl:intersectionOf ( vnedu:EducationalOrganization
+        [ a owl:Restriction ; owl:onProperty vnedu:governedBy ; owl:hasValue vnedu:MinistryOfNationalDefence ] ) ] .
+\end{code}
+
+\section{Truy vấn liên kết mẫu}
+\begin{code}
+# Mật độ cơ sở GDĐH theo tỉnh: dữ liệu của đồ án + diện tích lấy từ Wikidata qua owl:sameAs
 PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:   <http://www.w3.org/2002/07/owl#>
@@ -951,12 +1074,13 @@ SELECT ?tinh (COUNT(DISTINCT ?u) AS ?so_co_so) ?dien_tich_km2 WHERE {
 } GROUP BY ?tinh ?dien_tich_km2 ORDER BY DESC(?so_co_so)
 \end{code}
 
-\section{Reproducing the results}
+\section{Tái lập kết quả}
 \begin{code}
 pip install -r requirements.txt
-powershell -File run_all.ps1          # collect -> integrate -> RDF -> link -> reason -> report -> publish -> tests
-python -m pytest tests -q             # 100 tests
-python app/server.py --prod           # local server with the same interface; Fuseki: fuseki/run_fuseki.ps1
+powershell -File run_all.ps1      # thu thập -> tích hợp -> RDF -> liên kết -> suy luận -> báo cáo -> công bố -> test
+python -m pytest tests -q         # 104 kiểm thử
+python app/server.py --prod       # máy chủ cục bộ cùng giao diện; Fuseki: fuseki/run_fuseki.ps1
+python docs/report/gen_tables.py  # sinh lại bảng thuộc tính của báo cáo từ ontology
 curl -H "Accept: text/turtle" https://vnedu-lod.onrender.com/resource/university/truong-dai-hoc-vinuni
 \end{code}
 

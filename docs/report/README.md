@@ -1,14 +1,18 @@
-# Báo cáo cuối kỳ (LaTeX)
+# Báo cáo cuối kỳ (LaTeX, tiếng Việt)
 
-- **PDF:** [VN-Edu-LOD-Final-Report.pdf](VN-Edu-LOD-Final-Report.pdf) (20 trang, tiếng Anh)
-- Nguồn: `main.tex`, `references.bib`, ảnh chụp giao diện trong `figures/`
+- **PDF:** [VN-Edu-LOD-Bao-cao-cuoi-ky.pdf](VN-Edu-LOD-Bao-cao-cuoi-ky.pdf) (37 trang)
+- Nguồn: `main.tex`, `references.bib`; hình trong `figures/` (đồ thị quan hệ ontology `figures/ontograph.tex` vẽ bằng TikZ);
+  bảng thuộc tính `tables/properties.tex` **sinh tự động** từ `ontology/vnedu.ttl` bằng `gen_tables.py`.
 
-Điền thông tin trang bìa (các chỗ `[Full Name]`, `[Student ID]`, `[Email]`, `[Instructor Name]`, `[University Name]`…)
-trong `main.tex`, rồi biên dịch (cần TeX Live; font Libertinus và DejaVu Sans Mono có sẵn trong TeX Live):
+Điền thông tin trang bìa (`[TÊN TRƯỜNG ĐẠI HỌC]`, `[Họ và tên]`, `[MSSV]`, `[Email]`, `[Họ tên giảng viên]`, `[Mã HP]`,
+`[Thành phố]`) trong `main.tex`, rồi biên dịch (cần TeX Live; phông Libertinus và Noto Sans Mono có sẵn trong TeX Live):
 
 ```bash
-latexmk -lualatex main.tex
+python docs/report/gen_tables.py
 ```
 
-Mọi số liệu trong báo cáo được đo bằng các script trong repo (`audit/`, `scripts/eval_linking.py`, `data/reports/`)
-tại thời điểm viết (10/2026).
+```bash
+cd docs/report && latexmk -lualatex main.tex
+```
+
+Mọi số liệu được đo bằng các script trong repo (`audit/`, `scripts/eval_linking.py`, `data/reports/`) vào 10/2026.

@@ -448,7 +448,7 @@ federated sang Wikidata/DBpedia…).
 
 | Tài liệu | Nội dung |
 |---|---|
-| [**docs/report/VN-Edu-LOD-Final-Report.pdf**](docs/report/VN-Edu-LOD-Final-Report.pdf) | **Báo cáo cuối kỳ** (tiếng Anh, 20 trang, LaTeX): kiến trúc, ontology, tích hợp, liên kết, suy luận, công bố, đánh giá định lượng |
+| [**docs/report/VN-Edu-LOD-Bao-cao-cuoi-ky.pdf**](docs/report/VN-Edu-LOD-Bao-cao-cuoi-ky.pdf) | **Báo cáo cuối kỳ** (tiếng Việt, 37 trang, LaTeX): kiến trúc, ontology, tích hợp, liên kết, suy luận, công bố, đánh giá định lượng |
 | [docs/pipeline.md](docs/pipeline.md) | Chi tiết kỹ thuật từng bước (nguyên tắc thiết kế ontology, cách thu thập, làm sạch, liên kết, truy vấn) |
 | [docs/ontology.md](docs/ontology.md) | Sơ đồ lớp/thuộc tính đầy đủ và bảng tiên đề (sinh tự động) |
 | [docs/uri-strategy.md](docs/uri-strategy.md) | Khi nào dùng lại URI có sẵn, khi nào tạo mới |
