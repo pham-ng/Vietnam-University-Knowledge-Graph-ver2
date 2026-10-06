@@ -1,0 +1,19 @@
+# Render Blueprint — SPARQL endpoint + tra cứu URI công khai cho VN-Edu LOD.
+# Triển khai: https://render.com/deploy?repo=https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2
+# Backend rdflib trong bộ nhớ (≈120 MB RAM, khởi động ≈4 giây) — vừa gói Free, không cần Fuseki riêng.
+services:
+  - type: web
+    name: vnedu-lod
+    runtime: python
+    plan: free
+    region: singapore
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app/server.py --prod --backend local --host 0.0.0.0
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: VNEDU_QUERY_TIMEOUT
+        value: "30"

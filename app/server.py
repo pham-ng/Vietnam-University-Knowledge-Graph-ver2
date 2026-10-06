@@ -163,6 +163,24 @@ class FusekiBackend:
         return Graph().parse(data=r.text, format="turtle")
 
 
+def install_user_agent() -> None:
+    """rdflib gọi SERVICE bằng urllib và GHI CỨNG User-Agent "rdflibForAnUser" — Wikidata trả HTTP 429 cho UA này
+    (chính sách User-Agent của Wikimedia). Bộ xử lý urllib dưới đây ghi đè UA của mọi yêu cầu đi ra bằng UA có
+    thông tin liên hệ của dự án, để truy vấn federated hoạt động trên máy chủ công khai."""
+    import urllib.request
+
+    class _ProjectUserAgent(urllib.request.BaseHandler):
+        handler_order = 100
+
+        def http_request(self, req):
+            req.add_header("User-Agent", config.USER_AGENT)
+            return req
+
+        https_request = http_request
+
+    urllib.request.install_opener(urllib.request.build_opener(_ProjectUserAgent()))
+
+
 def fuseki_alive() -> bool:
     try:
         return requests.get(f"{config.FUSEKI_URL}/$/ping", timeout=2).ok
@@ -253,6 +271,7 @@ def create_app(backend=None, inferred: set | None = None) -> Flask:
     if backend is None:
         backend = FusekiBackend() if fuseki_alive() else LocalBackend()
     inferred = load_inferred() if inferred is None else inferred
+    install_user_agent()
     app = Flask(__name__)
     app.config["BACKEND"] = backend
     app.json.ensure_ascii = False
@@ -437,8 +456,8 @@ def create_app(backend=None, inferred: set | None = None) -> Flask:
 def main() -> None:
     ap = argparse.ArgumentParser(description="VN-Edu LOD web server")
     ap.add_argument("--backend", choices=["auto", "local", "fuseki"], default="auto")
-    ap.add_argument("--host", default="127.0.0.1")
-    ap.add_argument("--port", type=int, default=8000)
+    ap.add_argument("--host", default=os.environ.get("HOST", "127.0.0.1"))
+    ap.add_argument("--port", type=int, default=int(os.environ.get("PORT", 8000)))   # Render/Heroku cấp qua $PORT
     ap.add_argument("--prod", action="store_true", help="chạy bằng máy chủ WSGI waitress thay cho máy chủ phát triển")
     args = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")

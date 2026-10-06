@@ -1,7 +1,7 @@
 # 🎓 VN-Edu LOD — Dữ liệu liên kết mở về giáo dục đại học Việt Nam
 
 [![CI & Pages](https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/actions/workflows/pages.yml/badge.svg)](https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/actions/workflows/pages.yml)
-![Python](https://img.shields.io/badge/python-3.10%2B-blue) ![tests](https://img.shields.io/badge/tests-84-brightgreen) ![license data](https://img.shields.io/badge/data-CC%20BY--SA%204.0-orange)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue) ![tests](https://img.shields.io/badge/tests-85-brightgreen) ![license data](https://img.shields.io/badge/data-CC%20BY--SA%204.0-orange)
 
 **VN-Edu LOD** là một đồ thị tri thức (knowledge graph) về **300 cơ sở giáo dục đại học Việt Nam**, công bố theo chuẩn
 **Linked Open Data 5 sao**. Dữ liệu được thu thập từ Wikidata và Wikipedia tiếng Việt, đối chiếu chéo, chuyển sang RDF
@@ -95,7 +95,7 @@ Truy vấn từ terminal:
 py query.py queries/03_truong_quan_doi_cong_an.rq
 ```
 
-**Chạy lại toàn bộ pipeline** (thu thập → … → công bố site → 84 test). Dữ liệu tải về được cache nên chạy lại cho kết
+**Chạy lại toàn bộ pipeline** (thu thập → … → công bố site → 85 test). Dữ liệu tải về được cache nên chạy lại cho kết
 quả giống hệt; thêm `-Fresh` để tải dữ liệu mới nhất.
 
 ```bash
@@ -130,7 +130,7 @@ flowchart LR
 | ④ | [`step4_link.py`](scripts/step4_link.py) | Nối tới Wikidata, DBpedia, ROR, GeoNames, Wikipedia; mô tả dataset bằng VoID/DCAT | `vnedu-links.ttl`, `void.ttl` |
 | ⑤ | [`step5_reason.py`](scripts/step5_reason.py) | Suy luận OWL 2 RL, kiểm tra mâu thuẫn logic, kiểm định **SHACL** | `vnedu-inferred.ttl`, `vnedu-all.ttl` |
 | ⑥ | [`step6_report.py`](scripts/step6_report.py) | Báo cáo chất lượng: độ đầy đủ, nguồn gốc, cảnh báo | [`quality_report.md`](data/reports/quality_report.md) |
-| ⑦ | [`step7_publish.py`](scripts/step7_publish.py) | Sinh trang web tĩnh: mỗi URI một trang HTML + `.ttl` + `.jsonld`. Chạy trong **GitHub Actions** (sau khi 84 test đạt) rồi đăng lên Pages — `site/` không nằm trong git | `site/` |
+| ⑦ | [`step7_publish.py`](scripts/step7_publish.py) | Sinh trang web tĩnh: mỗi URI một trang HTML + `.ttl` + `.jsonld`. Chạy trong **GitHub Actions** (sau khi 85 test đạt) rồi đăng lên Pages — `site/` không nằm trong git | `site/` |
 
 Mọi tệp ở mọi tầng được ghi vào [`data/manifest.json`](data/manifest.json) (số bản ghi, mã SHA-256, thời điểm) để truy
 được dòng dõi dữ liệu. Chi tiết kỹ thuật từng bước: [docs/pipeline.md](docs/pipeline.md).
@@ -291,7 +291,7 @@ Bộ suy luận OWL 2 RL sinh thêm **14.666 triple**. Vài ví dụ có thật 
 | Ông A **là hiệu trưởng** trường X | `rector ⊑ hasLeader`, `inverseOf leads` | Ông A là **InstitutionLeader** |
 
 Ontology cũng **phát hiện dữ liệu sai**: một trường vừa công lập vừa tư thục, vừa là học viện vừa là trường đại học,
-hay có hai năm thành lập khác nhau → **mâu thuẫn**. Hiện tại toàn bộ dữ liệu: **0 mâu thuẫn**, SHACL **đạt**, **84/84 test** đạt.
+hay có hai năm thành lập khác nhau → **mâu thuẫn**. Hiện tại toàn bộ dữ liệu: **0 mâu thuẫn**, SHACL **đạt**, **84/85 test** đạt.
 
 ---
 
@@ -412,7 +412,7 @@ federated sang Wikidata/DBpedia…).
 ├── app/                       Ứng dụng web Flask (cục bộ)
 ├── fuseki/                    Script chạy Apache Jena Fuseki
 ├── site_src/                  Giao diện trang web (site/ được CI build tự động, không commit)
-├── tests/                     84 test (suy luận, trích xuất, hợp đồng dữ liệu, infobox, máy chủ web)
+├── tests/                     85 test (suy luận, trích xuất, hợp đồng dữ liệu, infobox, máy chủ web)
 ├── .github/workflows/         CI: chạy test → build site → đăng GitHub Pages
 └── docs/                      Tài liệu chi tiết
 ```

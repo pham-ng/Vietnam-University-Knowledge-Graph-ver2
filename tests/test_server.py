@@ -133,3 +133,13 @@ def test_allowed_federated_queries_pass_the_guard(query):
 def test_query_too_long(client):
     r = client.post("/sparql", data={"query": "SELECT * WHERE { ?s ?p ?o } #" + "x" * 30_000})
     assert r.status_code == 413
+
+
+def test_outbound_user_agent_overrides_rdflib_default(client):
+    """rdflib ghi cứng UA 'rdflibForAnUser' cho SERVICE -> Wikidata trả 429. Máy chủ phải ghi đè bằng UA của dự án."""
+    import urllib.request
+    req = urllib.request.Request("https://query.wikidata.org/sparql", headers={"user-agent": "rdflibForAnUser"})
+    for h in urllib.request._opener.handlers:                           # opener do create_app() cài đặt
+        if hasattr(h, "https_request") and type(h).__name__ == "_ProjectUserAgent":
+            req = h.https_request(req)
+    assert req.get_header("User-agent") == config.USER_AGENT
