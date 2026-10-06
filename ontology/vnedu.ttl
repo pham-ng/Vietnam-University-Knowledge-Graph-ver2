@@ -15,8 +15,8 @@
 #  VN-Edu Ontology 2.0 — Giáo dục đại học Việt Nam
 #
 #  Nguyên tắc thiết kế (để suy luận ĐÚNG và ĐẦY ĐỦ):
-#   1. Nằm trong profile OWL 2 RL -> suy luận bằng luật (owlrl, Jena, GraphDB, RDFox)
-#      là sound & complete, có thể "materialize" toàn bộ hệ quả.
+#   1. Materialized with owlrl's OWL 2 RL/RDF rules; formal profile conformance
+#      is not certified (the model uses xsd:gYear and xsd:date).
 #   2. Chỉ căn chỉnh với từ vựng ngoài bằng rdfs:subClassOf / rdfs:subPropertyOf,
 #      KHÔNG dùng owl:equivalentClass sang ontology ngoài (tránh kéo theo ngữ nghĩa lạ).
 #   3. KHÔNG khai báo lại domain/range cho thuộc tính của từ vựng ngoài (geo:lat, foaf:name...).
@@ -34,7 +34,7 @@
 Luật Giáo dục đại học 2012, sửa đổi 2018), cơ quan chủ quản, lãnh đạo, cựu sinh viên, đơn vị hành chính
 (gồm cả sắp xếp tỉnh năm 2025), ngành đào tạo theo Thông tư 09/2022/TT-BGDĐT."""@vi ;
     dct:created "2026-10-05"^^xsd:date ;
-    dct:modified "2026-10-07"^^xsd:date ;
+    dct:modified "2026-10-06"^^xsd:date ;
     dct:creator "VN-Edu LOD project" ;
     dct:source <https://www.wikidata.org/> , <https://vi.wikipedia.org/> ;
     dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
@@ -43,7 +43,7 @@ Luật Giáo dục đại học 2012, sửa đổi 2018), cơ quan chủ quản,
     owl:priorVersion <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology/2.0> ;
     vann:preferredNamespacePrefix "vnedu" ;
     vann:preferredNamespaceUri "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#" ;
-    rdfs:comment "Profile: OWL 2 RL."@en .
+    rdfs:comment "Rule-based OWL materialization using owlrl; formal OWL 2 RL profile conformance has not been certified."@en .
 
 ###############################################################################
 #  1. TỔ CHỨC
@@ -424,8 +424,15 @@ vnedu:website a owl:ObjectProperty ;
 
 vnedu:foundingYear a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "founding year"@en , "năm thành lập"@vi ;
+    rdfs:comment "Earliest reported foundation year selected by the integration policy; it may refer to a predecessor and is not necessarily the legal establishment year."@en ;
     rdfs:domain vnedu:Organization ;
     rdfs:range xsd:gYear .
+
+vnedu:reportedFoundingDate a owl:DatatypeProperty ;
+    rdfs:label "conflicting source-reported foundation date"@en , "ngày thành lập khác được nguồn ghi nhận"@vi ;
+    rdfs:comment "Infobox date whose year differs from the selected foundingYear. Retained for review, without asserting schema:foundingDate."@en ;
+    rdfs:domain vnedu:Organization ;
+    rdfs:range xsd:date .
 
 vnedu:dissolutionYear a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "dissolution year"@en , "năm giải thể / sáp nhập"@vi ;
@@ -594,7 +601,7 @@ vnedu:website      rdfs:domain vnedu:Organization .
 vnedu:address      rdfs:domain vnedu:Organization .
 vnedu:formerName   rdfs:domain vnedu:Organization .
 vnedu:shortName    rdfs:domain vnedu:Organization .
-vnedu:degreeLevel  rdfs:range xsd:string .
+vnedu:degreeLevel  rdfs:range rdf:langString .
 
 # ---- (b) căn chỉnh sang từ vựng ngoài (chỉ subPropertyOf: dữ liệu của ta kéo theo dbo:/schema:, không ngược lại)
 vnedu:foundingYear           rdfs:subPropertyOf dbo:foundingYear .
@@ -654,6 +661,7 @@ vnedu:bornIn a owl:ObjectProperty ;
     rdfs:label "born in (administrative unit)"@en , "sinh ra tại (đơn vị hành chính)"@vi ;
     rdfs:comment "Tỉnh/thành của dataset chứa nơi sinh (qua Wikidata P131*). Nhờ chuỗi thuộc tính, người sinh ở tỉnh cũ được quy về tỉnh mới, miền và quốc gia."@vi ;
     rdfs:domain vnedu:Person ;
+    rdfs:comment "Geographical containment crosswalk, including the 2025 successor boundaries; inferred values do not assert the administrative unit existed at the time of birth."@en ;
     rdfs:range vnedu:AdministrativeUnit .
 vnedu:bornIn owl:propertyChainAxiom ( vnedu:bornIn vnedu:mergedInto ) .
 vnedu:bornIn owl:propertyChainAxiom ( vnedu:bornIn vnedu:partOf ) .

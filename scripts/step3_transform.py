@@ -86,11 +86,17 @@ def main() -> None:
     g.bind("prov", PROV)
 
     # ------------------------------------------------------------ URI
-    m_org, m_body, m_prov, m_person, m_reg = (Minter(k) for k in ("university", "organization", "province", "person", "region"))
-    u_inst = {k: m_org.mint(i["name_vi"], i["name_en"], k) for k, i in sorted(insts.items())}
-    u_body = {k: ONTOLOGY_INDIVIDUALS.get(vn_key(b["name_vi"])) or m_body.mint(b["name_vi"], k) for k, b in sorted(bodies.items())}
-    u_prov = {k: m_prov.mint(p["name_vi"], k) for k, p in sorted(provs.items(), key=lambda x: (x[1]["status"], x[0]))}
-    u_person = {k: m_person.mint(p["name_vi"], p["name_en"], k) for k, p in sorted(people.items())}
+    registry_path = CLEAN / "uri_map.json"
+    registry = json.loads(registry_path.read_text(encoding="utf-8")) if registry_path.exists() else {}
+    m_org = Minter("university", registry.get("institution"))
+    m_body = Minter("organization", {k: v for k, v in registry.get("body", {}).items() if not v.startswith(config.ONTO_NS)})
+    m_prov = Minter("province", registry.get("province"))
+    m_person = Minter("person", registry.get("person"))
+    m_reg = Minter("region", registry.get("region"))
+    u_inst = {k: m_org.mint(i["name_vi"], i["name_en"], k, key=k) for k, i in sorted(insts.items())}
+    u_body = {k: ONTOLOGY_INDIVIDUALS.get(vn_key(b["name_vi"])) or m_body.mint(b["name_vi"], k, key=k) for k, b in sorted(bodies.items())}
+    u_prov = {k: m_prov.mint(p["name_vi"], k, key=k) for k, p in sorted(provs.items(), key=lambda x: (x[1]["status"], x[0]))}
+    u_person = {k: m_person.mint(p["name_vi"], p["name_en"], k, key=k) for k, p in sorted(people.items())}
     country = URIRef(config.RES_NS + "country/viet-nam")
 
     # ------------------------------------------------------------ địa lý
@@ -99,7 +105,7 @@ def main() -> None:
     g.add((country, RDFS.label, Literal("Vietnam", lang="en")))
     regions = {}
     for name, en in (("Bắc Bộ", "Northern Vietnam"), ("Trung Bộ", "Central Vietnam"), ("Nam Bộ", "Southern Vietnam")):
-        r = regions[name] = m_reg.mint(name)
+        r = regions[name] = m_reg.mint(name, key=name)
         g.add((r, RDF.type, VNEDU.Region))
         g.add((r, RDFS.label, Literal(name, lang="vi")))
         g.add((r, RDFS.label, Literal(en, lang="en")))
@@ -148,7 +154,7 @@ def main() -> None:
             g.add((s, VNEDU.ownership, VNEDU.PublicOwnership if i["ownership"] == "public" else VNEDU.PrivateOwnership))
         add(g, s, VNEDU.motto, lit(i["motto_vi"], lang="vi"))
         for text, lang in i["motto_other"]:
-            add(g, s, VNEDU.motto, lit(text, lang=lang or None))
+            add(g, s, VNEDU.motto, lit(text, lang=lang or "und"))
         add(g, s, VNEDU.numberOfStudents, lit(i.get("students"), XSD.nonNegativeInteger))
         add(g, s, VNEDU.numberOfUndergraduates, lit(i.get("undergraduates"), XSD.nonNegativeInteger))
         add(g, s, VNEDU.numberOfPostgraduates, lit(i.get("postgraduates"), XSD.nonNegativeInteger))
@@ -156,7 +162,11 @@ def main() -> None:
         add(g, s, VNEDU.address, lit(i.get("address")))
         for n in i.get("alt_names", []):
             g.add((s, SKOS.altLabel, Literal(n)))
-        add(g, s, SCHEMA.foundingDate, lit(i.get("founding_date"), XSD.date))
+        date = i.get("founding_date")
+        # Keep conflicting source dates without asserting two incompatible founding events.
+        date_property = (VNEDU.reportedFoundingDate if date and i.get("founding_year")
+                         and int(date[:4]) != i["founding_year"] else SCHEMA.foundingDate)
+        add(g, s, date_property, lit(date, XSD.date))
         add(g, s, SCHEMA.telephone, lit(i.get("telephone")))
         add(g, s, SCHEMA.email, lit(i.get("email")))
         add(g, s, VNEDU.campus, lit(i.get("campus")))
@@ -279,9 +289,9 @@ def main() -> None:
         print(f"  ! programs.csv: không khớp {sorted(missing)}")
 
     # bảng ánh xạ khoá -> URI cho bước liên kết
-    keymap = {"institution": {k: str(v) for k, v in u_inst.items()}, "body": {k: str(v) for k, v in u_body.items()},
-              "province": {k: str(v) for k, v in u_prov.items()}, "person": {k: str(v) for k, v in u_person.items()},
-              "region": {k: str(v) for k, v in regions.items()}, "country": str(country)}
+    keymap = {"institution": m_org.registry, "body": {**registry.get("body", {}), **{k: str(v) for k, v in u_body.items()}},
+              "province": m_prov.registry, "person": m_person.registry,
+              "region": m_reg.registry, "country": str(country)}
     (CLEAN / "uri_map.json").write_text(json.dumps(keymap, ensure_ascii=False, indent=1), encoding="utf-8")
 
     config.RDF_DIR.mkdir(parents=True, exist_ok=True)

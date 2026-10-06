@@ -8,6 +8,7 @@
 """
 import hashlib
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -63,6 +64,8 @@ def get_json(url: str, params: dict, method: str = "GET", use_cache: bool = True
     path = _cache_path(method, url, params)
     if use_cache and path.exists():
         return json.loads(path.read_text(encoding="utf-8"))
+    if os.environ.get("VNEDU_OFFLINE") == "1":
+        raise RuntimeError(f"Offline cache miss: {method} {url}; cache key {path.name}. Use --fresh explicitly to fetch new data.")
 
     host = urlparse(url).netloc
     delay = 2.0

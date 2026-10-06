@@ -6,265 +6,265 @@
 [] a sh:ValidationReport ;
     sh:conforms true ;
     sh:result [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-nghe-thuat-trung-uong> ;
-            sh:resultMessage "Thiếu năm thành lập."@vi ;
-            sh:resultPath vnedu:foundingYear ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-y-khoa-dong-duong> ;
-            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
-            sh:resultPath vnedu:locatedIn ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b9 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/giao-hoang-hoc-vien-thanh-pio-x-da-lat> ;
-            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
-            sh:resultPath vnedu:locatedIn ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b9 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-nghe-an> ;
-            sh:resultMessage "Thiếu năm thành lập."@vi ;
-            sh:resultPath vnedu:foundingYear ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-xuan-bich-hue> ;
-            sh:resultMessage "Thiếu năm thành lập."@vi ;
-            sh:resultPath vnedu:foundingYear ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chien-luoc-boi-duong-can-bo-xay-dung> ;
-            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
-            sh:resultPath vnedu:locatedIn ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b9 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/vien-dao-tao-y-hoc-du-phong-va-y-te-cong-cong> ;
-            sh:resultMessage "Thiếu năm thành lập."@vi ;
-            sh:resultPath vnedu:foundingYear ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-my-thuat-cong-nghiep> ;
-            sh:resultMessage "Thiếu năm thành lập."@vi ;
-            sh:resultPath vnedu:foundingYear ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-the-duc-the-thao-thanh-pho-ho-chi-minh> ;
-            sh:resultMessage "Thiếu năm thành lập."@vi ;
-            sh:resultPath vnedu:foundingYear ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-thanh-giuse-xuan-loc> ;
-            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
-            sh:resultPath vnedu:locatedIn ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b9 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-sao-bien> ;
-            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
-            sh:resultPath vnedu:locatedIn ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b9 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghiep-vinh> ;
-            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
-            sh:resultPath vnedu:locatedIn ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b9 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/vien-dai-hoc-da-lat> ;
-            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
-            sh:resultPath vnedu:locatedIn ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b9 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-thanh-giuse-ha-noi> ;
-            sh:resultMessage "Thiếu năm thành lập."@vi ;
-            sh:resultPath vnedu:foundingYear ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-ngoai-ngu-cong-nghe-viet-nhat> ;
-            sh:resultMessage "Thiếu năm thành lập."@vi ;
-            sh:resultPath vnedu:foundingYear ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-thanh-giuse-xuan-loc> ;
-            sh:resultMessage "Thiếu năm thành lập."@vi ;
-            sh:resultPath vnedu:foundingYear ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-an-giang-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh> ;
-            sh:resultMessage "Trường thành viên đặt ở tỉnh khác với đại học chủ quản (https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang ≠ https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh)." ;
-            sh:resultSeverity sh:Info ;
-            sh:sourceConstraint [ sh:message "Trường thành viên đặt ở tỉnh khác với đại học chủ quản ({?p1} ≠ {?p2})."@vi ;
-                    sh:prefixes vnedu: ;
-                    sh:select """\r
-            SELECT $this ?p1 ?p2 WHERE {\r
-              $this vnedu:memberOf ?u ; vnedu:locatedIn ?p1 . ?p1 a vnedu:Province .\r
-              ?u vnedu:locatedIn ?p2 . ?p2 a vnedu:Province .\r
-              FILTER NOT EXISTS { $this vnedu:locatedIn ?p2 }\r
-            }""" ] ;
-            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
-            sh:sourceShape shapes:MemberSameProvince ;
-            sh:value <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-an-giang-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/vien-tran-nhan-tong-dai-hoc-quoc-gia-ha-noi> ;
-            sh:resultMessage "Thiếu năm thành lập."@vi ;
-            sh:resultPath vnedu:foundingYear ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ky-thuat-va-cong-nghe-an-ninh> ;
-            sh:resultMessage "Thiếu năm thành lập."@vi ;
-            sh:resultPath vnedu:foundingYear ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-boi-duong-can-bo-kinh-te-tai-chinh> ;
-            sh:resultMessage "Thiếu năm thành lập."@vi ;
-            sh:resultPath vnedu:foundingYear ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-ngoai-ngu-cong-nghe-viet-nhat> ;
-            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
-            sh:resultPath vnedu:locatedIn ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b9 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-su-pham-nam-dinh> ;
-            sh:resultMessage "Thiếu năm thành lập."@vi ;
-            sh:resultPath vnedu:foundingYear ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tan-trao> ;
-            sh:resultMessage "Thiếu năm thành lập."@vi ;
-            sh:resultPath vnedu:foundingYear ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-nghe-thuat-trung-uong> ;
-            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
-            sh:resultPath vnedu:locatedIn ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b9 ],
-        [ a sh:ValidationResult ;
             sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-sao-bien> ;
             sh:resultMessage "Thiếu năm thành lập."@vi ;
             sh:resultPath vnedu:foundingYear ;
             sh:resultSeverity sh:Warning ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/phan-hieu-long-an-truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh> ;
-            sh:resultMessage "Thiếu năm thành lập."@vi ;
-            sh:resultPath vnedu:foundingYear ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-quoc-gia-am-nhac-va-kich-nghe> ;
-            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
-            sh:resultPath vnedu:locatedIn ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b9 ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-phong-chay-chua-chay> ;
-            sh:resultMessage "Thiếu năm thành lập."@vi ;
-            sh:resultPath vnedu:foundingYear ;
-            sh:resultSeverity sh:Warning ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-thanh-tay> ;
             sh:resultMessage "Thiếu năm thành lập."@vi ;
             sh:resultPath vnedu:foundingYear ;
             sh:resultSeverity sh:Warning ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-ky-thuat-cao-thang> ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chien-luoc-boi-duong-can-bo-xay-dung> ;
             sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
             sh:resultPath vnedu:locatedIn ;
             sh:resultSeverity sh:Warning ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b9 ],
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b9 ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-thanh-giuse-sai-gon> ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/vien-dao-tao-y-hoc-du-phong-va-y-te-cong-cong> ;
             sh:resultMessage "Thiếu năm thành lập."@vi ;
             sh:resultPath vnedu:foundingYear ;
             sh:resultSeverity sh:Warning ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-boi-duong-can-bo-kinh-te-tai-chinh> ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tan-trao> ;
+            sh:resultMessage "Thiếu năm thành lập."@vi ;
+            sh:resultPath vnedu:foundingYear ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-an-giang-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh> ;
+            sh:resultMessage "Trường thành viên đặt ở tỉnh khác với đại học chủ quản (https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang ≠ https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh)." ;
+            sh:resultSeverity sh:Info ;
+            sh:sourceConstraint [ sh:message "Trường thành viên đặt ở tỉnh khác với đại học chủ quản ({?p1} ≠ {?p2})."@vi ;
+                    sh:prefixes vnedu: ;
+                    sh:select """
+            SELECT $this ?p1 ?p2 WHERE {
+              $this vnedu:memberOf ?u ; vnedu:locatedIn ?p1 . ?p1 a vnedu:Province .
+              ?u vnedu:locatedIn ?p2 . ?p2 a vnedu:Province .
+              FILTER NOT EXISTS { $this vnedu:locatedIn ?p2 }
+            }""" ] ;
+            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+            sh:sourceShape shapes:MemberSameProvince ;
+            sh:value <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-an-giang-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-sao-bien> ;
             sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
             sh:resultPath vnedu:locatedIn ;
             sh:resultSeverity sh:Warning ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b9 ],
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b9 ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-luat-dai-hoc-hue> ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-ngoai-ngu-cong-nghe-viet-nhat> ;
             sh:resultMessage "Thiếu năm thành lập."@vi ;
             sh:resultPath vnedu:foundingYear ;
             sh:resultSeverity sh:Warning ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-cong-nghiep-hue> ;
             sh:resultMessage "Thiếu năm thành lập."@vi ;
             sh:resultPath vnedu:foundingYear ;
             sh:resultSeverity sh:Warning ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ],
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-thanh-giuse-ha-noi> ;
+            sh:resultMessage "Thiếu năm thành lập."@vi ;
+            sh:resultPath vnedu:foundingYear ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghiep-vinh> ;
+            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
+            sh:resultPath vnedu:locatedIn ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b9 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-boi-duong-can-bo-kinh-te-tai-chinh> ;
+            sh:resultMessage "Thiếu năm thành lập."@vi ;
+            sh:resultPath vnedu:foundingYear ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-xuan-bich-hue> ;
+            sh:resultMessage "Thiếu năm thành lập."@vi ;
+            sh:resultPath vnedu:foundingYear ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-the-duc-the-thao-thanh-pho-ho-chi-minh> ;
+            sh:resultMessage "Thiếu năm thành lập."@vi ;
+            sh:resultPath vnedu:foundingYear ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/giao-hoang-hoc-vien-thanh-pio-x-da-lat> ;
+            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
+            sh:resultPath vnedu:locatedIn ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b9 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ky-thuat-va-cong-nghe-an-ninh> ;
+            sh:resultMessage "Thiếu năm thành lập."@vi ;
+            sh:resultPath vnedu:foundingYear ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-ky-thuat-cao-thang> ;
+            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
+            sh:resultPath vnedu:locatedIn ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b9 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-boi-duong-can-bo-kinh-te-tai-chinh> ;
+            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
+            sh:resultPath vnedu:locatedIn ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b9 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/vien-tran-nhan-tong-dai-hoc-quoc-gia-ha-noi> ;
+            sh:resultMessage "Thiếu năm thành lập."@vi ;
+            sh:resultPath vnedu:foundingYear ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-ngoai-ngu-cong-nghe-viet-nhat> ;
+            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
+            sh:resultPath vnedu:locatedIn ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b9 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-nghe-thuat-trung-uong> ;
+            sh:resultMessage "Thiếu năm thành lập."@vi ;
+            sh:resultPath vnedu:foundingYear ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-nghe-thuat-trung-uong> ;
+            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
+            sh:resultPath vnedu:locatedIn ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b9 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/phan-hieu-long-an-truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh> ;
+            sh:resultMessage "Thiếu năm thành lập."@vi ;
+            sh:resultPath vnedu:foundingYear ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/vien-dai-hoc-da-lat> ;
+            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
+            sh:resultPath vnedu:locatedIn ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b9 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-phong-chay-chua-chay> ;
+            sh:resultMessage "Thiếu năm thành lập."@vi ;
+            sh:resultPath vnedu:foundingYear ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-quoc-gia-am-nhac-va-kich-nghe> ;
+            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
+            sh:resultPath vnedu:locatedIn ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b9 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-thanh-giuse-xuan-loc> ;
+            sh:resultMessage "Thiếu năm thành lập."@vi ;
+            sh:resultPath vnedu:foundingYear ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-my-thuat-cong-nghiep> ;
+            sh:resultMessage "Thiếu năm thành lập."@vi ;
+            sh:resultPath vnedu:foundingYear ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-y-te-ha-noi> ;
             sh:resultMessage "Thiếu năm thành lập."@vi ;
             sh:resultPath vnedu:foundingYear ;
             sh:resultSeverity sh:Warning ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape _:nd0f2b309695c43a58e9c4861699bd0c7b8 ] .
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-su-pham-nam-dinh> ;
+            sh:resultMessage "Thiếu năm thành lập."@vi ;
+            sh:resultPath vnedu:foundingYear ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-thanh-giuse-xuan-loc> ;
+            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
+            sh:resultPath vnedu:locatedIn ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b9 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-luat-dai-hoc-hue> ;
+            sh:resultMessage "Thiếu năm thành lập."@vi ;
+            sh:resultPath vnedu:foundingYear ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-thanh-giuse-sai-gon> ;
+            sh:resultMessage "Thiếu năm thành lập."@vi ;
+            sh:resultPath vnedu:foundingYear ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-nghe-an> ;
+            sh:resultMessage "Thiếu năm thành lập."@vi ;
+            sh:resultPath vnedu:foundingYear ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b8 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-y-khoa-dong-duong> ;
+            sh:resultMessage "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
+            sh:resultPath vnedu:locatedIn ;
+            sh:resultSeverity sh:Warning ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n0e25c12da5e34bb9891859cd580dfe35b9 ] .
 
-_:nd0f2b309695c43a58e9c4861699bd0c7b9 sh:message "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
+_:n0e25c12da5e34bb9891859cd580dfe35b9 sh:message "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ;
     sh:minCount 1 ;
     sh:path vnedu:locatedIn ;
     sh:severity sh:Warning .
 
-_:nd0f2b309695c43a58e9c4861699bd0c7b8 sh:message "Thiếu năm thành lập."@vi ;
+_:n0e25c12da5e34bb9891859cd580dfe35b8 sh:message "Thiếu năm thành lập."@vi ;
     sh:minCount 1 ;
     sh:path vnedu:foundingYear ;
     sh:severity sh:Warning .

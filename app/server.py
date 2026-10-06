@@ -34,7 +34,8 @@ An toàn (endpoint SPARQL mở cho công chúng):
 from __future__ import annotations
 
 import argparse
-import concurrent.futures
+import multiprocessing
+import threading
 import json
 import logging
 import mimetypes
@@ -70,12 +71,9 @@ FMT_PARAM = {"ttl": "text/turtle", "jsonld": "application/ld+json", "rdf": "appl
 
 MAX_QUERY_CHARS = int(os.environ.get("VNEDU_MAX_QUERY_CHARS", 20_000))
 QUERY_TIMEOUT_S = float(os.environ.get("VNEDU_QUERY_TIMEOUT", 30))
-ALLOWED_SERVICE_HOSTS = {"query.wikidata.org", "dbpedia.org"}
+ALLOWED_SERVICE_URLS = {"https://query.wikidata.org/sparql", "https://dbpedia.org/sparql"}
 # URI tài nguyên của dataset: <loại>/<slug>, slug chỉ gồm chữ thường không dấu, số, gạch nối
 RESOURCE_PATH = re.compile(r"^[a-z]+/[a-z0-9]+(?:-[a-z0-9]+)*$")
-_COMMENT = re.compile(r"(?m)(^|\s)#[^\n]*")
-_SERVICE = re.compile(r"\bSERVICE\s+(?:SILENT\s+)?(\S+)", re.I)
-_FROM = re.compile(r"\bFROM\s+(?:NAMED\s+)?(<|[A-Za-z_][\w-]*:)", re.I)
 
 
 class QueryRejected(ValueError):
@@ -90,58 +88,102 @@ def check_query(query: str) -> None:
     """Ném QueryRejected nếu truy vấn vi phạm chính sách của endpoint công khai."""
     if len(query) > MAX_QUERY_CHARS:
         raise QueryRejected(f"Truy vấn dài quá {MAX_QUERY_CHARS} ký tự.", 413)
-    body = _COMMENT.sub(r"\1", query)
-    for target in _SERVICE.findall(body):
-        m = re.match(r"<([^>]*)>", target)
-        if not m:
-            raise QueryRejected("SERVICE phải dùng IRI đầy đủ, ví dụ <https://query.wikidata.org/sparql>.")
-        u = urlparse(m.group(1))
-        if u.scheme not in ("http", "https") or u.hostname not in ALLOWED_SERVICE_HOSTS:
-            raise QueryRejected(f"SERVICE chỉ được gọi tới: {', '.join(sorted(ALLOWED_SERVICE_HOSTS))}.")
-    if _FROM.search(body):
-        raise QueryRejected("Endpoint không hỗ trợ FROM / FROM NAMED (toàn bộ dữ liệu đã nằm trong graph mặc định).")
+    from pyparsing import ParseResults
+    from rdflib import URIRef
+    from rdflib.plugins.sparql.parser import parseQuery
+    from rdflib.plugins.sparql.parserutils import CompValue
+
+    # Validate syntax, not text: comments, literals and zero whitespace are legal SPARQL.
+    def visit(node):
+        if isinstance(node, CompValue):
+            if node.name == "DatasetClause":
+                raise QueryRejected("Endpoint không hỗ trợ FROM / FROM NAMED.")
+            if node.name == "ServiceGraphPattern":
+                term = node["term"]
+                if not isinstance(term, URIRef) or str(term) not in ALLOWED_SERVICE_URLS:
+                    raise QueryRejected("SERVICE phải dùng một endpoint HTTPS đầy đủ trong danh sách cho phép.")
+            for value in node.values():
+                visit(value)
+        elif isinstance(node, (list, tuple, ParseResults)):
+            for value in node:
+                visit(value)
+
+    visit(parseQuery(query))
+
+
+def _query_worker(path, query, mode, accept, connection):
+    """All evaluation AND serialization happen in a disposable, killable process."""
+    from rdflib import Graph
+    try:
+        install_user_agent()
+        check_query(query)
+        result = Graph().parse(path).query(query)
+        if result.type in ("CONSTRUCT", "DESCRIBE"):
+            mime = next((m for m in RDF_MIME if m in accept), "text/turtle") if mode == "protocol" else "text/turtle"
+            payload = result.graph.serialize(format=RDF_MIME[mime], encoding="utf-8")
+        else:
+            mime, fmt = "application/sparql-results+json", "json"
+            if mode == "protocol" and "text/csv" in accept and result.type == "SELECT":
+                mime, fmt = "text/csv", "csv"
+            elif mode == "protocol" and "sparql-results+xml" in accept:
+                mime, fmt = "application/sparql-results+xml", "xml"
+            payload = result.serialize(format=fmt)
+        if len(payload) > 8 * 1024 * 1024:
+            raise ValueError("Result exceeds 8 MiB; use LIMIT or download the RDF dump.")
+        connection.send((True, mime, payload))
+    except Exception as exc:
+        connection.send((False, "", str(exc)))
+    finally:
+        connection.close()
 
 
 # ------------------------------------------------------------------ backends
 
 class LocalBackend:
-    """rdflib trong bộ nhớ. rdflib không tự ngắt truy vấn nên chạy trong luồng riêng có hạn thời gian."""
-    name = "rdflib (bộ nhớ)"
+    """RDFLib queries in bounded child processes; timed-out work is terminated."""
+    name = "rdflib (isolated processes)"
 
     def __init__(self, path: Path = config.ALL_TTL):
-        from rdflib import Graph
-        log.info("Nạp %s ...", path.name)
-        self.graph = Graph().parse(path)
-        self.pool = concurrent.futures.ThreadPoolExecutor(max_workers=4, thread_name_prefix="sparql")
-        log.info("  %d triple", len(self.graph))
+        self.path = Path(path).resolve()
+        self.slots = threading.BoundedSemaphore(int(os.environ.get("VNEDU_QUERY_WORKERS", "2")))
+        self.context = multiprocessing.get_context("spawn")
 
-    def _run(self, query: str):
-        fut = self.pool.submit(self.graph.query, query)
+    def _execute(self, query: str, mode: str, accept: str = ""):
+        if not self.slots.acquire(blocking=False):
+            raise QueryRejected("Máy chủ đang bận. Vui lòng thử lại sau.", 503)
+        receiver, sender = self.context.Pipe(duplex=False)
+        process = self.context.Process(target=_query_worker, args=(self.path, query, mode, accept, sender))
         try:
-            res = fut.result(timeout=QUERY_TIMEOUT_S)
-            if res.type == "SELECT" or res.type == "ASK":
-                res.bindings  # buộc đánh giá hết trong giới hạn thời gian  # noqa: B018
-            return res
-        except concurrent.futures.TimeoutError:
-            fut.cancel()
-            raise QueryRejected(f"Truy vấn chạy quá {QUERY_TIMEOUT_S:.0f} giây.", 503) from None
+            process.start()
+            sender.close()
+            if not receiver.poll(QUERY_TIMEOUT_S):
+                raise QueryRejected(f"Truy vấn chạy quá {QUERY_TIMEOUT_S:g} giây.", 503)
+            ok, mime, payload = receiver.recv()
+            if not ok:
+                raise ValueError(payload)
+            return mime, payload
+        except EOFError:
+            raise QueryRejected("Tiến trình truy vấn đã dừng.", 503) from None
+        finally:
+            if process.pid is not None:
+                if process.is_alive():
+                    process.terminate()
+                process.join()
+                process.close()
+            sender.close()
+            receiver.close()
+            self.slots.release()
 
     def protocol(self, query: str, accept: str) -> Response:
-        res = self._run(query)
-        if res.type in ("CONSTRUCT", "DESCRIBE"):
-            mime = next((m for m in RDF_MIME if m in accept), "text/turtle")
-            return Response(res.graph.serialize(format=RDF_MIME[mime]), mimetype=mime)
-        if "text/csv" in accept:
-            return Response(res.serialize(format="csv"), mimetype="text/csv")
-        if "sparql-results+xml" in accept:
-            return Response(res.serialize(format="xml"), mimetype="application/sparql-results+xml")
-        return Response(res.serialize(format="json"), mimetype="application/sparql-results+json")
+        mime, payload = self._execute(query, "protocol", accept)
+        return Response(payload, mimetype=mime)
 
     def select(self, query: str) -> list[dict]:
-        return json.loads(self._run(query).serialize(format="json"))["results"]["bindings"]
+        return json.loads(self._execute(query, "select")[1])["results"]["bindings"]
 
     def construct(self, query: str):
-        return self._run(query).graph
+        from rdflib import Graph
+        return Graph().parse(data=self._execute(query, "construct")[1], format="turtle")
 
 
 class FusekiBackend:
@@ -152,8 +194,9 @@ class FusekiBackend:
 
     def _post(self, query: str, accept: str) -> requests.Response:
         try:
-            return self.session.post(self.endpoint, data={"query": query}, headers={"Accept": accept or "*/*"},
-                                     timeout=QUERY_TIMEOUT_S)
+            return self.session.post(self.endpoint, data={"query": query, "timeout": int(QUERY_TIMEOUT_S * 1000)},
+                                     headers={"Accept": accept or "*/*"}, timeout=QUERY_TIMEOUT_S,
+                                     allow_redirects=False)
         except requests.Timeout:
             raise QueryRejected(f"Truy vấn chạy quá {QUERY_TIMEOUT_S:.0f} giây.", 503) from None
 
@@ -183,12 +226,20 @@ def install_user_agent() -> None:
         handler_order = 100
 
         def http_request(self, req):
+            target = urlparse(req.full_url)
+            endpoint = f"{target.scheme}://{target.netloc}{target.path}"
+            if endpoint not in ALLOWED_SERVICE_URLS or target.fragment:
+                raise QueryRejected("Đích yêu cầu SERVICE không được phép.")
             req.add_header("User-Agent", config.USER_AGENT)
             return req
 
         https_request = http_request
 
-    urllib.request.install_opener(urllib.request.build_opener(_ProjectUserAgent()))
+    class _NoRedirect(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, req, fp, code, msg, headers, newurl):
+            raise QueryRejected("SERVICE redirects are disabled.")
+
+    urllib.request.install_opener(urllib.request.build_opener(_ProjectUserAgent(), _NoRedirect()))
 
 
 def fuseki_alive() -> bool:
@@ -283,6 +334,7 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
     inferred = load_inferred() if inferred is None else inferred
     install_user_agent()
     app = Flask(__name__)
+    app.config["MAX_CONTENT_LENGTH"] = MAX_QUERY_CHARS * 12
     app.config["BACKEND"] = backend
     site = site_dir if site_dir and (site_dir / "index.html").exists() else None
     app.config["SITE"] = site
@@ -387,7 +439,8 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
 
     @app.route("/sparql", methods=["GET", "POST"])
     def sparql():
-        q = request.values.get("query")
+        q = (request.get_data(as_text=True) if request.mimetype == "application/sparql-query"
+             else request.values.get("query"))
         if not q:
             return site_page("sparql") or render_template("query.html", queries=example_queries(), initial=None)
         try:

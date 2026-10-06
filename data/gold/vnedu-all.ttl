@@ -46,14 +46,14 @@ skos:altLabel a owl:AnnotationProperty ;
 Luật Giáo dục đại học 2012, sửa đổi 2018), cơ quan chủ quản, lãnh đạo, cựu sinh viên, đơn vị hành chính
 (gồm cả sắp xếp tỉnh năm 2025), ngành đào tạo theo Thông tư 09/2022/TT-BGDĐT."""@vi ;
     dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
-    dct:modified "2026-10-07"^^xsd:date ;
+    dct:modified "2026-10-06"^^xsd:date ;
     dct:source <https://vi.wikipedia.org/>,
         <https://www.wikidata.org/> ;
     dct:title "VN-Edu Ontology"@en,
         "Ontology Giáo dục đại học Việt Nam"@vi ;
     vann:preferredNamespacePrefix "vnedu" ;
     vann:preferredNamespaceUri "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#" ;
-    rdfs:comment "Profile: OWL 2 RL."@en ;
+    rdfs:comment "Rule-based OWL materialization using owlrl; formal OWL 2 RL profile conformance has not been certified."@en ;
     owl:priorVersion <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology/2.0> ;
     owl:versionIRI <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology/2.1> ;
     owl:versionInfo "2.1 — đủ domain/range, căn chỉnh DBpedia/schema.org, quan hệ lịch sử tổ chức và nơi sinh/quốc tịch" .
@@ -138,7 +138,7 @@ vnedu:degreeLevel a owl:DatatypeProperty ;
     rdfs:label "degree level"@en,
         "trình độ đào tạo"@vi ;
     rdfs:domain vnedu:AcademicProgram ;
-    rdfs:range xsd:string .
+    rdfs:range rdf:langString .
 
 vnedu:director a owl:ObjectProperty ;
     rdfs:label "director / president"@en,
@@ -158,6 +158,7 @@ vnedu:foundingYear a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "founding year"@en,
         "năm thành lập"@vi ;
+    rdfs:comment "Earliest reported foundation year selected by the integration policy; it may refer to a predecessor and is not necessarily the legal establishment year."@en ;
     rdfs:domain vnedu:Organization ;
     rdfs:range xsd:gYear ;
     rdfs:subPropertyOf dbo:foundingYear .
@@ -250,6 +251,13 @@ vnedu:rector a owl:ObjectProperty ;
     rdfs:range vnedu:Person ;
     rdfs:subPropertyOf dbo:rector,
         vnedu:hasLeader .
+
+vnedu:reportedFoundingDate a owl:DatatypeProperty ;
+    rdfs:label "conflicting source-reported foundation date"@en,
+        "ngày thành lập khác được nguồn ghi nhận"@vi ;
+    rdfs:comment "Infobox date whose year differs from the selected foundingYear. Retained for review, without asserting schema:foundingDate."@en ;
+    rdfs:domain vnedu:Organization ;
+    rdfs:range xsd:date .
 
 vnedu:shortName a owl:DatatypeProperty ;
     rdfs:label "short name"@en,
@@ -27118,7 +27126,8 @@ wd:Q93438884 rdfs:label "directing"@en,
 vnedu:bornIn a owl:ObjectProperty ;
     rdfs:label "born in (administrative unit)"@en,
         "sinh ra tại (đơn vị hành chính)"@vi ;
-    rdfs:comment "Tỉnh/thành của dataset chứa nơi sinh (qua Wikidata P131*). Nhờ chuỗi thuộc tính, người sinh ở tỉnh cũ được quy về tỉnh mới, miền và quốc gia."@vi ;
+    rdfs:comment "Geographical containment crosswalk, including the 2025 successor boundaries; inferred values do not assert the administrative unit existed at the time of birth."@en,
+        "Tỉnh/thành của dataset chứa nơi sinh (qua Wikidata P131*). Nhờ chuỗi thuộc tính, người sinh ở tỉnh cũ được quy về tỉnh mới, miền và quốc gia."@vi ;
     rdfs:domain vnedu:Person ;
     rdfs:range vnedu:AdministrativeUnit ;
     owl:propertyChainAxiom ( vnedu:bornIn vnedu:mergedInto ),
@@ -31746,7 +31755,7 @@ university:truong-cao-dang-cong-nghe-thong-tin-da-nang a foaf:Organization,
     dbo:facultySize "100"^^xsd:nonNegativeInteger ;
     dbo:foundingYear "2003"^^xsd:gYear ;
     dbo:numberOfStudents "3000"^^xsd:nonNegativeInteger ;
-    dbo:rector person:huynh-cong-phap ;
+    dbo:rector person:huynh-cong-phap-2 ;
     owl:sameAs wd:Q10828790 ;
     geo:lat 16.054358 ;
     geo:long 108.244354 ;
@@ -31758,16 +31767,16 @@ university:truong-cao-dang-cong-nghe-thong-tin-da-nang a foaf:Organization,
     vnedu:academicStaff "100"^^xsd:nonNegativeInteger ;
     vnedu:address "Tổ 31, Hải An, phường Ngũ Hành Sơn" ;
     vnedu:foundingYear "2003"^^xsd:gYear ;
-    vnedu:hasLeader person:huynh-cong-phap ;
+    vnedu:hasLeader person:huynh-cong-phap-2 ;
     vnedu:locatedIn country:viet-nam,
         province:da-nang,
         region:trung-bo ;
     vnedu:numberOfStudents "3000"^^xsd:nonNegativeInteger ;
     vnedu:ownership vnedu:PublicOwnership ;
-    vnedu:rector person:huynh-cong-phap ;
+    vnedu:rector person:huynh-cong-phap-2 ;
     vnedu:website <http://www.cit.udn.vn> ;
     schema:email "tuyensinh@cit.udn.vn" ;
-    schema:employee person:huynh-cong-phap ;
+    schema:employee person:huynh-cong-phap-2 ;
     schema:location country:viet-nam,
         province:da-nang,
         region:trung-bo ;
@@ -33235,7 +33244,7 @@ university:truong-dai-hoc-su-pham-ky-thuat-nam-dinh a dbo:University,
         "Trường Đại học Sư phạm Kỹ thuật Nam Định"@vi ;
     dbo:abstract "Trường Đại học Sư phạm Kỹ thuật Nam Định là một trong sáu Đại học Sư phạm Kỹ thuật của cả nước - đào tạo kỹ thuật lấy ứng dụng làm trọng tâm để giảng dạy, có chức năng đào tạo kỹ sư công nghệ và giáo viên kỹ thuật. Được đánh giá là một trong những trường đại học kỹ thuật đầu ngành tại Vùng Đồng bằng sông Hồng Việt Nam. Trường đồng thời là trung tâm nghiên cứu khoa học kỹ thuật và chuyển giao công nghệ lớn của miền Bắc Việt Nam. Tiền thân của trường là Trường Cao đẳng Sư phạm kỹ thuật Nam Định."@vi ;
     dbo:foundingYear "1966"^^xsd:gYear ;
-    dbo:rector person:nguyen-huy-bang ;
+    dbo:rector person:nguyen-huy-bang-2 ;
     owl:sameAs wd:Q10829129 ;
     skos:prefLabel "Trường Đại học Sư phạm Kỹ thuật Nam Định"@vi ;
     prov:wasDerivedFrom wd:Q10829129,
@@ -33244,7 +33253,7 @@ university:truong-dai-hoc-su-pham-ky-thuat-nam-dinh a dbo:University,
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh> ;
     vnedu:address "Số 172, Đường Phù Nghĩa, Phường Thiên Trường, Tỉnh Ninh Bình" ;
     vnedu:foundingYear "1966"^^xsd:gYear ;
-    vnedu:hasLeader person:nguyen-huy-bang ;
+    vnedu:hasLeader person:nguyen-huy-bang-2 ;
     vnedu:history """Trường Đại học Sư phạm Kỹ thuật Nam Định tiền thân là Trường Trung học Công nghiệp Nam Hà được thành lập theo quyết định số 1263 BCNN/KB-1 ngày 21 tháng 12 năm 1966 của Bộ Công nghiệp nặng, có nhiệm vụ đào tạo cán bộ trung cấp kỹ thuât. Năm 1971 Trường thuộc Tổng cục Đào tạo công nhân kỹ thuật theo quyết định số 171/TTg ngày 16 tháng 6 năm 1971 của Thủ tướng Chính phủ, làm nhiệm vụ đào tạo giáo viên dạy nghề. Năm 1978 Trường thuộc Bộ Giáo dục và Đào tạo, tiếp tục làm nhiệm vụ đào tạo, bồi dưỡng giáo viên dạy nghề. Từ ngày 1 tháng 7 năm 1998 Trường thuộc Bộ Lao động-Thương binh và Xã hội, tiếp tục làm nhiệm vụ đào tạo, bồi dưỡng giáo viên dạy nghề. Từ năm 1992 theo quyết định số 1395/TH-DN ngày 13/7/1992 của Bộ trưởng Bộ Giáo dục và Đào tạo, Trường được phép đào tạo thí điểm GVDN trình độ cao đẳng. Từ tháng 5/1999 Trường Cao đẳng Sư phạm Kỹ thuật Nam Định được thành lập trên cơ sở Trường Sư phạm Kỹ thuật 2 Nam Định theo quyết định số 130/1999/QĐ-TTg ngày 28/05/1999 của Thủ tướng Chính phủ, chính thức nhận nhiệm vụ đào tạo GVDN trình độ cao đẳng. Ngày 05 tháng 01 năm 2006 Trường Đại học Sư phạm Kỹ thuật Nam Định được thành lập theo quyết định số 05/2006/QĐ-TTg ngày 5 tháng 1 năm 2006 của Thủ tướng Chính phủ trên cơ sở nâng cấp Trường Cao đẳng Sư phạm Kỹ thuật Nam Định. Trường hiện là đơn vị trực thuộc Bộ Giáo dục và Đào tạo; chịu sự quản lý về hành chính theo lãnh thổ của UBND tỉnh Ninh Bình. Trải qua 60 năm xây dựng và phát triển, trường đã đào tạo và bồi dưỡng hàng vạn cán bộ kỹ thuật, giáo viên dạy nghề, công nhân kỹ thuật phục vụ có hiệu quả cho ngành dạy nghề và các ngành kinh tế quốc dân khác trong phạm vi cả nước. Trường đã khắc phục khó khăn lỗ lực phấn đấu vươn lên, hoàn thành xuất sắc nhiệm vụ được giao, đã được Nhà nước ghi nhận bằng những phần thưởng cao quý:
 
 ~ Huân chương Độc lập hạng Ba (năm 2011) ~Huân chương Lao động hạng Ba (năm 1986) ~Huân chương Lao động hạng Nhì (năm 1996) ~Huân chương Lao động hạng Nhất (năm 2000) ~Huân chương Lao động hạng Ba tặng cho ĐTNCSHCM (năm 2001)"""@vi ;
@@ -33252,10 +33261,10 @@ university:truong-dai-hoc-su-pham-ky-thuat-nam-dinh a dbo:University,
         province:ninh-binh,
         region:bac-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
-    vnedu:rector person:nguyen-huy-bang ;
+    vnedu:rector person:nguyen-huy-bang-2 ;
     vnedu:website <http://www.nute.edu.vn> ;
     schema:email "bants.skn@moet.edu.vn" ;
-    schema:employee person:nguyen-huy-bang ;
+    schema:employee person:nguyen-huy-bang-2 ;
     schema:location country:viet-nam,
         province:ninh-binh,
         region:bac-bo ;
@@ -33587,7 +33596,7 @@ university:truong-dai-hoc-van-hoa-the-thao-va-du-lich-thanh-hoa a dbo:University
         "Trường Đại học Văn hóa, Thể thao và Du lịch Thanh Hóa"@vi ;
     dbo:abstract "Trường Đại học Văn hóa, Thể thao và Du lịch Thanh Hóa (tiếng Anh: University of Culture, Sports and Tourism in Thanh Hóa) là một trường đại học đa ngành. Trường có khởi nguồn từ Trường Sơ cấp Văn hóa Nghệ thuật, được thành lập từ tháng 3/1967 tại Thành phố Thanh Hóa. Trải qua nhiều năm phát triển và tạo dựng được uy tín trong lĩnh vực đào tạo nghệ thuật, ngày 22 tháng 7 năm 2011 Thủ tướng Chính phủ đã phê duyệt Quyết định nâng cấp lên thành Trường Đại học Văn hóa, Thể thao và Du lịch Thanh Hóa. Trường trực thuộc UBND tỉnh Thanh Hóa và Bộ Văn hóa, Thể thao và Du lịch."@vi ;
     dbo:foundingYear "1967"^^xsd:gYear ;
-    dbo:rector person:le-thanh-ha ;
+    dbo:rector person:le-thanh-ha-3 ;
     owl:sameAs wd:Q10829162,
         <https://ror.org/04k3bmm60> ;
     skos:prefLabel "Trường Đại học Văn hóa, Thể thao và Du lịch Thanh Hóa"@vi ;
@@ -33597,14 +33606,14 @@ university:truong-dai-hoc-van-hoa-the-thao-va-du-lich-thanh-hoa a dbo:University
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C4%83n_h%C3%B3a%2C_Th%E1%BB%83_thao_v%C3%A0_Du_l%E1%BB%8Bch_Thanh_H%C3%B3a> ;
     vnedu:address "561 Quang Trung 3, phường Hạc Thành, tỉnh Thanh Hóa" ;
     vnedu:foundingYear "1967"^^xsd:gYear ;
-    vnedu:hasLeader person:le-thanh-ha ;
+    vnedu:hasLeader person:le-thanh-ha-3 ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-hoa,
         region:trung-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
-    vnedu:rector person:le-thanh-ha ;
+    vnedu:rector person:le-thanh-ha-3 ;
     vnedu:website <https://tucst.edu.vn> ;
-    schema:employee person:le-thanh-ha ;
+    schema:employee person:le-thanh-ha-3 ;
     schema:image <https://upload.wikimedia.org/wikipedia/commons/d/d2/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C4%83n_h%C3%B3a%2C_Th%E1%BB%83_thao_v%C3%A0_Du_l%E1%BB%8Bch_Thanh_H%C3%B3a.jpeg> ;
     schema:location country:viet-nam,
         province:thanh-hoa,
@@ -35573,6 +35582,17 @@ person:luong-hong-khanh a foaf:Person,
         wd:Q82955 ;
     schema:nationality country:viet-nam .
 
+person:nguyen-ba-chien-2 a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Bá Chiến"@vi ;
+    foaf:name "Nguyễn Bá Chiến" ;
+    vnedu:honorific "PGS TS" ;
+    vnedu:leads university:hoc-vien-hanh-chinh-va-quan-tri-cong ;
+    schema:honorificPrefix "PGS TS" ;
+    schema:worksFor university:hoc-vien-hanh-chinh-va-quan-tri-cong .
+
 person:nguyen-duc-hanh a foaf:Person,
         vnedu:InstitutionLeader,
         vnedu:Person,
@@ -35755,6 +35775,17 @@ person:nguyen-van-y a foaf:Person,
     vnedu:leads university:hoc-vien-can-bo-thanh-pho-ho-chi-minh ;
     schema:honorificPrefix "PGS TS" ;
     schema:worksFor university:hoc-vien-can-bo-thanh-pho-ho-chi-minh .
+
+person:nguyen-vu-quoc-huy-4 a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Vũ Quốc Huy"@vi ;
+    foaf:name "Nguyễn Vũ Quốc Huy" ;
+    vnedu:honorific "GS TS" ;
+    vnedu:leads university:dai-hoc-hue ;
+    schema:honorificPrefix "GS TS" ;
+    schema:worksFor university:dai-hoc-hue .
 
 person:pham-duc-an a foaf:Person,
         vnedu:Alumnus,
@@ -36835,6 +36866,28 @@ person:hoang-xuan-hiep a foaf:Person,
     vnedu:leads university:truong-dai-hoc-cong-nghiep-va-thuong-mai-ha-noi ;
     schema:worksFor university:truong-dai-hoc-cong-nghiep-va-thuong-mai-ha-noi .
 
+person:huynh-cong-phap-2 a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Huỳnh Công Pháp"@vi ;
+    foaf:name "Huỳnh Công Pháp" ;
+    vnedu:honorific "PGS TS" ;
+    vnedu:leads university:truong-cao-dang-cong-nghe-thong-tin-da-nang ;
+    schema:honorificPrefix "PGS TS" ;
+    schema:worksFor university:truong-cao-dang-cong-nghe-thong-tin-da-nang .
+
+person:huynh-cong-phap-3 a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Huỳnh Công Pháp"@vi ;
+    foaf:name "Huỳnh Công Pháp" ;
+    vnedu:honorific "PGS TS" ;
+    vnedu:leads university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang ;
+    schema:honorificPrefix "PGS TS" ;
+    schema:worksFor university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang .
+
 person:huynh-quyen a foaf:Person,
         vnedu:InstitutionLeader,
         vnedu:Person,
@@ -36995,6 +37048,28 @@ person:le-ngoc-thanh a foaf:Person,
     vnedu:leads university:truong-dai-hoc-y-duoc-dai-hoc-quoc-gia-ha-noi ;
     schema:honorificPrefix "GS TS TTND" ;
     schema:worksFor university:truong-dai-hoc-y-duoc-dai-hoc-quoc-gia-ha-noi .
+
+person:le-thanh-ha-2 a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Lê Thanh Hà"@vi ;
+    foaf:name "Lê Thanh Hà" ;
+    vnedu:honorific "PGS TS" ;
+    vnedu:leads university:truong-dai-hoc-lao-dong-xa-hoi ;
+    schema:honorificPrefix "PGS TS" ;
+    schema:worksFor university:truong-dai-hoc-lao-dong-xa-hoi .
+
+person:le-thanh-ha-3 a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Lê Thanh Hà"@vi ;
+    foaf:name "Lê Thanh Hà" ;
+    vnedu:honorific "PGS TS" ;
+    vnedu:leads university:truong-dai-hoc-van-hoa-the-thao-va-du-lich-thanh-hoa ;
+    schema:honorificPrefix "PGS TS" ;
+    schema:worksFor university:truong-dai-hoc-van-hoa-the-thao-va-du-lich-thanh-hoa .
 
 person:le-thanh-son-2 a foaf:Person,
         vnedu:InstitutionLeader,
@@ -37172,6 +37247,17 @@ person:nguyen-anh-tuan a foaf:Person,
     schema:honorificPrefix "TS" ;
     schema:worksFor university:truong-dai-hoc-dong-do .
 
+person:nguyen-ba-chien-3 a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Bá Chiến"@vi ;
+    foaf:name "Nguyễn Bá Chiến" ;
+    vnedu:honorific "Phó Giáo sư Tiến sĩ" ;
+    vnedu:leads university:truong-dai-hoc-noi-vu-ha-noi ;
+    schema:honorificPrefix "Phó Giáo sư Tiến sĩ" ;
+    schema:worksFor university:truong-dai-hoc-noi-vu-ha-noi .
+
 person:nguyen-ba-hoang a foaf:Person,
         vnedu:InstitutionLeader,
         vnedu:Person,
@@ -37314,6 +37400,28 @@ person:nguyen-huu-tu a foaf:Person,
     vnedu:leads university:truong-dai-hoc-y-ha-noi ;
     schema:honorificPrefix "GS TS" ;
     schema:worksFor university:truong-dai-hoc-y-ha-noi .
+
+person:nguyen-huy-bang-2 a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Huy Bằng"@vi ;
+    foaf:name "Nguyễn Huy Bằng" ;
+    vnedu:honorific "GS TS" ;
+    vnedu:leads university:truong-dai-hoc-su-pham-ky-thuat-nam-dinh ;
+    schema:honorificPrefix "GS TS" ;
+    schema:worksFor university:truong-dai-hoc-su-pham-ky-thuat-nam-dinh .
+
+person:nguyen-huy-bang-3 a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Huy Bằng"@vi ;
+    foaf:name "Nguyễn Huy Bằng" ;
+    vnedu:honorific "GS TS" ;
+    vnedu:leads university:truong-dai-hoc-vinh ;
+    schema:honorificPrefix "GS TS" ;
+    schema:worksFor university:truong-dai-hoc-vinh .
 
 person:nguyen-ke-binh a foaf:Person,
         vnedu:InstitutionLeader,
@@ -37707,6 +37815,28 @@ person:nguyen-van-hieu a foaf:Person,
     schema:honorificPrefix "PGS TS" ;
     schema:worksFor university:truong-khoa-hoc-lien-nganh-va-nghe-thuat-dai-hoc-quoc-gia-ha-noi .
 
+person:nguyen-van-hung-2 a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Văn Hùng"@vi ;
+    foaf:name "Nguyễn Văn Hùng" ;
+    vnedu:honorific "PGS TS" ;
+    vnedu:leads university:truong-dai-hoc-giao-thong-van-tai ;
+    schema:honorificPrefix "PGS TS" ;
+    schema:worksFor university:truong-dai-hoc-giao-thong-van-tai .
+
+person:nguyen-van-hung-3 a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Văn Hùng"@vi ;
+    foaf:name "Nguyễn Văn Hùng" ;
+    vnedu:honorific "PGS TS" ;
+    vnedu:leads university:phan-hieu-truong-dai-hoc-giao-thong-van-tai-tai-thanh-pho-ho-chi-minh ;
+    schema:honorificPrefix "PGS TS" ;
+    schema:worksFor university:phan-hieu-truong-dai-hoc-giao-thong-van-tai-tai-thanh-pho-ho-chi-minh .
+
 person:nguyen-van-khai a foaf:Person,
         vnedu:InstitutionLeader,
         vnedu:Person,
@@ -37805,6 +37935,28 @@ person:nguyen-van-xuan a foaf:Person,
     vnedu:leads university:truong-dai-hoc-xay-dung-mien-tay ;
     schema:honorificPrefix "TS" ;
     schema:worksFor university:truong-dai-hoc-xay-dung-mien-tay .
+
+person:nguyen-vu-quoc-huy-2 a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Vũ Quốc Huy"@vi ;
+    foaf:name "Nguyễn Vũ Quốc Huy" ;
+    vnedu:honorific "GS TS" ;
+    vnedu:leads university:truong-dai-hoc-ngoai-ngu-dai-hoc-hue ;
+    schema:honorificPrefix "GS TS" ;
+    schema:worksFor university:truong-dai-hoc-ngoai-ngu-dai-hoc-hue .
+
+person:nguyen-vu-quoc-huy-3 a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Nguyễn Vũ Quốc Huy"@vi ;
+    foaf:name "Nguyễn Vũ Quốc Huy" ;
+    vnedu:honorific "GS TS" ;
+    vnedu:leads university:truong-dai-hoc-y-duoc-dai-hoc-hue ;
+    schema:honorificPrefix "GS TS" ;
+    schema:worksFor university:truong-dai-hoc-y-duoc-dai-hoc-hue .
 
 person:nguyen-xuan-hoan a foaf:Person,
         vnedu:InstitutionLeader,
@@ -38570,10 +38722,10 @@ Ngày 14 tháng 11 năm 2022, PGS.TS. Phạm Tiết Khánh, Chủ tịch Hội �
     vnedu:numberOfPostgraduates "1543"^^xsd:nonNegativeInteger ;
     vnedu:numberOfStudents "41138"^^xsd:nonNegativeInteger ;
     vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:reportedFoundingDate "2006-06-19"^^xsd:date ;
     vnedu:shortName "TVU" ;
     vnedu:website <http://www.tvu.edu.vn/> ;
     schema:employee person:nguyen-minh-hoa ;
-    schema:foundingDate "2006-06-19"^^xsd:date ;
     schema:location country:viet-nam,
         province:tra-vinh,
         province:vinh-long,
@@ -39016,7 +39168,7 @@ university:phan-hieu-truong-dai-hoc-giao-thong-van-tai-tai-thanh-pho-ho-chi-minh
     dbo:campus "16,3ha" ;
     dbo:formerName "Trường Đại học Giao thông Vận tải cơ sở II"@vi ;
     dbo:foundingYear "1990"^^xsd:gYear ;
-    dbo:rector person:nguyen-van-hung ;
+    dbo:rector person:nguyen-van-hung-3 ;
     owl:sameAs wd:Q10829042 ;
     skos:prefLabel "Phân hiệu Trường Đại học Giao thông Vận tải tại Thành phố Hồ Chí Minh"@vi ;
     prov:wasDerivedFrom wd:Q10829042,
@@ -39028,7 +39180,7 @@ university:phan-hieu-truong-dai-hoc-giao-thong-van-tai-tai-thanh-pho-ho-chi-minh
     vnedu:formerName "Trường Đại học Giao thông Vận tải cơ sở II"@vi ;
     vnedu:foundingYear "1990"^^xsd:gYear ;
     vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
-    vnedu:hasLeader person:nguyen-van-hung ;
+    vnedu:hasLeader person:nguyen-van-hung-3 ;
     vnedu:history """Phần dưới đây là lịch sử hình thành và phát triển của Trường đại học Giao thông Vận tải. Chứ không phải riêng phân hiệu tại TP.HCM.
 
 Trường Đại học Giao thông Vận tải ngày nay có tiền thân là Trường Cao đẳng Công chính trước khi đất nước giành được độc lập 2/9/1945 và được khai giảng lại dưới chính thể Việt Nam Dân chủ Cộng hòa. Ngày 13/4/1946 Chủ tịch Hồ Chí Minh ký sắc lệnh số 50 đổi tên trường Cao đẳng Công chính thành Trường Đại học Công chính; Tháng 12/1946, Trường ngừng công tác giảng dạy và đào tạo học tập để phục vụ kháng chiến; Tháng 10/1947, Trường được tái giảng dạy tại Chùa Viên - Phú Xuyên; Tháng 4/1948, Trường rời địa điểm tới huyện Yên Mô tỉnh Ninh Bình; Ngày 1/2/1949, theo sắc lệnh số 02/SL và theo nghị quyết số 60 ngày 24/2/1949 Trường Đại học Công Chính đổi tên thành Trường Cao đẳng Kỹ thuật; Ngày 1/1/1952 Trường được đổi tên thành Trường Cao đẳng Giao thông Công Chính; Tháng 4/1955, Trường trở về Hà Nội tái xây dựng cơ sở mới tại Cầu Giấy; Tháng 8/1956, Trường được tách ra thành hai trường Trung cấp giao thông và Trung cấp Thủy Lợi - Kiến Trúc; Tháng 8/1960 Bộ Giao thông Vận tải quyết định thành lập ban xây dựng Trường Đại học Giao thông Vận tải; Ngày 24/3/1962 Thủ tướng Phạm Văn Đồng ký quyết định số 42/CP thành lập Trường Đại học Giao thông Vận tải; Tháng 8/1965 Trường đưa toàn bộ lực lượng đi sơ tán tại Mai Sưu - Bắc Giang. Ngày 23/7/1968 Trường đổi tên thành Đại học Giao thông Đường Sắt và Đường Bộ, đồng thời thành lập phân hiệu Đại học Giao thông Đường Thủy ở Hải Phòng; Tháng 9/1969 Trường chuyển từ Mai Sưu về Hà Nội; Tháng 7/1983 Trường được bàn giao từ Bộ Giao thông Vận tải sang Bộ Đại học và Trung học chuyên nghiệp (Bộ GDĐT) quản lý toàn diện; Tháng 11/1985 Trường đổi tên thành tr­ường Đại học Giao thông Vận tải; Tháng 4/1990 Trường chính thức thành lập cơ sở 2 tại quận 9, thành phố Hồ Chí Minh. Tháng 7/2016 Trường được Bộ trưởng Bộ Giáo dục và Đào tạo ký quyết định nâng cấp thành Phân hiệu Trường Đại học Giao thông Vận tải tại Thành phố Hồ Chí Minh.
@@ -39038,10 +39190,10 @@ Ngày truyền thống của trường là 15 tháng 11."""@vi ;
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
-    vnedu:rector person:nguyen-van-hung ;
+    vnedu:rector person:nguyen-van-hung-3 ;
     vnedu:shortName "UTC2" ;
     vnedu:website <http://www.utc2.edu.vn> ;
-    schema:employee person:nguyen-van-hung ;
+    schema:employee person:nguyen-van-hung-3 ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -39347,7 +39499,7 @@ university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-d
     dbo:abstract "Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn (tiếng Anh: Vietnam–Korea University of Information and Communication Technology – VKU) là trường công lập trực thuộc Đại học Đà Nẵng, đào tạo chuyên ngành về công nghệ thông tin, truyền thông và kinh tế số."@vi ;
     dbo:foundingYear "2020"^^xsd:gYear ;
     dbo:motto "Nhân bản - Phụng sự - Khai phóng"@vi ;
-    dbo:rector person:huynh-cong-phap ;
+    dbo:rector person:huynh-cong-phap-3 ;
     owl:sameAs wd:Q16480474,
         <https://ror.org/0561fmp23> ;
     geo:lat 15.991771 ;
@@ -39359,7 +39511,7 @@ university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-d
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng_Vi%E1%BB%87t_%E2%80%93_H%C3%A0n%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng> ;
     vnedu:address "470 Trần Đại Nghĩa, phường Ngũ Hành Sơn" ;
     vnedu:foundingYear "2020"^^xsd:gYear ;
-    vnedu:hasLeader person:huynh-cong-phap ;
+    vnedu:hasLeader person:huynh-cong-phap-3 ;
     vnedu:history """Khoa Công nghệ thông tin và Truyền thông, Đại học Đà Nẵng (tên tiếng Anh: School of Information and Communication Technology - The University of Danang) là một Khoa thành viên của Đại học Đà Nẵng. Khoa được thành lập theo Quyết định số 254/QĐ-ĐHĐN ngày 23 tháng 01 năm 2017 của Giám đốc Đại học Đà Nẵng.
 
 Trường Cao đẳng Công nghệ thông tin Hữu nghị Việt - Hàn (VietHanIT) thuộc Bộ Thông tin và Truyền thông: Trường được thành lập vào năm 2007 từ nguồn tài trợ từ Chính phủ Hàn Quốc. Trường Cao đẳng Công nghệ thông tin thuộc Đại học Đà Nẵng: Trường được thành lập theo quyết định số 5553/QĐ-BGD&ĐT-TCCB của Bộ Giáo dục và Đào tạo, ngày 14 tháng 10 năm 2003 có chức năng đào tạo nguồn nhân lực công nghệ thông tin trình độ cao đẳng, góp phần tích cực vào sự phát triển của nền công nghiệp Công nghệ Thông tin Việt Nam. Thuyên chuyển một số cán bộ từ Trường Đại học Bách khoa Đà Nẵng, Trường Đại học Sư phạm Đà Nẵng, Trường Đại học Sư phạm Kỹ thuật Đà Nẵng,Trường Đại học Kinh tế Đà Nẵng.
@@ -39375,9 +39527,9 @@ Ngày 3 tháng 1 năm 2020, Phó Thủ tướng Vũ Đức Đam ký ban hành Qu
     vnedu:memberOf university:dai-hoc-da-nang ;
     vnedu:motto "Nhân bản - Phụng sự - Khai phóng"@vi ;
     vnedu:ownership vnedu:PublicOwnership ;
-    vnedu:rector person:huynh-cong-phap ;
+    vnedu:rector person:huynh-cong-phap-3 ;
     vnedu:website <https://vku.udn.vn> ;
-    schema:employee person:huynh-cong-phap ;
+    schema:employee person:huynh-cong-phap-3 ;
     schema:foundingDate "2020-01-03"^^xsd:date ;
     schema:location country:viet-nam,
         province:da-nang,
@@ -40629,7 +40781,7 @@ university:truong-dai-hoc-lao-dong-xa-hoi a dbo:University,
         "Trường Đại học Lao động – Xã hội"@vi ;
     dbo:abbreviation "ULSA" ;
     dbo:abstract "Trường Đại học Lao động – Xã hội là trường đại học công lập được thành lập trên cơ sở Trường Cao đẳng Lao động - Xã hội theo Quyết định số 26/2005/QĐ-TTg ngày 31/1/2005 của Thủ tướng Chính phủ chịu sự lãnh đạo và quản lý trực tiếp của Bộ Nội vụ và chịu sự quản lý về chuyên môn của Bộ Giáo dục và Đào tạo. Trụ sở chính của trường được đặt tại số 43 đường Trần Duy Hưng, phường Yên Hoà, thành phố Hà Nội. Năm thành lập trường được chọn là năm 1961. Ngày truyền thống của Trường là ngày 27 tháng 5."@vi ;
-    dbo:chairman person:le-thanh-ha ;
+    dbo:chairman person:le-thanh-ha-2 ;
     dbo:foundingYear "1961"^^xsd:gYear ;
     dbo:motto "Cùng bạn tạo dựng tương lai!"@vi ;
     dbo:rector person:pham-ngoc-thanh ;
@@ -40640,9 +40792,9 @@ university:truong-dai-hoc-lao-dong-xa-hoi a dbo:University,
     foaf:homepage <http://www.ulsa.edu.vn/> ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Lao_%C4%91%E1%BB%99ng_%E2%80%93_X%C3%A3_h%E1%BB%99i> ;
     vnedu:address "•43 đường Trần Duy Hưng, phường Yên Hòa, Thành phố Hà Nội (cơ sở 1)" ;
-    vnedu:councilChair person:le-thanh-ha ;
+    vnedu:councilChair person:le-thanh-ha-2 ;
     vnedu:foundingYear "1961"^^xsd:gYear ;
-    vnedu:hasLeader person:le-thanh-ha,
+    vnedu:hasLeader person:le-thanh-ha-2,
         person:pham-ngoc-thanh ;
     vnedu:history """Trường Đại học Lao động và Xã hội tiền thân là trường Trung học Lao động Tiền lương thuộc Bộ Lao động. Khởi nguồn từ tháng 3/1960, tại Miền Bắc lần đầu tiên hình thành Trường Cán bộ Lao động tại Cầu Diễn, Nam Từ Liêm, Hà Nội. Ngày 30/5/1961, Bộ trưởng Bộ Lao động Nguyễn Văn Tạo chính thức ký Quyết định thành lập Trường Lao động - Tiền lương trực thuộc Bộ Lao động cũng tại địa điểm trên, với nhiệm vụ ban đầu là đào tạo cán bộ lao động tiền lương cho toàn miền bắc .
 
@@ -40663,7 +40815,7 @@ Tháng 12/2006, Bộ trưởng Bộ Lao động, Thương binh và Xã hội đ�
     vnedu:rector person:pham-ngoc-thanh ;
     vnedu:shortName "ULSA" ;
     vnedu:website <http://www.ulsa.edu.vn/> ;
-    schema:employee person:le-thanh-ha,
+    schema:employee person:le-thanh-ha-2,
         person:pham-ngoc-thanh ;
     schema:image <https://upload.wikimedia.org/wikipedia/vi/e/e2/Dai_hoc_LaoDongXaHoi.PNG> ;
     schema:location country:viet-nam,
@@ -40820,7 +40972,7 @@ university:truong-dai-hoc-ngoai-ngu-dai-hoc-hue a dbo:University,
         "Trường Đại học Ngoại ngữ, Đại học Huế"@vi ;
     dbo:abstract "Đại học Ngoại ngữ Huế là một trường đại học trực thuộc hệ thống Đại học Huế, được xếp vào nhóm đại học trọng điểm của quốc gia Việt Nam. Trường được thành lập ngày 13 tháng 7 năm 2004 trên cơ sở sáp nhập các khoa và tổ ngoại ngữ từ 6 trường thành viên của Đại học Huế với bề dày truyền thống gần 50 năm kể từ năm 1957."@vi ;
     dbo:foundingYear "2004"^^xsd:gYear ;
-    dbo:rector person:nguyen-vu-quoc-huy ;
+    dbo:rector person:nguyen-vu-quoc-huy-2 ;
     owl:sameAs dbr:Huế_College_of_Foreign_Languages,
         wd:Q10829097 ;
     geo:lat 16.466806 ;
@@ -40833,14 +40985,14 @@ university:truong-dai-hoc-ngoai-ngu-dai-hoc-hue a dbo:University,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngo%E1%BA%A1i_ng%E1%BB%AF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF> ;
     vnedu:address "57 Nguyễn Khoa Chiêm, phường An Cựu, quận Thuận Hóa" ;
     vnedu:foundingYear "2004"^^xsd:gYear ;
-    vnedu:hasLeader person:nguyen-vu-quoc-huy ;
+    vnedu:hasLeader person:nguyen-vu-quoc-huy-2 ;
     vnedu:locatedIn country:viet-nam,
         province:hue,
         region:trung-bo ;
     vnedu:memberOf university:dai-hoc-hue ;
-    vnedu:rector person:nguyen-vu-quoc-huy ;
+    vnedu:rector person:nguyen-vu-quoc-huy-2 ;
     vnedu:website <http://hucfl.edu.vn/en/> ;
-    schema:employee person:nguyen-vu-quoc-huy ;
+    schema:employee person:nguyen-vu-quoc-huy-2 ;
     schema:foundingDate "2004-07-13"^^xsd:date ;
     schema:location country:viet-nam,
         province:hue,
@@ -40867,7 +41019,7 @@ university:truong-dai-hoc-noi-vu-ha-noi a dbo:University,
     dbo:formerName "Trường Trung học Văn thư Lưu trữ Trung ương"@vi ;
     dbo:foundingYear "1971"^^xsd:gYear ;
     dbo:motto "“Học thật - thi thật để ra đời làm thật”."@vi ;
-    dbo:rector person:nguyen-ba-chien ;
+    dbo:rector person:nguyen-ba-chien-3 ;
     owl:sameAs wd:Q10829107 ;
     skos:altLabel "Nội vụ - HUHA",
         "Đại học Nội vụ" ;
@@ -40881,7 +41033,7 @@ university:truong-dai-hoc-noi-vu-ha-noi a dbo:University,
     vnedu:formerName "Trường Trung học Văn thư Lưu trữ Trung ương"@vi ;
     vnedu:foundingYear "1971"^^xsd:gYear ;
     vnedu:governedBy organization:bo-noi-vu ;
-    vnedu:hasLeader person:nguyen-ba-chien ;
+    vnedu:hasLeader person:nguyen-ba-chien-3 ;
     vnedu:history """Trường Đại học Nội vụ Hà Nội (tiền thân là: Trường Trung học Văn thư Lưu trữ Trung ương) là trường đại học hệ công lập được thành lập năm 1971 trực thuộc Bộ Nội vụ nhưng đến ngày 14 tháng 11 năm 2011 trường mới được đổi tên như ngày nay. Trước đây, trường có tên gọi là Trường Cao đẳng Văn thư Lưu trữ Trung ương. Tiền thân là Trường Trung học văn thư Lưu trữ Trung ương, được thành lập năm 1971 theo Quyết định số 109/BT ngày 18/12/1971 của Bộ trưởng Phủ Thủ tướng. Năm 1996, Trường được đổi tên thành Trường Trung cấp Lưu trữ và Nghiệp vụ Văn phòng. Theo quyết định số 3225/QĐ-BGD&ĐT-TCCT ngày 15 tháng 6 năm 2005 của Bộ trưởng Bộ Giáo dục và Đào tạo được đổi tên trường Trường Cao đẳng Văn thư Lưu trữ Trung ương. Ngày 21/4/2008. Thứ trưởng Thường trực Bộ Giáo dục và Đào tạo đã ký Quyết định số 2275/QĐ-BGDĐT đổi tên Trường Cao đẳng Văn thư Lưu trữ Trung ương thành Trường Cao đẳng Nội vụ Hà Nội đến năm 2011 đổi tên là Trường Đại học Nội vụ Hà Nội. Trường Đại học Nội vụ Hà Nội trước đây trực thuộc Cục Văn thư và Lưu trữ Nhà nước nhưng từ năm 2005 đến nay trực thuộc Bộ Nội vụ, địa chỉ trụ sở chính của nhà trường là số 36, 38 đường Xuân La, phường Xuân La, quận Tây Hồ, thành phố Hà Nội, nước Việt Nam và số 371 đường Nguyễn Hoàng Tôn, phường Xuân Tảo, quận Bắc Từ Liêm, thủ đô Hà Nội, nước Việt Nam. Trường đào tạo các ngành như: Quản trị Nguồn nhân lực, Quản trị Văn phòng, Quản lý Nhà Nước, Chính trị học, Xây dựng Đảng & Chính quyền Nhà Nước, Luật, Lưu trữ học, Quản lý Văn hoá, Hệ thống Thông tin, Thông tin - Thư viện, Ngôn ngữ Anh, Văn hóa học, Kinh tế học, v.v... .Trải qua 45 năm hình thành và phát triển, trường Đại học Nội vụ Hà Nội vẫn duy trì và phát huy truyền thống giảng dạy, đào tạo các ngành nghề trước đây. Đồng thời, trường còn mở thêm một số ngành nghề, lĩnh vực cùng hình thức đào tạo đa dạng. Cơ cấu tổ chức của trường gồm 4 đơn vị trực thuộc (bao gồm 2 Phân hiệu tại tỉnh Quảng Nam và thành phố Hồ Chí Minh); 8 phòng chức năng, 8 khoa, 3 trung tâm.
 
 Từ ngày 15 tháng 09 năm 2022, Chính phủ ban hành Nghị định số 63/2022 quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Nội vụ quyết định trường Đại học Nội vụ Hà Nội sáp nhập vào Học viện Hành chính Quốc gia. Ngày 19 tháng 12 năm 2022, Thủ tướng Chính phủ Việt Nam ban hành Quyết định số 27/2022/QĐ-TTg quy định chức năng, nhiệm vụ quyền hạn và cơ cấu tổ chức của Học viện Hành chính Quốc gia trực thuộc Bộ Nội vụ quyết định sáp nhập Trường Đại học Nội vụ Hà Nội vào Học viện Hành chính Quốc gia."""@vi ;
@@ -40890,11 +41042,11 @@ Từ ngày 15 tháng 09 năm 2022, Chính phủ ban hành Nghị định số 63
         region:bac-bo ;
     vnedu:motto "“Học thật - thi thật để ra đời làm thật”."@vi ;
     vnedu:ownership vnedu:PublicOwnership ;
-    vnedu:rector person:nguyen-ba-chien ;
+    vnedu:rector person:nguyen-ba-chien-3 ;
     vnedu:shortName "HUHA",
         "ĐHNVHN" ;
     vnedu:website <https://huha.edu.vn/> ;
-    schema:employee person:nguyen-ba-chien ;
+    schema:employee person:nguyen-ba-chien-3 ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -41808,10 +41960,10 @@ Tháng 6 năm 2024, VinUni tổ chức lễ tốt nghiệp khóa đầu tiên v�
     vnedu:ownedBy organization:tap-doan-vingroup ;
     vnedu:ownership vnedu:PrivateOwnership ;
     vnedu:rector person:tan-yap-peng ;
+    vnedu:reportedFoundingDate "2019-12-17"^^xsd:date ;
     vnedu:website <http://vinuni.edu.vn/> ;
     schema:employee person:le-mai-lan,
         person:tan-yap-peng ;
-    schema:foundingDate "2019-12-17"^^xsd:date ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -44093,7 +44245,7 @@ wd:Q212238 rdfs:label "civil servant"@en,
     void:dataDump <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-data.ttl>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-links.ttl> ;
-    void:entities 2484 ;
+    void:entities 2491 ;
     void:exampleResource university:dai-hoc-bach-khoa-ha-noi ;
     void:sparqlEndpoint <https://vnedu-lod.onrender.com/sparql> ;
     void:subset <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-dbpedia-closeMatch>,
@@ -44103,7 +44255,7 @@ wd:Q212238 rdfs:label "civil servant"@en,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-closeMatch>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-sameAs>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikipedia-isPrimaryTopicOf> ;
-    void:triples 26577 ;
+    void:triples 26605 ;
     void:uriSpace "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/" ;
     void:vocabulary dbo:,
         geo:,
@@ -44127,19 +44279,6 @@ vnedu:PoliceInstitution a owl:Class ;
             owl:intersectionOf ( vnedu:EducationalOrganization [ a owl:Restriction ;
                         owl:hasValue vnedu:MinistryOfPublicSecurity ;
                         owl:onProperty vnedu:governedBy ] ) ] .
-
-person:nguyen-ba-chien a foaf:Person,
-        vnedu:InstitutionLeader,
-        vnedu:Person,
-        schema:Person ;
-    rdfs:label "Nguyễn Bá Chiến"@vi ;
-    foaf:name "Nguyễn Bá Chiến" ;
-    vnedu:honorific "Phó Giáo sư Tiến sĩ" ;
-    vnedu:leads university:hoc-vien-hanh-chinh-va-quan-tri-cong,
-        university:truong-dai-hoc-noi-vu-ha-noi ;
-    schema:honorificPrefix "Phó Giáo sư Tiến sĩ" ;
-    schema:worksFor university:hoc-vien-hanh-chinh-va-quan-tri-cong,
-        university:truong-dai-hoc-noi-vu-ha-noi .
 
 province:binh-duong a vnedu:AdministrativeUnit,
         vnedu:FormerProvince,
@@ -44369,58 +44508,6 @@ organization:tap-doan-giao-duc-nguyen-hoang a foaf:Organization,
         schema:Corporation,
         schema:Organization ;
     rdfs:label "Tập đoàn Giáo dục Nguyễn Hoàng"@vi .
-
-person:huynh-cong-phap a foaf:Person,
-        vnedu:InstitutionLeader,
-        vnedu:Person,
-        schema:Person ;
-    rdfs:label "Huỳnh Công Pháp"@vi ;
-    foaf:name "Huỳnh Công Pháp" ;
-    vnedu:honorific "PGS TS" ;
-    vnedu:leads university:truong-cao-dang-cong-nghe-thong-tin-da-nang,
-        university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang ;
-    schema:honorificPrefix "PGS TS" ;
-    schema:worksFor university:truong-cao-dang-cong-nghe-thong-tin-da-nang,
-        university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang .
-
-person:le-thanh-ha a foaf:Person,
-        vnedu:InstitutionLeader,
-        vnedu:Person,
-        schema:Person ;
-    rdfs:label "Lê Thanh Hà"@vi ;
-    foaf:name "Lê Thanh Hà" ;
-    vnedu:honorific "PGS TS" ;
-    vnedu:leads university:truong-dai-hoc-lao-dong-xa-hoi,
-        university:truong-dai-hoc-van-hoa-the-thao-va-du-lich-thanh-hoa ;
-    schema:honorificPrefix "PGS TS" ;
-    schema:worksFor university:truong-dai-hoc-lao-dong-xa-hoi,
-        university:truong-dai-hoc-van-hoa-the-thao-va-du-lich-thanh-hoa .
-
-person:nguyen-huy-bang a foaf:Person,
-        vnedu:InstitutionLeader,
-        vnedu:Person,
-        schema:Person ;
-    rdfs:label "Nguyễn Huy Bằng"@vi ;
-    foaf:name "Nguyễn Huy Bằng" ;
-    vnedu:honorific "GS TS" ;
-    vnedu:leads university:truong-dai-hoc-su-pham-ky-thuat-nam-dinh,
-        university:truong-dai-hoc-vinh ;
-    schema:honorificPrefix "GS TS" ;
-    schema:worksFor university:truong-dai-hoc-su-pham-ky-thuat-nam-dinh,
-        university:truong-dai-hoc-vinh .
-
-person:nguyen-van-hung a foaf:Person,
-        vnedu:InstitutionLeader,
-        vnedu:Person,
-        schema:Person ;
-    rdfs:label "Nguyễn Văn Hùng"@vi ;
-    foaf:name "Nguyễn Văn Hùng" ;
-    vnedu:honorific "PGS TS" ;
-    vnedu:leads university:phan-hieu-truong-dai-hoc-giao-thong-van-tai-tai-thanh-pho-ho-chi-minh,
-        university:truong-dai-hoc-giao-thong-van-tai ;
-    schema:honorificPrefix "PGS TS" ;
-    schema:worksFor university:phan-hieu-truong-dai-hoc-giao-thong-van-tai-tai-thanh-pho-ho-chi-minh,
-        university:truong-dai-hoc-giao-thong-van-tai .
 
 university:hoc-vien-mua-viet-nam a foaf:Organization,
         vnedu:Academy,
@@ -45406,7 +45493,7 @@ university:hoc-vien-hanh-chinh-va-quan-tri-cong a foaf:Organization,
         <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0nh_ch%C3%ADnh_v%C3%A0_Qu%E1%BA%A3n_tr%E1%BB%8B_c%C3%B4ng> ;
     vnedu:address "số 77 đường Nguyễn Chí Thanh, phường Láng Thượng, quận Đống Đa, thủ đô Hà Nội, nước Việt Nam" ;
     vnedu:admissionCode "HCH" ;
-    vnedu:director person:nguyen-ba-chien ;
+    vnedu:director person:nguyen-ba-chien-2 ;
     vnedu:formerName "Học viện Hành chính"@vi,
         "Học viện Hành chính Quốc gia"@vi,
         "Trường Hành chính"@vi ;
@@ -45414,7 +45501,7 @@ university:hoc-vien-hanh-chinh-va-quan-tri-cong a foaf:Organization,
     vnedu:hasAlumnus person:lam-van-doan,
         person:tran-dai-quang,
         person:truong-tan-sang ;
-    vnedu:hasLeader person:nguyen-ba-chien ;
+    vnedu:hasLeader person:nguyen-ba-chien-2 ;
     vnedu:history """Học viện Hành chính và Quản trị công tiền thân là Trường Hành chính, được thành lập năm 1959 trực thuộc Bộ Nội vụ, với nhiệm vụ huấn luyện cán bộ chính quyền cấp huyện. Trường đặt tại huyện Từ Sơn, tỉnh Bắc Ninh và khai giảng khóa đầu tiên vào ngày 16 tháng 10 năm 1959.
 
 Năm 1961, trường được đổi tên thành Trường Hành chính Trung ương và chuyển trụ sở về Láng Hạ, Hà Nội. Năm 1980, trường được sáp nhập với Trường Kinh tế Trung ương thành Trường Hành chính – Kinh tế Trung ương; đến năm 1981 được tách trở lại thành Trường Hành chính Trung ương.
@@ -45435,7 +45522,7 @@ Từ năm 2025, Học viện mang tên Học viện Hành chính và Quản tr�
     vnedu:shortName "APAG",
         "HVHC&QTC" ;
     vnedu:website <https://apag.edu.vn> ;
-    schema:employee person:nguyen-ba-chien ;
+    schema:employee person:nguyen-ba-chien-2 ;
     schema:foundingDate "1959-05-29"^^xsd:date ;
     schema:location country:viet-nam,
         province:ha-noi,
@@ -45747,21 +45834,6 @@ vnedu:OfficerSchool a owl:Class ;
     rdfs:label "Officer school"@en,
         "Trường sĩ quan"@vi ;
     rdfs:subClassOf vnedu:HigherEducationInstitution .
-
-person:nguyen-vu-quoc-huy a foaf:Person,
-        vnedu:InstitutionLeader,
-        vnedu:Person,
-        schema:Person ;
-    rdfs:label "Nguyễn Vũ Quốc Huy"@vi ;
-    foaf:name "Nguyễn Vũ Quốc Huy" ;
-    vnedu:honorific "GS TS" ;
-    vnedu:leads university:dai-hoc-hue,
-        university:truong-dai-hoc-ngoai-ngu-dai-hoc-hue,
-        university:truong-dai-hoc-y-duoc-dai-hoc-hue ;
-    schema:honorificPrefix "GS TS" ;
-    schema:worksFor university:dai-hoc-hue,
-        university:truong-dai-hoc-ngoai-ngu-dai-hoc-hue,
-        university:truong-dai-hoc-y-duoc-dai-hoc-hue .
 
 province:hai-duong a vnedu:AdministrativeUnit,
         vnedu:FormerProvince,
@@ -46253,9 +46325,9 @@ Hiện tại, Học viện hiện có 750 cán bộ, viên chức trong đó có
     vnedu:motto "\"Sinh viên Học viện Tài chính phát huy truyền thống, thi đua học tập, sáng tạo, tình nguyện và hội nhập\""@vi ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:predecessor university:truong-dai-hoc-tai-chinh-ke-toan ;
+    vnedu:reportedFoundingDate "2001-08-17"^^xsd:date ;
     vnedu:website <http://hvtc.edu.vn> ;
     schema:email "vanphong@hvtc.edu.vn" ;
-    schema:foundingDate "2001-08-17"^^xsd:date ;
     schema:image <https://upload.wikimedia.org/wikipedia/commons/a/ae/H%E1%BB%8Dc_vi%E1%BB%87n_t%C3%A0i_ch%C3%ADnh.jpg> ;
     schema:location country:viet-nam,
         province:ha-noi,
@@ -46371,9 +46443,9 @@ university:truong-dai-hoc-luat-thanh-pho-ho-chi-minh a dbo:University,
     vnedu:motto "Sáng tri thức - Vững công minh"@vi ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:le-truong-son ;
+    vnedu:reportedFoundingDate "1996-03-30"^^xsd:date ;
     vnedu:website <http://www.hcmulaw.edu.vn/> ;
     schema:employee person:le-truong-son ;
-    schema:foundingDate "1996-03-30"^^xsd:date ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -46877,7 +46949,7 @@ university:truong-dai-hoc-giao-thong-van-tai a dbo:University,
         "Trường Đại học Giao thông Vận tải"@vi ;
     dbo:abstract "Trường Đại học Giao thông Vận tải (tiếng Anh: University of Transport and Communications, tên viết tắt: UTC) là một trường đại học công lập đứng đầu ngành Giao thông vận tải, theo định hướng nghiên cứu, có nhiệm vụ đào tạo các chuyên ngành thuộc lĩnh vực về kỹ thuật và kinh tế trong giao thông vận tải của Việt Nam."@vi ;
     dbo:foundingYear "1902"^^xsd:gYear ;
-    dbo:rector person:nguyen-van-hung ;
+    dbo:rector person:nguyen-van-hung-2 ;
     owl:sameAs dbr:University_of_Transport_and_Communications,
         wd:Q10829041,
         <https://ror.org/006qk6d61> ;
@@ -46898,7 +46970,7 @@ university:truong-dai-hoc-giao-thong-van-tai a dbo:University,
         person:nguyen-viet-oanh,
         person:tan-d-le,
         person:vu-hoai-nam ;
-    vnedu:hasLeader person:nguyen-van-hung ;
+    vnedu:hasLeader person:nguyen-van-hung-2 ;
     vnedu:history """Năm 1902, Trường Cao đẳng Công chính (École Supérieure des Travaux Publics) được thành lập với mục đích đào tạo người bản xứ cho các cơ quan công chính của Liên bang Đông Dương. Sau khi Việt Nam giành được độc lập vào ngày 2 tháng 9 năm 1945, ngày 15 tháng 11 năm 1945, Chủ tịch Hồ Chí Minh ký sắc lệnh khai giảng lại Nhà trường với tên gọi Trường Cao đẳng Công chính Việt Nam. Ngày 15 tháng 11 hàng năm được lấy là ngày Truyền thống của Trường. Tháng 8 năm 1960, Ban Xây dựng Trường Đại học Giao thông vận tải được thành lập và tuyển sinh khóa 1 trình độ Đại học. Ngày 24 tháng 03 năm 1962, trường chính thức mang tên Trường Đại học Giao thông vận tải theo Quyết định số 42/CP ngày 24 tháng 03 năm 1962 của Hội đồng Chính phủ.
 
 Từ năm 1945 đến nay, trải qua nhiều đổi thay Trường đã lần lượt trải qua các cột mốc và mang các tên gọi sau: Ngày 13 tháng 4 năm 1946, Chủ tịch Hồ Chí Minh ký sắc lệnh đổi tên Trường Cao đẳng Công chính Việt Nam thành Trường Đại học Công chính; Tháng 12 năm 1946, Trường ngừng công tác giảng dạy và đào tạo học tập để phục vụ kháng chiến; Tháng 10 năm 1947, Trường được tái giảng dạy tại Chùa Viên, huyện Phú Xuyên, tỉnh Hà Đông (nay là xã Đại Xuyên, thành phố Hà Nội); Tháng 4 năm 1948, Trường rời địa điểm tới huyện Yên Mô, tỉnh Ninh Bình; Ngày 1 tháng 2 năm 1949, theo sắc lệnh số 02/SL và theo nghị quyết số 60 ngày 24 tháng 2 năm 1949, Trường Đại học Công chính đổi tên thành Trường Cao đẳng Kỹ thuật; Ngày 1 tháng 1 năm 1952, Trường được đổi tên thành Trường Cao đẳng Giao thông Công chính; Tháng 4 năm 1955, Trường trở về Hà Nội tái xây dựng cơ sở mới tại Cầu Giấy (ở vị trí mà ngày nay thuộc phường Láng); Tháng 8 năm 1956, Trường được tách ra thành hai trường: Trung cấp Giao thông và Trung cấp Thủy lợi – Kiến trúc; Tháng 8 năm 1960, Bộ Giao thông Vận tải quyết định thành lập ban xây dựng Trường Đại học Giao thông Vận tải; Ngày 24 tháng 3 năm 1962, Thủ tướng Phạm Văn Đồng ký quyết định số 42/CP thành lập Trường Đại học Giao thông Vận tải, Ngày 24 tháng 3 được lấy làm ngày Thành lập Trường; Tháng 8 năm 1965, Trường đưa toàn bộ lực lượng đi sơ tán tại Mai Sưu - Lục Nam - Bắc Giang."""@vi ;
@@ -46906,10 +46978,10 @@ Từ năm 1945 đến nay, trải qua nhiều đổi thay Trường đã lần l
         province:ha-noi,
         region:bac-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
-    vnedu:rector person:nguyen-van-hung ;
+    vnedu:rector person:nguyen-van-hung-2 ;
     vnedu:website <http://en.utc.edu.vn> ;
     schema:email "dhgtvt@utc.edu.vn" ;
-    schema:employee person:nguyen-van-hung ;
+    schema:employee person:nguyen-van-hung-2 ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -48345,10 +48417,10 @@ Công ty TNHH Dịch vụ khoa học và Du lịch Văn khoa
     vnedu:motto "Sáng tạo - Dẫn dắt - Trách nhiệm"@vi ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:ngo-thi-phuong-lan ;
+    vnedu:reportedFoundingDate "1957-11-03"^^xsd:date ;
     vnedu:website <http://www.hcmussh.edu.vn/> ;
     schema:employee person:le-thi-ngoc-diep,
         person:ngo-thi-phuong-lan ;
-    schema:foundingDate "1957-11-03"^^xsd:date ;
     schema:image <https://upload.wikimedia.org/wikipedia/commons/4/45/USSH-VNU.HCM_c%C6%A1_s%E1%BB%9F_%C4%90inh_Ti%C3%AAn_Ho%C3%A0ng.jpg> ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
@@ -49872,7 +49944,7 @@ university:truong-dai-hoc-vinh a dbo:University,
     dbo:foundingYear "1959"^^xsd:gYear ;
     dbo:numberOfPostgraduateStudents "2296"^^xsd:nonNegativeInteger ;
     dbo:numberOfUndergraduateStudents "14066"^^xsd:nonNegativeInteger ;
-    dbo:rector person:nguyen-huy-bang ;
+    dbo:rector person:nguyen-huy-bang-3 ;
     owl:sameAs dbr:Vinh_University,
         wd:Q20984308,
         <https://ror.org/0244cgm12> ;
@@ -49909,7 +49981,7 @@ university:truong-dai-hoc-vinh a dbo:University,
         person:tu-mai-van,
         person:van-chung-mai,
         person:van-duc-nguyen ;
-    vnedu:hasLeader person:nguyen-huy-bang ;
+    vnedu:hasLeader person:nguyen-huy-bang-3 ;
     vnedu:history "Ngày 16 tháng 7 năm 1959, Bộ trưởng Bộ Giáo dục ký Nghị định số 375/NĐ thành lập Phân hiệu Đại học Sư phạm Vinh. Cơ sở đầu tiên của Nhà trường được đóng tại khu vực Nhà dòng (do Giáo hội Công giáo quản lý nhưng sau đó bị nhà nước trưng thu) thuộc thị xã Vinh lúc bấy giờ. Phân hiệu Đại học Sư phạm Vinh đổi tên thành Trường Đại học Sư phạm Vinh theo Quyết định số 637/QĐ ngày 28 tháng 8 năm 1962 của Bộ trưởng Bộ Giáo dục. Ngày 25 tháng 4 năm 2001, Thủ tướng Chính phủ ký Quyết định số 62/2001/QĐ-TTg đổi tên Trường Đại học Sư phạm Vinh thành Trường Đại học Vinh. Vị Hiệu trưởng đầu tiên của nhà trường là Giáo sư Nguyễn Thúc Hào. Đây cũng là người đặt những viên gạch đầu tiên cho sự hình thành và phát triển của Đại học Vinh về sau này. Trường Đại học Vinh là đơn vị hành chính sự nghiệp, trực thuộc Bộ Giáo dục và Đào tạo, có tư cách pháp nhân, có tài khoản, có con dấu và biểu tượng riêng. Quyết định số 62/2001/QĐ-TTg ngày 25/4/2001 của Thủ tướng Chính phủ đã quy định nhiệm vụ của Trường Đại học Vinh là đào tạo giáo viên có trình độ đại học và từng bước mở thêm các ngành đào tạo khác phù hợp với khả năng của Trường và nhu cầu nhân lực của xã hội, nghiên cứu khoa học phục vụ phát triển kinh tế - xã hội. Trường Đại học Vinh là cơ sở đào tạo đại học đa ngành, đa cấp ở khu vực Bắc Trung Bộ, cung cấp nguồn nhân lực chất lượng cao và thích ứng nhanh với thế giới việc làm; là trung tâm nghiên cứu khoa học, ứng dụng và chuyển giao công nghệ, phục vụ sự nghiệp phát triển kinh tế - xã hội của khu vực và cả nước; là trường đại học trọng điểm quốc gia, một số ngành đạt tiêu chuẩn quốc tế. Với phương châm: \"Nuôi dưỡng say mê - Khuyến khích sáng tạo - Tôn trọng khác biệt - Thúc đẩy hợp tác\", trải qua 60 năm xây dựng và phát triển, từ 17 cán bộ giảng dạy và một số cán bộ hành chính đầu tiên, đến nay Trường có 1.046 cán bộ, viên chức (trong đó có 731 cán bộ giảng dạy), 56 giảng viên cao cấp, 04 giáo sư, 59 phó giáo sư, 256 tiến sĩ, 504 thạc sĩ. Chất lượng đội ngũ cán bộ hiện nay của Nhà trường đáp ứng và vượt mức bình quân chung của cả nước. Về cơ sở vật chất, với sự quan tâm đầu tư của Chính phủ, Bộ Giáo dục và Đào tạo và sự giúp đỡ của tỉnh Nghệ An, tỉnh Hà Tĩnh, Trường Đại học Vinh hiện nay có hệ thống cơ sở vật chất hiện đại, cơ bản đáp ứng được yêu cầu của Nhà trường trong thời kỳ hội nhập."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:nghe-an,
@@ -49917,9 +49989,9 @@ university:truong-dai-hoc-vinh a dbo:University,
     vnedu:numberOfPostgraduates "2296"^^xsd:nonNegativeInteger ;
     vnedu:numberOfUndergraduates "14066"^^xsd:nonNegativeInteger ;
     vnedu:ownership vnedu:PublicOwnership ;
-    vnedu:rector person:nguyen-huy-bang ;
+    vnedu:rector person:nguyen-huy-bang-3 ;
     vnedu:website <https://vinhuni.edu.vn/> ;
-    schema:employee person:nguyen-huy-bang ;
+    schema:employee person:nguyen-huy-bang-3 ;
     schema:location country:viet-nam,
         province:nghe-an,
         region:trung-bo ;
@@ -50070,7 +50142,7 @@ university:truong-dai-hoc-y-duoc-dai-hoc-hue a dbo:University,
     dbo:foundingYear "1957"^^xsd:gYear ;
     dbo:numberOfPostgraduateStudents "1324"^^xsd:nonNegativeInteger ;
     dbo:numberOfUndergraduateStudents "4152"^^xsd:nonNegativeInteger ;
-    dbo:rector person:nguyen-vu-quoc-huy ;
+    dbo:rector person:nguyen-vu-quoc-huy-3 ;
     owl:sameAs dbr:Hue_University_of_Medicine_and_Pharmacy,
         wd:Q10829171,
         <https://ror.org/0391j1294> ;
@@ -50104,7 +50176,7 @@ university:truong-dai-hoc-y-duoc-dai-hoc-hue a dbo:University,
         person:van-bang-nguyen,
         person:van-thai-nguyen,
         person:xuan-dung-ho ;
-    vnedu:hasLeader person:nguyen-vu-quoc-huy ;
+    vnedu:hasLeader person:nguyen-vu-quoc-huy-3 ;
     vnedu:history "Trường Đại học Y - Dược, Đại học Huế tiền thân là Khoa Y thuộc Viện đại học Huế, được thành lập ngày 28 tháng 3 năm 1957. Đến năm 1961, Trường được đổi tên thành Trường Đại học Y khoa Huế thuộc Viện Đại học Huế. Năm 1979, Trường Đại học Y khoa Huế và Bệnh viện Trung ương Huế được hợp nhất để trở thành Học viện Y Huế trực thuộc Bộ Y tế. Đến năm 1989, Trường Đại học Y khoa Huế lại được tách ra và trực thuộc Bộ Y tế. Từ năm 1994, Trường Đại học Y khoa Huế trở thành trường đại học thành viên của Đại học Huế, trực thuộc Bộ Giáo dục và Đào tạo theo Nghị định số 30-CP ngày 04 tháng 4 năm 1994 của Chính phủ. Ngày 26 tháng 3 năm 2007, Trường Đại học Y khoa Huế được đổi tên thành Trường Đại học Y - Dược, Đại học Huế theo quyết định số 334/QĐ-TTg của Thủ tướng Chính phủ. Ngày 23 tháng 10 năm 2025, Thủ tướng Chính phủ ký quyết định số 2346/QĐ-TTg về việc sáp nhập Trường Cao đẳng Y tế Huế vào Trường Đại học Y - Dược, Đại học Huế để phát triển theo mô hình Trường - Viện cấp quốc gia hướng đến đạt tiêu chuẩn quốc tế theo tinh thần Nghị quyết số 54-NQ/TW ngày 10 tháng 12 năm 2019 của Bộ Chính trị. Ngày 23/10/2025, Thủ tướng Chính phủ ký Quyết định số 2346/QĐ-TTg về việc sáp nhập Trường Cao đẳng Y tế Huế trực thuộc UBND thành phố Huế vào Trường Đại học Y - Dược, Đại học Huế. Trường Cao đẳng Y tế Huế tiền thân là Trường y tá quốc gia Huế được thành lập theo Nghị số 2008 ngày 12/04/1948 của Khâm sứ Nam Kỳ, Nghị định số 1038 ngày 03/04/1950 của Thủ Hiến Bắc Việt, và Nghị định số 64 ngày 29/12/1951 của Thủ Hiến Trung Việt. Sau ngày Thừa Thiên Huế được giải phóng (26/3/1975), ngành y tế tiếp quản 2 trường Cán sự điều dưỡng Huế và trường Nữ hộ sinh để thành lập trường Cán bộ Y tế Thừa Thiên Huế. Tháng 6/1976 khi hợp nhất 3 tỉnh Bình Trị Thiên, 3 trường Cán bộ Y tế Thừa Thiên Huế, Quảng Bình, Quảng Trị được sáp nhập lại thành Trường Trung học Y tế Bình Trị Thiên. Nhiệm vụ chủ yếu của Trường là đào tạo Y sĩ đa khoa, nữ hộ sinh, y tá điều dưỡng phục vụ trên địa bàn 3 tỉnh Quảng Bình, Quảng Trị, Thừa Thiên Huế. Đến tháng 7/1989, Trường Trung học Y tế Bình Trị Thiên được đổi tên thành Trường Trung học Y tế Thừa Thiên Huế làm nhiệm vụ đào tạo cán bộ y tế trung học cho 3 tỉnh Quảng Bình, Quảng Trị và Thừa Thiên Huế. Đến tháng 11/2005, trường Trung học Y tế Thừa Thiên Huế được nâng cấp thành trường Cao đẳng Y tế Huế trực thuộc UBND tỉnh Thừa Thiên Huế theo Quyết định số 6284/QĐ-BGD&ĐT của Bộ Giáo dục và Đào tạo."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:hue,
@@ -50112,9 +50184,9 @@ university:truong-dai-hoc-y-duoc-dai-hoc-hue a dbo:University,
     vnedu:memberOf university:dai-hoc-hue ;
     vnedu:numberOfPostgraduates "1324"^^xsd:nonNegativeInteger ;
     vnedu:numberOfUndergraduates "4152"^^xsd:nonNegativeInteger ;
-    vnedu:rector person:nguyen-vu-quoc-huy ;
+    vnedu:rector person:nguyen-vu-quoc-huy-3 ;
     vnedu:website <http://www.huemed-univ.edu.vn> ;
-    schema:employee person:nguyen-vu-quoc-huy ;
+    schema:employee person:nguyen-vu-quoc-huy-3 ;
     schema:location country:viet-nam,
         province:hue,
         region:trung-bo ;
@@ -50676,7 +50748,7 @@ university:dai-hoc-hue a dbo:University,
         <https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF> ;
     vnedu:address "{" ;
     vnedu:campus "1.171.039 m² (tương đương hơn 117 ha)" ;
-    vnedu:director person:nguyen-vu-quoc-huy ;
+    vnedu:director person:nguyen-vu-quoc-huy-4 ;
     vnedu:foundingYear "1957"^^xsd:gYear ;
     vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
     vnedu:hasAlumnus person:dan-nguyen,
@@ -50703,7 +50775,7 @@ university:dai-hoc-hue a dbo:University,
         person:van-thang-vo,
         person:van-trung-hoang,
         person:vui-tran ;
-    vnedu:hasLeader person:nguyen-vu-quoc-huy ;
+    vnedu:hasLeader person:nguyen-vu-quoc-huy-4 ;
     vnedu:hasMember university:truong-dai-hoc-khoa-hoc-dai-hoc-hue,
         university:truong-dai-hoc-kinh-te-dai-hoc-hue,
         university:truong-dai-hoc-luat-dai-hoc-hue,
@@ -50730,7 +50802,7 @@ Sau 18 năm hoạt động, để phù hợp với tình hình và điều kiệ
     vnedu:numberOfStudents "50357"^^xsd:nonNegativeInteger ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:website <http://www.hueuni.edu.vn/> ;
-    schema:employee person:nguyen-vu-quoc-huy ;
+    schema:employee person:nguyen-vu-quoc-huy-4 ;
     schema:image <https://upload.wikimedia.org/wikipedia/commons/7/72/Hu%E1%BA%BF_University.jpg> ;
     schema:location country:viet-nam,
         province:hue,

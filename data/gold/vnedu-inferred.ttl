@@ -12422,6 +12422,13 @@ person:ngoc-uyen-nhi-nguyen a foaf:Person,
     schema:alumniOf university:truong-dai-hoc-bach-khoa-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh,
         university:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh .
 
+person:nguyen-ba-chien-2 a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:hoc-vien-hanh-chinh-va-quan-tri-cong ;
+    schema:honorificPrefix "PGS TS" ;
+    schema:worksFor university:hoc-vien-hanh-chinh-va-quan-tri-cong .
+
 person:nguyen-cong-hoang a foaf:Person,
         vnedu:Alumnus,
         schema:Person ;
@@ -12871,6 +12878,13 @@ person:nguyen-viet-oanh a foaf:Person,
         university:truong-dai-hoc-giao-thong-van-tai ;
     schema:birthDate "1980-07-26"^^xsd:date ;
     schema:birthPlace wd:Q3269854 .
+
+person:nguyen-vu-quoc-huy-4 a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:dai-hoc-hue ;
+    schema:honorificPrefix "GS TS" ;
+    schema:worksFor university:dai-hoc-hue .
 
 person:nguyen-xinh-xo a foaf:Person,
         vnedu:Alumnus,
@@ -13727,12 +13741,12 @@ university:truong-cao-dang-cong-nghe-thong-tin-da-nang a foaf:Organization,
     dbo:facultySize "100"^^xsd:nonNegativeInteger ;
     dbo:foundingYear "2003"^^xsd:gYear ;
     dbo:numberOfStudents "3000"^^xsd:nonNegativeInteger ;
-    dbo:rector person:huynh-cong-phap ;
+    dbo:rector person:huynh-cong-phap-2 ;
     foaf:homepage <http://www.cit.udn.vn> ;
-    vnedu:hasLeader person:huynh-cong-phap ;
+    vnedu:hasLeader person:huynh-cong-phap-2 ;
     vnedu:locatedIn country:viet-nam,
         region:trung-bo ;
-    schema:employee person:huynh-cong-phap ;
+    schema:employee person:huynh-cong-phap-2 ;
     schema:location country:viet-nam,
         province:da-nang,
         region:trung-bo .
@@ -14424,12 +14438,12 @@ university:truong-dai-hoc-su-pham-ky-thuat-nam-dinh a dbo:University,
         schema:EducationalOrganization,
         schema:Organization ;
     dbo:foundingYear "1966"^^xsd:gYear ;
-    dbo:rector person:nguyen-huy-bang ;
+    dbo:rector person:nguyen-huy-bang-2 ;
     foaf:homepage <http://www.nute.edu.vn> ;
-    vnedu:hasLeader person:nguyen-huy-bang ;
+    vnedu:hasLeader person:nguyen-huy-bang-2 ;
     vnedu:locatedIn country:viet-nam,
         region:bac-bo ;
-    schema:employee person:nguyen-huy-bang ;
+    schema:employee person:nguyen-huy-bang-2 ;
     schema:location country:viet-nam,
         province:ninh-binh,
         region:bac-bo .
@@ -14594,12 +14608,12 @@ university:truong-dai-hoc-van-hoa-the-thao-va-du-lich-thanh-hoa a dbo:University
         schema:EducationalOrganization,
         schema:Organization ;
     dbo:foundingYear "1967"^^xsd:gYear ;
-    dbo:rector person:le-thanh-ha ;
+    dbo:rector person:le-thanh-ha-3 ;
     foaf:homepage <https://tucst.edu.vn> ;
-    vnedu:hasLeader person:le-thanh-ha ;
+    vnedu:hasLeader person:le-thanh-ha-3 ;
     vnedu:locatedIn country:viet-nam,
         region:trung-bo ;
-    schema:employee person:le-thanh-ha ;
+    schema:employee person:le-thanh-ha-3 ;
     schema:location country:viet-nam,
         province:thanh-hoa,
         region:trung-bo .
@@ -15125,6 +15139,20 @@ person:hong-t-pham a foaf:Person,
         university:dai-hoc-quoc-gia-ha-noi,
         university:truong-dai-hoc-thuy-loi .
 
+person:huynh-cong-phap-2 a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-cao-dang-cong-nghe-thong-tin-da-nang ;
+    schema:honorificPrefix "PGS TS" ;
+    schema:worksFor university:truong-cao-dang-cong-nghe-thong-tin-da-nang .
+
+person:huynh-cong-phap-3 a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang ;
+    schema:honorificPrefix "PGS TS" ;
+    schema:worksFor university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang .
+
 person:huynh-quyen a foaf:Person,
         vnedu:InstitutionLeader,
         schema:Person ;
@@ -15240,6 +15268,20 @@ person:le-quoc-minh a foaf:Person,
         university:truong-dai-hoc-ngoai-ngu-dai-hoc-quoc-gia-ha-noi ;
     schema:birthPlace wd:Q1858 ;
     schema:nationality country:viet-nam .
+
+person:le-thanh-ha-2 a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-lao-dong-xa-hoi ;
+    schema:honorificPrefix "PGS TS" ;
+    schema:worksFor university:truong-dai-hoc-lao-dong-xa-hoi .
+
+person:le-thanh-ha-3 a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-van-hoa-the-thao-va-du-lich-thanh-hoa ;
+    schema:honorificPrefix "PGS TS" ;
+    schema:worksFor university:truong-dai-hoc-van-hoa-the-thao-va-du-lich-thanh-hoa .
 
 person:le-thanh-son-2 a foaf:Person,
         vnedu:InstitutionLeader,
@@ -15396,6 +15438,13 @@ person:nguyen-anh-tuan a foaf:Person,
     schema:honorificPrefix "TS" ;
     schema:worksFor university:truong-dai-hoc-dong-do .
 
+person:nguyen-ba-chien-3 a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-noi-vu-ha-noi ;
+    schema:honorificPrefix "Phó Giáo sư Tiến sĩ" ;
+    schema:worksFor university:truong-dai-hoc-noi-vu-ha-noi .
+
 person:nguyen-ba-hoang a foaf:Person,
         vnedu:InstitutionLeader,
         schema:Person ;
@@ -15486,6 +15535,20 @@ person:nguyen-huu-tu a foaf:Person,
     vnedu:leads university:truong-dai-hoc-y-ha-noi ;
     schema:honorificPrefix "GS TS" ;
     schema:worksFor university:truong-dai-hoc-y-ha-noi .
+
+person:nguyen-huy-bang-2 a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-su-pham-ky-thuat-nam-dinh ;
+    schema:honorificPrefix "GS TS" ;
+    schema:worksFor university:truong-dai-hoc-su-pham-ky-thuat-nam-dinh .
+
+person:nguyen-huy-bang-3 a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-vinh ;
+    schema:honorificPrefix "GS TS" ;
+    schema:worksFor university:truong-dai-hoc-vinh .
 
 person:nguyen-ke-binh a foaf:Person,
         vnedu:InstitutionLeader,
@@ -15726,6 +15789,20 @@ person:nguyen-van-hieu a foaf:Person,
     schema:honorificPrefix "PGS TS" ;
     schema:worksFor university:truong-khoa-hoc-lien-nganh-va-nghe-thuat-dai-hoc-quoc-gia-ha-noi .
 
+person:nguyen-van-hung-2 a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-giao-thong-van-tai ;
+    schema:honorificPrefix "PGS TS" ;
+    schema:worksFor university:truong-dai-hoc-giao-thong-van-tai .
+
+person:nguyen-van-hung-3 a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:phan-hieu-truong-dai-hoc-giao-thong-van-tai-tai-thanh-pho-ho-chi-minh ;
+    schema:honorificPrefix "PGS TS" ;
+    schema:worksFor university:phan-hieu-truong-dai-hoc-giao-thong-van-tai-tai-thanh-pho-ho-chi-minh .
+
 person:nguyen-van-khai a foaf:Person,
         vnedu:InstitutionLeader,
         schema:Person ;
@@ -15788,6 +15865,20 @@ person:nguyen-van-xuan a foaf:Person,
     vnedu:leads university:truong-dai-hoc-xay-dung-mien-tay ;
     schema:honorificPrefix "TS" ;
     schema:worksFor university:truong-dai-hoc-xay-dung-mien-tay .
+
+person:nguyen-vu-quoc-huy-2 a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-ngoai-ngu-dai-hoc-hue ;
+    schema:honorificPrefix "GS TS" ;
+    schema:worksFor university:truong-dai-hoc-ngoai-ngu-dai-hoc-hue .
+
+person:nguyen-vu-quoc-huy-3 a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-y-duoc-dai-hoc-hue ;
+    schema:honorificPrefix "GS TS" ;
+    schema:worksFor university:truong-dai-hoc-y-duoc-dai-hoc-hue .
 
 person:nguyen-xuan-hoan a foaf:Person,
         vnedu:InstitutionLeader,
@@ -16905,12 +16996,12 @@ university:phan-hieu-truong-dai-hoc-giao-thong-van-tai-tai-thanh-pho-ho-chi-minh
     dbo:campus "16,3ha" ;
     dbo:formerName "Trường Đại học Giao thông Vận tải cơ sở II"@vi ;
     dbo:foundingYear "1990"^^xsd:gYear ;
-    dbo:rector person:nguyen-van-hung ;
+    dbo:rector person:nguyen-van-hung-3 ;
     foaf:homepage <http://www.utc2.edu.vn> ;
-    vnedu:hasLeader person:nguyen-van-hung ;
+    vnedu:hasLeader person:nguyen-van-hung-3 ;
     vnedu:locatedIn country:viet-nam,
         region:nam-bo ;
-    schema:employee person:nguyen-van-hung ;
+    schema:employee person:nguyen-van-hung-3 ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -17026,12 +17117,12 @@ university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-d
         schema:Organization ;
     dbo:foundingYear "2020"^^xsd:gYear ;
     dbo:motto "Nhân bản - Phụng sự - Khai phóng"@vi ;
-    dbo:rector person:huynh-cong-phap ;
+    dbo:rector person:huynh-cong-phap-3 ;
     foaf:homepage <https://vku.udn.vn> ;
-    vnedu:hasLeader person:huynh-cong-phap ;
+    vnedu:hasLeader person:huynh-cong-phap-3 ;
     vnedu:locatedIn country:viet-nam,
         region:trung-bo ;
-    schema:employee person:huynh-cong-phap ;
+    schema:employee person:huynh-cong-phap-3 ;
     schema:location country:viet-nam,
         province:da-nang,
         region:trung-bo ;
@@ -17523,16 +17614,16 @@ university:truong-dai-hoc-lao-dong-xa-hoi a dbo:University,
         schema:EducationalOrganization,
         schema:Organization ;
     dbo:abbreviation "ULSA" ;
-    dbo:chairman person:le-thanh-ha ;
+    dbo:chairman person:le-thanh-ha-2 ;
     dbo:foundingYear "1961"^^xsd:gYear ;
     dbo:motto "Cùng bạn tạo dựng tương lai!"@vi ;
     dbo:rector person:pham-ngoc-thanh ;
     foaf:homepage <http://www.ulsa.edu.vn/> ;
-    vnedu:hasLeader person:le-thanh-ha,
+    vnedu:hasLeader person:le-thanh-ha-2,
         person:pham-ngoc-thanh ;
     vnedu:locatedIn country:viet-nam,
         region:bac-bo ;
-    schema:employee person:le-thanh-ha,
+    schema:employee person:le-thanh-ha-2,
         person:pham-ngoc-thanh ;
     schema:location country:viet-nam,
         province:ha-noi,
@@ -17615,12 +17706,12 @@ university:truong-dai-hoc-ngoai-ngu-dai-hoc-hue a dbo:University,
         schema:EducationalOrganization,
         schema:Organization ;
     dbo:foundingYear "2004"^^xsd:gYear ;
-    dbo:rector person:nguyen-vu-quoc-huy ;
+    dbo:rector person:nguyen-vu-quoc-huy-2 ;
     foaf:homepage <http://hucfl.edu.vn/en/> ;
-    vnedu:hasLeader person:nguyen-vu-quoc-huy ;
+    vnedu:hasLeader person:nguyen-vu-quoc-huy-2 ;
     vnedu:locatedIn country:viet-nam,
         region:trung-bo ;
-    schema:employee person:nguyen-vu-quoc-huy ;
+    schema:employee person:nguyen-vu-quoc-huy-2 ;
     schema:location country:viet-nam,
         province:hue,
         region:trung-bo ;
@@ -17640,13 +17731,13 @@ university:truong-dai-hoc-noi-vu-ha-noi a dbo:University,
     dbo:formerName "Trường Trung học Văn thư Lưu trữ Trung ương"@vi ;
     dbo:foundingYear "1971"^^xsd:gYear ;
     dbo:motto "“Học thật - thi thật để ra đời làm thật”."@vi ;
-    dbo:rector person:nguyen-ba-chien ;
+    dbo:rector person:nguyen-ba-chien-3 ;
     skos:notation "DNV" ;
     foaf:homepage <https://huha.edu.vn/> ;
-    vnedu:hasLeader person:nguyen-ba-chien ;
+    vnedu:hasLeader person:nguyen-ba-chien-3 ;
     vnedu:locatedIn country:viet-nam,
         region:bac-bo ;
-    schema:employee person:nguyen-ba-chien ;
+    schema:employee person:nguyen-ba-chien-3 ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -18257,15 +18348,6 @@ person:dang-van-lam a foaf:Person,
     schema:birthPlace wd:Q10842355 ;
     schema:nationality country:viet-nam .
 
-person:nguyen-ba-chien a foaf:Person,
-        vnedu:InstitutionLeader,
-        schema:Person ;
-    vnedu:leads university:hoc-vien-hanh-chinh-va-quan-tri-cong,
-        university:truong-dai-hoc-noi-vu-ha-noi ;
-    schema:honorificPrefix "Phó Giáo sư Tiến sĩ" ;
-    schema:worksFor university:hoc-vien-hanh-chinh-va-quan-tri-cong,
-        university:truong-dai-hoc-noi-vu-ha-noi .
-
 province:ha-tinh a vnedu:AdministrativeUnit,
         schema:AdministrativeArea ;
     dbo:populationTotal "1329800"^^xsd:nonNegativeInteger ;
@@ -18630,42 +18712,6 @@ organization:bo-tai-chinh a foaf:Organization,
         university:truong-dai-hoc-tai-chinh-ke-toan,
         university:truong-dai-hoc-tai-chinh-marketing,
         university:truong-dai-hoc-tai-chinh-quan-tri-kinh-doanh .
-
-person:huynh-cong-phap a foaf:Person,
-        vnedu:InstitutionLeader,
-        schema:Person ;
-    vnedu:leads university:truong-cao-dang-cong-nghe-thong-tin-da-nang,
-        university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang ;
-    schema:honorificPrefix "PGS TS" ;
-    schema:worksFor university:truong-cao-dang-cong-nghe-thong-tin-da-nang,
-        university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang .
-
-person:le-thanh-ha a foaf:Person,
-        vnedu:InstitutionLeader,
-        schema:Person ;
-    vnedu:leads university:truong-dai-hoc-lao-dong-xa-hoi,
-        university:truong-dai-hoc-van-hoa-the-thao-va-du-lich-thanh-hoa ;
-    schema:honorificPrefix "PGS TS" ;
-    schema:worksFor university:truong-dai-hoc-lao-dong-xa-hoi,
-        university:truong-dai-hoc-van-hoa-the-thao-va-du-lich-thanh-hoa .
-
-person:nguyen-huy-bang a foaf:Person,
-        vnedu:InstitutionLeader,
-        schema:Person ;
-    vnedu:leads university:truong-dai-hoc-su-pham-ky-thuat-nam-dinh,
-        university:truong-dai-hoc-vinh ;
-    schema:honorificPrefix "GS TS" ;
-    schema:worksFor university:truong-dai-hoc-su-pham-ky-thuat-nam-dinh,
-        university:truong-dai-hoc-vinh .
-
-person:nguyen-van-hung a foaf:Person,
-        vnedu:InstitutionLeader,
-        schema:Person ;
-    vnedu:leads university:phan-hieu-truong-dai-hoc-giao-thong-van-tai-tai-thanh-pho-ho-chi-minh,
-        university:truong-dai-hoc-giao-thong-van-tai ;
-    schema:honorificPrefix "PGS TS" ;
-    schema:worksFor university:phan-hieu-truong-dai-hoc-giao-thong-van-tai-tai-thanh-pho-ho-chi-minh,
-        university:truong-dai-hoc-giao-thong-van-tai .
 
 province:quang-ninh a vnedu:AdministrativeUnit,
         vnedu:Province,
@@ -19193,10 +19239,10 @@ university:hoc-vien-hanh-chinh-va-quan-tri-cong a foaf:Organization,
     vnedu:hasAlumnus person:lam-van-doan,
         person:tran-dai-quang,
         person:truong-tan-sang ;
-    vnedu:hasLeader person:nguyen-ba-chien ;
+    vnedu:hasLeader person:nguyen-ba-chien-2 ;
     vnedu:locatedIn country:viet-nam,
         region:bac-bo ;
-    schema:employee person:nguyen-ba-chien ;
+    schema:employee person:nguyen-ba-chien-2 ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -19384,17 +19430,6 @@ organization:bo-y-te a foaf:Organization,
         university:truong-dai-hoc-y-duoc-ha-noi,
         university:truong-dai-hoc-y-duoc-thai-binh,
         university:truong-dai-hoc-y-ha-noi .
-
-person:nguyen-vu-quoc-huy a foaf:Person,
-        vnedu:InstitutionLeader,
-        schema:Person ;
-    vnedu:leads university:dai-hoc-hue,
-        university:truong-dai-hoc-ngoai-ngu-dai-hoc-hue,
-        university:truong-dai-hoc-y-duoc-dai-hoc-hue ;
-    schema:honorificPrefix "GS TS" ;
-    schema:worksFor university:dai-hoc-hue,
-        university:truong-dai-hoc-ngoai-ngu-dai-hoc-hue,
-        university:truong-dai-hoc-y-duoc-dai-hoc-hue .
 
 province:an-giang a vnedu:AdministrativeUnit,
         schema:AdministrativeArea ;
@@ -19786,7 +19821,7 @@ university:truong-dai-hoc-giao-thong-van-tai a dbo:University,
         schema:EducationalOrganization,
         schema:Organization ;
     dbo:foundingYear "1902"^^xsd:gYear ;
-    dbo:rector person:nguyen-van-hung ;
+    dbo:rector person:nguyen-van-hung-2 ;
     foaf:homepage <http://en.utc.edu.vn> ;
     vnedu:hasAlumnus person:binh-thai-pham,
         person:le-chung-tran,
@@ -19794,10 +19829,10 @@ university:truong-dai-hoc-giao-thong-van-tai a dbo:University,
         person:nguyen-viet-oanh,
         person:tan-d-le,
         person:vu-hoai-nam ;
-    vnedu:hasLeader person:nguyen-van-hung ;
+    vnedu:hasLeader person:nguyen-van-hung-2 ;
     vnedu:locatedIn country:viet-nam,
         region:bac-bo ;
-    schema:employee person:nguyen-van-hung ;
+    schema:employee person:nguyen-van-hung-2 ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -21133,7 +21168,7 @@ university:truong-dai-hoc-vinh a dbo:University,
     dbo:foundingYear "1959"^^xsd:gYear ;
     dbo:numberOfPostgraduateStudents "2296"^^xsd:nonNegativeInteger ;
     dbo:numberOfUndergraduateStudents "14066"^^xsd:nonNegativeInteger ;
-    dbo:rector person:nguyen-huy-bang ;
+    dbo:rector person:nguyen-huy-bang-3 ;
     foaf:homepage <https://vinhuni.edu.vn/> ;
     vnedu:hasAlumnus person:hien-d-t-nguyen,
         person:hoang-trung-dung,
@@ -21154,10 +21189,10 @@ university:truong-dai-hoc-vinh a dbo:University,
         person:tu-mai-van,
         person:van-chung-mai,
         person:van-duc-nguyen ;
-    vnedu:hasLeader person:nguyen-huy-bang ;
+    vnedu:hasLeader person:nguyen-huy-bang-3 ;
     vnedu:locatedIn country:viet-nam,
         region:trung-bo ;
-    schema:employee person:nguyen-huy-bang ;
+    schema:employee person:nguyen-huy-bang-3 ;
     schema:location country:viet-nam,
         province:nghe-an,
         region:trung-bo ;
@@ -21261,7 +21296,7 @@ university:truong-dai-hoc-y-duoc-dai-hoc-hue a dbo:University,
     dbo:foundingYear "1957"^^xsd:gYear ;
     dbo:numberOfPostgraduateStudents "1324"^^xsd:nonNegativeInteger ;
     dbo:numberOfUndergraduateStudents "4152"^^xsd:nonNegativeInteger ;
-    dbo:rector person:nguyen-vu-quoc-huy ;
+    dbo:rector person:nguyen-vu-quoc-huy-3 ;
     foaf:homepage <http://www.huemed-univ.edu.vn> ;
     vnedu:hasAlumnus person:bao-yen-luong-thanh,
         person:dinh-duong-le,
@@ -21284,10 +21319,10 @@ university:truong-dai-hoc-y-duoc-dai-hoc-hue a dbo:University,
         person:van-bang-nguyen,
         person:van-thai-nguyen,
         person:xuan-dung-ho ;
-    vnedu:hasLeader person:nguyen-vu-quoc-huy ;
+    vnedu:hasLeader person:nguyen-vu-quoc-huy-3 ;
     vnedu:locatedIn country:viet-nam,
         region:trung-bo ;
-    schema:employee person:nguyen-vu-quoc-huy ;
+    schema:employee person:nguyen-vu-quoc-huy-3 ;
     schema:location country:viet-nam,
         province:hue,
         region:trung-bo ;
@@ -21512,7 +21547,7 @@ university:dai-hoc-hue a dbo:University,
         person:van-thang-vo,
         person:van-trung-hoang,
         person:vui-tran ;
-    vnedu:hasLeader person:nguyen-vu-quoc-huy ;
+    vnedu:hasLeader person:nguyen-vu-quoc-huy-4 ;
     vnedu:hasMember university:truong-dai-hoc-khoa-hoc-dai-hoc-hue,
         university:truong-dai-hoc-kinh-te-dai-hoc-hue,
         university:truong-dai-hoc-luat-dai-hoc-hue,
@@ -21523,7 +21558,7 @@ university:dai-hoc-hue a dbo:University,
         university:truong-dai-hoc-y-duoc-dai-hoc-hue ;
     vnedu:locatedIn country:viet-nam,
         region:trung-bo ;
-    schema:employee person:nguyen-vu-quoc-huy ;
+    schema:employee person:nguyen-vu-quoc-huy-4 ;
     schema:location country:viet-nam,
         province:hue,
         region:trung-bo ;

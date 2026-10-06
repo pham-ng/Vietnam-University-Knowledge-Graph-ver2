@@ -1,4 +1,19 @@
-# Báo cáo cuối kỳ (LaTeX, tiếng Việt)
+# Reports: audited English edition and Vietnamese archive
+
+The current technical report is **[main-en.pdf](main-en.pdf)**, with editable source
+`main-en.tex`. It supersedes the earlier report's unsupported claims of independent 100% link accuracy,
+complete provenance, certified OWL 2 RL conformance, byte-identical reproduction and comprehensive security.
+It documents the implementation, measured release, audit findings and unresolved limitations.
+
+From the project root, run `python audit/release_metrics.py` after validating the data;
+then run `latexmk -lualatex -interaction=nonstopmode -halt-on-error main-en.tex` in this directory.
+Counts come from `tables/audit-metrics.tex` and `data/reports/audit-metrics.json`.
+The report uses the existing TeX Live fonts (Libertinus and Noto Sans Mono).
+
+The original Vietnamese source and PDF below are archival. Their measurements and empirical
+claims must not be cited as results of the corrected implementation.
+
+## Vietnamese archive
 
 - **PDF:** [VN-Edu-LOD-Bao-cao-cuoi-ky.pdf](VN-Edu-LOD-Bao-cao-cuoi-ky.pdf) (40 trang)
 - Nguồn: `main.tex`, `references.bib`; hình trong `figures/` (3 hình ontology theo mô-đun `figures/ont_*.tex` vẽ bằng TikZ, quy ước chung trong `figures/ontostyle.tex`);

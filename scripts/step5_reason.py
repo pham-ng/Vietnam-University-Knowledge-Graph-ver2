@@ -8,6 +8,7 @@
   4. Gộp ontology + dữ liệu + liên kết + suy luận + VoID                  -> data/gold/vnedu-all.ttl
 """
 import csv
+import json
 import sys
 import time
 from collections import Counter
@@ -21,7 +22,7 @@ from rdflib.namespace import OWL, RDF, RDFS, SH
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config  # noqa: E402
-from common import bind_prefixes, load_ontology, record_manifest  # noqa: E402
+from common import bind_prefixes, load_ontology, record_manifest, release_hashes  # noqa: E402
 
 INFERRED_TTL = config.RDF_DIR / "vnedu-inferred.ttl"
 SHAPES = config.ROOT / "shapes" / "vnedu-shapes.ttl"
@@ -79,10 +80,36 @@ def instance_level(closure: Graph, base: Graph) -> Graph:
 
 def consistency(closure: Graph) -> list[tuple]:
     problems = []
+    from owlrl.Closure import ERRNS
+    for message in sorted(set(closure.objects(None, ERRNS.error)), key=str):
+        problems.append(("owlrl error", str(message), "", ""))
     for name, q in CONSISTENCY_QUERIES.items():
         for row in closure.query(q, initNs={"owl": OWL, "rdf": RDF}):
             problems.append((name, *[str(x) for x in row]))
     return problems
+
+
+def asserted_constraints(data: Graph, ontology: Graph):
+    """Validate literal ranges and cardinality before equality inference merges values."""
+    shapes = Graph()
+    for prop in set(ontology.subjects(RDF.type, OWL.DatatypeProperty)) | set(ontology.subjects(RDF.type, OWL.FunctionalProperty)):
+        shape, constraint = BNode(), BNode()
+        shapes.add((shape, RDF.type, SH.NodeShape))
+        shapes.add((shape, SH.targetSubjectsOf, prop))
+        shapes.add((shape, SH.property, constraint))
+        shapes.add((constraint, SH.path, prop))
+        if (prop, RDF.type, OWL.FunctionalProperty) in ontology:
+            shapes.add((constraint, SH.maxCount, Literal(1)))
+        if (prop, RDF.type, OWL.DatatypeProperty) in ontology:
+            for datatype in ontology.objects(prop, RDFS.range):
+                if datatype != RDFS.Literal:
+                    shapes.add((constraint, SH.datatype, datatype))
+    return validate(data, shacl_graph=shapes, inference="none")
+
+
+def require_quality(problems, conforms):
+    if problems or not conforms:
+        raise SystemExit("Quality gate failed; validated GOLD outputs were not replaced. See data/reports/.")
 
 
 def shacl(data: Graph):
@@ -109,8 +136,6 @@ def main() -> None:
     t0 = time.time()
     closure = reason(base)
     inferred = instance_level(closure, base)
-    inferred.serialize(INFERRED_TTL, format="turtle", encoding="utf-8")
-    record_manifest("gold", INFERRED_TTL, len(inferred), "triples", reasoner="owlrl OWL 2 RL")
     print(f"  bao đóng {len(closure)} triple sau {time.time() - t0:.0f}s; "
           f"{len(inferred)} triple mới về cá thể -> {INFERRED_TTL.relative_to(config.ROOT)}")
     by_pred = Counter(inferred.namespace_manager.normalizeUri(p) for _, p, _ in inferred)
@@ -133,6 +158,9 @@ def main() -> None:
     print("[3/4] Kiểm định SHACL ...")
     asserted_and_inferred = data + inferred + onto
     conforms, report, rows = shacl(asserted_and_inferred)
+    raw_conforms, raw_report, _ = asserted_constraints(data, onto)
+    (REPORTS / "asserted-shacl-report.ttl").write_text(raw_report.serialize(format="turtle").rstrip() + "\n", encoding="utf-8")
+    conforms = conforms and raw_conforms
     report.serialize(REPORTS / "shacl-report.ttl", format="turtle", encoding="utf-8")
     with (REPORTS / "shacl-report.csv").open("w", newline="", encoding="utf-8-sig") as fh:
         w = csv.DictWriter(fh, fieldnames=["severity", "focus", "path", "message", "value"])
@@ -144,6 +172,9 @@ def main() -> None:
     for (s, m), n in msgs.most_common(12):
         print(f"    {s:9} {n:4}  {m}")
 
+    require_quality(problems, conforms)
+    inferred.serialize(INFERRED_TTL, format="turtle", encoding="utf-8")
+    record_manifest("gold", INFERRED_TTL, len(inferred), "triples", reasoner="owlrl OWL 2 RL")
     print("[4/4] Gộp dữ liệu phục vụ truy vấn ...")
     everything = Graph()
     bind_prefixes(everything)
@@ -155,6 +186,9 @@ def main() -> None:
     everything.serialize(config.ALL_TTL, format="turtle", encoding="utf-8")
     record_manifest("gold", config.ALL_TTL, len(everything), "triples", consistent=not problems,
                     shacl_conforms=conforms, shacl_results=dict(sev))
+    (REPORTS / "validated-release.json").write_text(
+        json.dumps({"sha256": release_hashes(), "scope": "Local asserted data, ontology and retained inference; external sameAs targets are not imported."},
+                   indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(f"  -> {config.ALL_TTL.relative_to(config.ROOT)} ({len(everything)} triple)")
     print("Xong bước 5.")
 

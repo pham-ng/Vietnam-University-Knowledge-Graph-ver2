@@ -28,7 +28,7 @@ from rdflib.namespace import OWL, RDF, RDFS, SKOS, XSD
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config  # noqa: E402
-from common import PREFIXES, bind_prefixes, load_ontology, vn_key  # noqa: E402
+from common import PREFIXES, bind_prefixes, load_ontology, vn_key, require_validated_release  # noqa: E402
 
 # Cùng một mã nguồn build ra 2 nơi:
 #   GitHub Pages: site/, đường dẫn gốc /Vietnam-University-Knowledge-Graph-ver2/ (lấy từ BASE)
@@ -190,7 +190,7 @@ def institution_panels() -> dict[str, dict]:
         return f'<a href="{esc(local_href(uri) or uri)}">{esc(text)}</a>'
 
     def person(l):
-        pk = l["qid"] or "name:" + vn_key(l["name"])
+        pk = l.get("person_key") or l["qid"] or "name:" + vn_key(l["name"])
         u = umap["person"].get(pk)
         hon = people.get(pk, {}).get("honorific") or l.get("honorific") or ""
         name = a(u, l["name"]) if u else esc(l["name"])
@@ -486,8 +486,19 @@ def ontology_data(onto, full) -> dict:
 
 # ---------------------------------------------------------------- main
 
+def validate_site_output(path: Path) -> None:
+    """Only replace a direct-child generated site, never arbitrary project data."""
+    resolved = path.resolve()
+    if path.is_symlink() or resolved.parent != config.ROOT.resolve():
+        raise ValueError("Site output must be a direct child of the project directory.")
+    if path.exists() and not ((path / ".nojekyll").is_file() and (path / "index.html").is_file()):
+        raise ValueError("Refusing to replace a directory without generated-site markers.")
+
+
 def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
+    require_validated_release()
+    validate_site_output(SITE)
     if SITE.exists():
         shutil.rmtree(SITE)
     SITE.mkdir(parents=True)

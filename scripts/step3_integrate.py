@@ -879,6 +879,11 @@ def birth_province(ancestors, provs):
 
 def build_people(insts, ents, provs):
     people = {}
+    name_orgs = defaultdict(set)
+    for key, inst in insts.items():
+        for leader in inst["leaders"]:
+            if not leader["qid"]:
+                name_orgs[vn_key(leader["name"])].add(key)
     for a in load("wd_alumni.json"):
         schools = [s for s in a["schools"] if s in insts]
         if not schools:
@@ -899,7 +904,10 @@ def build_people(insts, ents, provs):
             conflict(a["vi"] or a["en"], "birth_date", a["birth"][0], [("wikidata", b) for b in a["birth"]])
     for k, i in insts.items():
         for l in i["leaders"]:
-            pk = l["qid"] or "name:" + vn_key(l["name"])
+            name_key = vn_key(l["name"])
+            # A shared personal name is not sufficient evidence of identity across institutions.
+            pk = l["qid"] or "name:" + name_key + (":" + k if len(name_orgs[name_key]) > 1 else "")
+            l["person_key"] = pk
             p = people.setdefault(pk, {"key": pk, "qid": l["qid"], "name_vi": l["name"], "name_en": "", "birth_date": "",
                                        "gender": None, "occupations": [], "alumnus_of": [], "enwiki": "", "viwiki": "",
                                        "leads": []})
@@ -924,9 +932,36 @@ def validate_silver(collections: dict[str, dict]) -> list[dict]:
                 out.append({"entity_type": etype, "key": k, "path": "dissolution_year",
                             "message": "năm giải thể trước năm thành lập"})
             if etype == "institution":
+                for field in ("founding_year", "dissolution_year"):
+                    if isinstance(rec.get(field), int) and rec[field] > THIS_YEAR:
+                        out.append({"entity_type": etype, "key": k, "path": field, "message": "year is in the future"})
+                if rec.get("founding_date"):
+                    try:
+                        datetime.date.fromisoformat(rec["founding_date"])
+                    except (ValueError, TypeError):
+                        out.append({"entity_type": etype, "key": k, "path": "founding_date", "message": "invalid calendar date"})
                 for f in ("member_of", "branch_of"):
                     out += [{"entity_type": etype, "key": k, "path": f, "message": f"tham chiếu tới {t} không tồn tại"}
                             for t in rec.get(f, []) if t not in records]
+            relations = {
+                "institution": {"province": "province", "governed_by": "governing_body", "owned_by": "governing_body",
+                                "state_managed_by": "governing_body"},
+                "governing_body": {"subordinate_to": "governing_body"},
+                "person": {"alumnus_of": "institution", "born_in": "province"},
+                "province": {"merged_into": "province"},
+            }
+            for field, target in relations.get(etype, {}).items():
+                if target not in collections:
+                    continue  # Partial collection validation is supported for unit tests.
+                values = rec.get(field) or []
+                values = values if isinstance(values, list) else [values]
+                for value in values:
+                    if value not in collections[target]:
+                        out.append({"entity_type": etype, "key": k, "path": field, "message": f"missing {target}: {value}"})
+            if etype == "person" and "institution" in collections:
+                for leadership in rec.get("leads", []):
+                    if leadership.get("org") not in collections["institution"] or leadership.get("role") not in ("rector", "director", "chair"):
+                        out.append({"entity_type": etype, "key": k, "path": "leads", "message": "invalid leadership reference or role"})
     return out
 
 

@@ -44,7 +44,10 @@ def main() -> None:
         run([sys.executable, "-m", "pip", "install", "-q", "-r", "requirements.txt"], env)
     if args.fresh:
         env["VNEDU_FRESH"] = "1"
+        env.pop("VNEDU_OFFLINE", None)
         shutil.rmtree(ROOT / "data" / "bronze" / "http_cache", ignore_errors=True)
+    else:
+        env["VNEDU_OFFLINE"] = "1"
 
     t0 = time.time()
     for title, script in STEPS:

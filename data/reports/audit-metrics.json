@@ -1,0 +1,64 @@
+{
+  "metrics": {
+    "Institutions": 300,
+    "HEIs": 271,
+    "People": 1702,
+    "Leaders": 221,
+    "Alumni": 1481,
+    "Programs": 78,
+    "Majors": 37,
+    "CurrentProvinces": 34,
+    "FormerProvinces": 29,
+    "AssertedTriples": 22931,
+    "InferredTriples": 21018,
+    "LinkTriples": 3674,
+    "OntologyTriples": 777,
+    "UnionTriples": 48492,
+    "MetadataTriples": 96,
+    "LocalResources": 2248,
+    "Classes": 34,
+    "ObjectProperties": 33,
+    "DataProperties": 21,
+    "FoundingConflicts": 5,
+    "Warnings": 34,
+    "Violations": 0,
+    "InformationResults": 1
+  },
+  "coverage_all_institutions": {
+    "founding_year": {
+      "present": 278,
+      "denominator": 300
+    },
+    "province": {
+      "present": 288,
+      "denominator": 300
+    },
+    "ownership": {
+      "present": 256,
+      "denominator": 300
+    },
+    "website": {
+      "present": 237,
+      "denominator": 300
+    },
+    "lat": {
+      "present": 175,
+      "denominator": 300
+    },
+    "students": {
+      "present": 28,
+      "denominator": 300
+    },
+    "admission_codes": {
+      "present": 60,
+      "denominator": 300
+    }
+  },
+  "link_predicates": {
+    "http://www.w3.org/2004/02/skos/core#closeMatch": 88,
+    "http://www.w3.org/2002/07/owl#sameAs": 2398,
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": 1188
+  },
+  "union_isomorphic_to_components": true,
+  "note": "Counts are local release measurements, not accuracy or national coverage estimates."
+}

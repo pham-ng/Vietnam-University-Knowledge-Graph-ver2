@@ -43,7 +43,7 @@ flowchart LR
 
 | Tầng | Thư mục | Nội dung | Kiểm soát chất lượng |
 |---|---|---|---|
-| Bronze | `data/bronze/` | Phản hồi gốc của API (cache) + ảnh chụp JSON theo nguồn, kèm `.meta.json` (nguồn, thời điểm, số bản ghi, SHA-256) | Không sửa — tái lập được |
+| Bronze | `data/bronze/` | Phản hồi API (cache) + ảnh chụp JSON theo nguồn, kèm `.meta.json` | Tái tạo từ cache; các tệp snapshot được ghi lại, lịch sử do Git lưu |
 | Silver | `data/silver/` | Thực thể đã nhận diện, hợp nhất, chuẩn hoá; một bản ghi / thực thể | **JSON Schema** (`schemas/silver.schema.json`), báo cáo mâu thuẫn / giá trị dự phòng / loại bỏ |
 | Gold | `data/gold/` | RDF theo ontology, liên kết 5★, suy luận, VoID/DCAT | **SHACL**, kiểm tra nhất quán OWL, kiểm thử suy luận |
 

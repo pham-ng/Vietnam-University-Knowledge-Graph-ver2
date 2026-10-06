@@ -90,7 +90,10 @@ def main() -> None:
     qid_of: dict[str, URIRef] = {}          # QID -> URI cục bộ (để tra DBpedia)
 
     def link(s, p, o, target):
-        links.add((URIRef(s), p, URIRef(o)))
+        triple = (URIRef(s), p, URIRef(o))
+        if triple in links:
+            return
+        links.add(triple)
         counts[(target, p)] = counts.get((target, p), 0) + 1
 
     def same_wd(uri, q):

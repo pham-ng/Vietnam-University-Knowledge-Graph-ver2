@@ -1,0 +1,583 @@
+% Audited English report. Build from this directory with latexmk -lualatex main-en.tex.
+\documentclass[11pt,a4paper]{article}
+\usepackage[english]{babel}
+\usepackage{fontspec}
+\setmainfont{Libertinus Serif}
+\setsansfont{Libertinus Sans}
+\setmonofont{Noto Sans Mono}[Scale=0.78]
+\usepackage[margin=25mm]{geometry}
+\usepackage{microtype,amsmath,amssymb,graphicx,booktabs,tabularx,longtable,array}
+\usepackage{xcolor,tikz,fvextra,enumitem}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage[section]{placeins}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl,fancyhdr}
+\usepackage[font=small,labelfont=bf]{caption}
+\definecolor{accent}{HTML}{126B65}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small VN-Edu LOD}\fancyhead[R]{\small Audited technical report}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{3em}
+\widowpenalty=10000
+\clubpenalty=10000
+\setlist{itemsep=3pt,topsep=4pt}
+\newcommand{\term}[1]{\texttt{#1}}
+\DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\small,breaklines=true,breakanywhere=true,frame=single,rulecolor=\color{black!20}}
+\input{tables/audit-metrics.tex}
+\hypersetup{pdftitle={VN-Edu LOD: Design, Implementation, and Critical Evaluation},pdfauthor={VN-Edu LOD project}}
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\centering
+\vspace*{18mm}
+{\sffamily\large SEMANTIC WEB PROJECT\par}
+\vspace{18mm}
+{\sffamily\bfseries\Huge VN-Edu LOD\par}
+\vspace{8mm}
+{\LARGE A Knowledge Graph of Vietnamese\par Higher-Education Institutions\par}
+\vspace{10mm}
+{\Large Design, Implementation, and Critical Evaluation\par}
+\vspace{10mm}
+{\color{accent}\rule{0.65\textwidth}{1pt}\par}
+\vspace{10mm}
+{\large Revised English technical report\par}
+{\large 6 October 2026\par}
+\vfill
+\begin{minipage}{0.9\textwidth}\small
+This edition incorporates an independent code and data audit of repository revision
+\texttt{21060d4}. Measurements are recomputed from the corrected release rather than
+copied from the earlier Vietnamese report. The earlier report remains an archival
+description; its accuracy, security, and performance claims are not evidence for this edition.
+
+Project repository:\\
+\url{https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2}
+\end{minipage}
+\end{titlepage}
+\hypersetup{pageanchor=true}
+
+\begin{abstract}
+VN-Edu LOD integrates information about Vietnamese educational institutions into an RDF
+knowledge graph, combining structured Wikidata records, Vietnamese Wikipedia infoboxes,
+and curated reference tables. The corrected snapshot contains \metricInstitutions{}
+educational-organization records, of which \metricHEIs{} are classified as higher-education
+institutions under the project's classification rules. It also represents
+\metricPeople{} person records, \metricCurrentProvinces{} current and
+\metricFormerProvinces{} former province-level units, and \metricPrograms{}
+illustrative academic programs. An ontology supports organizational, geographic, and
+educational relations; rule-based materialization adds inverse relations, classifications,
+and geographic containment. JSON Schema and SHACL enforce selected data contracts.
+
+The resulting serving graph contains \metricUnionTriples{} distinct triples. An independent
+review identified defects in SPARQL request validation, query cancellation, publication
+gates, entity identity, persistent URI allocation, and the interpretation of evaluation
+results. The revised implementation addresses these defects and adds targeted regression
+tests. Evaluation distinguishes local structural validity, reference-link agreement, and
+factual accuracy. No independent population-level accuracy estimate, formal OWL-profile
+certificate, or current public-service availability measurement is claimed. The result is
+a reproducible educational Linked Data system with explicit operational and epistemic limits.
+\end{abstract}
+\noindent\textbf{Keywords:} knowledge graph; RDF; ontology; SHACL; SPARQL; entity resolution;
+data provenance; Vietnamese higher education.
+\clearpage\tableofcontents\clearpage
+
+\section{Introduction and scope}
+Information about a university can appear under different names and identifiers across
+encyclopedic articles, knowledge bases, and organizational websites. Relationships are
+equally important: a member school is different from a branch campus; direct governance is
+different from general state oversight; and the area containing an institution may have
+changed its administrative representation. A knowledge graph makes these distinctions
+explicit and supports queries that join several kinds of entity.
+
+This project is an engineering case study of that integration problem. Its contribution is
+the combination of a domain model, a layered data pipeline, machine-readable outputs, and
+a query interface. It does not introduce a new reasoning algorithm or establish a complete
+official register of Vietnamese higher education. Names, classifications, and dates reflect
+the collected snapshot and documented extraction policies.
+
+The evaluation is organized around four questions:
+\begin{enumerate}
+\item Can the model distinguish relevant organizational relationships and support useful
+multi-step queries without introducing contradictions detected by the implemented checks?
+\item Can the pipeline reproduce a validated release and preserve stable identifiers as
+labels and input ordering change?
+\item What do the available data and evaluation procedures establish about completeness,
+link agreement, and correctness, and what remains unmeasured?
+\item Can publication and public query handling fail safely on invalid data and hostile inputs?
+\end{enumerate}
+
+The audit covers source code, the ontology, SHACL shapes, cached inputs, generated RDF,
+tests, and the existing report. Security counterexamples are executed locally; external
+production endpoints are not used as attack targets. The project author's identity,
+institution, course identifier, and supervisor are not inferred or fabricated.
+
+\section{Technical foundations}
+RDF describes resources through triples. Subjects may be IRIs or blank nodes; predicates
+are IRIs, and objects may additionally be literals. A graph is a set, so duplicate triples
+do not increase its size. This matters when combining asserted data, ontology statements,
+links, and inferred statements: their file counts cannot simply be added to obtain the
+size of the union~\cite{rdf}.
+
+OWL axioms express implications about the modeled world. A property's domain is not an
+input-validation rule: using the property can entail that its subject belongs to that
+domain. Similarly, a functional object property can imply equality between two values;
+it does not necessarily reject the second value. The project therefore supplements
+reasoning with explicit validation of asserted records. The OWL 2 profile specification
+defines restrictions under which particular reasoning guarantees apply~\cite{owl}.
+
+SHACL validates a supplied data graph against declared constraints~\cite{shacl}.
+Conformance is relative to those constraints, not a claim that every statement is true.
+Here, missing values for some descriptive fields generate warnings, while invalid
+datatypes, selected cardinality violations, and hard constraints prevent publication.
+
+SPARQL supplies query syntax and algebra for RDF, including optional patterns, aggregates,
+and remote \term{SERVICE} clauses~\cite{sparql}. Exposing it over HTTP introduces an
+execution boundary: query syntax, remote destinations, elapsed work, and publication state
+must all be controlled independently of the user interface.
+
+The project reuses identifiers and vocabulary from Wikidata, DBpedia, schema.org, FOAF,
+SKOS, and PROV-O. PROV-O supports descriptions of derivation~\cite{prov}; whether the
+provenance is attached to an entity, a graph, or an individual assertion determines what
+can actually be traced. HTTP identifiers and useful representations support Linked Data
+publication, while persistence requires more than generating readable slugs~\cite{uris}.
+
+\section{Data sources and collection}
+\subsection{Source roles}
+Wikidata contributes identifiers, labels, institutional attributes, organizational links,
+and person-related records. Vietnamese Wikipedia contributes infobox fields, descriptions,
+historical text, and links between articles. DBpedia supplies candidate identity links and
+some fallback values. Selected reference tables describe province mergers, regional
+groupings, fields of study, majors, and example programs. Geocoding is used as a fallback
+for location resolution and is not equivalent to an authoritative campus register.
+
+Wikipedia and Wikidata are interconnected community resources. Agreement between them is
+useful corroborating evidence, but they must not be described as statistically independent
+sources. Imported statements can share an origin, and one resource may repeat an error
+from another. A disagreement log exposes selected conflicts; it does not establish which
+source is correct.
+
+The collection strategy combines article-category traversal, infobox parsing, and
+Wikidata queries. Results are retained in JSON snapshots. The repository also ships a
+compressed HTTP cache. In the revised default pipeline, a cache miss raises an error
+instead of silently contacting a changing remote source. A fresh collection is an explicit
+operation. Dependency installation may still require Internet access; the offline claim
+applies to cached data collection and reconstruction after dependencies are installed.
+
+\subsection{Scope and selection effects}
+The snapshot is a discovered set of educational organizations, not a census. Filtering
+removes unrelated articles and some records lacking sufficient cross-source evidence.
+That policy can exclude legitimate but poorly documented institutions. Institutions with
+more detailed encyclopedia coverage are more likely to have richer records. The same bias
+is particularly strong for people linked through education records.
+
+The retained higher-education classification includes name-based heuristics. A title
+beginning with a familiar institution type is evidence used by the implementation; it is
+not a substitute for a current legal decision. Counts of higher-education institutions
+must therefore be read as counts under the project's classification policy.
+
+Academic programs are illustrative hand-entered data. They demonstrate program-to-major
+queries but do not support claims about a university's complete or current admissions
+offerings. Similarly, a Wikidata education relation establishes recorded attendance or
+education, not necessarily completion of a degree. The existing \term{Alumnus} class must
+be interpreted with that limitation.
+
+\section{Architecture and data management}
+\begin{figure}[htbp]\centering
+\begin{tikzpicture}[box/.style={draw=accent,rounded corners,align=center,text width=3.9cm,minimum height=1.3cm,font=\small},arr/.style={-{Stealth},thick},node distance=11mm]
+\node[box] (bronze) {\textbf{Bronze}\\Cached responses and source snapshots};
+\node[box,below=of bronze] (silver) {\textbf{Silver}\\Resolved records and persistent URI registry};
+\node[box,below=of silver] (gold) {\textbf{Gold candidates}\\Asserted RDF, links, ontology and inference};
+\node[box,below=of gold] (release) {\textbf{Validated release}\\Serving graph, reports and input fingerprints};
+\node[box,right=14mm of release] (web) {\textbf{Publication}\\HTML, RDF downloads and SPARQL};
+\draw[arr] (bronze)--node[right,font=\small]{JSON Schema and references}(silver);
+\draw[arr] (silver)--node[right,font=\small]{RDF transformation}(gold);
+\draw[arr] (gold)--node[right,font=\small]{reasoner diagnostics and SHACL}(release);
+\draw[arr] (release)--(web);
+\end{tikzpicture}
+\caption{Release flow. A failed validation prevents replacement of validated inference and the serving graph; changed inputs invalidate the publication fingerprint.}
+\end{figure}
+
+\subsection{Layers and contracts}
+Bronze stores responses and extraction snapshots. Silver contains institutions, people,
+governing bodies, and provinces in a normalized JSON representation. Gold contains
+asserted RDF, external links, selected instance-level entailments, and dataset metadata.
+The layers improve inspectability, but the implementation rewrites snapshot files during
+reconstruction. Bronze is therefore not an immutable append-only archive; Git revisions
+provide versioned snapshots.
+
+Silver validation checks schema constraints and selected cross-field rules. The audit
+adds checks for future years, impossible calendar dates, missing cross-collection
+references, and invalid leadership references. These checks complement, rather than
+replace, semantic review of the extraction policy.
+
+After RDF generation, literal ranges and functional-field cardinalities are validated
+before reasoning can merge object values through equality. The rule engine's own error
+messages are retained in the consistency diagnostics. SHACL then checks the asserted and
+retained inferred graph. A failure stops the release step. On success, a validation record
+binds the checked release to its ontology, shapes, Silver files, component RDF files, and
+serving graph. The publisher rejects missing or stale validation records.
+
+Fingerprints normalize text line endings to LF so that Git checkout on Windows and Linux
+does not create false stale-release failures. This is a content-integrity check, not a
+cryptographic signature or a guarantee against someone deliberately editing both the
+inputs and validation record. Reproduction of RDF is evaluated semantically; timestamps,
+blank-node labels, and serialization order can change without changing graph meaning.
+
+\subsection{Identity and URI persistence}
+A readable slug is used when a resource is first assigned a local URI. The revised minter
+consults the committed \term{uri\_map.json} before allocating anything new. Renaming an
+entity or inserting another entity with the same label does not change a registered URI.
+Retired identifiers remain reserved. Source-key changes, such as a new QID replacing an
+article-based key, still require an explicit identity migration policy.
+
+The previous person integration merged unidentified leaders by normalized personal name
+across all institutions. The audit found six names used across multiple institutions;
+splitting these records adds seven person records. This does not prove that seven new
+real people exist. It represents uncertainty conservatively: records without a shared
+identifier are separated by institution until identity can be established. The former
+ambiguous URI is reserved but is not asserted as identical to either replacement.
+
+\subsection{Provenance and disputed values}
+Institution records use \term{prov:wasDerivedFrom} to reference Wikidata items and
+specific Wikipedia revisions. Conflict and fallback logs provide additional evidence for
+some chosen fields. This is entity-level provenance plus partial field-level logging;
+the project does not yet attach complete provenance to every triple. A Wikidata entity
+URI is also not a pinned statement revision.
+
+The earliest reported foundation year is the current integration policy and may refer to
+a predecessor. Five records contain a different year in the infobox foundation date.
+The revised exporter retains such a date under \term{vnedu:reportedFoundingDate}, rather
+than asserting it as an unqualified \term{schema:foundingDate}. This preserves evidence
+without pretending that the historical ambiguity has been adjudicated. Distinguishing
+predecessor origin, legal establishment, and opening would require dated event records
+and authoritative supporting sources.
+
+\section{Ontology design and relationship semantics}
+\subsection{Modules}
+The ontology has \metricClasses{} named local classes, \metricObjectProperties{} local
+object properties, and \metricDataProperties{} local datatype properties in the audited
+release. Table~\ref{tab:modules} summarizes the main relationship choices.
+\begin{table}[htbp]\centering\small
+\caption{Main modules and intended distinctions.}\label{tab:modules}
+\begin{tabularx}{\textwidth}{p{2.6cm}XX}\toprule
+Module & Main entities or properties & Interpretation \\\midrule
+Organizations & Institution, governing body, company; memberOf, branchOf, governedBy, ownedBy & Membership, branch status, governance, and ownership are separate relations. \\
+Oversight & stateManagedBy & General state oversight is distinct from direct governance. \\
+People & Person, InstitutionLeader, Alumnus; rector, director, councilChair & Leadership roles differ; education records do not certify graduation. \\
+Geography & Province, FormerProvince, Region; locatedIn, partOf, mergedInto & Geographic crosswalks support aggregation under successor boundaries. \\
+Education & AcademicProgram, Major, FieldOfStudy; offersProgram, ofMajor, inField & Example programs connect institutions to subjects; these are not an official offering inventory. \\
+Identity & owl:sameAs, skos:closeMatch, foaf:isPrimaryTopicOf & Identity, approximate concept mapping, and document-topic links are not interchangeable. \\
+\bottomrule\end{tabularx}
+\end{table}
+
+Disjointness axioms separate selected organizational and geographic categories. Their
+usefulness depends on defensible category definitions. A statement that violates a
+disjointness axiom could indicate erroneous data or an overly rigid ontology, so a
+detected conflict should trigger inspection rather than automatic deletion of evidence.
+
+Vocabulary alignments use subclass and subproperty relationships. Such alignments still
+carry logical implications; choosing a weaker alignment than equivalence does not make
+it semantically harmless. The current inference run does not import and validate the
+complete external ontologies. Its absence of detected conflicts therefore applies to the
+local reasoning scope, not every possible external combination.
+
+\subsection{Materialization}
+The system computes a rule closure over the local ontology and asserted data and retains
+selected new instance-level statements. External identity links are joined into the
+serving graph after this step. This avoids equality-driven copying to remote identifiers,
+but means the published union is not a complete closure including all \term{owl:sameAs}
+effects. The reported inferred-triple count describes the retained subset, not the full
+internal closure.
+
+Representative rules are:
+\begin{align*}
+\mathit{locatedIn}\circ\mathit{partOf}&\sqsubseteq\mathit{locatedIn},\\
+\mathit{locatedIn}\circ\mathit{mergedInto}&\sqsubseteq\mathit{locatedIn},\\
+\mathit{governedBy}\circ\mathit{subordinateTo}&\sqsubseteq\mathit{governedBy},\\
+\mathit{offersProgram}\circ\mathit{ofMajor}&\sqsubseteq\mathit{trainsMajor}.
+\end{align*}
+For example, an institution assigned to a former province can also be related to the
+successor province and its larger region. Inverse properties expose the same relationship
+in the opposite direction without manually storing both directions in the asserted graph.
+
+The model uses the \term{owlrl} implementation of OWL 2 RL/RDF rules. This is an
+implementation statement, not a formal certificate that the ontology belongs to the OWL
+2 RL profile. In particular, temporal datatypes such as \term{xsd:gYear} and
+\term{xsd:date} require care relative to the profile's datatype restrictions.
+Conformance and completeness claims require a dedicated profile check and explicit
+semantics, beyond the present regression suite.
+
+\subsection{Geographic and temporal limitations}
+The \term{bornIn} chains are geographic containment crosswalks. Relating a birthplace to
+a province created in 2025 does not mean that province existed when the person was born.
+Similarly, historical institutions should not automatically be counted as currently
+operating just because their location can be mapped to a current province. Queries for
+current institutions should explicitly consider dissolution evidence and its incompleteness.
+
+The pipeline lacks a general temporal model for leadership terms, student counts, legal
+type changes, and geographic versions. Absence of an end date is not proof of a current
+appointment. Birth-date collection currently loses source precision, and suppressing
+January 1 dates is only a heuristic: it can suppress real birthdays and cannot establish
+the precision of all other dates. These source-quality limitations remain documented
+work, not conclusions resolved by successful reasoning.
+
+\section{Linking and publication}
+\subsection{External relations}
+The link graph contains \metricLinkTriples{} triples. Wikidata, ROR, GeoNames, and
+selected DBpedia links use \term{owl:sameAs}; subject mappings use
+\term{skos:closeMatch}; Wikipedia article links use \term{foaf:isPrimaryTopicOf}.
+The last of these relates an entity to a document and must not be counted as an identity
+assertion. Repeated attempts to add the same link no longer inflate linkset counters.
+
+Shared identifiers are useful identity evidence, but errors and historical scope
+mismatches can occur in the source mappings. Some organizational links are discovered
+through label matching with contextual filters. These deserve separate manual review.
+The audit does not certify every identity link or every administrative boundary match.
+
+\subsection{Representations and deployment}
+The static publisher generates HTML pages, embedded JSON-LD, and RDF files. The dynamic
+server provides query handling and RDF content negotiation. The canonical namespace
+currently belongs to GitHub Pages; the dynamic service has another origin. Content
+negotiation at the dynamic service does not establish that the canonical static URI
+performs the same negotiation.
+
+The implementation supports several practices associated with five-star Linked Open Data:
+open formats, HTTP identifiers, RDF descriptions, and outward links. This report treats
+that as a design assessment, not a certification. It does not reassert the previous
+report's live availability measurements. Operational claims need dated requests to the
+actual deployed revision. The repository declares data licensing and retains media
+metadata; this audit is not a legal verification of the license of every upstream asset.
+
+The publisher now checks its output path before recursive replacement. It refuses the
+project root, external paths, symbolic links, and existing directories without generated-site
+markers. This prevents a misconfigured output environment variable from deleting source
+data or the project itself.
+
+\section{Query execution and security review}
+The original SPARQL policy searched for textual patterns containing whitespace after
+\term{SERVICE} and \term{FROM}. Valid forms without that whitespace bypassed the filter.
+The audit reproduced this locally using loopback targets without issuing an outbound
+request. The revised policy inspects parsed SPARQL operations and permits only two exact
+HTTPS service endpoints. It rejects dataset-loading clauses, variable service targets,
+alternate ports, credentials, and arbitrary paths. Security keywords inside string
+literals are not treated as operations. The local outbound HTTP handler also rejects
+redirects.
+
+The previous timeout waited only for \term{Graph.query} to return. RDFLib can evaluate
+SELECT bindings lazily, so result evaluation could continue beyond the limit.
+Cancelling a future also cannot stop an already running Python thread. The revised local
+backend evaluates and serializes each query in a disposable process, terminates it on
+timeout, and limits concurrent workers. An expensive Cartesian-product regression test
+checks that capacity is released and a subsequent small query succeeds.
+
+The local backend limits serialized responses to 8 MiB. This does not impose a hard
+memory limit during intermediate evaluation, and parsing the public request still occurs
+in the web process. A hostile-workload production deployment therefore needs process or
+container memory limits, request-rate controls, and appropriate upstream isolation. The
+process-per-query approach also reloads the graph and has a throughput cost. Earlier
+in-memory latency measurements do not describe this implementation.
+
+The Fuseki proxy supplies an execution timeout parameter and does not follow proxy
+redirects. Actual query cancellation and remote SERVICE egress remain responsibilities
+of the configured Fuseki instance. They were not tested against a live Fuseki deployment
+in this audit. Raw POST requests with \term{application/sparql-query} are now accepted,
+alongside form-encoded query requests.
+
+\section{Evaluation and results}
+\subsection{Release measurements}
+All values in Table~\ref{tab:size} are generated by \term{audit/release\_metrics.py} from
+the validated local release. That script also checks that the serving graph is isomorphic
+to the union of its declared components. It does not request data from a remote endpoint.
+\begin{table}[htbp]\centering
+\caption{Measured size of the corrected local release.}\label{tab:size}
+\begin{tabularx}{\textwidth}{Xr}\toprule
+Quantity & Count \\\midrule
+Educational-organization records & \metricInstitutions{} \\
+Classified higher-education institutions & \metricHEIs{} \\
+Person records & \metricPeople{} \\
+Institution-leader records & \metricLeaders{} \\
+People with recorded education relations & \metricAlumni{} \\
+Current / former province-level units & \metricCurrentProvinces{} / \metricFormerProvinces{} \\
+Illustrative programs / majors & \metricPrograms{} / \metricMajors{} \\
+Asserted data triples & \metricAssertedTriples{} \\
+Retained inferred triples & \metricInferredTriples{} \\
+Link-graph triples & \metricLinkTriples{} \\
+Ontology / dataset-metadata triples & \metricOntologyTriples{} / \metricMetadataTriples{} \\
+Distinct triples in serving union & \metricUnionTriples{} \\
+Local resource IRIs appearing as subjects & \metricLocalResources{} \\
+\bottomrule\end{tabularx}
+\end{table}
+
+In the corrected snapshot, selected SHACL checks report \metricViolations{} violations,
+\metricWarnings{} warnings, and \metricInformationResults{} informational result.
+Warnings include missing foundation years and institution locations. Warning-tolerant
+conformance means the configured release policy permits these omissions; it does not
+mean all records are complete. The consistency diagnostics report no detected local
+violations after the fixes.
+
+Field coverage uses all 300 institution records as its denominator: 278 have a selected
+foundation year, 288 a province reference, 256 an ownership value, 237 a website, 175
+coordinates, 60 an admission code, and 28 a student-count value. These are presence
+measurements, not estimates of truth, timeliness, or national coverage. In particular,
+271 higher-education classifications and 300 educational-organization records are
+different denominators and should not be interchanged.
+
+\subsection{Link experiment: agreement, not independent accuracy}
+The available experiment uses 86 institutions with English labels and identifier-derived
+DBpedia reference targets. A local token-Jaccard matcher selects the highest-scoring target
+from that closed reference candidate set. Table~\ref{tab:agreement} reports agreement with
+the reference. It is not a run of the Silk software.
+\begin{table}[htbp]\centering\small
+\caption{Token-Jaccard agreement with the identifier-derived reference.}\label{tab:agreement}
+\begin{tabular}{rrrrrr}\toprule
+Threshold & Predictions & Disagreements & Ref. precision & Ref. recall & Ref. F1 \\\midrule
+0.2 & 85 & 13 & 84.7\% & 83.7\% & 0.842 \\
+0.4 & 80 & 8 & 90.0\% & 83.7\% & 0.867 \\
+0.6 & 76 & 6 & 92.1\% & 81.4\% & 0.864 \\
+0.8 & 68 & 4 & 94.1\% & 74.4\% & 0.831 \\
+1.0 & 58 & 1 & 98.3\% & 66.3\% & 0.792 \\
+\bottomrule\end{tabular}
+\end{table}
+
+Let $M$ be the set of predictions, $R$ the reference pairs, and $TP=|M\cap R|$.
+The reported precision is $TP/|M|$, recall is $TP/|R|$, and F1 is their harmonic mean.
+Calling $R$ independent ground truth would be incorrect because the identifier linker
+generated it. Scoring that same linker against $R$ yields perfect agreement by construction.
+The previous claim of 100\% linking accuracy is therefore withdrawn.
+
+The selected sample excludes unlinked institutions and targets outside the reference set.
+These restrictions affect task difficulty and coverage. The threshold with the highest F1
+on this sample is a descriptive observation, not a validated threshold chosen on a separate
+development set. A defensible accuracy study needs independently annotated links and
+non-links, dated evidence, an adjudication procedure, and a held-out test set.
+
+\subsection{Regression evidence}
+The audit adds counterexamples for compact SPARQL syntax, exact service endpoint policy,
+keywords inside literals, raw query POSTs, cancellation and worker recovery, datatype
+diagnostics, literal ranges, publication gates, stale release records, persistent URIs,
+same-name identity collisions, offline cache misses, impossible dates, and dangerous
+publisher paths. Eight initial counterexamples failed before correction and passed after
+the relevant fixes. The final test-run result and command are recorded in the companion
+audit notes rather than a manually maintained badge.
+
+The full pipeline is reconstructed from the shipped cache, and both static-site variants
+are built before the server integration suite. A successful run establishes that the
+tested release follows the intended local contracts. It does not constitute a penetration
+test, an independent factual annotation study, or a load test of the public deployment.
+
+\subsection{Treatment of earlier comparisons}
+The earlier report's 21-fact comparison with a predecessor repository is a small,
+hand-selected demonstration. Its benchmark script relies on a machine-specific path and
+permissive answer matching, and the underlying cases do not have a complete independent
+annotation protocol. Its scores are not used here as an accuracy estimate. Claims about
+349 predecessor contradictions, graph-density superiority, live link availability, and
+public-endpoint latency are likewise not repeated as newly verified findings.
+
+Graph density is especially sensitive to which nodes and predicates are counted.
+Adding external nodes or inferred inverse edges changes the measurement without necessarily
+adding useful or correct information. A future comparison should define a common node
+universe, edge projection, deduplication policy, and frozen input revisions before reporting
+degree statistics.
+
+\section{Threats to validity and remaining work}
+\textbf{Construct validity.} Logical consistency, SHACL conformance, field presence, and
+link agreement measure different things. None alone measures real-world correctness.
+Program examples and name-based legal-type classification further restrict what answers
+can be interpreted as authoritative.
+
+\textbf{Internal validity.} Source precedence can select a plausible but incorrect value.
+Earliest-year selection conflates events unless the event meaning is modeled explicitly.
+Some unqualified dates and organizational relationships need source-level adjudication.
+The revised person split prevents unsupported merges, but may also separate records
+belonging to the same real person; this is an explicit uncertainty trade-off.
+
+\textbf{External validity.} Coverage favors institutions and people documented in the
+selected community sources. The 86-link experiment omits open-world candidates and cannot
+be generalized to all Vietnamese institutions. National completeness requires comparison
+with a dated authoritative institutional register.
+
+\textbf{Operational validity.} Local tests do not prove public availability, deployed
+revision identity, traffic capacity, or Fuseki egress behavior. Memory limits and endpoint
+rate controls remain deployment concerns. Snapshot timestamps record reconstruction or
+collection events as implemented; they must not automatically be interpreted as the dates
+on which the underlying facts became true.
+
+The next substantive data-model improvements are dated leadership appointments,
+source-qualified measurements, event-specific foundation histories, and assertion-level
+provenance. A subsequent research evaluation should use a preregistered sampling method,
+an independently reviewed reference set, and a clear distinction between discovery
+coverage, linking coverage, and correctness. Those additions require evidence not present
+in the current repository and are not supplied by inventing dates, labels, or outcomes.
+
+\section{Conclusion}
+VN-Edu LOD demonstrates a working integration and publication pipeline for a Vietnamese
+education knowledge graph. The audited implementation strengthens the boundary between
+untrusted queries and execution, between candidate data and publication, and between
+source labels and entity identity. Its measured result is a locally validated release with
+\metricUnionTriples{} distinct serving triples and explicit limitations on factual,
+temporal, and operational interpretation. The available evidence supports the system as
+an educational Linked Data artifact; it does not establish perfect accuracy or complete
+coverage of Vietnamese higher education.
+
+\appendix
+\section{Reproducing the release and report}
+Use Python 3.12 and the pinned dependencies. After installation, the default pipeline
+uses the shipped cache and fails on missing cached responses. Run from the repository root:
+\begin{code}
+python -m pip install -r requirements.txt
+python run_all.py --no-install
+python audit/release_metrics.py
+\end{code}
+Build the dynamic-server UI before running the complete integration suite. In PowerShell:
+\begin{code}
+$env:VNEDU_SITE_DIR = 'site_server'
+$env:VNEDU_SITE_ROOT = '/'
+python scripts/step7_publish.py
+python -m pytest tests -q
+\end{code}
+Unset the two UI environment variables before building the GitHub Pages variant. The
+default pipeline already builds that variant. Existing output directories must have the
+publisher's generated-site markers.
+
+From \term{docs/report}, compile the English edition with an installed TeX distribution:
+\begin{code}
+latexmk -lualatex -interaction=nonstopmode -halt-on-error main-en.tex
+\end{code}
+The PDF uses Libertinus and Noto Sans Mono. The numeric macros come from
+\term{tables/audit-metrics.tex}; regenerate them after data or ontology changes.
+\term{data/reports/audit-metrics.json} contains the corresponding machine-readable values.
+The original Vietnamese source and PDF remain available as historical project artifacts.
+
+\clearpage
+\section{A competency-query example}
+This query counts classified institutions by current province using the retained
+geographic inference. It excludes institutions explicitly marked as defunct; the absence
+of that marker still does not prove current operation.
+\begin{code}
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?province (COUNT(DISTINCT ?institution) AS ?count)
+WHERE {
+  ?institution a vnedu:HigherEducationInstitution ;
+               vnedu:locatedIn ?p .
+  ?p a vnedu:Province ; rdfs:label ?province .
+  FILTER(LANG(?province) = "vi")
+  FILTER NOT EXISTS { ?institution a vnedu:DefunctInstitution }
+}
+GROUP BY ?province
+ORDER BY DESC(?count)
+\end{code}
+The example illustrates an essential reporting distinction: a query can execute correctly
+against the model while its answer remains dependent on the completeness and meaning of
+the underlying evidence.
+
+\begin{thebibliography}{9}
+\bibitem{rdf} R. Cyganiak, D. Wood, and M. Lanthaler, eds. \emph{RDF 1.1 Concepts and Abstract Syntax}. W3C Recommendation, 2014. \url{https://www.w3.org/TR/rdf11-concepts/}.
+\bibitem{owl} B. Motik et al., eds. \emph{OWL 2 Web Ontology Language Profiles}, second edition. W3C Recommendation, 2012. \url{https://www.w3.org/TR/owl2-profiles/}.
+\bibitem{shacl} H. Knublauch and D. Kontokostas, eds. \emph{Shapes Constraint Language (SHACL)}. W3C Recommendation, 2017. \url{https://www.w3.org/TR/shacl/}.
+\bibitem{sparql} S. Harris and A. Seaborne, eds. \emph{SPARQL 1.1 Query Language}. W3C Recommendation, 2013. \url{https://www.w3.org/TR/sparql11-query/}.
+\bibitem{prov} T. Lebo, S. Sahoo, and D. McGuinness, eds. \emph{PROV-O: The PROV Ontology}. W3C Recommendation, 2013. \url{https://www.w3.org/TR/prov-o/}.
+\bibitem{uris} L. Sauermann and R. Cyganiak, eds. \emph{Cool URIs for the Semantic Web}. W3C Interest Group Note, 2008. \url{https://www.w3.org/TR/cooluris/}.
+\end{thebibliography}
+\end{document}

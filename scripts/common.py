@@ -56,17 +56,28 @@ def slugify(text: str) -> str:
 class Minter:
     """Sinh URI ổn định, không trùng, cho từng loại tài nguyên."""
 
-    def __init__(self, kind: str):
+    def __init__(self, kind: str, registry: dict | None = None):
         self.kind = kind
-        self.used: set[str] = set()
+        self.registry = dict(registry or {})
+        prefix = f"{config.RES_NS}{kind}/"
+        if any(not value.startswith(prefix) for value in self.registry.values()):
+            raise ValueError(f"URI registry namespace mismatch: {kind}")
+        if len(set(self.registry.values())) != len(self.registry):
+            raise ValueError(f"Duplicate registered URIs: {kind}")
+        self.used = {value[len(prefix):] for value in self.registry.values()}
 
-    def mint(self, *candidates: str) -> URIRef:
+    def mint(self, *candidates: str, key: str | None = None) -> URIRef:
+        if key is not None and key in self.registry:
+            return URIRef(self.registry[key])
         base = next((slugify(c) for c in candidates if c and slugify(c)), "item")[:80].strip("-")
         slug, n = base, 2
         while slug in self.used:
             slug, n = f"{base}-{n}", n + 1
         self.used.add(slug)
-        return URIRef(f"{config.RES_NS}{self.kind}/{slug}")
+        uri = URIRef(f"{config.RES_NS}{self.kind}/{slug}")
+        if key is not None:
+            self.registry[key] = str(uri)
+        return uri
 
 
 def major_uri(code: str) -> URIRef:
@@ -88,7 +99,8 @@ def record_manifest(layer: str, path: Path, count: int, unit: str, **extra) -> N
     m = json.loads(config.MANIFEST.read_text(encoding="utf-8")) if config.MANIFEST.exists() else {}
     m.setdefault(layer, {})[path.relative_to(config.ROOT).as_posix()] = {
         "count": count, "unit": unit,
-        "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+        "sha256": hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest(),
+        "hash_normalization": "LF line endings",
         "generated_at": datetime.datetime.now().isoformat(timespec="seconds"), **extra}
     config.MANIFEST.write_text(json.dumps(m, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
 
@@ -98,3 +110,19 @@ def load_ontology():
     from rdflib import Graph
     text = config.ONTOLOGY_FILE.read_text(encoding="utf-8").replace(ONTOLOGY_DEFAULT_BASE, config.BASE)
     return Graph().parse(data=text, format="turtle")
+
+
+def release_hashes() -> dict[str, str]:
+    """Bind successful validation to the actual files consumed by the publisher."""
+    import hashlib
+    paths = [config.ONTOLOGY_FILE, config.ROOT / "shapes" / "vnedu-shapes.ttl", config.DATA_TTL,
+             config.LINKS_TTL, config.VOID_TTL, config.RDF_DIR / "vnedu-inferred.ttl", config.ALL_TTL,
+             *sorted(config.SILVER_DIR.glob("*.json"))]
+    return {p.relative_to(config.ROOT).as_posix(): hashlib.sha256(p.read_bytes().replace(b"\r\n", b"\n")).hexdigest() for p in paths}
+
+
+def require_validated_release():
+    import json
+    stamp = config.REPORTS_DIR / "validated-release.json"
+    if not stamp.exists() or json.loads(stamp.read_text(encoding="utf-8")).get("sha256") != release_hashes():
+        raise SystemExit("Missing or stale validation: run scripts/step5_reason.py before publishing.")
