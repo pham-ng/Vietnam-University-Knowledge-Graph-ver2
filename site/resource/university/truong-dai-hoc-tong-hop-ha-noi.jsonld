@@ -20,16 +20,20 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tong-hop-ha-noi",
   "@type": [
     "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
     "vnedu:DefunctInstitution",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
+    "schema:CollegeOrUniversity",
     "vnedu:HigherEducationInstitution",
-    "dbo:University"
+    "dbo:University",
+    "schema:Organization",
+    "foaf:Organization",
+    "vnedu:Organization",
+    "vnedu:UniversitySchool",
+    "schema:EducationalOrganization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Tổng hợp Hà Nội là một trường đại học lớn ở Việt Nam tồn tại từ năm 1956 đến năm 1993. Sau đó được sắp xếp, tổ chức lại để hình thành nên Đại học Quốc gia Hà Nội. Trường Đại học Tổng hợp Hà Nội thành lập năm 1956, là một trường đại học khoa học cơ bản đa ngành, đa lĩnh vực. Địa điểm chính của trường tại 19 phố Lê Thánh Tông, Hà Nội, vốn trước Cách mạng tháng Tám là địa điểm của Viện Đại học Đông Dương do kiến trúc sư người Pháp là Ernest Hébrard thiết kế năm 1926. Hiệu trưởng đầu tiên của trường là ông Ngụy Như Kon Tum."
+  },
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_T%E1%BB%95ng_h%E1%BB%A3p_H%C3%A0_N%E1%BB%99i"
   },
@@ -38,10 +42,10 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10829159"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74922762"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74922762"
+      "@id": "wd:Q10829159"
     }
   ],
   "rdfs:label": {
@@ -50,13 +54,13 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:prefLabel": {
@@ -73,37 +77,7 @@
   },
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thai-ha"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-chuyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/y-nhi"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ngoc-hien"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/doan-minh-tuan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-trong-phien"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-dac-ngon"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thien-son"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-xuan-lam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thanh-que"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thi-hong-an"
@@ -112,33 +86,67 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-duc-liem"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phung-huu-phu"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/doan-minh-tuan"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-trung-thu"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thanh-que"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-song-dong"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/y-nhi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-hai-tra"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-trong-phien"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ha-van-thuy"
     },
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-trung-thu"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phung-huu-phu"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-song-dong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-xuan-lam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thien-son"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-dac-ngon"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thai-ha"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-hai-tra"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-chuyen"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-nhuan-cam"
     }
   ],
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Năm 1951, Nhà nước Việt Nam Dân chủ Cộng hòa thành lập Trường Khoa học Cơ bản (tại Chiến khu Việt Bắc), cùng với chiến khu Việt Bắc, vùng tự do Thanh – Nghệ – Tĩnh cũng được Bộ Quốc gia Giáo dục mở Trường Dự bị Đại học ở Liên khu IV (đặt tại Thanh Hoá). Trường có một ban lãnh đạo do giáo sư Đặng Thai Mai và giáo sư Trần Văn Giàu phụ trách chia làm hai Ban Khoa học xã hội và Ban Khoa học tự nhiên.\n\nNăm 1954, sau Hiệp định Genève, miền Bắc được hoàn toàn giải phóng. Nhiệm vụ đầu tiên của ngành đại học là tiếp quản các trường đại học, cao đẳng ở Hà Nội. Đoàn cán bộ tiếp quản do giáo sư Hồ Đắc Di dẫn đầu đã tiến hành nhanh gọn công việc này. Cùng trong thời gian đó các trường đại học ở chiến khu và vùng tự do (Trường Đại học Y Dược Việt Bắc, các trường Dự bị đại học và Sư phạm cao cấp ở khu IV cũ, các trường Khoa học cơ bản, Sư phạm cao cấp ở khu học xá Trung ương) cũng lần lượt được di chuyển về Thủ đô.\n\nNgày 4 tháng 6 năm 1956, Chính phủ đã ra Quyết định số 2183/TC thành lập Trường Đại học Tổng hợp Hà Nội trên cơ sở tổ chức, sáp nhập lại từ các trường thành phần thuộc Đại học Quốc gia Việt Nam trước đó gồm Đại học Văn khoa, Đại học Khoa học và 2 trường Khoa học Cơ bản (hay trường Đại học Khoa học cơ bản) tại Chiến khu Việt Bắc và lớp Dự bị đại học tại Liên khu 4 đồng thời kế thừa toàn diện cơ sở vật chất, đội ngũ nhà khoa học, nội dung, phương thức đào tạo và truyền thống từ Đại học Quốc gia Việt Nam. Trường Đại học Tổng hợp Hà Nội đã trở thành trường đại học khoa học cơ bản (Khoa học Tự nhiên và Khoa học Xã hội - Nhân văn) đầu tiên ở miền Bắc sau hòa bình lập lại, trực tiếp kế thừa truyền thống và cơ sở vật chất, kỹ thuật của Viện Đại học Đông Dương (1906), Trường Đại học Quốc gia Việt Nam (1945) và Trường Khoa học Cơ bản (1951).\n\nTrong giai đoạn 1993-95, trường mang tên là Trường Đại học Tổng hợp - Đại học Quốc gia Hà Nội. Ngày 19/9/1995, Trường Đại học Tổng hợp - Đại học Quốc gia Hà Nội chính thức được tách thành 2 trường đại học độc lập là Trường Đại học Khoa học Tự nhiên và Trường Đại học Khoa học Xã hội và Nhân văn, trực thuộc Đại học Quốc gia Hà Nội. Từ thời điểm này, danh xưng Trường Đại học Tổng hợp không còn nữa và đã trở thành một phần lịch sử đầy hào hùng của Đại học Quốc gia Hà Nội sau này."
+  },
   "vnedu:locatedIn": [
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ]
 }

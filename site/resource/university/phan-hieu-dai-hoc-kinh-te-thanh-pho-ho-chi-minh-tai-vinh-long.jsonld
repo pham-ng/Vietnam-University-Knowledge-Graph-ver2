@@ -17,76 +17,106 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/phan-hieu-dai-hoc-kinh-te-thanh-pho-ho-chi-minh-tai-vinh-long",
-  "@type": [
-    "vnedu:Branch",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:Organization",
-    "foaf:Organization"
-  ],
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Ph%C3%A2n_hi%E1%BB%87u_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh_t%E1%BA%A1i_V%C4%A9nh_Long"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.240809"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.960643"
-  },
-  "prov:wasDerivedFrom": {
-    "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085387"
-  },
-  "rdfs:label": {
-    "@language": "vi",
-    "@value": "Phân hiệu Đại học Kinh tế Thành phố Hồ Chí Minh tại Vĩnh Long"
-  },
-  "schema:location": [
+  "@graph": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/1/13/Logo_Ph%C3%A2n_hi%E1%BB%87u_V%C4%A9nh_Long_%28Ti%E1%BA%BFng_Anh%29_%28Ch%E1%BB%AF_xanh%29_%281%29.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Thiết kế trên AI",
+      "schema:license": "Public domain",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Logo_Ph%C3%A2n_hi%E1%BB%87u_V%C4%A9nh_Long_(Ti%E1%BA%BFng_Anh)_(Ch%E1%BB%AF_xanh)_(1).png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Logo_Ph%C3%A2n_hi%E1%BB%87u_V%C4%A9nh_Long_%28Ti%E1%BA%BFng_Anh%29_%28Ch%E1%BB%AF_xanh%29_%281%29.png/330px-Logo_Ph%C3%A2n_hi%E1%BB%87u_V%C4%A9nh_Long_%28Ti%E1%BA%BFng_Anh%29_%28Ch%E1%BB%AF_xanh%29_%281%29.png"
+      }
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-long"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/phan-hieu-dai-hoc-kinh-te-thanh-pho-ho-chi-minh-tai-vinh-long",
+      "@type": [
+        "schema:EducationalOrganization",
+        "vnedu:PublicInstitution",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:Branch",
+        "vnedu:EducationalOrganization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Phân hiệu Đại học Kinh tế Thành phố Hồ Chí Minh tại Vĩnh Long (mã trường: KSV; trước đây là Trường Cao đẳng Kinh tế - Tài chính Vĩnh Long) là một phân hiệu của Đại học Kinh tế Thành phố Hồ Chí Minh, trực thuộc Bộ Giáo dục và Đào tạo. Phân hiệu được đặt tại phường Tân Hạnh, tỉnh Vĩnh Long."
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Ph%C3%A2n_hi%E1%BB%87u_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh_t%E1%BA%A1i_V%C4%A9nh_Long"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.240809"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.960643"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085387"
+      },
+      "rdfs:label": {
+        "@language": "vi",
+        "@value": "Phân hiệu Đại học Kinh tế Thành phố Hồ Chí Minh tại Vĩnh Long"
+      },
+      "schema:email": "ksv@ueh.edu.vn",
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-long"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/1/13/Logo_Ph%C3%A2n_hi%E1%BB%87u_V%C4%A9nh_Long_%28Ti%E1%BA%BFng_Anh%29_%28Ch%E1%BB%AF_xanh%29_%281%29.png"
+      },
+      "schema:telephone": "+84 0270 823.443",
+      "skos:altLabel": "UEH Mekong",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Phân hiệu Đại học Kinh tế Thành phố Hồ Chí Minh tại Vĩnh Long"
+      },
+      "vnedu:address": "1B Nguyễn Trung Trực, phường Tân Hạnh",
+      "vnedu:branchOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-kinh-te-thanh-pho-ho-chi-minh"
+      },
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Trường Cao đẳng Kinh tế - Tài chính Vĩnh Long"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2004"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Ngày 03 tháng 8 năm 2004, Trường Cao đẳng Kinh tế - Tài chính Vĩnh Long được thành lập trên cơ sở nâng cấp từ trường Trung học Kinh tế - Tài chính Vĩnh Long theo Quyết định số 4383/QĐ-BGD&ĐT-TCCB.\n\nNgày 04 tháng 12 năm 2019, Trường Đại học Kinh tế Thành phố Hồ Chí Minh - Phân hiệu Vĩnh Long được thành lập trên cơ sở sáp nhập Trường Cao đẳng Kinh tế - Tài chính Vĩnh Long, có địa chỉ tại số 1B Nguyễn Trung Trực, Phường 8, thành phố Vĩnh Long (nay là phường Tân Hạnh).\n\nNgày 03 tháng 01 năm 2025 tại lễ kỷ niệm 5 năm thành lập Phân hiệu Vĩnh Long, UEH đã công bố tái định vị thương hiệu UEH Vĩnh Long thành UEH Mekong với tầm vóc và quy mô lớn hơn - UEH Mekong vì một Đồng bằng sông Cửu Long và tiểu vùng sông Mekong bền vững."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-long"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      }
     }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Phân hiệu Đại học Kinh tế Thành phố Hồ Chí Minh tại Vĩnh Long"
-  },
-  "vnedu:address": "1B Nguyễn Trung Trực, phường Tân Hạnh",
-  "vnedu:branchOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-kinh-te-thanh-pho-ho-chi-minh"
-  },
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Trường Cao đẳng Kinh tế - Tài chính Vĩnh Long"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2004"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-long"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  }
+  ]
 }

@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -22,6 +23,7 @@ university:truong-cao-dang-cong-nghe-thong-tin-da-nang a foaf:Organization,
         schema:EducationalOrganization,
         schema:Organization ;
     rdfs:label "Trường Cao đẳng Công nghệ Thông tin Đà Nẵng"@vi ;
+    dbo:abstract "Trường Cao đẳng Công nghệ Thông tin, Đại học Đà Nẵng (tên tiếng Anh: College of Information Technology - The University of Danang) là một trường công lập, thành viên của Đại học Đà Nẵng. Trường được thành lập theo quyết định số 5553/QĐ-BGD&ĐT-TCCB ngày 14 tháng 10 năm 2003 của Bộ trưởng Bộ Giáo dục và Đào tạo. Trường Cao đẳng Công nghệ Thông tin - Đại học Đà Nẵng có chức năng đào tạo nguồn nhân lực công nghệ thông tin trình độ cao đẳng, góp phần tích cực vào sự phát triển của nền công nghiệp Công nghệ Thông tin Việt Nam. Đồng thời tiến hành nghiên cứu khoa học và chuyển giao công nghệ thông tin tiên tiến, đặc biệt là hướng vào các ứng dụng nhằm góp phần đẩy mạnh sự nghiệp công nghiệp hóa, hiện đại hóa đất nước."@vi ;
     owl:sameAs wd:Q10828790 ;
     geo:lat 16.054358 ;
     geo:long 108.244354 ;
@@ -41,8 +43,10 @@ university:truong-cao-dang-cong-nghe-thong-tin-da-nang a foaf:Organization,
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:huynh-cong-phap ;
     vnedu:website <http://www.cit.udn.vn> ;
+    schema:email "tuyensinh@cit.udn.vn" ;
     schema:employee person:huynh-cong-phap ;
     schema:location country:viet-nam,
         province:da-nang,
-        region:trung-bo .
+        region:trung-bo ;
+    schema:telephone "84) 0511-3667113" .
 

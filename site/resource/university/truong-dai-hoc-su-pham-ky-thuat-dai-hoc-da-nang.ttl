@@ -28,9 +28,11 @@ university:truong-dai-hoc-su-pham-ky-thuat-dai-hoc-da-nang a dbo:University,
         schema:Organization ;
     rdfs:label "UDN University of Technology and Education"@en,
         "Trường Đại học Sư phạm Kỹ thuật, Đại học Đà Nẵng"@vi ;
+    dbo:abstract "Trường Đại học Sư phạm Kỹ thuật, Đại học Đà Nẵng (tiếng Anh: University of Technology and Education, the University of Da Nang) là một trường đại học chuyên ngành về khối ngành kỹ thuật tại Việt Nam, được đánh giá là một trong những trường đại học đầu ngành về đào tạo khối ngành kỹ thuật tại Miền Trung Việt Nam. Trường trực thuộc hệ thống Đại học Đại học Đà Nẵng, được xếp vào nhóm đại học trọng điểm quốc gia Việt Nam. Trường đồng thời là trung tâm nghiên cứu kỹ thuật lớn của khu vực miền Trung. Tiền thân là trường Kỹ thuật Đà Nẵng, Trường Đại học Sư phạm Kỹ thuật, Đại học Đà Nẵng là một trong 6 trường Đại học Sư phạm Kỹ thuật của cả nước – đào tạo kỹ thuật lấy ứng dụng làm trọng tâm để giảng dạy, có chức năng đào tạo kỹ sư công nghệ, kỹ sư theo định hướng ứng dụng và giáo viên kỹ thuật."@vi ;
     owl:sameAs wd:Q10828792 ;
     geo:lat 16.077851 ;
     geo:long 108.213211 ;
+    skos:altLabel "Trường Kỹ thuật sư phạm Nguyễn Văn Trỗi" ;
     skos:prefLabel "Trường Đại học Sư phạm Kỹ thuật, Đại học Đà Nẵng"@vi ;
     prov:wasDerivedFrom wd:Q10828792,
         <https://vi.wikipedia.org/w/index.php?oldid=75189196> ;
@@ -39,6 +41,17 @@ university:truong-dai-hoc-su-pham-ky-thuat-dai-hoc-da-nang a dbo:University,
     vnedu:address "48 Cao Thắng, phường Hải Châu" ;
     vnedu:foundingYear "1962"^^xsd:gYear ;
     vnedu:hasLeader person:nguyen-le-hung ;
+    vnedu:history """Năm 1960, Đặt viên đá đầu tiên xây dựng trường trung học Kỹ thuật Đà Nẵng.
+
+Ngày 5 tháng 9 năm 1962: Khai giảng khóa đầu tiên, ngày thành lập được tính từ đây.
+
+Năm 1976: Trường được đổi tên thành Trường Công nhân Kỹ thuật Nguyễn Văn Trỗi.
+
+Ngày 4 tháng 4 năm 1994: Theo nghị định 32–CP của chính phủ, Đại học Đà Nẵng được thành lập trên cơ sở sáp nhập trường Đại học Bách khoa Đà Nẵng, Đại học Sư phạm ngoại ngữ Đà Nẵng, Cao đẳng Sư phạm Đà Nẵng và trường Công nhân kỹ thuật Nguyễn Văn Trỗi. Đồng thời thành lập:
+
+Trường Đại học Đại cương. Trường Đại học Kinh tế và Quản trị kinh doanh (nay là Đại học Kinh tế Đà Nẵng). Trường Đại học Kỹ thuật (Đại học Bách khoa Đà Nẵng). Trường Đại học Sư phạm (nay là Đại học Ngoại ngữ Đà Nẵng và Đại học Sư phạm Đà Nẵng). Trường Cao đẳng công nghệ (nay là Đại học Sư phạm Kỹ thuật Đà Nẵng).
+
+Ngày 8 tháng 11 năm 2017: Thủ tướng Chính phủ Việt Nam đã ký Quyết định số 1749/QĐ–TTg thành lập trường Đại học Sư phạm Kỹ thuật thuộc Đại học Đà Nẵng trên cơ sở tổ chức lại trường Cao đẳng Công nghệ và Khoa Sư phạm kỹ thuật Trường Đại học Bách khoa, Đại học Đà Nẵng. Hiện nay trường có bề dày truyền thống lịch sử lâu đời nhất trong hệ thống các trường Đại học thành viên của Đại học Đà Nẵng."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:da-nang,
         region:trung-bo ;
@@ -46,9 +59,18 @@ university:truong-dai-hoc-su-pham-ky-thuat-dai-hoc-da-nang a dbo:University,
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:nguyen-le-hung ;
     vnedu:website <http://ute.udn.vn> ;
+    schema:email "vntien@ud.edu.vn" ;
     schema:employee person:nguyen-le-hung ;
+    schema:foundingDate "1962-09-05"^^xsd:date ;
     schema:location country:viet-nam,
         province:da-nang,
         region:trung-bo ;
-    schema:parentOrganization university:dai-hoc-da-nang .
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/5/5b/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg> ;
+    schema:parentOrganization university:dai-hoc-da-nang ;
+    schema:telephone "+84-0236-822571" .
+
+<https://upload.wikimedia.org/wikipedia/vi/5/5b/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt,_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/5/5b/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg.png> .
 

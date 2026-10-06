@@ -27,6 +27,7 @@ university:truong-dai-hoc-dong-nai a dbo:University,
         schema:Organization ;
     rdfs:label "Dong Nai University"@en,
         "Trường Đại học Đồng Nai"@vi ;
+    dbo:abstract "Trường Đại học Đồng Nai là một trường đại học đa ngành tại thành phố Đồng Nai, được thành lập từ năm 1976. Sau cuộc cải cách hành chính theo Nghị quyết Hội nghị Trung ương 11 khóa XIII, trường hiện trực thuộc UBND thành phố Đồng Nai. Công tác đào tạo của nhà trường chịu sự giám sát của Bộ Giáo dục và Đào tạo."@vi ;
     owl:sameAs dbr:Dong_Nai_University,
         wd:Q24884974,
         <https://ror.org/00c772q29> ;
@@ -39,10 +40,16 @@ university:truong-dai-hoc-dong-nai a dbo:University,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%E1%BB%93ng_Nai> ;
     vnedu:address "9 Lê Quý Đôn, Tam Hiệp" ;
     vnedu:foundingYear "1976"^^xsd:gYear ;
+    vnedu:history """Tiền thân của trường là trường Sư phạm cấp 2 Đồng Nai, được thành lập ngày 3 tháng 11 năm 1976 (theo một số tài liệu cũ ghi nhận là ngày 7 tháng 11 năm 1976) dựa trên Quyết định số 2317/QĐ của Bộ trưởng Bộ Giáo dục, thông qua việc tách cơ sở 4 của trường Cao đẳng Sư phạm TP. Hồ Chí Minh.
+
+Giai đoạn trước ngày 1/7/2025, hệ thống hành chính Việt Nam vẫn tồn tại cấp huyện. Trong thời kỳ này, trường đã trải qua các cột mốc quan trọng: Ngày 28 tháng 3 năm 1987, Thủ tướng Chính phủ quyết định nâng cấp trường thành trường Cao đẳng Sư phạm Đồng Nai. Ngày 15 tháng 9 năm 1997, Chủ tịch UBND tỉnh Đồng Nai quyết định hợp nhất trường Trung học Sư phạm và Cao đẳng Sư phạm thành một đơn vị duy nhất. Ngày 20 tháng 8 năm 2010, Thủ tướng Chính phủ ký quyết định chính thức thành lập trường Đại học Đồng Nai trên cơ sở nâng cấp trường Cao đẳng Sư phạm Đồng Nai.
+
+Từ ngày 1 tháng 7 năm 2025, thực hiện chủ trương tinh gọn bộ máy, tỉnh Đồng Nai sáp nhập với tỉnh Bình Phước cũ để hình thành tỉnh Đồng Nai mới. Đồng thời, do bãi bỏ hoàn toàn cấp huyện và cấp thành phố thuộc tỉnh (như thành phố Biên Hòa trước đây), trường hiện nay tọa lạc tại phường Tân Hiệp, trực thuộc tỉnh Đồng Nai."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:dong-nai,
         region:nam-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
+    schema:foundingDate "1976-11-03"^^xsd:date ;
     schema:location country:viet-nam,
         province:dong-nai,
         region:nam-bo .

@@ -29,6 +29,7 @@ university:truong-dai-hoc-nha-trang a dbo:University,
         schema:Organization ;
     rdfs:label "Nha Trang University"@en,
         "Trường Đại học Nha Trang"@vi ;
+    dbo:abstract "Trường Đại học Nha Trang (tiếng Anh: Nha Trang University – NTU) là cơ sở giáo dục đại học công lập trực thuộc Bộ Giáo dục và Đào tạo, là một trong ba trường đại học đa ngành đứng đầu về đào tạo tại miền Trung Việt Nam. Tháng 7 năm 2023, Nhà trường đã được Trung tâm Kiểm định Chất lượng giáo dục – Đại học Quốc gia Thành phố Hồ Chí Minh kiểm định và được cấp Giấy chứng nhận kiểm định chất lượng cơ sở giáo dục. Trường Đại học Nha Trang là trường đa ngành, đa lĩnh vực, có sứ mệnh nghiên cứu khoa học, đào tạo nhân lực trình độ cao và chuyển giao tri thức đa lĩnh vực, chú trọng phát huy thế mạnh lĩnh vực khoa học – công nghệ biển và thủy sản, đáp ứng yêu cầu phát triển kinh tế – xã hội. Từ tháng 2 năm 2026, Trường Đại học Nha Trang tổ chức lại theo mô hình có các trường chuyên ngành trực thuộc, gồm Trường Thủy sản và Khoa học sự sống, Trường Kỹ thuật và Công nghệ, Trường Kinh tế và Kinh doanh, trong lộ trình được định hướng trở thành đại học vùng vào năm 2030."@vi ;
     owl:sameAs dbr:Nha_Trang_University,
         wd:Q2740474,
         <https://ror.org/047van922> ;
@@ -42,6 +43,7 @@ university:truong-dai-hoc-nha-trang a dbo:University,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Nha_Trang> ;
     vnedu:academicStaff "472"^^xsd:nonNegativeInteger ;
     vnedu:address "02 Nguyễn Đình Chiểu, phường Bắc Nha Trang" ;
+    vnedu:campus "Đô thị" ;
     vnedu:formerName "Trường Đại học Thủy sản"@vi ;
     vnedu:foundingYear "1959"^^xsd:gYear ;
     vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
@@ -53,6 +55,17 @@ university:truong-dai-hoc-nha-trang a dbo:University,
         person:nguyen-dinh-cuong,
         person:pham-phu-quoc ;
     vnedu:hasLeader person:quach-hoai-nam ;
+    vnedu:history """Tiền thân của Trường Đại học Nha Trang là Khoa Thủy sản, được thành lập vào ngày 1 tháng 8 năm 1959 tại Học viện Nông lâm Hà Nội (nay là Học viện Nông nghiệp Việt Nam).
+
+Ngày 16 tháng 8 năm 1966, theo Quyết định số 155/CP của Thủ tướng Chính phủ, Khoa Thủy sản được tách thành Trường Thủy sản (thuộc quyền quản lý của Tổng cục Thủy sản).
+
+Ngày 4 tháng 10 năm 1976, trường chuyển trụ sở từ Hải Phòng vào Nha Trang và được đổi tên Trường Đại học Hải sản (thuộc Bộ Hải sản).
+
+Tháng 8 năm 1981, trường được đổi tên thành Trường Đại học Thủy sản (thuộc Bộ Thủy sản).
+
+Ngày 25 tháng 7 năm 2006, theo Quyết định số 172/2006/QĐ-TTg của Thủ tướng Chính phủ, trường chính thức đổi tên thành Trường Đại học Nha Trang.
+
+Ngày 1 tháng 2 năm 2026, trường công bố kế hoạch thực hiện chiến lược phát triển và cơ cấu tổ chức giai đoạn 2025–2030, trong đó thành lập ba trường chuyên ngành trực thuộc trên cơ sở sắp xếp các khoa hiện có."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:khanh-hoa,
         region:trung-bo ;
@@ -64,6 +77,7 @@ university:truong-dai-hoc-nha-trang a dbo:University,
     vnedu:shortName "NTU" ;
     vnedu:website <http://www.ntu.edu.vn/> ;
     schema:employee person:quach-hoai-nam ;
+    schema:foundingDate "1959-08-01"^^xsd:date ;
     schema:location country:viet-nam,
         province:khanh-hoa,
         region:trung-bo .

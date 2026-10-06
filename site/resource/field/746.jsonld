@@ -19,25 +19,25 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/field/746",
   "@type": [
-    "skos:Concept",
-    "vnedu:FieldOfStudy"
+    "vnedu:FieldOfStudy",
+    "skos:Concept"
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Mathematics and statistics"
-    },
-    {
       "@language": "vi",
       "@value": "Toán và thống kê"
+    },
+    {
+      "@language": "en",
+      "@value": "Mathematics and statistics"
     }
   ],
   "skos:closeMatch": [
     {
-      "@id": "wd:Q395"
+      "@id": "dbr:Mathematics"
     },
     {
-      "@id": "dbr:Mathematics"
+      "@id": "wd:Q395"
     }
   ],
   "skos:notation": "746",

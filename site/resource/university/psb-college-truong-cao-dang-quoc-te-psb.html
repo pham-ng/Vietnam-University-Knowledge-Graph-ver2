@@ -32,13 +32,13 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/psb-college-truong-cao-dang-quoc-te-psb",
   "@type": [
-    "schema:Organization",
     "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
+    "schema:Organization",
     "vnedu:Organization",
     "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity"
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:HigherEducationInstitution"
   ],
   "foaf:homepage": {
     "@id": "http://www.psbcollege.edu.vn"
@@ -53,10 +53,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/0018abm07"
+      "@id": "wd:Q5065626"
     },
     {
-      "@id": "wd:Q5065626"
+      "@id": "https://ror.org/0018abm07"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -64,12 +64,12 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "PSB College - Trường Cao Đẳng quốc tế PSB"
-    },
-    {
       "@language": "en",
       "@value": "Cetana PSB International College-English Business Tourism Hospitality"
+    },
+    {
+      "@language": "vi",
+      "@value": "PSB College - Trường Cao Đẳng quốc tế PSB"
     }
   ],
   "schema:location": [
@@ -77,10 +77,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:prefLabel": {
@@ -93,13 +93,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     }
   ],
   "vnedu:website": {
@@ -123,7 +123,9 @@
   <a href="psb-college-truong-cao-dang-quoc-te-psb.ttl">Turtle</a> · <a href="psb-college-truong-cao-dang-quoc-te-psb.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/psb-college-truong-cao-dang-quoc-te-psb">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 12 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"></div><aside class="ibox"><div class="ibox-title">PSB College - Trường Cao Đẳng quốc tế PSB</div><table><tr><th>Tên tiếng Anh</th><td>Cetana PSB International College-English Business Tourism Hospitality</td></tr><tr><th>Loại hình</th><td>Đơn vị GDĐH khác</td></tr><tr><th>Thành lập</th><td>2003</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></td></tr><tr><th>Website</th><td><a href="http://www.psbcollege.edu.vn">psbcollege.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>

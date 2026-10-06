@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -26,6 +27,7 @@ university:hoc-vien-hang-khong-viet-nam a foaf:Organization,
         schema:Organization ;
     rdfs:label "Vietnam Aviation Academy"@en,
         "Học viện Hàng không Việt Nam"@vi ;
+    dbo:abstract "Học viện Hàng không Việt Nam ( – VAA) là một trường đại học công lập định hướng nghề nghiệp ứng dụng trực thuộc Bộ Xây dựng của nước Cộng hòa xã hội chủ nghĩa Việt Nam. Tổ chức ra đời vào ngày 24 tháng 3 năm 1979 với tên gọi ban đầu là Trường Sĩ quan và Trung cấp nghiệp vụ Hàng không, đến ngày 17 tháng 7 năm 2006, cơ sở được nâng cấp lên thành học viện và từ đây chính thức đào tạo hệ giáo dục bậc cao các chuyên ngành về lĩnh vực hàng không dân dụng."@vi ;
     owl:sameAs dbr:Vietnam_Aviation_Academy,
         wd:Q302448,
         <https://ror.org/05da5vm76> ;
@@ -37,14 +39,35 @@ university:hoc-vien-hang-khong-viet-nam a foaf:Organization,
     foaf:homepage <https://vaa.edu.vn/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Vietnam_Aviation_Academy>,
         <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam> ;
+    vnedu:address "Trụ sở: 104 Nguyễn Văn Trỗi, Phường Phú Nhuận" ;
+    vnedu:formerName "Trường Hàng không Việt Nam"@vi,
+        "Trường Kỹ thuật nghiệp vụ Hàng không"@vi,
+        "Trường Sĩ quan và Trung cấp nghiệp vụ Hàng không"@vi ;
     vnedu:foundingYear "1979"^^xsd:gYear ;
     vnedu:governedBy organization:bo-xay-dung ;
+    vnedu:history """Ngày 24 tháng 3 năm 1979, Trường Sĩ quan và Trung cấp nghiệp vụ Hàng không trực thuộc Tổng cục Hàng không Dân dụng Việt Nam – một tổ chức nằm dưới sự quản lý của Bộ Quốc phòng tại thời điểm đó, được thành lập dựa trên công văn số 290/QĐ-QP do Thiếu tướng Vũ Xuân Chiêm ký xác nhận. Đơn vị giảng dạy chịu trách nhiệm huấn luyện các sĩ quan sơ cấp trong giai đoạn này.
+
+Ngày 14 tháng 11 năm 1994, Trường Kỹ thuật nghiệp vụ Hàng không được chuyển đổi thành Trường Hàng không Việt Nam trực thuộc Cục Hàng không Dân dụng theo văn bản số 2318/QĐ-TCCCB-LĐ do Bộ trưởng Bộ Giao thông Vận tải Bùi Danh Lưu ký phê duyệt. Tổ chức nhận nhiệm vụ đào tạo bậc dưới đại học các nghề về chuyên ngành hàng không, và kể từ đây ngôi trường chính thức nằm trong hệ thống giáo dục quốc gia.
+
+Ngày 17 tháng 7 năm 2006, Phó Thủ tướng Phạm Gia Khiêm tiếp tục ký ban hành quyết định số 168/2006/QĐ-TTg thành lập Học viện Hàng không Việt Nam (VAA), cơ sở dạy học tại thời điểm này đã có tư cách pháp nhân, sở hữu con dấu và tài khoản riêng. Đến cuối tháng 10 trong cùng năm, trường tiếp tục nhận chỉ thị về việc phân công nhiệm vụ, quyền hạn, trách nhiệm và định hướng cơ cấu tổ chức, từ đây học viện chính thức được cấp phép đào tạo hệ giáo dục bậc cao và hoạt động dưới sự quản lý của Bộ Giao thông Vận tải. Năm 2007 là một cột mốc quan trọng khi trường được Bộ Giáo dục phê duyệt kế hoạch tuyển sinh đại học khóa đầu tiên với hai ngành Quản trị kinh doanh và Công nghệ kỹ thuật điện tử – viễn thông. Đến năm 2025, sau khi Việt Nam thông qua một cuộc cải cách tinh gọn bộ máy, học viện trở thành cơ quan giáo dục trực thuộc Bộ Xây dựng.
+
+Năm 2012 đánh dấu một bước ngoặt khi lần đầu tiên trong lịch sử hàng không dân dụng Việt Nam, Trường Phi công Bay Việt đã phối hợp với VAA và Học viện Hàng không ESMA của Cộng hòa Pháp tổ chức thí điểm đào tạo phi công cơ bản cho mục đích thương mại, trong đó bao gồm huấn luyện bay một phần trên vùng trời Việt Nam tại Sân bay quốc tế Cam Ranh.
+
+Tính đến năm 2017, VAA là tổ chức quốc doanh duy nhất trong hệ thống giáo dục quốc gia Việt Nam chuyên giảng dạy về hàng không. Theo sau là sự xuất hiện của hàng loạt các doanh nghiệp tham gia vào công tác đào tạo nguồn nhân lực cùng ngành được ghi nhận trong năm 2022 như Trường Đại học Khoa học và Công nghệ Hà Nội, Học viện Hàng không Vietjet, Tập đoàn Vingroup..."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
+    vnedu:motto "Let Your Dreams Fly"@vi ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:website <https://vaa.edu.vn/> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/vi/8/85/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam.jpg> ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo .
+
+<https://upload.wikimedia.org/wikipedia/vi/8/85/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam.jpg> a schema:ImageObject ;
+    schema:creditText "Hongkytran (thảo luận)" ;
+    schema:license "CC-BY-SA-4.0" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/8/85/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam.jpg/330px-H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam.jpg> .
 

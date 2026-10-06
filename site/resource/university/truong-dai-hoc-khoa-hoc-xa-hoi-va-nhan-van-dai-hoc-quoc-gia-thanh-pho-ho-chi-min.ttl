@@ -29,11 +29,13 @@ university:truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-thanh-pho
         schema:Organization ;
     rdfs:label "University of Social Sciences and Humanities- Viet Nam National University, Ho Chi Minh City"@en,
         "Trường Đại học Khoa học Xã hội và Nhân văn, Đại học Quốc gia Thành phố Hồ Chí Minh"@vi ;
+    dbo:abstract "Trường Đại học Khoa học Xã hội và Nhân văn ( – USSH-VNUHCM) là một thành viên của Đại học Quốc gia Thành phố Hồ Chí Minh – hệ thống đại học xếp hạng 175 Châu Á (QS Rankings 2026), TOP 101–150 đại học dưới 50 tuổi (QS 2021). Trường xếp TOP 501–550 đại học trên thế giới trong lĩnh vực Khoa học Xã hội (QS WUR 2026), TOP 193 thế giới về chất lượng đầu ra của cựu sinh viên (QS GER 2022). Trường có tiền thân là Đại học Văn khoa/Văn khoa Đại học đường (từ năm 1957-1976, thuộc Viện Đại học Sài Gòn), Đại học Tổng hợp TP. HCM (từ năm 1976-1996). Hiện nay, Trường là trung tâm nghiên cứu, đào tạo trong lĩnh vực khoa học xã hội và nhân văn lớn nhất miền Nam Việt Nam. Vào tháng 10/2021, Trường ĐH KHXH&NV chính thức công bố lộ trình tự chủ trong chiến lược phát triển Nhà trường."@vi ;
     owl:sameAs dbr:Ho_Chi_Minh_City_University_of_Social_Sciences_and_Humanities,
         wd:Q5873999,
         <https://ror.org/02c6yhw44> ;
     geo:lat 10.787807 ;
     geo:long 106.703839 ;
+    skos:altLabel "USSH-VNUHCM" ;
     skos:notation "QSX" ;
     skos:prefLabel "Trường Đại học Khoa học Xã hội và Nhân văn, Đại học Quốc gia Thành phố Hồ Chí Minh"@vi ;
     prov:wasDerivedFrom wd:Q5873999,
@@ -43,6 +45,8 @@ university:truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-thanh-pho
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_X%C3%A3_h%E1%BB%99i_v%C3%A0_Nh%C3%A2n_v%C4%83n%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> ;
     vnedu:address "10–12 Đinh Tiên Hoàng, phường Sài Gòn" ;
     vnedu:admissionCode "QSX" ;
+    vnedu:campus "21 hectares" ;
+    vnedu:councilChair person:le-thi-ngoc-diep ;
     vnedu:foundingYear "1955"^^xsd:gYear ;
     vnedu:hasAlumnus person:bui-thanh-tuan,
         person:dinh-thai-thuy,
@@ -53,7 +57,25 @@ university:truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-thanh-pho
         person:nguyen-thuc-thuy-tien,
         person:orange,
         person:tran-van-hiep ;
-    vnedu:hasLeader person:ngo-thi-phuong-lan ;
+    vnedu:hasLeader person:le-thi-ngoc-diep,
+        person:ngo-thi-phuong-lan ;
+    vnedu:history """Sau Hiệp định Genève 1954, Trường được đặt những nền móng đầu tiên bằng việc thành lập Trường Cao đẳng dự bị Văn khoa Pháp (tháng 11 năm 1955) - là trường thành viên của Viện Đại học Sài Gòn. Đến ngày 1 tháng 3 năm 1957, Trường được chính thức thành lập với tên gọi Trường Đại học Văn khoa thuộc Viện Đại học Sài Gòn.
+
+Vào tháng 10 năm 1975, Đại học Văn Khoa có nhiều thay đổi về mục tiêu, chương trình và nội dung đào tạo. Tháng 4 năm 1976, Đại học Văn khoa hợp nhất với Đại học Khoa học (Đại học Khoa học Tự nhiên bây giờ) thành Đại học Tổng hợp TP. Hồ Chí Minh, trung tâm đào tạo và nghiên cứu khoa học cơ bản lớn nhất ở các tỉnh phía nam Việt Nam.
+
+Từ năm 1976 đến năm 1996, Trường trở thành bộ phận các ngành khoa học xã hội và nhân văn trong Đại học Tổng hợp TP. Hồ Chí Minh. Ngày 30 tháng 3 năm 1996, trường mang tên Trường Đại học Khoa học Xã hội và Nhân văn thuộc hệ thống Đại học Quốc gia Thành phố Hồ Chí Minh theo Quyết định số 1233/QĐ-BGD&ĐT của Bộ trưởng Bộ Giáo dục và Đào tạo.
+
+Ngày 20 tháng 11 năm 2017, sự kiện Kỷ niệm 60 năm hình thành và phát triển đã thu hút đông đảo lãnh đạo, thầy cô giáo, cựu sinh viên, sinh viên, đối tác tham dự - đánh dấu một cột mốc phát triển quan trọng trong lịch sử phát triển của đại học này.
+
+Từ năm 2022, Nhà trường thực hiện tự chủ đại học với nhiều thay đổi trong quản trị đại học, đào tạo, nghiên cứu nhằm hướng đến một đại học nghiên cứu trong hệ thống Đại học Quốc gia TP. Hồ Chí Minh, nằm trong tốp đầu trong lĩnh vực khoa học xã hội và nhân văn của Châu Á.
+
+Giáo dục toàn diện - Khai phóng - Đa văn hóa
+
+Ngày 11 tháng 5 năm 2019, Nhà trường công bố và phát động thực hiện Chương trình Đại học Xanh. Chương trình Đại học Xanh có 3 nội dung chính gồm 3 giai đoạn đi từ nhận thức, hành động đến hình thành văn hóa xanh: (1) thực hiện chương trình thay đổi nhận thức để thích ứng với lối sống xanh, (2) tổ chức hoạt động cụ thể để bảo vệ môi trường như phân loại rác tại nguồn, cải tạo cảnh quan, hạn chế và nói không với chất nhựa dùng một lần, xây dựng không gian học tập và làm việc xanh, (3) xây dựng văn hoá sống xanh với các chương trình làm tác động đến sự thay đổi nhận thức hướng đến lối sống xanh.
+
+Công ty TNHH Dịch vụ khoa học và Du lịch Văn khoa
+
+Đây là nơi làm việc của Ban Đại diện Cựu sinh viên trường có chức năng kết nối cựu sinh viên, tổ chức các hoạt động hỗ trợ theo nhu cầu của cựu sinh viên và được đặt tại phòng B106, 10-12 Đinh Tiên Hoàng, Phường Sài Gòn, TP. Hồ Chí Minh (website)"""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -62,9 +84,25 @@ university:truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-thanh-pho
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:ngo-thi-phuong-lan ;
     vnedu:website <http://www.hcmussh.edu.vn/> ;
-    schema:employee person:ngo-thi-phuong-lan ;
+    schema:employee person:le-thi-ngoc-diep,
+        person:ngo-thi-phuong-lan ;
+    schema:foundingDate "1957-11-03"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/4/45/USSH-VNU.HCM_c%C6%A1_s%E1%BB%9F_%C4%90inh_Ti%C3%AAn_Ho%C3%A0ng.jpg> ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
-    schema:parentOrganization university:dai-hoc-quoc-gia-thanh-pho-ho-chi-minh .
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/4/49/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_X%C3%A3_h%E1%BB%99i_v%C3%A0_Nh%C3%A2n_v%C4%83n%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg> ;
+    schema:parentOrganization university:dai-hoc-quoc-gia-thanh-pho-ho-chi-minh ;
+    schema:telephone "84-8)38293828 (110" .
+
+<https://upload.wikimedia.org/wikipedia/commons/4/45/USSH-VNU.HCM_c%C6%A1_s%E1%BB%9F_%C4%90inh_Ti%C3%AAn_Ho%C3%A0ng.jpg> a schema:ImageObject ;
+    schema:creditText "Darklight786" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:USSH-VNU.HCM_c%C6%A1_s%E1%BB%9F_%C4%90inh_Ti%C3%AAn_Ho%C3%A0ng.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/USSH-VNU.HCM_c%C6%A1_s%E1%BB%9F_%C4%90inh_Ti%C3%AAn_Ho%C3%A0ng.jpg/330px-USSH-VNU.HCM_c%C6%A1_s%E1%BB%9F_%C4%90inh_Ti%C3%AAn_Ho%C3%A0ng.jpg> .
+
+<https://upload.wikimedia.org/wikipedia/vi/4/49/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_X%C3%A3_h%E1%BB%99i_v%C3%A0_Nh%C3%A2n_v%C4%83n%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_X%C3%A3_h%E1%BB%99i_v%C3%A0_Nh%C3%A2n_v%C4%83n,_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/4/49/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_X%C3%A3_h%E1%BB%99i_v%C3%A0_Nh%C3%A2n_v%C4%83n%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_X%C3%A3_h%E1%BB%99i_v%C3%A0_Nh%C3%A2n_v%C4%83n%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg.png> .
 

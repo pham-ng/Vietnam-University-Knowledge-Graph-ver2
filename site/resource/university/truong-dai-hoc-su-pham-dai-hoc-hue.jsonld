@@ -17,121 +17,162 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-dai-hoc-hue",
-  "@type": [
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.dhsphue.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "wd:Q10829127"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Hu%E1%BA%BF.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Taro ice cream",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Hu%E1%BA%BF.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Hu%E1%BA%BF.jpg/330px-Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Hu%E1%BA%BF.jpg"
+      }
     },
     {
-      "@id": "https://ror.org/04bm3wy68"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/c/c9/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m,_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/c/c9/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg.png"
+      }
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-dai-hoc-hue",
+      "@type": [
+        "vnedu:MemberInstitution",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Sư phạm Huế là trường đại học đứng đầu về đào tạo và nghiên cứu khối ngành sư phạm tại miền Trung Việt Nam, được Bộ Giáo dục và Đào tạo chọn là 1 trong 3 trường sư phạm trọng điểm quốc gia. Là trường thành viên của Đại học Huế, trực thuộc Bộ Giáo dục và Đào tạo."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.dhsphue.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10829127"
+        },
+        {
+          "@id": "https://ror.org/04bm3wy68"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829127"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75580764"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Hue University of Education"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Sư phạm, Đại học Huế"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-ho-son"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Hu%E1%BA%BF.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/c/c9/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-hue"
+      },
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Sư phạm, Đại học Huế"
+      },
+      "vnedu:address": "Số 34 đường Lê Lợi, phường Thuận Hóa, thành phố Huế, Việt Nam",
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Tòa Khâm sứ Trung Kỳ"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1957"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngo-kha"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-suu"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tieu-dao-bao-cu"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-ho-son"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trụ sở của trường trước đây là Toà Khâm sứ Trung Kỳ được khởi công xây dựng vào mùa hạ, tháng 4 năm 1876 (Tự Đức 28), và hoàn thành vào tháng 7 năm 1878. Sau khi xây dựng và đặt xong bộ máy cai trị, Toà Khâm sứ Trung kỳ trở thành thủ phủ của chế độ thực dân Pháp ở Trung kỳ, chi phối toàn bộ hoạt động của nhà nước phong kiến triều Nguyễn. Tháng 3 năm 1957 dưới thời Đệ Nhất Cộng hòa Tổng thống Ngô Đình Diệm ký sắc lệnh thành lập Viện Đại học Huế gồm 5 phân khoa đại học: Sư phạm, Văn khoa, Luật khoa, Hán học, và Khoa học. Trong niên khóa đầu có 358 sinh viên. đến năm 1960 thì sĩ số tăng lên 1431 sinh viên; năm 1959 mở thêm chương trình dự bị y khoa. Sau khi thống nhất đất nước, trường Đại học Sư phạm Huế được chính thức thành lập vào ngày 27 tháng 10 năm 1976. Năm 1994, thủ tướng Võ Văn Kiệt quyết định chuyển trường Đại học Sư phạm Huế sang trực thuộc Đại học Huế."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-hue"
+      },
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Nhân văn - Khai phóng - Kiến tạo"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-ho-son"
+      },
+      "vnedu:website": {
+        "@id": "http://www.dhsphue.edu.vn/"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75580764"
-    },
-    {
-      "@id": "wd:Q10829127"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Hue University of Education"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Sư phạm, Đại học Huế"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-ho-son"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-hue"
-  },
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Sư phạm, Đại học Huế"
-  },
-  "vnedu:address": "Số 34 đường Lê Lợi, phường Thuận Hóa, thành phố Huế, Việt Nam",
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Tòa Khâm sứ Trung Kỳ"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1957"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngo-kha"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tieu-dao-bao-cu"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-suu"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-ho-son"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-hue"
-  },
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Nhân văn - Khai phóng - Kiến tạo"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-ho-son"
-  },
-  "vnedu:website": {
-    "@id": "http://www.dhsphue.edu.vn/"
-  }
+  ]
 }

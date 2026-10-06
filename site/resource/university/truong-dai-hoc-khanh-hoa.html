@@ -30,105 +30,132 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-khanh-hoa",
-  "@type": [
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
-  ],
-  "foaf:homepage": {
-    "@id": "http://ukh.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kh%C3%A1nh_H%C3%B2a"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "12.245538"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "109.193122"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "https://ror.org/00a4nhr72"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-khanh-hoa",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Khánh Hòa (University of Khanh Hoa) là một trường đại học thuộc các trường đại học, cao đẳng trong hệ thống giáo dục quốc dân, trực thuộc ủy ban nhân dân Tỉnh Khánh Hòa. Ngày 3 tháng 8 năm 2015, Thủ tướng chính phủ Việt Nam ban hành Quyết định Số 1234/QĐ-TTg về việc thành lập Trường Đại học Khánh Hòa trên cơ sở sáp nhập 2 Trường Cao đẳng Sư phạm Nha Trang và Trường Cao đẳng Văn hóa - Nghệ thuật và Du lịch Nha Trang. Đội ngũ viên chức, giảng viên, người lao động của trường hiện tại: 270 người Trong đó có 03 PGS.TS, 30 tiến sĩ, 168 thạc sĩ (gồm 24 nghiên cứu sinh), 42 đại học và 27 trình độ khác. Riêng về đội ngũ giảng viên, Giảng viên: 192 người, tTrong đó: TS: 33 (gồm 3PGS); ThS: 154, ĐH: 5 (tính đến tháng 11/2025)."
+      },
+      "foaf:homepage": {
+        "@id": "http://ukh.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kh%C3%A1nh_H%C3%B2a"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "12.245538"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "109.193122"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/00a4nhr72"
+        },
+        {
+          "@id": "wd:Q10828807"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=74506015"
+        },
+        {
+          "@id": "wd:Q10828807"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "University of Khanh Hoa"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Khánh Hòa"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-phien"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "2015-08-03"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/8/81/Dai_hoc_Khanh_Hoa.png"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        }
+      ],
+      "schema:telephone": "+84-58-3 523 420",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Khánh Hòa"
+      },
+      "vnedu:address": "01 Nguyễn Chánh, phường Nha Trang, tỉnh Khánh Hòa",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2015"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-phien"
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-phien"
+      },
+      "vnedu:website": {
+        "@id": "http://ukh.edu.vn/"
+      }
     },
     {
-      "@id": "wd:Q10828807"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/8/81/Dai_hoc_Khanh_Hoa.png",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Dai_hoc_Khanh_Hoa.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/8/81/Dai_hoc_Khanh_Hoa.png/330px-Dai_hoc_Khanh_Hoa.png"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74506015"
-    },
-    {
-      "@id": "wd:Q10828807"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "University of Khanh Hoa"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Khánh Hòa"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-phien"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Khánh Hòa"
-  },
-  "vnedu:address": "01 Nguyễn Chánh, phường Nha Trang, tỉnh Khánh Hòa",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2015"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-phien"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-phien"
-  },
-  "vnedu:website": {
-    "@id": "http://ukh.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([12.245538,109.193122],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([12.245538,109.193122],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -147,7 +174,9 @@
   <a href="truong-dai-hoc-khanh-hoa.ttl">Turtle</a> · <a href="truong-dai-hoc-khanh-hoa.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-khanh-hoa">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 17 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Khánh Hòa (University of Khanh Hoa) là một trường đại học thuộc các trường đại học, cao đẳng trong hệ thống giáo dục quốc dân, trực thuộc ủy ban nhân dân Tỉnh Khánh Hòa. Ngày 3 tháng 8 năm 2015, Thủ tướng chính phủ Việt Nam ban hành Quyết định Số 1234/QĐ-TTg về việc thành lập Trường Đại học Khánh Hòa trên cơ sở sáp nhập 2 Trường Cao đẳng Sư phạm Nha Trang và Trường Cao đẳng Văn hóa - Nghệ thuật và Du lịch Nha Trang. Đội ngũ viên chức, giảng viên, người lao động của trường hiện tại: 270 người Trong đó có 03 PGS.TS, 30 tiến sĩ, 168 thạc sĩ (gồm 24 nghiên cứu sinh), 42 đại học và 27 trình độ khác. Riêng về đội ngũ giảng viên, Giảng viên: 192 người, tTrong đó: TS: 33 (gồm 3PGS); ThS: 154, ĐH: 5 (tính đến tháng 11/2025).</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=74506015">«Trường Đại học Khánh Hòa»</a> trên Wikipedia tiếng Việt (bản sửa đổi 74506015), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Khánh Hòa</div><table><tr><th>Tên tiếng Anh</th><td>University of Khanh Hoa</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>3 tháng 8 năm 2015</td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">Tiến sĩ</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-phien">Phan Phiến</a></td></tr><tr><th>Địa chỉ</th><td>01 Nguyễn Chánh, phường Nha Trang, tỉnh Khánh Hòa</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa">Khánh Hòa</a></td></tr><tr><th>Điện thoại</th><td>+84-58-3 523 420</td></tr><tr><th>Website</th><td><a href="http://ukh.edu.vn/">ukh.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Dai_hoc_Khanh_Hoa.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/8/81/Dai_hoc_Khanh_Hoa.png/330px-Dai_hoc_Khanh_Hoa.png" alt="Ảnh Trường Đại học Khánh Hòa" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -177,8 +206,17 @@
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-phien">Phan Phiến</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>2015-08-03 <span class="lang">xsd:date</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/8/81/Dai_hoc_Khanh_Hoa.png">&lt;https://upload.wikimedia.org/wikipedia/vi/8/81/Dai_hoc_Khanh_Hoa.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa">Khánh Hòa</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo">Trung Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84-58-3 523 420</div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>01 Nguyễn Chánh, phường Nha Trang, tỉnh Khánh Hòa</div>

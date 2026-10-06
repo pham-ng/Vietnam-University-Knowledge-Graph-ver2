@@ -29,6 +29,7 @@ university:truong-dai-hoc-nong-lam-thanh-pho-ho-chi-minh a dbo:University,
         schema:Organization ;
     rdfs:label "Nong Lam University"@en,
         "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh"@vi ;
+    dbo:abstract "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh ( (HCMUAF) hoặc Nong Lam University, viết tắt NLU) là một trường đại học đa ngành tại Việt Nam, chuyên đào tạo và nghiên cứu nhóm ngành nông – lâm – ngư nghiệp. Trường trực thuộc Bộ Giáo dục và Đào tạo thành lập trên cơ sở Trường Quốc gia Nông Lâm Mục Bảo Lộc được thành lập từ năm 1955. Trong quá trình phát triển, trường từng là thành viên trong hệ thống Đại học Quốc gia nhưng sau đó được tách ra cho đến ngày nay."@vi ;
     owl:sameAs dbr:Ho_Chi_Minh_City_University_of_Agriculture_and_Forestry,
         wd:Q5873976,
         <https://ror.org/03030f487> ;
@@ -43,6 +44,7 @@ university:truong-dai-hoc-nong-lam-thanh-pho-ho-chi-minh a dbo:University,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> ;
     vnedu:address "Khu phố 33, phường Linh Xuân" ;
     vnedu:admissionCode "NLS" ;
+    vnedu:campus "118 ha" ;
     vnedu:foundingYear "1955"^^xsd:gYear ;
     vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
     vnedu:hasAlumnus person:dinh-chuong-pham,
@@ -57,6 +59,23 @@ university:truong-dai-hoc-nong-lam-thanh-pho-ho-chi-minh a dbo:University,
         person:tuyen-truong,
         person:ut-v-nguyen ;
     vnedu:hasLeader person:nguyen-tat-toan ;
+    vnedu:history """Năm 1954, xây dựng Trường Quốc gia Nông Lâm Mục Bảo Lộc, tiền thân của Trường Đại học Nông Lâm TPHCM.
+
+Ngày 19 tháng 11 năm 1955, thành lập Trường Quốc gia Nông Lâm Mục Bảo Lộc và tuyển sinh khóa đầu tiên, 60 sinh viên trúng tuyển trên 1200 thí sinh dự thi đại học.
+
+Năm 1963, trường đổi tên thành Cao đẳng Nông Lâm Súc.
+
+Năm 1972, trường đổi tên thành Học viện Nông nghiệp.
+
+Năm 1974, trường đổi tên thành Đại học Nông nghiệp Sài Gòn thuộc Viện Đại học Bách khoa Thủ Đức.
+
+Sau khi Việt Nam Cộng hòa sụp đổ, đến cuối năm 1975, trường đổi tên thành Đại học Nông nghiệp 4.
+
+Năm 1985, Trường Đại học Nông Lâm Nghiệp Thành phố Hồ Chí Minh trên cơ sở sáp nhập trường Đại học Nông nghiệp 4 và Cao đẳng Lâm nghiệp (ở Trảng Bom, Đồng Nai).
+
+Năm 1995, theo quyết định của Thủ tướng Chính phủ, Trường Đại học Nông Lâm nghiệp TPHCM là thành viên của Đại học Quốc gia TPHCM.
+
+Cuối năm 2000, Trường Đại học Nông Lâm nghiệp TP.HCM được tách ra khỏi Đại học Quốc gia TP. HCM và trực thuộc Bộ Giáo dục và Đào tạo, đồng thời đổi tên trường thành Trường Đại học Nông Lâm Thành phố Hồ Chí Minh."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -66,7 +85,22 @@ university:truong-dai-hoc-nong-lam-thanh-pho-ho-chi-minh a dbo:University,
     vnedu:rector person:nguyen-tat-toan ;
     vnedu:website <http://www.hcmuaf.edu.vn/> ;
     schema:employee person:nguyen-tat-toan ;
+    schema:foundingDate "1955-11-19"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/4/4b/Nh%C3%A0_R%E1%BA%A1ng_%C4%90%C3%B4ng%2C_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg> ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/e/e1/Logo_HCMUAF.svg> ;
+    schema:telephone "84-8) 38960711" .
+
+<https://upload.wikimedia.org/wikipedia/commons/4/4b/Nh%C3%A0_R%E1%BA%A1ng_%C4%90%C3%B4ng%2C_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg> a schema:ImageObject ;
+    schema:creditText "Lý Kiến Quốc" ;
+    schema:license "CC0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Nh%C3%A0_R%E1%BA%A1ng_%C4%90%C3%B4ng,_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Nh%C3%A0_R%E1%BA%A1ng_%C4%90%C3%B4ng%2C_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg/330px-Nh%C3%A0_R%E1%BA%A1ng_%C4%90%C3%B4ng%2C_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg> .
+
+<https://upload.wikimedia.org/wikipedia/vi/e/e1/Logo_HCMUAF.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_HCMUAF.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/e/e1/Logo_HCMUAF.svg/330px-Logo_HCMUAF.svg.png> .
 

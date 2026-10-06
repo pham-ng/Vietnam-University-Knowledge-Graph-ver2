@@ -27,6 +27,7 @@ university:truong-dai-hoc-vo-truong-toan a dbo:University,
         schema:Organization ;
     rdfs:label "Vo Truong Toàn University"@en,
         "Trường Đại học Võ Trường Toản"@vi ;
+    dbo:abstract "Trường Đại học Võ Trường Toản là một đại học tư thục tại thành phố Cần Thơ, Việt Nam, được thành lập ngày 18 tháng 2 năm 2008. Trường đào tạo đa ngành - đa lĩnh vực, tập trung vào các ngành phục vụ cho kinh tế mũi nhọn của tỉnh Hậu Giang là công nghiệp, nông nghiệp và dịch vụ du lịch. Đây là trường đại học đầu tiên được thành lập tại tỉnh Hậu Giang (cũ). Trường được xây dựng theo mô hình \"Thành phố đại học\" mang phong cách châu Âu trên diện tích 20 hecta và được ví như cung điện châu Âu độc nhất vô nhị ở Việt Nam."@vi ;
     owl:sameAs wd:Q10829161 ;
     geo:lat 9.968483 ;
     geo:long 105.737531 ;
@@ -38,6 +39,21 @@ university:truong-dai-hoc-vo-truong-toan a dbo:University,
     vnedu:address "Quốc lộ 1, xã Thạnh Xuân, thành phố Cần Thơ" ;
     vnedu:foundingYear "2008"^^xsd:gYear ;
     vnedu:hasLeader person:duong-dang-khoa ;
+    vnedu:history """Được thành lập ngày 18 tháng 02 năm 2008 theo quyết định số 196/QĐ-TTg của Thủ tướng Chính phủ, Trường Đại học Võ Trường Toản (tiền thân là Trường Đại học tư thục Miền Tây) thuộc Bộ Giáo dục và Đào Tạo, nhà trường được giao nhiệm vụ đào tạo đa hệ, đa ngành và đa trình độ nhằm tạo nguồn nhân lực chất lượng cao có trí tuệ, bản lĩnh, sáng tạo cho vùng đồng bằng sông Cửu Long nói riêng và cả nước nói chung.
+
+Trường Đại học Võ Trường Toản hướng đến xây dựng mẫu hình trường Đại học hiện đại, mang tầm vóc quốc tế về quy mô và chất lượng. Được xây dựng theo mô hình "Thành phố đại học" mang phong cách châu Âu trên diện tích 20 hecta, đến năm 2015, Trường Đại học Võ Trường Toản sẽ trở thành một trung tâm đào tạo nguồn nhân lực uy tín trong hệ thống giáo dục đại học tiên tiến; góp phần nâng cao trình độ dân trí và trình độ lực lượng lao động sản xuất trong bối cảnh hội nhập nền kinh tế quốc tế; hỗ trợ tích cực cho công tác quản lý và đặc biệt là xây dựng đội ngũ những người lao động trẻ có trình độ, dễ dàng tiếp thu sự chuyển giao công nghệ từ các nước tiên tiến, các đối tác mang tầm quốc tế.
+
+Năm 2011, Trường được Bộ GD&ĐT cấp phép đào tạo ngành Y khoa và Dược học.
+
+Năm 2017, Trường vinh được chuyên trang World Directory of Medical Schools cập nhật trong danh bạ các trường đào tạo y khoa được công nhận trên toàn thế giới.
+
+Năm 2021, Trường đạt chuẩn kiểm định chất lượng giáo dục theo bộ tiêu chuẩn mới của Bộ GD&ĐT.
+
+Năm 2024, Trường bắt đầu đào tạo ngành Răng - Hàm - Mặt
+
+Đơn vị đào tạo Trường Đại học Võ Trường Toản hiện có 07 khoa: Khoa Y, Khoa Răng-Hàm-Mặt, Khoa Dược, Khoa Công nghệ thông tin, Khoa Kinh tế Luật, Khoa Sau Đại học và Khoa GDQP&AN; 03 trung tâm đào tạo: Trung tâm Nghiên cứu và Hợp tác quốc tế, Trung tâm đào tạo theo nhu cầu xã hội, Trung tâm Công nghệ phần mềm và các đơn vị khác.
+
+Hiệu trưởng qua các thời kỳ: TS.Huỳnh Công Tín PGS.TS.Hồ Trọng Viện TS.Dương Đăng Khoa"""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:can-tho,
         region:nam-bo ;
@@ -45,7 +61,15 @@ university:truong-dai-hoc-vo-truong-toan a dbo:University,
     vnedu:rector person:duong-dang-khoa ;
     vnedu:website <http://vttu.edu.vn> ;
     schema:employee person:duong-dang-khoa ;
+    schema:foundingDate "2008-02-18"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/vi/d/d4/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C3%B5_Tr%C6%B0%E1%BB%9Dng_To%E1%BA%A3n.JPG> ;
     schema:location country:viet-nam,
         province:can-tho,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:telephone "+84-(0)711.3953200" .
+
+<https://upload.wikimedia.org/wikipedia/vi/d/d4/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C3%B5_Tr%C6%B0%E1%BB%9Dng_To%E1%BA%A3n.JPG> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C3%B5_Tr%C6%B0%E1%BB%9Dng_To%E1%BA%A3n.JPG> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/d/d4/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C3%B5_Tr%C6%B0%E1%BB%9Dng_To%E1%BA%A3n.JPG/330px-%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C3%B5_Tr%C6%B0%E1%BB%9Dng_To%E1%BA%A3n.JPG> .
 

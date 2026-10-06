@@ -17,111 +17,139 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-van-xuan",
-  "@type": [
-    "vnedu:PrivateInstitution",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "https://www.vxut.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_V%E1%BA%A1n_Xu%C3%A2n"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-van-xuan",
+      "@type": [
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PrivateInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ Vạn Xuân (tiếng Anh: Van Xuan University of Technology, viết tắt là VXUT). Trường được thành lập ngày 6 tháng 8 năm 2008 theo Quyết định 1068/QĐ-TTg của Thủ tướng Chính phủ Việt Nam. Trụ sở chính của Trường ở tại 103 Đại lộ Nguyễn Sinh Cung, phường Cửa Lò (trước đây thuộc thành phố Vinh), tỉnh Nghệ An, Việt Nam và Cơ sở 2 ở tại Km 2 Đại lộ Lê-nin, thành phố Vinh, tỉnh Nghệ An, Việt Nam."
+      },
+      "foaf:homepage": {
+        "@id": "https://www.vxut.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_V%E1%BA%A1n_Xu%C3%A2n"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/Van_Xuan_University_of_Technology"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "18.7894"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.717"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/01pjwns67"
+        },
+        {
+          "@id": "wd:Q7913787"
+        },
+        {
+          "@id": "dbr:Van_Xuan_University_of_Technology"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=74533651"
+        },
+        {
+          "@id": "wd:Q7913787"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Van Xuan University of Technology"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Công nghệ Vạn Xuân"
+        }
+      ],
+      "schema:email": "vanxuan@vxut.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-luu-thuy"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "2008-08-06"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/f/f0/Logo_VXUT_2.jpg"
+      },
+      "schema:telephone": "0238-3956561",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ Vạn Xuân"
+      },
+      "vnedu:address": "103 Đại lộ Nguyễn Sinh Cung, phường Cửa Lò",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2008"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-luu-thuy"
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PrivateOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-luu-thuy"
+      },
+      "vnedu:website": {
+        "@id": "https://www.vxut.edu.vn/"
+      }
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Van_Xuan_University_of_Technology"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/f/f0/Logo_VXUT_2.jpg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_VXUT_2.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/f/f0/Logo_VXUT_2.jpg/330px-Logo_VXUT_2.jpg"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "18.7894"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.717"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "https://ror.org/01pjwns67"
-    },
-    {
-      "@id": "dbr:Van_Xuan_University_of_Technology"
-    },
-    {
-      "@id": "wd:Q7913787"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q7913787"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74533651"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Công nghệ Vạn Xuân"
-    },
-    {
-      "@language": "en",
-      "@value": "Van Xuan University of Technology"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-luu-thuy"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Công nghệ Vạn Xuân"
-  },
-  "vnedu:address": "103 Đại lộ Nguyễn Sinh Cung, phường Cửa Lò",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2008"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-luu-thuy"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PrivateOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-luu-thuy"
-  },
-  "vnedu:website": {
-    "@id": "https://www.vxut.edu.vn/"
-  }
+  ]
 }

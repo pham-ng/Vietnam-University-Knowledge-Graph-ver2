@@ -30,6 +30,7 @@ university:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-thanh-pho-ho-chi-mi
         schema:Organization ;
     rdfs:label "VNU-HCM University of Science"@en,
         "Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Thành phố Hồ Chí Minh"@vi ;
+    dbo:abstract "Trường Đại học Khoa học tự nhiên, Đại học Quốc gia Thành phố Hồ Chí Minh ( – VNUHCM-US hoặc HCMUS) là trường đại học đầu ngành về đào tạo, nghiên cứu khoa học cơ bản, khoa học công nghệ và ứng dụng ở miền Nam Việt Nam. Trường là thành viên của Đại học Quốc gia Thành phố Hồ Chí Minh và được xếp vào nhóm trường đại học trọng điểm quốc gia Việt Nam. Ngày 30 tháng 3 năm 1996, lĩnh vực khoa học tự nhiên được tách ra từ Trường Đại học Tổng hợp Thành phố Hồ Chí Minh để thành lập Trường Đại học Khoa học tự nhiên và tham gia vào Đại học Quốc gia Thành phố Hồ Chí Minh cho đến ngày nay."@vi ;
     owl:sameAs dbr:Ho_Chi_Minh_City_University_of_Science,
         wd:Q5873997,
         <https://ror.org/05jfbgm49> ;
@@ -45,6 +46,7 @@ university:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-thanh-pho-ho-chi-mi
     vnedu:academicStaff "565"^^xsd:nonNegativeInteger ;
     vnedu:address "227 Nguyễn Văn Cừ, Phường Chợ Quán" ;
     vnedu:admissionCode "QST" ;
+    vnedu:campus "34 Hectares" ;
     vnedu:foundingYear "1941"^^xsd:gYear ;
     vnedu:hasAlumnus person:anh-le-hoang-nguyen,
         person:binh-x-nguyen,
@@ -132,6 +134,15 @@ university:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-thanh-pho-ho-chi-mi
         person:vu-dang-hoang-nguyen,
         person:vu-nguyen ;
     vnedu:hasLeader person:tran-le-quan ;
+    vnedu:history """Trường Đại học Khoa học tự nhiên tách ra từ Trường Đại học Quốc gia Thành phố Hồ Chí Minh (Trường ĐH KHTN) có tiền thân là Trường Cao đẳng Khoa học trực thuộc Viện Đại học Đông Dương được thành lập ở Hà Nội vào năm 1941. Năm 1947, Trung tâm thứ hai được thiết lập tại Sài Gòn và tọa lạc trên phần đất của Bệnh viện Policlinique Dejean de la Batie (nay là Bệnh viện Sài Gòn). Sau đó, Trường chuyển về Đại lộ Nancy (sau này đổi tên thành Đại lộ Cộng Hòa, nay là 227 Nguyễn Văn Cừ).
+
+Tháng 11 năm 1953, Trường Cao đẳng Khoa học được đổi tên thành Khoa học Đại học Đường. Năm 1964, Khoa học Đại học Đường xây thêm một chi khoa ở Dĩ An, Bình Dương (nay là cơ sở 2), đào tạo chứng chỉ Sinh lý, Sinh hóa. Tháng 4/1975, Khoa học Đại học Đường một lần nữa được đổi tên thành Trường Đại học Khoa học.
+
+Năm 1977, Trường Đại học Tổng hợp Thành phố Hồ Chí Minh được chính thức thành lập trên cơ sở sáp nhập 02 là Trường Đại học Khoa học và Trường Đại học Văn Khoa. Từ 1977 - 1996, Trường có các Khoa: Toán - Tin học, Vật lý, Hóa học, Sinh học, Địa chất, Công nghệ Thông tin, Kinh tế, Luật, và các Khoa thuộc lĩnh vực Khoa học Xã hội cùng một số trung tâm nghiên cứu ứng dụng.
+
+Tháng 1 năm 1995, Đại học Quốc gia Thành phố Hồ Chí Minh được thành lập từTrường Đại học Tổng hợp Thành phố Hồ Chí Minh trở thành thành viên của Đại học Quốc gia Thành phố Hồ Chí Minh.
+
+Tháng 3 năm 1996, Trường Đại học Khoa học tự nhiên được chính thức ra đời theo Quyết định số 1236/GDĐT của Bộ Giáo dục và Đào tạo và là thành viên của Đại học Quốc gia Thành phố Hồ Chí Minh."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -155,8 +166,17 @@ university:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-thanh-pho-ho-chi-mi
         major:7480101,
         major:7480201 ;
     vnedu:website <http://www.hcmus.edu.vn/> ;
+    schema:email "info@hcmus.edu.vn" ;
     schema:employee person:tran-le-quan ;
+    schema:foundingDate "1941-07-26"^^xsd:date ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/c/ca/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_T%E1%BB%B1_nhi%C3%AAn%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg> ;
+    schema:telephone "84.8) 38 353.193" .
+
+<https://upload.wikimedia.org/wikipedia/vi/c/ca/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_T%E1%BB%B1_nhi%C3%AAn%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_T%E1%BB%B1_nhi%C3%AAn,_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/c/ca/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_T%E1%BB%B1_nhi%C3%AAn%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg/330px-Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_T%E1%BB%B1_nhi%C3%AAn%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg.png> .
 

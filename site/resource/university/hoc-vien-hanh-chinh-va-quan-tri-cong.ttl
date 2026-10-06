@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -27,6 +28,7 @@ university:hoc-vien-hanh-chinh-va-quan-tri-cong a foaf:Organization,
         schema:Organization ;
     rdfs:label "Academy of Public Administration and Governance"@en,
         "Học viện Hành chính và Quản trị công"@vi ;
+    dbo:abstract "Học viện Hành chính và Quản trị công (tên tiếng Anh: Academy of Public Administration and Governance; APAG) là đơn vị sự nghiệp công lập trực thuộc Học viện Chính trị Quốc gia Hồ Chí Minh, đơn vị chịu sự quản lý của Ban Chấp hành Trung ương Đảng Cộng sản Việt Nam. Học viện có chức năng đào tạo, bồi dưỡng năng lực, kiến thức, kỹ năng cho đội ngũ cán bộ, công chức, viên chức của Đảng & Nhà nước Việt Nam về hành chính, lãnh đạo, quản lý của toàn bộ nền công vụ Việt Nam."@vi ;
     owl:sameAs dbr:National_Academy_of_Public_Administration_\(Vietnam\),
         wd:Q10771885,
         <https://ror.org/02dg2kf02> ;
@@ -50,6 +52,17 @@ university:hoc-vien-hanh-chinh-va-quan-tri-cong a foaf:Organization,
         person:tran-dai-quang,
         person:truong-tan-sang ;
     vnedu:hasLeader person:nguyen-ba-chien ;
+    vnedu:history """Học viện Hành chính và Quản trị công tiền thân là Trường Hành chính, được thành lập năm 1959 trực thuộc Bộ Nội vụ, với nhiệm vụ huấn luyện cán bộ chính quyền cấp huyện. Trường đặt tại huyện Từ Sơn, tỉnh Bắc Ninh và khai giảng khóa đầu tiên vào ngày 16 tháng 10 năm 1959.
+
+Năm 1961, trường được đổi tên thành Trường Hành chính Trung ương và chuyển trụ sở về Láng Hạ, Hà Nội. Năm 1980, trường được sáp nhập với Trường Kinh tế Trung ương thành Trường Hành chính – Kinh tế Trung ương; đến năm 1981 được tách trở lại thành Trường Hành chính Trung ương.
+
+Năm 1990, trường đổi tên thành Trường Hành chính Quốc gia; đến năm 1992 đổi tên thành Học viện Hành chính Quốc gia.
+
+Giai đoạn 2007–2013, Học viện trực thuộc Học viện Chính trị Quốc gia Hồ Chí Minh với tên gọi Học viện Hành chính. Từ năm 2013, Học viện trở lại trực thuộc Bộ Nội vụ theo Nghị quyết số 121/NQ-CP.
+
+Năm 2017, Học viện tiếp nhận Trường Đào tạo, bồi dưỡng cán bộ, công chức trực thuộc Bộ Nội vụ. Năm 2022, Trường Đại học Nội vụ Hà Nội được sáp nhập vào Học viện.
+
+Từ năm 2025, Học viện mang tên Học viện Hành chính và Quản trị công và trực thuộc Học viện Chính trị Quốc gia Hồ Chí Minh."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -60,8 +73,16 @@ university:hoc-vien-hanh-chinh-va-quan-tri-cong a foaf:Organization,
         "HVHC&QTC" ;
     vnedu:website <https://apag.edu.vn> ;
     schema:employee person:nguyen-ba-chien ;
+    schema:foundingDate "1959-05-29"^^xsd:date ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/9/93/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0nh_ch%C3%ADnh_v%C3%A0_Qu%E1%BA%A3n_tr%E1%BB%8B_c%C3%B4ng.png> ;
     schema:parentOrganization university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh .
+
+<https://upload.wikimedia.org/wikipedia/commons/9/93/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0nh_ch%C3%ADnh_v%C3%A0_Qu%E1%BA%A3n_tr%E1%BB%8B_c%C3%B4ng.png> a schema:ImageObject ;
+    schema:creditText "Học viện Hành chính và Quản trị công" ;
+    schema:license "CC0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Logo_H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0nh_ch%C3%ADnh_v%C3%A0_Qu%E1%BA%A3n_tr%E1%BB%8B_c%C3%B4ng.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0nh_ch%C3%ADnh_v%C3%A0_Qu%E1%BA%A3n_tr%E1%BB%8B_c%C3%B4ng.png/330px-Logo_H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0nh_ch%C3%ADnh_v%C3%A0_Qu%E1%BA%A3n_tr%E1%BB%8B_c%C3%B4ng.png> .
 

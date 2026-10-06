@@ -17,113 +17,151 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-dai-hoc-thai-nguyen",
-  "@type": [
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "https://ictu.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.576455"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.813679"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "wd:Q10829030"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/4/4d/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng_ICTU_2026.png",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng_ICTU_2026.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/4/4d/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng_ICTU_2026.png/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng_ICTU_2026.png"
+      }
     },
     {
-      "@id": "https://ror.org/04gv3mr75"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-dai-hoc-thai-nguyen",
+      "@type": [
+        "vnedu:MemberInstitution",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ thông tin và truyền thông (Tiếng Anh: Thai Nguyen University of Information and Communication Technology - ICTU) là một trường thành viên thuộc Đại học Thái Nguyên, chuyên về đào tạo nguồn nhân lực số, nghiên cứu khoa học và chuyển giao công nghệ trong các lĩnh vực liên quan đến chuyển đổi số cho cả nước, trong đó tập trung chủ yếu cho thị trường nhân lực tại Hà Nội và các tỉnh vùng thủ đô. Đây là trường đầu tiên và duy nhất tính đến năm 2017 trong khu vực trung du miền núi phía Bắc (trường thứ 16 trên toàn quốc) đạt chuẩn chất lượng giáo dục đại học."
+      },
+      "foaf:homepage": {
+        "@id": "https://ictu.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.576455"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.813679"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/04gv3mr75"
+        },
+        {
+          "@id": "wd:Q10829030"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829030"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75533530"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Thai Nguyen University of Information and Communication Technology"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Công nghệ thông tin và Truyền thông, Đại học Thái Nguyên"
+        }
+      ],
+      "schema:email": "contact@ictu.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phung-trung-nghia"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/8/8e/H%C3%ACnh_%E1%BA%A3nh_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng.jpeg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/4/4d/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng_ICTU_2026.png"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen"
+      },
+      "schema:telephone": "84) 0280.3846254",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ thông tin và Truyền thông, Đại học Thái Nguyên"
+      },
+      "vnedu:address": "Đường Z 115, phường Quyết Thắng",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2001"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phung-trung-nghia"
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phung-trung-nghia"
+      },
+      "vnedu:website": {
+        "@id": "https://ictu.edu.vn"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/8/8e/H%C3%ACnh_%E1%BA%A3nh_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng.jpeg",
+      "@type": "schema:ImageObject",
+      "schema:license": "CC BY-SA 3.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:H%C3%ACnh_%E1%BA%A3nh_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng.jpeg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/H%C3%ACnh_%E1%BA%A3nh_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng.jpeg/330px-H%C3%ACnh_%E1%BA%A3nh_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng.jpeg"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q10829030"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75533530"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Thai Nguyen University of Information and Communication Technology"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Công nghệ thông tin và Truyền thông, Đại học Thái Nguyên"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phung-trung-nghia"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen"
-  },
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Công nghệ thông tin và Truyền thông, Đại học Thái Nguyên"
-  },
-  "vnedu:address": "Đường Z 115, phường Quyết Thắng",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2001"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phung-trung-nghia"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phung-trung-nghia"
-  },
-  "vnedu:website": {
-    "@id": "https://ictu.edu.vn"
-  }
+  ]
 }

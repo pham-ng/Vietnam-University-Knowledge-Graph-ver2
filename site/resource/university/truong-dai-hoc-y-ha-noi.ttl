@@ -31,6 +31,7 @@ university:truong-dai-hoc-y-ha-noi a dbo:University,
         schema:Organization ;
     rdfs:label "Hanoi Medical University"@en,
         "Trường Đại học Y Hà Nội"@vi ;
+    dbo:abstract "Trường Đại học Y Hà Nội ( – HMU) là một trường đại học đầu ngành chuyên ngành y khoa tại Việt Nam. Trường có sứ mạng đào tạo bác sĩ, cử nhân có trình độ đại học, sau đại học, nghiên cứu khoa học và chuyển giao công nghệ y dược, hỗ trợ phát triển hệ thống y tế nhằm đáp ứng nhu cầu chăm sóc sức khỏe cho nhân dân khu vực Đồng bằng sông Hồng."@vi ;
     owl:sameAs dbr:Hanoi_Medical_University,
         wd:Q4383725,
         <https://ror.org/01n2t3x97> ;
@@ -145,6 +146,17 @@ university:truong-dai-hoc-y-ha-noi a dbo:University,
         person:vu-van-can ;
     vnedu:hasLeader person:nguyen-huu-tu ;
     vnedu:hasMember university:vien-dao-tao-y-hoc-du-phong-va-y-te-cong-cong ;
+    vnedu:history """Tiền thân của trường Đại học Y Hà Nội là École de Médecine de Hanoi (Trường Y khoa Hà Nội) do Pháp thành lập năm 1902. Hiệu trưởng đầu tiên của trường là Bác sĩ Alexandre Yersin. Cùng với các trường chuyên ngành đã được thành lập cùng thời kỳ đó, như Trường Dạy nghề Hà Nội (École Professionelle de Hanoi) do Phòng Thương mại Hà Nội lập ra vào năm 1898, Trường Hậu bổ Hà Nội (École d'Aministration de Hanoi) năm 1897, Trường Công chính (École des Travaux Publics) năm 1902, đây là một trong nhiều trường đào tạo theo lối giáo dục phương Tây đầu tiên ở Việt Nam.
+
+Năm 1906, Toàn quyền Đông Dương Paul Beau thành lập Viện Đại học Đông Dương (nay là Đại học Quốc gia Hà Nội), Trường Y khoa Hà Nội được sáp nhập trở thành một trường thành viên thuộc Viện Đại học Đông Dương. Năm 1913, Toàn quyền Albert Sarraut ký nghị định thành lập Trường Y Dược khoa Đông Dương trên cơ sở Trường Y khoa cũ. Cho tới năm 1914, trường đã đào tạo được 237 y sĩ, y tá và nữ hộ sinh.
+
+Năm 1945 trên cơ sở tiếp quản Trường Y Dược khoa Đông Dương trường trở thành một trong 5 ban đại học trực thuộc Đại học Quốc gia Việt Nam với tên gọi Ban Y Dược (còn gọi là đại học Y Dược). Dưới chính thể Việt Nam Dân chủ Cộng hòa, giáo trình đổi theo mô hình giáo dục Liên Xô. Ngoài việc đào tạo chuyên môn, trường theo đuổi học tập chính trị qua những đợt chỉnh huấn, tham gia "học tập công nông".
+
+Năm 1946, cuộc kháng chiến toàn quốc bùng nổ, các ban đại học trực thuộc Đại học Quốc gia Việt Nam trong đó có ban Y Dược thực hiện mệnh lệnh của Chính phủ, di chuyển ra các vùng tự do, đặc biệt là chiến khu Việt Bắc.
+
+Năm 1954, sau Hiệp định Genève, miền Bắc được hoàn toàn giải phóng. Các trường đại học lượt được di chuyển về Thủ đô để tiếp quản các trường đại học, cao đẳng ở Hà Nội. Đại học Quốc gia Việt Nam lúc này được tổ chức lại. Toàn bộ truyền thống, hoạt động và các ban đại học trực thuộc được hợp nhất để tạo thành Trường đại học Tổng hợp Hà Nội. Riêng Ban y dược thuộc Đại học Quốc gia Việt Nam sau khi di chuyển về Thủ đô hoạt động độc lập, lấy tên Trường Đại học Y Dược Hà Nội (hay còn có tên khác là trường Đại học Y - Dược khoa).
+
+Năm 1958, 1/6 thời giờ học trình dành cho việc học tập chính trị. Từ sáu năm học, học trình rút xuống còn bốn năm. đến năm 1962 thì trở lại chương trình sáu năm vì phẩm chất kém. Tuy nhiên, 12% thời giờ vẫn là học chính trị và khi tốt nghiệp sinh viên không trình luận án mà thi hai phần: chuyên môn và chính trị để ra trường."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -159,8 +171,17 @@ university:truong-dai-hoc-y-ha-noi a dbo:University,
         major:7720501 ;
     vnedu:website <http://www.hmu.edu.vn> ;
     schema:employee person:nguyen-huu-tu ;
+    schema:foundingDate "1902-02-27"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/7/79/Yhanoi.jpg> ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
-    schema:subOrganization university:vien-dao-tao-y-hoc-du-phong-va-y-te-cong-cong .
+    schema:subOrganization university:vien-dao-tao-y-hoc-du-phong-va-y-te-cong-cong ;
+    schema:telephone "84.04.8523798" .
+
+<https://upload.wikimedia.org/wikipedia/commons/7/79/Yhanoi.jpg> a schema:ImageObject ;
+    schema:creditText "Đại học Y Hà Nội" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Yhanoi.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Yhanoi.jpg/330px-Yhanoi.jpg> .
 

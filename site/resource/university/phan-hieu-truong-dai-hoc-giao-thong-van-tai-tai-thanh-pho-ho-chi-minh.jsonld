@@ -17,95 +17,123 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/phan-hieu-truong-dai-hoc-giao-thong-van-tai-tai-thanh-pho-ho-chi-minh",
-  "@type": [
-    "vnedu:Branch",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:Organization",
-    "foaf:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.utc2.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Ph%C3%A2n_hi%E1%BB%87u_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Giao_th%C3%B4ng_V%E1%BA%ADn_t%E1%BA%A3i_t%E1%BA%A1i_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q10829042"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "wd:Q10829042"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/f/fa/LogoUTC.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "HXNam",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:LogoUTC.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/LogoUTC.jpg/330px-LogoUTC.jpg"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75258491"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/phan-hieu-truong-dai-hoc-giao-thong-van-tai-tai-thanh-pho-ho-chi-minh",
+      "@type": [
+        "vnedu:Branch",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "vnedu:PublicInstitution",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Phân hiệu Trường Đại học Giao thông Vận tải tại Thành phố Hồ Chí Minh ( – UTC2) là cơ sở đào tạo phía Nam của Trường Đại học Giao thông Vận tải có trụ sở tại Hà Nội, một trường đại học công lập hàng đầu chuyên đào tạo nhóm ngành kỹ thuật và kinh tế trong giao thông vận tải tại Việt Nam. Sau ngày miền Nam hoàn toàn giải phóng, để đáp ứng nhu cầu mới cho sự nghiệp xây dựng đất nước nói chung và phát triển giao thông vận tải khu vực phía Nam nói riêng, ngày 27 tháng 4 năm 1990, Bộ trưởng Bộ Giáo dục và Đào tạo ký Quyết định số 139/TCCB thành lập Cơ sở II (nay là Phân hiệu) tại Thành phố Hồ Chí Minh của Trường Đại học Giao thông Vận tải trực thuộc Bộ Giáo dục và Đào tạo."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.utc2.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Ph%C3%A2n_hi%E1%BB%87u_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Giao_th%C3%B4ng_V%E1%BA%ADn_t%E1%BA%A3i_t%E1%BA%A1i_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q10829042"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829042"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75258491"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "University of Transport and Communications"
+        },
+        {
+          "@language": "vi",
+          "@value": "Phân hiệu Trường Đại học Giao thông Vận tải tại Thành phố Hồ Chí Minh"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hung"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/f/fa/LogoUTC.jpg"
+      },
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Phân hiệu Trường Đại học Giao thông Vận tải tại Thành phố Hồ Chí Minh"
+      },
+      "vnedu:address": "Số 450–451 Lê Văn Việt, phường Tăng Nhơn Phú A, thành phố Thủ Đức",
+      "vnedu:campus": "16,3ha",
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Trường Đại học Giao thông Vận tải cơ sở II"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1990"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hung"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Phần dưới đây là lịch sử hình thành và phát triển của Trường đại học Giao thông Vận tải. Chứ không phải riêng phân hiệu tại TP.HCM.\n\nTrường Đại học Giao thông Vận tải ngày nay có tiền thân là Trường Cao đẳng Công chính trước khi đất nước giành được độc lập 2/9/1945 và được khai giảng lại dưới chính thể Việt Nam Dân chủ Cộng hòa. Ngày 13/4/1946 Chủ tịch Hồ Chí Minh ký sắc lệnh số 50 đổi tên trường Cao đẳng Công chính thành Trường Đại học Công chính; Tháng 12/1946, Trường ngừng công tác giảng dạy và đào tạo học tập để phục vụ kháng chiến; Tháng 10/1947, Trường được tái giảng dạy tại Chùa Viên - Phú Xuyên; Tháng 4/1948, Trường rời địa điểm tới huyện Yên Mô tỉnh Ninh Bình; Ngày 1/2/1949, theo sắc lệnh số 02/SL và theo nghị quyết số 60 ngày 24/2/1949 Trường Đại học Công Chính đổi tên thành Trường Cao đẳng Kỹ thuật; Ngày 1/1/1952 Trường được đổi tên thành Trường Cao đẳng Giao thông Công Chính; Tháng 4/1955, Trường trở về Hà Nội tái xây dựng cơ sở mới tại Cầu Giấy; Tháng 8/1956, Trường được tách ra thành hai trường Trung cấp giao thông và Trung cấp Thủy Lợi - Kiến Trúc; Tháng 8/1960 Bộ Giao thông Vận tải quyết định thành lập ban xây dựng Trường Đại học Giao thông Vận tải; Ngày 24/3/1962 Thủ tướng Phạm Văn Đồng ký quyết định số 42/CP thành lập Trường Đại học Giao thông Vận tải; Tháng 8/1965 Trường đưa toàn bộ lực lượng đi sơ tán tại Mai Sưu - Bắc Giang. Ngày 23/7/1968 Trường đổi tên thành Đại học Giao thông Đường Sắt và Đường Bộ, đồng thời thành lập phân hiệu Đại học Giao thông Đường Thủy ở Hải Phòng; Tháng 9/1969 Trường chuyển từ Mai Sưu về Hà Nội; Tháng 7/1983 Trường được bàn giao từ Bộ Giao thông Vận tải sang Bộ Đại học và Trung học chuyên nghiệp (Bộ GDĐT) quản lý toàn diện; Tháng 11/1985 Trường đổi tên thành tr­ường Đại học Giao thông Vận tải; Tháng 4/1990 Trường chính thức thành lập cơ sở 2 tại quận 9, thành phố Hồ Chí Minh. Tháng 7/2016 Trường được Bộ trưởng Bộ Giáo dục và Đào tạo ký quyết định nâng cấp thành Phân hiệu Trường Đại học Giao thông Vận tải tại Thành phố Hồ Chí Minh.\n\nNgày truyền thống của trường là 15 tháng 11."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hung"
+      },
+      "vnedu:shortName": "UTC2",
+      "vnedu:website": {
+        "@id": "http://www.utc2.edu.vn"
+      }
     }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Phân hiệu Trường Đại học Giao thông Vận tải tại Thành phố Hồ Chí Minh"
-    },
-    {
-      "@language": "en",
-      "@value": "University of Transport and Communications"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hung"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Phân hiệu Trường Đại học Giao thông Vận tải tại Thành phố Hồ Chí Minh"
-  },
-  "vnedu:address": "Số 450–451 Lê Văn Việt, phường Tăng Nhơn Phú A, thành phố Thủ Đức",
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Trường Đại học Giao thông Vận tải cơ sở II"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1990"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hung"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hung"
-  },
-  "vnedu:shortName": "UTC2",
-  "vnedu:website": {
-    "@id": "http://www.utc2.edu.vn"
-  }
+  ]
 }

@@ -26,7 +26,12 @@ from common import record_manifest  # noqa: E402
 SOURCES = {"viwiki_pages.json": "https://vi.wikipedia.org/w/api.php",
            "wd_institutions.json": config.WIKIDATA_SPARQL, "wd_entities.json": config.WIKIDATA_SPARQL,
            "wd_provinces.json": config.WIKIDATA_SPARQL, "wd_alumni.json": config.WIKIDATA_SPARQL,
-           "dbp_years.json": config.DBPEDIA_SPARQL}
+           "dbp_years.json": config.DBPEDIA_SPARQL, "viwiki_links.json": "https://vi.wikipedia.org/w/api.php",
+           "viwiki_images.json": "https://vi.wikipedia.org/w/api.php"}
+# Tham số infobox chứa liên kết tới TỔ CHỨC (đối tác, cơ quan chủ quản, tổ chức mẹ, tiền thân): phân giải ra QID
+ORG_LINK_KEYS = {"affiliation", "affiliations", "liên kết", "parent", "thành viên của", "thuộc tổ chức", "trực thuộc",
+                 "bộ phận của", "chủ quản", "cơ quan chủ quản", "bộ chủ quản", "tiền thân", "hệ thống", "đối tác",
+                 "former_name", "tên cũ"}
 
 
 def save(name: str, obj) -> None:
@@ -56,6 +61,8 @@ def main() -> None:
                if f.get("labels", {}).get("vi") and not f["labels"].get("vititle")}
     pages = wp.collect(titles, guesses)
     save("viwiki_pages.json", pages)
+    link_titles = [t for p in pages for k, ts in p.get("links", {}).items() if k in ORG_LINK_KEYS for t in ts]
+    save("viwiki_links.json", wp.resolve_titles(link_titles))
 
     print("[3/5] Hợp hai nguồn & lấy chi tiết Wikidata ...")
     universe = sorted(set(hei) | {p["qid"] for p in pages if p["qid"]}, key=lambda q: int(q[1:]))
@@ -64,6 +71,9 @@ def main() -> None:
         f["in_wikidata_hei_class"] = q in hei
     save("wd_institutions.json", list(facts.values()))
     save("dbp_years.json", wd.dbpedia_years(universe))
+    files = [f for p in pages for f in p.get("files", [])]
+    files += [x for f in facts.values() for x in f.get("logo", []) + f.get("image", [])]
+    save("viwiki_images.json", wp.image_info(files))
 
     referenced = set()
     for f in facts.values():

@@ -19,22 +19,26 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-nong-nghiep-viet-nam",
   "@type": [
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
     "schema:CollegeOrUniversity",
-    "vnedu:Academy",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
     "schema:Organization",
     "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization"
+    "vnedu:Organization",
+    "vnedu:Academy",
+    "schema:EducationalOrganization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Học viện Nông nghiệp Việt Nam (, viết tắt là VNUA), tiền thân là Trường Đại học Nông nghiệp 1 – Hà Nội, là học viện đào tạo nhóm ngành nông – lâm – ngư nghiệp tại miền Bắc Việt Nam, thuộc nhóm 30 trường đại học đứng đầu Đông Nam Á trực thuộc Bộ Nông nghiệp và Môi trường. Học viện tọa lạc tại xã Gia Lâm, thành phố Hà Nội, trong bối cảnh đơn vị hành chính cấp huyện đã được bãi bỏ theo Nghị quyết số 202/2025/QH15 của Quốc hội."
+  },
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_N%C3%B4ng_nghi%E1%BB%87p_Vi%E1%BB%87t_Nam"
+      "@id": "https://en.wikipedia.org/wiki/Vietnam_National_University_of_Agriculture"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Vietnam_National_University_of_Agriculture"
+      "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_N%C3%B4ng_nghi%E1%BB%87p_Vi%E1%BB%87t_Nam"
     }
   ],
   "geo:lat": {
@@ -47,13 +51,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q5649335"
-    },
-    {
       "@id": "dbr:Vietnam_National_University_of_Agriculture"
     },
     {
       "@id": "https://ror.org/01abaah21"
+    },
+    {
+      "@id": "wd:Q5649335"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -66,28 +70,34 @@
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "VNUA - Vietnam National University of Agriculture"
-    },
-    {
       "@language": "vi",
       "@value": "Học viện Nông nghiệp Việt Nam"
+    },
+    {
+      "@language": "en",
+      "@value": "VNUA - Vietnam National University of Agriculture"
     }
   ],
+  "schema:email": "webmaster@vnua.edu.vn",
   "schema:employee": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-lan"
+  },
+  "schema:foundingDate": {
+    "@type": "xsd:date",
+    "@value": "1956-10-12"
   },
   "schema:location": [
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
+  "schema:telephone": "844 8276346",
   "skos:notation": "HVN",
   "skos:prefLabel": {
     "@language": "vi",
@@ -99,6 +109,7 @@
   },
   "vnedu:address": "Đường Ngô Xuân Quảng, xã Gia Lâm",
   "vnedu:admissionCode": "HVN",
+  "vnedu:campus": "210 ha",
   "vnedu:director": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-lan"
   },
@@ -110,18 +121,40 @@
     "@type": "xsd:gYear",
     "@value": "1956"
   },
+  "vnedu:funding": "Ngân hàng Thế giới (WB) 54,2 triệu USD",
   "vnedu:governedBy": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-nong-nghiep-va-moi-truong"
   },
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoa-mai-nguyen"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieu-nguyen-ba"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/don-v-nguyen"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ha-sy-huan"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-phong"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-tuy"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-n-nguyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngan-thi-phan"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-hoa-nguyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-khac-than"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-thanh-thao-pham"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bang-nguyen-tran"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-n-bang"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/viet-linh-nguyen"
@@ -130,25 +163,43 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-thanh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-hao-vu"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-dang-vu"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-ha-ngo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-trach-nguyen"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-lam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-hao-vu"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-phong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duc-anh-truong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoa-mai-nguyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-manh-bao"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieu-huu-le"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-v-son"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-tran-anh-dao"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/don-v-nguyen"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-n-bang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-n-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-dinh-hoai"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hien-t-t-ngo"
@@ -157,69 +208,34 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-bac-le"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-ha-ngo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-v-son"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-manh-bao"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-xuan-nguyen"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-thanh-thao-pham"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-dinh-hoai"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ha-sy-huan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-dang-vu"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-hoa-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-quang-hoi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-tuy"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-tran-anh-dao"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bang-nguyen-tran"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-lam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tien-dat-pham"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duc-anh-truong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngan-thi-phan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-khac-than"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieu-nguyen-ba"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieu-huu-le"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-quang-hoi"
     }
   ],
   "vnedu:hasLeader": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-lan"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Học viện Nông nghiệp Việt Nam tiền thân là Trường Đại học Nông Lâm, được thành lập ngày 12 tháng 10 năm 1956 theo Nghị định số 53/NĐ-NL của Bộ Nông Lâm, là một trong ba trường đại học đầu tiên của nước Việt Nam Dân chủ Cộng hòa được thành lập sau ngày hòa bình lập lại ở miền Bắc. Khi mới thành lập, Trường trực thuộc Bộ Nông Lâm, có ba khoa với bốn chuyên ngành đào tạo: Khoa Nông học gồm hai ngành trồng trọt và cơ khí hóa nông nghiệp; Khoa Chăn nuôi Thú y có ngành Chăn nuôi - Thú y; Khoa Lâm học có ngành Lâm học. Đội ngũ cán bộ giảng dạy lúc đó có 27 người. Thầy Bùi Huy Đáp được bổ nhiệm làm Giám đốc Trường cùng hai thầy Phó Giám đốc là thầy Nguyễn Đăng và thầy Lương Định Của.\n\nTháng 12 năm 1958, Chính phủ ra Quyết định sáp nhập Viện Khảo cứu trồng trọt, Viện Khảo cứu chăn nuôi, Phòng Nghiên cứu gỗ, Phòng Nghiên cứu Lâm sinh với Trường Đại học Nông Lâm thành Học viện Nông Lâm nhằm tập trung sức lực, trí tuệ của cán bộ và khả năng sử dụng hiệu quả trang thiết bị, đồng thời gắn liền hoạt động đào tạo với nghiên cứu khoa học phục vụ sản xuất. Từ năm học 1959-1960, Học viện Nông Lâm được chuyển về cơ sở mới ở xã Trâu Quỳ, huyện Gia Lâm (tỉnh Bắc Ninh). Ngày 24 tháng 12 năm 1960, Học viện đã tổ chức lễ tốt nghiệp cho sinh viên khóa I và vinh dự được Thủ tướng Phạm Văn Đồng về dự.\n\nNăm 1961, mở thêm ngành nuôi trồng và đánh bắt chế biến thủy sản; thành lập thêm khoa Kinh tế nông nghiệp. Năm 1963, Học viện chuyển một phần cán bộ và cơ sở vật chất kỹ thuật để thành lập Viện Khoa học Nông nghiệp. Năm 1964, Học viện tách khoa Lâm học, phòng nghiên cứu gỗ và lâm sinh, một phần tổ bộ môn cơ khí, một phần các tổ bộ môn khoa kinh tế để thành lập trường Đại học Lâm nghiệp (nay là Đại học Lâm nghiệp Việt Nam). Lúc này phần còn lại của trường đổi tên thành Đại học Nông nghiệp.\n\nNăm 1967, Trường Đại học Nông nghiệp được tách thành hai trường: Đại học Nông nghiệp I và Đại học Nông nghiệp II (nay là Đại học Nông lâm Huế) theo Quyết định số 124/CP ngày 14 tháng 8 năm 1967 của Thủ tướng Chính phủ. Trường giữ lại tên gọi chính thức là Trường Đại học Nông nghiệp I. Năm 1968, Trường tách khoa Thủy sản ra để thành lập trường Đại học Thủy sản (nay là Đại học Nha Trang) theo quyết định số 155-CP của Thủ tướng Chính phủ. Năm 1969, Trường lại một lần nữa san sẻ lực lượng góp phần xây dựng Trường Đại học Nông nghiệp III (đóng tại Bắc Thái).\n\nNăm 1977, Trường được Chính phủ giao nhiệm vụ đào tạo Phó tiến sĩ, mở đầu cho việc đào tạo sau đại học của Trường."
+  },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
@@ -243,10 +259,10 @@
   },
   "vnedu:offersProgram": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7420201"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7620110"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7620110"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7420201"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7340301"
@@ -257,13 +273,13 @@
   },
   "vnedu:trainsMajor": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7340301"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7620110"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7420201"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7340301"
     }
   ]
 }

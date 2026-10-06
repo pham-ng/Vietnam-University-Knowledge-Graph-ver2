@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-pham-van-dong",
   "@type": [
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
     "schema:Organization",
+    "foaf:Organization",
+    "vnedu:Organization",
     "vnedu:UniversitySchool",
-    "foaf:Organization"
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "vnedu:HigherEducationInstitution"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Phạm Văn Đồng (tiếng Anh: Pham Van Dong University) là một trường đại học công lập đa ngành tại phường Cẩm Thành, tỉnh Quảng Ngãi. Trường đã được hệ thống Đại học Đà Nẵng kiểm định và đảm bảo về chất lượng đào tạo của trường. Trường hiện trực thuộc Ủy ban nhân dân tỉnh Quảng Ngãi. Trường Đại học Phạm Văn Đồng được thành lập theo quyết định số 1168/QĐ-TTg của Thủ tướng Chính phủ ký ngày 7 tháng 9 năm 2007 trên cơ sở nâng cấp trường Cao đẳng Sư phạm Quảng Ngãi và Trường Cao đẳng cộng đồng Quảng Ngãi."
+  },
   "foaf:homepage": {
     "@id": "http://www.pdu.edu.vn/"
   },
@@ -38,18 +42,18 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q10829114"
+      "@id": "https://ror.org/02np7f480"
     },
     {
-      "@id": "https://ror.org/02np7f480"
+      "@id": "wd:Q10829114"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75579257"
+      "@id": "wd:Q10829114"
     },
     {
-      "@id": "wd:Q10829114"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75579257"
     }
   ],
   "rdfs:label": [
@@ -67,15 +71,16 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-ngai"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
+  "schema:telephone": "+84 0255 3824041",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Phạm Văn Đồng"
@@ -93,13 +98,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-ngai"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:ownership": {

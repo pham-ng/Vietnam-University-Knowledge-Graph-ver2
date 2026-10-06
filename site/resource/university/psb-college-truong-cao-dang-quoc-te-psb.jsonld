@@ -19,13 +19,13 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/psb-college-truong-cao-dang-quoc-te-psb",
   "@type": [
-    "schema:Organization",
     "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
+    "schema:Organization",
     "vnedu:Organization",
     "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity"
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:HigherEducationInstitution"
   ],
   "foaf:homepage": {
     "@id": "http://www.psbcollege.edu.vn"
@@ -40,10 +40,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/0018abm07"
+      "@id": "wd:Q5065626"
     },
     {
-      "@id": "wd:Q5065626"
+      "@id": "https://ror.org/0018abm07"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -51,12 +51,12 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "PSB College - Trường Cao Đẳng quốc tế PSB"
-    },
-    {
       "@language": "en",
       "@value": "Cetana PSB International College-English Business Tourism Hospitality"
+    },
+    {
+      "@language": "vi",
+      "@value": "PSB College - Trường Cao Đẳng quốc tế PSB"
     }
   ],
   "schema:location": [
@@ -64,10 +64,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:prefLabel": {
@@ -80,13 +80,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     }
   ],
   "vnedu:website": {

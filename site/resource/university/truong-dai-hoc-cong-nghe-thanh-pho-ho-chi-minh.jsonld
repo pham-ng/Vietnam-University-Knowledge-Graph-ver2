@@ -17,103 +17,169 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-thanh-pho-ho-chi-minh",
-  "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:PrivateInstitution",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.hutech.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "https://ror.org/05xpj2n48"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-thanh-pho-ho-chi-minh",
+      "@type": [
+        "vnedu:PrivateInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ Thành phố Hồ Chí Minh - HUTECH là một đại học tư thục. Trường chính thức chuyển từ loại hình dân lập sang tư thục theo quyết định số 702/QĐ – TTg của Thủ tướng Chính phủ kể từ ngày 19 tháng 05 năm 2010. Hiện tại, hệ thống giáo dục HUTECH (HUTECH Education) bao gồm 2 trường đại học thành viên là Trường Đại học Công nghệ Thành phố Hồ Chí Minh (HUTECH) và Trường Đại học Kinh tế - Tài chính Thành phố Hồ Chí Minh (UEF), bên cạnh đó, còn có Trường liên cấp song ngữ Hoàng Gia - Royal Bilingual International School - Royal School."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.hutech.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.800906"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.714296"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10829029"
+        },
+        {
+          "@id": "https://ror.org/05xpj2n48"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75132523"
+        },
+        {
+          "@id": "wd:Q10829029"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Ho Chi Minh City University of Technology"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Công nghệ Thành phố Hồ Chí Minh"
+        }
+      ],
+      "schema:employee": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/kieu-tuan"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-dac-loc"
+        }
+      ],
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1995-04-26"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/8/81/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png"
+      },
+      "schema:telephone": "+84 0283 5445 7777",
+      "skos:notation": "DKC",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ Thành phố Hồ Chí Minh"
+      },
+      "vnedu:address": "475A Điện Biên Phủ, phường Thạnh Mỹ Tây",
+      "vnedu:admissionCode": "DKC",
+      "vnedu:councilChair": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/kieu-tuan"
+      },
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Công Nghệ Kỹ Thuật TP. Hồ Chí Minh"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1995"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/mono"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-son-truong"
+        }
+      ],
+      "vnedu:hasLeader": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-dac-loc"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/kieu-tuan"
+        }
+      ],
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ Thành phố Hồ Chí Minh được thành lập ngày 26 tháng 4 năm 1995 theo quyết định số 235/TTg của Thủ tướng Chính phủ và chính thức đi vào hoạt động theo quyết định số 2128/GD-ĐT ngày 24 tháng 06 năm 1995 của Bộ trưởng Bộ Giáo dục và Đào tạo. Trường chính thức chuyển từ loại hình dân lập sang tư thục theo quyết định số 702/QĐ – TTg của Thủ tướng Chính phủ kể từ ngày 19 tháng 05 năm 2010.\n\nĐại học HUTECH sở hữu 4 khu học xá tại khu vực trung tâm TP. Hồ Chí Minh với tổng diện tích trên 100.000 m². HUTECH đã đưa vào sử dụng Trung tâm Đào tạo nhân lực chất lượng cao HUTECH và Viện Công nghệ cao HUTECH vào năm 2016."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Tri thức - Đạo đức - Sáng tạo"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PrivateOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-dac-loc"
+      },
+      "vnedu:shortName": "HUTECH",
+      "vnedu:website": {
+        "@id": "http://www.hutech.edu.vn/"
+      }
     },
     {
-      "@id": "wd:Q10829029"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/8/81/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/8/81/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q10829029"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75132523"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Ho Chi Minh City University of Technology"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Công nghệ Thành phố Hồ Chí Minh"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:notation": "DKC",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Công nghệ Thành phố Hồ Chí Minh"
-  },
-  "vnedu:admissionCode": "DKC",
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Công Nghệ Kỹ Thuật TP. Hồ Chí Minh"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1995"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/mono"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-son-truong"
-    }
-  ],
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PrivateOwnership"
-  },
-  "vnedu:shortName": "HUTECH",
-  "vnedu:website": {
-    "@id": "http://www.hutech.edu.vn/"
-  }
+  ]
 }

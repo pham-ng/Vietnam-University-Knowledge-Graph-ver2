@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/gia-lai",
   "@type": [
-    "schema:AdministrativeArea",
+    "vnedu:AdministrativeUnit",
     "vnedu:Province",
-    "vnedu:AdministrativeUnit"
+    "schema:AdministrativeArea"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Gia_Lai"
+      "@id": "https://en.wikipedia.org/wiki/Gia_Lai_province"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Gia_Lai_province"
+      "@id": "https://vi.wikipedia.org/wiki/Gia_Lai"
     }
   ],
   "geo:lat": {
@@ -41,10 +41,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://sws.geonames.org/1581088/"
+      "@id": "wd:Q36662"
     },
     {
-      "@id": "wd:Q36662"
+      "@id": "https://sws.geonames.org/1581088/"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -52,11 +52,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Gia Lai"
     },
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Gia Lai"
     }
   ],

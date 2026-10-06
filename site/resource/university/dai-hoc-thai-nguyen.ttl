@@ -29,6 +29,7 @@ university:dai-hoc-thai-nguyen a dbo:University,
         schema:Organization ;
     rdfs:label "Thai Nguyen University"@en,
         "Đại học Thái Nguyên"@vi ;
+    dbo:abstract "Đại học Thái Nguyên ( – TNU) là một trong ba hệ thống đại học vùng của Việt Nam, được xếp vào nhóm đại học trọng điểm quốc gia, được đánh giá là một trong 17 trường/nhóm trường đại học tốt nhất tại Việt Nam và là một trụ cột trong hệ thống giáo dục bậc cao của Việt Nam. Trường được thành lập ngày 4 tháng 4 năm 1994 theo Nghị định số 31/CP của Chính phủ. Ngoài đào tạo, Đại học Thái Nguyên đồng thời là trung tâm nghiên cứu lớn nhất khu vực Trung du và miền núi phía Bắc Việt Nam trên các lĩnh vực: khoa học kỹ thuật, công nghệ, kinh tế, khoa học tự nhiên, xã hội và nhân văn, sư phạm, ngoại ngữ và y học."@vi ;
     owl:sameAs wd:Q10841229,
         <https://ror.org/02128gy91> ;
     geo:lat 21.587379 ;
@@ -64,15 +65,29 @@ university:dai-hoc-thai-nguyen a dbo:University,
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:shortName "TNU" ;
     vnedu:website <http://www.tnu.edu.vn/> ;
+    schema:email "vanphong.dhtn@moet.edu.vn" ;
     schema:employee person:hoang-van-hung ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/8/8e/H%C3%ACnh_%E1%BA%A3nh_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng.jpeg> ;
     schema:location country:viet-nam,
         province:thai-nguyen,
         region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/6/69/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg> ;
     schema:subOrganization university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-dai-hoc-thai-nguyen,
         university:truong-dai-hoc-khoa-hoc-dai-hoc-thai-nguyen,
         university:truong-dai-hoc-kinh-te-va-quan-tri-kinh-doanh-dai-hoc-thai-nguyen,
         university:truong-dai-hoc-ky-thuat-cong-nghiep-dai-hoc-thai-nguyen,
         university:truong-dai-hoc-nong-lam-dai-hoc-thai-nguyen,
         university:truong-dai-hoc-su-pham-dai-hoc-thai-nguyen,
-        university:truong-dai-hoc-y-duoc-dai-hoc-thai-nguyen .
+        university:truong-dai-hoc-y-duoc-dai-hoc-thai-nguyen ;
+    schema:telephone "+84) 208. 3852 650" .
+
+<https://upload.wikimedia.org/wikipedia/commons/8/8e/H%C3%ACnh_%E1%BA%A3nh_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng.jpeg> a schema:ImageObject ;
+    schema:license "CC BY-SA 3.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:H%C3%ACnh_%E1%BA%A3nh_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng.jpeg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/H%C3%ACnh_%E1%BA%A3nh_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng.jpeg/330px-H%C3%ACnh_%E1%BA%A3nh_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng.jpeg> .
+
+<https://upload.wikimedia.org/wikipedia/vi/6/69/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/6/69/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg/330px-Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg.png> .
 

@@ -17,112 +17,145 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-thuong-thanh-pho-ho-chi-minh",
-  "@type": [
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.cntp.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_Th%C6%B0%C6%A1ng_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.807035"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.628703"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q10829026"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "wd:Q10829026"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/2/22/Th%C6%B0_vi%E1%BB%87n_HUIT.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Nguoisinhvien",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Th%C6%B0_vi%E1%BB%87n_HUIT.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Th%C6%B0_vi%E1%BB%87n_HUIT.jpg/330px-Th%C6%B0_vi%E1%BB%87n_HUIT.jpg"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75534623"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-thuong-thanh-pho-ho-chi-minh",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công Thương Thành phố Hồ Chí Minh (tiếng Anh: Ho Chi Minh City University of Industry and Trade; HUIT) là một là một cơ sở giáo dục đại học công lập trực thuộc Bộ Công Thương, đào tạo đa ngành, đa lĩnh vực, có thế mạnh trong lĩnh vực công nghiệp và thương mại, được thành lập ngày 9 tháng 9 năm 1982."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.cntp.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_Th%C6%B0%C6%A1ng_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.807035"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.628703"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q10829026"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829026"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75534623"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Ho Chi Minh City University of Industry and Trade"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Công Thương Thành phố Hồ Chí Minh"
+        }
+      ],
+      "schema:email": "infor@huit.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xuan-hoan"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1982-09-09"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/2/22/Th%C6%B0_vi%E1%BB%87n_HUIT.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:telephone": "0283 8163 318",
+      "skos:notation": "DCT",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công Thương Thành phố Hồ Chí Minh"
+      },
+      "vnedu:address": "140 Lê Trọng Tấn, phường Tây Thạnh",
+      "vnedu:admissionCode": "DCT",
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghiệp thực phẩm Thành phố Hồ Chí Minh"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1982"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-cong-thuong"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xuan-hoan"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Năm 1982: Trường được thành lập theo quyết định số 986/CNTP, ngày 9/9/1982 của Bộ trưởng Bộ Công nghiệp Thực phẩm với tên gọi: Trường Cán bộ Kinh tế Kỹ thuật Công nghiệp Thực phẩm thành phố Hồ Chí Minh;\n\nNăm 1987: Trường được đổi tên thành Trường Trung học Công nghiệp Thực phẩm thành phố Hồ Chí Minh theo quyết định số 25 CNTP/TCCB ngày 3/5/1987 của Bộ trưởng Bộ Công nghiệp Thực phẩm;\n\nNăm 2001: Trường được nâng cấp lên Trường Cao đẳng Công nghiệp Thực phẩm thành phố Hồ Chí Minh theo quyết định số 18/QĐ-BGD&ĐT -TCCB ngày 2/1/2001 của Bộ trưởng Bộ Giáo dục & Đào tạo;\n\nNăm 2010: Trường chính thức trở thành Trường Đại học Công nghiệp Thực phẩm Thành phố Hồ Chí Minh theo Quyết định số 284/QĐ-TTg, thành lập Trường Đại học Công nghiệp Thực phẩm Thành phố Hồ Chí Minh của Thủ tướng Chính phủ.\n\nNgày 01 tháng 7 năm 2023, Phó Thủ tướng Chính phủ Trần Hồng Hà đã ký quyết định số 789/QĐ-TTg đổi tên Trường Đại học Công nghiệp Thực phẩm Thành phố Hồ Chí Minh thành Trường Đại học Công Thương Thành phố Hồ Chí Minh."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Nhân văn - Đoàn kết - Đổi mới - Tiên phong"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xuan-hoan"
+      },
+      "vnedu:shortName": "HUIT",
+      "vnedu:website": {
+        "@id": "http://www.cntp.edu.vn/"
+      }
     }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Công Thương Thành phố Hồ Chí Minh"
-    },
-    {
-      "@language": "en",
-      "@value": "Ho Chi Minh City University of Industry and Trade"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xuan-hoan"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "skos:notation": "DCT",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Công Thương Thành phố Hồ Chí Minh"
-  },
-  "vnedu:address": "140 Lê Trọng Tấn, phường Tây Thạnh",
-  "vnedu:admissionCode": "DCT",
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Trường Đại học Công nghiệp thực phẩm Thành phố Hồ Chí Minh"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1982"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-cong-thuong"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xuan-hoan"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Nhân văn - Đoàn kết - Đổi mới - Tiên phong"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xuan-hoan"
-  },
-  "vnedu:shortName": "HUIT",
-  "vnedu:website": {
-    "@id": "http://www.cntp.edu.vn/"
-  }
+  ]
 }

@@ -17,162 +17,190 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-mo-dia-chat",
-  "@type": [
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
-  ],
-  "foaf:homepage": {
-    "@id": "http://humg.edu.vn/Pages/home.aspx"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%8F_%E2%80%93_%C4%90%E1%BB%8Ba_ch%E1%BA%A5t"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Logo_Truong_Dai_hoc_Mo_-_Dia_chat.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Trường Đại học Mỏ - Địa chất",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Logo_Truong_Dai_hoc_Mo_-_Dia_chat.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Logo_Truong_Dai_hoc_Mo_-_Dia_chat.jpg/330px-Logo_Truong_Dai_hoc_Mo_-_Dia_chat.jpg"
+      }
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Hanoi_University_of_Mining_and_Geology"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-mo-dia-chat",
+      "@type": [
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Mỏ – Địa chất (tiếng Anh: Hanoi University of Mining and Geology) là một trường đại học đa ngành hàng đầu tại Việt Nam, thuộc nhóm 95 trường đại học hàng đầu Đông Nam Á. Trường được thành lập năm 1966, là trường đại học đa ngành, định hướng ứng dụng, đào tạo cán bộ Khoa học kỹ thuật trình độ đại học và trên đại học về các lĩnh vực: Dầu khí, Xây dựng, Công nghệ thông tin, Cơ khí, Tự động hóa, Khai thác tài nguyên khoáng sản, Bảo vệ môi trường, Đo đạc lãnh thổ lãnh hải, Quản lý đất đai, Kinh tế, Quản trị doanh nghiệp, Kế toán,... Hiện Nhà trường có 3 cơ sở đào tạo tại Hà Nội, Quảng Ninh và Vũng Tàu."
+      },
+      "foaf:homepage": {
+        "@id": "http://humg.edu.vn/Pages/home.aspx"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/Hanoi_University_of_Mining_and_Geology"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%8F_%E2%80%93_%C4%90%E1%BB%8Ba_ch%E1%BA%A5t"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.0734"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.7738"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/01rw3qm79"
+        },
+        {
+          "@id": "wd:Q10829093"
+        },
+        {
+          "@id": "dbr:Hanoi_University_of_Mining_and_Geology"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75598045"
+        },
+        {
+          "@id": "wd:Q10829093"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Mỏ – Địa chất"
+        },
+        {
+          "@language": "en",
+          "@value": "Hanoi University of Mining and Geology"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-xuan-truong"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Logo_Truong_Dai_hoc_Mo_-_Dia_chat.jpg"
+      },
+      "schema:telephone": "+84.2438389633",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Mỏ – Địa chất"
+      },
+      "vnedu:address": "Số 18 phố Viên, phường Đông Ngạc",
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Khoa Mỏ – Địa chất, Trường Đại học Bách Khoa Hà Nội"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1966"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-nam-bui"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quang-khanh-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tien-thanh-2"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/chim-se-di-nang"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/viet-ha-nhu"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-duc-luong"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/cao-thang-dinh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phuong-thao-thi-ngo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hai-dien-vien"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-nui-pham"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-nhat-vuong"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-xuan-truong"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Mỏ – Địa chất được thành lập theo Quyết định số 147/QĐ-CP ngày 8 tháng 8 năm 1966 của Thủ tướng Chính phủ trên cơ sở Khoa Mỏ – Địa chất của trường Đại học Bách khoa Hà Nội. Trường Đại học Mỏ – Địa chất đã trải qua 4 giai đoạn:\n\nTrong giai đoạn này, các thế hệ cán bộ và sinh viên Nhà trường đã trải qua nhiều khó khăn, thiếu thốn của chiến tranh để tiếp tục công việc giảng dạy và học tập. Đây cũng là giai đoạn từ một khoa chuyên môn trực thuộc Trường Đại học Bách khoa, Trường Đại học Mỏ – Địa chất chính thức được thành lập nhằm đáp ứng yêu cầu cán bộ khoa học kỹ thuật phục vụ cho công cuộc xây dựng chủ nghĩa xã hội và đấu tranh thống nhất đất nước. Ngày 15 tháng 11 năm 1966 Trường Đại học Mỏ – Địa chất chính thức khai giảng khóa học đầu tiên. Kể từ thời điểm đó, ngày 15 tháng 11 hàng năm được lấy làm Ngày Truyền thống của Trường.\n\nTrong giai đoạn này, Trường đã bắt đầu từng bước xây dựng đội ngũ cán bộ giảng dạy và cơ sở vật chất phục vụ công tác giáo dục, đào tạo. Thực hiện chủ trương của Đảng và Nhà nước, Nhà trường chủ trương đưa sinh viên xuống cơ sở sản xuất, gắn nội dung giảng dạy và nghiên cứu khoa học với cuộc cách mạng kỹ thuật, đào tạo cán bộ thích ứng với yêu cầu về kinh tế, quốc phòng của Việt Nam. Trường đã nghiên cứu và ứng dụng thành công nhiều đề tài vào sản xuất và phục vụ quốc phòng.\n\nNăm 1974, Trường chuyển về địa điểm mới tại huyện Phổ Yên, Thái Nguyên mở đầu một thời kỳ mới trong quá trình xây dựng và phát triển của trường. Tại đây, thầy và trò Trường Đại học Mỏ – Địa chất đã cùng nhau vượt qua mọi khó khăn tiếp tục công tác giảng dạy và học tập phục vụ yêu cầu xây dựng CNXH trước mắt và lâu dài.\n\nĐất nước hoàn toàn thống nhất, Trường Đại học Mỏ – Địa chất tiếp tục không ngừng phát triển về số lượng, nâng cao về chất lượng để đáp ứng yêu cầu xây dựng đất nước, khắc phục hậu quả chiến tranh. Đội ngũ cán bộ giảng viên có chất lượng dần dần được bổ sung, cán bộ được đào tạo ở nước ngoài (đa số ở các nước Đông Âu) về Trường ngày một đông. Quy mô phát triển lên trên 4000 sinh viên các hệ đào tạo. Các khoa mới được thành lập như Khoa Dầu khí, Khoa Cơ – Điện, số bộ môn cũng tăng lên gấp nhiều lần. Các chuyên ngành đào tạo cũng được hình thành và phát triển.\n\nĐể đáp ứng nhu cầu cán bộ khoa học kỹ thuật trình độ cao, năm 1976, Trường Đại học Mỏ – Địa chất là một trong những trường Đại học đầu tiên ở Việt được Chính phủ cho phép mở bậc đào tạo nghiên cứu sinh."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Đoàn kết - Liêm chính - Trách nhiệm - Sáng tạo - Chất lượng"
+      },
+      "vnedu:numberOfStudents": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "16000"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-xuan-truong"
+      },
+      "vnedu:shortName": "HUMG (MDC)",
+      "vnedu:website": {
+        "@id": "http://humg.edu.vn/Pages/home.aspx"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.0734"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.7738"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "dbr:Hanoi_University_of_Mining_and_Geology"
-    },
-    {
-      "@id": "https://ror.org/01rw3qm79"
-    },
-    {
-      "@id": "wd:Q10829093"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75598045"
-    },
-    {
-      "@id": "wd:Q10829093"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Mỏ – Địa chất"
-    },
-    {
-      "@language": "en",
-      "@value": "Hanoi University of Mining and Geology"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-xuan-truong"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Mỏ – Địa chất"
-  },
-  "vnedu:address": "Số 18 phố Viên, phường Đông Ngạc",
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Khoa Mỏ – Địa chất, Trường Đại học Bách Khoa Hà Nội"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1966"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phuong-thao-thi-ngo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tien-thanh-2"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-duc-luong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/cao-thang-dinh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/viet-ha-nhu"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/chim-se-di-nang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-nhat-vuong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quang-khanh-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-nam-bui"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hai-dien-vien"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-nui-pham"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-xuan-truong"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Đoàn kết - Liêm chính - Trách nhiệm - Sáng tạo - Chất lượng"
-  },
-  "vnedu:numberOfStudents": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "16000"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-xuan-truong"
-  },
-  "vnedu:shortName": "HUMG (MDC)",
-  "vnedu:website": {
-    "@id": "http://humg.edu.vn/Pages/home.aspx"
-  }
+  ]
 }

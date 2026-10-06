@@ -19,18 +19,22 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tran-dai-nghia",
   "@type": [
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "foaf:Organization",
     "vnedu:Organization",
     "vnedu:MilitaryInstitution",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization"
+    "vnedu:UniversitySchool"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Trần Đại Nghĩa trực thuộc Tổng cục Hậu cần–Kỹ thuật, Bộ Quốc phòng là một trường đại học kỹ thuật được thành lập ngày 12 tháng 5 năm 1975 trên cơ sở nâng cấp Trường Sĩ quan Kỹ thuật quân sự. Trường đào tạo Sĩ quan kỹ thuật trình độ đại học (Kỹ sư công nghệ kỹ thuật quân sự) cho Quân đội nhân dân Việt Nam và đào tạo kỹ sư dân sự phục vụ nền kinh tế quốc dân Trụ sở chính: 189 Nguyễn Oanh, phường Gò Vấp, Thành phố Hồ Chí Minh. Trang web chính thức: https://tdnu.edu.vn/"
+  },
   "foaf:homepage": {
     "@id": "http://tdnu.edu.vn/"
   },
@@ -47,10 +51,10 @@
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10829151"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75588629"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75588629"
+      "@id": "wd:Q10829151"
     }
   ],
   "rdfs:label": [
@@ -65,10 +69,10 @@
   ],
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
@@ -90,17 +94,25 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tong-cuc-hau-canky-thuat"
     }
   ],
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Trường được thành lập ngày 27/5/1978 theo Quyết định số 51/QĐ-QP ngày 27/05/1978 của Bộ Quốc phòng, với tên gọi đầu tiên là \"Trường Hạ sĩ quan Kỹ thuật\", có thêm nhiệm vụ: Đào tạo Hạ sĩ quan Kỹ thuật hệ I, với 11 chuyên ngành. Giai đoạn 1981–1991, theo Quyết định số 51/QĐ-QP ngày 21/02/1981 của Bộ Quốc phòng, Trường được nâng cấp đào tạo từ Hạ sĩ quan Kỹ thuật lên đào tạo Sĩ quan Kỹ thuật; theo Quyết định số 752/QĐ-QP ngày 15/05/1982 của Bộ Quốc phòng, Trường được mang tên \"Trường Sĩ quan Kỹ thuật Vin-hem Pich\". Theo Quyết định số 236/QĐ-QP ngày 06/03/1996 và Quyết định số 115/QĐ-QP ngày 11/02/1997 của Bộ Quốc phòng, Trường mang tên \"Trường CĐKT Vin-hem Pich\". Theo Quyết định số 2165/QĐ-BQP ngày 09/7/2009 của Bộ trưởng Bộ Quốc phòng, Trường mang tên \"Trường Sĩ quan Kỹ thuật quân sự (Vin-hem Pich)\" trực thuộc Tổng cục Kỹ thuật. Ngày 23/12/2010 Phó Thủ tướng Chính phủ Nguyễn Thiện Nhân đã ký Quyết định số 2345/QĐ-TTg thành lập \"Trường Đại học Trần Đại Nghĩa\" trên cơ sở nâng cấp trường Sĩ quan Kỹ thuật quân sự (Vin-hem Pich)."
+  },
   "vnedu:locatedIn": [
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     }
   ],
+  "vnedu:motto": {
+    "@language": "vi",
+    "@value": "Học đi đôi với hành, Lý luận gắn liền với thực tiễn"
+  },
   "vnedu:ownership": {
     "@id": "vnedu:PublicOwnership"
   },

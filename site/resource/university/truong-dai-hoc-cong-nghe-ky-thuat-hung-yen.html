@@ -30,123 +30,154 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-ky-thuat-hung-yen",
-  "@type": [
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.utehy.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Hung_Yen_University_of_Technology_and_Education"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/2/23/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_H%C6%B0ng_Y%C3%AAn.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_H%C6%B0ng_Y%C3%AAn.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/2/23/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_H%C6%B0ng_Y%C3%AAn.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_H%C6%B0ng_Y%C3%AAn.svg.png"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_K%E1%BB%B9_thu%E1%BA%ADt_H%C6%B0ng_Y%C3%AAn"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-ky-thuat-hung-yen",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ Kỹ thuật Hưng Yên () là một trường đại học công lập nằm tại tỉnh Hưng Yên, Việt Nam. Trường có chức năng đào tạo kỹ thuật lấy ứng dụng làm trọng tâm để giảng dạy, đào tạo kỹ sư công nghệ và giáo viên kỹ thuật."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.utehy.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/Hung_Yen_University_of_Technology_and_Education"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_K%E1%BB%B9_thu%E1%BA%ADt_H%C6%B0ng_Y%C3%AAn"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "20.938317"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.31239"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q7896405"
+        },
+        {
+          "@id": "dbr:Hung_Yen_University_of_Technology_and_Education"
+        },
+        {
+          "@id": "https://ror.org/052yjgk16"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q7896405"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75610263"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Hung Yen University of Technology and Engineering"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Công nghệ Kỹ thuật Hưng Yên"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-trung-thanh"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1966-12-21"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hung-yen"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/2/23/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_H%C6%B0ng_Y%C3%AAn.svg"
+      },
+      "schema:telephone": "+84(0221).3713.081",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ Kỹ thuật Hưng Yên"
+      },
+      "vnedu:address": "xã Việt Tiến",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1966"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      },
+      "vnedu:hasAlumnus": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-quoc-vo"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-trung-thanh"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ Kỹ thuật Hưng Yên được thành lập vào ngày 21 tháng 12 năm 1966 dưới tên gọi trường Trung học Công nghiệp Hưng Yên. Ngày 3 tháng 12 năm 1970, trường được đổi tên thành Trường Giáo viên nghề 1, với nhiệm vụ đào tạo giáo viên dạy nghề cho các trường Công nhân Kỹ thuật và các cơ sở đào tạo nghề. Ngày 5 tháng 3 năm 1979, trường được nâng cấp thành Trường Cao đẳng Sư phạm Kỹ thuật I thuộc Tổng cục Dạy nghề. Từ ngày 1 tháng 7 năm 1987, trường trực thuộc Bộ Giáo dục và Đào tạo. Ngày 6 tháng 1 năm 2003, Trường Cao đẳng Sư phạm Kỹ thuật I được nâng cấp thành Trường Đại học Sư phạm Kỹ thuật Hưng Yên. Ngày 3 tháng 9 năm 2026, Trường Đại học Sư phạm Kỹ thuật Hưng Yên được đổi tên thành Trường Đại học Công nghệ Kỹ thuật Hưng Yên."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hung-yen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Nhân đức, nhân tài, nhân trí thức"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-trung-thanh"
+      },
+      "vnedu:website": {
+        "@id": "http://www.utehy.edu.vn"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "20.938317"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.31239"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "https://ror.org/052yjgk16"
-    },
-    {
-      "@id": "dbr:Hung_Yen_University_of_Technology_and_Education"
-    },
-    {
-      "@id": "wd:Q7896405"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75610263"
-    },
-    {
-      "@id": "wd:Q7896405"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Công nghệ Kỹ thuật Hưng Yên"
-    },
-    {
-      "@language": "en",
-      "@value": "Hung Yen University of Technology and Engineering"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-trung-thanh"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hung-yen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Công nghệ Kỹ thuật Hưng Yên"
-  },
-  "vnedu:address": "xã Việt Tiến",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1966"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
-  },
-  "vnedu:hasAlumnus": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-quoc-vo"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-trung-thanh"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hung-yen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Nhân đức, nhân tài, nhân trí thức"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-trung-thanh"
-  },
-  "vnedu:website": {
-    "@id": "http://www.utehy.edu.vn"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([20.938317,106.31239],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([20.938317,106.31239],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -165,7 +196,9 @@
   <a href="truong-dai-hoc-cong-nghe-ky-thuat-hung-yen.ttl">Turtle</a> · <a href="truong-dai-hoc-cong-nghe-ky-thuat-hung-yen.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-ky-thuat-hung-yen">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 18 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Công nghệ Kỹ thuật Hưng Yên () là một trường đại học công lập nằm tại tỉnh Hưng Yên, Việt Nam. Trường có chức năng đào tạo kỹ thuật lấy ứng dụng làm trọng tâm để giảng dạy, đào tạo kỹ sư công nghệ và giáo viên kỹ thuật.</p><h2>Lịch sử</h2><p>Trường Đại học Công nghệ Kỹ thuật Hưng Yên được thành lập vào ngày 21 tháng 12 năm 1966 dưới tên gọi trường Trung học Công nghiệp Hưng Yên. Ngày 3 tháng 12 năm 1970, trường được đổi tên thành Trường Giáo viên nghề 1, với nhiệm vụ đào tạo giáo viên dạy nghề cho các trường Công nhân Kỹ thuật và các cơ sở đào tạo nghề. Ngày 5 tháng 3 năm 1979, trường được nâng cấp thành Trường Cao đẳng Sư phạm Kỹ thuật I thuộc Tổng cục Dạy nghề. Từ ngày 1 tháng 7 năm 1987, trường trực thuộc Bộ Giáo dục và Đào tạo. Ngày 6 tháng 1 năm 2003, Trường Cao đẳng Sư phạm Kỹ thuật I được nâng cấp thành Trường Đại học Sư phạm Kỹ thuật Hưng Yên. Ngày 3 tháng 9 năm 2026, Trường Đại học Sư phạm Kỹ thuật Hưng Yên được đổi tên thành Trường Đại học Công nghệ Kỹ thuật Hưng Yên.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75610263">«Trường Đại học Công nghệ Kỹ thuật Hưng Yên»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75610263), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Công nghệ Kỹ thuật Hưng Yên</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_H%C6%B0ng_Y%C3%AAn.svg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/2/23/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_H%C6%B0ng_Y%C3%AAn.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_H%C6%B0ng_Y%C3%AAn.svg.png" alt="Biểu trưng Trường Đại học Công nghệ Kỹ thuật Hưng Yên" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>Hung Yen University of Technology and Engineering</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>21 tháng 12 năm 1966</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-trung-thanh">Bùi Trung Thành</a></td></tr><tr><th>Địa chỉ</th><td>xã Việt Tiến</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/hung-yen">Hưng Yên</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Nhân đức, nhân tài, nhân trí thức</i></td></tr><tr><th>Điện thoại</th><td>+84(0221).3713.081</td></tr><tr><th>Website</th><td><a href="http://www.utehy.edu.vn">utehy.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -195,8 +228,17 @@
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-trung-thanh">Bùi Trung Thành</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1966-12-21 <span class="lang">xsd:date</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/hung-yen">Hưng Yên</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/2/23/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_H%C6%B0ng_Y%C3%AAn.svg">&lt;https://upload.wikimedia.org/wikipedia/vi/2/23/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_H%C6%B0ng_Y%C3%AAn.svg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84(0221).3713.081</div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>xã Việt Tiến</div>
@@ -233,6 +275,9 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
+<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-quoc-vo">Truong Quoc Vo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-quoc-vo">Truong Quoc Vo</a></div>
 </td></tr>
@@ -241,9 +286,6 @@
 </td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-trung-thanh">Bùi Trung Thành</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
-<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-quoc-vo">Truong Quoc Vo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

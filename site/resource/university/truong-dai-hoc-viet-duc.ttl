@@ -28,11 +28,14 @@ university:truong-dai-hoc-viet-duc a dbo:University,
         schema:Organization ;
     rdfs:label "Vietnamese-German University"@en,
         "Trường Đại học Việt Đức"@vi ;
+    dbo:abstract "Trường Đại học Việt Đức (tiếng Anh: Vietnamese–German University – VGU, tiếng Đức: Vietnamesisch-Deutsche Universität) là trường đại học công lập được thành lập ngày 1 tháng 9 năm 2022 theo Quyết định số 1196/QĐ-TTg của Thủ tướng Chính phủ. Trường được thành lập trên cơ sở thỏa thuận giữa Chính phủ Việt Nam và Chính phủ Đức. Các chương trình ở Đại học Việt Đức (VGU) do giáo sư ở Việt Nam kết hợp với các giáo sư Đức từ các trường đối tác Đức giảng dạy, sinh viên sẽ nhận được văn bằng chính thức từ các trường đối tác Đức nếu thực hiện trao đổi và hoàn thành các khóa học tại nước Đức trong một học kỳ với thời gian tối thiểu 6 tháng. Các sinh viên không thực hiện trao đổi tại Đức sẽ được tiếp tục học tại Việt Nam và có giáo sư Đức sang giảng dạy trong khoảng 1 tháng nhưng bù lại sẽ không có bằng công nhận từ nước Đức. Những chương trình được chọn từ các ngành kỹ thuật mũi nhọn của Đức và được giảng hoàn toàn bằng tiếng Anh, đôi khi có giảng bằng tiếng Việt nếu giảng viên là người Việt và sinh viên yêu cầu. Trong quá trình học, sinh viên sẽ được học môn tiếng Đức bắt buộc không tính vào tổng số tính chỉ với cấp độ tối đa là A2.2, các cấp độ cao hơn không bắt buộc nhưng đăng ký học sẽ được tính thêm phí. Đối với một số ngành, những sinh viên đạt kết quả học tập xuất sắc có thể được chọn để học khoảng 6 tháng tại Đức với mức học phí không đổi được đóng tại VGU, trường đối tác Đức không thu học phí chính thức, sinh viên xuất sắc còn được hỗ trợ phí ký túc xá và phí ăn uống nhẹ cùng với một phần phí máy bay di chuyển. Nhưng dù là học bổng gì đi nữa thì cũng sẽ không thể trả hết toàn bộ 100% chi phí cho sinh viên xuất sắc khi qua Đức. Những sinh viên Việt Đức có cơ hội được đài thọ làm thực tập ở Đức hoặc trong các công ty Đức ở Việt Nam."@vi ;
     owl:sameAs dbr:Vietnamese-German_University,
         wd:Q835285,
         <https://ror.org/01jxtqc31> ;
     geo:lat 11.107222 ;
     geo:long 106.614444 ;
+    skos:altLabel "Vietnamese–German University",
+        "[Vietnamesisch–Deutsche Hochschule]]" ;
     skos:prefLabel "Trường Đại học Việt Đức"@vi ;
     prov:wasDerivedFrom wd:Q835285,
         <https://vi.wikipedia.org/w/index.php?oldid=75557946> ;
@@ -40,6 +43,7 @@ university:truong-dai-hoc-viet-duc a dbo:University,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Vietnamese-German_University>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Vi%E1%BB%87t_%C4%90%E1%BB%A9c> ;
     vnedu:address "Đường Vành đai 4, Khu phố Thới An" ;
+    vnedu:campus "50 ha" ;
     vnedu:foundingYear "2008"^^xsd:gYear ;
     vnedu:hasLeader person:rene-thiele ;
     vnedu:locatedIn country:viet-nam,
@@ -49,8 +53,17 @@ university:truong-dai-hoc-viet-duc a dbo:University,
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:rene-thiele ;
     vnedu:website <http://www.vgu.edu.vn> ;
+    schema:email "info@vgu.edu.vn" ;
     schema:employee person:rene-thiele ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/9/96/VGU-Logo.png> ;
+    schema:telephone "+84-(0)274 222 0990" .
+
+<https://upload.wikimedia.org/wikipedia/commons/9/96/VGU-Logo.png> a schema:ImageObject ;
+    schema:creditText "Vietnamese-German University" ;
+    schema:license "CC0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:VGU-Logo.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/VGU-Logo.png/330px-VGU-Logo.png> .
 

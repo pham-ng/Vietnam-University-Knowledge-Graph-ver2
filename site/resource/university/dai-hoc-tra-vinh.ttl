@@ -29,6 +29,7 @@ university:dai-hoc-tra-vinh a dbo:University,
         schema:Organization ;
     rdfs:label "Tra Vinh University"@en,
         "Đại học Trà Vinh"@vi ;
+    dbo:abstract "Đại học Trà Vinh (tiếng Anh: Tra Vinh University - TVU) là một trong hai Đại học công lập đa ngành, nổi bật tại Đồng bằng Sông Cửu Long. Tọa lạc tại phường Hòa Thuận, tỉnh Vĩnh Long, Việt Nam, được thành lập vào năm 2006 trên cơ sở Trường Cao đẳng Cộng đồng Trà Vinh, hiện trực thuộc Ủy ban Nhân dân tỉnh Vĩnh Long. TVU được đánh giá cao nhờ đạt chuẩn kiểm định chất lượng giáo dục quốc tế (AUN-QA, FIBAA) cho nhiều chương trình đào tạo."@vi ;
     owl:sameAs dbr:Tra_Vinh_University,
         wd:Q10829149,
         <https://ror.org/05ghhgs79> ;
@@ -45,6 +46,17 @@ university:dai-hoc-tra-vinh a dbo:University,
     vnedu:foundingYear "2001"^^xsd:gYear ;
     vnedu:governedBy organization:ubnd-tinh-vinh-long ;
     vnedu:hasLeader person:nguyen-minh-hoa ;
+    vnedu:history """Đại học Trà Vinh tiền thân trường "Trường Cao đẳng Cộng đồng Trà Vinh", được thành lập ngày 3 tháng 8 năm 2001, trên cơ sở triển khai Dự án Cao đẳng Cộng đồng Việt Nam - Canada do Cơ quan Phát triển Quốc tế của Canada (CIDA), Hiệp hội Cao đẳng Cộng đồng của Canada (ACCC), một số Viện/trường của Canada như Viện Khoa học và Kỹ thuật Ứng dụng tỉnh Saskatchewan (SIAST), Viện Hàng hải (MI), Viện Kỹ thuật Nông nghiệp tỉnh Québec (ITA) và trường Đại học - Cao đẳng Malaspina (MUC) và Chính phủ Việt Nam đồng tài trợ về tài chính và kỹ thuật. Sau đó, trường sáp nhập thêm trường Dạy Nghề và Trung tâm Giáo dục Thường xuyên tỉnh Trà Vinh.
+
+Sau 5 năm triển khai thành công Dự án Cao đẳng Cộng đồng Việt Nam – Canada do chính phủ Canada và Chính phủ Việt Nam đồng tài trợ, cùng với nhu cầu cấp thiết về phát triển giáo dục và đào tạo của tỉnh nhà cũng như nhu cầu về nguồn nhân lực thực hiện chiến lược phát triển kinh tế, văn hóa, xã hội khu vực Đồng bằng sông Cửu Long và cả nước. Ngày 19 tháng 6 năm 2006, Thủ tướng Chính phủ đã ký Quyết định số 141/QĐ-TTg nâng cấp trường Cao đẳng Cộng đồng Trà Vinh thành trường Đại học Trà Vinh và trở thành một trong những trường đại học CÔNG LẬP trong hệ thống giáo dục đại học Việt Nam.
+
+Ngày 28 tháng 4 năm 2011, Thủ tướng Chính phủ đã ký Quyết định số 639/QĐ-TTg sáp nhập trường Cao đẳng Sư phạm Trà Vinh vào trường Đại học Trà Vinh.
+
+Ngày 13 tháng 04 năm 2017 - TVU là trường đại học đầu tiên trực thuộc tỉnh được Thủ tướng Chính phủ phê duyệt Đề án thí điểm đổi mới cơ chế hoạt động của trường, với mục tiêu của đề án là phát triển trường Đại học Trà Vinh thành trường Đại học định hướng ứng dụng theo các chuẩn mực khu vực và quốc tế; hoạt động tự chủ gắn với trách nhiệm bảo đảm các đối tượng chính sách, đối tượng thuộc hộ nghèo có cơ hội học tập, nghiên cứu tại trường.
+
+Ngày 26 tháng 10 năm 2011, Ủy Ban Nhân Dân tỉnh Trà Vinh ra quyết định số 1721/QĐ-UBND về việc thành lập Trường thực hành sư phạm trực thuộc Trường Đại học Trà Vinh.
+
+Ngày 14 tháng 11 năm 2022, PGS.TS. Phạm Tiết Khánh, Chủ tịch Hội đồng Trường Đại học Trà Vinh ký Quyết định số 31/QĐ-HĐT về việc thành lập Trường Kinh tế, Luật thuộc Trường Đại học Trà Vinh trên cơ sở Khoa Kinh tế, Luật và Khoa Quản lý nhà nước, Khoa Quản trị văn phòng."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:tra-vinh,
         province:vinh-long,
@@ -56,8 +68,17 @@ university:dai-hoc-tra-vinh a dbo:University,
     vnedu:shortName "TVU" ;
     vnedu:website <http://www.tvu.edu.vn/> ;
     schema:employee person:nguyen-minh-hoa ;
+    schema:foundingDate "2006-06-19"^^xsd:date ;
     schema:location country:viet-nam,
         province:tra-vinh,
         province:vinh-long,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/7/73/4goc_mat.png> ;
+    schema:telephone "84-294.3.855.246" .
+
+<https://upload.wikimedia.org/wikipedia/commons/7/73/4goc_mat.png> a schema:ImageObject ;
+    schema:creditText "LP Tra Vinh" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:4goc_mat.png> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/commons/7/73/4goc_mat.png> .
 

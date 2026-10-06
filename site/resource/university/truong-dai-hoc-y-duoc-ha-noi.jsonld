@@ -19,18 +19,22 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-y-duoc-ha-noi",
   "@type": [
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
     "schema:Organization",
-    "vnedu:DefunctInstitution",
     "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
     "vnedu:Organization",
-    "schema:EducationalOrganization"
+    "vnedu:UniversitySchool",
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:DefunctInstitution",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "vnedu:HigherEducationInstitution"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Y Dược Hà Nội là một trường đại học tồn tại từ năm 1954 đến trước năm 1961 tại Hà Nội. Trước 1954, trường là ban Y Dược trực thuộc Trường Đại học Quốc gia Việt Nam, được thành lập trên cơ sở tiếp quản Trường Y khoa Đông Dương (còn có các tên khác là Trường Y Dược khoa Đông Dương, Trường Y Dược toàn cấp Đông Dương) thành lập từ 1902 trực thuộc Viện Đại học Đông Dương trong thời kỳ Pháp thuộc. Từ 29/09/1961 đã tách thành các trường trực thuộc Bộ Y tế gồm: Trường Đại học Y Hà Nội: một trường đại học chuyên ngành y khoa tại Hà Nội, ban đầu có tên Trường Đại học Y khoa Hà Nội. Đến 1985 đổi tên thành Trường Đại học Y Hà Nội như hiện nay. Trường Đại học Dược Hà Nội: một trường đại học chuyên ngành dược khoa tại Hà Nội, ban đầu có tên Trường Đại học Dược khoa Hà Nội. Đến 1985 đổi tên thành Trường Đại học Dược Hà Nội như hiện nay. Thể loại:Đại học Y Hà Nội Y Dược Hà Nội"
+  },
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c_H%C3%A0_N%E1%BB%99i"
   },
@@ -43,10 +47,10 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
@@ -72,10 +76,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "vnedu:ownership": {

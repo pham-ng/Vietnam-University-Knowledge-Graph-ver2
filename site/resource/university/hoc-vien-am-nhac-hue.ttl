@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -24,6 +25,7 @@ university:hoc-vien-am-nhac-hue a foaf:Organization,
         schema:Organization ;
     rdfs:label "Hue Academy of Music"@en,
         "Học viện Âm nhạc Huế"@vi ;
+    dbo:abstract "Học viện Âm nhạc Huế là một học viện chuyên ngành chuyên đào tạo và nghiên cứu nhóm ngành âm nhạc, được thành lập vào ngày 8 tháng 11 năm 2007, trụ sở chính của trường được đặt tại phường Thuận Hóa, thành phố Huế. Đây là một trong ba trường đào tạo âm nhạc bậc đại học tại Việt Nam (gồm có Nhạc viện thành phố Hồ Chí Minh và Học viện Âm nhạc Quốc gia Việt Nam). Học viện Âm nhạc Huế tiền thân là Trường Quốc gia Âm nhạc Huế (1962-1975). Từ sau năm 1975, trường đổi tên thành Trường Âm nhạc Huế. Năm 1985, sáp nhập với Trường Cao đẳng Mỹ thuật Huế trở thành Trường Cao đẳng Nghệ thuật Huế. Năm 1994, nâng cấp thành Trường Đại học Nghệ thuật Huế. Các chuyên ngành đào tạo của Học viện bao gồm: Sáng tác âm nhạc, Chỉ huy âm nhạc, Biểu diễn âm nhạc, Nhã nhạc Cung đình Huế...Nhiệm vụ chính của nhà trường là nghiên cứu và đào tạo âm nhạc ở khu vực miền Trung - Tây Nguyên, đồng thời góp phần khôi phục bảo tồn, phát huy giá trị Nhã nhạc Cung đình Huế và Cồng chiêng Tây Nguyên, hai loại hình nghệ thuật đã được UNESCO công nhận là di sản phi vật thể và truyền khẩu của nhân loại. Học viện được đặt trên khu vực của Trường Pellerin Huế, kế thừa tòa nhà cũ của trường này. Đây là một trong những kiến trúc phương Tây còn sót lại của Huế."@vi ;
     owl:sameAs wd:Q10771910 ;
     geo:lat 16.458611 ;
     geo:long 107.577861 ;
@@ -37,12 +39,21 @@ university:hoc-vien-am-nhac-hue a foaf:Organization,
     vnedu:foundingYear "2007"^^xsd:gYear ;
     vnedu:hasAlumnus person:dinh-hoai-xuan ;
     vnedu:hasLeader person:ha-mai-huong ;
+    vnedu:history "Học viện Âm nhạc Huế được thành lập ngày 08/11/2007 theo quyết định số 1492/QĐ -TTg của Thủ tướng Chính phủ Nguyễn Tấn Dũng trên cơ sở nâng cấp và tổ chức lại khoa Âm nhạc của trường Đại học Nghệ thuật thuộc Đại học Huế, khoa Âm nhạc thuộc trường Trung học Văn hóa Nghệ thuật Thừa Thiên Huế."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:hue,
         region:trung-bo ;
     vnedu:website <http://hocvienamnhachue.edu.vn/> ;
     schema:employee person:ha-mai-huong ;
+    schema:foundingDate "2007-11-08"^^xsd:date ;
     schema:location country:viet-nam,
         province:hue,
-        region:trung-bo .
+        region:trung-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/6/6c/Logo_hoc_vien_am_nhac_Hue.png> ;
+    schema:telephone "+84-(0)54 3819 852" .
+
+<https://upload.wikimedia.org/wikipedia/vi/6/6c/Logo_hoc_vien_am_nhac_Hue.png> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_hoc_vien_am_nhac_Hue.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/6/6c/Logo_hoc_vien_am_nhac_Hue.png/330px-Logo_hoc_vien_am_nhac_Hue.png> .
 

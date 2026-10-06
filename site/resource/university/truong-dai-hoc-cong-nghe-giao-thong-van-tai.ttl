@@ -28,6 +28,7 @@ university:truong-dai-hoc-cong-nghe-giao-thong-van-tai a dbo:University,
         schema:Organization ;
     rdfs:label "University of Transport Technology"@en,
         "Trường Đại học Công nghệ Giao thông vận tải"@vi ;
+    dbo:abstract "Trường Đại học Công nghệ Giao thông Vận tải (tên tiếng Anh: University Of Transport Technology, tên viết tắt: UTT) là trường Đại học công lập được nâng cấp năm 2011 từ Trường Cao đẳng giao thông vận tải – trực thuộc Bộ Xây dựng. Trường đào tạo đa ngành, đa lĩnh vực về công nghệ kỹ thuật giao thông, công nghệ kỹ thuật cơ khí, ô tô, kinh tế, vận tải, logistics, công nghệ thông tin, điện tử viễn thông, môi trường... theo định hướng ứng dụng phục vụ ngành GTVT và các ngành kinh tế quốc dân. Năm 2017 trường là 1 trong 15 trường đại học đầu tiên của Việt Nam được công nhận đạt tiêu chuẩn chất lượng giáo dục đại học."@vi ;
     owl:sameAs wd:Q20025751,
         <https://ror.org/04dp8y877> ;
     geo:lat 20.979154 ;
@@ -41,14 +42,26 @@ university:truong-dai-hoc-cong-nghe-giao-thong-van-tai a dbo:University,
     vnedu:foundingYear "1902"^^xsd:gYear ;
     vnedu:governedBy organization:bo-xay-dung ;
     vnedu:hasLeader person:nguyen-hoang-long ;
+    vnedu:history """Trường Cao đẳng Công chính thành lập từ ngày 06 tháng 6 năm 1902 - tiền thân của Trường Cao đẳng Giao thông vận tải.
+
+Trường Đại học Công nghệ Giao thông Vận tải ngày nay có tiền thân là trường Cao đẳng Công chính trước khi đất nước giành được độc lập 2 tháng 9 năm 1945 và được khai giảng lại dưới chính thể Việt Nam Dân chủ Cộng hòa vào ngày 15 tháng 11 năm 1945 theo Nghị định của Bộ trưởng Quốc gia Giáo dục Vũ Đình Hoè và Bộ trưởng Bộ Giao thông công chính Đào Trọng Kim. - Ngày 06 tháng 06 năm 1902: Mở Trường Thư ký và cán sự chuyên môn công chính đặt tại Hà Nội. - Ngày 15 tháng 04 năm 1913: Đổi tên thành Trường Công chính vẫn đặt tại Hà Nội. Đào tạo cán sự trung cấp chuyên môn Công chính. - Năm 1918: Đổi tên thành Trường Cao đẳng Công chính nhưng đào tạo trung cấp kỹ thuật là chính. - Ngày 15 tháng 11 năm 1945: Trường Cao đẳng Công chính đã được khai giảng lại. - Tháng 12 năm 1946: Thực dân Pháp quay trở lại xâm lược nước ta. Toàn quốc kháng chiến bùng nổ. Trường Cao đẳng Công chính tạm ngừng đào tạo, đi sơ tán và phục vụ kháng chiến. - Tháng 10 năm 1947: tại nơi sơ tán (Chùa Viên Đinh, làng Chuôm thuộc Cống Thần - Chợ Đại, huyện Phú Xuyên, tỉnh Hà Đông) đã chính thức khai giảng khoá đầu tiên của Trường Cao đẳng Công chính. - Tháng 4 năm 1948: Trường rời địa điểm tới huyện Yên Mô, tỉnh Ninh Bình - Ngày 1 tháng 2 năm 1949: theo Sắc lệnh số 02/SL và theo nghị quyết số 60 ngày 24 tháng 2 năm 1949, Trường Đại học Công chính đổi tên thành Trường Cao đẳng Kỹ thuật. - Đầu năm 1949: Chi bộ Đảng đầu tiên của Nhà trường đã được thành lập, xác lập vai trò lãnh đạo của Đảng đối với các hoạt động của Nhà trường. - Tháng 2 năm 1951: Nhà trường tiếp tục phải sơ tán vào Đa Nê - Yên Định Thanh Hoá rồi chuyển sang Phong Lạc, đến Mai Cầu, Trung Chính, huyện Thọ Xuân. - Năm 1951: Để đảm bảo an toàn và tranh thủ sự lãnh đạo của Trung ương, toàn Trường lại sơ tán lên Việt Bắc. - Đến cuối năm 1951: Trường chuyển đến làng Chẩu, huyện Yên Sơn, tỉnh Tuyên Quang và đóng tại đó cho đến khi hoà bình lập lại 1954. - Tháng 8 năm 1956: Trường được tách ra thành hai trường Trung cấp Giao thông và Trung cấp Thủy lợi - Kiến trúc. - Năm 1970: Trường Trung học GTVT Thủy Bộ tách ra làm 2 trường: Trường Trung học GTVT Đường bộ và Trường Trung học GTVT Đường thủy."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:nguyen-hoang-long ;
     vnedu:website <https://utt.edu.vn/> ;
+    schema:email "infohn@utt.edu.vn" ;
     schema:employee person:nguyen-hoang-long ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/d/d1/LogoUttSmall.jpg> ;
+    schema:telephone "+84)(24) 38544264" .
+
+<https://upload.wikimedia.org/wikipedia/commons/d/d1/LogoUttSmall.jpg> a schema:ImageObject ;
+    schema:creditText "Đại học Công nghệ Giao thông Vận tải" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:LogoUttSmall.jpg> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/commons/d/d1/LogoUttSmall.jpg> .
 

@@ -29,6 +29,7 @@ university:truong-dai-hoc-my-thuat-thanh-pho-ho-chi-minh a dbo:University,
         schema:Organization ;
     rdfs:label "Ho Chi Minh City University of Fine Arts"@en,
         "Trường Đại học Mỹ thuật Thành phố Hồ Chí Minh"@vi ;
+    dbo:abstract "Trường Đại học Mỹ thuật Thành phố Hồ Chí Minh là một trường đại học chuyên ngành về đào tạo nhóm ngành mỹ thuật tại Việt Nam. Trường trực thuộc Bộ Văn hóa, Thể thao và Du lịch."@vi ;
     owl:sameAs dbr:Ho_Chi_Minh_City_University_of_Fine_Arts,
         wd:Q877269,
         <https://ror.org/05cwygk15> ;
@@ -61,6 +62,21 @@ university:truong-dai-hoc-my-thuat-thanh-pho-ho-chi-minh a dbo:University,
         person:nguyen-thi-phuong-hoa,
         person:pham-hong-phong ;
     vnedu:hasLeader person:nguyen-van-minh ;
+    vnedu:history """Trường Đại học Mỹ thuật Thành phố Hồ Chí Minh là một trong những trường mỹ thuật có truyền thống lâu đời ở Việt Nam. Tiền thân là trường Vẽ Gia Định (École de Dessin) được thành lập ngày 1 tháng 9 năm 1913. Năm 1917, trường đổi tên là trường Trang trí Mỹ thuật Gia Định, một trường mỹ thuật duy nhất ở miền Nam Việt Nam được xếp vào bậc trung học chuyên nghiệp đệ nhất cấp và được công nhận là thành viên của Hiệp hội Trung ương Trang trí Mỹ thuật Paris.
+
+Kể từ khi thành lập, "Trường Vẽ Gia Định" ngày càng phát triển. Nhưng sự phát triển ấy chủ yếu là do đội ngũ giảng viên có tâm huyết với nghệ thuật, cho đến năm 1917 trường vẽ Gia Định là trường Mỹ thuật duy nhất được xếp vào loại "trường Trung học đệ nhất cấp" và được nhận là hội viên của "Hiệp hội Trung ương trang trí Mỹ thuật Paris". Đây là cột mốc quan trọng vì là lần đầu tiên học sinh của trường được tiếp xúc với hội họa phương Tây. trường bắt đầu đào tạo có hệ thống, có phương pháp khoa học, thay cho cách đào tạo truyền nghề. Những người có công làm việc đó là: Ông L'Helgouache, ông Garnier, ông André Joyeux, ông Claude Lemaire, ông Lưu Đình Khải, ông Đỗ Đình Hiệp...
+
+Năm 1940, trường vẽ Gia Định được đổi tên thành trường Mỹ nghệ thực hành Gia Định (École des Arts appliqués de Gia Đinh). Từ đây chương trình đào tạo của trường dần dần được cải thiện, thêm môn trang trí tổng quát, luật viễn cận... Đặc biệt thêm môn học ký họa, nhờ thế mà trường đã đưa học sinh thâm nhập thực tế cuộc sống, phản ánh cuộc sống của nhân dân lao động trong những tác phẩm nghệ thuật.
+
+Năm 1945, với Cách mạng tháng Tám và "Toàn Quốc kháng chiến", nhiều học sinh của trường đã bỏ học đi kháng chiến như: Huỳnh Công Nhãn, Hoàng Trầm... Thời gian này trường cũng tạm ngưng hoạt động.
+
+Năm 1946, trường mang tên là trường Mỹ nghệ thực hành Gia Định (École des Arts appliqués de Gia Đinh).
+
+Năm 1951, trường lại đổi tên thành trường Quốc gia Trang trí Mỹ thuật Gia Định.
+
+Năm 1954, chính quyền Việt Nam Cộng hòa cho thành lập Trường Quốc gia Cao đẳng Mỹ thuật Sài Gòn, chuyên đào tạo về nghệ thuật tạo hình với chương trình học 3 năm, qua các chuyên khoa: Sơn dầu, Sơn mài, Lụa, Điêu khắc. Vị Giám đốc đầu tiên là họa sĩ Lê Văn Đệ (1954-1966).
+
+Mốc lịch sử quan trọng về đào tạo mỹ thuật ở Sài Gòn trong thời kỳ này là chủ trương nâng cấp về đào tạo của hai trường: Quốc gia Cao đẳng Mỹ thuật Sài Gòn và Trung học Trang trí Mỹ thuật Gia Định (tiền thân là trường Mỹ nghệ Gia Định)."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -69,7 +85,16 @@ university:truong-dai-hoc-my-thuat-thanh-pho-ho-chi-minh a dbo:University,
     vnedu:shortName "HCMUFA" ;
     vnedu:website <http://hcmufa.edu.vn/> ;
     schema:employee person:nguyen-van-minh ;
+    schema:foundingDate "1913-09-01"^^xsd:date ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/b/b6/Logohcmufa.png> ;
+    schema:telephone "84.8) 3 841 6010" .
+
+<https://upload.wikimedia.org/wikipedia/commons/b/b6/Logohcmufa.png> a schema:ImageObject ;
+    schema:creditText "Tmhru" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Logohcmufa.png> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/commons/b/b6/Logohcmufa.png> .
 

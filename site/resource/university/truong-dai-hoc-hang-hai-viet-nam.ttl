@@ -29,11 +29,13 @@ university:truong-dai-hoc-hang-hai-viet-nam a dbo:University,
         schema:Organization ;
     rdfs:label "Vietnam Maritime University"@en,
         "Trường Đại học Hàng hải Việt Nam"@vi ;
+    dbo:abstract "Trường Đại học Hàng hải Việt Nam ( – VMU) là một đơn vị giáo dục trực thuộc Bộ Xây Dựng, chuyên đào tạo về kỹ thuật, với thế mạnh về đào tạo nhóm ngành hàng hải và logistics được xếp vào nhóm trường đại học trọng điểm quốc gia. Trường Đại học Hàng hải Việt Nam hiện đang là thành viên của Hiệp hội các trường Đại học Hàng hải châu Á - Thái Bình Dương (AMETIAP) và Hiệp hội các trường Đại học Hàng hải Quốc tế (AMU)."@vi ;
     owl:sameAs dbr:Vietnam_Maritime_University,
         wd:Q7928523,
         <https://ror.org/03z9fzp04> ;
     geo:lat 20.837335 ;
     geo:long 106.695632 ;
+    skos:altLabel "Biệt danh VMU và VIMARU" ;
     skos:prefLabel "Trường Đại học Hàng hải Việt Nam"@vi ;
     prov:wasDerivedFrom wd:Q7928523,
         <https://vi.wikipedia.org/w/index.php?oldid=75526007> ;
@@ -48,6 +50,7 @@ university:truong-dai-hoc-hang-hai-viet-nam a dbo:University,
         person:nguyen-nhat,
         person:xuan-quang-duong ;
     vnedu:hasLeader person:pham-xuan-duong ;
+    vnedu:history "Trường sơ cấp Hàng hải, tiền thân của Trường Đại học Hàng hải Việt Nam, được thành lập vào ngày 01/04/1956 tại Hải Phòng. Năm 1957, Trường được nâng cấp thành Trường Trung cấp Hàng hải. Năm 1976, Trường được nâng cấp thành Trường Đại học Hàng hải. Năm 1984, Trường Đại học Giao thông thủy sáp nhập vào Trường Đại học Hàng hải. Tháng 8 năm 2013, Trường chính thức được đổi tên thành Trường Đại học Hàng hải Việt Nam và trở thành một trong các trường được đầu tư để trở thành trường trọng điểm quốc gia. Trải qua lịch sử gần 60 năm xây dựng, trưởng thành và phát triển, Trường Đại học hàng hải Việt Nam đã và đang đóng vai trò quan trọng hàng đầu trong chiến lược đào tạo nguồn nhân lực có trình độ cao, phục vụ nền kinh tế hướng ra biển của đất nước. Với những cống hiến to lớn của các thế hệ thầy và trò Nhà trường cho Tổ quốc, Trường đã vinh dự được Đảng, Nhà nước và Chính phủ trao tặng nhiều phần thưởng cao quý, trong đó có danh hiệu Anh hùng Lao động, Huân chương Hồ Chí Minh, Huân chương Độc lập hạng Nhất, Nhì, Ba, cùng nhiều danh hiệu cao quý khác. Tháng 11 năm 2002, Trường được công nhận là thành viên chính thức của Hiệp hội các Trường Đại học Hàng hải khu vực châu Á - Thái Bình Dương (AMETIAP), nay là Global MET. Đặc biệt, tháng 8 năm 2004, Trường đã được công nhận trở thành thành viên đầy đủ của Hiệp hội các Trường Đại học Hàng hải Quốc tế (IAMU). Tháng 5 năm 2005, Trường đã vượt qua quá trình đánh giá của Tổng cục đo lường chất lượng (STAMEQ) và vinh dự là đơn vị đầu tiên trong hệ thống các trường đại học, cao đẳng cả nước được cấp Chứng nhận phù hợp tiêu chuẩn quốc tế ISO 9001: 2000 và đã được nâng cấp lên phiên bản ISO 9001: 2008 từ tháng 11 năm 2012. Sau quá trình kiểm định chất lượng giáo dục đại học, ngày 25 tháng 2 năm 2009, Bộ Giáo dục & Đào tạo ra thông báo số 110/TB-BGDĐT công nhận Trường Đại học Hàng hải Việt Nam đạt tiêu chuẩn chất lượng giáo dục quốc gia."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:hai-phong,
         region:bac-bo ;
@@ -56,7 +59,21 @@ university:truong-dai-hoc-hang-hai-viet-nam a dbo:University,
     vnedu:rector person:pham-xuan-duong ;
     vnedu:website <http://vimaru.edu.vn> ;
     schema:employee person:pham-xuan-duong ;
+    schema:foundingDate "1956-04-01"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/vi/4/47/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_h%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.JPG> ;
     schema:location country:viet-nam,
         province:hai-phong,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/1/11/Bi%E1%BB%83u_tr%C6%B0ng_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.svg> .
+
+<https://upload.wikimedia.org/wikipedia/vi/1/11/Bi%E1%BB%83u_tr%C6%B0ng_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Bi%E1%BB%83u_tr%C6%B0ng_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/1/11/Bi%E1%BB%83u_tr%C6%B0ng_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.svg/330px-Bi%E1%BB%83u_tr%C6%B0ng_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.svg.png> .
+
+<https://upload.wikimedia.org/wikipedia/vi/4/47/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_h%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.JPG> a schema:ImageObject ;
+    schema:creditText "Kinh nghiệm - bán không ai mua, mua không ai bán (thảo luận)" ;
+    schema:license "Phạm vi công cộng" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:%C4%90%E1%BA%A1i_h%E1%BB%8Dc_h%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.JPG> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/4/47/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_h%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.JPG/330px-%C4%90%E1%BA%A1i_h%E1%BB%8Dc_h%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.JPG> .
 

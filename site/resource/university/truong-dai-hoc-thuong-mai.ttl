@@ -28,9 +28,11 @@ university:truong-dai-hoc-thuong-mai a dbo:University,
         schema:Organization ;
     rdfs:label "Thuongmai University"@en,
         "Trường Đại học Thương mại"@vi ;
+    dbo:abstract "Trường Đại học Thương mại (tiếng Anh: Thuongmai University hoặc Vietnam University of Commerce, tên viết tắt: TMU) là Trường Đại học công lập của Việt Nam về khối ngành Thương mại, trực thuộc Bộ Giáo dục và Đào tạo, hoạt động theo cơ chế tự chủ."@vi ;
     owl:sameAs wd:Q10829142 ;
     geo:lat 21.035966 ;
     geo:long 105.774414 ;
+    skos:altLabel "Vietnam University of Commerce" ;
     skos:notation "TMU" ;
     skos:prefLabel "Trường Đại học Thương mại"@vi ;
     prov:wasDerivedFrom wd:Q10829142,
@@ -44,6 +46,7 @@ university:truong-dai-hoc-thuong-mai a dbo:University,
     vnedu:hasAlumnus person:hanbin,
         person:nguyen-thi-loan ;
     vnedu:hasLeader person:nguyen-hoang ;
+    vnedu:history "Trường được thành lập năm 1960 với tên gọi là Trường Thương nghiệp Trung ương. Năm 1979, Trường đổi tên thành Trường Đại học Thương nghiệp. Năm 1994, Trường đổi tên thành Trường Đại học Thương mại. Năm 2015, Trường thành lập cơ sở Hà Nam. Cơ sở này vốn là cơ sở cũ của Trường Trung học Bưu chính Viễn thông và Công nghệ thông tin I thuộc tỉnh Hà Nam. Năm 2016, Trường được Thủ tướng Chính phủ cho phép tự chủ, tự chịu trách nhiệm."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -55,5 +58,11 @@ university:truong-dai-hoc-thuong-mai a dbo:University,
     schema:employee person:nguyen-hoang ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/2/2a/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i.jpg> .
+
+<https://upload.wikimedia.org/wikipedia/vi/2/2a/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i.jpg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/2/2a/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i.jpg/330px-Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i.jpg> .
 

@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kien-giang",
   "@type": [
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "foaf:Organization",
     "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
     "schema:EducationalOrganization",
-    "vnedu:PublicInstitution"
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "vnedu:HigherEducationInstitution",
+    "foaf:Organization",
+    "schema:Organization",
+    "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Kiên Giang (tiếng Anh: Kien Giang University, viết tắt: KGU) là một trường đại học công lập định hướng ứng dụng, trực thuộc Bộ Giáo dục và Đào tạo, tọa lạc tại xã Châu Thành, tỉnh An Giang. Được thành lập vào năm 2014 theo Quyết định số 758/QĐ/TTg trên cơ sở Phân hiệu của Trường Đại học Nha Trang tại Kiên Giang, trường có nhiệm vụ đào tạo nguồn nhân lực đa ngành, tập trung vào các lĩnh vực thế mạnh của vùng Đồng bằng sông Cửu Long và kinh tế biển như nông nghiệp, thủy sản, công nghệ thực phẩm, du lịch và kinh tế."
+  },
   "foaf:homepage": {
     "@id": "https://www.vnkgu.edu.vn"
   },
@@ -46,28 +50,28 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q65172352"
+      "@id": "https://ror.org/00y8rfx07"
     },
     {
-      "@id": "https://ror.org/00y8rfx07"
+      "@id": "wd:Q65172352"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75088483"
+      "@id": "wd:Q65172352"
     },
     {
-      "@id": "wd:Q65172352"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75088483"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Kien Giang University"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Kiên Giang"
+    },
+    {
+      "@language": "en",
+      "@value": "Kien Giang University"
     }
   ],
   "schema:employee": {
@@ -75,15 +79,16 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     }
   ],
+  "schema:telephone": "0297.3.926714",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Kiên Giang"
@@ -99,12 +104,16 @@
   "vnedu:hasLeader": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-thanh"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Ngày 04 tháng 6 năm 2006, Bộ GD&ĐT ban hành Quyết định số 1704/QĐ-BGDĐT thành lập Phân hiệu Kiên Giang của Trường Đại học Thủy sản mà nay là Trường Đại học Nha Trang.\n\nNgày 21 tháng 5 năm 2014, Thủ tướng Chính phủ ra Quyết định số 758/QĐ/TTg thành lập trường Đại học Kiên Giang trên cơ sở Phân hiệu Trường Đại học Nha Trang tại Kiên Giang."
+  },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"

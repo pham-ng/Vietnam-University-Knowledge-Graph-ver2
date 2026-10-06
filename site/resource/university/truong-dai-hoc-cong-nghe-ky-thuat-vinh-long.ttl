@@ -28,6 +28,7 @@ university:truong-dai-hoc-cong-nghe-ky-thuat-vinh-long a dbo:University,
         schema:Organization ;
     rdfs:label "Vinh Long University of"@en,
         "Trường Đại học Công nghệ Kỹ thuật Vĩnh Long"@vi ;
+    dbo:abstract "Trường Đại học Công nghệ Kỹ thuật Vĩnh Long (tiếng Anh: Vinh Long University of Technology and Engineering ) là một trong nhóm sáu trường Đại học Sư phạm kỹ thuật của cả nước – đào tạo kỹ thuật dạy nghề là trung tâm giảng dạy. Trường trực thuộc Bộ Giáo dục và Đào tạo và được giám sát về đào tạo bởi Bộ Giáo dục và Đào tạo."@vi ;
     owl:sameAs wd:Q108737605,
         <https://ror.org/00c72nj97> ;
     geo:lat 10.25007 ;
@@ -40,10 +41,24 @@ university:truong-dai-hoc-cong-nghe-ky-thuat-vinh-long a dbo:University,
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long> ;
     vnedu:address "Số 73, Nguyễn Huệ, phường Long Châu" ;
     vnedu:admissionCode "VLU" ;
+    vnedu:campus "41.187,9 m²" ;
     vnedu:formerName "Truờng Đại Học Sư phạm Kỹ thuật Vĩnh Long"@vi ;
     vnedu:foundingYear "1960"^^xsd:gYear ;
     vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
     vnedu:hasLeader person:nguyen-thanh-tung-2 ;
+    vnedu:history """Tiền thân là Trường Trung học Kỹ thuật Vĩnh Long, được thành lập vào ngày 1 tháng 2 năm 1960. Là một trong những trường kỹ thuật đầu tiên của khu vực Đồng bằng sông Cửu Long, cũng là một trong hai trường nổi bật tại khu vực Đông Nam Á lúc bấy giờ.
+
+Sau thống nhất đất nước, Trường Trung học Kỹ thuật Vĩnh Long được chuyển về Tổng cục Đào tạo công nhân kỹ thuật thuộc Bộ Lao động quản lý. Ngày 31 tháng 5 năm 1976, Bộ trưởng Bộ Lao động ký Quyết định số 144/QĐ-LĐ thành lập Trường Giáo viên dạy nghề Cửu Long, trên cơ sở Trường Trung học Kỹ thuật Vĩnh Long.
+
+Ngày 21 tháng 8 năm 1978, Tổng cục trưởng Tổng cục Dạy nghề ký Quyết định số 189/QĐ-DN về việc đổi tên Trường Giáo viên dạy nghề Cửu Long, trực thuộc Tổng cục Đào tạo công nhân kỹ thuật – Bộ Lao động quản lý thành Trường Sư phạm Kỹ thuật IV, trực thuộc Tổng cục dạy nghề (cơ quan trực thuộc Hội đồng Chính phủ).
+
+Ngày 24 tháng 9 năm 1997, Thủ tướng Chính phủ ký Quyết định số 793/TTg nâng cấp Trường Sư phạm Kỹ thuật IV thành Trường Cao đẳng Sư phạm Kỹ thuật IV, trực thuộc Bộ Giáo dục và Đào tạo. Trường được giao nhiệm vụ tổ chức đào tạo nguồn giáo viên dạy nghề có trình độ cao đẳng cho khu vực Đồng bằng Sông Cửu Long.
+
+Ngày 3 tháng 7 năm 1998, Bộ trưởng Bộ Lao động – Thương binh và Xã hội ký quyết định số 650/1998/QĐ-LĐTBXH đổi tên Trường Cao đẳng Sư phạm Kỹ thuật IV, trực thuộc Bộ Giáo dục và Đào tạo thành Trường Cao đẳng Sư phạm Kỹ thuật Vĩnh Long, do Tổng cục Dạy nghề – Bộ Lao động – Thương binh và Xã hội quản lý trực tiếp. Đến ngày 30 tháng 12 năm 2011 trường chuyển từ Tổng cục Dạy nghề về Bộ Lao động – Thương binh và Xã hội quản lý Nhà nước theo quyết định số 1757/QĐ-LĐTBXH.
+
+Ngày 11 tháng 11 năm 2013, Thủ tướng Chính phủ ký quyết định số 2152/QĐ-TTg thành lập Trường Đại học Sư phạm Kỹ thuật Vĩnh Long trên cơ sở nâng cấp từ Trường Cao đẳng Sư phạm Kỹ thuật Vĩnh Long.
+
+Ngày 07 tháng 9 năm 2026, Bộ trưởng Bộ giáo dục và Đào tạo ký quyết định số 2636/QĐ-BGDĐT đổi tên Trường Đại học Sư phạm Kỹ thuật Vĩnh Long thành Trường Đại học Công nghệ Kỹ thuật Vĩnh Long."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:vinh-long,
         region:nam-bo ;
@@ -53,8 +68,24 @@ university:truong-dai-hoc-cong-nghe-ky-thuat-vinh-long a dbo:University,
     vnedu:rector person:nguyen-thanh-tung-2 ;
     vnedu:shortName "VLUTE" ;
     vnedu:website <http://vlute.edu.vn/vi> ;
+    schema:email "spktvl@vlute.edu.vn" ;
     schema:employee person:nguyen-thanh-tung-2 ;
+    schema:foundingDate "1960-02-01"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/9/94/Spktvl1.jpg> ;
     schema:location country:viet-nam,
         province:vinh-long,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/d/d0/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long.svg> ;
+    schema:telephone "+84 027) 03 822 141" .
+
+<https://upload.wikimedia.org/wikipedia/commons/9/94/Spktvl1.jpg> a schema:ImageObject ;
+    schema:creditText "vlute news" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Spktvl1.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Spktvl1.jpg/330px-Spktvl1.jpg> .
+
+<https://upload.wikimedia.org/wikipedia/vi/d/d0/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/d/d0/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long.svg.png> .
 

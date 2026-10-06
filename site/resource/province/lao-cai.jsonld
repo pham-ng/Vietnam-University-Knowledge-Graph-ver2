@@ -19,9 +19,9 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/lao-cai",
   "@type": [
-    "schema:AdministrativeArea",
+    "vnedu:AdministrativeUnit",
     "vnedu:Province",
-    "vnedu:AdministrativeUnit"
+    "schema:AdministrativeArea"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -41,13 +41,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://sws.geonames.org/1562412/"
-    },
-    {
       "@id": "dbr:Lào_Cai_province"
     },
     {
       "@id": "wd:Q36446"
+    },
+    {
+      "@id": "https://sws.geonames.org/1562412/"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -55,11 +55,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Lào Cai"
     },
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Lào Cai"
     }
   ],
@@ -72,10 +72,10 @@
   },
   "vnedu:partOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "vnedu:population": {

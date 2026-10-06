@@ -23,6 +23,11 @@ def qid(uri: str) -> str:
     return uri.rsplit("/", 1)[-1] if uri.startswith("http://www.wikidata.org/entity/") else uri
 
 
+def commons_file(url: str) -> str:
+    from urllib.parse import unquote
+    return unquote(url.rsplit("/", 1)[-1]).replace("_", " ")
+
+
 def values(ids) -> str:
     return " ".join(f"wd:{i}" for i in ids)
 
@@ -85,6 +90,9 @@ def institution_facts(ids: list[str]) -> dict[str, dict]:
     # Trụ sở (P159) / vị trí (P276) -> đi ngược P131 tới cấp tỉnh: nguồn dự phòng khi thiếu P131 trực tiếp
     put("hq_admin", multi(ids, """?u wdt:P159|wdt:P276 ?h . ?h wdt:P131* ?p . ?p wdt:P31 ?pt .
         VALUES ?pt { wd:Q2824648 wd:Q1381899 wd:Q137325529 }""", ("p", "pt")), lambda rs: rs)
+    # Biểu trưng (P154) và ảnh (P18): giá trị là URL Special:FilePath của Commons -> giữ tên tệp
+    put("logo", multi(ids, "?u wdt:P154 ?v .", ("v",)), lambda rs: sorted({commons_file(r["v"]) for r in rs}))
+    put("image", multi(ids, "?u wdt:P18 ?v .", ("v",)), lambda rs: sorted({commons_file(r["v"]) for r in rs}))
     put("description_vi", multi(ids, """?u schema:description ?v FILTER(LANG(?v) = "vi")""", ("v",)),
         lambda rs: rs[0]["v"])
     return facts

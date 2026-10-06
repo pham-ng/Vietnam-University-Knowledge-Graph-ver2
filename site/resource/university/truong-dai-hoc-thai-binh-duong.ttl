@@ -26,6 +26,7 @@ university:truong-dai-hoc-thai-binh-duong a dbo:University,
         schema:Organization ;
     rdfs:label "Thai Binh Duong University"@en,
         "Trường Đại học Thái Bình Dương"@vi ;
+    dbo:abstract "Trường Đại học Thái Bình Dương () được thành lập theo quyết định số 1929/QĐ-TTg ngày 31 tháng 12 năm 2008 của Phó Thủ tướng Chính phủ Nguyễn Thiện Nhân. Trụ sở của trường được đặt tại Số 79, đường Mai Thị Dõng, phường Tây Nha Trang, tỉnh Khánh Hòa. Trường là một đại học đa ngành, đa lĩnh vực, đào tạo bậc đại học các ngành thuộc khối Kỹ thuật, Công nghệ, Kinh tế, Ngoại ngữ, Du lịch, Luật..."@vi ;
     owl:sameAs wd:Q10829139,
         <https://ror.org/017qs1m21> ;
     skos:prefLabel "Trường Đại học Thái Bình Dương"@vi ;
@@ -44,7 +45,9 @@ university:truong-dai-hoc-thai-binh-duong a dbo:University,
     vnedu:rector person:ho-thanh-phong-2 ;
     vnedu:website <https://tbd.edu.vn> ;
     schema:employee person:ho-thanh-phong-2 ;
+    schema:foundingDate "2008-12-31"^^xsd:date ;
     schema:location country:viet-nam,
         province:khanh-hoa,
-        region:trung-bo .
+        region:trung-bo ;
+    schema:telephone "+84-(058)3727181 - 3" .
 

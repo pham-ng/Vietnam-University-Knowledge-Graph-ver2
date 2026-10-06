@@ -26,9 +26,11 @@ university:truong-dai-hoc-ky-thuat-cong-nghe-can-tho a dbo:University,
         schema:EducationalOrganization,
         schema:Organization ;
     rdfs:label "Trường Đại học Kỹ thuật – Công nghệ Cần Thơ"@vi ;
+    dbo:abstract "Trường Đại học Kỹ thuật – Công nghệ Cần Thơ (CTUT - Can Tho University of Technology) là trường đại học công lập chuyên đào tạo khối ngành kỹ thuật tại Thành phố Cần Thơ. Trường trực thuộc Ủy ban Nhân dân Thành phố Cần Thơ, chịu sự giám sát về giáo dục của Bộ Giáo dục và Đào tạo."@vi ;
     owl:sameAs wd:Q10828441 ;
     geo:lat 10.047173 ;
     geo:long 105.767826 ;
+    skos:altLabel "Cantho University of Technology" ;
     skos:notation "KCC" ;
     skos:prefLabel "Trường Đại học Kỹ thuật – Công nghệ Cần Thơ"@vi ;
     prov:wasDerivedFrom wd:Q10828441,
@@ -46,8 +48,18 @@ university:truong-dai-hoc-ky-thuat-cong-nghe-can-tho a dbo:University,
     vnedu:numberOfUndergraduates "5000"^^xsd:nonNegativeInteger ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:huynh-thanh-nha ;
+    schema:email "phonghanhchinh@ctuet.edu.vn" ;
     schema:employee person:huynh-thanh-nha ;
+    schema:foundingDate "2013-01-29"^^xsd:date ;
     schema:location country:viet-nam,
         province:can-tho,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/b/ba/Logo_ctuet.png> ;
+    schema:telephone "+84-(2923)-894050" .
+
+<https://upload.wikimedia.org/wikipedia/commons/b/ba/Logo_ctuet.png> a schema:ImageObject ;
+    schema:creditText "Ctuet" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Logo_ctuet.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Logo_ctuet.png/330px-Logo_ctuet.png> .
 

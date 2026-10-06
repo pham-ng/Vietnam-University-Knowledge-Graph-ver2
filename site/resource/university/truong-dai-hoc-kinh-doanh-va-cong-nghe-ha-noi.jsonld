@@ -17,91 +17,138 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-doanh-va-cong-nghe-ha-noi",
-  "@type": [
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:PrivateInstitution",
-    "vnedu:HigherEducationInstitution"
-  ],
-  "foaf:homepage": {
-    "@id": "http://hubt.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_doanh_v%C3%A0_C%C3%B4ng_ngh%E1%BB%87_H%C3%A0_N%E1%BB%99i"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q10829067"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75576334"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/6/65/Logo_HUBT.jpg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_HUBT.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/6/65/Logo_HUBT.jpg/330px-Logo_HUBT.jpg"
+      }
     },
     {
-      "@id": "wd:Q10829067"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-doanh-va-cong-nghe-ha-noi",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "dbo:University",
+        "vnedu:PrivateInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Kinh doanh và Công nghệ Hà Nội (tiếng Anh: Hanoi University of Business and Technology, viết tắt HUBT) là một cơ sở đào tạo giáo dục tư thục tại Việt Nam, được thành lập theo Quyết định số 405/TTg ngày 14 tháng 6 năm 1996 của Thủ tướng Chính phủ tại Hà Nội."
+      },
+      "foaf:homepage": {
+        "@id": "http://hubt.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_doanh_v%C3%A0_C%C3%B4ng_ngh%E1%BB%87_H%C3%A0_N%E1%BB%99i"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q10829067"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829067"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75576334"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Kinh doanh và Công nghệ Hà Nội"
+        },
+        {
+          "@language": "en",
+          "@value": "Hanoi University of Business and Technology"
+        }
+      ],
+      "schema:email": "tttt@hubt.edu.vn",
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1996-06-14"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/1/19/HUBT_2023.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/6/65/Logo_HUBT.jpg"
+      },
+      "schema:telephone": "84 2436336507",
+      "skos:notation": "DQK",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Kinh doanh và Công nghệ Hà Nội"
+      },
+      "vnedu:address": "Số 29A, ngõ 124 phố Vĩnh Tuy, phường Vĩnh Tuy, thành phố Hà Nội",
+      "vnedu:admissionCode": "DQK",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1996"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xinh-xo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/do-minh-tuan"
+        }
+      ],
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Khi mới thành lập vào tháng 6 năm 1996, trường có tên là Trường Đại học dân lập Quản lý và Kinh doanh Hà Nội và do Giáo sư Trần Phương (Chủ tịch Hội Khoa học kinh tế Việt Nam, nguyên Phó Chủ tịch Hội đồng Bộ trưởng) làm hiệu trưởng. Do mở rộng mục tiêu đào tạo sang lĩnh vực kỹ thuật - công nghệ, trường được đổi tên thành Trường Đại học Kinh doanh và Công nghệ Hà Nội kể từ tháng 5 năm 2006, sau đó trường bỏ tên dân lập. Trường nằm trong hệ thống giáo dục quốc dân.\n\nNhưng đến ngày 3/6/2019, Thủ tướng Chính phủ đã có Quyết định về việc chuyển đổi Trường Đại học Kinh doanh và Công nghệ Hà Nội sang loại hình trường đại học tư thục. Theo quyết định, HUBT phải tiến hành các bước chuyển đổi từ mô hình dân lập sang tư thục. Để thực hiện việc này, trường bắt buộc phải thành lập Hội đồng trường (HĐT). Nhưng trong suốt hơn 7 năm qua đến nay năm 2026, dù Bộ Giáo dục và Đào tạo , cơ quan quản lý nhiều lần có văn bản đôn đốc, trường HUBT vẫn chưa thể thành lập Hội đồng trường ."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PrivateOwnership"
+      },
+      "vnedu:website": {
+        "@id": "http://hubt.edu.vn/"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/1/19/HUBT_2023.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "AxitTDTbenzoic",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:HUBT_2023.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/HUBT_2023.jpg/330px-HUBT_2023.jpg"
+      }
     }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Kinh doanh và Công nghệ Hà Nội"
-    },
-    {
-      "@language": "en",
-      "@value": "Hanoi University of Business and Technology"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:notation": "DQK",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Kinh doanh và Công nghệ Hà Nội"
-  },
-  "vnedu:address": "Số 29A, ngõ 124 phố Vĩnh Tuy, phường Vĩnh Tuy, thành phố Hà Nội",
-  "vnedu:admissionCode": "DQK",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1996"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/do-minh-tuan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xinh-xo"
-    }
-  ],
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PrivateOwnership"
-  },
-  "vnedu:website": {
-    "@id": "http://hubt.edu.vn/"
-  }
+  ]
 }

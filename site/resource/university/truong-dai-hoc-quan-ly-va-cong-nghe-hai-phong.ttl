@@ -1,6 +1,7 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -26,8 +27,10 @@ university:truong-dai-hoc-quan-ly-va-cong-nghe-hai-phong a dbo:University,
         schema:Organization ;
     rdfs:label "Hai Phong University of Management and Technology"@en,
         "Trường Đại học Quản lý và Công nghệ Hải Phòng"@vi ;
+    dbo:abstract "Đại học Quản lý và Công nghệ Hải Phòng (Trước đây có tên là Trường Đại học Dân lập Hải Phòng) là một trong 20 trường Đại học ngoài công lập được thành lập đầu tiên trên cả nước (1997). Trường được đầu tư đồng bộ với cơ sở vật chất khang trang, hiện đại với khu giảng đường giám sát bằng Camera, khu liên hợp thể thao với nhà tập đa năng, sân bóng và bể bơi ngoài trời hiện đại. Đây cũng là trường đầu tiên ở Việt Nam xây dựng Khách sạn Sinh viên."@vi ;
     owl:sameAs wd:Q10829035,
         <https://ror.org/04gb9ay54> ;
+    skos:altLabel "Đại học HPU" ;
     skos:notation "HPU" ;
     skos:prefLabel "Trường Đại học Quản lý và Công nghệ Hải Phòng"@vi ;
     prov:wasDerivedFrom wd:Q10829035,
@@ -38,7 +41,9 @@ university:truong-dai-hoc-quan-ly-va-cong-nghe-hai-phong a dbo:University,
     vnedu:admissionCode "HPU" ;
     vnedu:formerName "Đại học Dân lập Hải Phòng"@vi ;
     vnedu:foundingYear "1997"^^xsd:gYear ;
+    vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
     vnedu:hasLeader person:nguyen-tien-thanh-3 ;
+    vnedu:history "Ngày 24 tháng 9 năm 1997, Thủ tướng Chính phủ Võ Văn Kiệt ký quyết định số 792/TTg cho phép thành lập Đại học dân lập Hải Phòng. Ngày 29 tháng 9 năm 1997, Bộ trưởng Bộ Giáo dục và Đào tạo GS-TS.Trần Hồng Quân ký quyết định số 3026QĐ/GD-ĐT về việc công nhận Hội đồng Quản trị Đại học dân lập Hải Phòng, số 3027QĐ/GD-ĐT về việc công nhận GS-TS. Trần Hữu Nghị là Hiệu trưởng trường Đại học dân lập Hải Phòng, và số 3028 QĐ/GD-ĐT về việc cho phép trường Đại học dân lập Hải Phòng được chính thức hoạt động và bắt đầu tuyển sinh từ năm học 1997-1998. Ngày 17 tháng 11 năm 1997, Thứ trưởng Bộ Giáo dục và Đào tạo TS. Vũ Ngọc Hải ký quyết định số 3803/GD-ĐT cho phép Đại học dân lập Hải Phòng được tổ chức đào tạo 6 ngành từ năm học 1997-1998 với chỉ tiêu 1.200 sinh viên. Ngày 1 và 2 tháng 12 năm 1997, sinh viên khóa 1 nhập học. Năm học đầu tiên của Đại học dân lập Hải Phòng được bắt đầu tại 3 lô nhà cấp 4 thuộc Dư Hàng Kênh, An Hải, Hải Phòng. Ngày 4 tháng 1 năm 1998, Lễ công bố quyết định thành lập Đại học dân lập Hải Phòng và khai giảng khóa 1 đã được tổ chức tại Cung văn hóa hữu nghị Việt – Tiệp, thành phố Hải Phòng. Trường Đại học Dân lập Hải Phòng tiến hành làm thủ tục chuyển đổi loại hình Trường Đại học Dân lập sang loại hình trường Đại học tư thục từ ngày 10 tháng 7 năm 2010, tuy nhiên đến giữa năm 2019 mới có thông tin Thủ tướng Chính phủ ban hành Quyết định số 641/QĐ-TTg về việc chuyển đổi trường Đại học dân lập Hải Phòng sang loại hình trường đại học tư thục"@vi ;
     vnedu:locatedIn country:viet-nam,
         province:hai-phong,
         region:bac-bo ;
@@ -47,8 +52,18 @@ university:truong-dai-hoc-quan-ly-va-cong-nghe-hai-phong a dbo:University,
     vnedu:rector person:nguyen-tien-thanh-3 ;
     vnedu:shortName "HPU" ;
     vnedu:website <https://hpu.edu.vn/> ;
+    schema:email "hpu@hpu.edu.vn" ;
     schema:employee person:nguyen-tien-thanh-3 ;
+    schema:foundingDate "1997-09-24"^^xsd:date ;
     schema:location country:viet-nam,
         province:hai-phong,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/1/12/Logo-hpu-mau-xanh-nen-trang.webp> ;
+    schema:telephone "0936821821" .
+
+<https://upload.wikimedia.org/wikipedia/commons/1/12/Logo-hpu-mau-xanh-nen-trang.webp> a schema:ImageObject ;
+    schema:creditText "hpu.edu.vn" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Logo-hpu-mau-xanh-nen-trang.webp> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Logo-hpu-mau-xanh-nen-trang.webp/330px-Logo-hpu-mau-xanh-nen-trang.webp> .
 

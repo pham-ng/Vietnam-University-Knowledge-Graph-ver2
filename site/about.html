@@ -44,10 +44,10 @@
 <h2>Tạo URI mới hay dùng lại URI đã có?</h2>
 <p><b>Dùng lại ở mọi chỗ có thể</b>, chỉ tạo mới cho thực thể mà dataset tự công bố dữ kiện — rồi khẳng định đồng nhất bằng <code>owl:sameAs</code>:</p>
 <ul>
-  <li><b>Từ vựng:</b> 72% số triple dùng thuộc tính chuẩn (<code>rdfs</code>, <code>schema</code>, <code>prov</code>, <code>foaf</code>, <code>geo</code>, <code>skos</code>); mọi lớp riêng đều <code>rdfs:subClassOf</code> lớp của schema.org / FOAF / DBpedia.</li>
-  <li><b>Giá trị:</b> nghề nghiệp và giới tính dùng thẳng URI Wikidata (217 URI, ví dụ <a href="http://www.wikidata.org/entity/Q82955">wd:Q82955</a> = chính khách) qua <code>schema:hasOccupation</code>, <code>schema:gender</code> — không tạo URI riêng vì ta không mô tả gì thêm về chúng.</li>
-  <li><b>Thực thể được mô tả</b> (300 cơ sở, 63 tỉnh, 1.668 người, 45 cơ quan…): có URI riêng vì (1) tra cứu URI phải trả về <i>dữ kiện của ta</i> — mã tuyển sinh, loại hình pháp lý, tỉnh sau sáp nhập 2025, kết quả suy luận — điều URI Wikidata không làm được; (2) không trộn nguồn gốc dữ kiện; (3) nhiều thực thể không có trên Wikidata (ngành theo TT 09/2022, quan hệ sáp nhập tỉnh, lãnh đạo từ infobox); (4) ta chịu trách nhiệm cho không gian tên của mình.</li>
-  <li><b>owl:sameAs:</b> 85% thực thể tự tạo trỏ về URI đã có — 1.878 Wikidata, 258 DBpedia, 195 ROR, 63 GeoNames — đều đã xác minh (quốc gia, nhãn, tính duy nhất). Item trùng trên Wikidata được <i>gộp</i> về một URI của ta kèm <code>owl:sameAs</code> tới cả hai. Ngành học dùng <code>skos:closeMatch</code> vì không đồng nhất hoàn toàn.</li>
+  <li><b>Từ vựng:</b> 74% số triple dùng thuộc tính chuẩn (<code>rdfs</code>, <code>schema</code>, <code>prov</code>, <code>foaf</code>, <code>geo</code>, <code>skos</code>); mọi lớp riêng đều <code>rdfs:subClassOf</code> lớp của schema.org / FOAF / DBpedia.</li>
+  <li><b>Giá trị:</b> nghề nghiệp và giới tính dùng thẳng URI Wikidata (222 URI, ví dụ <a href="http://www.wikidata.org/entity/Q82955">wd:Q82955</a> = chính khách) qua <code>schema:hasOccupation</code>, <code>schema:gender</code> — không tạo URI riêng vì ta không mô tả gì thêm về chúng.</li>
+  <li><b>Thực thể được mô tả</b> (300 cơ sở, 63 tỉnh, 1.695 người, 50 cơ quan…): có URI riêng vì (1) tra cứu URI phải trả về <i>dữ kiện của ta</i> — mã tuyển sinh, loại hình pháp lý, tỉnh sau sáp nhập 2025, kết quả suy luận — điều URI Wikidata không làm được; (2) không trộn nguồn gốc dữ kiện; (3) nhiều thực thể không có trên Wikidata (ngành theo TT 09/2022, quan hệ sáp nhập tỉnh, lãnh đạo từ infobox); (4) ta chịu trách nhiệm cho không gian tên của mình.</li>
+  <li><b>owl:sameAs:</b> 84% thực thể tự tạo trỏ về URI đã có — 1.880 Wikidata, 260 DBpedia, 195 ROR, 63 GeoNames — đều đã xác minh (quốc gia, nhãn, tính duy nhất). Item trùng trên Wikidata được <i>gộp</i> về một URI của ta kèm <code>owl:sameAs</code> tới cả hai. Ngành học dùng <code>skos:closeMatch</code> vì không đồng nhất hoàn toàn.</li>
 </ul>
 <p>Chi tiết & số liệu: <a href="https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/docs/uri-strategy.md">docs/uri-strategy.md</a>.</p>
 
@@ -68,7 +68,7 @@ for p, o in g.predicate_objects(): print(p, o)</pre>
   <tr><td>★</td><td>Trên Web, giấy phép mở</td><td>Site này; <code>dct:license</code> CC BY-SA 4.0 trong <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a>; tệp LICENSE trong repo</td></tr>
   <tr><td>★★</td><td>Có cấu trúc</td><td>RDF, JSON, CSV</td></tr>
   <tr><td>★★★</td><td>Định dạng mở</td><td><a href="/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl">Turtle</a>, <a href="/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.nt">N-Triples</a>, JSON-LD</td></tr>
-  <tr><td>★★★★</td><td>Chuẩn W3C, URI tra cứu được</td><td>RDF, OWL 2 RL, SHACL, SPARQL 1.1, PROV-O, VoID, DCAT; 2.211 URI dưới <code>https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/</code> đều tra cứu được</td></tr>
+  <tr><td>★★★★</td><td>Chuẩn W3C, URI tra cứu được</td><td>RDF, OWL 2 RL, SHACL, SPARQL 1.1, PROV-O, VoID, DCAT; 2.241 URI dưới <code>https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/</code> đều tra cứu được</td></tr>
   <tr><td>★★★★★</td><td>Liên kết tới dataset khác</td><td>owl:sameAs / skos:closeMatch / foaf:isPrimaryTopicOf tới Wikidata, DBpedia, ROR, GeoNames, Wikipedia — mô tả bằng <code>void:Linkset</code></td></tr>
 </table>
 <p class="lang">Hạn chế đã biết và đánh giá trung thực: <a href="https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/docs/audit.md">docs/audit.md</a>.</p>

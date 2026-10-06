@@ -5,6 +5,8 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix geo:    <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <https://schema.org/> .
+@prefix dbo:    <http://dbpedia.org/ontology/> .
 @prefix shapes: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/shapes#> .
 
 # Ràng buộc chất lượng dữ liệu (giả định thế giới ĐÓNG) — bổ sung cho ontology OWL (thế giới MỞ).
@@ -36,6 +38,18 @@ shapes:Institution a sh:NodeShape ;
     sh:property [
         sh:path vnedu:website ; sh:nodeKind sh:IRI ; sh:pattern "^https?://" ;
         sh:message "Website phải là IRI http(s)."@vi ] ;
+    sh:property [
+        sh:path schema:foundingDate ; sh:datatype xsd:date ; sh:maxCount 1 ;
+        sh:message "Ngày thành lập là một giá trị xsd:date."@vi ] ;
+    sh:property [
+        sh:path schema:email ; sh:datatype xsd:string ; sh:pattern "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$" ;
+        sh:message "Email không hợp lệ."@vi ] ;
+    sh:property [
+        sh:path schema:logo ; sh:nodeKind sh:IRI ; sh:maxCount 1 ; sh:pattern "^https://upload\\.wikimedia\\.org/" ;
+        sh:message "Biểu trưng: một IRI tệp trên Wikimedia."@vi ] ;
+    sh:property [
+        sh:path dbo:abstract ; sh:languageIn ( "vi" ) ; sh:uniqueLang true ;
+        sh:message "Mỗi ngôn ngữ chỉ một đoạn giới thiệu."@vi ] ;
     sh:property [
         sh:path vnedu:admissionCode ; sh:datatype xsd:string ; sh:pattern "^[A-Z]{3}$" ;
         sh:message "Mã trường tuyển sinh gồm 3 chữ cái in hoa."@vi ] ;

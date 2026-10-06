@@ -20,25 +20,25 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hanoi-hannah",
   "@type": [
     "foaf:Person",
-    "vnedu:Alumnus",
+    "vnedu:Person",
     "schema:Person",
-    "vnedu:Person"
+    "vnedu:Alumnus"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Hanoi_Hannah"
+      "@id": "https://vi.wikipedia.org/wiki/Hanoi_Hannah"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Hanoi_Hannah"
+      "@id": "https://en.wikipedia.org/wiki/Hanoi_Hannah"
     }
   ],
   "foaf:name": "Hanoi Hannah",
   "owl:sameAs": [
     {
-      "@id": "wd:Q469821"
+      "@id": "dbr:Hanoi_Hannah"
     },
     {
-      "@id": "dbr:Hanoi_Hannah"
+      "@id": "wd:Q469821"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -46,11 +46,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Hanoi Hannah"
     },
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Hanoi Hannah"
     }
   ],
@@ -62,13 +62,13 @@
   },
   "schema:hasOccupation": [
     {
-      "@id": "wd:Q1371925"
-    },
-    {
       "@id": "wd:Q2722764"
     },
     {
       "@id": "wd:Q1685363"
+    },
+    {
+      "@id": "wd:Q1371925"
     }
   ],
   "vnedu:alumnusOf": {

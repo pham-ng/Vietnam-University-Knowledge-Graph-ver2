@@ -12,15 +12,15 @@ them with owl:sameAs".
 
 | Mức | Tái sử dụng | Số liệu |
 |---|---|---|
-| Từ vựng (thuộc tính) | `rdfs:label`, `schema:hasOccupation`, `schema:gender`, `prov:wasDerivedFrom`, `foaf:name`, `geo:lat/long`, `skos:prefLabel`… | **72%** số triple dùng thuộc tính của từ vựng chuẩn (12.923/17.940) |
+| Từ vựng (thuộc tính) | `rdfs:label`, `schema:hasOccupation`, `schema:gender`, `prov:wasDerivedFrom`, `foaf:name`, `geo:lat/long`, `skos:prefLabel`… | **74%** số triple dùng thuộc tính của từ vựng chuẩn (15.083/20.446) |
 | Lớp | Mọi lớp `vnedu:` đều được căn chỉnh `rdfs:subClassOf` sang `schema:`, `foaf:`, `dbo:` | 76 tiên đề căn chỉnh; sau suy luận mỗi cơ sở cũng có kiểu `schema:CollegeOrUniversity`, `dbo:University`… |
-| **Giá trị** | Nghề nghiệp, giới tính: dùng **thẳng URI Wikidata** (`wd:Q82955` = politician, `wd:Q6581097` = male) | **217 URI Wikidata** được dùng lại làm giá trị trong 2.518 triple; **không** tạo `vnedu:occupation/…` |
+| **Giá trị** | Nghề nghiệp, giới tính: dùng **thẳng URI Wikidata** (`wd:Q82955` = politician, `wd:Q6581097` = male) | **222 URI Wikidata** được dùng lại làm giá trị trong 2.523 triple (cùng 5 URI đối tác `dbo:affiliation`); **không** tạo `vnedu:occupation/…` |
 | Danh mục pháp lý | Cá thể `vnedu:MinistryOfNationalDefence` có `owl:sameAs wd:Q6866771` | — |
 
 ## 2. Những gì được TẠO MỚI và vì sao
 
-2.211 URI mới gồm: 300 cơ sở, 63 tỉnh, 1.668 người, 45 cơ quan, 37 ngành, 78 chương trình, 16 lĩnh vực, 3 miền, 1 quốc gia.
-**1.874 trong số đó (85%) có `owl:sameAs`** tới URI đã có. Lý do không ghi thẳng dữ kiện lên URI của Wikidata:
+2.241 URI mới gồm: 300 cơ sở, 63 tỉnh, 1.695 người, 50 cơ quan, 37 ngành, 78 chương trình, 16 lĩnh vực, 3 miền, 1 quốc gia.
+**1.874 trong số đó (84%) có `owl:sameAs`** tới URI đã có. Lý do không ghi thẳng dữ kiện lên URI của Wikidata:
 
 1. **Nguyên tắc Linked Data số 3**: tra cứu một URI phải trả về thông tin hữu ích *từ người công bố*. Ta không điều
    khiển được `http://www.wikidata.org/entity/Q3075696` trả gì; dữ kiện riêng của ta (mã tuyển sinh BKA, loại hình pháp
@@ -38,8 +38,8 @@ them with owl:sameAs".
 
 | Đích | Số liên kết | Cách đảm bảo đúng |
 |---|---|---|
-| Wikidata | 1.878 | theo nguồn gốc dữ liệu; cơ quan và miền thì tìm theo nhãn **và xác minh `P17 = Việt Nam`** |
-| DBpedia | 258 | lấy từ `owl:sameAs` của DBpedia, **loại 14 ca DBpedia trỏ một tài nguyên tới nhiều item** (ví dụ `dbr:Pleiku` → tỉnh Gia Lai) |
+| Wikidata | 1.880 | theo nguồn gốc dữ liệu; cơ quan và miền thì tìm theo nhãn **và xác minh `P17 = Việt Nam`** |
+| DBpedia | 260 | lấy từ `owl:sameAs` của DBpedia, **loại 14 ca DBpedia trỏ một tài nguyên tới nhiều item** (ví dụ `dbr:Pleiku` → tỉnh Gia Lai) |
 | ROR | 195 | mã P6782 của Wikidata; kiểm tra mẫu 30/30 đúng tổ chức ở Việt Nam |
 | GeoNames | 63 | mã P1566 của Wikidata |
 

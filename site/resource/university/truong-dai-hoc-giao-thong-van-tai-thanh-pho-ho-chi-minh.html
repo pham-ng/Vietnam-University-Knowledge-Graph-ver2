@@ -30,122 +30,165 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-giao-thong-van-tai-thanh-pho-ho-chi-minh",
-  "@type": [
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.hcmutrans.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Transport"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Logo_UTH.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "UTH-TV",
+      "schema:license": "CC0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Logo_UTH.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Logo_UTH.png/330px-Logo_UTH.png"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Giao_th%C3%B4ng_v%E1%BA%ADn_t%E1%BA%A3i_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-giao-thong-van-tai-thanh-pho-ho-chi-minh",
+      "@type": [
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh (tiếng Anh: University of Transport Ho Chi Minh City – UTH) là một đơn vị giáo dục công lập trực thuộc Bộ Xây Dựng (trước là Bộ Giao thông vận tải). Trường Đại học Giao thông Vận tải Thành phố Hồ Chí Minh là một trường đại học đa ngành thuộc lĩnh vực giao thông vận tải lớn nhất phía Nam Việt Nam. Trường có nhiệm vụ đào tạo nguồn nhân lực chất lượng cao cho lĩnh vực giao thông vận tải như hàng hải, hàng không, đường bộ, đường thuỷ nội địa, đường sắt. Trường là một trong số các trường đứng đầu khu vực phía Nam và Việt Nam về đào tạo các ngành kỹ thuật ô tô, cơ khí, xây dựng, CNTT và logistics. Trường đã được hệ thống Đại học Quốc gia kiểm định và chứng nhận về chất lượng đào tạo của mình. Tháng 12 năm 2025, UTH khánh thành Phòng mô phỏng điều khiển và khai thác đường sắt tốc độ cao đầu tiên tại Việt Nam. Đồng chí Trần Hồng Minh, Ủy viên Trung ương Đảng, Bộ trưởng Bộ Xây dựng; đại diện các bộ, ngành, các đối tác, doanh nghiệp, chuyên gia và tập thể lãnh đạo nhà trường cùng dự. Sự kiện đánh dấu bước phát triển quan trọng trong chiến lược đào tạo, nghiên cứu và chuẩn bị nguồn nhân lực chất lượng cao cho lĩnh vực đường sắt hiện đại của Việt Nam. Phòng mô phỏng điều khiển và khai thác đường sắt tốc độ cao của UTH được xây dựng theo định hướng đào tạo dựa trên mô phỏng, phương thức đào tạo tiên tiến đang áp dụng rộng rãi tại các quốc gia có hệ thống đường sắt phát triển."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.hcmutrans.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Transport"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Giao_th%C3%B4ng_v%E1%BA%ADn_t%E1%BA%A3i_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.8046"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.7165"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/011c0vt04"
+        },
+        {
+          "@id": "dbr:Ho_Chi_Minh_City_University_of_Transport"
+        },
+        {
+          "@id": "wd:Q10829043"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75541998"
+        },
+        {
+          "@id": "wd:Q10829043"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "University of Transport Ho Chi Minh City"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xuan-phuong-2"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/7/70/Hinh_UTH.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Logo_UTH.png"
+      },
+      "schema:telephone": "028) 35128 986",
+      "skos:notation": "UTH",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh"
+      },
+      "vnedu:address": "Giảng đường: Số 02, Đường Võ Oanh, Phường Thạnh Mỹ Tây, TP. Hồ Chí Minh",
+      "vnedu:admissionCode": "UTH",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1988"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-xay-dung"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xuan-phuong-2"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Ngày 18/05/1988, Bộ Giao thông vận tải và Bưu điện đã ra quyết định số 1252/TCCB-LĐ thành lập “Trung tâm đào tạo, bồi dưỡng tại chức Giao thông vận tải tại thành phố Hồ Chí Minh” và sau đó chuyển đổi thành “Trung tâm đại học Hàng hải phía Nam” (quyết định số 968/TCCB-LĐ ngày 14/01/1989). Ngày 20/08/1991, Bộ Giao thông vận tải có quyết định số 1665 QĐ/TCCB-LĐ chuyển đổi tổ chức và hoạt động của Trung tâm đại học Hàng hải phía Nam thành Phân hiệu Đại học Hàng hải trực thuộc trường Đại học Hàng hải. Cùng với sự phát triển kinh tế xã hội của cả nước, nhu cầu xây dựng cơ sở vật chất, hạ tầng và phát triển các chuyên ngành vận tải đường biển, đường sông, đường bộ, đường sắt, hàng không của các tỉnh phía Nam, đòi hỏi cần có đội ngũ cán bộ khoa học kỹ thuật, quản lý ngành giao thông vận tải đủ trình độ đáp ứng yêu cầu phát triển. Bên cạnh đó Phân hiệu Đại học Hàng hải sau 10 năm xây dựng đã trở thành cơ sở đào tạo chính quy, hoạt động tương đối độc lập về tổ chức và tài chính, có đội ngũ giảng viên và cán bộ quản lý nhiều kinh nghiệm, cơ sở vật chất và nghiên cứu khoa học, quan hệ trong nước và quốc tế rộng rãi. Ngày 26/04/2001, Thủ tướng Chính phủ đã có quyết định số 66/2001/QĐ-TTg thành lập Trường Đại học Giao thông vận tải TP.HCM trực thuộc Bộ Giao thông vận tải trên cơ sở Phân hiệu Đại học hàng hải."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        }
+      ],
+      "vnedu:numberOfStudents": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "50000"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xuan-phuong-2"
+      },
+      "vnedu:website": {
+        "@id": "http://www.hcmutrans.edu.vn/"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/7/70/Hinh_UTH.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Trường Đại học Giao thông vận tải TP. Hồ Chí Minh",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Hinh_UTH.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Hinh_UTH.jpg/330px-Hinh_UTH.jpg"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.8046"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.7165"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "wd:Q10829043"
-    },
-    {
-      "@id": "https://ror.org/011c0vt04"
-    },
-    {
-      "@id": "dbr:Ho_Chi_Minh_City_University_of_Transport"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75541998"
-    },
-    {
-      "@id": "wd:Q10829043"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh"
-    },
-    {
-      "@language": "en",
-      "@value": "University of Transport Ho Chi Minh City"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xuan-phuong-2"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:notation": "UTH",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh"
-  },
-  "vnedu:address": "Giảng đường: Số 02, Đường Võ Oanh, Phường Thạnh Mỹ Tây, TP. Hồ Chí Minh",
-  "vnedu:admissionCode": "UTH",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1988"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-xay-dung"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xuan-phuong-2"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:numberOfStudents": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "50000"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xuan-phuong-2"
-  },
-  "vnedu:website": {
-    "@id": "http://www.hcmutrans.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.8046,106.7165],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.8046,106.7165],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -164,7 +207,9 @@
   <a href="truong-dai-hoc-giao-thong-van-tai-thanh-pho-ho-chi-minh.ttl">Turtle</a> · <a href="truong-dai-hoc-giao-thong-van-tai-thanh-pho-ho-chi-minh.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-giao-thong-van-tai-thanh-pho-ho-chi-minh">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 18 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh (tiếng Anh: University of Transport Ho Chi Minh City – UTH) là một đơn vị giáo dục công lập trực thuộc Bộ Xây Dựng (trước là Bộ Giao thông vận tải). Trường Đại học Giao thông Vận tải Thành phố Hồ Chí Minh là một trường đại học đa ngành thuộc lĩnh vực giao thông vận tải lớn nhất phía Nam Việt Nam. Trường có nhiệm vụ đào tạo nguồn nhân lực chất lượng cao cho lĩnh vực giao thông vận tải như hàng hải, hàng không, đường bộ, đường thuỷ nội địa, đường sắt. Trường là một trong số các trường đứng đầu khu vực phía Nam và Việt Nam về đào tạo các ngành kỹ thuật ô tô, cơ khí, xây dựng, CNTT và logistics. Trường đã được hệ thống Đại học Quốc gia kiểm định và chứng nhận về chất lượng đào tạo của mình. Tháng 12 năm 2025, UTH khánh thành Phòng mô phỏng điều khiển và khai thác đường sắt tốc độ cao đầu tiên tại Việt Nam. Đồng chí Trần Hồng Minh, Ủy viên Trung ương Đảng, Bộ trưởng Bộ Xây dựng; đại diện các bộ, ngành, các đối tác, doanh nghiệp, chuyên gia và tập thể lãnh đạo nhà trường cùng dự. Sự kiện đánh dấu bước phát triển quan trọng trong chiến lược đào tạo, nghiên cứu và chuẩn bị nguồn nhân lực chất lượng cao cho lĩnh vực đường sắt hiện đại của Việt Nam. Phòng mô phỏng điều khiển và khai thác đường sắt tốc độ cao của UTH được xây dựng theo định hướng đào tạo dựa trên mô phỏng, phương thức đào tạo tiên tiến đang áp dụng rộng rãi tại các quốc gia có hệ thống đường sắt phát triển.</p><h2>Lịch sử</h2><p>Ngày 18/05/1988, Bộ Giao thông vận tải và Bưu điện đã ra quyết định số 1252/TCCB-LĐ thành lập “Trung tâm đào tạo, bồi dưỡng tại chức Giao thông vận tải tại thành phố Hồ Chí Minh” và sau đó chuyển đổi thành “Trung tâm đại học Hàng hải phía Nam” (quyết định số 968/TCCB-LĐ ngày 14/01/1989). Ngày 20/08/1991, Bộ Giao thông vận tải có quyết định số 1665 QĐ/TCCB-LĐ chuyển đổi tổ chức và hoạt động của Trung tâm đại học Hàng hải phía Nam thành Phân hiệu Đại học Hàng hải trực thuộc trường Đại học Hàng hải. Cùng với sự phát triển kinh tế xã hội của cả nước, nhu cầu xây dựng cơ sở vật chất, hạ tầng và phát triển các chuyên ngành vận tải đường biển, đường sông, đường bộ, đường sắt, hàng không của các tỉnh phía Nam, đòi hỏi cần có đội ngũ cán bộ khoa học kỹ thuật, quản lý ngành giao thông vận tải đủ trình độ đáp ứng yêu cầu phát triển. Bên cạnh đó Phân hiệu Đại học Hàng hải sau 10 năm xây dựng đã trở thành cơ sở đào tạo chính quy, hoạt động tương đối độc lập về tổ chức và tài chính, có đội ngũ giảng viên và cán bộ quản lý nhiều kinh nghiệm, cơ sở vật chất và nghiên cứu khoa học, quan hệ trong nước và quốc tế rộng rãi. Ngày 26/04/2001, Thủ tướng Chính phủ đã có quyết định số 66/2001/QĐ-TTg thành lập Trường Đại học Giao thông vận tải TP.HCM trực thuộc Bộ Giao thông vận tải trên cơ sở Phân hiệu Đại học hàng hải.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75541998">«Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75541998), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:Logo_UTH.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Logo_UTH.png/330px-Logo_UTH.png" alt="Biểu trưng Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh" loading="lazy"></a><figcaption>CC0 · UTH-TV</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>University of Transport Ho Chi Minh City</td></tr><tr><th>Mã trường</th><td>UTH</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>1988</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-xay-dung">Bộ Xây dựng</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xuan-phuong-2">Nguyễn Xuân Phương</a></td></tr><tr><th>Địa chỉ</th><td>Giảng đường: Số 02, Đường Võ Oanh, Phường Thạnh Mỹ Tây, TP. Hồ Chí Minh</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></td></tr><tr><th>Sinh viên</th><td>50.000</td></tr><tr><th>Điện thoại</th><td>028) 35128 986</td></tr><tr><th>Website</th><td><a href="http://www.hcmutrans.edu.vn/">hcmutrans.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:Hinh_UTH.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Hinh_UTH.jpg/330px-Hinh_UTH.jpg" alt="Ảnh Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh" loading="lazy"></a><figcaption>CC BY-SA 4.0 · Trường Đại học Giao thông vận tải TP. Hồ Chí Minh</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -194,8 +239,17 @@
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-xuan-phuong-2">Nguyễn Xuân Phương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/7/70/Hinh_UTH.jpg">&lt;https://upload.wikimedia.org/wikipedia/commons/7/70/Hinh_UTH.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/f/f3/Logo_UTH.png">&lt;https://upload.wikimedia.org/wikipedia/commons/f/f3/Logo_UTH.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>028) 35128 986</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>UTH <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

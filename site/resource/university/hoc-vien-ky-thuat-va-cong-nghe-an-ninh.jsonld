@@ -17,67 +17,93 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ky-thuat-va-cong-nghe-an-ninh",
-  "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PoliceInstitution",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "vnedu:Academy",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
-  ],
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_K%E1%BB%B9_thu%E1%BA%ADt_v%C3%A0_C%C3%B4ng_ngh%E1%BB%87_An_ninh"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q24956646"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75614837"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ky-thuat-va-cong-nghe-an-ninh",
+      "@type": [
+        "vnedu:Academy",
+        "vnedu:PoliceInstitution",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Kỹ thuật và Công nghệ an ninh (T07) trực thuộc Bộ Công an có trách nhiệm đào tạo cán bộ kỹ thuật nghiệp vụ và hậu cần có trình độ sau đại học, đại học và các trình độ thấp hơn, đào tạo, bồi dưỡng kiến thức về kỹ thuật nghiệp vụ và hậu cần cho cán bộ lãnh đạo, chỉ huy và cán bộ làm công tác kỹ thuật nghiệp vụ, hậu cần trong Công an nhân dân, nghiên cứu khoa học về nghiệp vụ và hậu cần CAND, phục vụ yêu cầu bảo đảm an ninh quốc gia và giữ gìn trật tự an toàn xã hội. Học viện Kỹ thuật và Công nghệ an ninh đóng quân tại phường Thuận Thành, thành phố Bắc Ninh. Học viện có chức năng đào tạo cán bộ ngành kỹ thuật nghiệp vụ, hậu cần cho ngành công an. Học viện Kỹ thuật và Công nghệ an ninh là cơ sở giáo dục đại học công lập, trực thuộc Bộ Công an, có tư cách pháp nhân, con dấu và tài khoản riêng; hoạt động của trường tuân thủ Điều lệ trường đại học. Bên cạnh việc đảm nhận nhiệm vụ đào tạo thường xuyên hơn 1.500 học viên Việt Nam, Học viện còn đảm nhận nhiệm vụ đào tạo cán bộ hậu cần, kỹ thuật cho nước bạn Lào và Campuchia."
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_K%E1%BB%B9_thu%E1%BA%ADt_v%C3%A0_C%C3%B4ng_ngh%E1%BB%87_An_ninh"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q24956646"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q24956646"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75614837"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "vi",
+        "@value": "Học viện Kỹ thuật và Công nghệ An ninh"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/bac-ninh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/b/b7/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_K%E1%BB%B9_thu%E1%BA%ADt_v%C3%A0_C%C3%B4ng_ngh%E1%BB%87_An_ninh_n%C4%83m_2025.png"
+      },
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Kỹ thuật và Công nghệ An ninh"
+      },
+      "vnedu:governedBy": {
+        "@id": "vnedu:MinistryOfPublicSecurity"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Ngày 8 tháng 9 năm 1984, thành lập Trường Trung học Thông tin liên lạc và Trường Trung học Kỹ thuật Nghiệp vụ III (sau này đổi tên thành Trường Trung học An ninh nhân dân III).\n\nNgày 14 tháng 10 năm 1993: Bộ Nội vụ (nay là Bộ Công an) sáp nhập Trường Trung học An ninh nhân dân III và Trường Trung học Thông tin liên lạc thành Trường Trung học Kỹ thuật nghiệp vụ Công an nhân dân (sau này đổi tên thành Trường Trung cấp Kỹ thuật Nghiệp vụ Công an nhân dân).\n\nNgày 21 tháng 10 năm 2010, Phó Thủ tướng Chính phủ Nguyễn Thiện Nhân đã ký Quyết định số 1945/QĐ-TTg về việc thành lập Trường Đại học Kỹ thuật – Hậu cần Công an nhân dân trên cơ sở nâng cấp Trường Trung cấp Kỹ thuật nghiệp vụ Công an nhân dân và sắp xếp lại các cơ sở đào tạo kỹ thuật nghiệp vụ và hậu cần của ngành Công an.\n\nNgày 17 tháng 10 năm 2025, Phó Thủ tướng Chính phủ Lê Thành Long ký Quyết định số 2288/QĐ-TTg về việc đổi tên Trường Đại học Kỹ thuật - Hậu cần Công an nhân dân thành Học viện Kỹ thuật và Công nghệ an ninh."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/bac-ninh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      }
     },
     {
-      "@id": "wd:Q24956646"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/b/b7/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_K%E1%BB%B9_thu%E1%BA%ADt_v%C3%A0_C%C3%B4ng_ngh%E1%BB%87_An_ninh_n%C4%83m_2025.png",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_H%E1%BB%8Dc_vi%E1%BB%87n_K%E1%BB%B9_thu%E1%BA%ADt_v%C3%A0_C%C3%B4ng_ngh%E1%BB%87_An_ninh_n%C4%83m_2025.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/b/b7/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_K%E1%BB%B9_thu%E1%BA%ADt_v%C3%A0_C%C3%B4ng_ngh%E1%BB%87_An_ninh_n%C4%83m_2025.png"
+      }
     }
-  ],
-  "rdfs:label": {
-    "@language": "vi",
-    "@value": "Học viện Kỹ thuật và Công nghệ An ninh"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/bac-ninh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Kỹ thuật và Công nghệ An ninh"
-  },
-  "vnedu:governedBy": {
-    "@id": "vnedu:MinistryOfPublicSecurity"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/bac-ninh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  }
+  ]
 }

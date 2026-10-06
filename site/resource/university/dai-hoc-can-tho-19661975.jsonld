@@ -19,18 +19,22 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-can-tho-19661975",
   "@type": [
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
     "vnedu:University",
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
     "vnedu:DefunctInstitution",
-    "schema:Organization"
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "foaf:Organization",
+    "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Đại học Cần Thơ là một đại học vùng ở Cần Thơ. Ngoài ra, Đại học Cần Thơ có thể là: Viện Đại học Cần Thơ: một viện đại học công lập ở Cần Thơ, thành lập vào năm 1966 dưới chính thể Việt Nam Cộng hòa. Sau năm 1975 bị giải thể và tổ chức lại thành Trường Đại học Cần Thơ, nay là Đại học Cần Thơ. *"
+  },
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%E1%BA%A7n_Th%C6%A1_%28%C4%91%E1%BB%8Bnh_h%C6%B0%E1%BB%9Bng%29"
   },
@@ -39,28 +43,28 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10841214"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=73687349"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=73687349"
+      "@id": "wd:Q10841214"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Đại học Cần Thơ (1966–1975)"
-    },
-    {
       "@language": "en",
       "@value": "Can Tho University"
+    },
+    {
+      "@language": "vi",
+      "@value": "Đại học Cần Thơ (1966–1975)"
     }
   ],
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
@@ -86,10 +90,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
     }
   ],
   "vnedu:ownership": {

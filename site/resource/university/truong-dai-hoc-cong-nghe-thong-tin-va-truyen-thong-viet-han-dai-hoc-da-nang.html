@@ -30,116 +30,148 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang",
-  "@type": [
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "https://vku.udn.vn"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng_Vi%E1%BB%87t_%E2%80%93_H%C3%A0n%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "15.991771"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "108.257906"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "wd:Q16480474"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang",
+      "@type": [
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:MemberInstitution",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn (tiếng Anh: Vietnam–Korea University of Information and Communication Technology – VKU) là trường công lập trực thuộc Đại học Đà Nẵng, đào tạo chuyên ngành về công nghệ thông tin, truyền thông và kinh tế số."
+      },
+      "foaf:homepage": {
+        "@id": "https://vku.udn.vn"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng_Vi%E1%BB%87t_%E2%80%93_H%C3%A0n%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "15.991771"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "108.257906"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/0561fmp23"
+        },
+        {
+          "@id": "wd:Q16480474"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75494607"
+        },
+        {
+          "@id": "wd:Q16480474"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "UDN Vietnam–Korea University of Information Technology and Communication Technology"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Công nghệ Thông tin và Truyền thông Việt – Hàn, Đại học Đà Nẵng"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-cong-phap"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "2020-01-03"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/5/57/Logo_VKU_new_tran.jpg"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-da-nang"
+      },
+      "schema:telephone": "+84 236 3 667 117",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ Thông tin và Truyền thông Việt – Hàn, Đại học Đà Nẵng"
+      },
+      "vnedu:address": "470 Trần Đại Nghĩa, phường Ngũ Hành Sơn",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-cong-phap"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Khoa Công nghệ thông tin và Truyền thông, Đại học Đà Nẵng (tên tiếng Anh: School of Information and Communication Technology - The University of Danang) là một Khoa thành viên của Đại học Đà Nẵng. Khoa được thành lập theo Quyết định số 254/QĐ-ĐHĐN ngày 23 tháng 01 năm 2017 của Giám đốc Đại học Đà Nẵng.\n\nTrường Cao đẳng Công nghệ thông tin Hữu nghị Việt - Hàn (VietHanIT) thuộc Bộ Thông tin và Truyền thông: Trường được thành lập vào năm 2007 từ nguồn tài trợ từ Chính phủ Hàn Quốc. Trường Cao đẳng Công nghệ thông tin thuộc Đại học Đà Nẵng: Trường được thành lập theo quyết định số 5553/QĐ-BGD&ĐT-TCCB của Bộ Giáo dục và Đào tạo, ngày 14 tháng 10 năm 2003 có chức năng đào tạo nguồn nhân lực công nghệ thông tin trình độ cao đẳng, góp phần tích cực vào sự phát triển của nền công nghiệp Công nghệ Thông tin Việt Nam. Thuyên chuyển một số cán bộ từ Trường Đại học Bách khoa Đà Nẵng, Trường Đại học Sư phạm Đà Nẵng, Trường Đại học Sư phạm Kỹ thuật Đà Nẵng,Trường Đại học Kinh tế Đà Nẵng.\n\nThực hiện Kết luận số 542/TB-VPCP ngày 22/11/2017 của Thủ tướng Chính phủ Nguyễn Xuân Phúc tại cuộc họp Thường trực Chính phủ về cơ chế, chính sách đặc thù để phát triển Đại học Quốc gia Hà Nội, Đại học Quốc gia Thành phố Hồ Chí Minh, Đại học Đà Nẵng thành các trung tâm đào tạo, nghiên cứu uy tín trong nước và khu vực, trường được thành lập trên một số kiến nghị của Đại học Đà Nẵng.\n\nNgày 3 tháng 8 năm 2019, Đoàn công tác liên Bộ thẩm định thực tế Đề án thành lập Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn trực thuộc Đại học Đà Nẵng đến làm việc và kiểm tra tình hình thực tế về cơ sở vật chất, đội ngũ và các điều kiện thành lập trường đại học tại Khoa Công nghệ Thông tin và Truyền thông thuộc Đại học Đà Nẵng và một số đơn vị khác.\n\nNgày 3 tháng 1 năm 2020, Phó Thủ tướng Vũ Đức Đam ký ban hành Quyết định 15/QĐ-TTg về việc thành lập Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn thuộc Đại học Đà Nẵng, trở thành trường đại học đầu tiên nằm trong Khu đô thị Đại học Đà Nẵng."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-da-nang"
+      },
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Nhân bản - Phụng sự - Khai phóng"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-cong-phap"
+      },
+      "vnedu:website": {
+        "@id": "https://vku.udn.vn"
+      }
     },
     {
-      "@id": "https://ror.org/0561fmp23"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/5/57/Logo_VKU_new_tran.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Nguyễn Bảo Tích",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Logo_VKU_new_tran.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Logo_VKU_new_tran.jpg/330px-Logo_VKU_new_tran.jpg"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75494607"
-    },
-    {
-      "@id": "wd:Q16480474"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "UDN Vietnam–Korea University of Information Technology and Communication Technology"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Công nghệ Thông tin và Truyền thông Việt – Hàn, Đại học Đà Nẵng"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-cong-phap"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-da-nang"
-  },
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Công nghệ Thông tin và Truyền thông Việt – Hàn, Đại học Đà Nẵng"
-  },
-  "vnedu:address": "470 Trần Đại Nghĩa, phường Ngũ Hành Sơn",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2020"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-cong-phap"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-da-nang"
-  },
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Nhân bản - Phụng sự - Khai phóng"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-cong-phap"
-  },
-  "vnedu:website": {
-    "@id": "https://vku.udn.vn"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([15.991771,108.257906],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([15.991771,108.257906],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -158,7 +190,9 @@
   <a href="truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang.ttl">Turtle</a> · <a href="truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 19 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn (tiếng Anh: Vietnam–Korea University of Information and Communication Technology – VKU) là trường công lập trực thuộc Đại học Đà Nẵng, đào tạo chuyên ngành về công nghệ thông tin, truyền thông và kinh tế số.</p><h2>Lịch sử</h2><p>Khoa Công nghệ thông tin và Truyền thông, Đại học Đà Nẵng (tên tiếng Anh: School of Information and Communication Technology - The University of Danang) là một Khoa thành viên của Đại học Đà Nẵng. Khoa được thành lập theo Quyết định số 254/QĐ-ĐHĐN ngày 23 tháng 01 năm 2017 của Giám đốc Đại học Đà Nẵng.</p><p>Trường Cao đẳng Công nghệ thông tin Hữu nghị Việt - Hàn (VietHanIT) thuộc Bộ Thông tin và Truyền thông: Trường được thành lập vào năm 2007 từ nguồn tài trợ từ Chính phủ Hàn Quốc. Trường Cao đẳng Công nghệ thông tin thuộc Đại học Đà Nẵng: Trường được thành lập theo quyết định số 5553/QĐ-BGD&amp;ĐT-TCCB của Bộ Giáo dục và Đào tạo, ngày 14 tháng 10 năm 2003 có chức năng đào tạo nguồn nhân lực công nghệ thông tin trình độ cao đẳng, góp phần tích cực vào sự phát triển của nền công nghiệp Công nghệ Thông tin Việt Nam. Thuyên chuyển một số cán bộ từ Trường Đại học Bách khoa Đà Nẵng, Trường Đại học Sư phạm Đà Nẵng, Trường Đại học Sư phạm Kỹ thuật Đà Nẵng,Trường Đại học Kinh tế Đà Nẵng.</p><details><summary>Đọc tiếp (3 đoạn)</summary><p>Thực hiện Kết luận số 542/TB-VPCP ngày 22/11/2017 của Thủ tướng Chính phủ Nguyễn Xuân Phúc tại cuộc họp Thường trực Chính phủ về cơ chế, chính sách đặc thù để phát triển Đại học Quốc gia Hà Nội, Đại học Quốc gia Thành phố Hồ Chí Minh, Đại học Đà Nẵng thành các trung tâm đào tạo, nghiên cứu uy tín trong nước và khu vực, trường được thành lập trên một số kiến nghị của Đại học Đà Nẵng.</p><p>Ngày 3 tháng 8 năm 2019, Đoàn công tác liên Bộ thẩm định thực tế Đề án thành lập Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn trực thuộc Đại học Đà Nẵng đến làm việc và kiểm tra tình hình thực tế về cơ sở vật chất, đội ngũ và các điều kiện thành lập trường đại học tại Khoa Công nghệ Thông tin và Truyền thông thuộc Đại học Đà Nẵng và một số đơn vị khác.</p><p>Ngày 3 tháng 1 năm 2020, Phó Thủ tướng Vũ Đức Đam ký ban hành Quyết định 15/QĐ-TTg về việc thành lập Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn thuộc Đại học Đà Nẵng, trở thành trường đại học đầu tiên nằm trong Khu đô thị Đại học Đà Nẵng.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75494607">«Trường Đại học Công nghệ Thông tin và Truyền thông Việt – Hàn, Đại học Đà Nẵng»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75494607), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Công nghệ Thông tin và Truyền thông Việt – Hàn, Đại học Đà Nẵng</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:Logo_VKU_new_tran.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Logo_VKU_new_tran.jpg/330px-Logo_VKU_new_tran.jpg" alt="Biểu trưng Trường Đại học Công nghệ Thông tin và Truyền thông Việt – Hàn, Đại học Đà Nẵng" loading="lazy"></a><figcaption>CC BY-SA 4.0 · Nguyễn Bảo Tích</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>UDN Vietnam–Korea University of Information Technology and Communication Technology</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>3 tháng 1 năm 2020</td></tr><tr><th>Thành viên của</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-da-nang">Đại học Đà Nẵng</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-cong-phap">Huỳnh Công Pháp</a></td></tr><tr><th>Địa chỉ</th><td>470 Trần Đại Nghĩa, phường Ngũ Hành Sơn</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang">Đà Nẵng</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Nhân bản - Phụng sự - Khai phóng</i></td></tr><tr><th>Điện thoại</th><td>+84 236 3 667 117</td></tr><tr><th>Website</th><td><a href="https://vku.udn.vn">vku.udn.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -188,11 +222,20 @@
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-cong-phap">Huỳnh Công Pháp</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>2020-01-03 <span class="lang">xsd:date</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang">Đà Nẵng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo">Trung Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/5/57/Logo_VKU_new_tran.jpg">&lt;https://upload.wikimedia.org/wikipedia/commons/5/57/Logo_VKU_new_tran.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:parentOrganization<small>schema:parentOrganization</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-da-nang">Đại học Đà Nẵng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84 236 3 667 117</div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>470 Trần Đại Nghĩa, phường Ngũ Hành Sơn</div>
@@ -226,14 +269,14 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
+<tr><td class="p">có đơn vị thành viên<small>vnedu:hasMember</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-da-nang">Đại học Đà Nẵng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
 <tr><td class="p">schema:subOrganization<small>schema:subOrganization</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-da-nang">Đại học Đà Nẵng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-cong-phap">Huỳnh Công Pháp</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
-<tr><td class="p">có đơn vị thành viên<small>vnedu:hasMember</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-da-nang">Đại học Đà Nẵng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

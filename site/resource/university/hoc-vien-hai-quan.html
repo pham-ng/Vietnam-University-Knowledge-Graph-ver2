@@ -30,112 +30,158 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-hai-quan",
-  "@type": [
-    "vnedu:MilitaryInstitution",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "vnedu:Academy",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://hocvienhaiquan.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_H%E1%BA%A3i_qu%C3%A2n_%28Vi%E1%BB%87t_Nam%29"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/4/41/Haiquan.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Thongth4992",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Haiquan.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/4/41/Haiquan.png"
+      }
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Vietnam_Naval_Academy"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-hai-quan",
+      "@type": [
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:MilitaryInstitution",
+        "vnedu:Academy",
+        "vnedu:EducationalOrganization",
+        "schema:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Hải quân (HQH) là một học viện quân sự trực thuộc quân chủng Hải quân của Bộ Quốc phòng chuyên đào tạo sĩ quan chỉ huy hải quân & cảnh sát biển cấp phân đội và chỉ huy tham mưu hải quân & cảnh sát biển cấp chiến thuật - chiến dịch trình độ đại học quân sự, sau đại học. Thành lập: Ngày 26/4/1955 Trụ sở chính: 30, đường Trần Phú, phường Nha Trang, tỉnh Khánh Hòa"
+      },
+      "foaf:homepage": {
+        "@id": "http://hocvienhaiquan.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/Vietnam_Naval_Academy"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_H%E1%BA%A3i_qu%C3%A2n_%28Vi%E1%BB%87t_Nam%29"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "12.2151"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "109.207"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q7928533"
+        },
+        {
+          "@id": "https://ror.org/02wqs8977"
+        },
+        {
+          "@id": "dbr:Vietnam_Naval_Academy"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q7928533"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75022945"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Vietnam Naval Academy"
+        },
+        {
+          "@language": "vi",
+          "@value": "Học viện Hải quân"
+        }
+      ],
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1955-04-26"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/4/41/Haiquan.png"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/0/06/Vietnam_People%27s_Navy_flag.svg"
+      },
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Hải quân"
+      },
+      "vnedu:address": "30, đường Trần Phú, phường Nha Trang, tỉnh Khánh Hòa",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1955"
+      },
+      "vnedu:governedBy": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/quan-chung-hai-quan"
+        },
+        {
+          "@id": "vnedu:MinistryOfNationalDefence"
+        }
+      ],
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Ngày 26 tháng 4 năm 1955 theo quyết định số 1125/QF/TTL của Bộ Quốc phòng Việt Nam, Trường Huấn luyện Bờ biển được thành lập (mật danh là C45) với nhiệm vụ: Huấn luyện, đào tạo cán bộ thủy binh cho các thủy đội và đài quan sát Cùng Bộ nghiên cứu kế hoạch huấn luyện và hoạt động của hải quân Theo kế hoạch của Bộ Tổng tư lệnh và Cục Phòng thủ Bờ biển (Bộ Tư lệnh Hải quân hiện nay), trường đã tiếp quản trại lính Thủy quân lục chiến Pháp nằm trên ngã ba bờ sông Tam Bạc và sông Cấm, cách cầu Hạ Lý 300 m. Ngày 6 tháng 6 năm 1955, khóa học đầu tiên đã được khai giảng. Học viên là cán bộ, chiến sĩ bộ binh, công binh,... của các sư đoàn 330, 308 và một số đơn vị khác đã tham gia tại nhiều chiến trường; văn hóa không đồng đều mà chủ yếu là lớp 2, lớp 3. Ngày 24 tháng 1 năm 1959, Trường được đổi tên thành \"Trường Huấn luyện Hải quân\". Khu doanh trại mới dời về ngã sáu Hải Phòng (khu E) và được xây dựng thêm để đáp ứng việc tăng số lượng học viên của trường. Tháng 1 năm 1961, trường được đổi tên thành \"Trường Hải quân Việt Nam\". Tháng 4 năm 1966, Bộ Tư lệnh Hải quân quyết định chuyển trường ra Tiên Yên để vừa thực hiện nhiệm vụ đào tạo, vừa tăng cường lực lượng vũ trang ở vùng Đông Bắc. Tháng 7 năm 1969 trường đã di chuyển ra đảo Vạn Hoa, tiếp nhận toàn bộ cơ sở của Trung đoàn 170. Theo quyết định của Quân chủng, nhà trường trở về Quảng Yên làm nhiệm vụ đào tạo sĩ quan \"không phải đảm nhiệm huấn luyện hạ sĩ quan và nhân viên kỹ thuật nữa\", Tiểu đoàn 8 và Tiểu đoàn 9 của trường vẫn ở lại Vạn Hoa thành lập Trung đoàn 170 để làm nhiệm vụ huấn luyện hạ sĩ quan và nhân viên kỹ thuật. Chấp hành chỉ thị của Bộ Quốc phòng, ngày 10 tháng 9 năm 1975 Đảng ủy Quân chủng Hải quân ra nghị quyết số 986/ĐU và ngày 15 tháng 9 năm 1975, Tư lệnh Hải quân ra chỉ thị số 1005/TL quyết định chia Trường Sĩ quan Hải quân thành 2 trường: Trường Sĩ quan Hải quân I và Trường sĩ quan Hải quân 2. Trường Sĩ quan Hải quân I đóng quân tại thị trấn Quảng Yên huyện Yên Hưng tỉnh Quảng Ninh. Trường Sĩ quan Hải quân II tiếp quản Trung tâm Huấn luyện Hải quân Nha Trang của Việt Nam Cộng hòa tại Nha Trang tỉnh Khánh Hòa. Ngày 28 tháng 7 năm 1979, Tư lệnh Hải quân đã ký quyết định sáp nhập 2 trường Sĩ quan Hải quân I và II thành Trường Sĩ quan Hải quân Việt Nam. Ngày 23 tháng 10 năm 1980, Trường Sĩ quan Hải quân Việt Nam đổi tên thành Trường Sĩ quan Chỉ huy-Kỹ thuật Hải quân."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:website": {
+        "@id": "http://hocvienhaiquan.edu.vn/"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/0/06/Vietnam_People%27s_Navy_flag.svg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Vietnam People's Navy",
+      "schema:license": "Public domain",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Vietnam_People%27s_Navy_flag.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Vietnam_People%27s_Navy_flag.svg/330px-Vietnam_People%27s_Navy_flag.svg.png"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "12.2151"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "109.207"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "https://ror.org/02wqs8977"
-    },
-    {
-      "@id": "dbr:Vietnam_Naval_Academy"
-    },
-    {
-      "@id": "wd:Q7928533"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75022945"
-    },
-    {
-      "@id": "wd:Q7928533"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Vietnam Naval Academy"
-    },
-    {
-      "@language": "vi",
-      "@value": "Học viện Hải quân"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Hải quân"
-  },
-  "vnedu:address": "30, đường Trần Phú, phường Nha Trang, tỉnh Khánh Hòa",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1955"
-  },
-  "vnedu:governedBy": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/quan-chung-hai-quan"
-    },
-    {
-      "@id": "vnedu:MinistryOfNationalDefence"
-    }
-  ],
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:website": {
-    "@id": "http://hocvienhaiquan.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([12.2151,109.207],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([12.2151,109.207],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -154,7 +200,9 @@
   <a href="hoc-vien-hai-quan.ttl">Turtle</a> · <a href="hoc-vien-hai-quan.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-hai-quan">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 15 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Học viện Hải quân (HQH) là một học viện quân sự trực thuộc quân chủng Hải quân của Bộ Quốc phòng chuyên đào tạo sĩ quan chỉ huy hải quân &amp; cảnh sát biển cấp phân đội và chỉ huy tham mưu hải quân &amp; cảnh sát biển cấp chiến thuật - chiến dịch trình độ đại học quân sự, sau đại học. Thành lập: Ngày 26/4/1955 Trụ sở chính: 30, đường Trần Phú, phường Nha Trang, tỉnh Khánh Hòa</p><h2>Lịch sử</h2><p>Ngày 26 tháng 4 năm 1955 theo quyết định số 1125/QF/TTL của Bộ Quốc phòng Việt Nam, Trường Huấn luyện Bờ biển được thành lập (mật danh là C45) với nhiệm vụ: Huấn luyện, đào tạo cán bộ thủy binh cho các thủy đội và đài quan sát Cùng Bộ nghiên cứu kế hoạch huấn luyện và hoạt động của hải quân Theo kế hoạch của Bộ Tổng tư lệnh và Cục Phòng thủ Bờ biển (Bộ Tư lệnh Hải quân hiện nay), trường đã tiếp quản trại lính Thủy quân lục chiến Pháp nằm trên ngã ba bờ sông Tam Bạc và sông Cấm, cách cầu Hạ Lý 300 m. Ngày 6 tháng 6 năm 1955, khóa học đầu tiên đã được khai giảng. Học viên là cán bộ, chiến sĩ bộ binh, công binh,... của các sư đoàn 330, 308 và một số đơn vị khác đã tham gia tại nhiều chiến trường; văn hóa không đồng đều mà chủ yếu là lớp 2, lớp 3. Ngày 24 tháng 1 năm 1959, Trường được đổi tên thành &quot;Trường Huấn luyện Hải quân&quot;. Khu doanh trại mới dời về ngã sáu Hải Phòng (khu E) và được xây dựng thêm để đáp ứng việc tăng số lượng học viên của trường. Tháng 1 năm 1961, trường được đổi tên thành &quot;Trường Hải quân Việt Nam&quot;. Tháng 4 năm 1966, Bộ Tư lệnh Hải quân quyết định chuyển trường ra Tiên Yên để vừa thực hiện nhiệm vụ đào tạo, vừa tăng cường lực lượng vũ trang ở vùng Đông Bắc. Tháng 7 năm 1969 trường đã di chuyển ra đảo Vạn Hoa, tiếp nhận toàn bộ cơ sở của Trung đoàn 170. Theo quyết định của Quân chủng, nhà trường trở về Quảng Yên làm nhiệm vụ đào tạo sĩ quan &quot;không phải đảm nhiệm huấn luyện hạ sĩ quan và nhân viên kỹ thuật nữa&quot;, Tiểu đoàn 8 và Tiểu đoàn 9 của trường vẫn ở lại Vạn Hoa thành lập Trung đoàn 170 để làm nhiệm vụ huấn luyện hạ sĩ quan và nhân viên kỹ thuật. Chấp hành chỉ thị của Bộ Quốc phòng, ngày 10 tháng 9 năm 1975 Đảng ủy Quân chủng Hải quân ra nghị quyết số 986/ĐU và ngày 15 tháng 9 năm 1975, Tư lệnh Hải quân ra chỉ thị số 1005/TL quyết định chia Trường Sĩ quan Hải quân thành 2 trường: Trường Sĩ quan Hải quân I và Trường sĩ quan Hải quân 2. Trường Sĩ quan Hải quân I đóng quân tại thị trấn Quảng Yên huyện Yên Hưng tỉnh Quảng Ninh. Trường Sĩ quan Hải quân II tiếp quản Trung tâm Huấn luyện Hải quân Nha Trang của Việt Nam Cộng hòa tại Nha Trang tỉnh Khánh Hòa. Ngày 28 tháng 7 năm 1979, Tư lệnh Hải quân đã ký quyết định sáp nhập 2 trường Sĩ quan Hải quân I và II thành Trường Sĩ quan Hải quân Việt Nam. Ngày 23 tháng 10 năm 1980, Trường Sĩ quan Hải quân Việt Nam đổi tên thành Trường Sĩ quan Chỉ huy-Kỹ thuật Hải quân.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75022945">«Học viện Hải quân (Việt Nam)»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75022945), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Học viện Hải quân</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:Vietnam_People%27s_Navy_flag.svg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Vietnam_People%27s_Navy_flag.svg/330px-Vietnam_People%27s_Navy_flag.svg.png" alt="Biểu trưng Học viện Hải quân" loading="lazy"></a><figcaption>Public domain · Vietnam People&#x27;s Navy</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>Vietnam Naval Academy</td></tr><tr><th>Loại hình</th><td>Học viện · Công lập</td></tr><tr><th>Thành lập</th><td>26 tháng 4 năm 1955</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology#MinistryOfNationalDefence">Bộ Quốc phòng</a><br><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/quan-chung-hai-quan">Quân chủng Hải quân</a></td></tr><tr><th>Địa chỉ</th><td>30, đường Trần Phú, phường Nha Trang, tỉnh Khánh Hòa</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa">Khánh Hòa</a></td></tr><tr><th>Website</th><td><a href="http://hocvienhaiquan.edu.vn/">hocvienhaiquan.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:Haiquan.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Haiquan.png" alt="Ảnh Học viện Hải quân" loading="lazy"></a><figcaption>CC BY-SA 4.0 · Thongth4992</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -181,8 +229,17 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q7928533">wd:Q7928533</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75022945">&lt;https://vi.wikipedia.org/w/index.php?oldid=75022945&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1955-04-26 <span class="lang">xsd:date</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/4/41/Haiquan.png">&lt;https://upload.wikimedia.org/wikipedia/commons/4/41/Haiquan.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa">Khánh Hòa</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo">Trung Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/0/06/Vietnam_People%27s_Navy_flag.svg">&lt;https://upload.wikimedia.org/wikipedia/commons/0/06/Vietnam_People%27s_Navy_flag.svg&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>30, đường Trần Phú, phường Nha Trang, tỉnh Khánh Hòa</div>

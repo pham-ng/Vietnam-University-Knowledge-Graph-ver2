@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tay-bac",
   "@type": [
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
+    "foaf:Organization",
     "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
     "vnedu:UniversitySchool",
-    "foaf:Organization"
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Tây Bắc (Tay Bac University) là một trường đại học đa ngành cấp vùng Trung du và miền núi phía Bắc, là một trụ cột trong hệ thống giáo dục bậc cao của Việt Nam, có nhiệm vụ đào tạo nguồn nhân lực bậc đại học và cao học của cả vùng Trung du và miền núi phía Bắc. Ngoài đào tạo, trường đồng thời là trung tâm nghiên cứu khoa học và chính sách quản lý lớn của Miền Bắc Việt Nam. Trường được thành lập dựa trên cơ sở nâng cấp trường Cao đẳng Sư phạm Tây Bắc, trực thuộc Bộ Giáo dục và Đào tạo."
+  },
   "foaf:homepage": {
     "@id": "https://utb.edu.vn/"
   },
@@ -57,28 +61,30 @@
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Tay Bac University"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Tây Bắc"
+    },
+    {
+      "@language": "en",
+      "@value": "Tay Bac University"
     }
   ],
+  "schema:email": "contact@utb.edu.vn",
   "schema:employee": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-dinh-2"
   },
   "schema:location": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/son-la"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/son-la"
     }
   ],
+  "schema:telephone": "+84) 0212.3.751.700",
   "skos:notation": "TTB",
   "skos:prefLabel": {
     "@language": "vi",
@@ -98,13 +104,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/son-la"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/son-la"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:ownership": {

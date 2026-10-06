@@ -17,107 +17,135 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-lao-dong-xa-hoi-co-so-2-thanh-pho-ho-chi-minh",
-  "@type": [
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://ldxh.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Lao_%C4%91%E1%BB%99ng_-_X%C3%A3_h%E1%BB%99i_c%C6%A1_s%E1%BB%9F_2%2C_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.866649"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.617584"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "https://ror.org/04erjjt33"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/1/15/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Lao_%C4%91%E1%BB%99ng_-_X%C3%A3_h%E1%BB%99i_%28CSII%29.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Duc.381",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Lao_%C4%91%E1%BB%99ng_-_X%C3%A3_h%E1%BB%99i_(CSII).jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Lao_%C4%91%E1%BB%99ng_-_X%C3%A3_h%E1%BB%99i_%28CSII%29.jpg/330px-Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Lao_%C4%91%E1%BB%99ng_-_X%C3%A3_h%E1%BB%99i_%28CSII%29.jpg"
+      }
     },
     {
-      "@id": "wd:Q10829086"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-lao-dong-xa-hoi-co-so-2-thanh-pho-ho-chi-minh",
+      "@type": [
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Lao động - Xã hội (CSII) (Tiếng Anh: University of Labour Social Affairs 2) là một trong ba cơ sở đào tạo chính của Trường Đại học Lao động - Xã hội tại Hà Nội mà tiền thân là trường Trung học Lao động Tiền lương thuộc Bộ Nội vụ được thành lập năm 1961. Trường được nâng cấp lên Đại học ngày 31/1/2005, theo Quyết định số 26/2005/QĐ-TTg của Chính phủ."
+      },
+      "foaf:homepage": {
+        "@id": "http://ldxh.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Lao_%C4%91%E1%BB%99ng_-_X%C3%A3_h%E1%BB%99i_c%C6%A1_s%E1%BB%9F_2%2C_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.866649"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.617584"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10829086"
+        },
+        {
+          "@id": "https://ror.org/04erjjt33"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75188873"
+        },
+        {
+          "@id": "wd:Q10829086"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Lao động - Xã hội cơ sở 2, Thành phố Hồ Chí Minh"
+        },
+        {
+          "@language": "en",
+          "@value": "University of Labor and Social Affairs"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-hoa-tam"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/1/15/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Lao_%C4%91%E1%BB%99ng_-_X%C3%A3_h%E1%BB%99i_%28CSII%29.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        }
+      ],
+      "schema:telephone": "028)38837801",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Lao động - Xã hội cơ sở 2, Thành phố Hồ Chí Minh"
+      },
+      "vnedu:address": "1018, Tô Ký, Phường Trung Mỹ Tây",
+      "vnedu:director": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-hoa-tam"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1976"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-hoa-tam"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Lao động - Xã hội (CSII) là một trong ba cơ sở Đào tạo của Trường Đại học Lao động - Xã hội\n\nTrường Đại học Lao động - Xã hội có trụ sở chính đặt tại địa chỉ: 43 Trần Duy Hưng, phường Trung Hòa, quận Cầu Giấy, Hà Nội, thành phố Hà Nội, Việt Nam.\n\nNgày 27 tháng 12 năm 1976 cơ sở thứ hai của Trường Đại học Lao động - Xã hội chính là Trường Đại học Lao động - Xã hội (CSII) hiện nay được thành lập đáp ứng nhu cầu cung cấp cán bộ Lao động và Tiền lương cho các tỉnh thành phía Nam.\n\nĐến ngày 31/1/2005, Chính phủ đã ra Quyết định số 26/2005/QĐ-TTg, thành lập trường Đại học Lao động – Xã hội trên cơ sở nâng cấp trường Cao đẳng Lao động Xã hội.\n\nĐịa chỉ Trường Đại học Lao động - Xã hội (CSII) đặt tại: 1018 Tô Ký, phường Tân Chánh Hiệp, quận 12, Thành phố Hồ Chí Minh, Việt Nam."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Cùng bạn tạo dựng tương lai!"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:website": {
+        "@id": "http://ldxh.edu.vn/"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q10829086"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75188873"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "University of Labor and Social Affairs"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Lao động - Xã hội cơ sở 2, Thành phố Hồ Chí Minh"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-hoa-tam"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Lao động - Xã hội cơ sở 2, Thành phố Hồ Chí Minh"
-  },
-  "vnedu:address": "1018, Tô Ký, Phường Trung Mỹ Tây",
-  "vnedu:director": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-hoa-tam"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1976"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-hoa-tam"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Cùng bạn tạo dựng tương lai!"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:website": {
-    "@id": "http://ldxh.edu.vn/"
-  }
+  ]
 }

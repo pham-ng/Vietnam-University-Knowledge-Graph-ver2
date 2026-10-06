@@ -1,6 +1,6 @@
 # Sơ đồ ontology VN-Edu
 
-*Sinh tự động từ `ontology/vnedu.ttl` bởi `scripts/gen_docs.py`* — 34 lớp, 26 thuộc tính quan hệ, 17 thuộc tính dữ liệu, 564 triple.
+*Sinh tự động từ `ontology/vnedu.ttl` bởi `scripts/gen_docs.py`* — 34 lớp, 27 thuộc tính quan hệ, 20 thuộc tính dữ liệu, 629 triple.
 
 Mũi tên rỗng = kế thừa (`rdfs:subClassOf`); mũi tên có nhãn = thuộc tính quan hệ (domain → range).
 

@@ -31,6 +31,7 @@ university:truong-dai-hoc-duoc-ha-noi a dbo:University,
         schema:Organization ;
     rdfs:label "Hanoi University of Pharmacy"@en,
         "Trường Đại học Dược Hà Nội"@vi ;
+    dbo:abstract "Trường Đại học Dược Hà Nội là một trường đại học công lập có trụ sở chính tại Hà Nội. Tiền thân là Khoa Dược thuộc Trường Y Dược khoa Đông Dương, năm 1961 trường được thành lập theo quyết định của Bộ trưởng Bộ Y tế."@vi ;
     owl:sameAs dbr:Hanoi_University_of_Pharmacy,
         wd:Q16944333,
         <https://ror.org/03psjxz30> ;
@@ -76,6 +77,21 @@ university:truong-dai-hoc-duoc-ha-noi a dbo:University,
         person:van-t-h-ngo,
         person:vu-dinh-hoa ;
     vnedu:hasLeader person:nguyen-hai-nam-2 ;
+    vnedu:history """Ngày 8 tháng 1 năm 1902, Trường Y khoa Hà Nội được Toàn quyền Đông Dương ký nghị định thành lập. Ngày 26 tháng 7 năm 1909, chính phủ Pháp ra sắc lệnh quy định một số vấn đề về đào tạo dược. Năm 1914, Ban Dược được thành lập, việc đào tạo dược sỹ bắt đầu được thực hiện từ đó. Chương trình học ba năm đối với khoa Dược. Sinh viên tốt nghiệp được cấp bằng Dược sĩ Đông Dương (tương đương dược sĩ trung cấp ngày nay). Khóa tốt nghiệp đầu tiên năm 1917 chỉ có bốn người.
+
+Trường Y khoa Hà Nội (École de Médecine de Hanoi) được thành lập ngày 8 tháng 1 năm 1902 do bác sĩ Alexandre Yersin - giám đốc Viện Pasteur Nha Trang giữ chức hiệu trưởng đầu tiên. Trường được đặt tại Ấp Thái Hà. Đội ngũ giáo viên do Trường Đại học Y khoa Paris phê duyệt.
+
+Năm học đầu tiên (1902) có 19 sinh viên được tuyển chọn trên toàn Đông Dương vào lớp dự bị sau 6 tháng, qua kỳ kiểm tra chỉ còn 15 học sinh. Vì là chương trình của Pháp nên các sinh viên học toàn bàng tiếng Pháp. Bên cạnh trường có một bệnh xá với 40 giường bệnh và một phòng mổ tử thi. Đến năm 1904, trường chuyển về địa chỉ số 13 Lê Thánh Tông. Bệnh viện thực hành nằm ở số 132 Lò Đúc. Phòng mổ tử thi đặt tại Lương Yên. Năm 1906, bệnh viên thực hành được xây dựng mang tên Nhà thương bảo hộ (nay là bệnh viện Việt Đức).
+
+Năm 1906, Toàn quyền Đông Dương Paul Beau thành lập Viện Đại học Đông Dương (nay là Đại học Quốc gia Hà Nội), Trường Y khoa Hà Nội được sáp nhập trở thành một trường thành viên thuộc Viện Đại học Đông Dương.
+
+Ngày 20 tháng 7 năm 1914, trường mở thêm khoa Dược đào tạo dược sỹ bậc trung học (sau này gọi là dược sỹ Đông Dương) và đổi tên thành Trường Y Dược khoa Đông Dương. Chương trình học ba năm đối với khoa Dược. Ngày 15 tháng 7 năm 1917, khoá dược sỹ đầu tiên ra trường gồm 4 người Việt Nam.
+
+Ngày 22 tháng 4 năm 1924, Toàn quyền Đông Dương ký nghị định quy định trường có nhiệm vụ đào tạo bác sĩ y khoa, dược sĩ hạng nhất (Diplôme de Pharmacien 1ére classe - tương đương dược sĩ đại học ngày nay). Trước năm 1935, sinh viên năm thứ 5 thi và bảo vệ luận án tốt nghiệp tại Pháp.
+
+Năm 1945 sau Cách mạng tháng Tám, trường được thành lập trên cơ sở tiếp quản Trường Y Dược khoa Đông Dương và trở thành một trong 5 ban đại học trực thuộc Đại học Quốc gia Việt Nam với tên gọi Ban Y Dược do Giáo sư Hồ Đắc Di làm hiệu trưởng.
+
+Ngày 15 tháng 11 năm 1946, Bộ Quốc gia Giáo dục tổ chức khai giảng khóa đầu tiên. Cuộc kháng chiến toàn quốc bùng nổ, trường tản cư đến vùng tự do Chiêm Hóa, Tuyên Quang."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -86,7 +102,22 @@ university:truong-dai-hoc-duoc-ha-noi a dbo:University,
     vnedu:trainsMajor major:7720201 ;
     vnedu:website <http://www.hup.edu.vn> ;
     schema:employee person:nguyen-hai-nam-2 ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/e/ea/HanoiUniversityOfPharmacy.jpg> ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/6/64/LogoHUP.png> ;
+    schema:telephone "+84-(0)4 38254539" .
+
+<https://upload.wikimedia.org/wikipedia/commons/e/ea/HanoiUniversityOfPharmacy.jpg> a schema:ImageObject ;
+    schema:creditText "Đại học Dược Hà Nội" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:HanoiUniversityOfPharmacy.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/HanoiUniversityOfPharmacy.jpg/330px-HanoiUniversityOfPharmacy.jpg> .
+
+<https://upload.wikimedia.org/wikipedia/commons/6/64/LogoHUP.png> a schema:ImageObject ;
+    schema:creditText "Đại học Dược Hà Nội" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:LogoHUP.png> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/commons/6/64/LogoHUP.png> .
 

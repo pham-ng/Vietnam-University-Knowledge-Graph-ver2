@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -24,6 +25,7 @@ university:hoc-vien-hau-can a foaf:Organization,
         schema:EducationalOrganization,
         schema:Organization ;
     rdfs:label "Học viện Hậu cần"@vi ;
+    dbo:abstract "Học viện Hậu cần (tiếng Anh là: Military Academy of Logistics) là học viện quân sự trực thuộc Bộ Quốc phòng Việt Nam, có nhiệm vụ đào tạo sĩ quan và nhân viên ngành hậu cần cho Quân đội nhân dân Việt Nam.Ngày 7 tháng 2 năm 1993, Bộ Giáo dục và Đào tạo ra quyết định công nhận trình độ đào tạo đại học quân sự cho Học viện Hậu cần. Trụ sở chính: phường Bồ Đề, Thành phố Hà Nội Cơ sở 2: xã Đoài Phương, Thành phố Hà Nội 2 cơ sở này chủ yếu: đào tạo sĩ quan hậu cần trình độ cao đẳng, đại học và sau đại học với các chuyên ngành: chỉ huy tham mưu hậu cần, quân nhu, vận tải, xăng dầu, doanh trại, tài chính. Đào tạo hệ cao đẳng, đại học và sau đại học dân sự với chuyên ngành Tài chính – ngân hàng, Kế toán doanh nghiệp và Kỹ thuật Xây dựng."@vi ;
     owl:sameAs wd:Q10771887,
         <https://ror.org/0015erq74> ;
     geo:lat 21.066199 ;
@@ -35,11 +37,19 @@ university:hoc-vien-hau-can a foaf:Organization,
     vnedu:address "Ngọc Thụy, Long Biên, Hà Nội" ;
     vnedu:foundingYear "1951"^^xsd:gYear ;
     vnedu:governedBy vnedu:MinistryOfNationalDefence ;
+    vnedu:history "Trước yêu cầu của cách mạng và nhiệm vụ quân đội trong cuộc kháng chiến chống thực dân Pháp, đầu năm 1951, Tổng cục Cung cấp mở: Lớp huấn luyện cán bộ cung cấp đầu tiên do đồng chí Trần Đăng Ninh, Ủy viên Trung ương Đảng, Chủ nhiệm Tổng cục Cung cấp trực tiếp chỉ đạo. Ngày khai giảng lớp học, Bác Hồ đã gửi thư cho cán bộ, học viên, trong thư Người viết: “Công việc cung cấp cũng quan trọng như việc trực tiếp đánh giặc trước mặt trận, cung cấp đủ súng, đạn, đủ cơm áo thì bộ đội mới đánh thắng trận”; đồng thời Người chỉ rõ: “cán bộ cung cấp càng phải làm kiểu mẫu cần, kiệm, liêm, chính”. Tiếp sau đó là: Các lớp huấn luyện cán bộ cung cấp (1951 - 1953) Trường Cán bộ Cung cấp (1953 - 1955) Trường Cán bộ Hậu cần (1955 - 1958) Trường Sĩ quan Hậu cần (1958 - 1974) Học viện Hậu cần - được thành lập trên cơ sở nâng cấp từ Trường Sĩ quan Hậu cần (Quyết định 188/QĐ-QP - Ngày 23 tháng 7 năm 1974) Tháng 8 năm 1980, một bộ phận của Học viện Hậu cần được tách ra để thành lập Trường sĩ quan Hậu cần. Tháng 3 năm 1996, sáp nhập Trường sĩ quan Hậu cần về Học viện Hậu cần (Quyết định số 257/QĐ–QP) Năm 2021, Học viện Hậu cần bàn giao nội dung đào tạo Trung cấp cho Cao đẳng Hậu cần/Tổng cục Hậu cần, Học viện chỉ đào tạo từ Cử nhân đến Tiến sĩ hậu cần, tài chính. Ngày 15 tháng 6 năm 1951 là Ngày truyền thống của Học viện Hậu cần - Ngày Chủ tịch Hồ Chí Minh gửi thư cho lớp cán bộ cung cấp đầu tiên của Tổng cục Cung cấp."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
+    schema:foundingDate "1951-06-15"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/vi/9/93/Phu_hieu_Hoc_vien_Hau_can.jpg> ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo .
+
+<https://upload.wikimedia.org/wikipedia/vi/9/93/Phu_hieu_Hoc_vien_Hau_can.jpg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Phu_hieu_Hoc_vien_Hau_can.jpg> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/vi/9/93/Phu_hieu_Hoc_vien_Hau_can.jpg> .
 

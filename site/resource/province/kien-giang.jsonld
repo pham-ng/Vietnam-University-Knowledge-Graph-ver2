@@ -20,15 +20,15 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/kien-giang",
   "@type": [
     "vnedu:AdministrativeUnit",
-    "vnedu:FormerProvince",
-    "schema:AdministrativeArea"
+    "schema:AdministrativeArea",
+    "vnedu:FormerProvince"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Ki%C3%AAn_Giang_province"
+      "@id": "https://vi.wikipedia.org/wiki/Ki%C3%AAn_Giang"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Ki%C3%AAn_Giang"
+      "@id": "https://en.wikipedia.org/wiki/Ki%C3%AAn_Giang_province"
     }
   ],
   "geo:lat": {
@@ -44,10 +44,10 @@
       "@id": "wd:Q36576"
     },
     {
-      "@id": "dbr:Kiên_Giang_province"
+      "@id": "https://sws.geonames.org/1579008/"
     },
     {
-      "@id": "https://sws.geonames.org/1579008/"
+      "@id": "dbr:Kiên_Giang_province"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -55,11 +55,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Kiên Giang"
     },
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Kiên Giang"
     }
   ],

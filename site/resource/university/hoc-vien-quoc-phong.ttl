@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -25,6 +26,7 @@ university:hoc-vien-quoc-phong a foaf:Organization,
         schema:EducationalOrganization,
         schema:Organization ;
     rdfs:label "Học viện Quốc phòng"@vi ;
+    dbo:abstract "Học viện Quốc phòng trực thuộc Bộ Quốc phòng Việt Nam, là Học viện huấn luyện và đào tạo tướng lĩnh, sĩ quan cao cấp, cán bộ khoa học nghệ thuật quân sự đầu ngành của Quân đội nhân dân Việt Nam; bồi dưỡng kiến thức quốc phòng cho cán bộ cao cấp của Đảng, Nhà nước và đoàn thể. Hầu hết các tướng lĩnh của Quân đội nhân dân Việt Nam đều phải qua học viện này. Học viện được thành lập ngày 21 tháng 2 năm 1976 theo quyết định số 38/QP của Bộ Quốc phòng Việt Nam. Từ năm 1994 trực thuộc Chính phủ và Chính phủ giao cho Bộ Quốc phòng trực tiếp quản lý."@vi ;
     owl:sameAs wd:Q10771903,
         <https://ror.org/04d3qjd86> ;
     geo:lat 21.047039 ;
@@ -45,12 +47,30 @@ university:hoc-vien-quoc-phong a foaf:Organization,
         person:nguyen-van-thai,
         person:tran-thanh-phuong,
         person:vo-van-hoi ;
+    vnedu:history """Ngày 25 tháng 7 năm 1975, Quân ủy Trung ương họp tại Đà Lạt đã ra nghị quyết về việc thành lập Học viện Quân sự Cao cấp. Chấp hành Nghị quyết của Quân ủy Trung ương, ngày 21 tháng 2 năm 1976, Bộ Quốc phòng đã ra Quyết định số 38/QĐ–BQP thành lập Học viện Quân sự Cao cấp do Thượng tướng Hoàng Văn Thái, Thứ trưởng ký.
+
+Ngày 25 tháng 2 năm 1976, Tổng Tham mưu trưởng ra Quyết định số 28/QĐ–TM lâm thời quy định về cơ cấu tổ chức, biên chế Học viện Quân sự Cao cấp gồm 6 cơ quan và 16 khoa giảng viên với quân số 234 người. Ngày 24 tháng 5 năm 1976, Liên chi ủy cơ quan đã họp ra nghị quyết lãnh đạo việc kiện toàn biên chế tổ chức của Học viện. Ngày 25 tháng 6 năm 1976, Tổng Tham mưu trưởng ra Quyết định số 146/QĐ–TM ban hành biên chế chính thức cho Học viện Quân sự Cao cấp gồm Ban Giám đốc, 6 cơ quan, 16 khoa giảng viên, bổ sung các khung Học viên, tổng biên chế 400 người.
+
+Để hoàn chỉnh hệ thống tổ chức đảng ngang tầm với nhiệm vụ, ngày 16 tháng 10 năm 1976, Quân ủy Trung ương ra Quyết định số 55/QĐ–QUTW thành lập Đảng ủy Học viện Quân sự Cao cấp đặt dưới sự lãnh đạo của Quân ủy Trung ương. Ngày 20 tháng 10 năm 1976, Đảng ủy Học viện tiến hành hội nghị đầu tiên dưới sự chủ trì của đồng chí Lê Trọng Tấn, Bí thư Đảng ủy, ra nghị quyết lãnh đạo xây dựng Học viện và tích cực chuẩn bị mọi mặt cho khóa học đầu tiên theo quyết định của Bộ Quốc phòng.
+
+Ngày 3 tháng 1 năm 1977, Học viện Quân sự Cao cấp đã tổ chức trọng thể Lễ khai giảng khóa đầu tiên gồm 94 học viên. Đây là khóa học bổ túc cán bộ cao cấp toàn quân đầu tiên trong 10 tháng. Ngày 20 tháng 10 năm 1977, Viện trưởng Học viện Quân sự Cao cấp ra quyết định thành lập lớp nghiên cứu sinh tại Học viện và tổ chức thành nhiều đợt.
+
+Ngày 20 tháng 2 năm 1978, Học viện tổ chức trọng thể Lễ Khai giảng khóa 2, có 121 học viên trong đó có 9 đồng chí là Thiếu tướng.Tháng 8 năm 1978, để tiếp tục kiện toàn tổ chức các học viện, viện nghiên cứu, Thường vụ Quân ủy Trung ương ra Quyết định số 297/QĐ–QUTW hợp nhất Học viện Quân sự Cao cấp và Viện Khoa học quân sự. Ngày 15 tháng 9 năm 1978, Học viện tổ chức trọng thể Lễ Khai giảng khóa 1, với mục tiêu đào tạo Sư đoàn trưởng binh chủng hợp thành, khóa học có 90 học viên, thời gian 2 năm.
+
+Ngày 4 tháng 12 năm 1979, Bộ Quốc phòng ra Quyết định điều động Cục Điều lệnh thuộc Học viện Quân sự Cao cấp về trực thuộc Bộ Tổng Tham mưu."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:website <http://www.nda.edu.vn> ;
+    schema:foundingDate "1976-02-21"^^xsd:date ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/5/51/Logo_H%E1%BB%8Dc_Vi%E1%BB%87n_Qu%E1%BB%91c_Ph%C3%B2ng.png> .
+
+<https://upload.wikimedia.org/wikipedia/vi/5/51/Logo_H%E1%BB%8Dc_Vi%E1%BB%87n_Qu%E1%BB%91c_Ph%C3%B2ng.png> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_H%E1%BB%8Dc_Vi%E1%BB%87n_Qu%E1%BB%91c_Ph%C3%B2ng.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/5/51/Logo_H%E1%BB%8Dc_Vi%E1%BB%87n_Qu%E1%BB%91c_Ph%C3%B2ng.png/330px-Logo_H%E1%BB%8Dc_Vi%E1%BB%87n_Qu%E1%BB%91c_Ph%C3%B2ng.png> .
 

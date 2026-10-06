@@ -20,15 +20,15 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/lai-chau",
   "@type": [
     "vnedu:AdministrativeUnit",
-    "schema:AdministrativeArea",
-    "vnedu:Province"
+    "vnedu:Province",
+    "schema:AdministrativeArea"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Lai_Ch%C3%A2u"
+      "@id": "https://en.wikipedia.org/wiki/Lai_Ch%C3%A2u_province"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Lai_Ch%C3%A2u_province"
+      "@id": "https://vi.wikipedia.org/wiki/Lai_Ch%C3%A2u"
     }
   ],
   "geo:lat": {
@@ -41,10 +41,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q36409"
+      "@id": "dbr:Lai_Châu_province"
     },
     {
-      "@id": "dbr:Lai_Châu_province"
+      "@id": "wd:Q36409"
     },
     {
       "@id": "https://sws.geonames.org/1577954/"
@@ -55,11 +55,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Lai Châu"
     },
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Lai Châu"
     }
   ],
@@ -69,10 +69,10 @@
   },
   "vnedu:partOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:population": {

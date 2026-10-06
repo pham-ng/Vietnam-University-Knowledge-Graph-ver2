@@ -30,118 +30,145 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-thuong-mai",
-  "@type": [
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "https://tmu.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.035966"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.774414"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q10829142"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "wd:Q10829142"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-thuong-mai",
+      "@type": [
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Thương mại (tiếng Anh: Thuongmai University hoặc Vietnam University of Commerce, tên viết tắt: TMU) là Trường Đại học công lập của Việt Nam về khối ngành Thương mại, trực thuộc Bộ Giáo dục và Đào tạo, hoạt động theo cơ chế tự chủ."
+      },
+      "foaf:homepage": {
+        "@id": "https://tmu.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.035966"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.774414"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q10829142"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829142"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75597674"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Thuongmai University"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Thương mại"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hoang"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/2/2a/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i.jpg"
+      },
+      "skos:altLabel": "Vietnam University of Commerce",
+      "skos:notation": "TMU",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Thương mại"
+      },
+      "vnedu:address": "79 đường Hồ Tùng Mậu, phường Từ Liêm",
+      "vnedu:admissionCode": "TMU",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1960"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hanbin"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-loan"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hoang"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường được thành lập năm 1960 với tên gọi là Trường Thương nghiệp Trung ương. Năm 1979, Trường đổi tên thành Trường Đại học Thương nghiệp. Năm 1994, Trường đổi tên thành Trường Đại học Thương mại. Năm 2015, Trường thành lập cơ sở Hà Nam. Cơ sở này vốn là cơ sở cũ của Trường Trung học Bưu chính Viễn thông và Công nghệ thông tin I thuộc tỉnh Hà Nam. Năm 2016, Trường được Thủ tướng Chính phủ cho phép tự chủ, tự chịu trách nhiệm."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Where your future begins"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hoang"
+      },
+      "vnedu:shortName": "TMU",
+      "vnedu:website": {
+        "@id": "https://tmu.edu.vn/"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75597674"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/2/2a/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i.jpg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/2/2a/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i.jpg/330px-Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i.jpg"
+      }
     }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Thuongmai University"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Thương mại"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hoang"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:notation": "TMU",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Thương mại"
-  },
-  "vnedu:address": "79 đường Hồ Tùng Mậu, phường Từ Liêm",
-  "vnedu:admissionCode": "TMU",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1960"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hanbin"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-loan"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hoang"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Where your future begins"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hoang"
-  },
-  "vnedu:shortName": "TMU",
-  "vnedu:website": {
-    "@id": "https://tmu.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([21.035966,105.774414],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([21.035966,105.774414],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -160,7 +187,9 @@
   <a href="truong-dai-hoc-thuong-mai.ttl">Turtle</a> · <a href="truong-dai-hoc-thuong-mai.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-thuong-mai">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 20 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Thương mại (tiếng Anh: Thuongmai University hoặc Vietnam University of Commerce, tên viết tắt: TMU) là Trường Đại học công lập của Việt Nam về khối ngành Thương mại, trực thuộc Bộ Giáo dục và Đào tạo, hoạt động theo cơ chế tự chủ.</p><h2>Lịch sử</h2><p>Trường được thành lập năm 1960 với tên gọi là Trường Thương nghiệp Trung ương. Năm 1979, Trường đổi tên thành Trường Đại học Thương nghiệp. Năm 1994, Trường đổi tên thành Trường Đại học Thương mại. Năm 2015, Trường thành lập cơ sở Hà Nam. Cơ sở này vốn là cơ sở cũ của Trường Trung học Bưu chính Viễn thông và Công nghệ thông tin I thuộc tỉnh Hà Nam. Năm 2016, Trường được Thủ tướng Chính phủ cho phép tự chủ, tự chịu trách nhiệm.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75597674">«Trường Đại học Thương mại»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75597674), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Thương mại</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/2/2a/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i.jpg/330px-Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i.jpg" alt="Biểu trưng Trường Đại học Thương mại" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên khác</th><td>Vietnam University of Commerce</td></tr><tr><th>Tên tiếng Anh</th><td>Thuongmai University</td></tr><tr><th>Viết tắt</th><td>TMU</td></tr><tr><th>Mã trường</th><td>TMU</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>1960</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hoang">Nguyễn Hoàng</a></td></tr><tr><th>Địa chỉ</th><td>79 đường Hồ Tùng Mậu, phường Từ Liêm</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Where your future begins</i></td></tr><tr><th>Website</th><td><a href="https://tmu.edu.vn/">tmu.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -192,6 +221,12 @@
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/2/2a/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i.jpg">&lt;https://upload.wikimedia.org/wikipedia/vi/2/2a/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C6%B0%C6%A1ng_m%E1%BA%A1i.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">tên khác<small>skos:altLabel</small></td><td>
+<div>Vietnam University of Commerce</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>TMU <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -237,17 +272,17 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
+<tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hoang">Nguyễn Hoàng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
-<tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hanbin">Hanbin</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-loan">Nguyễn Thị Loan</a></div>
 </td></tr>
 <tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hanbin">Hanbin</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-loan">Nguyễn Thị Loan</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
-<tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hanbin">Hanbin</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-loan">Nguyễn Thị Loan</a></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

@@ -29,6 +29,7 @@ university:truong-dai-hoc-kien-truc-ha-noi a dbo:University,
         schema:Organization ;
     rdfs:label "Hanoi Architectural University"@en,
         "Trường Đại học Kiến trúc Hà Nội"@vi ;
+    dbo:abstract "Trường Đại học Kiến trúc Hà Nội (, thường được gọi tắt là HAU) là trường đại học chuyên ngành, giữ vai trò tiên phong trong đào tạo và nghiên cứu nhóm ngành kiến trúc, xây dựng và thiết kế tại Việt Nam, trực thuộc sự quản lý của Bộ Xây dựng. Với bề dầy lịch sử từ năm 1961 từ khi còn là một lớp đào tạo kiến trúc sư cho đến khi chính thức thành lập vào 17/9/1969 theo Quyết định 181/CP của Thủ tướng Phạm Văn Đồng, trường đã và đang đào tạo ra nhiều thế hệ kiến trúc sư, kỹ sư, nhà thiết kế tài năng, đóng góp cho sự phát triển của đất nước."@vi ;
     owl:sameAs dbr:Hanoi_Architectural_University,
         wd:Q6131246,
         <https://ror.org/03c8sfz84> ;
@@ -42,8 +43,10 @@ university:truong-dai-hoc-kien-truc-ha-noi a dbo:University,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Hanoi_Architectural_University>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ki%E1%BA%BFn_tr%C3%BAc_H%C3%A0_N%E1%BB%99i> ;
     vnedu:academicStaff "507"^^xsd:nonNegativeInteger ;
+    vnedu:address "Km 10, Đường Trần Phú, phường Hà Đông, thành phố Hà Nội" ;
     vnedu:admissionCode "KTA" ;
     vnedu:foundingYear "1969"^^xsd:gYear ;
+    vnedu:funding "132,758 tỷ đồng (2018)" ;
     vnedu:governedBy organization:bo-xay-dung ;
     vnedu:hasAlumnus person:dang-quoc-khanh,
         person:do-duc-duy,
@@ -54,6 +57,18 @@ university:truong-dai-hoc-kien-truc-ha-noi a dbo:University,
         person:tran-van-khai,
         person:tran-viet-anh,
         person:trinh-xuan-thanh ;
+    vnedu:hasLeader person:vu-ngoc-anh ;
+    vnedu:history """Ghi chú: Thời Pháp thuộc tại Liên bang Đông Dương chỉ có Ban Kiến trúc thuộc Trường Mỹ thuật Đông Dương (École des Beaux-Arts) tại Hà Nội đào tạo ngành kiến trúc, lập ra năm 1926.Trước Cách mạng Tháng 8/1945 và trước khi giải phóng miền Bắc 1955, Việt Nam không chú trọng đào tạo cán bộ ngành xây dựng, kiến trúc sư và kỹ sư công chính được đào tạo với số lượng rất ít ỏi.
+
+Ngày 08/06/1961: Chính phủ đã có văn bản số 1927 cho phép Bộ Kiến trúc với sự phối hợp của Bộ Giáo dục mở Lớp đào tạo Kiến trúc sư tại đại học Bách khoa, số lượng tuyển sinh mỗi khóa 100 người. Các lớp sinh viên Kiến trúc khoá 1961, 1962, 1963 được biên chế thành ngành Kiến trúc khoá VI, VII, VIII thuộc Khoa Xây dựng Trường đại học Bách khoa Hà Nội.
+
+Tháng 10/1963: sau khi đã chuẩn bị đủ cơ sở trường lớp, và đội ngũ kỹ sư giảng dạy, có sự thoả thuận với Bộ Giáo dục, Lớp Đào tạo Kiến trúc sư được chuyển khỏi Bách khoa, hoạt động độc lập, dưới sự chỉ đạo trực tiếp của Bộ Kiến trúc.
+
+Năm 1966: Chính phủ quyết định sáp nhập Lớp đào tạo Kiến trúc sư vào Trường đại học Xây dựng, trở thành Khoa Kiến trúc Đô thị Trường đại học Xây dựng.
+
+Ngày 17/09/1969: Trường Đại học Kiến trúc Hà Nội được thành lập theo Quyết định 181/CP, trên cơ sở của ngành Kiến trúc Đô thị tách ra từ Trường Đại học Xây dựng Hà Nội địa điểm tại Hà Đông. Ngày mới thành lập, trường đào tạo bậc đại học 4 ngành: Kiến trúc sư, Kỹ sư Xây dựng dân dụng và Công nghiệp, Kỹ sư Xây dựng công trình kỹ thuật Thành phố, Kỹ sư Kinh tế Xây dựng. Trường có 2 khoa: Khoa Kiến trúc và Khoa Kỹ thuật Xây dựng. Quy mô tuyển sinh là 200 sinh viên mỗi khóa. 2 năm sau, Trường phát triển thành 4 Khoa: Khoa Kiến trúc, Khoa Đô thị, Khoa Xây dựng, Khoa Cơ bản. Quy mô tuyển sinh tăng dần đến 400 sinh viên mỗi khóa.
+
+Những năm tiếp theo, Trường được mở thêm các ngành mới: Kỹ sư Xây dựng công trình ngầm, Kỹ sư Quản lý Đô thị, Mỹ thuật Công nghiệp. Từ năm 1990, trường được giao đào tạo sau đại học các ngành đang được đào tạo tại Trường."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -61,8 +76,26 @@ university:truong-dai-hoc-kien-truc-ha-noi a dbo:University,
     vnedu:numberOfPostgraduates "227"^^xsd:nonNegativeInteger ;
     vnedu:numberOfUndergraduates "14281"^^xsd:nonNegativeInteger ;
     vnedu:ownership vnedu:PublicOwnership ;
+    vnedu:rector person:vu-ngoc-anh ;
     vnedu:website <http://hau.edu.vn/> ;
+    schema:employee person:vu-ngoc-anh ;
+    schema:foundingDate "1969-09-17"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/9/96/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ki%E1%BA%BFn_tr%C3%BAc_1_-_NKS.jpg> ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/0/03/Logo_HAU.png> ;
+    schema:telephone "+84 024 3854 1616" .
+
+<https://upload.wikimedia.org/wikipedia/commons/0/03/Logo_HAU.png> a schema:ImageObject ;
+    schema:creditText "Đại học Kiến trúc Hà Nội" ;
+    schema:license "Public domain" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Logo_HAU.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Logo_HAU.png/330px-Logo_HAU.png> .
+
+<https://upload.wikimedia.org/wikipedia/commons/9/96/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ki%E1%BA%BFn_tr%C3%BAc_1_-_NKS.jpg> a schema:ImageObject ;
+    schema:creditText "NKSTTSSHNVN" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ki%E1%BA%BFn_tr%C3%BAc_1_-_NKS.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ki%E1%BA%BFn_tr%C3%BAc_1_-_NKS.jpg/330px-%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ki%E1%BA%BFn_tr%C3%BAc_1_-_NKS.jpg> .
 

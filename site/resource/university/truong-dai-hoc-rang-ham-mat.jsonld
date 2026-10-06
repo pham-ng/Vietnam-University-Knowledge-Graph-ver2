@@ -17,99 +17,130 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-rang-ham-mat",
-  "@type": [
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:DefunctInstitution",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.dhrhm.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_R%C4%83ng_H%C3%A0m_M%E1%BA%B7t"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q10829120"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74506043"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/8/8c/Dai_hoc_RangHamMat.PNG",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Dai_hoc_RangHamMat.PNG"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/8/8c/Dai_hoc_RangHamMat.PNG"
+      }
     },
     {
-      "@id": "wd:Q10829120"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-rang-ham-mat",
+      "@type": [
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "vnedu:DefunctInstitution",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Răng Hàm Mặt được thành lập ngày 15 tháng 10 năm 2002, trụ sở của Trường được đặt tại số 40A phố Tràng Thi, phường Hàng Bông, quận Hoàn Kiếm, thành phố Hà Nội. Trường này là đại học đào tạo chuyên về Răng - Hàm - Mặt đầu tiên của Việt Nam. Trường đã giải thể vào năm 2009 do hoạt động chồng chéo, không hiệu quả."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.dhrhm.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_R%C4%83ng_H%C3%A0m_M%E1%BA%B7t"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q10829120"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=74506043"
+        },
+        {
+          "@id": "wd:Q10829120"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Răng Hàm Mặt"
+        },
+        {
+          "@language": "en",
+          "@value": "jaw"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-manh-dung"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "2002-10-15"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/8/8c/Dai_hoc_RangHamMat.PNG"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:telephone": "+84-(04) 928 7190",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Răng Hàm Mặt"
+      },
+      "vnedu:address": "40A phố Tràng Thi, phường Hàng Bông, quận Hoàn Kiếm",
+      "vnedu:dissolutionYear": {
+        "@type": "xsd:gYear",
+        "@value": "2009"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2002"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-manh-dung"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Răng Hàm Mặt tiền thân là ban Nha khoa - Bệnh viện Phủ Doãn Hà Nội (nay là Bệnh viện Hữu nghị Việt - Đức) được thành lập ngày 01/10/1939, với chức năng ban đầu là đào tạo cán bộ nha khoa ở Đông Dương.\n\nNăm 1990, Khoa Răng Hàm Mặt - Bệnh viện Hữu nghị Việt Đức trở thành phân viện Răng Hàm Mặt. Năm 1997, khoa đào tạo của Viện Răng Hàm Mặt và bộ môn Răng Hàm Mặt - Trường Đại học Y Hà Nội hợp thành khoa Răng Hàm Mặt.\n\nNgày 15/10/2002, Thủ tướng Chính phủ đã ký quyết định số 138/2002/QĐ-TTg nâng cấp hai Khoa trên thành trường Đại học Răng Hàm Mặt.\n\nHiện tại Trường đã giải thể do hoạt động chồng chéo, không hiệu quả, trở thành một đơn vị trực thuộc Trường ĐHY Hà Nội."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "vnedu:numberOfUndergraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "22500"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-manh-dung"
+      },
+      "vnedu:website": {
+        "@id": "http://www.dhrhm.edu.vn"
+      }
     }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "jaw"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Răng Hàm Mặt"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-manh-dung"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Răng Hàm Mặt"
-  },
-  "vnedu:address": "40A phố Tràng Thi, phường Hàng Bông, quận Hoàn Kiếm",
-  "vnedu:dissolutionYear": {
-    "@type": "xsd:gYear",
-    "@value": "2009"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2002"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-manh-dung"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    }
-  ],
-  "vnedu:numberOfUndergraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "22500"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-manh-dung"
-  },
-  "vnedu:website": {
-    "@id": "http://www.dhrhm.edu.vn"
-  }
+  ]
 }

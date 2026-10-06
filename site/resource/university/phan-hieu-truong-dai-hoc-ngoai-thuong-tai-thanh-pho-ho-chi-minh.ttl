@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -22,6 +23,7 @@ university:phan-hieu-truong-dai-hoc-ngoai-thuong-tai-thanh-pho-ho-chi-minh a foa
         schema:Organization ;
     rdfs:label "Foreign Trade University, Ho Chi Minh City Branch"@en,
         "Phân hiệu Trường Đại học Ngoại thương tại Thành phố Hồ Chí Minh"@vi ;
+    dbo:abstract "Phân hiệu Trường Đại học Ngoại thương tại Thành phố Hồ Chí Minh (tiếng Anh: Foreign Trade University, Ho Chi Minh City Branch, Phân hiệu FTU tại TP.HCM) là cơ sở đào tạo phía Nam của Trường Đại học Ngoại thương tại Hà Nội, cơ sở giáo dục đại học chuyên ngành kinh tế đầu ngành tại Việt Nam, thành viên của Bộ Giáo dục và Đào tạo. Cơ sở được thành lập dựa trên nhu cầu đào tạo cán bộ trong lĩnh vực kinh tế và kinh doanh quốc tế của các tỉnh thành phía Nam trong giai đoạn hội nhập kinh tế quốc tế. Được thành lập theo Quyết định số 1485/GD-ĐT ngày 16 tháng 7 năm 1993 của Bộ trưởng Bộ Giáo dục và Đào tạo Việt Nam."@vi ;
     owl:sameAs wd:Q10829100 ;
     geo:lat 10.799291 ;
     geo:long 106.717844 ;
@@ -35,6 +37,19 @@ university:phan-hieu-truong-dai-hoc-ngoai-thuong-tai-thanh-pho-ho-chi-minh a foa
     vnedu:branchOf university:truong-dai-hoc-ngoai-thuong ;
     vnedu:formerName "Trường Cán bộ Ngoại giao – Ngoại thương"@vi ;
     vnedu:foundingYear "1993"^^xsd:gYear ;
+    vnedu:history """Ngày 20/6/1962, theo Quyết định của Thủ tướng Chính phủ, Khoa Quan hệ Quốc tế tách khỏi Trường Đại học Kinh tế - Tài chính để thành lập Trường Cán bộ Ngoại giao - Ngoại thương trực thuộc Bộ Ngoại giao có trụ sở đặt tại làng Láng, tỉnh Hà Đông cũ (nay là phường Láng Thượng, Hà Nội) trên khu đất của Trường Đại học Ngoại thương và Học viện Ngoại giao hiện nay.Ngày 16/07/1993: Trường Đại học Ngoại thương cơ sở II được thành lập theo Quyết định số 1485/GD-ĐT ngày 16 tháng 7 năm 1993 của Bộ trưởng Bộ Giáo dục và Đào tạo. Cơ sở II bắt đầu hoạt động tại quận Phú Nhuận, tuyển sinh khoảng 300 sinh viên/năm ngành Kinh tế đối ngoại.
+
+Tháng 10 /1993: Cơ sở II chính thức khai giảng khóa đào tạo đầu tiên thuộc hệ tại chức, đánh dấu sự khởi đầu của hoạt động đào tạo tại khu vực phía Nam.
+
+Năm 1985: Trường Đại học Ngoại thương chuyển từ Bộ Ngoại thương sang trực thuộc Bộ Đại học và Trung học Chuyên nghiệp (nay là Bộ Giáo dục và Đào tạo).
+
+Năm 1994: Cơ sở II bắt đầu tuyển sinh và đào tạo hệ Cử nhân chính quy khóa đầu tiên, mở ra một giai đoạn phát triển mới và dần khẳng định vai trò một trung tâm đào tạo uy tín.
+
+Ngày 15/02/1995: Bộ trưởng Bộ Giáo dục và Đào tạo ra Quyết định số 569/TCCB về việc giao nhiệm vụ cho Cơ sở II. Quyết định này chính thức hóa vai trò và chức năng của Cơ sở II như một đơn vị trực thuộc Trường Đại học Ngoại thương, có nhiệm vụ đào tạo và bồi dưỡng cán bộ ở các cấp học trong lĩnh vực kinh tế đối ngoại cho các tỉnh thành phía Nam.
+
+Ngày 01/09/2006: Ban Tổ chức – Hành chính được thành lập theo Quyết định số 11/QĐ-TCHC, ĐH Ngoại thương.
+
+Ngày 16/07/2009: Hiệu trưởng Trường Đại học Ngoại thương ban hành Quyết định số 899/QĐ-ĐHNT-TCCB, đổi tên "Cơ sở II tại TP. Hồ Chí Minh" thành "Cơ sở II Trường Đại học Ngoại thương tại TP. Hồ Chí Minh". Việc thay đổi tên gọi này khẳng định vị thế, vai trò và quy mô ngày càng phát triển của Cơ sở II trong hệ thống giáo dục đại học Việt Nam."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -42,7 +57,22 @@ university:phan-hieu-truong-dai-hoc-ngoai-thuong-tai-thanh-pho-ho-chi-minh a foa
     vnedu:numberOfStudents "3500"^^xsd:nonNegativeInteger ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:website <https://hcmc.ftu.edu.vn/> ;
+    schema:foundingDate "1993-07-16"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/e/eb/FTU_c%C6%A1_s%E1%BB%9F_II.jpg> ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/8/8e/FTU_logo_2020.png> ;
+    schema:telephone "+84 028 512 7254" .
+
+<https://upload.wikimedia.org/wikipedia/commons/e/eb/FTU_c%C6%A1_s%E1%BB%9F_II.jpg> a schema:ImageObject ;
+    schema:creditText "19" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:FTU_c%C6%A1_s%E1%BB%9F_II.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/FTU_c%C6%A1_s%E1%BB%9F_II.jpg/330px-FTU_c%C6%A1_s%E1%BB%9F_II.jpg> .
+
+<https://upload.wikimedia.org/wikipedia/vi/8/8e/FTU_logo_2020.png> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:FTU_logo_2020.png> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/vi/8/8e/FTU_logo_2020.png> .
 

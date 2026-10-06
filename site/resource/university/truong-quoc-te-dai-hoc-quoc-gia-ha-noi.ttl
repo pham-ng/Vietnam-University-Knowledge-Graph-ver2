@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
@@ -23,6 +24,7 @@ university:truong-quoc-te-dai-hoc-quoc-gia-ha-noi a foaf:Organization,
         schema:Organization ;
     rdfs:label "VNU International School"@en,
         "Trường Quốc tế, Đại học Quốc gia Hà Nội"@vi ;
+    dbo:abstract "Trường Quốc tế - Đại học Quốc gia Hà Nội (tiếng Anh: VNU International School - viết tắt là VNU-IS) là một cơ sở giáo dục đại học trực thuộc Đại học Quốc gia Hà Nội - đại học trong nhóm trọng điểm quốc gia và đại học tinh hoa của Việt Nam. Trường được thành lập vào tháng 7 năm 2002 theo quyết định của Giám đốc ĐHQGHN với tên gọi Khoa Quốc tế Việt-Nga với mục tiêu là một trong đơn vị đầu tiên tổ chức mô hình đào tạo liên kết quốc tế tại Việt Nam. Tháng 12 năm 2003 được đổi tên thành Khoa Quốc tế. Đến ngày 01/12/2021 theo quyết định số 3868/QĐ-ĐHQGHN của Giám đốc Đại học Quốc gia Hà Nội trường chính thức được thành lập với cái tên Trường Quốc tế, Đại học Quốc gia Hà Nội. Đến năm 2025, thực hiện Nghị quyết số 18-NQ/TW và xây dựng, triển khai Đề án sắp xếp, tinh gọn tổ chức bộ máy, Đại học Quốc gia Hà Nội chủ trương sáp nhập nguyên trạng Khoa Quốc tế Pháp ngữ vào Trường Quốc tế."@vi ;
     owl:sameAs <http://dbpedia.org/resource/Vietnam_National_University,_Hanoi_–_International_School>,
         wd:Q24902367,
         <https://ror.org/05n473c60> ;
@@ -33,9 +35,11 @@ university:truong-quoc-te-dai-hoc-quoc-gia-ha-noi a foaf:Organization,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/International_School%2C_Vietnam_National_University%2C_Hanoi>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_Qu%E1%BB%91c_t%E1%BA%BF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i> ;
     vnedu:address "Nhà E5 & G7, 144 Xuân Thủy, Cầu Giấy, Hà Nội" ;
+    vnedu:campus "Nội thành" ;
     vnedu:foundingYear "2002"^^xsd:gYear ;
     vnedu:hasAlumnus person:tran-dai-quang ;
     vnedu:hasLeader person:le-trung-thanh ;
+    vnedu:history "Trường Quốc tế đã xây dựng và phát triển mối quan hệ hợp tác với gần 40 trường đại học, tổ chức giáo dục, khoa học và công nghệ hàng đầu trên thế giới, bao gồm các quốc gia như Hoa Kỳ, Vương quốc Anh, Cộng hòa Pháp, Liên bang Nga, Malaysia, và Đài Loan - Trung Quốc. Trường hiện có quy mô đào tạo với hơn 4.000 sinh viên đến từ hơn 12 quốc gia trên 5 châu lục. Đội ngũ giảng viên và chuyên gia của trường gồm các nhà khoa học, cán bộ, giảng viên có trình độ chuyên môn cao, trong đó 100% giảng viên chuyên ngành đều tốt nghiệp từ các trường đại học ở nước ngoài."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -48,5 +52,11 @@ university:truong-quoc-te-dai-hoc-quoc-gia-ha-noi a foaf:Organization,
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/7/76/Logo_Tr%C6%B0%E1%BB%9Dng_Qu%E1%BB%91c_t%E1%BA%BF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i.svg> ;
     schema:parentOrganization university:dai-hoc-quoc-gia-ha-noi .
+
+<https://upload.wikimedia.org/wikipedia/vi/7/76/Logo_Tr%C6%B0%E1%BB%9Dng_Qu%E1%BB%91c_t%E1%BA%BF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_Qu%E1%BB%91c_t%E1%BA%BF,_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/7/76/Logo_Tr%C6%B0%E1%BB%9Dng_Qu%E1%BB%91c_t%E1%BA%BF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_Qu%E1%BB%91c_t%E1%BA%BF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i.svg.png> .
 

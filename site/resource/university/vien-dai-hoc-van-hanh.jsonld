@@ -19,18 +19,22 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/vien-dai-hoc-van-hanh",
   "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
     "vnedu:DefunctInstitution",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:PrivateInstitution",
+    "dbo:University",
     "vnedu:HigherEducationInstitution",
-    "dbo:University"
+    "vnedu:PrivateInstitution",
+    "schema:Organization",
+    "foaf:Organization",
+    "vnedu:Organization",
+    "vnedu:UniversitySchool",
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Viện Đại học Vạn Hạnh là viện đại học tư thục ở Sài Gòn do Giáo hội Phật giáo Việt Nam Thống nhất thành lập vào năm 1964 dưới chính thể Việt Nam Cộng hoà. Đây là viện đại học tư thục Phật giáo đầu tiên ở Việt Nam. Năm 1975, dưới chính quyền mới, Viện Đại học Vạn Hạnh bị giải thể. Một thành phần sau tổ chức lại thành Thiền viện Vạn Hạnh."
+  },
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/Vi%E1%BB%87n_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%E1%BA%A1n_H%E1%BA%A1nh"
   },
@@ -39,10 +43,10 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10832802"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75417231"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75417231"
+      "@id": "wd:Q10832802"
     }
   ],
   "rdfs:label": {
@@ -51,10 +55,10 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
@@ -72,15 +76,19 @@
     "@type": "xsd:gYear",
     "@value": "1964"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Theo lời của Hòa thượng Thích Thiện Tâm, Phật giáo Việt Nam bắt đấu chấn hưng từ những năm 1920. Trong những thập niên sau đó, 1930, 1940..., lúc đó chưa một vị tu sĩ hay tín đồ Phật giáo Việt Nam nào hình dung Phật giáo Việt Nam sẽ mở một viện đại học đa ngành. Những vị tôn túc và cư sĩ tiên khởi Chấn hưng Phật giáo Việt Nam chỉ mới nói tới mục tiêu giáo dục cao đẳng Phật học cho tu sĩ Phật giáo, còn giáo dục hướng ra xã hội thì chỉ nghĩ đến những trường sơ học. Ý tưởng thành lập viện đại học đa ngành Phật giáo hình thành ngay trong những vị tôn túc lãnh đạo Phật giáo Việt Nam vào cuối những năm 1950, mặc dù hệ thống giáo dục trung học và tiểu học Phật giáo còn rất sơ khai.\n\nTrước năm 1964, Sài Gòn có trường cao đẳng Phật học với tên Phật học Đường Nam Việt thuộc chùa Ấn Quang. Sau cuộc chính biến 1963 và sự ra đời của Giáo hội Phật giáo Việt Nam Thống nhất, chủ trương đào tạo nhân sự và đưa Phật giáo vào cuộc sống thường nhật được Giáo hội xúc tiến qua việc xây dựng một cơ sở giáo dục bậc đại học. Với nỗ lực đó, Viện Đại học Vạn Hạnh được thành lập với hai mục tiêu: xây dựng nhà giáo dục... làm sống dậy lòng tin cho tuổi trẻ... với châm ngôn Duy Tuệ Thị Nghiệp, tức là mọi hoạt động của cơ sở giáo dục này cốt để phát triển trí tuệ. Viện đại học chọn mang tên thiền sư Vạn Hạnh, vị danh tăng Việt Nam thời nhà Lý. Một trong những người sáng lập viện đại học này là Thiền sư Thích Nhất Hạnh., các ông Hồ Hữu Tường – Phó Viện trưởng, Đoàn Viết Hoạt – phụ tá Viện trưởng.\n\nViện Đại học Vạn Hạnh được Bộ Giáo dục Việt Nam Cộng hòa cấp giấy phép ngày 17 tháng Mười năm 1964, với Thượng tọa Thích Minh Châu làm viện trưởng và Thượng tọa Thích Mãn Giác làm phó viện trưởng. Sĩ số tăng dần mỗi năm.\n\nSau khi chính quyền Sài Gòn sụp đổ, Viện Đại học Vạn Hạnh vẫn thuộc quyền quản lý của Giáo hội Phật giáo Việt Nam Thống nhất nhưng nhiều nhân sự bị bắt giam như Tuệ Sĩ, Lê Mạnh Thát, Thích nữ Trí Hải.\n\nNăm 1981 khi các tổ chức Phật giáo hợp nhất thành Giáo hội Phật giáo Việt Nam, Viện Đại học Vạn Hạnh thuộc quyền quản lý của Giáo hội Phật giáo Việt Nam. Không lâu sau đó, Giáo hội chỉ còn quản lý Thiền viện Vạn Hạnh; các khoa còn lại chuyển giao cho Trường Đại học Sư phạm Thành phố Hồ Chí Minh. Thiền viện Vạn Hạnh và Thiền viện Quảng Đức hiện nay là hai cơ sở giáo dục của Giáo hội Phật giáo Việt Nam tại miền Nam."
+  },
   "vnedu:locatedIn": [
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     }
   ],
   "vnedu:ownership": {

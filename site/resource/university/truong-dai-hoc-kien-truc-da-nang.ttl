@@ -28,6 +28,7 @@ university:truong-dai-hoc-kien-truc-da-nang a dbo:University,
         schema:Organization ;
     rdfs:label "Da Nang University of Architecture"@en,
         "Trường Đại học Kiến trúc Đà Nẵng"@vi ;
+    dbo:abstract "Trường Đại học Kiến trúc Đà Nẵng (Danang Architecture University) là một trường đại học tư thục đào tạo đa ngành theo định hướng ứng dụng nằm trong hệ thống giáo dục đại học của Nước CHXHCN Việt Nam."@vi ;
     owl:sameAs dbr:Da_Nang_University_of_Architecture,
         wd:Q5207275,
         <https://ror.org/03aebk093> ;
@@ -50,7 +51,22 @@ university:truong-dai-hoc-kien-truc-da-nang a dbo:University,
     vnedu:shortName "DAU" ;
     vnedu:website <https://dau.edu.vn/> ;
     schema:employee person:pham-anh-tuan-2 ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/7/71/Dai_Hoi_Kien_Truc_DN.jpg> ;
     schema:location country:viet-nam,
         province:da-nang,
-        region:trung-bo .
+        region:trung-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/6/64/Logo_dhktdn.png> ;
+    schema:telephone "+84-(0)236- 221.0030" .
+
+<https://upload.wikimedia.org/wikipedia/commons/7/71/Dai_Hoi_Kien_Truc_DN.jpg> a schema:ImageObject ;
+    schema:creditText "Dragfyre" ;
+    schema:license "CC BY-SA 3.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Dai_Hoi_Kien_Truc_DN.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Dai_Hoi_Kien_Truc_DN.jpg/330px-Dai_Hoi_Kien_Truc_DN.jpg> .
+
+<https://upload.wikimedia.org/wikipedia/commons/6/64/Logo_dhktdn.png> a schema:ImageObject ;
+    schema:creditText "Trường Đại học Kiến trúc Đà Nẵng" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Logo_dhktdn.png> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/commons/6/64/Logo_dhktdn.png> .
 

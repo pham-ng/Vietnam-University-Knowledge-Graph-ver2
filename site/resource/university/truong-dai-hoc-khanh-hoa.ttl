@@ -27,6 +27,7 @@ university:truong-dai-hoc-khanh-hoa a dbo:University,
         schema:Organization ;
     rdfs:label "University of Khanh Hoa"@en,
         "Trường Đại học Khánh Hòa"@vi ;
+    dbo:abstract "Trường Đại học Khánh Hòa (University of Khanh Hoa) là một trường đại học thuộc các trường đại học, cao đẳng trong hệ thống giáo dục quốc dân, trực thuộc ủy ban nhân dân Tỉnh Khánh Hòa. Ngày 3 tháng 8 năm 2015, Thủ tướng chính phủ Việt Nam ban hành Quyết định Số 1234/QĐ-TTg về việc thành lập Trường Đại học Khánh Hòa trên cơ sở sáp nhập 2 Trường Cao đẳng Sư phạm Nha Trang và Trường Cao đẳng Văn hóa - Nghệ thuật và Du lịch Nha Trang. Đội ngũ viên chức, giảng viên, người lao động của trường hiện tại: 270 người Trong đó có 03 PGS.TS, 30 tiến sĩ, 168 thạc sĩ (gồm 24 nghiên cứu sinh), 42 đại học và 27 trình độ khác. Riêng về đội ngũ giảng viên, Giảng viên: 192 người, tTrong đó: TS: 33 (gồm 3PGS); ThS: 154, ĐH: 5 (tính đến tháng 11/2025)."@vi ;
     owl:sameAs wd:Q10828807,
         <https://ror.org/00a4nhr72> ;
     geo:lat 12.245538 ;
@@ -46,7 +47,15 @@ university:truong-dai-hoc-khanh-hoa a dbo:University,
     vnedu:rector person:phan-phien ;
     vnedu:website <http://ukh.edu.vn/> ;
     schema:employee person:phan-phien ;
+    schema:foundingDate "2015-08-03"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/vi/8/81/Dai_hoc_Khanh_Hoa.png> ;
     schema:location country:viet-nam,
         province:khanh-hoa,
-        region:trung-bo .
+        region:trung-bo ;
+    schema:telephone "+84-58-3 523 420" .
+
+<https://upload.wikimedia.org/wikipedia/vi/8/81/Dai_hoc_Khanh_Hoa.png> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Dai_hoc_Khanh_Hoa.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/8/81/Dai_hoc_Khanh_Hoa.png/330px-Dai_hoc_Khanh_Hoa.png> .
 

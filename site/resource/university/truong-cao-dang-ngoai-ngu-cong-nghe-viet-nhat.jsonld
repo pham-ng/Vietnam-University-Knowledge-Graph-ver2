@@ -19,12 +19,12 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-ngoai-ngu-cong-nghe-viet-nhat",
   "@type": [
-    "vnedu:EducationalOrganization",
     "vnedu:VocationalCollege",
+    "schema:Organization",
+    "foaf:Organization",
     "vnedu:Organization",
     "schema:EducationalOrganization",
-    "schema:Organization",
-    "foaf:Organization"
+    "vnedu:EducationalOrganization"
   ],
   "foaf:homepage": {
     "@id": "http://cnc.edu.vn/?setLanguage=en"

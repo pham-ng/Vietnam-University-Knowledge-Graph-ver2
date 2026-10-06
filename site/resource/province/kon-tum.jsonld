@@ -20,8 +20,8 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/kon-tum",
   "@type": [
     "vnedu:AdministrativeUnit",
-    "vnedu:FormerProvince",
-    "schema:AdministrativeArea"
+    "schema:AdministrativeArea",
+    "vnedu:FormerProvince"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -41,13 +41,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "dbr:Kon_Tum_province"
+      "@id": "https://sws.geonames.org/1565088/"
     },
     {
       "@id": "wd:Q36315"
     },
     {
-      "@id": "https://sws.geonames.org/1565088/"
+      "@id": "dbr:Kon_Tum_province"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -55,11 +55,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Kon Tum"
     },
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Kon Tum"
     }
   ],

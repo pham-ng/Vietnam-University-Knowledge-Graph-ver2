@@ -27,7 +27,7 @@ from rdflib.namespace import OWL, RDF, RDFS, SKOS, XSD
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config  # noqa: E402
-from common import PREFIXES, bind_prefixes, load_ontology  # noqa: E402
+from common import PREFIXES, bind_prefixes, load_ontology, vn_key  # noqa: E402
 
 SITE = config.ROOT / "site"
 SRC = config.ROOT / "site_src"
@@ -135,7 +135,9 @@ RES_TPL = env.from_string("""
   <a href="{{ slug }}.ttl">Turtle</a> · <a href="{{ slug }}.jsonld">JSON-LD</a> ·
   <a href="{{ root }}sparql?describe={{ uri|urlencode }}">Truy vấn SPARQL</a>
   {% if n_inf %} · <span class="pill inf">suy luận</span> = {{ n_inf }} giá trị do bộ suy luận OWL 2 RL sinh ra{% endif %}</p>
-{% if lat %}<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>{% endif %}
+{% if panel %}<div class="res-grid"><div class="res-main">{{ panel.article|safe }}</div>{{ panel.aside|safe }}</div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+{% elif lat %}<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>{% endif %}
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 {% for g in props %}<tr><td class="p">{{ g.label }}<small>{{ g.short }}</small></td><td>
@@ -168,7 +170,124 @@ def render_value(full, o, inferred_flag: bool) -> str:
     return s
 
 
+def vn_date(d: str) -> str:
+    y, m, dd = d.split("-")
+    return f"{int(dd)} tháng {int(m)} năm {y}"
+
+
+def institution_panels() -> dict[str, dict]:
+    """URI cơ sở -> {aside: infobox HTML, article: giới thiệu + lịch sử HTML}. Dữ liệu lấy từ tầng silver (cùng nguồn với RDF)."""
+    load = lambda n: json.loads((config.SILVER_DIR / f"{n}.json").read_text(encoding="utf-8"))  # noqa: E731
+    insts, bodies, provs, people, umap = (load("institutions"), load("governing_bodies"), load("provinces"),
+                                          load("people"), load("uri_map"))
+    esc = html.escape
+
+    def a(uri, text):
+        return f'<a href="{esc(local_href(uri) or uri)}">{esc(text)}</a>'
+
+    def person(l):
+        pk = l["qid"] or "name:" + vn_key(l["name"])
+        u = umap["person"].get(pk)
+        hon = people.get(pk, {}).get("honorific") or l.get("honorific") or ""
+        name = a(u, l["name"]) if u else esc(l["name"])
+        return (f'<span class="lang">{esc(hon)}</span> ' if hon else "") + name
+
+    def figure(m, alt, cls):
+        if not m:
+            return ""
+        cap = " · ".join(x for x in (esc(m.get("license") or ""), esc((m.get("artist") or "")[:80])) if x)
+        return (f'<figure class="{cls}"><a href="{esc(m.get("page") or m["url"])}" title="Trang mô tả tệp trên Wikimedia">'
+                f'<img src="{esc(m.get("thumb") or m["url"])}" alt="{esc(alt)}" loading="lazy"></a>'
+                f'<figcaption>{cap or "Wikimedia"}</figcaption></figure>')
+
+    out = {}
+    for k, i in insts.items():
+        uri = umap["institution"][k]
+        rows = []
+
+        def row(label, val):
+            if val:
+                rows.append(f"<tr><th>{label}</th><td>{val}</td></tr>")
+
+        row("Tên khác", "<br>".join(esc(x) for x in i.get("alt_names", [])))
+        row("Tên tiếng Anh", esc(i.get("name_en") or ""))
+        row("Viết tắt", esc(", ".join(i["short_names"])))
+        row("Mã trường", esc(", ".join(i["admission_codes"])))
+        row("Tên cũ", "<br>".join(esc(x) for x in i["former_names"][:6]))
+        own = {"public": "Công lập", "private": "Tư thục"}.get(i.get("ownership"), "")
+        row("Loại hình", esc(" · ".join(x for x in (KIND_VI.get(i["kind"], ""), own) if x)))
+        fy, fd = i.get("founding_year"), i.get("founding_date")
+        if fd:
+            row("Thành lập", esc(vn_date(fd)) + (f' <span class="lang">(mốc sớm nhất giữa các nguồn: {fy})</span>'
+                                                  if fy and str(fy) != fd[:4] else ""))
+        elif fy:
+            row("Thành lập", str(fy))
+        if i.get("dissolution_year"):
+            row("Giải thể / sáp nhập", str(i["dissolution_year"]))
+        row("Chủ quản", "<br>".join(a(umap["body"][b], bodies[b]["name_vi"]) for b in i["governed_by"]))
+        row("Tổ chức mẹ", "<br>".join(a(umap["body"][b], bodies[b]["name_vi"]) for b in i["owned_by"]))
+        row("Thành viên của", "<br>".join(a(umap["institution"][m], insts[m]["name_vi"]) for m in i["member_of"]))
+        row("Phân hiệu của", "<br>".join(a(umap["institution"][m], insts[m]["name_vi"]) for m in i["branch_of"]))
+        for role, label in (("rector", "Hiệu trưởng"), ("director", "Giám đốc"), ("chair", "Chủ tịch hội đồng trường")):
+            row(label, "<br>".join(person(l) for l in i["leaders"] if l["role"] == role))
+        qid_inst = {x["qid"]: kk for kk, x in insts.items() if x.get("qid")}
+        row("Đối tác", "<br>".join(
+            a(umap["institution"][qid_inst[pt["qid"]]], pt["name"]) if pt["qid"] in qid_inst else
+            f'<a href="https://www.wikidata.org/wiki/{pt["qid"]}">{esc(pt["name"])}</a> <span class="pill ext">Wikidata</span>'
+            for pt in i.get("partners", [])))
+        row("Địa chỉ", esc(i.get("address") or ""))
+        pq = i.get("province")
+        if pq:
+            pr = provs[pq]
+            cur = provs[pr["merged_into"]] if pr["status"] == "former" else None
+            val = a(umap["province"][pq], pr["name_vi"])
+            if cur:
+                val += f' → {a(umap["province"][pr["merged_into"]], cur["name_vi"])} <span class="lang">(từ 7/2025)</span>'
+            row("Tỉnh/thành", val)
+        row("Khuôn viên", esc(i.get("campus") or ""))
+        row("Tài trợ / ngân sách", esc(i.get("funding") or ""))
+        row("Sinh viên", f'{i["students"]:,}'.replace(",", ".") if i.get("students") else "")
+        row("Giảng viên", f'{i["academic_staff"]:,}'.replace(",", ".") if i.get("academic_staff") else "")
+        row("Khẩu hiệu", f'<i>{esc(i["motto_vi"])}</i>' if i.get("motto_vi") else "")
+        row("Điện thoại", esc(i.get("telephone") or ""))
+        row("Email", f'<a href="mailto:{esc(i["email"])}">{esc(i["email"])}</a>' if i.get("email") else "")
+        row("Website", f'<a href="{esc(i["website"])}">{esc(re.sub(r"^https?://(www\.)?|/$", "", i["website"]))}</a>'
+            if i.get("website") else "")
+        aside = (f'<aside class="ibox"><div class="ibox-title">{esc(i["name_vi"])}</div>'
+                 + figure(i.get("logo"), "Biểu trưng " + i["name_vi"], "ibox-logo")
+                 + f'<table>{"".join(rows)}</table>'
+                 + figure(i.get("image"), "Ảnh " + i["name_vi"], "ibox-photo")
+                 + ('<div id="minimap" class="ibox-map"></div>' if i.get("lat") else "")
+                 + "</aside>")
+
+        art = []
+        if i.get("abstract"):
+            art.append(f'<h2>Giới thiệu chung</h2><p>{esc(i["abstract"])}</p>')
+        if i.get("history"):
+            paras = [f"<p>{esc(x)}</p>" for x in i["history"].split("\n\n")]
+            body = "".join(paras[:2])
+            if len(paras) > 2:
+                body += f'<details><summary>Đọc tiếp ({len(paras) - 2} đoạn)</summary>{"".join(paras[2:])}</details>'
+            art.append(f"<h2>Lịch sử</h2>{body}")
+        if art and i.get("viwiki"):
+            rev = i.get("viwiki_revid")
+            src = f"https://vi.wikipedia.org/w/index.php?oldid={rev}" if rev else \
+                f"https://vi.wikipedia.org/wiki/{i['viwiki'].replace(' ', '_')}"
+            art.append(f'<p class="src">Văn bản trích từ bài <a href="{esc(src)}">«{esc(i["viwiki"])}»</a> trên Wikipedia '
+                       f'tiếng Việt{f" (bản sửa đổi {rev})" if rev else ""}, giấy phép '
+                       f'<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. '
+                       f'Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p>')
+        out[uri] = {"aside": aside, "article": "".join(art)}
+    return out
+
+
+SCHEMA_NS = "https://schema.org/"
+MEDIA_PROPS = {URIRef(SCHEMA_NS + "logo"), URIRef(SCHEMA_NS + "image")}
+LONG_TEXT = {URIRef("http://dbpedia.org/ontology/abstract"), URIRef(config.ONTO_NS + "history")}
+
+
 def build_resources(onto, data, links, inferred, void, full) -> int:
+    panels = institution_panels()
     pred_label = {p: best_label(onto, p) for p in set(full.predicates())}
     inf = set(inferred)
     out_by_s, in_by_o = defaultdict(list), defaultdict(list)
@@ -188,7 +307,10 @@ def build_resources(onto, data, links, inferred, void, full) -> int:
             continue
         groups = defaultdict(list)
         n_inf = 0
+        panel = panels.get(str(s))
         for p, o in po:
+            if panel and p in LONG_TEXT:
+                continue
             flag = (s, p, o) in inf
             n_inf += flag
             groups[p].append(render_value(full, o, flag))
@@ -208,6 +330,9 @@ def build_resources(onto, data, links, inferred, void, full) -> int:
         for p, o in po:
             if (s, p, o) in pub:
                 cbd.add((s, p, o))
+                if isinstance(o, URIRef) and not str(o).startswith(BASE) and (p in MEDIA_PROPS or str(p).endswith("affiliation")):
+                    for p2, o2 in pub.predicate_objects(o):
+                        cbd.add((o, p2, o2))
         jsonld = cbd.serialize(format="json-ld", context=CONTEXT, indent=1)
         out = SITE / rel
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -226,7 +351,7 @@ def build_resources(onto, data, links, inferred, void, full) -> int:
                      f'{{attribution:"© OpenStreetMap"}}).addTo(m);L.circleMarker([{float(lat)},{float(lon)}],{{radius:8,color:"#0f6e64"}}).addTo(m)}})</script>')
         body = RES_TPL.render(kind=", ".join(sorted({k for k in kinds if k}))[:160] or rel.split("/")[0],
                               title=title, uri=str(s), slug=rel.rsplit("/", 1)[-1], props=props, incoming=incoming,
-                              n_inf=n_inf, root=ROOT_PATH, lat=lat)
+                              n_inf=n_inf, root=ROOT_PATH, lat=lat, panel=panel)
         page(rel, f"{title} · VN-Edu LOD", body, head=head, desc=f"{title} — dữ liệu liên kết mở VN-Edu",
              alternates=[("text/turtle", rel.rsplit('/', 1)[-1] + ".ttl"),
                          ("application/ld+json", rel.rsplit('/', 1)[-1] + ".jsonld")])
@@ -265,6 +390,8 @@ def app_data(full, onto) -> dict:
             "gov": [bodies[b]["name_vi"] for b in i["governed_by"]],
             "member": [insts[m]["name_vi"] for m in i["member_of"]],
             "military": "MilitaryInstitution" in types[u], "police": "PoliceInstitution" in types[u],
+            "logo": (i.get("logo") or {}).get("thumb"),
+            "intro": bool(i.get("abstract")), "hist": bool(i.get("history")),
         })
     prov_rows = [{"name": p["name_vi"], "uri": umap["province"][q], "href": local_href(umap["province"][q]),
                   "region": p["region"], "lat": p["lat"], "lon": p["long"], "pop": p["population"], "area": p["area"],

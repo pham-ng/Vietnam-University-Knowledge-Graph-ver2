@@ -32,17 +32,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-thu-dau-mot",
   "@type": [
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
     "vnedu:Organization",
+    "vnedu:UniversitySchool",
     "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
     "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity"
+    "dbo:University",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "foaf:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Thủ Dầu Một (tiếng Anh: Thu Dau Mot University) là một trường đại học đa ngành tại Thành phố Hồ Chí Minh, Việt Nam được thành lập theo quyết định số 900/QĐ-TTg ngày 24/06/2009 của Thủ tướng Chính phủ."
+  },
   "foaf:homepage": {
     "@id": "https://tdmu.edu.vn/"
   },
@@ -51,10 +55,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q10829145"
+      "@id": "https://ror.org/010y5b925"
     },
     {
-      "@id": "https://ror.org/010y5b925"
+      "@id": "wd:Q10829145"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -78,20 +82,25 @@
   "schema:employee": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-tuan-anh-3"
   },
+  "schema:foundingDate": {
+    "@type": "xsd:date",
+    "@value": "2009-06-24"
+  },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/binh-duong"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
+  "schema:telephone": "+84-(274) 382 2518",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Thủ Dầu Một"
@@ -106,16 +115,16 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/binh-duong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     }
   ],
   "vnedu:motto": {
@@ -149,6 +158,8 @@
   <a href="truong-dai-hoc-thu-dau-mot.ttl">Turtle</a> · <a href="truong-dai-hoc-thu-dau-mot.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-thu-dau-mot">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 19 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Thủ Dầu Một (tiếng Anh: Thu Dau Mot University) là một trường đại học đa ngành tại Thành phố Hồ Chí Minh, Việt Nam được thành lập theo quyết định số 900/QĐ-TTg ngày 24/06/2009 của Thủ tướng Chính phủ.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75054436">«Trường Đại học Thủ Dầu Một»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75054436), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Thủ Dầu Một</div><table><tr><th>Tên tiếng Anh</th><td>Thu Dau Mot University</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>24 tháng 6 năm 2009</td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-tuan-anh-3">Lê Tuấn Anh</a></td></tr><tr><th>Địa chỉ</th><td>6 Trần Văn Ơn, phường Phú Lợi, Thành phố Hồ Chí Minh, Việt Nam</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/binh-duong">Bình Dương</a> → <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a> <span class="lang">(từ 7/2025)</span></td></tr><tr><th>Khẩu hiệu</th><td><i>Khát vọng - Trách nhiệm - Sáng tạo</i></td></tr><tr><th>Điện thoại</th><td>+84-(274) 382 2518</td></tr><tr><th>Website</th><td><a href="https://tdmu.edu.vn/">tdmu.edu.vn</a></td></tr></table></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
 
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
@@ -173,8 +184,14 @@
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-tuan-anh-3">Lê Tuấn Anh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>2009-06-24 <span class="lang">xsd:date</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/binh-duong">Bình Dương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84-(274) 382 2518</div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>6 Trần Văn Ơn, phường Phú Lợi, Thành phố Hồ Chí Minh, Việt Nam</div>

@@ -17,110 +17,143 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-y-duoc-dai-hoc-thai-nguyen",
-  "@type": [
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization"
-  ],
-  "foaf:homepage": {
-    "@id": "https://tump.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.592391"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.825156"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "wd:Q10829169"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-y-duoc-dai-hoc-thai-nguyen",
+      "@type": [
+        "vnedu:MemberInstitution",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Y Dược là trường đại học thành viên của Đại học Thái Nguyên và là một trong bảy trường y khoa tại miền Bắc Việt Nam. Có sứ mạng đào tạo bác sĩ, dược sĩ có trình độ đại học, sau đại học, nghiên cứu khoa học và chuyển giao công nghệ y dược, hỗ trợ phát triển hệ thống y tế nhằm đáp ứng nhu cầu chăm sóc sức khỏe cho nhân dân các dân tộc miền núi phía Bắc Việt Nam."
+      },
+      "foaf:homepage": {
+        "@id": "https://tump.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.592391"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.825156"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/053jkh992"
+        },
+        {
+          "@id": "wd:Q10829169"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829169"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75592834"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Y Dược, Đại học Thái Nguyên"
+        },
+        {
+          "@language": "en",
+          "@value": "TNU University of Medicine and Pharmacy"
+        }
+      ],
+      "schema:email": "dhyktn@hn.vnn.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tien-dung"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/9/90/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen"
+      },
+      "schema:telephone": "+84(0) 2803-852671",
+      "skos:altLabel": [
+        "Phân hiệu Đại học Y khoa Miền núi (1968)",
+        "Trường Đại học Y khoa (1994)",
+        "Trường Đại học Y Bắc Thái (1975)"
+      ],
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Y Dược, Đại học Thái Nguyên"
+      },
+      "vnedu:address": "Số 284, Đường Lương Ngọc Quyến, phường Phan Đình Phùng",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1968"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tien-dung"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trên cơ sở Trường Y sĩ Việt Bắc thành lập những năm 1950, Phân hiệu Đại học Y khoa Miền núi trực thuộc Trường Đại học Y Hà Nội được thành lập năm 1968. Đến năm 1975 thì tách ra thành Trường Đại học Y Bắc Thái và hoạt động theo mô hình Viện - Trường thống nhất qua việc thống nhất Đảng bộ Trường Đại học Y Bắc Thái và Bệnh viện Đa khoa Thái Nguyên (tiền thân của Bệnh viện Đa khoa Trung ương Thái Nguyên ngày nay) thành Đảng bộ Bệnh viện và Trường Đại học Y Bắc Thái vào năm 1979. Khi Đại học Thái Nguyên được thành lập năm 1994 và trực thuộc Bộ Giáo dục và Đào tạo, Trường Đại học Y Bắc Thái trở thành trường thành viên và đổi tên thành Trường Đại học Y khoa - Đại học Thái Nguyên, Bệnh viện Đa khoa Thái Nguyên trực thuộc Bộ Y tế rồi đổi tên thành Bệnh viện Đa khoa Trung ương Thái Nguyên có chức năng khám chữa bệnh tuyến Trung ương và là Bệnh viện thực hành chính của trường theo Thông tư liên bộ số 06/TTLB-BYT-GD&ĐT. Từ tháng 9/2008, trường đổi tên thành Trường Đại học Y Dược - Đại học Thái Nguyên và phát triển khoa Dược vào tháng 10 cùng năm trên cơ sở tổ chức 5 bộ môn Dược hiện hữu."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tien-dung"
+      },
+      "vnedu:website": {
+        "@id": "https://tump.edu.vn/"
+      }
     },
     {
-      "@id": "https://ror.org/053jkh992"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/9/90/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c,_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/9/90/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg.png"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q10829169"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75592834"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Y Dược, Đại học Thái Nguyên"
-    },
-    {
-      "@language": "en",
-      "@value": "TNU University of Medicine and Pharmacy"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tien-dung"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen"
-  },
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Y Dược, Đại học Thái Nguyên"
-  },
-  "vnedu:address": "Số 284, Đường Lương Ngọc Quyến, phường Phan Đình Phùng",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1968"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tien-dung"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tien-dung"
-  },
-  "vnedu:website": {
-    "@id": "https://tump.edu.vn/"
-  }
+  ]
 }

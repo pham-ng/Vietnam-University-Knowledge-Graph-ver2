@@ -17,106 +17,132 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-canh-sat-nhan-dan",
-  "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PoliceInstitution",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University"
-  ],
-  "foaf:homepage": {
-    "@id": "https://dhcsnd.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%E1%BA%A3nh_s%C3%A1t_nh%C3%A2n_d%C3%A2n_%28Vi%E1%BB%87t_Nam%29"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.741232"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.701024"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "wd:Q20026260"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/c/c5/Logo_dai_hoc_CSND.png",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_dai_hoc_CSND.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/c/c5/Logo_dai_hoc_CSND.png/330px-Logo_dai_hoc_CSND.png"
+      }
     },
     {
-      "@id": "https://ror.org/00jywn468"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-canh-sat-nhan-dan",
+      "@type": [
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "vnedu:EducationalOrganization",
+        "vnedu:PoliceInstitution",
+        "schema:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Cảnh sát nhân dân (, thường được gọi tắt là VPPU, hoặc T48, T05) là một trường đại học chuyên ngành an ninh hệ công lập trực thuộc Bộ Công an tại Việt Nam. Được thành lập ngày 24 tháng 4 năm 1976, trường có nhiệm vụ chính là đào tạo cán bộ Cảnh sát nhân dân trình độ đại học và sau đại học, bồi dưỡng nghiệp vụ cho cán bộ lãnh đạo, và là trung tâm giáo dục, đào tạo và nghiên cứu khoa học uy tín của lực lượng Công an nhân dân. Ngày 18 tháng 9 năm 2026, theo Quyết định số 185/QĐ-TTg của Thủ tướng Chính phủ, Trường Đại học Cảnh sát nhân dân được sáp nhập vào Học viện Cảnh sát nhân dân để thành lập phân hiệu của Học viện tại TP. Hồ Chí Minh, mang tên Học viện Cảnh sát nhân dân – Phân hiệu Thành phố Hồ Chí Minh. Trụ sở chính của trường đặt tại số 36 đường Nguyễn Hữu Thọ, phường Tân Hưng, Thành phố Hồ Chí Minh."
+      },
+      "foaf:homepage": {
+        "@id": "https://dhcsnd.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%E1%BA%A3nh_s%C3%A1t_nh%C3%A2n_d%C3%A2n_%28Vi%E1%BB%87t_Nam%29"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.741232"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.701024"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/00jywn468"
+        },
+        {
+          "@id": "wd:Q20026260"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75566412"
+        },
+        {
+          "@id": "wd:Q20026260"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "People's Police University"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Cảnh sát nhân dân"
+        }
+      ],
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/c/c5/Logo_dai_hoc_CSND.png"
+      },
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Cảnh sát nhân dân"
+      },
+      "vnedu:address": "Số 36 Nguyễn Hữu Thọ, Tân Hưng, Thành phố Hồ Chí Minh",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1976"
+      },
+      "vnedu:governedBy": {
+        "@id": "vnedu:MinistryOfPublicSecurity"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tien-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thi-thu-phuoc"
+        }
+      ],
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Ngày 24 tháng 4 năm 1976, Bộ Nội vụ (nay là Bộ Công an) ra Quyết định số 13/QĐ-BNV thành lập Trường Hạ sĩ quan Cảnh sát nhân dân II tại miền Nam. Trường có nhiệm vụ đào tạo hạ sĩ quan và bổ túc sĩ quan Cảnh sát nhân dân theo chương trình do Bộ Nội vụ quy định và được coi tương đương như Trường Trung học chuyên nghiệp của Nhà nước. Quy mô đào tạo của trường là 2.000 học sinh. Tổ chức bộ máy của trường có 12 phòng - khoa. Đồng chí Bùi Hoán và đồng chí Nguyễn Văn Tấn được Bộ chỉ định giữ chức vụ Hiệu trưởng và Phó Hiệu trưởng Nhà trường.\n\nNgày 1 tháng 4 năm 1985, Chủ tịch Hội đồng Bộ trưởng (nay là Thủ tướng Chính phủ) ra Nghị định số 99/HĐBT về việc thành lập Trường Cao đẳng Cảnh sát nhân dân II, địa điểm tại Thành phố Hồ Chí Minh, nhằm tiếp tục nâng cao trình độ cho Công an nhân dân, nhất là lực lượng Cảnh sát nhân dân đủ sức đảm đương nhiệm vụ bảo vệ an ninh trật tự, đấu tranh phòng chống tội phạm.\n\nThực hiện nghị định 99/HĐBT của Hội đồng bộ trưởng, ngày 19 tháng 10 năm 1985, Bộ trưởng Bộ Nội vụ đã ra quyết định số 124/BNV chuyển trường Trung học Cảnh sát nhân dân II thành trường Cao đẳng Cảnh sát nhân dân II, địa điểm đóng tại huyện Thủ Đức, Thành phố Hồ Chí Minh. Trường có nhiệm vụ đào tạo cán bộ thực hành có trình độ đại học và tiếp tục đào tạo một số chuyên ngành thuộc hệ Trung học Cảnh sát nhân dân cho Công an các tỉnh thành phía Nam. Qui mô đào tạo là 1.500 học viên. Về tổ chức bộ máy: Trường có 01 Hiệu trưởng, 02 phó Hiệu trưởng, 5 bộ môn, 06 khoa nghiệp vụ, 07 phòng. Trường nằm trong hệ thống các trường Đại học và Trung học chuyên nghiệp của Nhà nước, là đơn vị dự toán cấp II.\n\nThực hiện Nghị định số 57/HĐBT của Hội đồng Bộ trưởng, ngày 27 tháng 7 năm 1989, Bộ trưởng Bộ Nội vụ Mai Chí Thọ ra Quyết định số 53/QĐ-BNV chuyển trường Cao đẳng Cảnh sát nhân dân II thành Cơ sở phía Nam của Trường Đại học Cảnh sát nhân dân (nay là Học viện Cảnh sát nhân dân). Cơ cấu của Phân hiệu gồm có 12 Bộ môn và 5 phòng.\n\nĐầu năm 2001, Bộ Công an đã có chủ trương kiện toàn lại hệ thống các trường trong lực lượng Công an, thành lập các Học viện An ninh nhân dân, Học viện Cảnh sát nhân dân. Theo đó, Phân hiệu Đại học Cảnh sát nhân dân được chuyển thành Phân hiệu Học viện Cảnh sát nhân dân. Ngày 2/10/2001 Bộ Công an đã ban hành Quyết định số 970/2001/QĐ-BCA (X13) quy định về chức năng, nhiệm vụ, quyền hạn và tổ chức bộ máy của Phân hiệu Học viện Cảnh sát."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:website": {
+        "@id": "https://dhcsnd.edu.vn/"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75566412"
-    },
-    {
-      "@id": "wd:Q20026260"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Cảnh sát nhân dân"
-    },
-    {
-      "@language": "en",
-      "@value": "People's Police University"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Cảnh sát nhân dân"
-  },
-  "vnedu:address": "Số 36 Nguyễn Hữu Thọ, Tân Hưng, Thành phố Hồ Chí Minh",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1976"
-  },
-  "vnedu:governedBy": {
-    "@id": "vnedu:MinistryOfPublicSecurity"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thi-thu-phuoc"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tien-nam"
-    }
-  ],
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:website": {
-    "@id": "https://dhcsnd.edu.vn/"
-  }
+  ]
 }

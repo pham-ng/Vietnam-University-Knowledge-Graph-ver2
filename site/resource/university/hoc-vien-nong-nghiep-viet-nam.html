@@ -32,22 +32,26 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-nong-nghiep-viet-nam",
   "@type": [
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
     "schema:CollegeOrUniversity",
-    "vnedu:Academy",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
     "schema:Organization",
     "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization"
+    "vnedu:Organization",
+    "vnedu:Academy",
+    "schema:EducationalOrganization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Học viện Nông nghiệp Việt Nam (, viết tắt là VNUA), tiền thân là Trường Đại học Nông nghiệp 1 – Hà Nội, là học viện đào tạo nhóm ngành nông – lâm – ngư nghiệp tại miền Bắc Việt Nam, thuộc nhóm 30 trường đại học đứng đầu Đông Nam Á trực thuộc Bộ Nông nghiệp và Môi trường. Học viện tọa lạc tại xã Gia Lâm, thành phố Hà Nội, trong bối cảnh đơn vị hành chính cấp huyện đã được bãi bỏ theo Nghị quyết số 202/2025/QH15 của Quốc hội."
+  },
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_N%C3%B4ng_nghi%E1%BB%87p_Vi%E1%BB%87t_Nam"
+      "@id": "https://en.wikipedia.org/wiki/Vietnam_National_University_of_Agriculture"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Vietnam_National_University_of_Agriculture"
+      "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_N%C3%B4ng_nghi%E1%BB%87p_Vi%E1%BB%87t_Nam"
     }
   ],
   "geo:lat": {
@@ -60,13 +64,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q5649335"
-    },
-    {
       "@id": "dbr:Vietnam_National_University_of_Agriculture"
     },
     {
       "@id": "https://ror.org/01abaah21"
+    },
+    {
+      "@id": "wd:Q5649335"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -79,28 +83,34 @@
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "VNUA - Vietnam National University of Agriculture"
-    },
-    {
       "@language": "vi",
       "@value": "Học viện Nông nghiệp Việt Nam"
+    },
+    {
+      "@language": "en",
+      "@value": "VNUA - Vietnam National University of Agriculture"
     }
   ],
+  "schema:email": "webmaster@vnua.edu.vn",
   "schema:employee": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-lan"
+  },
+  "schema:foundingDate": {
+    "@type": "xsd:date",
+    "@value": "1956-10-12"
   },
   "schema:location": [
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
+  "schema:telephone": "844 8276346",
   "skos:notation": "HVN",
   "skos:prefLabel": {
     "@language": "vi",
@@ -112,6 +122,7 @@
   },
   "vnedu:address": "Đường Ngô Xuân Quảng, xã Gia Lâm",
   "vnedu:admissionCode": "HVN",
+  "vnedu:campus": "210 ha",
   "vnedu:director": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-lan"
   },
@@ -123,18 +134,40 @@
     "@type": "xsd:gYear",
     "@value": "1956"
   },
+  "vnedu:funding": "Ngân hàng Thế giới (WB) 54,2 triệu USD",
   "vnedu:governedBy": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-nong-nghiep-va-moi-truong"
   },
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoa-mai-nguyen"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieu-nguyen-ba"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/don-v-nguyen"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ha-sy-huan"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-phong"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-tuy"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-n-nguyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngan-thi-phan"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-hoa-nguyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-khac-than"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-thanh-thao-pham"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bang-nguyen-tran"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-n-bang"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/viet-linh-nguyen"
@@ -143,25 +176,43 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-thanh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-hao-vu"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-dang-vu"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-ha-ngo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-trach-nguyen"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-lam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-hao-vu"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-phong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duc-anh-truong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoa-mai-nguyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-manh-bao"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieu-huu-le"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-v-son"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-tran-anh-dao"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/don-v-nguyen"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-n-bang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-n-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-dinh-hoai"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hien-t-t-ngo"
@@ -170,69 +221,34 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-bac-le"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-ha-ngo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-v-son"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-manh-bao"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-xuan-nguyen"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-thanh-thao-pham"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-dinh-hoai"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ha-sy-huan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-dang-vu"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-hoa-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-quang-hoi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-tuy"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-tran-anh-dao"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bang-nguyen-tran"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-lam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tien-dat-pham"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duc-anh-truong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngan-thi-phan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-khac-than"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieu-nguyen-ba"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieu-huu-le"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-quang-hoi"
     }
   ],
   "vnedu:hasLeader": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-lan"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Học viện Nông nghiệp Việt Nam tiền thân là Trường Đại học Nông Lâm, được thành lập ngày 12 tháng 10 năm 1956 theo Nghị định số 53/NĐ-NL của Bộ Nông Lâm, là một trong ba trường đại học đầu tiên của nước Việt Nam Dân chủ Cộng hòa được thành lập sau ngày hòa bình lập lại ở miền Bắc. Khi mới thành lập, Trường trực thuộc Bộ Nông Lâm, có ba khoa với bốn chuyên ngành đào tạo: Khoa Nông học gồm hai ngành trồng trọt và cơ khí hóa nông nghiệp; Khoa Chăn nuôi Thú y có ngành Chăn nuôi - Thú y; Khoa Lâm học có ngành Lâm học. Đội ngũ cán bộ giảng dạy lúc đó có 27 người. Thầy Bùi Huy Đáp được bổ nhiệm làm Giám đốc Trường cùng hai thầy Phó Giám đốc là thầy Nguyễn Đăng và thầy Lương Định Của.\n\nTháng 12 năm 1958, Chính phủ ra Quyết định sáp nhập Viện Khảo cứu trồng trọt, Viện Khảo cứu chăn nuôi, Phòng Nghiên cứu gỗ, Phòng Nghiên cứu Lâm sinh với Trường Đại học Nông Lâm thành Học viện Nông Lâm nhằm tập trung sức lực, trí tuệ của cán bộ và khả năng sử dụng hiệu quả trang thiết bị, đồng thời gắn liền hoạt động đào tạo với nghiên cứu khoa học phục vụ sản xuất. Từ năm học 1959-1960, Học viện Nông Lâm được chuyển về cơ sở mới ở xã Trâu Quỳ, huyện Gia Lâm (tỉnh Bắc Ninh). Ngày 24 tháng 12 năm 1960, Học viện đã tổ chức lễ tốt nghiệp cho sinh viên khóa I và vinh dự được Thủ tướng Phạm Văn Đồng về dự.\n\nNăm 1961, mở thêm ngành nuôi trồng và đánh bắt chế biến thủy sản; thành lập thêm khoa Kinh tế nông nghiệp. Năm 1963, Học viện chuyển một phần cán bộ và cơ sở vật chất kỹ thuật để thành lập Viện Khoa học Nông nghiệp. Năm 1964, Học viện tách khoa Lâm học, phòng nghiên cứu gỗ và lâm sinh, một phần tổ bộ môn cơ khí, một phần các tổ bộ môn khoa kinh tế để thành lập trường Đại học Lâm nghiệp (nay là Đại học Lâm nghiệp Việt Nam). Lúc này phần còn lại của trường đổi tên thành Đại học Nông nghiệp.\n\nNăm 1967, Trường Đại học Nông nghiệp được tách thành hai trường: Đại học Nông nghiệp I và Đại học Nông nghiệp II (nay là Đại học Nông lâm Huế) theo Quyết định số 124/CP ngày 14 tháng 8 năm 1967 của Thủ tướng Chính phủ. Trường giữ lại tên gọi chính thức là Trường Đại học Nông nghiệp I. Năm 1968, Trường tách khoa Thủy sản ra để thành lập trường Đại học Thủy sản (nay là Đại học Nha Trang) theo quyết định số 155-CP của Thủ tướng Chính phủ. Năm 1969, Trường lại một lần nữa san sẻ lực lượng góp phần xây dựng Trường Đại học Nông nghiệp III (đóng tại Bắc Thái).\n\nNăm 1977, Trường được Chính phủ giao nhiệm vụ đào tạo Phó tiến sĩ, mở đầu cho việc đào tạo sau đại học của Trường."
+  },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
@@ -256,10 +272,10 @@
   },
   "vnedu:offersProgram": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7420201"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7620110"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7620110"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7420201"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7340301"
@@ -270,13 +286,13 @@
   },
   "vnedu:trainsMajor": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7340301"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7620110"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7420201"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7340301"
     }
   ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([21.0046,105.938652],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([21.0046,105.938652],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
@@ -297,7 +313,9 @@
   <a href="hoc-vien-nong-nghiep-viet-nam.ttl">Turtle</a> · <a href="hoc-vien-nong-nghiep-viet-nam.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-nong-nghiep-viet-nam">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 51 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Học viện Nông nghiệp Việt Nam (, viết tắt là VNUA), tiền thân là Trường Đại học Nông nghiệp 1 – Hà Nội, là học viện đào tạo nhóm ngành nông – lâm – ngư nghiệp tại miền Bắc Việt Nam, thuộc nhóm 30 trường đại học đứng đầu Đông Nam Á trực thuộc Bộ Nông nghiệp và Môi trường. Học viện tọa lạc tại xã Gia Lâm, thành phố Hà Nội, trong bối cảnh đơn vị hành chính cấp huyện đã được bãi bỏ theo Nghị quyết số 202/2025/QH15 của Quốc hội.</p><h2>Lịch sử</h2><p>Học viện Nông nghiệp Việt Nam tiền thân là Trường Đại học Nông Lâm, được thành lập ngày 12 tháng 10 năm 1956 theo Nghị định số 53/NĐ-NL của Bộ Nông Lâm, là một trong ba trường đại học đầu tiên của nước Việt Nam Dân chủ Cộng hòa được thành lập sau ngày hòa bình lập lại ở miền Bắc. Khi mới thành lập, Trường trực thuộc Bộ Nông Lâm, có ba khoa với bốn chuyên ngành đào tạo: Khoa Nông học gồm hai ngành trồng trọt và cơ khí hóa nông nghiệp; Khoa Chăn nuôi Thú y có ngành Chăn nuôi - Thú y; Khoa Lâm học có ngành Lâm học. Đội ngũ cán bộ giảng dạy lúc đó có 27 người. Thầy Bùi Huy Đáp được bổ nhiệm làm Giám đốc Trường cùng hai thầy Phó Giám đốc là thầy Nguyễn Đăng và thầy Lương Định Của.</p><p>Tháng 12 năm 1958, Chính phủ ra Quyết định sáp nhập Viện Khảo cứu trồng trọt, Viện Khảo cứu chăn nuôi, Phòng Nghiên cứu gỗ, Phòng Nghiên cứu Lâm sinh với Trường Đại học Nông Lâm thành Học viện Nông Lâm nhằm tập trung sức lực, trí tuệ của cán bộ và khả năng sử dụng hiệu quả trang thiết bị, đồng thời gắn liền hoạt động đào tạo với nghiên cứu khoa học phục vụ sản xuất. Từ năm học 1959-1960, Học viện Nông Lâm được chuyển về cơ sở mới ở xã Trâu Quỳ, huyện Gia Lâm (tỉnh Bắc Ninh). Ngày 24 tháng 12 năm 1960, Học viện đã tổ chức lễ tốt nghiệp cho sinh viên khóa I và vinh dự được Thủ tướng Phạm Văn Đồng về dự.</p><details><summary>Đọc tiếp (3 đoạn)</summary><p>Năm 1961, mở thêm ngành nuôi trồng và đánh bắt chế biến thủy sản; thành lập thêm khoa Kinh tế nông nghiệp. Năm 1963, Học viện chuyển một phần cán bộ và cơ sở vật chất kỹ thuật để thành lập Viện Khoa học Nông nghiệp. Năm 1964, Học viện tách khoa Lâm học, phòng nghiên cứu gỗ và lâm sinh, một phần tổ bộ môn cơ khí, một phần các tổ bộ môn khoa kinh tế để thành lập trường Đại học Lâm nghiệp (nay là Đại học Lâm nghiệp Việt Nam). Lúc này phần còn lại của trường đổi tên thành Đại học Nông nghiệp.</p><p>Năm 1967, Trường Đại học Nông nghiệp được tách thành hai trường: Đại học Nông nghiệp I và Đại học Nông nghiệp II (nay là Đại học Nông lâm Huế) theo Quyết định số 124/CP ngày 14 tháng 8 năm 1967 của Thủ tướng Chính phủ. Trường giữ lại tên gọi chính thức là Trường Đại học Nông nghiệp I. Năm 1968, Trường tách khoa Thủy sản ra để thành lập trường Đại học Thủy sản (nay là Đại học Nha Trang) theo quyết định số 155-CP của Thủ tướng Chính phủ. Năm 1969, Trường lại một lần nữa san sẻ lực lượng góp phần xây dựng Trường Đại học Nông nghiệp III (đóng tại Bắc Thái).</p><p>Năm 1977, Trường được Chính phủ giao nhiệm vụ đào tạo Phó tiến sĩ, mở đầu cho việc đào tạo sau đại học của Trường.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75086175">«Học viện Nông nghiệp Việt Nam»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75086175), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Học viện Nông nghiệp Việt Nam</div><table><tr><th>Tên tiếng Anh</th><td>VNUA - Vietnam National University of Agriculture</td></tr><tr><th>Mã trường</th><td>HVN</td></tr><tr><th>Tên cũ</th><td>Trường Đại học Nông nghiệp I – Hà Nội</td></tr><tr><th>Loại hình</th><td>Học viện · Công lập</td></tr><tr><th>Thành lập</th><td>12 tháng 10 năm 1956</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-nong-nghiep-va-moi-truong">Bộ Nông nghiệp và Môi trường</a></td></tr><tr><th>Giám đốc</th><td><span class="lang">GS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-lan">Nguyễn Thị Lan</a></td></tr><tr><th>Địa chỉ</th><td>Đường Ngô Xuân Quảng, xã Gia Lâm</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Khuôn viên</th><td>210 ha</td></tr><tr><th>Tài trợ / ngân sách</th><td>Ngân hàng Thế giới (WB) 54,2 triệu USD</td></tr><tr><th>Sinh viên</th><td>40.000</td></tr><tr><th>Giảng viên</th><td>800</td></tr><tr><th>Khẩu hiệu</th><td><i>Đoàn kết (Solidarity) Đạo đức (Morality) Đi đầu (Advancement) Đáp ứng (Response) Đẳng cấp (Transcendence)</i></td></tr><tr><th>Điện thoại</th><td>844 8276346</td></tr><tr><th>Email</th><td><a href="mailto:webmaster@vnua.edu.vn">webmaster@vnua.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -321,11 +339,20 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q5649335">wd:Q5649335</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75086175">&lt;https://vi.wikipedia.org/w/index.php?oldid=75086175&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>webmaster@vnua.edu.vn</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-lan">Nguyễn Thị Lan</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1956-10-12 <span class="lang">xsd:date</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>844 8276346</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>HVN <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -339,6 +366,9 @@
 <tr><td class="p">mã trường (tuyển sinh)<small>vnedu:admissionCode</small></td><td>
 <div>HVN</div>
 </td></tr>
+<tr><td class="p">khuôn viên<small>vnedu:campus</small></td><td>
+<div>210 ha</div>
+</td></tr>
 <tr><td class="p">giám đốc<small>vnedu:director</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-lan">Nguyễn Thị Lan</a></div>
 </td></tr>
@@ -347,6 +377,9 @@
 </td></tr>
 <tr><td class="p">năm thành lập<small>vnedu:foundingYear</small></td><td>
 <div>1956 <span class="lang">xsd:gYear</span></div>
+</td></tr>
+<tr><td class="p">tài trợ, ngân sách, vốn đầu tư<small>vnedu:funding</small></td><td>
+<div>Ngân hàng Thế giới (WB) 54,2 triệu USD</div>
 </td></tr>
 <tr><td class="p">có cơ quan chủ quản<small>vnedu:governedBy</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-nong-nghiep-va-moi-truong">Bộ Nông nghiệp và Môi trường</a></div>
@@ -386,20 +419,20 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">do ... đào tạo<small>vnedu:offeredBy</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7340301">Kế toán – Học viện Nông nghiệp Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7420201">Công nghệ sinh học – Học viện Nông nghiệp Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7620110">Khoa học cây trồng – Học viện Nông nghiệp Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bang-nguyen-tran">Bang Nguyen Tran</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-tran-anh-dao">Bui Tran Anh Dao</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/don-v-nguyen">Don V Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/duc-anh-truong">Duc Anh Truong</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ha-sy-huan">Hà Sỹ Huân</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hien-t-t-ngo">Hien T T Ngo</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieu-huu-le">Hieu Huu Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieu-nguyen-ba">Hieu Nguyen Ba</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoa-mai-nguyen">Hoa Mai Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-n-nguyen">Hung N Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-ha-ngo">Minh Ha Ngo</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngan-thi-phan">Ngan Thi Phan</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-thanh">Nguyễn Bá Thanh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-khac-than">Nguyễn Khắc Thận</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-n-bang">Nguyen N Bang</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-lam">Nguyen Thanh Lam</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-nam">Nguyễn Thành Nam</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-v-son">Nguyen V Son</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-phong">Nguyễn Văn Phóng</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-hao-vu">Thi Hao Vu</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-thanh-thao-pham">Thi-Thanh-Thao Pham</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-xuan-nguyen">Thi Xuan Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tien-dat-pham">Tien Dat Pham</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-bac-le">Tran Bac Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-manh-bao">Trần Mạnh Báo</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-tuy">Trần Văn Túy</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-dinh-hoai">Truong Dinh Hoai</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/viet-linh-nguyen">Viet Linh Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-quang-hoi">Vũ Quang Hội</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-dang-vu">Xuan Dang Vu</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-hoa-nguyen">Xuan Hoa Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-trach-nguyen">Xuan Trach Nguyen</a></div>
 </td></tr>
 <tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bang-nguyen-tran">Bang Nguyen Tran</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-tran-anh-dao">Bui Tran Anh Dao</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/don-v-nguyen">Don V Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/duc-anh-truong">Duc Anh Truong</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ha-sy-huan">Hà Sỹ Huân</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hien-t-t-ngo">Hien T T Ngo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieu-huu-le">Hieu Huu Le</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieu-nguyen-ba">Hieu Nguyen Ba</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoa-mai-nguyen">Hoa Mai Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-n-nguyen">Hung N Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-ha-ngo">Minh Ha Ngo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngan-thi-phan">Ngan Thi Phan</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-thanh">Nguyễn Bá Thanh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-khac-than">Nguyễn Khắc Thận</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-n-bang">Nguyen N Bang</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-lam">Nguyen Thanh Lam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-nam">Nguyễn Thành Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-v-son">Nguyen V Son</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-phong">Nguyễn Văn Phóng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-hao-vu">Thi Hao Vu</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-thanh-thao-pham">Thi-Thanh-Thao Pham</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-xuan-nguyen">Thi Xuan Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tien-dat-pham">Tien Dat Pham</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-bac-le">Tran Bac Le</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-manh-bao">Trần Mạnh Báo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-tuy">Trần Văn Túy</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-dinh-hoai">Truong Dinh Hoai</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/viet-linh-nguyen">Viet Linh Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-quang-hoi">Vũ Quang Hội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-dang-vu">Xuan Dang Vu</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-hoa-nguyen">Xuan Hoa Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-trach-nguyen">Xuan Trach Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
-<tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bang-nguyen-tran">Bang Nguyen Tran</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-tran-anh-dao">Bui Tran Anh Dao</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/don-v-nguyen">Don V Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/duc-anh-truong">Duc Anh Truong</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ha-sy-huan">Hà Sỹ Huân</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hien-t-t-ngo">Hien T T Ngo</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieu-huu-le">Hieu Huu Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieu-nguyen-ba">Hieu Nguyen Ba</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoa-mai-nguyen">Hoa Mai Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-n-nguyen">Hung N Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-ha-ngo">Minh Ha Ngo</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngan-thi-phan">Ngan Thi Phan</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-thanh">Nguyễn Bá Thanh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-khac-than">Nguyễn Khắc Thận</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-n-bang">Nguyen N Bang</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-lam">Nguyen Thanh Lam</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-nam">Nguyễn Thành Nam</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-v-son">Nguyen V Son</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-phong">Nguyễn Văn Phóng</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-hao-vu">Thi Hao Vu</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-thanh-thao-pham">Thi-Thanh-Thao Pham</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-xuan-nguyen">Thi Xuan Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tien-dat-pham">Tien Dat Pham</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-bac-le">Tran Bac Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-manh-bao">Trần Mạnh Báo</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-tuy">Trần Văn Túy</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-dinh-hoai">Truong Dinh Hoai</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/viet-linh-nguyen">Viet Linh Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-quang-hoi">Vũ Quang Hội</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-dang-vu">Xuan Dang Vu</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-hoa-nguyen">Xuan Hoa Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-trach-nguyen">Xuan Trach Nguyen</a></div>
+<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-lan">Nguyễn Thị Lan</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">schema:provider<small>schema:provider</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7340301">Kế toán – Học viện Nông nghiệp Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7420201">Công nghệ sinh học – Học viện Nông nghiệp Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7620110">Khoa học cây trồng – Học viện Nông nghiệp Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
-<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-lan">Nguyễn Thị Lan</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<tr><td class="p">do ... đào tạo<small>vnedu:offeredBy</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7340301">Kế toán – Học viện Nông nghiệp Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7420201">Công nghệ sinh học – Học viện Nông nghiệp Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/hoc-vien-nong-nghiep-viet-nam-7620110">Khoa học cây trồng – Học viện Nông nghiệp Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-nong-nghiep-va-moi-truong">Bộ Nông nghiệp và Môi trường</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

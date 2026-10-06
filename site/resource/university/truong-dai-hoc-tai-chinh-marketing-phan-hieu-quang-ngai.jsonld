@@ -19,14 +19,18 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-chinh-marketing-phan-hieu-quang-ngai",
   "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:Branch",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
     "schema:Organization",
+    "vnedu:Organization",
+    "vnedu:Branch",
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
     "foaf:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Phân hiệu Trường Đại học Tài chính – Marketing tại Quảng Ngãi (tiếng Anh: University of Finance - Marketing - Quang Ngai Campus) là một phân hiệu chuyên ngành về kinh tế với các ngành trọng điểm là Tài chính - Ngân hàng, Kế toán và Marketing của Trường Đại học Tài chính – Marketing đóng trên địa bàn tỉnh Quảng Ngãi, đã đào tạo và bồi dưỡng đội ngũ cán bộ Tài chính cho hệ thống Ngành Tài chính và các Ngành kinh tế quốc dân, của các thành phần kinh tế của khu vực Miền Trung Trung bộ và Tây Nguyên. Tiền thân là Trường Trung học Tài chính Kế toán III (KT3 - năm 1976), Trường Cao đẳng Tài chính - Kế toán Quảng Ngãi (1997), Trường Đại học Tài chính – Kế toán (2011)."
+  },
   "foaf:homepage": {
     "@id": "https://quangngai.ufm.edu.vn"
   },
@@ -46,10 +50,10 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75566600"
+      "@id": "wd:Q18460961"
     },
     {
-      "@id": "wd:Q18460961"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75566600"
     }
   ],
   "rdfs:label": {
@@ -58,15 +62,16 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-ngai"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
+  "schema:telephone": "0255 384 5578",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Tài chính – Marketing phân hiệu Quảng Ngãi"
@@ -78,10 +83,6 @@
   "vnedu:formerName": [
     {
       "@language": "vi",
-      "@value": "Trường Trung học Tài chính Kế toán III"
-    },
-    {
-      "@language": "vi",
       "@value": "Trường Đại học Tài chính – Kế toán"
     },
     {
@@ -91,6 +92,10 @@
     {
       "@language": "vi",
       "@value": "Trường Cao đẳng Tài chính – Kế toán Quảng Ngãi"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Trung học Tài chính Kế toán III"
     }
   ],
   "vnedu:foundingYear": {
@@ -99,13 +104,13 @@
   },
   "vnedu:locatedIn": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-ngai"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:ownership": {

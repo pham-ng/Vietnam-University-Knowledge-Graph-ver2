@@ -19,16 +19,20 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-dan-toc",
   "@type": [
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:PublicInstitution",
+    "vnedu:HigherEducationInstitution",
     "schema:Organization",
     "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
     "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
     "vnedu:Academy"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Học viện Dân tộc (tên tiếng Anh: Vietnam Academy for Ethnic Minorities, viết tắt: VAEM hoặc HVDT) là cơ sở giáo dục đại học công lập trực thuộc Bộ Dân tộc và Tôn giáo, đồng thời chịu sự quản lý nhà nước về giáo dục đại học của Bộ Giáo dục và Đào tạo. Học viện có chức năng đào tạo nhân lực các trình độ đào tạo của giáo dục đại học về dân tộc, tín ngưỡng, tôn giáo và các ngành, chuyên ngành khác có liên quan; đào tạo, bồi dưỡng cán bộ, công chức, viên chức của Bộ, ngành, lĩnh vực công tác dân tộc, tín ngưỡng, tôn giáo và các tổ chức, cá nhân khác có nhu cầu trong xã hội; nghiên cứu khoa học, tư vấn, phản biện chính sách, hợp tác quốc tế theo quy định của pháp luật."
+  },
   "foaf:homepage": {
     "@id": "https://hvdt.edu.vn/"
   },
@@ -53,25 +57,31 @@
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Vietnam Academy for Ethnic Minorities - VAEM"
-    },
-    {
       "@language": "vi",
       "@value": "Học viện Dân tộc"
+    },
+    {
+      "@language": "en",
+      "@value": "Vietnam Academy for Ethnic Minorities - VAEM"
     }
   ],
+  "schema:email": "hvdt@cema.gov.vn",
+  "schema:foundingDate": {
+    "@type": "xsd:date",
+    "@value": "2016-08-08"
+  },
   "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
+  "schema:telephone": "02437831662",
   "skos:notation": "HVD",
   "skos:prefLabel": {
     "@language": "vi",
@@ -82,11 +92,11 @@
   "vnedu:formerName": [
     {
       "@language": "vi",
-      "@value": "Viện Dân tộc"
+      "@value": "Trường Cán bộ Dân tộc"
     },
     {
       "@language": "vi",
-      "@value": "Trường Cán bộ Dân tộc"
+      "@value": "Viện Dân tộc"
     }
   ],
   "vnedu:foundingYear": {
@@ -96,23 +106,27 @@
   "vnedu:governedBy": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-dan-toc-va-ton-giao"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Học viện Dân tộc được thành lập vào ngày 08 tháng 08 năm 2016 theo Quyết định số 1562/QĐ-TTg của Thủ tướng Chính phủ trên cơ sở tổ chức lại Viện Dân tộc và Trường Cán bộ Dân tộc. Đây là dấu mốc quan trọng trong công tác dân tộc, đánh dấu sự ra đời của một cơ sở nghiên cứu và đào tạo chuyên sâu về lĩnh vực dân tộc. Sau khi Bộ Dân tộc và Tôn giáo được thành lập trên cơ sở Ủy ban Dân tộc, Học viện trở thành đơn vị trực thuộc Bộ này."
+  },
   "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     }
   ],
   "vnedu:ownership": {
     "@id": "vnedu:PublicOwnership"
   },
   "vnedu:shortName": [
-    "VAEM",
-    "HVDT"
+    "HVDT",
+    "VAEM"
   ],
   "vnedu:website": {
     "@id": "https://hvdt.edu.vn/"

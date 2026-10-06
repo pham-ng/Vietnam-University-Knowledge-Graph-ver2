@@ -17,123 +17,152 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-dai-hoc-quoc-gia-ha-noi",
-  "@type": [
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool"
-  ],
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-dai-hoc-quoc-gia-ha-noi",
+      "@type": [
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:MemberInstitution",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Kinh tế, Đại học Quốc gia Hà Nội ( – VNU-UEB) là một trường đại học thuộc Đại học Quốc gia Hà Nội - đại học trong nhóm trọng điểm quốc gia và đại học tinh hoa của Việt Nam. Đây là cơ sở đào tạo bậc đại học và sau đại học, cơ sở nghiên cứu khoa học chuyên ngành kinh tế học và kinh doanh học hàng đầu của Việt Nam. Đây là cơ sở giáo dục đại học đầu tiên của Việt Nam đào tạo và nghiên cứu kinh tế chính trị trong hệ thống giáo dục quốc dân, đồng thời là trường đại học đầu tiên trong khối ngành kinh tế đạt chuẩn kiểm định AUN-QA. Đơn vị cũng đạt chuẩn chứng nhận kiểm định ACBSP (Hoa Kỳ)."
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/VNU_University_of_Economics_and_Business"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i"
+        }
+      ],
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q5146680"
+        },
+        {
+          "@id": "dbr:College_of_Economics,_Vietnam_National_University"
+        },
+        {
+          "@id": "https://ror.org/00wdqh079"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q5146680"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75592643"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "VNU University of Economics and Business"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Kinh tế, Đại học Quốc gia Hà Nội"
+        }
+      ],
+      "schema:email": "news_ueb@vnu.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-truc-le"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/7/7d/Logo_DHKT200x200.svg"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+      },
+      "schema:telephone": "03 8535 8535",
+      "skos:notation": "QHE",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Kinh tế, Đại học Quốc gia Hà Nội"
+      },
+      "vnedu:academicStaff": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "300"
+      },
+      "vnedu:address": "Nhà E4, số 144 đường Xuân Thủy, phường Cầu Giấy",
+      "vnedu:admissionCode": "QHE",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1974"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-truc-le"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Năm 1974, trong bối cảnh đất nước còn thiếu đội ngũ chuyên gia kinh tế được đào tạo bài bản và hoạt động nghiên cứu kinh tế chủ yếu dựa vào các cán bộ được điều động từ nhiều cơ quan khác nhau, yêu cầu xây dựng một cơ sở đào tạo chính quy về lý luận và nghiên cứu kinh tế. Từ thực tiễn đó đã hình thành ý tưởng mở ra ở bậc đại học một khoa chuyên về Lý luận kinh tế. \"Khoa đó không thể để trong Đại học Kinh tế Quốc dân - là nơi có mục tiêu đào tạo cán bộ thực hành\". Vậy nên vào tháng 11 năm 1974, Khoa Kinh tế Chính trị trực thuộc Trường Đại học Tổng hợp Hà Nội với nhiệm vụ là đào tạo cán bộ kinh tế chính trị có khả năng phân tích, hoạch định chính sách, khả năng nghiên cứu kinh tế chính trị.\n\nTháng 9 năm 1995, sau khi thành lập Đại học Quốc gia Hà Nội, Khoa Kinh tế Chính trị được chuyển thành Khoa Kinh tế trực thuộc Trường Đại học Khoa học Xã hội và Nhân văn.\n\nTháng 7 năm 1999, Khoa Kinh tế về trực thuộc Đại học Quốc gia Hà Nội.\n\nĐến ngày 6 tháng 3 năm 2007, trên cơ sở Khoa Kinh tế, Đại học Quốc gia Hà Nội thành lập Trường Đại học Kinh tế, Đại học Quốc gia Hà Nội."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+      },
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Đường đến Thành công The Road to Success"
+      },
+      "vnedu:numberOfPostgraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1500"
+      },
+      "vnedu:numberOfUndergraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "12000"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-truc-le"
+      },
+      "vnedu:shortName": "VNU - UEB"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/VNU_University_of_Economics_and_Business"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/7/7d/Logo_DHKT200x200.svg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Dhkinhte",
+      "schema:license": "CC-BY-SA-4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_DHKT200x200.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/7/7d/Logo_DHKT200x200.svg/330px-Logo_DHKT200x200.svg.png"
+      }
     }
-  ],
-  "owl:sameAs": [
-    {
-      "@id": "dbr:College_of_Economics,_Vietnam_National_University"
-    },
-    {
-      "@id": "https://ror.org/00wdqh079"
-    },
-    {
-      "@id": "wd:Q5146680"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q5146680"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75592643"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Kinh tế, Đại học Quốc gia Hà Nội"
-    },
-    {
-      "@language": "en",
-      "@value": "VNU University of Economics and Business"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-truc-le"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
-  },
-  "skos:notation": "QHE",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Kinh tế, Đại học Quốc gia Hà Nội"
-  },
-  "vnedu:academicStaff": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "300"
-  },
-  "vnedu:address": "Nhà E4, số 144 đường Xuân Thủy, phường Cầu Giấy",
-  "vnedu:admissionCode": "QHE",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1974"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-truc-le"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
-  },
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Đường đến Thành công The Road to Success"
-  },
-  "vnedu:numberOfPostgraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "1500"
-  },
-  "vnedu:numberOfUndergraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "12000"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-truc-le"
-  },
-  "vnedu:shortName": "VNU - UEB"
+  ]
 }

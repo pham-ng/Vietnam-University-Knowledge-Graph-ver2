@@ -32,17 +32,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-my-thuat-viet-nam",
   "@type": [
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
     "vnedu:Organization",
+    "vnedu:UniversitySchool",
     "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
+    "vnedu:EducationalOrganization",
     "schema:CollegeOrUniversity",
-    "schema:Organization",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
+    "dbo:University",
     "foaf:Organization",
-    "vnedu:UniversitySchool"
+    "schema:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Mỹ thuật Việt Nam là một trường đại học công lập của Việt Nam chuyên đào tạo nhóm ngành mỹ thuật, thuộc Bộ Văn hóa, Thể thao và Du lịch, tiền thân theo đơn vị này là Trường Cao đẳng Mỹ thuật Đông Dương. Năm 2008, trường được đổi tên là Trường Đại học Mỹ thuật Việt Nam, trước đó là Trường Đại học Mỹ thuật Hà Nội."
+  },
   "foaf:homepage": {
     "@id": "http://mythuatvietnam.edu.vn/"
   },
@@ -83,23 +87,27 @@
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Hanoi College of Fine Arts"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Mỹ thuật Việt Nam"
+    },
+    {
+      "@language": "en",
+      "@value": "Hanoi College of Fine Arts"
     }
   ],
+  "schema:foundingDate": {
+    "@type": "xsd:date",
+    "@value": "1924-10-27"
+  },
   "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "skos:prefLabel": {
@@ -112,37 +120,19 @@
   },
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/to-ngoc-van"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-tuan"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-tai"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-pho"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-sang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/cat-tuong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-quoc-loc"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-phuong-hoa"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vuong-duy-bien"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-gia-tri"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-pho"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/jean-delpech"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/goerges-khanh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-thuy-linh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/cat-tuong"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-bao"
@@ -151,48 +141,70 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-hau"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-cao-luyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thi-khue"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-duy-ung"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/do-thi-ninh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-phan-chanh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-phuong-hoa"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-gam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-quoc-loc"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-gia-tri"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ton-duc-luong"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quy-vien"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-duy-ung"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-tuan"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-sang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thi-khue"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-can"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-phan-chanh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-tai"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/do-thi-ninh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/goerges-khanh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quy-vien"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-thuy-linh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-cao-luyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/to-ngoc-van"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/jean-delpech"
     }
   ],
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Tiền thân theo đơn vị này tự nhận là Trường Cao đẳng Mỹ thuật Đông Dương thuộc Viện Đại học Đông Dương, thành lập theo Nghị định của Toàn quyền Đông Dương do Martial Merlin ký vào ngày 27 tháng 10 năm 1924. Đến tháng 11 năm 1925 Trường Cao đẳng Mỹ thuật Đông Dương khai giảng khóa đầu tiên, đánh dấu mốc son chính thức về khởi đầu hành trình phát triển của nhà trường. Họa sỹ Victor Tardieu, Giải thưởng Đông Dương (Prix de l'Indochine) năm 1920, trở thành vị Hiệu trưởng đầu tiên của trường từ 1925 đến khi ông qua đời tại Hà Nội năm 1937.\n\nTừ khi thành lập đến nay nhà trường đã trải qua các giai đoạn khác nhau và thay đổi tên trường như sau:\n\nGiai đoạn 1925 - 1945: Trường Cao đẳng Mỹ thuật Đông Dương; Giai đoạn 1945 - 1950: Trường Cao đẳng Mỹ thuật (thuộc Bộ Quốc gia Giáo dục); Giai đoạn 1950 - 1957: Trường Mỹ thuật trung cấp (thuộc Vụ VHVN), giai đoạn này nhà trường đã đào tạo 2 khóa đặc biệt của mỹ thuật Việt Nam – Khóa Kháng chiến và Khóa Tô Ngọc Vân; Giai đoạn 1957 - 1981: Trường Cao đẳng Mỹ thuật Việt Nam (thuộc Bộ Văn hóa); Giai đoạn 1981 - 2008, Trường Đại học Mỹ thuật Hà Nội (thuộc Bộ Văn hóa – Thông tin); Giai đoạn 2008 - nay: Trường Đại học Mỹ thuật Việt Nam, Tên tiếng Anh: Vietnam University of Fine Arts (thuộc Bộ Văn hóa, Thể thao và Du lịch).\n\nThành lập năm 1962 Viện Mỹ thuật do họa sĩ Nguyễn Đỗ Cung làm Viện trưởng. Năm 1995 trường sáp nhập với trường Đại học Mỹ thuật Hà Nội (nay là Trường Đại học Mỹ thuật Việt Nam). Trong giai đoạn này Viện đã có nhiều công trình nghiên cứu đã xuất bản như: Mỹ thuật Lý, Trần, Lê, Mạc Mỹ thuật Nguyễn ở Huế, Bản rập họa tiết Mỹ thuật cổ Việt Nam, Hình tượng con người trong chạm khắc cổ Việt Nam, Mỹ thuật Việt Nam Hiện đại, Bãi đá cổ Sapa dưới con mắt tạo hình."
+  },
   "vnedu:locatedIn": [
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     }
   ],
   "vnedu:ownership": {
@@ -219,7 +231,9 @@
   <a href="truong-dai-hoc-my-thuat-viet-nam.ttl">Turtle</a> · <a href="truong-dai-hoc-my-thuat-viet-nam.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-my-thuat-viet-nam">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 39 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Mỹ thuật Việt Nam là một trường đại học công lập của Việt Nam chuyên đào tạo nhóm ngành mỹ thuật, thuộc Bộ Văn hóa, Thể thao và Du lịch, tiền thân theo đơn vị này là Trường Cao đẳng Mỹ thuật Đông Dương. Năm 2008, trường được đổi tên là Trường Đại học Mỹ thuật Việt Nam, trước đó là Trường Đại học Mỹ thuật Hà Nội.</p><h2>Lịch sử</h2><p>Tiền thân theo đơn vị này tự nhận là Trường Cao đẳng Mỹ thuật Đông Dương thuộc Viện Đại học Đông Dương, thành lập theo Nghị định của Toàn quyền Đông Dương do Martial Merlin ký vào ngày 27 tháng 10 năm 1924. Đến tháng 11 năm 1925 Trường Cao đẳng Mỹ thuật Đông Dương khai giảng khóa đầu tiên, đánh dấu mốc son chính thức về khởi đầu hành trình phát triển của nhà trường. Họa sỹ Victor Tardieu, Giải thưởng Đông Dương (Prix de l&#x27;Indochine) năm 1920, trở thành vị Hiệu trưởng đầu tiên của trường từ 1925 đến khi ông qua đời tại Hà Nội năm 1937.</p><p>Từ khi thành lập đến nay nhà trường đã trải qua các giai đoạn khác nhau và thay đổi tên trường như sau:</p><details><summary>Đọc tiếp (2 đoạn)</summary><p>Giai đoạn 1925 - 1945: Trường Cao đẳng Mỹ thuật Đông Dương; Giai đoạn 1945 - 1950: Trường Cao đẳng Mỹ thuật (thuộc Bộ Quốc gia Giáo dục); Giai đoạn 1950 - 1957: Trường Mỹ thuật trung cấp (thuộc Vụ VHVN), giai đoạn này nhà trường đã đào tạo 2 khóa đặc biệt của mỹ thuật Việt Nam – Khóa Kháng chiến và Khóa Tô Ngọc Vân; Giai đoạn 1957 - 1981: Trường Cao đẳng Mỹ thuật Việt Nam (thuộc Bộ Văn hóa); Giai đoạn 1981 - 2008, Trường Đại học Mỹ thuật Hà Nội (thuộc Bộ Văn hóa – Thông tin); Giai đoạn 2008 - nay: Trường Đại học Mỹ thuật Việt Nam, Tên tiếng Anh: Vietnam University of Fine Arts (thuộc Bộ Văn hóa, Thể thao và Du lịch).</p><p>Thành lập năm 1962 Viện Mỹ thuật do họa sĩ Nguyễn Đỗ Cung làm Viện trưởng. Năm 1995 trường sáp nhập với trường Đại học Mỹ thuật Hà Nội (nay là Trường Đại học Mỹ thuật Việt Nam). Trong giai đoạn này Viện đã có nhiều công trình nghiên cứu đã xuất bản như: Mỹ thuật Lý, Trần, Lê, Mạc Mỹ thuật Nguyễn ở Huế, Bản rập họa tiết Mỹ thuật cổ Việt Nam, Hình tượng con người trong chạm khắc cổ Việt Nam, Mỹ thuật Việt Nam Hiện đại, Bãi đá cổ Sapa dưới con mắt tạo hình.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75164823">«Trường Đại học Mỹ thuật Việt Nam»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75164823), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Mỹ thuật Việt Nam</div><table><tr><th>Tên tiếng Anh</th><td>Hanoi College of Fine Arts</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>27 tháng 10 năm 1924</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Website</th><td><a href="http://mythuatvietnam.edu.vn/">mythuatvietnam.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -246,6 +260,9 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q3815307">wd:Q3815307</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75164823">&lt;https://vi.wikipedia.org/w/index.php?oldid=75164823&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1924-10-27 <span class="lang">xsd:date</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
@@ -269,11 +286,11 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/cat-tuong">Cát Tường</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thi-khue">Đặng Thị Khuê</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/do-thi-ninh">Đỗ Thị Ninh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/goerges-khanh">Goerges Khánh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-tai">Hoàng Đình Tài</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-thuy-linh">Hoàng Thùy Linh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-gam">Huỳnh Văn Gấm</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/jean-delpech">Jean Delpech</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-duy-ung">Lê Duy Ứng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-pho">Lê Phổ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-quoc-loc">Lê Quốc Lộc</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-cao-luyen">Nguyễn Cao Luyện</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-gia-tri">Nguyễn Gia Trí</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-bao">Nguyễn Hữu Bảo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-tuan">Nguyễn Hữu Tuấn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-phan-chanh">Nguyễn Phan Chánh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quy-vien">Nguyễn Quý Viện</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-sang">Nguyễn Sáng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-phuong-hoa">Nguyễn Thị Phương Hoa</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-hau">Phạm Hậu</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/to-ngoc-van">Tô Ngọc Vân</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ton-duc-luong">Tôn Đức Lượng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-can">Trần Văn Cẩn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vuong-duy-bien">Vương Duy Biên</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/cat-tuong">Cát Tường</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thi-khue">Đặng Thị Khuê</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/do-thi-ninh">Đỗ Thị Ninh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/goerges-khanh">Goerges Khánh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-tai">Hoàng Đình Tài</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-thuy-linh">Hoàng Thùy Linh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-gam">Huỳnh Văn Gấm</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/jean-delpech">Jean Delpech</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-duy-ung">Lê Duy Ứng</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-pho">Lê Phổ</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-quoc-loc">Lê Quốc Lộc</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-cao-luyen">Nguyễn Cao Luyện</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-gia-tri">Nguyễn Gia Trí</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-bao">Nguyễn Hữu Bảo</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-tuan">Nguyễn Hữu Tuấn</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-phan-chanh">Nguyễn Phan Chánh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quy-vien">Nguyễn Quý Viện</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-sang">Nguyễn Sáng</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-phuong-hoa">Nguyễn Thị Phương Hoa</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-hau">Phạm Hậu</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/to-ngoc-van">Tô Ngọc Vân</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ton-duc-luong">Tôn Đức Lượng</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-can">Trần Văn Cẩn</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vuong-duy-bien">Vương Duy Biên</a></div>
+</td></tr>
+<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/cat-tuong">Cát Tường</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thi-khue">Đặng Thị Khuê</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/do-thi-ninh">Đỗ Thị Ninh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/goerges-khanh">Goerges Khánh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-tai">Hoàng Đình Tài</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-thuy-linh">Hoàng Thùy Linh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-gam">Huỳnh Văn Gấm</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/jean-delpech">Jean Delpech</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-duy-ung">Lê Duy Ứng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-pho">Lê Phổ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-quoc-loc">Lê Quốc Lộc</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-cao-luyen">Nguyễn Cao Luyện</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-gia-tri">Nguyễn Gia Trí</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-bao">Nguyễn Hữu Bảo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-tuan">Nguyễn Hữu Tuấn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-phan-chanh">Nguyễn Phan Chánh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quy-vien">Nguyễn Quý Viện</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-sang">Nguyễn Sáng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-phuong-hoa">Nguyễn Thị Phương Hoa</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-hau">Phạm Hậu</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/to-ngoc-van">Tô Ngọc Vân</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ton-duc-luong">Tôn Đức Lượng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-can">Trần Văn Cẩn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vuong-duy-bien">Vương Duy Biên</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

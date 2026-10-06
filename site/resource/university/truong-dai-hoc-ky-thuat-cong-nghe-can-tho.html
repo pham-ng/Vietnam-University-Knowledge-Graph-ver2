@@ -30,102 +30,132 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ky-thuat-cong-nghe-can-tho",
-  "@type": [
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization"
-  ],
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_K%E1%BB%B9_thu%E1%BA%ADt_%E2%80%93_C%C3%B4ng_ngh%E1%BB%87_C%E1%BA%A7n_Th%C6%A1"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.047173"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.767826"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q10828441"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75167882"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ky-thuat-cong-nghe-can-tho",
+      "@type": [
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Kỹ thuật – Công nghệ Cần Thơ (CTUT - Can Tho University of Technology) là trường đại học công lập chuyên đào tạo khối ngành kỹ thuật tại Thành phố Cần Thơ. Trường trực thuộc Ủy ban Nhân dân Thành phố Cần Thơ, chịu sự giám sát về giáo dục của Bộ Giáo dục và Đào tạo."
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_K%E1%BB%B9_thu%E1%BA%ADt_%E2%80%93_C%C3%B4ng_ngh%E1%BB%87_C%E1%BA%A7n_Th%C6%A1"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.047173"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.767826"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q10828441"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75167882"
+        },
+        {
+          "@id": "wd:Q10828441"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "vi",
+        "@value": "Trường Đại học Kỹ thuật – Công nghệ Cần Thơ"
+      },
+      "schema:email": "phonghanhchinh@ctuet.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thanh-nha"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "2013-01-29"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Logo_ctuet.png"
+      },
+      "schema:telephone": "+84-(2923)-894050",
+      "skos:altLabel": "Cantho University of Technology",
+      "skos:notation": "KCC",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Kỹ thuật – Công nghệ Cần Thơ"
+      },
+      "vnedu:academicStaff": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "185"
+      },
+      "vnedu:address": "256 Nguyễn Văn Cừ, phường Cái Khế",
+      "vnedu:admissionCode": "KCC",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2013"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thanh-nha"
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "\"Lý thuyết đi đôi với ứng dụng thực tiễn\""
+      },
+      "vnedu:numberOfUndergraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "5000"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thanh-nha"
+      }
     },
     {
-      "@id": "wd:Q10828441"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Logo_ctuet.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Ctuet",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Logo_ctuet.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Logo_ctuet.png/330px-Logo_ctuet.png"
+      }
     }
-  ],
-  "rdfs:label": {
-    "@language": "vi",
-    "@value": "Trường Đại học Kỹ thuật – Công nghệ Cần Thơ"
-  },
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thanh-nha"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "skos:notation": "KCC",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Kỹ thuật – Công nghệ Cần Thơ"
-  },
-  "vnedu:academicStaff": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "185"
-  },
-  "vnedu:address": "256 Nguyễn Văn Cừ, phường Cái Khế",
-  "vnedu:admissionCode": "KCC",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2013"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thanh-nha"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "\"Lý thuyết đi đôi với ứng dụng thực tiễn\""
-  },
-  "vnedu:numberOfUndergraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "5000"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thanh-nha"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.047173,105.767826],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.047173,105.767826],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -144,7 +174,9 @@
   <a href="truong-dai-hoc-ky-thuat-cong-nghe-can-tho.ttl">Turtle</a> · <a href="truong-dai-hoc-ky-thuat-cong-nghe-can-tho.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ky-thuat-cong-nghe-can-tho">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 17 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Kỹ thuật – Công nghệ Cần Thơ (CTUT - Can Tho University of Technology) là trường đại học công lập chuyên đào tạo khối ngành kỹ thuật tại Thành phố Cần Thơ. Trường trực thuộc Ủy ban Nhân dân Thành phố Cần Thơ, chịu sự giám sát về giáo dục của Bộ Giáo dục và Đào tạo.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75167882">«Trường Đại học Kỹ thuật – Công nghệ Cần Thơ»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75167882), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Kỹ thuật – Công nghệ Cần Thơ</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:Logo_ctuet.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Logo_ctuet.png/330px-Logo_ctuet.png" alt="Biểu trưng Trường Đại học Kỹ thuật – Công nghệ Cần Thơ" loading="lazy"></a><figcaption>CC BY-SA 4.0 · Ctuet</figcaption></figure><table><tr><th>Tên khác</th><td>Cantho University of Technology</td></tr><tr><th>Mã trường</th><td>KCC</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>29 tháng 1 năm 2013</td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">NGND PGS Ts</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thanh-nha">Huỳnh Thanh Nhã</a></td></tr><tr><th>Địa chỉ</th><td>256 Nguyễn Văn Cừ, phường Cái Khế</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho">Cần Thơ</a></td></tr><tr><th>Giảng viên</th><td>185</td></tr><tr><th>Khẩu hiệu</th><td><i>&quot;Lý thuyết đi đôi với ứng dụng thực tiễn&quot;</i></td></tr><tr><th>Điện thoại</th><td>+84-(2923)-894050</td></tr><tr><th>Email</th><td><a href="mailto:phonghanhchinh@ctuet.edu.vn">phonghanhchinh@ctuet.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -168,11 +200,26 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q10828441">wd:Q10828441</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75167882">&lt;https://vi.wikipedia.org/w/index.php?oldid=75167882&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>phonghanhchinh@ctuet.edu.vn</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thanh-nha">Huỳnh Thanh Nhã</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>2013-01-29 <span class="lang">xsd:date</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho">Cần Thơ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/b/ba/Logo_ctuet.png">&lt;https://upload.wikimedia.org/wikipedia/commons/b/ba/Logo_ctuet.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84-(2923)-894050</div>
+</td></tr>
+<tr><td class="p">tên khác<small>skos:altLabel</small></td><td>
+<div>Cantho University of Technology</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>KCC <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

@@ -30,108 +30,151 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-khoa-hoc-lien-nganh-va-nghe-thuat-dai-hoc-quoc-gia-ha-noi",
-  "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
-  ],
-  "foaf:homepage": {
-    "@id": "https://sis.vnu.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.038431"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.781252"
-  },
-  "prov:wasDerivedFrom": {
-    "@id": "https://vi.wikipedia.org/w/index.php?oldid=75591557"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "VNU School of Interdisciplinary Sciences and Arts"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/b/b8/Logo_Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/b/b8/Logo_Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt.svg.png"
+      }
     },
     {
-      "@language": "vi",
-      "@value": "Trường Khoa học liên ngành và Nghệ thuật, Đại học Quốc gia Hà Nội"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/c/c5/C%E1%BB%95ng_tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt_c%C6%A1_s%E1%BB%9F_Nam_T%E1%BB%AB_Li%C3%AAm.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Người lạ dưới gió xuân",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:C%E1%BB%95ng_tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt_c%C6%A1_s%E1%BB%9F_Nam_T%E1%BB%AB_Li%C3%AAm.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/C%E1%BB%95ng_tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt_c%C6%A1_s%E1%BB%9F_Nam_T%E1%BB%AB_Li%C3%AAm.jpg/330px-C%E1%BB%95ng_tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt_c%C6%A1_s%E1%BB%9F_Nam_T%E1%BB%AB_Li%C3%AAm.jpg"
+      }
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-khoa-hoc-lien-nganh-va-nghe-thuat-dai-hoc-quoc-gia-ha-noi",
+      "@type": [
+        "vnedu:MemberInstitution",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Khoa học liên ngành và Nghệ thuật - Đại học Quốc gia Hà Nội (tiếng Anh: VNU School of Interdisciplinary Sciences and Arts – VNU-SIS) là một cơ sở giáo dục bậc đại học trực thuộc Đại học Quốc gia Hà Nội - đại học trong nhóm trọng điểm quốc gia và đại học tinh hoa của Việt Nam. Trường chuyên đào tạo về lĩnh vực công nghiệp văn hóa, công nghiệp sáng tạo và nghệ thuật trên nền tảng Khoa học liên ngành. Trường được thành lập ngày 20 tháng 5 năm 2002 theo quyết định của Giám đốc Đại học Quốc gia Hà Nội với tên gọi Khoa Sau đại học. Ngày 25 tháng 1 năm 2017 Khoa Sau đại học được chính thức đổi tên thành Khoa Các khoa học liên ngành. Ngày 29 tháng 1 năm 2024 theo Quyết định số 333/QĐ-ĐHQGHN của Giám đốc Đại học Quốc gia Hà Nội, Khoa được chuyển đổi mô hình và tổ chức lại thành Trường Khoa học liên ngành và Nghệ thuật kể từ ngày 01 tháng 03 năm 2024."
+      },
+      "foaf:homepage": {
+        "@id": "https://sis.vnu.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.038431"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.781252"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "https://vi.wikipedia.org/w/index.php?oldid=75591557"
+      },
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Khoa học liên ngành và Nghệ thuật, Đại học Quốc gia Hà Nội"
+        },
+        {
+          "@language": "en",
+          "@value": "VNU School of Interdisciplinary Sciences and Arts"
+        }
+      ],
+      "schema:email": "sis@vnu.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hieu"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/c/c5/C%E1%BB%95ng_tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt_c%C6%A1_s%E1%BB%9F_Nam_T%E1%BB%AB_Li%C3%AAm.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/b/b8/Logo_Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt.svg"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+      },
+      "skos:altLabel": "Trường liên ngành",
+      "skos:notation": "QHK",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Khoa học liên ngành và Nghệ thuật, Đại học Quốc gia Hà Nội"
+      },
+      "vnedu:address": "G7, Đại học Quốc gia Hà Nội, 144 Xuân Thủy, Cầu Giấy",
+      "vnedu:admissionCode": "QHK",
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Khoa các Khoa học liên ngành"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2002"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hieu"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Như quy hoạch phát triển tổng thể đến năm 2015 đã được Chính phủ phê duyệt, nhiệm vụ đào tạo trình độ cao đòi hỏi phải tăng mạnh quy mô đào tạo sau đại học để có thể đạt tỉ lệ 25% tổng quy mô đào tạo chính quy. Ngày 20 tháng 5 năm 2002 theo quyết định của Giám đốc Đại học Quốc gia Hà Nội Khoa Sau đại học (viết tắt SGS) chính thức ra đời. Ngoài chức năng quản lý, thẩm định chuyên môn nghiệp vụ trong đào tạo sau đại học, khoa còn được giao tổ chức đào tạo khối kiến thức chung, các chương trình đào tạo có tính liên ngành, liên quan đến nhiều đơn vị, các chương trình đào tạo thí điểm các chuyên ngành mới chưa có trong danh mục các ngành đào tạo của Nhà nước và tổ chức thực hiện một số chương trình liên kết quốc tế sau đại học.\n\nNăm 2011, Khoa Sau đại học được tổ chức lại nhằm tạo điều kiện để khoa tập trung vào nhiệm vụ chuyên môn, tổ chức đào tạo các bậc sau đại học một số lĩnh vực mới, có tính liên ngành cao và triển khai các nghiên cứu về đổi mới đào tạo sau đại học. Chức năng và nhiệm vụ quản lý nhà nước trước đây của Khoa được chuyển giao cho Ban Đào tạo.\n\nNgày 25 tháng 1 năm 2017 Khoa Sau đại học được chính thức đổi tên thành Khoa Các khoa học liên ngành, tập trung phát triển các khoa học liên ngành mới cung cấp nguồn nhân lực có trình độ, có tư duy khoa học liên ngành đáp ứng những nhu cầu cấp bách của đất nước. Năm 2021 Khoa bắt tuyển tuyển sinh lứa cử nhân đầu tiên với 2 ngành đào tạo là Quản trị thương hiệu và Quản trị tài nguyên di sản. Đến ngày 29 tháng 1 năm 2024 theo Quyết định số 333/QĐ-ĐHQGHN của Giám đốc Đại học Quốc gia Hà Nội, Khoa được chuyển đổi mô hình và tổ chức lại thành Trường Khoa học liên ngành và Nghệ thuật kể từ ngày 01 tháng 03 năm 2024."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+      },
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Kiến tạo tương lai bằng tri thức liên ngành"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hieu"
+      },
+      "vnedu:shortName": "VNU-SIS",
+      "vnedu:website": {
+        "@id": "https://sis.vnu.edu.vn/"
+      }
     }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hieu"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
-  },
-  "skos:notation": "QHK",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Khoa học liên ngành và Nghệ thuật, Đại học Quốc gia Hà Nội"
-  },
-  "vnedu:address": "G7, Đại học Quốc gia Hà Nội, 144 Xuân Thủy, Cầu Giấy",
-  "vnedu:admissionCode": "QHK",
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Khoa các Khoa học liên ngành"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2002"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hieu"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
-  },
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Kiến tạo tương lai bằng tri thức liên ngành"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hieu"
-  },
-  "vnedu:shortName": "VNU-SIS",
-  "vnedu:website": {
-    "@id": "https://sis.vnu.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([21.038431,105.781252],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([21.038431,105.781252],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -150,7 +193,9 @@
   <a href="truong-khoa-hoc-lien-nganh-va-nghe-thuat-dai-hoc-quoc-gia-ha-noi.ttl">Turtle</a> · <a href="truong-khoa-hoc-lien-nganh-va-nghe-thuat-dai-hoc-quoc-gia-ha-noi.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-khoa-hoc-lien-nganh-va-nghe-thuat-dai-hoc-quoc-gia-ha-noi">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 18 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Khoa học liên ngành và Nghệ thuật - Đại học Quốc gia Hà Nội (tiếng Anh: VNU School of Interdisciplinary Sciences and Arts – VNU-SIS) là một cơ sở giáo dục bậc đại học trực thuộc Đại học Quốc gia Hà Nội - đại học trong nhóm trọng điểm quốc gia và đại học tinh hoa của Việt Nam. Trường chuyên đào tạo về lĩnh vực công nghiệp văn hóa, công nghiệp sáng tạo và nghệ thuật trên nền tảng Khoa học liên ngành. Trường được thành lập ngày 20 tháng 5 năm 2002 theo quyết định của Giám đốc Đại học Quốc gia Hà Nội với tên gọi Khoa Sau đại học. Ngày 25 tháng 1 năm 2017 Khoa Sau đại học được chính thức đổi tên thành Khoa Các khoa học liên ngành. Ngày 29 tháng 1 năm 2024 theo Quyết định số 333/QĐ-ĐHQGHN của Giám đốc Đại học Quốc gia Hà Nội, Khoa được chuyển đổi mô hình và tổ chức lại thành Trường Khoa học liên ngành và Nghệ thuật kể từ ngày 01 tháng 03 năm 2024.</p><h2>Lịch sử</h2><p>Như quy hoạch phát triển tổng thể đến năm 2015 đã được Chính phủ phê duyệt, nhiệm vụ đào tạo trình độ cao đòi hỏi phải tăng mạnh quy mô đào tạo sau đại học để có thể đạt tỉ lệ 25% tổng quy mô đào tạo chính quy. Ngày 20 tháng 5 năm 2002 theo quyết định của Giám đốc Đại học Quốc gia Hà Nội Khoa Sau đại học (viết tắt SGS) chính thức ra đời. Ngoài chức năng quản lý, thẩm định chuyên môn nghiệp vụ trong đào tạo sau đại học, khoa còn được giao tổ chức đào tạo khối kiến thức chung, các chương trình đào tạo có tính liên ngành, liên quan đến nhiều đơn vị, các chương trình đào tạo thí điểm các chuyên ngành mới chưa có trong danh mục các ngành đào tạo của Nhà nước và tổ chức thực hiện một số chương trình liên kết quốc tế sau đại học.</p><p>Năm 2011, Khoa Sau đại học được tổ chức lại nhằm tạo điều kiện để khoa tập trung vào nhiệm vụ chuyên môn, tổ chức đào tạo các bậc sau đại học một số lĩnh vực mới, có tính liên ngành cao và triển khai các nghiên cứu về đổi mới đào tạo sau đại học. Chức năng và nhiệm vụ quản lý nhà nước trước đây của Khoa được chuyển giao cho Ban Đào tạo.</p><details><summary>Đọc tiếp (1 đoạn)</summary><p>Ngày 25 tháng 1 năm 2017 Khoa Sau đại học được chính thức đổi tên thành Khoa Các khoa học liên ngành, tập trung phát triển các khoa học liên ngành mới cung cấp nguồn nhân lực có trình độ, có tư duy khoa học liên ngành đáp ứng những nhu cầu cấp bách của đất nước. Năm 2021 Khoa bắt tuyển tuyển sinh lứa cử nhân đầu tiên với 2 ngành đào tạo là Quản trị thương hiệu và Quản trị tài nguyên di sản. Đến ngày 29 tháng 1 năm 2024 theo Quyết định số 333/QĐ-ĐHQGHN của Giám đốc Đại học Quốc gia Hà Nội, Khoa được chuyển đổi mô hình và tổ chức lại thành Trường Khoa học liên ngành và Nghệ thuật kể từ ngày 01 tháng 03 năm 2024.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75591557">«Trường Khoa học liên ngành và Nghệ thuật, Đại học Quốc gia Hà Nội»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75591557), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Khoa học liên ngành và Nghệ thuật, Đại học Quốc gia Hà Nội</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt.svg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/b/b8/Logo_Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt.svg.png" alt="Biểu trưng Trường Khoa học liên ngành và Nghệ thuật, Đại học Quốc gia Hà Nội" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên khác</th><td>Trường liên ngành</td></tr><tr><th>Tên tiếng Anh</th><td>VNU School of Interdisciplinary Sciences and Arts</td></tr><tr><th>Viết tắt</th><td>VNU-SIS</td></tr><tr><th>Mã trường</th><td>QHK</td></tr><tr><th>Tên cũ</th><td>Khoa các Khoa học liên ngành</td></tr><tr><th>Loại hình</th><td>Đơn vị GDĐH khác · Công lập</td></tr><tr><th>Thành lập</th><td>2002</td></tr><tr><th>Thành viên của</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi">Đại học Quốc gia Hà Nội</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hieu">Nguyễn Văn Hiệu</a></td></tr><tr><th>Địa chỉ</th><td>G7, Đại học Quốc gia Hà Nội, 144 Xuân Thủy, Cầu Giấy</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Kiến tạo tương lai bằng tri thức liên ngành</i></td></tr><tr><th>Email</th><td><a href="mailto:sis@vnu.edu.vn">sis@vnu.edu.vn</a></td></tr><tr><th>Website</th><td><a href="https://sis.vnu.edu.vn/">sis.vnu.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:C%E1%BB%95ng_tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt_c%C6%A1_s%E1%BB%9F_Nam_T%E1%BB%AB_Li%C3%AAm.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/C%E1%BB%95ng_tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt_c%C6%A1_s%E1%BB%9F_Nam_T%E1%BB%AB_Li%C3%AAm.jpg/330px-C%E1%BB%95ng_tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt_c%C6%A1_s%E1%BB%9F_Nam_T%E1%BB%AB_Li%C3%AAm.jpg" alt="Ảnh Trường Khoa học liên ngành và Nghệ thuật, Đại học Quốc gia Hà Nội" loading="lazy"></a><figcaption>CC BY-SA 4.0 · Người lạ dưới gió xuân</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -177,14 +222,26 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="https://vi.wikipedia.org/w/index.php?oldid=75591557">&lt;https://vi.wikipedia.org/w/index.php?oldid=75591557&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>sis@vnu.edu.vn</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hieu">Nguyễn Văn Hiệu</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/c/c5/C%E1%BB%95ng_tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt_c%C6%A1_s%E1%BB%9F_Nam_T%E1%BB%AB_Li%C3%AAm.jpg">&lt;https://upload.wikimedia.org/wikipedia/commons/c/c5/C%E1%BB%95ng_tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt_c%C6%A1_s%E1%BB%9F_Nam_T%E1%BB%AB_Li%C3%AAm.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/b/b8/Logo_Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt.svg">&lt;https://upload.wikimedia.org/wikipedia/vi/b/b8/Logo_Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt.svg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:parentOrganization<small>schema:parentOrganization</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi">Đại học Quốc gia Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">tên khác<small>skos:altLabel</small></td><td>
+<div>Trường liên ngành</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>QHK <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -227,13 +284,13 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">có đơn vị thành viên<small>vnedu:hasMember</small></td><td>
+<tr><td class="p">schema:subOrganization<small>schema:subOrganization</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi">Đại học Quốc gia Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hieu">Nguyễn Văn Hiệu</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
-<tr><td class="p">schema:subOrganization<small>schema:subOrganization</small></td><td>
+<tr><td class="p">có đơn vị thành viên<small>vnedu:hasMember</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi">Đại học Quốc gia Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>

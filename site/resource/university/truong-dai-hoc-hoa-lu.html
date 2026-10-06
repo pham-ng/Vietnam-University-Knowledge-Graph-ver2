@@ -30,102 +30,125 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-hoa-lu",
-  "@type": [
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
-  ],
-  "foaf:homepage": {
-    "@id": "http://hluv.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hoa_L%C6%B0"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "20.267428"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.949313"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "https://ror.org/04atxgf14"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-hoa-lu",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Hoa Lư là cơ sở đào tạo đại học và nghiên cứu khoa học thuộc hệ thống giáo dục quốc dân. Trường trực thuộc Ủy ban nhân dân tỉnh Ninh Bình và chịu sự quản lý nhà nước về giáo dục của Bộ Giáo dục và Đào tạo. Đây là một trường đại học vùng, tuyển sinh trong cả nước."
+      },
+      "foaf:homepage": {
+        "@id": "http://hluv.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hoa_L%C6%B0"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "20.267428"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.949313"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/04atxgf14"
+        },
+        {
+          "@id": "wd:Q10829047"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=74290468"
+        },
+        {
+          "@id": "wd:Q10829047"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "vi",
+        "@value": "Trường Đại học Hoa Lư"
+      },
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-van-truong"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Daihochoalu.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ninh-binh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Hoa Lư"
+      },
+      "vnedu:address": "Ninh Nhất",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2007"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/uy-ban-nhan-dan-tinh-ninh-binh"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-van-truong"
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ninh-binh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-van-truong"
+      },
+      "vnedu:website": {
+        "@id": "http://hluv.edu.vn/"
+      }
     },
     {
-      "@id": "wd:Q10829047"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Daihochoalu.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "nguoicodo (thảo luận)",
+      "schema:license": "Public domain",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Daihochoalu.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Daihochoalu.jpg/330px-Daihochoalu.jpg"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q10829047"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74290468"
-    }
-  ],
-  "rdfs:label": {
-    "@language": "vi",
-    "@value": "Trường Đại học Hoa Lư"
-  },
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-van-truong"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ninh-binh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Hoa Lư"
-  },
-  "vnedu:address": "Ninh Nhất",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2007"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/uy-ban-nhan-dan-tinh-ninh-binh"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-van-truong"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ninh-binh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-van-truong"
-  },
-  "vnedu:website": {
-    "@id": "http://hluv.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([20.267428,105.949313],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([20.267428,105.949313],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -144,7 +167,9 @@
   <a href="truong-dai-hoc-hoa-lu.ttl">Turtle</a> · <a href="truong-dai-hoc-hoa-lu.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-hoa-lu">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 17 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Hoa Lư là cơ sở đào tạo đại học và nghiên cứu khoa học thuộc hệ thống giáo dục quốc dân. Trường trực thuộc Ủy ban nhân dân tỉnh Ninh Bình và chịu sự quản lý nhà nước về giáo dục của Bộ Giáo dục và Đào tạo. Đây là một trường đại học vùng, tuyển sinh trong cả nước.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=74290468">«Trường Đại học Hoa Lư»</a> trên Wikipedia tiếng Việt (bản sửa đổi 74290468), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Hoa Lư</div><table><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>2007</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/uy-ban-nhan-dan-tinh-ninh-binh">Ủy ban nhân dân tỉnh Ninh Bình</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-van-truong">Vũ Văn Trường</a></td></tr><tr><th>Địa chỉ</th><td>Ninh Nhất</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ninh-binh">Ninh Bình</a></td></tr><tr><th>Website</th><td><a href="http://hluv.edu.vn/">hluv.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:Daihochoalu.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Daihochoalu.jpg/330px-Daihochoalu.jpg" alt="Ảnh Trường Đại học Hoa Lư" loading="lazy"></a><figcaption>Public domain · nguoicodo (thảo luận)</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -173,6 +198,9 @@
 </td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-van-truong">Vũ Văn Trường</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/b/bc/Daihochoalu.jpg">&lt;https://upload.wikimedia.org/wikipedia/commons/b/bc/Daihochoalu.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ninh-binh">Ninh Bình</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

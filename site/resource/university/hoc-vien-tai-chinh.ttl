@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
@@ -26,6 +27,7 @@ university:hoc-vien-tai-chinh a foaf:Organization,
         schema:Organization ;
     rdfs:label "Academy of Finance"@en,
         "Học viện Tài chính"@vi ;
+    dbo:abstract "Học viện Tài chính (tiếng Anh: Academy of Finance, viết tắt AOF) được thành lập ngày 17 tháng 8 năm 2001 theo Quyết định số 120/2001/QĐ-TTg của Thủ tướng Chính phủ. Học viện trực thuộc Bộ Tài chính và chịu sự quản lý nhà nước của Bộ Giáo dục và Đào tạo, là một trong những trường đại học công lập thuộc khối kinh tế tại Việt Nam."@vi ;
     owl:sameAs wd:Q10771904 ;
     geo:lat 21.075248 ;
     geo:long 105.773553 ;
@@ -35,6 +37,7 @@ university:hoc-vien-tai-chinh a foaf:Organization,
     foaf:homepage <http://hvtc.edu.vn> ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_T%C3%A0i_ch%C3%ADnh_%28Vi%E1%BB%87t_Nam%29> ;
     vnedu:address "58 phố Lê Văn Hiến, phường Đông Ngạc" ;
+    vnedu:campus "5 ha" ;
     vnedu:formerName "Trường Đại học Tài chính - Kế toán Hà Nội"@vi ;
     vnedu:foundingYear "1963"^^xsd:gYear ;
     vnedu:governedBy organization:bo-tai-chinh ;
@@ -43,13 +46,32 @@ university:hoc-vien-tai-chinh a foaf:Organization,
         person:nguyen-the-manh,
         person:pham-anh-tuan,
         person:ta-anh-tuan ;
+    vnedu:history """Tiền thân của trường là Trường cán bộ Tài chính – Kế toán Trung ương được thành lập Ngày 31 tháng 07 năm 1963 theo Quyết định 117/CP của Hội đồng Chính phủ. Địa điểm chính của trường đặt tại số 58 phố Lê Văn Hiến, phường Đức Thắng, quận Bắc Từ Liêm, thành phố Hà Nội. Ngoài ra, trường còn cơ sở mới tại 69 Đức Thắng, Bắc Từ Liêm, Hà Nội và tại 19C ngõ Hàng Cháo, phường Cát Linh, quận Đống Đa, Hà Nội.
+
+Sau khi thành lập, do yêu cầu của nền kinh tế cần phải có một đội ngũ cán bộ quản lý và kinh doanh tiền tệ có trình độ đại học thuộc hệ thống ngân hàng, nên đến năm 1964 trường đã đổi tên thành trường Cán bộ Tài chính kế toán Ngân hàng Trung ương.
+
+Công cuộc xây dựng và phát triển kinh tế ngày càng được mở rộng trên phạm vi cả nước đòi hỏi đội ngũ cán bộ quản lý kinh tế phải được tăng cường cả về số lượng và chất lượng, ngày 27 tháng 10 năm 1976 Hội đồng Chính phủ đã ra Quyết định 226/CP đổi tên trường từ trường Cán bộ Tài chính Kế toán Ngân hàng Trung ương, thành trường Đại học Tài chính – Kế toán trực thuộc Bộ Tài chính.
+
+Qua quá trình hoàn thiện và phát triển trường, đến năm 2001, để thực hiện chiến lược phát triển giáo dục 2001-2010 đề ra, sau khi kết thúc năm học 2000-2002, ngày 17/8/2001, Thủ tướng Chính phủ ra Quyết định số 120/2001/QĐ-TTg về việc thành lập Học viện Tài chính trên cơ sở sáp nhập 3 đơn vị là Trường Đại học Tài chính – Kế toán Hà Nội, Viện nghiên cứu Tài chính và Trung tâm Bồi dưỡng Cán bộ Tài chính. Và Học viện Tài chính đã trở thành tên của trường từ đó đến nay.
+
+Hiện tại, Học viện hiện có 750 cán bộ, viên chức trong đó có 453 giảng viên, 54 nghiên cứu viên, 56 giáo sư và phó giáo sư, hơn 170 tiến sĩ, 221 thạc sĩ, 28 nhà giáo nhân dân và nhà giáo ưu tú, từng đào tạo hơn 20.000 sinh viên, học viên, nghiên cứu sinh."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
     vnedu:motto "\"Sinh viên Học viện Tài chính phát huy truyền thống, thi đua học tập, sáng tạo, tình nguyện và hội nhập\""@vi ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:website <http://hvtc.edu.vn> ;
+    schema:email "vanphong@hvtc.edu.vn" ;
+    schema:foundingDate "2001-08-17"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/a/ae/H%E1%BB%8Dc_vi%E1%BB%87n_t%C3%A0i_ch%C3%ADnh.jpg> ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:telephone "0243 9331 853" .
+
+<https://upload.wikimedia.org/wikipedia/commons/a/ae/H%E1%BB%8Dc_vi%E1%BB%87n_t%C3%A0i_ch%C3%ADnh.jpg> a schema:ImageObject ;
+    schema:creditText "Học viện Tài Chính ( Việt Nam)" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:H%E1%BB%8Dc_vi%E1%BB%87n_t%C3%A0i_ch%C3%ADnh.jpg> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/commons/a/ae/H%E1%BB%8Dc_vi%E1%BB%87n_t%C3%A0i_ch%C3%ADnh.jpg> .
 

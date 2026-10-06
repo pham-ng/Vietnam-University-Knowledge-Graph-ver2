@@ -28,6 +28,7 @@ university:truong-dai-hoc-dieu-duong-nam-dinh a dbo:University,
         schema:Organization ;
     rdfs:label "Nam Dinh University of Nursing"@en,
         "Trường Đại học Điều dưỡng Nam Định"@vi ;
+    dbo:abstract "Trường Đại học Điều dưỡng Nam Định là một trường đại học được thành lập ngày 26 tháng 2 năm 2004 theo Quyết định số 24/2004/QĐ-TTg của Thủ tướng Chính phủ, trụ sở của Trường được đặt tại số 257 Hàn Thuyên, phường Nam Định, tỉnh Ninh Bình. Trường là một trong những trung tâm đào tạo đa cấp nguồn nhân lực Điều dưỡng - Hộ sinh, đào tạo giáo viên điều dưỡng cho các trường trung học, cao đẳng và các trường ĐH Y tham gia đào tạo điều dưỡng ở Việt Nam, đồng thời cơ sở nghiên cứu khoa học, ứng dụng và chuyển giao công nghệ."@vi ;
     owl:sameAs wd:Q10829178 ;
     geo:lat 20.433957 ;
     geo:long 106.180231 ;
@@ -39,9 +40,16 @@ university:truong-dai-hoc-dieu-duong-nam-dinh a dbo:University,
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90i%E1%BB%81u_d%C6%B0%E1%BB%A1ng_Nam_%C4%90%E1%BB%8Bnh> ;
     vnedu:address "257 Hàn Thuyên, phường Nam Định" ;
     vnedu:admissionCode "YDD" ;
+    vnedu:councilChair person:le-thanh-tung ;
     vnedu:foundingYear "1960"^^xsd:gYear ;
     vnedu:governedBy organization:bo-y-te ;
-    vnedu:hasLeader person:truong-tuan-anh ;
+    vnedu:hasLeader person:le-thanh-tung,
+        person:truong-tuan-anh ;
+    vnedu:history """Trường Đại học Điều dưỡng Nam Định tiền thân là Trường Y sỹ Nam Định được thành lập ngày 8/9/1960, sau đó được đổi tên thành Trường THYT Nam Hà. Ngày 12/9/1981, Hội đồng Bộ trưởng đã ra Quyết định số 65/HĐBT, nâng cấp Trường THYT Nam Hà thành Trường Cao đẳng Y tế Nam Định.
+
+Ngày 25/7/1988, Trường được hợp nhất với Đại học Y Thái Bình theo Quyết định số 624/BYT-QĐ của Bộ Y tế. Tuy nhiên, chỉ 3 năm sau đó, Bộ Y tế lại ra Quyết định số 797/BYT-QĐ ngày 13/8/1991, tách Trường ra khỏi Đại học Y Thái Bình.
+
+Đến ngày 26/2/2004, Phó Thủ tướng Chính phủ Phạm Gia Khiêm đã ra Quyết định số 24/2004/QĐ-TTg, nâng cấp Trường Cao đẳng Y tế Nam Định thành Trường Đại học Điều dưỡng Nam Định"""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ninh-binh,
         region:bac-bo ;
@@ -50,8 +58,17 @@ university:truong-dai-hoc-dieu-duong-nam-dinh a dbo:University,
     vnedu:rector person:truong-tuan-anh ;
     vnedu:shortName "NDUN" ;
     vnedu:website <http://ndun.edu.vn> ;
-    schema:employee person:truong-tuan-anh ;
+    schema:email "dieuduong@ndun.edu.vn" ;
+    schema:employee person:le-thanh-tung,
+        person:truong-tuan-anh ;
     schema:location country:viet-nam,
         province:ninh-binh,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/8/87/Logo_NDUN.png> ;
+    schema:telephone "+84 228 3649666" .
+
+<https://upload.wikimedia.org/wikipedia/vi/8/87/Logo_NDUN.png> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_NDUN.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/8/87/Logo_NDUN.png/330px-Logo_NDUN.png> .
 

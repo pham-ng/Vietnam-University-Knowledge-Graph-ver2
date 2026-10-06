@@ -25,7 +25,9 @@ university:truong-dai-hoc-cong-nghiep-va-thuong-mai-ha-noi a dbo:University,
         schema:EducationalOrganization,
         schema:Organization ;
     rdfs:label "Trường Đại học Công nghiệp và Thương mại Hà Nội"@vi ;
+    dbo:abstract "Trường đại học Công nghiệp và Thương mại Hà Nội (tiền thân là Trường Đại học Công nghiệp Dệt may Hà Nội) là trường đại học công lập định hướng ứng dụng, được thành lập theo Quyết định số 27/NT ngày 19/01/1967 của Bộ trưởng Bộ Nội thương (nay là Bộ Công thương). Trường đã chính thức được đổi tên thành Trường Đại học Công nghiệp và Thương mại Hà Nội vào ngày 4 tháng 7 năm 2025, theo Quyết định số 1485/QĐ-TTg của Thủ tướng Chính phủ."@vi ;
     owl:sameAs wd:Q97167427 ;
+    skos:altLabel "May Dâu Keo" ;
     skos:prefLabel "Trường Đại học Công nghiệp và Thương mại Hà Nội"@vi ;
     prov:wasDerivedFrom wd:Q97167427,
         <https://vi.wikipedia.org/w/index.php?oldid=75124682> ;
@@ -41,8 +43,17 @@ university:truong-dai-hoc-cong-nghiep-va-thuong-mai-ha-noi a dbo:University,
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:hoang-xuan-hiep ;
     vnedu:website <http://hict.edu.vn/> ;
+    schema:email "phongtchc@hict.edu.vn" ;
     schema:employee person:hoang-xuan-hiep ;
+    schema:foundingDate "1967-01-19"^^xsd:date ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/c/cb/Logo_HICT.png> ;
+    schema:telephone "024.38276514" .
+
+<https://upload.wikimedia.org/wikipedia/vi/c/cb/Logo_HICT.png> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_HICT.png> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/vi/c/cb/Logo_HICT.png> .
 

@@ -26,6 +26,7 @@ university:truong-dai-hoc-su-pham-ky-thuat-nam-dinh a dbo:University,
         schema:Organization ;
     rdfs:label "Nam Dinh University of"@en,
         "Trường Đại học Sư phạm Kỹ thuật Nam Định"@vi ;
+    dbo:abstract "Trường Đại học Sư phạm Kỹ thuật Nam Định là một trong sáu Đại học Sư phạm Kỹ thuật của cả nước - đào tạo kỹ thuật lấy ứng dụng làm trọng tâm để giảng dạy, có chức năng đào tạo kỹ sư công nghệ và giáo viên kỹ thuật. Được đánh giá là một trong những trường đại học kỹ thuật đầu ngành tại Vùng Đồng bằng sông Hồng Việt Nam. Trường đồng thời là trung tâm nghiên cứu khoa học kỹ thuật và chuyển giao công nghệ lớn của miền Bắc Việt Nam. Tiền thân của trường là Trường Cao đẳng Sư phạm kỹ thuật Nam Định."@vi ;
     owl:sameAs wd:Q10829129 ;
     skos:prefLabel "Trường Đại học Sư phạm Kỹ thuật Nam Định"@vi ;
     prov:wasDerivedFrom wd:Q10829129,
@@ -35,14 +36,25 @@ university:truong-dai-hoc-su-pham-ky-thuat-nam-dinh a dbo:University,
     vnedu:address "Số 172, Đường Phù Nghĩa, Phường Thiên Trường, Tỉnh Ninh Bình" ;
     vnedu:foundingYear "1966"^^xsd:gYear ;
     vnedu:hasLeader person:nguyen-huy-bang ;
+    vnedu:history """Trường Đại học Sư phạm Kỹ thuật Nam Định tiền thân là Trường Trung học Công nghiệp Nam Hà được thành lập theo quyết định số 1263 BCNN/KB-1 ngày 21 tháng 12 năm 1966 của Bộ Công nghiệp nặng, có nhiệm vụ đào tạo cán bộ trung cấp kỹ thuât. Năm 1971 Trường thuộc Tổng cục Đào tạo công nhân kỹ thuật theo quyết định số 171/TTg ngày 16 tháng 6 năm 1971 của Thủ tướng Chính phủ, làm nhiệm vụ đào tạo giáo viên dạy nghề. Năm 1978 Trường thuộc Bộ Giáo dục và Đào tạo, tiếp tục làm nhiệm vụ đào tạo, bồi dưỡng giáo viên dạy nghề. Từ ngày 1 tháng 7 năm 1998 Trường thuộc Bộ Lao động-Thương binh và Xã hội, tiếp tục làm nhiệm vụ đào tạo, bồi dưỡng giáo viên dạy nghề. Từ năm 1992 theo quyết định số 1395/TH-DN ngày 13/7/1992 của Bộ trưởng Bộ Giáo dục và Đào tạo, Trường được phép đào tạo thí điểm GVDN trình độ cao đẳng. Từ tháng 5/1999 Trường Cao đẳng Sư phạm Kỹ thuật Nam Định được thành lập trên cơ sở Trường Sư phạm Kỹ thuật 2 Nam Định theo quyết định số 130/1999/QĐ-TTg ngày 28/05/1999 của Thủ tướng Chính phủ, chính thức nhận nhiệm vụ đào tạo GVDN trình độ cao đẳng. Ngày 05 tháng 01 năm 2006 Trường Đại học Sư phạm Kỹ thuật Nam Định được thành lập theo quyết định số 05/2006/QĐ-TTg ngày 5 tháng 1 năm 2006 của Thủ tướng Chính phủ trên cơ sở nâng cấp Trường Cao đẳng Sư phạm Kỹ thuật Nam Định. Trường hiện là đơn vị trực thuộc Bộ Giáo dục và Đào tạo; chịu sự quản lý về hành chính theo lãnh thổ của UBND tỉnh Ninh Bình. Trải qua 60 năm xây dựng và phát triển, trường đã đào tạo và bồi dưỡng hàng vạn cán bộ kỹ thuật, giáo viên dạy nghề, công nhân kỹ thuật phục vụ có hiệu quả cho ngành dạy nghề và các ngành kinh tế quốc dân khác trong phạm vi cả nước. Trường đã khắc phục khó khăn lỗ lực phấn đấu vươn lên, hoàn thành xuất sắc nhiệm vụ được giao, đã được Nhà nước ghi nhận bằng những phần thưởng cao quý:
+
+~ Huân chương Độc lập hạng Ba (năm 2011) ~Huân chương Lao động hạng Ba (năm 1986) ~Huân chương Lao động hạng Nhì (năm 1996) ~Huân chương Lao động hạng Nhất (năm 2000) ~Huân chương Lao động hạng Ba tặng cho ĐTNCSHCM (năm 2001)"""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ninh-binh,
         region:bac-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:nguyen-huy-bang ;
     vnedu:website <http://www.nute.edu.vn> ;
+    schema:email "bants.skn@moet.edu.vn" ;
     schema:employee person:nguyen-huy-bang ;
     schema:location country:viet-nam,
         province:ninh-binh,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/8/82/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh.png> ;
+    schema:telephone "0228) 3 630.858" .
+
+<https://upload.wikimedia.org/wikipedia/vi/8/82/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh.png> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/8/82/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh.png/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh.png> .
 

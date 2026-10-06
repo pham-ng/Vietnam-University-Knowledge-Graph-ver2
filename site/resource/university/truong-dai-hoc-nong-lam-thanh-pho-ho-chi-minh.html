@@ -30,161 +30,208 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-nong-lam-thanh-pho-ho-chi-minh",
-  "@type": [
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.hcmuaf.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/e/e1/Logo_HCMUAF.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_HCMUAF.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/e/e1/Logo_HCMUAF.svg/330px-Logo_HCMUAF.svg.png"
+      }
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Agriculture_and_Forestry"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-nong-lam-thanh-pho-ho-chi-minh",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh ( (HCMUAF) hoặc Nong Lam University, viết tắt NLU) là một trường đại học đa ngành tại Việt Nam, chuyên đào tạo và nghiên cứu nhóm ngành nông – lâm – ngư nghiệp. Trường trực thuộc Bộ Giáo dục và Đào tạo thành lập trên cơ sở Trường Quốc gia Nông Lâm Mục Bảo Lộc được thành lập từ năm 1955. Trong quá trình phát triển, trường từng là thành viên trong hệ thống Đại học Quốc gia nhưng sau đó được tách ra cho đến ngày nay."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.hcmuaf.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Agriculture_and_Forestry"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.8713"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.7917"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/03030f487"
+        },
+        {
+          "@id": "wd:Q5873976"
+        },
+        {
+          "@id": "dbr:Ho_Chi_Minh_City_University_of_Agriculture_and_Forestry"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75596833"
+        },
+        {
+          "@id": "wd:Q5873976"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh"
+        },
+        {
+          "@language": "en",
+          "@value": "Nong Lam University"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tat-toan"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1955-11-19"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Nh%C3%A0_R%E1%BA%A1ng_%C4%90%C3%B4ng%2C_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/e/e1/Logo_HCMUAF.svg"
+      },
+      "schema:telephone": "84-8) 38960711",
+      "skos:notation": "NLS",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh"
+      },
+      "vnedu:address": "Khu phố 33, phường Linh Xuân",
+      "vnedu:admissionCode": "NLS",
+      "vnedu:campus": "118 ha",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1955"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/liem-d-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-vu"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tung-che"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-chuong-pham"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/doan-van-cuong"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-quoc-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ut-v-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/khang-huynh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hanh-ngoc-lam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tuyen-truong"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/khon-c-huynh"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tat-toan"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Năm 1954, xây dựng Trường Quốc gia Nông Lâm Mục Bảo Lộc, tiền thân của Trường Đại học Nông Lâm TPHCM.\n\nNgày 19 tháng 11 năm 1955, thành lập Trường Quốc gia Nông Lâm Mục Bảo Lộc và tuyển sinh khóa đầu tiên, 60 sinh viên trúng tuyển trên 1200 thí sinh dự thi đại học.\n\nNăm 1963, trường đổi tên thành Cao đẳng Nông Lâm Súc.\n\nNăm 1972, trường đổi tên thành Học viện Nông nghiệp.\n\nNăm 1974, trường đổi tên thành Đại học Nông nghiệp Sài Gòn thuộc Viện Đại học Bách khoa Thủ Đức.\n\nSau khi Việt Nam Cộng hòa sụp đổ, đến cuối năm 1975, trường đổi tên thành Đại học Nông nghiệp 4.\n\nNăm 1985, Trường Đại học Nông Lâm Nghiệp Thành phố Hồ Chí Minh trên cơ sở sáp nhập trường Đại học Nông nghiệp 4 và Cao đẳng Lâm nghiệp (ở Trảng Bom, Đồng Nai).\n\nNăm 1995, theo quyết định của Thủ tướng Chính phủ, Trường Đại học Nông Lâm nghiệp TPHCM là thành viên của Đại học Quốc gia TPHCM.\n\nCuối năm 2000, Trường Đại học Nông Lâm nghiệp TP.HCM được tách ra khỏi Đại học Quốc gia TP. HCM và trực thuộc Bộ Giáo dục và Đào tạo, đồng thời đổi tên trường thành Trường Đại học Nông Lâm Thành phố Hồ Chí Minh."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Chất lượng - Hội nhập - Phát triển"
+      },
+      "vnedu:numberOfStudents": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "22000"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tat-toan"
+      },
+      "vnedu:website": {
+        "@id": "http://www.hcmuaf.edu.vn/"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Nh%C3%A0_R%E1%BA%A1ng_%C4%90%C3%B4ng%2C_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Lý Kiến Quốc",
+      "schema:license": "CC0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Nh%C3%A0_R%E1%BA%A1ng_%C4%90%C3%B4ng,_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Nh%C3%A0_R%E1%BA%A1ng_%C4%90%C3%B4ng%2C_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg/330px-Nh%C3%A0_R%E1%BA%A1ng_%C4%90%C3%B4ng%2C_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.8713"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.7917"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "wd:Q5873976"
-    },
-    {
-      "@id": "https://ror.org/03030f487"
-    },
-    {
-      "@id": "dbr:Ho_Chi_Minh_City_University_of_Agriculture_and_Forestry"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75596833"
-    },
-    {
-      "@id": "wd:Q5873976"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh"
-    },
-    {
-      "@language": "en",
-      "@value": "Nong Lam University"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tat-toan"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:notation": "NLS",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh"
-  },
-  "vnedu:address": "Khu phố 33, phường Linh Xuân",
-  "vnedu:admissionCode": "NLS",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1955"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tung-che"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-vu"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-chuong-pham"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/khang-huynh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/doan-van-cuong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-quoc-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tuyen-truong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hanh-ngoc-lam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/liem-d-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ut-v-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/khon-c-huynh"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tat-toan"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Chất lượng - Hội nhập - Phát triển"
-  },
-  "vnedu:numberOfStudents": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "22000"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tat-toan"
-  },
-  "vnedu:website": {
-    "@id": "http://www.hcmuaf.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.8713,106.7917],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.8713,106.7917],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -203,7 +250,9 @@
   <a href="truong-dai-hoc-nong-lam-thanh-pho-ho-chi-minh.ttl">Turtle</a> · <a href="truong-dai-hoc-nong-lam-thanh-pho-ho-chi-minh.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-nong-lam-thanh-pho-ho-chi-minh">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 29 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Nông Lâm Thành phố Hồ Chí Minh ( (HCMUAF) hoặc Nong Lam University, viết tắt NLU) là một trường đại học đa ngành tại Việt Nam, chuyên đào tạo và nghiên cứu nhóm ngành nông – lâm – ngư nghiệp. Trường trực thuộc Bộ Giáo dục và Đào tạo thành lập trên cơ sở Trường Quốc gia Nông Lâm Mục Bảo Lộc được thành lập từ năm 1955. Trong quá trình phát triển, trường từng là thành viên trong hệ thống Đại học Quốc gia nhưng sau đó được tách ra cho đến ngày nay.</p><h2>Lịch sử</h2><p>Năm 1954, xây dựng Trường Quốc gia Nông Lâm Mục Bảo Lộc, tiền thân của Trường Đại học Nông Lâm TPHCM.</p><p>Ngày 19 tháng 11 năm 1955, thành lập Trường Quốc gia Nông Lâm Mục Bảo Lộc và tuyển sinh khóa đầu tiên, 60 sinh viên trúng tuyển trên 1200 thí sinh dự thi đại học.</p><details><summary>Đọc tiếp (7 đoạn)</summary><p>Năm 1963, trường đổi tên thành Cao đẳng Nông Lâm Súc.</p><p>Năm 1972, trường đổi tên thành Học viện Nông nghiệp.</p><p>Năm 1974, trường đổi tên thành Đại học Nông nghiệp Sài Gòn thuộc Viện Đại học Bách khoa Thủ Đức.</p><p>Sau khi Việt Nam Cộng hòa sụp đổ, đến cuối năm 1975, trường đổi tên thành Đại học Nông nghiệp 4.</p><p>Năm 1985, Trường Đại học Nông Lâm Nghiệp Thành phố Hồ Chí Minh trên cơ sở sáp nhập trường Đại học Nông nghiệp 4 và Cao đẳng Lâm nghiệp (ở Trảng Bom, Đồng Nai).</p><p>Năm 1995, theo quyết định của Thủ tướng Chính phủ, Trường Đại học Nông Lâm nghiệp TPHCM là thành viên của Đại học Quốc gia TPHCM.</p><p>Cuối năm 2000, Trường Đại học Nông Lâm nghiệp TP.HCM được tách ra khỏi Đại học Quốc gia TP. HCM và trực thuộc Bộ Giáo dục và Đào tạo, đồng thời đổi tên trường thành Trường Đại học Nông Lâm Thành phố Hồ Chí Minh.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75596833">«Trường Đại học Nông Lâm Thành phố Hồ Chí Minh»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75596833), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Nông Lâm Thành phố Hồ Chí Minh</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_HCMUAF.svg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/e/e1/Logo_HCMUAF.svg/330px-Logo_HCMUAF.svg.png" alt="Biểu trưng Trường Đại học Nông Lâm Thành phố Hồ Chí Minh" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>Nong Lam University</td></tr><tr><th>Mã trường</th><td>NLS</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>19 tháng 11 năm 1955</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tat-toan">Nguyễn Tất Toàn</a></td></tr><tr><th>Địa chỉ</th><td>Khu phố 33, phường Linh Xuân</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></td></tr><tr><th>Khuôn viên</th><td>118 ha</td></tr><tr><th>Sinh viên</th><td>22.000</td></tr><tr><th>Khẩu hiệu</th><td><i>Chất lượng - Hội nhập - Phát triển</i></td></tr><tr><th>Điện thoại</th><td>84-8) 38960711</td></tr><tr><th>Website</th><td><a href="http://www.hcmuaf.edu.vn/">hcmuaf.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:Nh%C3%A0_R%E1%BA%A1ng_%C4%90%C3%B4ng,_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Nh%C3%A0_R%E1%BA%A1ng_%C4%90%C3%B4ng%2C_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg/330px-Nh%C3%A0_R%E1%BA%A1ng_%C4%90%C3%B4ng%2C_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg" alt="Ảnh Trường Đại học Nông Lâm Thành phố Hồ Chí Minh" loading="lazy"></a><figcaption>CC0 · Lý Kiến Quốc</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -233,8 +282,20 @@
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tat-toan">Nguyễn Tất Toàn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1955-11-19 <span class="lang">xsd:date</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/4/4b/Nh%C3%A0_R%E1%BA%A1ng_%C4%90%C3%B4ng%2C_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg">&lt;https://upload.wikimedia.org/wikipedia/commons/4/4b/Nh%C3%A0_R%E1%BA%A1ng_%C4%90%C3%B4ng%2C_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%C3%B4ng_L%C3%A2m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/e/e1/Logo_HCMUAF.svg">&lt;https://upload.wikimedia.org/wikipedia/vi/e/e1/Logo_HCMUAF.svg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>84-8) 38960711</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>NLS <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -244,6 +305,9 @@
 </td></tr>
 <tr><td class="p">mã trường (tuyển sinh)<small>vnedu:admissionCode</small></td><td>
 <div>NLS</div>
+</td></tr>
+<tr><td class="p">khuôn viên<small>vnedu:campus</small></td><td>
+<div>118 ha</div>
 </td></tr>
 <tr><td class="p">năm thành lập<small>vnedu:foundingYear</small></td><td>
 <div>1955 <span class="lang">xsd:gYear</span></div>

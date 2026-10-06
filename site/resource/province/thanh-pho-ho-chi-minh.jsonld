@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh",
   "@type": [
-    "vnedu:Province",
-    "vnedu:AdministrativeUnit",
     "schema:AdministrativeArea",
-    "vnedu:CentrallyGovernedCity"
+    "vnedu:CentrallyGovernedCity",
+    "vnedu:AdministrativeUnit",
+    "vnedu:Province"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City"
+      "@id": "https://vi.wikipedia.org/wiki/Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City"
     }
   ],
   "geo:lat": {
@@ -45,10 +45,10 @@
       "@id": "wd:Q1854"
     },
     {
-      "@id": "dbr:Ho_Chi_Minh_City"
+      "@id": "https://sws.geonames.org/1566083/"
     },
     {
-      "@id": "https://sws.geonames.org/1566083/"
+      "@id": "dbr:Ho_Chi_Minh_City"
     }
   ],
   "prov:wasDerivedFrom": {

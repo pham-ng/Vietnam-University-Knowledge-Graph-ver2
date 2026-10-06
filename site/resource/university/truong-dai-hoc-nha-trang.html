@@ -32,17 +32,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-nha-trang",
   "@type": [
-    "dbo:University",
-    "vnedu:EducationalOrganization",
     "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "foaf:Organization",
     "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution"
+    "vnedu:EducationalOrganization",
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "foaf:Organization",
+    "schema:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Nha Trang (tiếng Anh: Nha Trang University – NTU) là cơ sở giáo dục đại học công lập trực thuộc Bộ Giáo dục và Đào tạo, là một trong ba trường đại học đa ngành đứng đầu về đào tạo tại miền Trung Việt Nam. Tháng 7 năm 2023, Nhà trường đã được Trung tâm Kiểm định Chất lượng giáo dục – Đại học Quốc gia Thành phố Hồ Chí Minh kiểm định và được cấp Giấy chứng nhận kiểm định chất lượng cơ sở giáo dục. Trường Đại học Nha Trang là trường đa ngành, đa lĩnh vực, có sứ mệnh nghiên cứu khoa học, đào tạo nhân lực trình độ cao và chuyển giao tri thức đa lĩnh vực, chú trọng phát huy thế mạnh lĩnh vực khoa học – công nghệ biển và thủy sản, đáp ứng yêu cầu phát triển kinh tế – xã hội. Từ tháng 2 năm 2026, Trường Đại học Nha Trang tổ chức lại theo mô hình có các trường chuyên ngành trực thuộc, gồm Trường Thủy sản và Khoa học sự sống, Trường Kỹ thuật và Công nghệ, Trường Kinh tế và Kinh doanh, trong lộ trình được định hướng trở thành đại học vùng vào năm 2030."
+  },
   "foaf:homepage": {
     "@id": "http://www.ntu.edu.vn/"
   },
@@ -67,10 +71,10 @@
       "@id": "dbr:Nha_Trang_University"
     },
     {
-      "@id": "wd:Q2740474"
+      "@id": "https://ror.org/047van922"
     },
     {
-      "@id": "https://ror.org/047van922"
+      "@id": "wd:Q2740474"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -94,12 +98,16 @@
   "schema:employee": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quach-hoai-nam"
   },
+  "schema:foundingDate": {
+    "@type": "xsd:date",
+    "@value": "1959-08-01"
+  },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
@@ -114,6 +122,7 @@
     "@value": "472"
   },
   "vnedu:address": "02 Nguyễn Đình Chiểu, phường Bắc Nha Trang",
+  "vnedu:campus": "Đô thị",
   "vnedu:formerName": {
     "@language": "vi",
     "@value": "Trường Đại học Thủy sản"
@@ -127,39 +136,43 @@
   },
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-minh-le"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ha-thanh-dong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-dinh-cuong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hong-ngoc-thuy-pham"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-phu-quoc"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-quoc-pham"
     },
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hong-ngoc-thuy-pham"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-minh-le"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-thai"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-dinh-cuong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-phu-quoc"
     }
   ],
   "vnedu:hasLeader": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quach-hoai-nam"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Tiền thân của Trường Đại học Nha Trang là Khoa Thủy sản, được thành lập vào ngày 1 tháng 8 năm 1959 tại Học viện Nông lâm Hà Nội (nay là Học viện Nông nghiệp Việt Nam).\n\nNgày 16 tháng 8 năm 1966, theo Quyết định số 155/CP của Thủ tướng Chính phủ, Khoa Thủy sản được tách thành Trường Thủy sản (thuộc quyền quản lý của Tổng cục Thủy sản).\n\nNgày 4 tháng 10 năm 1976, trường chuyển trụ sở từ Hải Phòng vào Nha Trang và được đổi tên Trường Đại học Hải sản (thuộc Bộ Hải sản).\n\nTháng 8 năm 1981, trường được đổi tên thành Trường Đại học Thủy sản (thuộc Bộ Thủy sản).\n\nNgày 25 tháng 7 năm 2006, theo Quyết định số 172/2006/QĐ-TTg của Thủ tướng Chính phủ, trường chính thức đổi tên thành Trường Đại học Nha Trang.\n\nNgày 1 tháng 2 năm 2026, trường công bố kế hoạch thực hiện chiến lược phát triển và cơ cấu tổ chức giai đoạn 2025–2030, trong đó thành lập ba trường chuyên ngành trực thuộc trên cơ sở sắp xếp các khoa hiện có."
+  },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     }
   ],
   "vnedu:motto": {
@@ -202,7 +215,9 @@
   <a href="truong-dai-hoc-nha-trang.ttl">Turtle</a> · <a href="truong-dai-hoc-nha-trang.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-nha-trang">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 24 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Nha Trang (tiếng Anh: Nha Trang University – NTU) là cơ sở giáo dục đại học công lập trực thuộc Bộ Giáo dục và Đào tạo, là một trong ba trường đại học đa ngành đứng đầu về đào tạo tại miền Trung Việt Nam. Tháng 7 năm 2023, Nhà trường đã được Trung tâm Kiểm định Chất lượng giáo dục – Đại học Quốc gia Thành phố Hồ Chí Minh kiểm định và được cấp Giấy chứng nhận kiểm định chất lượng cơ sở giáo dục. Trường Đại học Nha Trang là trường đa ngành, đa lĩnh vực, có sứ mệnh nghiên cứu khoa học, đào tạo nhân lực trình độ cao và chuyển giao tri thức đa lĩnh vực, chú trọng phát huy thế mạnh lĩnh vực khoa học – công nghệ biển và thủy sản, đáp ứng yêu cầu phát triển kinh tế – xã hội. Từ tháng 2 năm 2026, Trường Đại học Nha Trang tổ chức lại theo mô hình có các trường chuyên ngành trực thuộc, gồm Trường Thủy sản và Khoa học sự sống, Trường Kỹ thuật và Công nghệ, Trường Kinh tế và Kinh doanh, trong lộ trình được định hướng trở thành đại học vùng vào năm 2030.</p><h2>Lịch sử</h2><p>Tiền thân của Trường Đại học Nha Trang là Khoa Thủy sản, được thành lập vào ngày 1 tháng 8 năm 1959 tại Học viện Nông lâm Hà Nội (nay là Học viện Nông nghiệp Việt Nam).</p><p>Ngày 16 tháng 8 năm 1966, theo Quyết định số 155/CP của Thủ tướng Chính phủ, Khoa Thủy sản được tách thành Trường Thủy sản (thuộc quyền quản lý của Tổng cục Thủy sản).</p><details><summary>Đọc tiếp (4 đoạn)</summary><p>Ngày 4 tháng 10 năm 1976, trường chuyển trụ sở từ Hải Phòng vào Nha Trang và được đổi tên Trường Đại học Hải sản (thuộc Bộ Hải sản).</p><p>Tháng 8 năm 1981, trường được đổi tên thành Trường Đại học Thủy sản (thuộc Bộ Thủy sản).</p><p>Ngày 25 tháng 7 năm 2006, theo Quyết định số 172/2006/QĐ-TTg của Thủ tướng Chính phủ, trường chính thức đổi tên thành Trường Đại học Nha Trang.</p><p>Ngày 1 tháng 2 năm 2026, trường công bố kế hoạch thực hiện chiến lược phát triển và cơ cấu tổ chức giai đoạn 2025–2030, trong đó thành lập ba trường chuyên ngành trực thuộc trên cơ sở sắp xếp các khoa hiện có.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75611189">«Trường Đại học Nha Trang»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75611189), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Nha Trang</div><table><tr><th>Tên tiếng Anh</th><td>Nha Trang University</td></tr><tr><th>Viết tắt</th><td>NTU</td></tr><tr><th>Tên cũ</th><td>Trường Đại học Thủy sản</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>1 tháng 8 năm 1959</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a></td></tr><tr><th>Hiệu trưởng</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/quach-hoai-nam">Quách Hoài Nam</a></td></tr><tr><th>Địa chỉ</th><td>02 Nguyễn Đình Chiểu, phường Bắc Nha Trang</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa">Khánh Hòa</a></td></tr><tr><th>Khuôn viên</th><td>Đô thị</td></tr><tr><th>Giảng viên</th><td>472</td></tr><tr><th>Khẩu hiệu</th><td><i>Khai phóng – Dụng hành – Phụng sự</i></td></tr><tr><th>Website</th><td><a href="http://www.ntu.edu.vn/">ntu.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -232,6 +247,9 @@
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/quach-hoai-nam">Quách Hoài Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1959-08-01 <span class="lang">xsd:date</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa">Khánh Hòa</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo">Trung Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
@@ -240,6 +258,9 @@
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>02 Nguyễn Đình Chiểu, phường Bắc Nha Trang</div>
+</td></tr>
+<tr><td class="p">khuôn viên<small>vnedu:campus</small></td><td>
+<div>Đô thị</div>
 </td></tr>
 <tr><td class="p">tên cũ<small>vnedu:formerName</small></td><td>
 <div>Trường Đại học Thủy sản <span class="lang">@vi</span></div>
@@ -291,11 +312,11 @@
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ha-thanh-dong">Ha Thanh Dong</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-minh-le">Hoang Minh Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hong-ngoc-thuy-pham">Hong Ngoc Thuy Pham</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-quoc-pham">Hung Quoc Pham</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-thai">Minh Thai</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-dinh-cuong">Nguyen Dinh Cuong</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-phu-quoc">Phạm Phú Quốc</a></div>
 </td></tr>
-<tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/quach-hoai-nam">Quách Hoài Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

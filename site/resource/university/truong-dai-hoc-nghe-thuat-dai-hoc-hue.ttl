@@ -27,7 +27,9 @@ university:truong-dai-hoc-nghe-thuat-dai-hoc-hue a dbo:University,
         schema:Organization ;
     rdfs:label "Hue University of the Arts"@en,
         "Trường Đại học Nghệ thuật, Đại học Huế"@vi ;
+    dbo:abstract "Trường Đại học Nghệ thuật, Đại học Huế (tiếng Anh: Hue University - University of the Arts) là một trong những trường đại học định hướng nghiên cứu về đào tạo khối ngành Mỹ thuật tại Miền trung và Tây Nguyên Việt Nam. Đồng thời, Trường Đại học Nghệ thuật Huế là một trong 3 trung tâm đào tạo Mỹ thuật lớn của cả nước."@vi ;
     owl:sameAs wd:Q109430486 ;
+    skos:altLabel "Hue University - University of the Arts" ;
     skos:notation "DHN" ;
     skos:prefLabel "Trường Đại học Nghệ thuật, Đại học Huế"@vi ;
     prov:wasDerivedFrom wd:Q109430486,
@@ -39,6 +41,11 @@ university:truong-dai-hoc-nghe-thuat-dai-hoc-hue a dbo:University,
         "Trường Quốc gia Cao đẳng Mỹ thuật Huế"@vi ;
     vnedu:foundingYear "1957"^^xsd:gYear ;
     vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
+    vnedu:history """Trường Đại học Nghệ thuật – Đại học Huế ngày nay tiền thân là Trường Quốc gia Cao đẳng Mỹ thuật Huế (Tiếng Pháp: Ecole des beaux arts de Hue, tiếng Anh: Institude of Fine Arts of Hue), thành lập năm 1957, Trường được thành lập cùng năm với Viện Đại học Huế, một trong những cái nôi của nghệ thuật Việt Nam sản sinh ra lớp những họa sĩ tài danh như Đinh Cường, Tôn Thất Văn, Phạm Đăng Trí, Tôn Thất Đào, Dương Đình San... và đương đại là những họa sĩ đã và đang khẳng định tên tuổi của mình như cố họa sĩ Võ Xuân Huy, họa sĩ Phan Hải Bằng, anh em song sinh Lê Thanh Hải
+
+Thời kỳ 1957-1975: Là thời kỳ của 18 năm khởi đầu xây dựng với sự thành lập Trường Quốc gia Cao đẳng Mỹ thuật Huế, thời kỳ đầu Trường trực thuộc Viện Đại học Huế (1957). Thời gian này Trường tọa lạc tại số 27 đường Phan Đình Phùng, đã đào tạo đến Khoá 3. Năm 1960 Viện Đại học Huế bàn giao trường cho Nha Mỹ thuật học vụ thuộc Bộ Văn hóa Giáo dục và Thanh niên miền Nam, thuộc Phủ Quốc Vụ Khanh đặc trách Văn hóa. Giai đoạn (1960 - 1974), Trường trực thuộc Trung ương chủ quản và chuyển đến lầu Diên Binh Vệ - Phủ Nội Vụ (Hoàng thành Huế), nằm bên phải cửa Hiển Nhơn trong khuôn viên Đại nội Huế.
+
+Thời kỳ 1975 đến nay: Nhà trường trải qua nhiều giai đoạn phát triển với nhiều tên gọi khác nhau: Trường Quốc gia Cao đẳng Mỹ thuật Huế (1975 - 1985), Năm 1986 sáp nhập với trường Trung học Âm nhạc Huế thành trường Cao đẳng Nghệ thuật Huế (1985 - 1994). Năm 1994, trường chuyển từ Bộ Văn Hóa – Thông tin sang Bộ Giáo dục – Đào tạo và trờ thành trường Đại học Nghệ thuật – một thành viên của Đại học Huế. Tháng 11/2007, ngành âm nhạc được tách ra để thành lập Học viện Âm nhạc Huế và Trường Đại học Nghệ thuật Huế (1994 - đến nay)."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:hue,
         region:trung-bo ;
@@ -48,5 +55,12 @@ university:truong-dai-hoc-nghe-thuat-dai-hoc-hue a dbo:University,
     schema:location country:viet-nam,
         province:hue,
         region:trung-bo ;
-    schema:parentOrganization university:dai-hoc-hue .
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/1/18/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngh%E1%BB%87_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg> ;
+    schema:parentOrganization university:dai-hoc-hue ;
+    schema:telephone "+84)0234 3522 315" .
+
+<https://upload.wikimedia.org/wikipedia/vi/1/18/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngh%E1%BB%87_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngh%E1%BB%87_thu%E1%BA%ADt,_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/1/18/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngh%E1%BB%87_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngh%E1%BB%87_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg.png> .
 

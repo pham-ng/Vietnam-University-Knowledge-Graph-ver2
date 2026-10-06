@@ -19,15 +19,19 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-quan-chinh",
   "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
     "vnedu:Academy",
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:HigherEducationInstitution",
     "schema:Organization",
     "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
+    "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Học viện Quân chính là một trường đào tạo sĩ quan quân đội trung cao cấp tại Việt Nam hoạt động từ ngày 3 tháng 3 năm 1961 đến ngày 21 tháng 5 năm 1965. Lúc đó, Học viện Quân chính được thành lập trên cơ sở sáp nhập Trường Bổ túc Quân sự trung cao cấp và Trường Chính trị trung cao cấp. Năm 1965 Học viện Quân chính lại tách thành Học viện Quân sự (nay là Học viện Lục quân Đà Lạt, Lâm Đồng) và Học viện Chính trị (nay là Học viện Chính trị Quân sự, trụ sở tại quận Hà Đông, Hà Nội)."
+  },
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Qu%C3%A2n_ch%C3%ADnh"
   },
@@ -36,10 +40,10 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10771898"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=73438298"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=73438298"
+      "@id": "wd:Q10771898"
     }
   ],
   "rdfs:label": {
@@ -51,10 +55,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     }
   ],
   "skos:prefLabel": {
@@ -67,13 +71,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ]
 }

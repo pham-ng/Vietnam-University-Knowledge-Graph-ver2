@@ -19,19 +19,19 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tu-phap",
   "@type": [
-    "schema:GovernmentOrganization",
     "vnedu:Ministry",
     "foaf:Organization",
-    "vnedu:GoverningBody",
+    "schema:Organization",
+    "schema:GovernmentOrganization",
     "vnedu:Organization",
-    "schema:Organization"
+    "vnedu:GoverningBody"
   ],
   "owl:sameAs": [
     {
-      "@id": "wd:Q10743682"
+      "@id": "dbr:Ministry_of_Justice_(Vietnam)"
     },
     {
-      "@id": "dbr:Ministry_of_Justice_(Vietnam)"
+      "@id": "wd:Q10743682"
     }
   ],
   "rdfs:label": {

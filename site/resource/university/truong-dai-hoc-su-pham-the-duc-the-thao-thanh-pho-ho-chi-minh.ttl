@@ -25,6 +25,7 @@ university:truong-dai-hoc-su-pham-the-duc-the-thao-thanh-pho-ho-chi-minh a dbo:U
         schema:EducationalOrganization,
         schema:Organization ;
     rdfs:label "Trường Đại học Sư phạm Thể dục Thể thao Thành phố Hồ Chí Minh"@vi ;
+    dbo:abstract "Trường Đại học Sư phạm Thể dục Thể thao Thành phố Hồ Chí Minh là trường đại học nằm tại Thành phố Hồ Chí Minh, được thành lập từ những năm 1976. Hiện nay trường đào tạo giáo viên thể dục cho miền nam Việt Nam"@vi ;
     owl:sameAs wd:Q10829135 ;
     skos:prefLabel "Trường Đại học Sư phạm Thể dục Thể thao Thành phố Hồ Chí Minh"@vi ;
     prov:wasDerivedFrom wd:Q10829135,
@@ -32,16 +33,32 @@ university:truong-dai-hoc-su-pham-the-duc-the-thao-thanh-pho-ho-chi-minh a dbo:U
     foaf:homepage <http://www.upes.edu.vn> ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%E1%BB%83_d%E1%BB%A5c_Th%E1%BB%83_thao_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> ;
     vnedu:address "639 Nguyễn Trãi, Phường Chợ Lớn, Thành phố Hồ Chí Minh, Việt Nam" ;
+    vnedu:councilChair person:nguyen-ke-binh ;
     vnedu:foundingYear "1976"^^xsd:gYear ;
-    vnedu:hasLeader person:chau-vinh-huy ;
+    vnedu:hasLeader person:chau-vinh-huy,
+        person:nguyen-ke-binh ;
+    vnedu:history """Trường Đại học Sư phạm Thể dục Thể thao TP. Hồ Chí Minh, trước đây là trường Sư phạm Thể dục Miền Nam trực thuộc Bộ Giáo dục, được thành lập theo quyết định số 17/QĐ/GD ngày 24/3/1976, sau đó đổi tên thành trường Sư phạm Thể dục TW2.
+
+Trường được công nhận là trường Cao đẳng Sư phạm Thể dục TW2 theo quyết định số 34/HĐBT ngày 08/6/1984.
+
+Đến ngày 08/11/2005 Trường được Thủ tướng Chính phủ ra quyết định số 285/2005/QĐ-TTg Thành lập Trường Đại học Sư phạm Thể dục Thể thao Thành phố Hồ Chí Minh trên cơ sở Trường Cao đẳng Sư phạm Thể dục TW2"""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:chau-vinh-huy ;
     vnedu:website <http://www.upes.edu.vn> ;
-    schema:employee person:chau-vinh-huy ;
+    schema:employee person:chau-vinh-huy,
+        person:nguyen-ke-binh ;
+    schema:foundingDate "1976-03-24"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/vi/f/f1/TDTT.gif> ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:telephone "+84-(0)8-38.555.432" .
+
+<https://upload.wikimedia.org/wikipedia/vi/f/f1/TDTT.gif> a schema:ImageObject ;
+    schema:license "KTD" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:TDTT.gif> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/vi/f/f1/TDTT.gif> .
 

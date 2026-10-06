@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quang-nam",
   "@type": [
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
     "schema:Organization",
-    "foaf:Organization",
+    "vnedu:Organization",
     "vnedu:UniversitySchool",
+    "vnedu:EducationalOrganization",
+    "schema:EducationalOrganization",
+    "schema:CollegeOrUniversity",
     "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
     "dbo:University",
-    "vnedu:EducationalOrganization"
+    "foaf:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Quảng Nam là một trường đại học công lập đa ngành tại Quảng Nam. Trường được nâng cấp thành trường đại học theo quyết định số 722/QĐ – TTg của Thủ tướng Chính phủ từ trường Trung học Sư phạm Quảng Nam lên thành Trường Cao đẳng Sư phạm Quảng Nam."
+  },
   "foaf:homepage": {
     "@id": "http://qnamuni.edu.vn/"
   },
@@ -65,23 +69,25 @@
       "@value": "Quang Nam University"
     }
   ],
+  "schema:email": "hopthu@qnamuni.edu.vn",
   "schema:employee": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-trong-duong"
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-nam"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
     }
   ],
+  "schema:telephone": "0510)3812834",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Quảng Nam"
@@ -94,18 +100,22 @@
   "vnedu:hasLeader": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-trong-duong"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Trường Đại học Quảng Nam là một trường đại học đa ngành tại Quảng Nam có tiền thân là Trường Trung học Sư phạm Quảng Nam được thành lập vào năm 1997 theo quyết định số 1686/QĐ-UBND ngày 3/9/1997 của Chủ tịch Ủy ban nhân dân tỉnh Quảng Nam. Năm 2000, Bộ trưởng Bộ Giáo dục và Đào tạo ký quyết định số 4845/QĐ-BGD&ĐT-TCCB ngày 14/11/2000 nâng cấp từ trường Trung học Sư phạm Quảng Nam lên thành Trường Cao đẳng Sư phạm Quảng Nam. Đến năm 2007, Trường Đại học Quảng Nam được hình thành trên cơ sở nâng cấp từ Trường Cao đẳng Sư phạm Quảng Nam theo Quyết định số 722/QĐ – TTg của Thủ tướng Chính phủ."
+  },
   "vnedu:locatedIn": [
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:ownership": {

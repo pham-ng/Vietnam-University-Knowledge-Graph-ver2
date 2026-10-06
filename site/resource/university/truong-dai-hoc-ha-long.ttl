@@ -26,6 +26,7 @@ university:truong-dai-hoc-ha-long a dbo:University,
         schema:Organization ;
     rdfs:label "Ha Long University"@en,
         "Trường Đại học Hạ Long"@vi ;
+    dbo:abstract "Trường Đại học Hạ Long (Ha Long University) là trường công lập, trực thuộc Ủy ban Nhân dân tỉnh Quảng Ninh. Trường Đại học Hạ Long đào tạo đa ngành, đa lĩnh vực, cung cấp nguồn nhân lực trình độ cao về khoa học, công nghệ, kinh tế, giáo dục và xã hội nhân văn; là trung tâm nghiên cứu khoa học, chuyển giao công nghệ phục vụ sự phát triển kinh tế – xã hội của tỉnh Quảng Ninh và khu vực đồng bằng Bắc Bộ."@vi ;
     owl:sameAs wd:Q65165392 ;
     skos:prefLabel "Trường Đại học Hạ Long"@vi ;
     prov:wasDerivedFrom wd:Q65165392,
@@ -33,8 +34,15 @@ university:truong-dai-hoc-ha-long a dbo:University,
     foaf:homepage <http://www.uhl.edu.vn> ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_H%E1%BA%A1_Long> ;
     vnedu:address "258, Bạch Đằng, Uông Bí" ;
+    vnedu:councilChair person:dang-hoang-thong ;
     vnedu:foundingYear "2014"^^xsd:gYear ;
-    vnedu:hasLeader person:nguyen-duc-tiep ;
+    vnedu:hasLeader person:dang-hoang-thong,
+        person:nguyen-duc-tiep ;
+    vnedu:history """Trường được thành lập theo Quyết định số 1869/QĐ-TTg ngày 13/10/2014 của Thủ tướng Chính phủ về việc thành lập Trường ĐH Hạ Long trên cơ sở 2 trường Cao đẳng Sư phạm Quảng Ninh và Cao đẳng Văn hóa, Nghệ thuật và Du lịch Hạ Long. Trường Đại học Hạ Long có hai cơ sở:
+
+Cơ sở 1: số 258, Phường Nam Khê, Thành phố Uông Bí, Tỉnh Quảng Ninh (tại vị trí của Trường Cao đẳng Sư phạm Quảng Ninh cũ).
+
+Cơ sở 2: số 58, Phường Hồng Hải, Thành phố Hạ Long, Tỉnh Quảng Ninh (tại vị trí của Trường Cao đẳng Văn hóa, Nghệ thuật và Du lịch Hạ Long cũ)."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:quang-ninh,
         region:bac-bo ;
@@ -43,8 +51,12 @@ university:truong-dai-hoc-ha-long a dbo:University,
     vnedu:rector person:nguyen-duc-tiep ;
     vnedu:shortName "UHL" ;
     vnedu:website <http://www.uhl.edu.vn> ;
-    schema:employee person:nguyen-duc-tiep ;
+    schema:email "tonghop@daihochalong.edu.vn" ;
+    schema:employee person:dang-hoang-thong,
+        person:nguyen-duc-tiep ;
+    schema:foundingDate "2014-10-13"^^xsd:date ;
     schema:location country:viet-nam,
         province:quang-ninh,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:telephone "0203.3850304" .
 

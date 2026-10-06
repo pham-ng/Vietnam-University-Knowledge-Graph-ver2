@@ -28,11 +28,13 @@ university:truong-dai-hoc-ha-noi a dbo:University,
         schema:Organization ;
     rdfs:label "Hanoi University"@en,
         "Trường Đại học Hà Nội"@vi ;
+    dbo:abstract "Trường Đại học Hà Nội (tiếng Anh: Hanoi University, tên viết tắt: HANU) là một cơ sở đào tạo và nghiên cứu ngoại ngữ ở trình độ đại học và sau đại học."@vi ;
     owl:sameAs dbr:Hanoi_University,
         wd:Q10829049,
         <https://ror.org/01mxx0e62> ;
     geo:lat 20.9897 ;
     geo:long 105.7952 ;
+    skos:altLabel "Trường Đại học Ngoại ngữ Thanh Xuân" ;
     skos:notation "NHF" ;
     skos:prefLabel "Trường Đại học Hà Nội"@vi ;
     prov:wasDerivedFrom wd:Q10829049,
@@ -42,6 +44,7 @@ university:truong-dai-hoc-ha-noi a dbo:University,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0_N%E1%BB%99i> ;
     vnedu:address "Km 9, đường Nguyễn Trãi, phường Đại Mỗ" ;
     vnedu:admissionCode "NHF" ;
+    vnedu:councilChair person:pham-ngoc-thach-2 ;
     vnedu:formerName "Trường Đại học Ngoại ngữ Hà Nội"@vi ;
     vnedu:foundingYear "1959"^^xsd:gYear ;
     vnedu:hasAlumnus person:dang-ngoc-chan,
@@ -61,7 +64,27 @@ university:truong-dai-hoc-ha-noi a dbo:University,
         person:tran-t-ha,
         person:van-nguyen,
         person:van-trung-chu ;
-    vnedu:hasLeader person:nguyen-van-trao ;
+    vnedu:hasLeader person:nguyen-van-trao,
+        person:pham-ngoc-thach-2 ;
+    vnedu:history """Trường được thành lập ngày 16/7/1959 theo quyết định số 376/NĐ-BGD với tên gọi Trường Ngoại ngữ. Trải qua hơn 60 năm hình thành và phát triển, Nhà trường đã có một số lần được đổi tên theo từng thời kỳ như: Trường Ngoại ngữ (1959-1960), Trường Bổ túc Ngoại ngữ (1960-1967), Trường Đại học Ngoại ngữ (1967-1978), Trường Cao đẳng Bổ túc Ngoại ngữ (1978-1984), Trường Đại học Ngoại ngữ (1984-2006) và từ ngày 15 tháng 9 năm 2006, theo quyết định số 190/2006/QĐ-TTg của Thủ tướng chính phủ, trường chính thức mang tên mới là Trường Đại học Hà Nội (tên giao dịch tiếng Anh là Hanoi University - HANU).
+
+Trường Đại học Hà Nội đã trải qua 04 giai đoạn chính:
+
+Ngày 01/11/1959, tại cơ sở của Tổng cục Hậu cần Bộ Quốc phòng dựng tạm bằng tre nứa ở xã Ngọc Thụy - huyện Gia Lâm - Hà Nội, khoá chuyên tu tiếng Nga và tiếng Trung Quốc đầu tiên được khai giảng, Trường Ngoại ngữ (ngày nay là Trường Đại học Hà Nội) được thành lập.
+
+Trong khoảng thời gian 07 năm đầu thành lập (1959-1966), Trường đã đổi tên 2 lần, từ Trường Ngoại ngữ thành Trường Bổ túc Ngoại ngữ (cho cán bộ viên chức Nhà nước). Đây là giai đoạn có biến động mạnh về số lượng cán bộ, giảng viên cũng như đối tượng và số lượng sinh viên cần đào tạo và bồi dưỡng.
+
+Các mốc lịch sử của Nhà trường giai đoạn này:
+
+- Năm 1967, Từ Trường Bổ túc ngoại ngữ, Nhà trường được Thủ tướng Chính phủ Phạm Văn Đồng ký Quyết định số 126/CP thành lập Trường Đại học Ngoại ngữ. Từ thời điểm này, Nhà trường chính thức trở thành cơ sở giáo dục bậc đại học;
+
+- Năm 1977, trước những khó khăn của đất nước trong hoàn cảnh bắt đầu công cuộc tái thiết sau chiến tranh và tình hình đào tạo của Nhà trường, Bộ Đại học và Trung học chuyên nghiệp đã quyết định chuyển nhiệm vụ đào tạo cán bộ chuyên ngành ngoại ngữ (phiên dịch và giáo viên) mà Nhà trường đang thực hiện sang một cơ sở giáo dục đại học khác và đổi tên Trường Đại học Ngoại ngữ thành Trường Cao đẳng Bổ túc ngoại ngữ;
+
+- Năm 1984, đánh dấu 25 năm xây dựng và phát triển, Nhà trường được Nhà nước tặng thưởng Huân chương Lao động hạng Ba lần thứ hai và đổi tên Trường Cao đẳng Bổ túc Ngoại ngữ thành Trường Đại học Ngoại ngữ;
+
+- Năm 1989 và năm 1994, Nhà trường được Nhà nước tặng thưởng Huân chương Lao động Hạng Nhất nhân dịp kỷ niệm 30 năm thành lập Trường (1959-1989) và 35 năm thành lập Trường (1959 – 1994).
+
+Năm 2006, Thủ tướng Chính phủ đã phê duyệt Quyết định số 190/2006/QĐ-TTg ngày 17/8/2006 việc đổi tên Trường Đại học Ngoại ngữ thành Trường Đại học Hà Nội."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -69,8 +92,17 @@ university:truong-dai-hoc-ha-noi a dbo:University,
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:nguyen-van-trao ;
     vnedu:website <http://www.hanu.vn/> ;
-    schema:employee person:nguyen-van-trao ;
+    schema:employee person:nguyen-van-trao,
+        person:pham-ngoc-thach-2 ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/c/c2/Hanu_logo.jpg> ;
+    schema:telephone "84-4)38544338" .
+
+<https://upload.wikimedia.org/wikipedia/commons/c/c2/Hanu_logo.jpg> a schema:ImageObject ;
+    schema:creditText "HITC2289" ;
+    schema:license "CC BY-SA 3.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Hanu_logo.jpg> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/commons/c/c2/Hanu_logo.jpg> .
 

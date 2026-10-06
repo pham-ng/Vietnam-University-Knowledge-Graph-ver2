@@ -19,25 +19,25 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-phong-chay-chua-chay",
   "@type": [
-    "foaf:Organization",
+    "schema:Organization",
+    "vnedu:Organization",
     "vnedu:UniversitySchool",
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
     "vnedu:HigherEducationInstitution",
     "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization"
+    "foaf:Organization"
   ],
   "foaf:homepage": {
     "@id": "https://daihocpccc.edu.vn/"
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/01s8j9e47"
+      "@id": "wd:Q20026261"
     },
     {
-      "@id": "wd:Q20026261"
+      "@id": "https://ror.org/01s8j9e47"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -45,12 +45,12 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "University of Fire Fighting and Prevention"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Phòng cháy chữa cháy"
+    },
+    {
+      "@language": "en",
+      "@value": "University of Fire Fighting and Prevention"
     }
   ],
   "schema:location": [
@@ -73,10 +73,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "vnedu:website": {

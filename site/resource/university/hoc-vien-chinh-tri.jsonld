@@ -17,97 +17,127 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri",
-  "@type": [
-    "vnedu:Academy",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:MilitaryInstitution",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Ch%C3%ADnh_tr%E1%BB%8B_%28Qu%C3%A2n_%C4%91%E1%BB%99i_nh%C3%A2n_d%C3%A2n_Vi%E1%BB%87t_Nam%29"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.028307"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.856292"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q16480519"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "wd:Q16480519"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri",
+      "@type": [
+        "vnedu:PublicInstitution",
+        "vnedu:HigherEducationInstitution",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:MilitaryInstitution",
+        "vnedu:Academy",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Chính trị trực thuộc Bộ Quốc phòng Việt Nam là một học viện quân sự cấp trung, là trung tâm đào tạo cán bộ chính trị cấp trung, sư đoàn, cán bộ cấp chiến thuật, chiến dịch. Ngoài ra, Học viện còn đảm nhiệm bồi dưỡng kiến thức quốc phòng và an ninh cho cán bộ cấp cục, vụ, viện của Bộ, ban, ngành Trung ương (lớp đối tượng 2). Trụ sở chính đặt tại số 124 phố Ngô Quyền, phường Hà Đông, thành phố Hà Nội."
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Ch%C3%ADnh_tr%E1%BB%8B_%28Qu%C3%A2n_%C4%91%E1%BB%99i_nh%C3%A2n_d%C3%A2n_Vi%E1%BB%87t_Nam%29"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.028307"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.856292"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q16480519"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75498298"
+        },
+        {
+          "@id": "wd:Q16480519"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "vi",
+        "@value": "Học viện Chính trị"
+      },
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-sy-loc"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1951-10-25"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/b/bd/Phu_hieu_Hoc_vien_chinh_tri.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Chính trị"
+      },
+      "vnedu:address": "124 phố Ngô Quyền, phường Hà Đông, thành phố Hà Nội",
+      "vnedu:director": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-sy-loc"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1951"
+      },
+      "vnedu:governedBy": [
+        {
+          "@id": "vnedu:MinistryOfNationalDefence"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/quan-doi-nhan-dan-viet-nam"
+        }
+      ],
+      "vnedu:hasAlumnus": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-xuan-truong"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-sy-loc"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Tháng 7 năm 1951, Tổng quân uỷ đã ra Quyết định thành lập Trường Chính trị Trung cấp của Quân đội nhân dân Việt Nam. Ngày 28 tháng 8 năm 1951, khoá học đầu tiên (khoá I) của Nhà trường chính thức khai mạc tại bản Nà Lang, xã Phượng Tiến, huyện Định Hoá, tỉnh Thái Nguyên. Từ ngày thành lập đến năm 1954, nhà trường được Chủ tịch Hồ Chí Minh về thăm và huấn thị 3 lần (25/10/1951; 3/1952 và 5/1953). Để ghi nhớ công ơn của Chủ tịch Hồ Chí Minh và sự kiện lần đầu ông về thăm Học viện, thể theo nguyện vọng của các thế hệ cán bộ, giảng viên, học viên, nhân viên, chiến sĩ, Quân uỷ Trung ương, Bộ trưởng Bộ Quốc phòng quyết định lấy ngày 25 tháng 10 năm 1951 là ngày truyền thống Học viện Chính trị. Học viện Chính trị đã từng đóng quân tại các địa điểm: Xã Phượng Tiến, huyện Định Hoá , tỉnh Thái Nguyên (7/1951 - 6/1956) Khu Ba Đình, Hà Nội (6/1956 - 2/1965) Xã Ngọc Tảo, huyện Thạch Thất, tỉnh Hà Tây (2/1965 - 3/1965) Thị xã Lạng Sơn, tỉnh Lạng Sơn (4/1965-8/1965) Huyện Phú Bình, huyện Tân Yên, tỉnh Bắc Giang; huyện Phổ Yên, tỉnh Thái Nguyên (8/1965 - 4/1966) Huyện Yên Lạc, tỉnh Vĩnh Phúc (4/1966 - 1968) Huyện Đông Anh, Hà Nội; huyện Yên Lãng, tỉnh Vĩnh Phúc; huyện Phổ Yên, tỉnh Thái Nguyên (1969 - 1976) Thị xã Hà Đông, tỉnh Hà Tây (1977 - 1995) Thị xã Hà Đông, tỉnh Hà Tây và thị xã Bắc Ninh, tỉnh Bắc Ninh (1996 - 2008) Quận Hà Đông, Hà Nội (11/2008 - nay)\n\nTên gọi của Học viện Chính trị qua các thời kỳ: Trường Chính trị Trung cấp (7/1951 - 5/1956) Trường Lý luận chính trị (6/1956 - 2/1958) Trường Chính trị trung cao cấp (3/1958 - 2/1961) Hệ Chính trị, Học viện Quân chính (3/1961 - 4/1965) Học viện Chính trị (5/1965 - 1/1982) Học viện Chính trị Quân sự (2/1982 - 10/2008) Học viện Chính trị (từ tháng 11/2008 - nay)"
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75498298"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/b/bd/Phu_hieu_Hoc_vien_chinh_tri.jpg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Phu_hieu_Hoc_vien_chinh_tri.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/b/bd/Phu_hieu_Hoc_vien_chinh_tri.jpg"
+      }
     }
-  ],
-  "rdfs:label": {
-    "@language": "vi",
-    "@value": "Học viện Chính trị"
-  },
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-sy-loc"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Chính trị"
-  },
-  "vnedu:address": "124 phố Ngô Quyền, phường Hà Đông, thành phố Hà Nội",
-  "vnedu:director": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-sy-loc"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1951"
-  },
-  "vnedu:governedBy": [
-    {
-      "@id": "vnedu:MinistryOfNationalDefence"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/quan-doi-nhan-dan-viet-nam"
-    }
-  ],
-  "vnedu:hasAlumnus": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-xuan-truong"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-sy-loc"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  }
+  ]
 }

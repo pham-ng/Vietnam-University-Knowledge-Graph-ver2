@@ -30,92 +30,120 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-ky-thuat-nam-dinh",
-  "@type": [
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.nute.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q10829129"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75373300"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-ky-thuat-nam-dinh",
+      "@type": [
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "vnedu:EducationalOrganization",
+        "schema:EducationalOrganization",
+        "schema:CollegeOrUniversity"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Sư phạm Kỹ thuật Nam Định là một trong sáu Đại học Sư phạm Kỹ thuật của cả nước - đào tạo kỹ thuật lấy ứng dụng làm trọng tâm để giảng dạy, có chức năng đào tạo kỹ sư công nghệ và giáo viên kỹ thuật. Được đánh giá là một trong những trường đại học kỹ thuật đầu ngành tại Vùng Đồng bằng sông Hồng Việt Nam. Trường đồng thời là trung tâm nghiên cứu khoa học kỹ thuật và chuyển giao công nghệ lớn của miền Bắc Việt Nam. Tiền thân của trường là Trường Cao đẳng Sư phạm kỹ thuật Nam Định."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.nute.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q10829129"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829129"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75373300"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Sư phạm Kỹ thuật Nam Định"
+        },
+        {
+          "@language": "en",
+          "@value": "Nam Dinh University of"
+        }
+      ],
+      "schema:email": "bants.skn@moet.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huy-bang"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ninh-binh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/8/82/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh.png"
+      },
+      "schema:telephone": "0228) 3 630.858",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Sư phạm Kỹ thuật Nam Định"
+      },
+      "vnedu:address": "Số 172, Đường Phù Nghĩa, Phường Thiên Trường, Tỉnh Ninh Bình",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1966"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huy-bang"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Sư phạm Kỹ thuật Nam Định tiền thân là Trường Trung học Công nghiệp Nam Hà được thành lập theo quyết định số 1263 BCNN/KB-1 ngày 21 tháng 12 năm 1966 của Bộ Công nghiệp nặng, có nhiệm vụ đào tạo cán bộ trung cấp kỹ thuât. Năm 1971 Trường thuộc Tổng cục Đào tạo công nhân kỹ thuật theo quyết định số 171/TTg ngày 16 tháng 6 năm 1971 của Thủ tướng Chính phủ, làm nhiệm vụ đào tạo giáo viên dạy nghề. Năm 1978 Trường thuộc Bộ Giáo dục và Đào tạo, tiếp tục làm nhiệm vụ đào tạo, bồi dưỡng giáo viên dạy nghề. Từ ngày 1 tháng 7 năm 1998 Trường thuộc Bộ Lao động-Thương binh và Xã hội, tiếp tục làm nhiệm vụ đào tạo, bồi dưỡng giáo viên dạy nghề. Từ năm 1992 theo quyết định số 1395/TH-DN ngày 13/7/1992 của Bộ trưởng Bộ Giáo dục và Đào tạo, Trường được phép đào tạo thí điểm GVDN trình độ cao đẳng. Từ tháng 5/1999 Trường Cao đẳng Sư phạm Kỹ thuật Nam Định được thành lập trên cơ sở Trường Sư phạm Kỹ thuật 2 Nam Định theo quyết định số 130/1999/QĐ-TTg ngày 28/05/1999 của Thủ tướng Chính phủ, chính thức nhận nhiệm vụ đào tạo GVDN trình độ cao đẳng. Ngày 05 tháng 01 năm 2006 Trường Đại học Sư phạm Kỹ thuật Nam Định được thành lập theo quyết định số 05/2006/QĐ-TTg ngày 5 tháng 1 năm 2006 của Thủ tướng Chính phủ trên cơ sở nâng cấp Trường Cao đẳng Sư phạm Kỹ thuật Nam Định. Trường hiện là đơn vị trực thuộc Bộ Giáo dục và Đào tạo; chịu sự quản lý về hành chính theo lãnh thổ của UBND tỉnh Ninh Bình. Trải qua 60 năm xây dựng và phát triển, trường đã đào tạo và bồi dưỡng hàng vạn cán bộ kỹ thuật, giáo viên dạy nghề, công nhân kỹ thuật phục vụ có hiệu quả cho ngành dạy nghề và các ngành kinh tế quốc dân khác trong phạm vi cả nước. Trường đã khắc phục khó khăn lỗ lực phấn đấu vươn lên, hoàn thành xuất sắc nhiệm vụ được giao, đã được Nhà nước ghi nhận bằng những phần thưởng cao quý:\n\n~ Huân chương Độc lập hạng Ba (năm 2011) ~Huân chương Lao động hạng Ba (năm 1986) ~Huân chương Lao động hạng Nhì (năm 1996) ~Huân chương Lao động hạng Nhất (năm 2000) ~Huân chương Lao động hạng Ba tặng cho ĐTNCSHCM (năm 2001)"
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ninh-binh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huy-bang"
+      },
+      "vnedu:website": {
+        "@id": "http://www.nute.edu.vn"
+      }
     },
     {
-      "@id": "wd:Q10829129"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/8/82/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh.png",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/8/82/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh.png/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh.png"
+      }
     }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Nam Dinh University of"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Sư phạm Kỹ thuật Nam Định"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huy-bang"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ninh-binh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Sư phạm Kỹ thuật Nam Định"
-  },
-  "vnedu:address": "Số 172, Đường Phù Nghĩa, Phường Thiên Trường, Tỉnh Ninh Bình",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1966"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huy-bang"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ninh-binh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huy-bang"
-  },
-  "vnedu:website": {
-    "@id": "http://www.nute.edu.vn"
-  }
+  ]
 }</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -134,6 +162,8 @@
   <a href="truong-dai-hoc-su-pham-ky-thuat-nam-dinh.ttl">Turtle</a> · <a href="truong-dai-hoc-su-pham-ky-thuat-nam-dinh.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-ky-thuat-nam-dinh">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 17 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Sư phạm Kỹ thuật Nam Định là một trong sáu Đại học Sư phạm Kỹ thuật của cả nước - đào tạo kỹ thuật lấy ứng dụng làm trọng tâm để giảng dạy, có chức năng đào tạo kỹ sư công nghệ và giáo viên kỹ thuật. Được đánh giá là một trong những trường đại học kỹ thuật đầu ngành tại Vùng Đồng bằng sông Hồng Việt Nam. Trường đồng thời là trung tâm nghiên cứu khoa học kỹ thuật và chuyển giao công nghệ lớn của miền Bắc Việt Nam. Tiền thân của trường là Trường Cao đẳng Sư phạm kỹ thuật Nam Định.</p><h2>Lịch sử</h2><p>Trường Đại học Sư phạm Kỹ thuật Nam Định tiền thân là Trường Trung học Công nghiệp Nam Hà được thành lập theo quyết định số 1263 BCNN/KB-1 ngày 21 tháng 12 năm 1966 của Bộ Công nghiệp nặng, có nhiệm vụ đào tạo cán bộ trung cấp kỹ thuât. Năm 1971 Trường thuộc Tổng cục Đào tạo công nhân kỹ thuật theo quyết định số 171/TTg ngày 16 tháng 6 năm 1971 của Thủ tướng Chính phủ, làm nhiệm vụ đào tạo giáo viên dạy nghề. Năm 1978 Trường thuộc Bộ Giáo dục và Đào tạo, tiếp tục làm nhiệm vụ đào tạo, bồi dưỡng giáo viên dạy nghề. Từ ngày 1 tháng 7 năm 1998 Trường thuộc Bộ Lao động-Thương binh và Xã hội, tiếp tục làm nhiệm vụ đào tạo, bồi dưỡng giáo viên dạy nghề. Từ năm 1992 theo quyết định số 1395/TH-DN ngày 13/7/1992 của Bộ trưởng Bộ Giáo dục và Đào tạo, Trường được phép đào tạo thí điểm GVDN trình độ cao đẳng. Từ tháng 5/1999 Trường Cao đẳng Sư phạm Kỹ thuật Nam Định được thành lập trên cơ sở Trường Sư phạm Kỹ thuật 2 Nam Định theo quyết định số 130/1999/QĐ-TTg ngày 28/05/1999 của Thủ tướng Chính phủ, chính thức nhận nhiệm vụ đào tạo GVDN trình độ cao đẳng. Ngày 05 tháng 01 năm 2006 Trường Đại học Sư phạm Kỹ thuật Nam Định được thành lập theo quyết định số 05/2006/QĐ-TTg ngày 5 tháng 1 năm 2006 của Thủ tướng Chính phủ trên cơ sở nâng cấp Trường Cao đẳng Sư phạm Kỹ thuật Nam Định. Trường hiện là đơn vị trực thuộc Bộ Giáo dục và Đào tạo; chịu sự quản lý về hành chính theo lãnh thổ của UBND tỉnh Ninh Bình. Trải qua 60 năm xây dựng và phát triển, trường đã đào tạo và bồi dưỡng hàng vạn cán bộ kỹ thuật, giáo viên dạy nghề, công nhân kỹ thuật phục vụ có hiệu quả cho ngành dạy nghề và các ngành kinh tế quốc dân khác trong phạm vi cả nước. Trường đã khắc phục khó khăn lỗ lực phấn đấu vươn lên, hoàn thành xuất sắc nhiệm vụ được giao, đã được Nhà nước ghi nhận bằng những phần thưởng cao quý:</p><p>~ Huân chương Độc lập hạng Ba (năm 2011) ~Huân chương Lao động hạng Ba (năm 1986) ~Huân chương Lao động hạng Nhì (năm 1996) ~Huân chương Lao động hạng Nhất (năm 2000) ~Huân chương Lao động hạng Ba tặng cho ĐTNCSHCM (năm 2001)</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75373300">«Trường Đại học Sư phạm Kỹ thuật Nam Định»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75373300), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Sư phạm Kỹ thuật Nam Định</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/8/82/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh.png/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh.png" alt="Biểu trưng Trường Đại học Sư phạm Kỹ thuật Nam Định" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>Nam Dinh University of</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>1966</td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">GS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huy-bang">Nguyễn Huy Bằng</a></td></tr><tr><th>Địa chỉ</th><td>Số 172, Đường Phù Nghĩa, Phường Thiên Trường, Tỉnh Ninh Bình</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ninh-binh">Ninh Bình</a></td></tr><tr><th>Điện thoại</th><td>0228) 3 630.858</td></tr><tr><th>Email</th><td><a href="mailto:bants.skn@moet.edu.vn">bants.skn@moet.edu.vn</a></td></tr><tr><th>Website</th><td><a href="http://www.nute.edu.vn">nute.edu.vn</a></td></tr></table></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
 
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
@@ -155,11 +185,20 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q10829129">wd:Q10829129</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75373300">&lt;https://vi.wikipedia.org/w/index.php?oldid=75373300&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>bants.skn@moet.edu.vn</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huy-bang">Nguyễn Huy Bằng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ninh-binh">Ninh Bình</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/8/82/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh.png">&lt;https://upload.wikimedia.org/wikipedia/vi/8/82/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Nam_%C4%90%E1%BB%8Bnh.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>0228) 3 630.858</div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>Số 172, Đường Phù Nghĩa, Phường Thiên Trường, Tỉnh Ninh Bình</div>

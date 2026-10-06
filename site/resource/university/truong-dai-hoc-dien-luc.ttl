@@ -29,6 +29,7 @@ university:truong-dai-hoc-dien-luc a dbo:University,
         schema:Organization ;
     rdfs:label "Electric Power University"@en,
         "Trường Đại học Điện lực"@vi ;
+    dbo:abstract "Trường Đại học Điện lực (tiếng Anh: Electric Power University) trực thuộc Bộ Công thương Việt Nam, là trường đại học định hướng ứng dụng-thực hành, chuyên đào tạo cử nhân và kỹ sư hệ 4.5 năm, được thành lập ngày 19 tháng 5 năm 2006, trên cơ sở nâng cấp trường Cao đẳng Điện lực."@vi ;
     owl:sameAs dbr:Electric_Power_University,
         wd:Q5357466,
         <https://ror.org/01p4b7n26> ;
@@ -44,6 +45,13 @@ university:truong-dai-hoc-dien-luc a dbo:University,
     vnedu:foundingYear "1898"^^xsd:gYear ;
     vnedu:governedBy organization:bo-cong-thuong ;
     vnedu:hasLeader person:dinh-van-chau ;
+    vnedu:history """Tiền thân của Trường Đại Học Điện Lực là Trường Kỹ nghệ thực hành Hà Nội do người Pháp thành lập năm 1898. Sau năm 1954, Nhà nước Việt Nam đã tách Trường Kỹ nghệ thực hành thành trường Kỹ thuật I và trường Kỹ thuật II.
+
+Tháng 8/1962 Trường Kỹ thuật I được đổi tên thành Trường Trung cao Cơ Điện, ngày 8/2/1966 Trường Trung cao Cơ điện được tách ra thành Trường Trung hoc Điện (sau đó đổi tên là Trung học Điện I) và Trường Trung học Cơ khí (nay là trường Đại học Công nghiệp Hà Nội).l
+
+Tháng 4 năm 2000, thực hiện chủ trương sắp xếp lại mạng lưới các trường thuộc Tổng Công ty Điện lực Việt Nam (EVN), Bộ Công nghiệp quyết định hợp nhất Trường Bồi dưỡng tại chức với Trường Trung học Điện I và lấy tên là Trường Trung học Điện I trực thuộc Tập đoàn Điện lực Việt Nam.
+
+Ngày 26/10/2001 Bộ Giáo dục và Đào tạo quyết định nâng cấp Trường Trung học Điện I thành Trường Cao đẳng Điện lực. Ngày 19/5/2006 với quyết định số 111/2006/QĐ-TTg, Thủ tướng Chính phủ đã cho phép thành lập Trường Đại học Điện lực trên cơ sở trường Cao đẳng Điện lực. Trường Đại học Điện lực là cơ sở đào tạo đại học, trực thuộc Tổng công ty Điện lực Việt Nam, Bộ Công nghiệp, có tư cách pháp nhân, có con dấu, tài khoản riêng; trụ sở đặt tại thành phố Hà Nội."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -53,5 +61,13 @@ university:truong-dai-hoc-dien-luc a dbo:University,
     schema:employee person:dinh-van-chau ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/f/f5/EPUlogo.png> ;
+    schema:telephone "+84-(0)4 836 2672" .
+
+<https://upload.wikimedia.org/wikipedia/commons/f/f5/EPUlogo.png> a schema:ImageObject ;
+    schema:creditText "Trường đại học Điện lực" ;
+    schema:license "CC BY-SA 3.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:EPUlogo.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/EPUlogo.png/330px-EPUlogo.png> .
 

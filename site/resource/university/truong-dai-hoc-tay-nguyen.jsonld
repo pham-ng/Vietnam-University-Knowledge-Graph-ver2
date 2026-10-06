@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tay-nguyen",
   "@type": [
-    "schema:Organization",
     "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
     "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity"
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "schema:Organization",
+    "foaf:Organization",
+    "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Tây Nguyên (Tay Nguyen University) là một trong những trường đại học công lập đa ngành tại miền Trung Việt Nam. Trường được đề cử vào nhóm trường đại học trọng điểm quốc gia Việt Nam, đồng thời là trung tâm nghiên cứu khoa học lớn của vùng Tây Nguyên. Trường trực thuộc Bộ Giáo dục và Đào tạo."
+  },
   "foaf:homepage": {
     "@id": "https://www.ttn.edu.vn/"
   },
@@ -38,30 +42,31 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/01s7bde64"
+      "@id": "wd:Q16480583"
     },
     {
-      "@id": "wd:Q16480583"
+      "@id": "https://ror.org/01s7bde64"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q16480583"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75533243"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75533243"
+      "@id": "wd:Q16480583"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Tây Nguyên"
-    },
-    {
       "@language": "en",
       "@value": "Tay Nguyen University"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Tây Nguyên"
     }
   ],
+  "schema:email": "daihoctn@dng.vnn.vn",
   "schema:employee": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-truc"
   },
@@ -76,6 +81,7 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dak-lak"
     }
   ],
+  "schema:telephone": "+84-(0) 262 3825185",
   "skos:notation": "TTN",
   "skos:prefLabel": {
     "@language": "vi",
@@ -101,15 +107,19 @@
   "vnedu:hasLeader": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-truc"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Trường Đại học Tây Nguyên được thành lập theo Quyết định số 298/CP ngày 11/11/1977 của Hội đồng Chính phủ với nhiệm vụ đào tạo cán bộ có trình độ đại học phục vụ yêu cầu phát triển kinh tế, văn hóa, xã hội toàn vùng Tây Nguyên. Từ xuất phát điểm chỉ có 6 chuyên ngành đào tạo của 4 khoa: Sư phạm, Y dược, Nông lâm và Lâm nghiệp. Đến nay, Trường đã trở thành trung tâm đào tạo, nghiên cứu khoa học,chuyển giao công nghệ góp phần quan trọng trong việc đào tạo nguồn nhân lực cho vùng Tây Nguyên, Duyên hải Nam Trung Bộ và các nước Lào, Campuchia."
+  },
   "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dak-lak"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:motto": {

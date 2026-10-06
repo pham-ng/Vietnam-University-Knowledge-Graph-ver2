@@ -30,179 +30,206 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-y-duoc-dai-hoc-hue",
-  "@type": [
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.huemed-univ.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Hu%E1%BA%BF_University_of_Medicine_and_Pharmacy"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-y-duoc-dai-hoc-hue",
+      "@type": [
+        "vnedu:MemberInstitution",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Y Dược (YDH; ) là một trong những trung tâm đào tạo, nghiên cứu khoa học và chăm sóc sức khỏe hàng đầu khối ngành khoa học sức khỏe tại miền Trung, Tây Nguyên và cả nước. Nhà trường là trung tâm nghiên cứu khoa học, chuyển giao công nghệ, hợp tác quốc tế, với nhiều đề tài, dự án có giá trị thực tiễn cao, góp phần nâng cao chất lượng khám chữa bệnh, chăm sóc sức khỏe cộng đồng. Trường Đại học Y dược, Đại học Huế là 1 trong 3 cơ sở Đại học hàng đầu khu vực về đào tạo ngành Y dược lớn nhất cả nước."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.huemed-univ.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/Hu%E1%BA%BF_University_of_Medicine_and_Pharmacy"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF"
+        }
+      ],
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/0391j1294"
+        },
+        {
+          "@id": "dbr:Hue_University_of_Medicine_and_Pharmacy"
+        },
+        {
+          "@id": "wd:Q10829171"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75580875"
+        },
+        {
+          "@id": "wd:Q10829171"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "vi",
+        "@value": "Trường Đại học Y Dược, Đại học Huế"
+      },
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-vu-quoc-huy"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/4/42/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-hue"
+      },
+      "schema:telephone": "84.54.3822173",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Y Dược, Đại học Huế"
+      },
+      "vnedu:academicStaff": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "334"
+      },
+      "vnedu:address": "06 Ngô Quyền, phường Thuận Hóa",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1957"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hang-tran-thi-thu"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/trang-nguyen-phuc-thu"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quang-trung-tran"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-bang-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-xuan-tuan"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-minh-thi-ha"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thao-nguyen-thanh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-thai-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bao-yen-luong-thanh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-dung-ho"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-duong-le"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-tam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngoc-trinh-thi-pham"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/toan-khanh-tran"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hai-mai-ba"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-minh-nhat"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-trung-tran"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/trong-binh-le"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quoc-hung-vo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-khoi-le"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-triet-le-phan"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-vu-quoc-huy"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Y - Dược, Đại học Huế tiền thân là Khoa Y thuộc Viện đại học Huế, được thành lập ngày 28 tháng 3 năm 1957. Đến năm 1961, Trường được đổi tên thành Trường Đại học Y khoa Huế thuộc Viện Đại học Huế. Năm 1979, Trường Đại học Y khoa Huế và Bệnh viện Trung ương Huế được hợp nhất để trở thành Học viện Y Huế trực thuộc Bộ Y tế. Đến năm 1989, Trường Đại học Y khoa Huế lại được tách ra và trực thuộc Bộ Y tế. Từ năm 1994, Trường Đại học Y khoa Huế trở thành trường đại học thành viên của Đại học Huế, trực thuộc Bộ Giáo dục và Đào tạo theo Nghị định số 30-CP ngày 04 tháng 4 năm 1994 của Chính phủ. Ngày 26 tháng 3 năm 2007, Trường Đại học Y khoa Huế được đổi tên thành Trường Đại học Y - Dược, Đại học Huế theo quyết định số 334/QĐ-TTg của Thủ tướng Chính phủ. Ngày 23 tháng 10 năm 2025, Thủ tướng Chính phủ ký quyết định số 2346/QĐ-TTg về việc sáp nhập Trường Cao đẳng Y tế Huế vào Trường Đại học Y - Dược, Đại học Huế để phát triển theo mô hình Trường - Viện cấp quốc gia hướng đến đạt tiêu chuẩn quốc tế theo tinh thần Nghị quyết số 54-NQ/TW ngày 10 tháng 12 năm 2019 của Bộ Chính trị. Ngày 23/10/2025, Thủ tướng Chính phủ ký Quyết định số 2346/QĐ-TTg về việc sáp nhập Trường Cao đẳng Y tế Huế trực thuộc UBND thành phố Huế vào Trường Đại học Y - Dược, Đại học Huế. Trường Cao đẳng Y tế Huế tiền thân là Trường y tá quốc gia Huế được thành lập theo Nghị số 2008 ngày 12/04/1948 của Khâm sứ Nam Kỳ, Nghị định số 1038 ngày 03/04/1950 của Thủ Hiến Bắc Việt, và Nghị định số 64 ngày 29/12/1951 của Thủ Hiến Trung Việt. Sau ngày Thừa Thiên Huế được giải phóng (26/3/1975), ngành y tế tiếp quản 2 trường Cán sự điều dưỡng Huế và trường Nữ hộ sinh để thành lập trường Cán bộ Y tế Thừa Thiên Huế. Tháng 6/1976 khi hợp nhất 3 tỉnh Bình Trị Thiên, 3 trường Cán bộ Y tế Thừa Thiên Huế, Quảng Bình, Quảng Trị được sáp nhập lại thành Trường Trung học Y tế Bình Trị Thiên. Nhiệm vụ chủ yếu của Trường là đào tạo Y sĩ đa khoa, nữ hộ sinh, y tá điều dưỡng phục vụ trên địa bàn 3 tỉnh Quảng Bình, Quảng Trị, Thừa Thiên Huế. Đến tháng 7/1989, Trường Trung học Y tế Bình Trị Thiên được đổi tên thành Trường Trung học Y tế Thừa Thiên Huế làm nhiệm vụ đào tạo cán bộ y tế trung học cho 3 tỉnh Quảng Bình, Quảng Trị và Thừa Thiên Huế. Đến tháng 11/2005, trường Trung học Y tế Thừa Thiên Huế được nâng cấp thành trường Cao đẳng Y tế Huế trực thuộc UBND tỉnh Thừa Thiên Huế theo Quyết định số 6284/QĐ-BGD&ĐT của Bộ Giáo dục và Đào tạo."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-hue"
+      },
+      "vnedu:numberOfPostgraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1324"
+      },
+      "vnedu:numberOfUndergraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "4152"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-vu-quoc-huy"
+      },
+      "vnedu:website": {
+        "@id": "http://www.huemed-univ.edu.vn"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/4/42/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c,_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/4/42/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg.png"
+      }
     }
-  ],
-  "owl:sameAs": [
-    {
-      "@id": "dbr:Hue_University_of_Medicine_and_Pharmacy"
-    },
-    {
-      "@id": "https://ror.org/0391j1294"
-    },
-    {
-      "@id": "wd:Q10829171"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q10829171"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75580875"
-    }
-  ],
-  "rdfs:label": {
-    "@language": "vi",
-    "@value": "Trường Đại học Y Dược, Đại học Huế"
-  },
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-vu-quoc-huy"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-hue"
-  },
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Y Dược, Đại học Huế"
-  },
-  "vnedu:academicStaff": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "334"
-  },
-  "vnedu:address": "06 Ngô Quyền, phường Thuận Hóa",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1957"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-thai-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quoc-hung-vo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-khoi-le"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-duong-le"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-xuan-tuan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-minh-thi-ha"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hang-tran-thi-thu"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/trong-binh-le"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-trung-tran"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bao-yen-luong-thanh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-dung-ho"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/toan-khanh-tran"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/trang-nguyen-phuc-thu"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-bang-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-tam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-triet-le-phan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thao-nguyen-thanh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-minh-nhat"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quang-trung-tran"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hai-mai-ba"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngoc-trinh-thi-pham"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-vu-quoc-huy"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-hue"
-  },
-  "vnedu:numberOfPostgraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "1324"
-  },
-  "vnedu:numberOfUndergraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "4152"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-vu-quoc-huy"
-  },
-  "vnedu:website": {
-    "@id": "http://www.huemed-univ.edu.vn"
-  }
+  ]
 }</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -221,6 +248,8 @@
   <a href="truong-dai-hoc-y-duoc-dai-hoc-hue.ttl">Turtle</a> · <a href="truong-dai-hoc-y-duoc-dai-hoc-hue.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-y-duoc-dai-hoc-hue">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 39 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Y Dược (YDH; ) là một trong những trung tâm đào tạo, nghiên cứu khoa học và chăm sóc sức khỏe hàng đầu khối ngành khoa học sức khỏe tại miền Trung, Tây Nguyên và cả nước. Nhà trường là trung tâm nghiên cứu khoa học, chuyển giao công nghệ, hợp tác quốc tế, với nhiều đề tài, dự án có giá trị thực tiễn cao, góp phần nâng cao chất lượng khám chữa bệnh, chăm sóc sức khỏe cộng đồng. Trường Đại học Y dược, Đại học Huế là 1 trong 3 cơ sở Đại học hàng đầu khu vực về đào tạo ngành Y dược lớn nhất cả nước.</p><h2>Lịch sử</h2><p>Trường Đại học Y - Dược, Đại học Huế tiền thân là Khoa Y thuộc Viện đại học Huế, được thành lập ngày 28 tháng 3 năm 1957. Đến năm 1961, Trường được đổi tên thành Trường Đại học Y khoa Huế thuộc Viện Đại học Huế. Năm 1979, Trường Đại học Y khoa Huế và Bệnh viện Trung ương Huế được hợp nhất để trở thành Học viện Y Huế trực thuộc Bộ Y tế. Đến năm 1989, Trường Đại học Y khoa Huế lại được tách ra và trực thuộc Bộ Y tế. Từ năm 1994, Trường Đại học Y khoa Huế trở thành trường đại học thành viên của Đại học Huế, trực thuộc Bộ Giáo dục và Đào tạo theo Nghị định số 30-CP ngày 04 tháng 4 năm 1994 của Chính phủ. Ngày 26 tháng 3 năm 2007, Trường Đại học Y khoa Huế được đổi tên thành Trường Đại học Y - Dược, Đại học Huế theo quyết định số 334/QĐ-TTg của Thủ tướng Chính phủ. Ngày 23 tháng 10 năm 2025, Thủ tướng Chính phủ ký quyết định số 2346/QĐ-TTg về việc sáp nhập Trường Cao đẳng Y tế Huế vào Trường Đại học Y - Dược, Đại học Huế để phát triển theo mô hình Trường - Viện cấp quốc gia hướng đến đạt tiêu chuẩn quốc tế theo tinh thần Nghị quyết số 54-NQ/TW ngày 10 tháng 12 năm 2019 của Bộ Chính trị. Ngày 23/10/2025, Thủ tướng Chính phủ ký Quyết định số 2346/QĐ-TTg về việc sáp nhập Trường Cao đẳng Y tế Huế trực thuộc UBND thành phố Huế vào Trường Đại học Y - Dược, Đại học Huế. Trường Cao đẳng Y tế Huế tiền thân là Trường y tá quốc gia Huế được thành lập theo Nghị số 2008 ngày 12/04/1948 của Khâm sứ Nam Kỳ, Nghị định số 1038 ngày 03/04/1950 của Thủ Hiến Bắc Việt, và Nghị định số 64 ngày 29/12/1951 của Thủ Hiến Trung Việt. Sau ngày Thừa Thiên Huế được giải phóng (26/3/1975), ngành y tế tiếp quản 2 trường Cán sự điều dưỡng Huế và trường Nữ hộ sinh để thành lập trường Cán bộ Y tế Thừa Thiên Huế. Tháng 6/1976 khi hợp nhất 3 tỉnh Bình Trị Thiên, 3 trường Cán bộ Y tế Thừa Thiên Huế, Quảng Bình, Quảng Trị được sáp nhập lại thành Trường Trung học Y tế Bình Trị Thiên. Nhiệm vụ chủ yếu của Trường là đào tạo Y sĩ đa khoa, nữ hộ sinh, y tá điều dưỡng phục vụ trên địa bàn 3 tỉnh Quảng Bình, Quảng Trị, Thừa Thiên Huế. Đến tháng 7/1989, Trường Trung học Y tế Bình Trị Thiên được đổi tên thành Trường Trung học Y tế Thừa Thiên Huế làm nhiệm vụ đào tạo cán bộ y tế trung học cho 3 tỉnh Quảng Bình, Quảng Trị và Thừa Thiên Huế. Đến tháng 11/2005, trường Trung học Y tế Thừa Thiên Huế được nâng cấp thành trường Cao đẳng Y tế Huế trực thuộc UBND tỉnh Thừa Thiên Huế theo Quyết định số 6284/QĐ-BGD&amp;ĐT của Bộ Giáo dục và Đào tạo.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75580875">«Trường Đại học Y Dược, Đại học Huế»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75580875), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Y Dược, Đại học Huế</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c,_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/4/42/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg.png" alt="Biểu trưng Trường Đại học Y Dược, Đại học Huế" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Loại hình</th><td>Trường đại học</td></tr><tr><th>Thành lập</th><td>1957</td></tr><tr><th>Thành viên của</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-hue">Đại học Huế</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">GS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-vu-quoc-huy">Nguyễn Vũ Quốc Huy</a></td></tr><tr><th>Địa chỉ</th><td>06 Ngô Quyền, phường Thuận Hóa</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue">Huế</a></td></tr><tr><th>Giảng viên</th><td>334</td></tr><tr><th>Điện thoại</th><td>84.54.3822173</td></tr><tr><th>Website</th><td><a href="http://www.huemed-univ.edu.vn">huemed-univ.edu.vn</a></td></tr></table></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
 
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
@@ -248,8 +277,14 @@
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue">Huế</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo">Trung Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/4/42/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg">&lt;https://upload.wikimedia.org/wikipedia/vi/4/42/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:parentOrganization<small>schema:parentOrganization</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-hue">Đại học Huế</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>84.54.3822173</div>
 </td></tr>
 <tr><td class="p">số giảng viên<small>vnedu:academicStaff</small></td><td>
 <div>334 <span class="lang">xsd:nonNegativeInteger</span></div>
@@ -289,11 +324,11 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bao-yen-luong-thanh">Bao Yen Luong Thanh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-duong-le">Dinh Duong Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-trung-tran">Dinh Trung Tran</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hai-mai-ba">Hai Mai Ba</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hang-tran-thi-thu">Hang Tran Thi Thu</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-xuan-tuan">Ho Xuan Tuan</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-khoi-le">Minh Khoi Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-triet-le-phan">Minh Triet Le Phan</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngoc-trinh-thi-pham">Ngoc Trinh Thi Pham</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-tam">Nguyen Minh Tam</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/quang-trung-tran">Quang Trung Tran</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/quoc-hung-vo">Quoc-Hung Vo</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thao-nguyen-thanh">Thao Nguyen Thanh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-minh-thi-ha">Thi Minh Thi Ha</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/toan-khanh-tran">Toan Khanh Tran</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-minh-nhat">Tran Minh Nhat</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/trang-nguyen-phuc-thu">Trang Nguyen Phuc Thu</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/trong-binh-le">Trong Binh Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-bang-nguyen">Van Bang Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-thai-nguyen">Van Thai Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-dung-ho">Xuan Dung Ho</a></div>
-</td></tr>
 <tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bao-yen-luong-thanh">Bao Yen Luong Thanh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-duong-le">Dinh Duong Le</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-trung-tran">Dinh Trung Tran</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hai-mai-ba">Hai Mai Ba</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hang-tran-thi-thu">Hang Tran Thi Thu</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-xuan-tuan">Ho Xuan Tuan</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-khoi-le">Minh Khoi Le</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-triet-le-phan">Minh Triet Le Phan</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngoc-trinh-thi-pham">Ngoc Trinh Thi Pham</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-tam">Nguyen Minh Tam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/quang-trung-tran">Quang Trung Tran</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/quoc-hung-vo">Quoc-Hung Vo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thao-nguyen-thanh">Thao Nguyen Thanh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-minh-thi-ha">Thi Minh Thi Ha</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/toan-khanh-tran">Toan Khanh Tran</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-minh-nhat">Tran Minh Nhat</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/trang-nguyen-phuc-thu">Trang Nguyen Phuc Thu</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/trong-binh-le">Trong Binh Le</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-bang-nguyen">Van Bang Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-thai-nguyen">Van Thai Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-dung-ho">Xuan Dung Ho</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bao-yen-luong-thanh">Bao Yen Luong Thanh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-duong-le">Dinh Duong Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-trung-tran">Dinh Trung Tran</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hai-mai-ba">Hai Mai Ba</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hang-tran-thi-thu">Hang Tran Thi Thu</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-xuan-tuan">Ho Xuan Tuan</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-khoi-le">Minh Khoi Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-triet-le-phan">Minh Triet Le Phan</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngoc-trinh-thi-pham">Ngoc Trinh Thi Pham</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-tam">Nguyen Minh Tam</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/quang-trung-tran">Quang Trung Tran</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/quoc-hung-vo">Quoc-Hung Vo</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thao-nguyen-thanh">Thao Nguyen Thanh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-minh-thi-ha">Thi Minh Thi Ha</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/toan-khanh-tran">Toan Khanh Tran</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-minh-nhat">Tran Minh Nhat</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/trang-nguyen-phuc-thu">Trang Nguyen Phuc Thu</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/trong-binh-le">Trong Binh Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-bang-nguyen">Van Bang Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-thai-nguyen">Van Thai Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-dung-ho">Xuan Dung Ho</a></div>
 </td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-vu-quoc-huy">Nguyễn Vũ Quốc Huy</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

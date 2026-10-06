@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -24,6 +25,7 @@ university:hoc-vien-dan-toc a foaf:Organization,
         schema:Organization ;
     rdfs:label "Vietnam Academy for Ethnic Minorities - VAEM"@en,
         "Học viện Dân tộc"@vi ;
+    dbo:abstract "Học viện Dân tộc (tên tiếng Anh: Vietnam Academy for Ethnic Minorities, viết tắt: VAEM hoặc HVDT) là cơ sở giáo dục đại học công lập trực thuộc Bộ Dân tộc và Tôn giáo, đồng thời chịu sự quản lý nhà nước về giáo dục đại học của Bộ Giáo dục và Đào tạo. Học viện có chức năng đào tạo nhân lực các trình độ đào tạo của giáo dục đại học về dân tộc, tín ngưỡng, tôn giáo và các ngành, chuyên ngành khác có liên quan; đào tạo, bồi dưỡng cán bộ, công chức, viên chức của Bộ, ngành, lĩnh vực công tác dân tộc, tín ngưỡng, tôn giáo và các tổ chức, cá nhân khác có nhu cầu trong xã hội; nghiên cứu khoa học, tư vấn, phản biện chính sách, hợp tác quốc tế theo quy định của pháp luật."@vi ;
     owl:sameAs wd:Q65164557,
         <https://ror.org/012bydr11> ;
     skos:notation "HVD" ;
@@ -38,6 +40,7 @@ university:hoc-vien-dan-toc a foaf:Organization,
         "Viện Dân tộc"@vi ;
     vnedu:foundingYear "2016"^^xsd:gYear ;
     vnedu:governedBy organization:bo-dan-toc-va-ton-giao ;
+    vnedu:history "Học viện Dân tộc được thành lập vào ngày 08 tháng 08 năm 2016 theo Quyết định số 1562/QĐ-TTg của Thủ tướng Chính phủ trên cơ sở tổ chức lại Viện Dân tộc và Trường Cán bộ Dân tộc. Đây là dấu mốc quan trọng trong công tác dân tộc, đánh dấu sự ra đời của một cơ sở nghiên cứu và đào tạo chuyên sâu về lĩnh vực dân tộc. Sau khi Bộ Dân tộc và Tôn giáo được thành lập trên cơ sở Ủy ban Dân tộc, Học viện trở thành đơn vị trực thuộc Bộ này."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -45,7 +48,10 @@ university:hoc-vien-dan-toc a foaf:Organization,
     vnedu:shortName "HVDT",
         "VAEM" ;
     vnedu:website <https://hvdt.edu.vn/> ;
+    schema:email "hvdt@cema.gov.vn" ;
+    schema:foundingDate "2016-08-08"^^xsd:date ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:telephone "02437831662" .
 

@@ -27,9 +27,11 @@ university:truong-dai-hoc-hong-duc a dbo:University,
         schema:Organization ;
     rdfs:label "Hong Duc University"@en,
         "Trường Đại học Hồng Đức"@vi ;
+    dbo:abstract "Trường Đại học Hồng Đức (Hong Duc University, vt: HDU) là một trường đại học địa phương đa ngành, công lập, trực thuộc UBND tỉnh Thanh Hóa. Tháng 7, năm 2018, Webometrics xếp hạng trường HDU thứ 19 trong tổng số 235 các trường Đại học, Học viện của cả nước mặc dù đây là trường có tuổi đời trẻ chỉ trên 20 năm, thành lập sau rất nhiều trường khác. HDU là một trong những trường Đại học có số chương trình đào tạo được kiểm định ngoài đạt chuẩn nhiều nhất cả nước. Có những năm tuyển sinh Đại học, điểm trúng tuyển yêu cầu của trường cao thuộc hạng đầu bảng cả nước. Năm 2023, nhà trường mở thêm hệ phổ thông liên cấp, và trở thành Đại học \"siêu trường\" có đào tạo đầy đủ các hệ từ Mầm non, Tiểu học, THCS, THPT, Đại học, Thạc sĩ, Tiến sĩ. Ngày 27/03/2026, đề án “Sáp nhập Trường Đại học Văn hóa, Thể thao và Du lịch Thanh Hóa vào Trường Đại học Hồng Đức được duyệt đưa Đại học Hồng Đức trở thành trường lớn trong khu vực Bắc Trung Bộ. Quy mô trường, lớp, chất lượng đào tạo của nhà trường không ngừng được nâng cao, góp phần quan trọng vào sự nghiệp đào tạo nguồn nhân lực, đáp ứng yêu cầu công nghiệp hóa, hiện đại hóa quê hương, đất nước."@vi ;
     owl:sameAs dbr:Hồng_Đức_University,
         wd:Q10829017,
         <https://ror.org/05dp8mg49> ;
+    skos:altLabel "viết tắt: HDU" ;
     skos:prefLabel "Trường Đại học Hồng Đức"@vi ;
     prov:wasDerivedFrom wd:Q10829017,
         <https://vi.wikipedia.org/w/index.php?oldid=75611739> ;
@@ -50,7 +52,15 @@ university:truong-dai-hoc-hong-duc a dbo:University,
     vnedu:rector person:le-hoang-ba-huyen ;
     vnedu:website <http://www.hdu.edu.vn/> ;
     schema:employee person:le-hoang-ba-huyen ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/a/a8/H%E1%BB%93ng_%C4%90%E1%BB%A9c_university%27s_stele.jpg> ;
     schema:location country:viet-nam,
         province:thanh-hoa,
-        region:trung-bo .
+        region:trung-bo ;
+    schema:telephone "0237).3910.222" .
+
+<https://upload.wikimedia.org/wikipedia/commons/a/a8/H%E1%BB%93ng_%C4%90%E1%BB%A9c_university%27s_stele.jpg> a schema:ImageObject ;
+    schema:creditText "Bùi Lê Việt Cường" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:H%E1%BB%93ng_%C4%90%E1%BB%A9c_university%27s_stele.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/H%E1%BB%93ng_%C4%90%E1%BB%A9c_university%27s_stele.jpg/330px-H%E1%BB%93ng_%C4%90%E1%BB%A9c_university%27s_stele.jpg> .
 

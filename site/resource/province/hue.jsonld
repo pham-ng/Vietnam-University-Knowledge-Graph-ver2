@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue",
   "@type": [
-    "vnedu:Province",
-    "vnedu:AdministrativeUnit",
+    "schema:AdministrativeArea",
     "vnedu:CentrallyGovernedCity",
-    "schema:AdministrativeArea"
+    "vnedu:AdministrativeUnit",
+    "vnedu:Province"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Hu%E1%BA%BF"
+      "@id": "https://en.wikipedia.org/wiki/Hu%E1%BA%BF"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Hu%E1%BA%BF"
+      "@id": "https://vi.wikipedia.org/wiki/Hu%E1%BA%BF"
     }
   ],
   "geo:lat": {
@@ -45,10 +45,10 @@
       "@id": "wd:Q36399"
     },
     {
-      "@id": "https://sws.geonames.org/1565033/"
+      "@id": "dbr:Thừa_Thiên_Huế_province"
     },
     {
-      "@id": "dbr:Thừa_Thiên_Huế_province"
+      "@id": "https://sws.geonames.org/1565033/"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -56,11 +56,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Huế"
     },
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Huế"
     }
   ],
@@ -70,10 +70,10 @@
   },
   "vnedu:partOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:population": {

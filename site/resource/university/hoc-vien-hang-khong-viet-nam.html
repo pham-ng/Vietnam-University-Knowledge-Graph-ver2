@@ -30,105 +30,151 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-hang-khong-viet-nam",
-  "@type": [
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "vnedu:Academy",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization"
-  ],
-  "foaf:homepage": {
-    "@id": "https://vaa.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-hang-khong-viet-nam",
+      "@type": [
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:Academy",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "foaf:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Hàng không Việt Nam ( – VAA) là một trường đại học công lập định hướng nghề nghiệp ứng dụng trực thuộc Bộ Xây dựng của nước Cộng hòa xã hội chủ nghĩa Việt Nam. Tổ chức ra đời vào ngày 24 tháng 3 năm 1979 với tên gọi ban đầu là Trường Sĩ quan và Trung cấp nghiệp vụ Hàng không, đến ngày 17 tháng 7 năm 2006, cơ sở được nâng cấp lên thành học viện và từ đây chính thức đào tạo hệ giáo dục bậc cao các chuyên ngành về lĩnh vực hàng không dân dụng."
+      },
+      "foaf:homepage": {
+        "@id": "https://vaa.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/Vietnam_Aviation_Academy"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.7969"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.6737"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q302448"
+        },
+        {
+          "@id": "dbr:Vietnam_Aviation_Academy"
+        },
+        {
+          "@id": "https://ror.org/05da5vm76"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q302448"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75614797"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Học viện Hàng không Việt Nam"
+        },
+        {
+          "@language": "en",
+          "@value": "Vietnam Aviation Academy"
+        }
+      ],
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/8/85/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        }
+      ],
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Hàng không Việt Nam"
+      },
+      "vnedu:address": "Trụ sở: 104 Nguyễn Văn Trỗi, Phường Phú Nhuận",
+      "vnedu:formerName": [
+        {
+          "@language": "vi",
+          "@value": "Trường Hàng không Việt Nam"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Kỹ thuật nghiệp vụ Hàng không"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Sĩ quan và Trung cấp nghiệp vụ Hàng không"
+        }
+      ],
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1979"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-xay-dung"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Ngày 24 tháng 3 năm 1979, Trường Sĩ quan và Trung cấp nghiệp vụ Hàng không trực thuộc Tổng cục Hàng không Dân dụng Việt Nam – một tổ chức nằm dưới sự quản lý của Bộ Quốc phòng tại thời điểm đó, được thành lập dựa trên công văn số 290/QĐ-QP do Thiếu tướng Vũ Xuân Chiêm ký xác nhận. Đơn vị giảng dạy chịu trách nhiệm huấn luyện các sĩ quan sơ cấp trong giai đoạn này.\n\nNgày 14 tháng 11 năm 1994, Trường Kỹ thuật nghiệp vụ Hàng không được chuyển đổi thành Trường Hàng không Việt Nam trực thuộc Cục Hàng không Dân dụng theo văn bản số 2318/QĐ-TCCCB-LĐ do Bộ trưởng Bộ Giao thông Vận tải Bùi Danh Lưu ký phê duyệt. Tổ chức nhận nhiệm vụ đào tạo bậc dưới đại học các nghề về chuyên ngành hàng không, và kể từ đây ngôi trường chính thức nằm trong hệ thống giáo dục quốc gia.\n\nNgày 17 tháng 7 năm 2006, Phó Thủ tướng Phạm Gia Khiêm tiếp tục ký ban hành quyết định số 168/2006/QĐ-TTg thành lập Học viện Hàng không Việt Nam (VAA), cơ sở dạy học tại thời điểm này đã có tư cách pháp nhân, sở hữu con dấu và tài khoản riêng. Đến cuối tháng 10 trong cùng năm, trường tiếp tục nhận chỉ thị về việc phân công nhiệm vụ, quyền hạn, trách nhiệm và định hướng cơ cấu tổ chức, từ đây học viện chính thức được cấp phép đào tạo hệ giáo dục bậc cao và hoạt động dưới sự quản lý của Bộ Giao thông Vận tải. Năm 2007 là một cột mốc quan trọng khi trường được Bộ Giáo dục phê duyệt kế hoạch tuyển sinh đại học khóa đầu tiên với hai ngành Quản trị kinh doanh và Công nghệ kỹ thuật điện tử – viễn thông. Đến năm 2025, sau khi Việt Nam thông qua một cuộc cải cách tinh gọn bộ máy, học viện trở thành cơ quan giáo dục trực thuộc Bộ Xây dựng.\n\nNăm 2012 đánh dấu một bước ngoặt khi lần đầu tiên trong lịch sử hàng không dân dụng Việt Nam, Trường Phi công Bay Việt đã phối hợp với VAA và Học viện Hàng không ESMA của Cộng hòa Pháp tổ chức thí điểm đào tạo phi công cơ bản cho mục đích thương mại, trong đó bao gồm huấn luyện bay một phần trên vùng trời Việt Nam tại Sân bay quốc tế Cam Ranh.\n\nTính đến năm 2017, VAA là tổ chức quốc doanh duy nhất trong hệ thống giáo dục quốc gia Việt Nam chuyên giảng dạy về hàng không. Theo sau là sự xuất hiện của hàng loạt các doanh nghiệp tham gia vào công tác đào tạo nguồn nhân lực cùng ngành được ghi nhận trong năm 2022 như Trường Đại học Khoa học và Công nghệ Hà Nội, Học viện Hàng không Vietjet, Tập đoàn Vingroup..."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Let Your Dreams Fly"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:website": {
+        "@id": "https://vaa.edu.vn/"
+      }
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Vietnam_Aviation_Academy"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/8/85/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Hongkytran (thảo luận)",
+      "schema:license": "CC-BY-SA-4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/8/85/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam.jpg/330px-H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam.jpg"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.7969"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.6737"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "dbr:Vietnam_Aviation_Academy"
-    },
-    {
-      "@id": "wd:Q302448"
-    },
-    {
-      "@id": "https://ror.org/05da5vm76"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q302448"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75614797"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Vietnam Aviation Academy"
-    },
-    {
-      "@language": "vi",
-      "@value": "Học viện Hàng không Việt Nam"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Hàng không Việt Nam"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1979"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-xay-dung"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:website": {
-    "@id": "https://vaa.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.7969,106.6737],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.7969,106.6737],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -147,7 +193,9 @@
   <a href="hoc-vien-hang-khong-viet-nam.ttl">Turtle</a> · <a href="hoc-vien-hang-khong-viet-nam.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-hang-khong-viet-nam">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 14 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Học viện Hàng không Việt Nam ( – VAA) là một trường đại học công lập định hướng nghề nghiệp ứng dụng trực thuộc Bộ Xây dựng của nước Cộng hòa xã hội chủ nghĩa Việt Nam. Tổ chức ra đời vào ngày 24 tháng 3 năm 1979 với tên gọi ban đầu là Trường Sĩ quan và Trung cấp nghiệp vụ Hàng không, đến ngày 17 tháng 7 năm 2006, cơ sở được nâng cấp lên thành học viện và từ đây chính thức đào tạo hệ giáo dục bậc cao các chuyên ngành về lĩnh vực hàng không dân dụng.</p><h2>Lịch sử</h2><p>Ngày 24 tháng 3 năm 1979, Trường Sĩ quan và Trung cấp nghiệp vụ Hàng không trực thuộc Tổng cục Hàng không Dân dụng Việt Nam – một tổ chức nằm dưới sự quản lý của Bộ Quốc phòng tại thời điểm đó, được thành lập dựa trên công văn số 290/QĐ-QP do Thiếu tướng Vũ Xuân Chiêm ký xác nhận. Đơn vị giảng dạy chịu trách nhiệm huấn luyện các sĩ quan sơ cấp trong giai đoạn này.</p><p>Ngày 14 tháng 11 năm 1994, Trường Kỹ thuật nghiệp vụ Hàng không được chuyển đổi thành Trường Hàng không Việt Nam trực thuộc Cục Hàng không Dân dụng theo văn bản số 2318/QĐ-TCCCB-LĐ do Bộ trưởng Bộ Giao thông Vận tải Bùi Danh Lưu ký phê duyệt. Tổ chức nhận nhiệm vụ đào tạo bậc dưới đại học các nghề về chuyên ngành hàng không, và kể từ đây ngôi trường chính thức nằm trong hệ thống giáo dục quốc gia.</p><details><summary>Đọc tiếp (3 đoạn)</summary><p>Ngày 17 tháng 7 năm 2006, Phó Thủ tướng Phạm Gia Khiêm tiếp tục ký ban hành quyết định số 168/2006/QĐ-TTg thành lập Học viện Hàng không Việt Nam (VAA), cơ sở dạy học tại thời điểm này đã có tư cách pháp nhân, sở hữu con dấu và tài khoản riêng. Đến cuối tháng 10 trong cùng năm, trường tiếp tục nhận chỉ thị về việc phân công nhiệm vụ, quyền hạn, trách nhiệm và định hướng cơ cấu tổ chức, từ đây học viện chính thức được cấp phép đào tạo hệ giáo dục bậc cao và hoạt động dưới sự quản lý của Bộ Giao thông Vận tải. Năm 2007 là một cột mốc quan trọng khi trường được Bộ Giáo dục phê duyệt kế hoạch tuyển sinh đại học khóa đầu tiên với hai ngành Quản trị kinh doanh và Công nghệ kỹ thuật điện tử – viễn thông. Đến năm 2025, sau khi Việt Nam thông qua một cuộc cải cách tinh gọn bộ máy, học viện trở thành cơ quan giáo dục trực thuộc Bộ Xây dựng.</p><p>Năm 2012 đánh dấu một bước ngoặt khi lần đầu tiên trong lịch sử hàng không dân dụng Việt Nam, Trường Phi công Bay Việt đã phối hợp với VAA và Học viện Hàng không ESMA của Cộng hòa Pháp tổ chức thí điểm đào tạo phi công cơ bản cho mục đích thương mại, trong đó bao gồm huấn luyện bay một phần trên vùng trời Việt Nam tại Sân bay quốc tế Cam Ranh.</p><p>Tính đến năm 2017, VAA là tổ chức quốc doanh duy nhất trong hệ thống giáo dục quốc gia Việt Nam chuyên giảng dạy về hàng không. Theo sau là sự xuất hiện của hàng loạt các doanh nghiệp tham gia vào công tác đào tạo nguồn nhân lực cùng ngành được ghi nhận trong năm 2022 như Trường Đại học Khoa học và Công nghệ Hà Nội, Học viện Hàng không Vietjet, Tập đoàn Vingroup...</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75614797">«Học viện Hàng không Việt Nam»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75614797), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Học viện Hàng không Việt Nam</div><table><tr><th>Tên tiếng Anh</th><td>Vietnam Aviation Academy</td></tr><tr><th>Tên cũ</th><td>Trường Hàng không Việt Nam<br>Trường Kỹ thuật nghiệp vụ Hàng không<br>Trường Sĩ quan và Trung cấp nghiệp vụ Hàng không</td></tr><tr><th>Loại hình</th><td>Học viện · Công lập</td></tr><tr><th>Thành lập</th><td>1979</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-xay-dung">Bộ Xây dựng</a></td></tr><tr><th>Địa chỉ</th><td>Trụ sở: 104 Nguyễn Văn Trỗi, Phường Phú Nhuận</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Let Your Dreams Fly</i></td></tr><tr><th>Website</th><td><a href="https://vaa.edu.vn/">vaa.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/8/85/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam.jpg/330px-H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam.jpg" alt="Ảnh Học viện Hàng không Việt Nam" loading="lazy"></a><figcaption>CC-BY-SA-4.0 · Hongkytran (thảo luận)</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -174,8 +222,17 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q302448">wd:Q302448</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75614797">&lt;https://vi.wikipedia.org/w/index.php?oldid=75614797&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/8/85/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam.jpg">&lt;https://upload.wikimedia.org/wikipedia/vi/8/85/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
+<div>Trụ sở: 104 Nguyễn Văn Trỗi, Phường Phú Nhuận</div>
+</td></tr>
+<tr><td class="p">tên cũ<small>vnedu:formerName</small></td><td>
+<div>Trường Hàng không Việt Nam <span class="lang">@vi</span></div><div>Trường Kỹ thuật nghiệp vụ Hàng không <span class="lang">@vi</span></div><div>Trường Sĩ quan và Trung cấp nghiệp vụ Hàng không <span class="lang">@vi</span></div>
 </td></tr>
 <tr><td class="p">năm thành lập<small>vnedu:foundingYear</small></td><td>
 <div>1979 <span class="lang">xsd:gYear</span></div>
@@ -185,6 +242,9 @@
 </td></tr>
 <tr><td class="p">đặt tại<small>vnedu:locatedIn</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">khẩu hiệu<small>vnedu:motto</small></td><td>
+<div>Let Your Dreams Fly <span class="lang">@vi</span></div>
 </td></tr>
 <tr><td class="p">loại hình sở hữu<small>vnedu:ownership</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology#PublicOwnership">công lập</a></div>

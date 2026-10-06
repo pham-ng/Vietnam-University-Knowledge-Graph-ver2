@@ -28,6 +28,7 @@ university:truong-dai-hoc-tai-nguyen-va-moi-truong-thanh-pho-ho-chi-minh a dbo:U
         schema:Organization ;
     rdfs:label "Ho Chi Minh University of Natural Resources and Environment"@en,
         "Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh"@vi ;
+    dbo:abstract "Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh (tiếng Anh: Ho Chi Minh University of Natural Resources and Environment) là một trường đại học đa ngành tại Việt Nam. Trường trực thuộc Bộ Nông nghiệp và Môi trường."@vi ;
     owl:sameAs wd:Q10829153,
         <https://ror.org/05hdqw609> ;
     geo:lat 10.799246 ;
@@ -42,6 +43,19 @@ university:truong-dai-hoc-tai-nguyen-va-moi-truong-thanh-pho-ho-chi-minh a dbo:U
     vnedu:foundingYear "1976"^^xsd:gYear ;
     vnedu:governedBy organization:bo-nong-nghiep-va-moi-truong ;
     vnedu:hasLeader person:huynh-quyen ;
+    vnedu:history """Năm 1976, ngay sau khi giải phóng Miền Nam, trường Trung học Đo đạc Bản đồ 2 ra đời theo quyết định số 850/QĐ của Cục Đo đạc và Bản đồ Nhà nước. Lúc mới thành lập, trường đào tạo 2 chuyên ngành: Đo đạc Công trình và Biên vẽ Bản đồ.
+
+Khoảng những Năm 1976 trường Bồi dưỡng Cán bộ Khí tượng Thủy văn được thành lập tại địa chỉ 236b Lê Văn Sỹ, P1 Q Tân Bình, Tp HCM- với nhiệm vụ đào tạo bồi dưỡng các cán bộ làm công tác khí tượng thủy văn khu vực miền Nam.
+
+Năm 1994, Tổng cục Địa chính được thành lập trên cơ sở hợp nhất Tổng cục Quản lý Ruộng đất và Cục Đo đạc và Bản đồ Nhà nước. Ngay sau đó, trường Trung học Đo đạc Bản đồ 2 được đổi tên thành trường Trung học Địa chính 3. Khi đó, bốn chuyên ngành đào tạo chủ yếu là Đo đạc địa hình, Đo đạc Địa chính, Đo đạc Công trình và Quản lý đất đai.
+
+Năm 2001, trường trung học Địa chính 3 được đổi tên thành trường Trung học Địa chính Trung ương 3. Lúc này trường có hai khoa chuyên ngành gồm Khoa Trắc địa bản đồ và Khoa Quản lý đất đai.
+
+Năm 2006, cùng với việc sáp nhập hai trường trung cấp là trung cấp bồi dưỡng cán bộ khí tượng thủy văn (địa chỉ tại 236b Lê Văn Sỹ, P1 ,Q Tân Bình TPHCM) và trung cấp địa chính trung ương 3 (địa chỉ Ấp Long Đức 3, Phùng Hưng, Tam Phước, Long Thành, Đồng Nai) thành trường Cao đẳng Tài Nguyên Và Môi trường Thành phố Hồ Chí Minh.
+
+Lúc này trường Cao đẳng Tài Nguyên Và Môi trường Thành phố Hồ Chí Minh có 2 cơ sở - trụ sở trường là trường trung cấp bồi dưỡng cán bộ khí tượng thủy văn- cơ sở 2 là trường trung cấp địa chính trung ương 3.
+
+Ngày 19 tháng 8 năm 2011, Trường Cao đẳng Tài nguyên và Môi trường Thành phố Hồ Chí Minh được nâng cấp thành trường đại học theo quyết định số 1430/QĐ-TTg của Thủ tướng Chính phủ, trên cơ sở nâng cấp trường Cao đẳng Tài nguyên và Môi trường thành phố Hồ Chí Minh. Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh chính thức trực thuộc Bộ Tài nguyên và Môi trường và được giám sát về chất lượng đào tạo bởi Bộ Giáo dục và Đào tạo."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -51,8 +65,16 @@ university:truong-dai-hoc-tai-nguyen-va-moi-truong-thanh-pho-ho-chi-minh a dbo:U
     vnedu:rector person:huynh-quyen ;
     vnedu:shortName "HCMUNRE" ;
     vnedu:website <http://www.hcmunre.edu.vn/> ;
+    schema:email "bts@hcmunre.edu.vn" ;
     schema:employee person:huynh-quyen ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/4/46/Logo_HCMUNRE.png> ;
+    schema:telephone "+84 028 38443 006" .
+
+<https://upload.wikimedia.org/wikipedia/vi/4/46/Logo_HCMUNRE.png> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_HCMUNRE.png> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/vi/4/46/Logo_HCMUNRE.png> .
 

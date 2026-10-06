@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -27,11 +28,13 @@ university:hoc-vien-am-nhac-quoc-gia-viet-nam a foaf:Organization,
         schema:Organization ;
     rdfs:label "Vietnam National Academy of Music – VNAM"@en,
         "Học viện Âm nhạc Quốc gia Việt Nam"@vi ;
+    dbo:abstract "Học viện Âm nhạc Quốc gia Việt Nam (tiếng Anh là: Vietnam National Academy of Music – VNAM) là một học viện chuyên ngành chuyên đào tạo và nghiên cứu nhóm ngành âm nhạc được thành lập từ năm 1956, với ba chức năng chính là Đào tạo, Nghiên cứu khoa học và Biểu diễn âm nhạc. Học viện là một trong những trung tâm âm nhạc lớn, có uy tín của Việt Nam và khu vực. Trụ sở nhà trường được đặt tại: số 77 phố Hào Nam, phường Ô Chợ Dừa, thành phố Hà Nội, nước Việt Nam."@vi ;
     owl:sameAs dbr:Vietnam_National_Academy_of_Music,
         wd:Q5649320,
         <https://ror.org/0276e3d41> ;
     geo:lat 21.0228 ;
     geo:long 105.826 ;
+    skos:altLabel "Học viện Âm nhạc" ;
     skos:notation "NVH" ;
     skos:prefLabel "Học viện Âm nhạc Quốc gia Việt Nam"@vi ;
     prov:wasDerivedFrom wd:Q5649320,
@@ -95,6 +98,11 @@ university:hoc-vien-am-nhac-quoc-gia-viet-nam a foaf:Organization,
         person:vu-nhat-tan,
         person:wokeup ;
     vnedu:hasLeader person:nguyen-huy-phuong ;
+    vnedu:history """Được thành lập năm 1956, lấy tên là Trường Âm nhạc Việt Nam (tiền thân của Học viện Âm nhạc Quốc gia Việt Nam ngày nay). Năm 1976, Viện Nghiên cứu Âm nhạc Việt Nam (nay là Viện Âm nhạc) được tách ra khỏi Vụ Vǎn học nghệ thuật Việt Nam (nay là Liên hiệp Hội Văn học nghệ thuật Việt Nam) và trở thành đơn vị trực thuộc của Nhà trường. Năm 1982, Trường Âm nhạc Việt Nam đổi tên thành Nhạc viện Hà Nội. Năm 2008, Chính phủ Việt Nam đổi tên Nhạc viện Hà Nội thành Học viện Âm nhạc Quốc gia Việt Nam. Ngày nay, Học viện với đội ngũ giáo sư, giảng viên, nghệ sĩ đầu ngành và các sinh viên xuất sắc đã đóng vai trò là nghệ sĩ độc tấu chủ chốt trong các chương trình biểu diễn âm nhạc quan trọng của cả nước. Hàng năm, dàn nhạc giao hưởng Hà Nội, dàn nhạc thính phòng, dàn Hợp xướng, dàn nhạc Dân tộc Việt Nam với hàng trăm buổi biểu diễn thuộc nhiều thể loại âm nhạc khác nhau, đã phục vụ tốt các dịp lễ lớn của Việt Nam, phục vụ xã hội, tuyên truyền nền âm nhạc dân tộc Việt Nam đối với thế giới cũng như đóng góp tích cực vào việc nâng cao dân trí và đời sống nghệ thuật của Nhân dân Việt Nam.
+
+Nguyễn Thị Cẩm Tú: Sao Mai Điểm Hẹn 2006.
+
+Nghệ sĩ - diễn viên Minh Hương: từng thủ vai Vàng Anh trong series Nhật ký Vàng Anh phiên bản đầu tiên."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -102,8 +110,16 @@ university:hoc-vien-am-nhac-quoc-gia-viet-nam a foaf:Organization,
     vnedu:shortName "HVÂNQGVN",
         "VNAM" ;
     vnedu:website <https://www.vnam.edu.vn/> ;
+    schema:email "hvan@vnam.edu.vn" ;
     schema:employee person:nguyen-huy-phuong ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/9/9c/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_%C3%82m_nh%E1%BA%A1c_Qu%E1%BB%91c_gia_Vi%E1%BB%87t_Nam.svg> ;
+    schema:telephone "024) 3851 4969" .
+
+<https://upload.wikimedia.org/wikipedia/vi/9/9c/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_%C3%82m_nh%E1%BA%A1c_Qu%E1%BB%91c_gia_Vi%E1%BB%87t_Nam.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_H%E1%BB%8Dc_vi%E1%BB%87n_%C3%82m_nh%E1%BA%A1c_Qu%E1%BB%91c_gia_Vi%E1%BB%87t_Nam.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/9/9c/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_%C3%82m_nh%E1%BA%A1c_Qu%E1%BB%91c_gia_Vi%E1%BB%87t_Nam.svg/330px-Logo_H%E1%BB%8Dc_vi%E1%BB%87n_%C3%82m_nh%E1%BA%A1c_Qu%E1%BB%91c_gia_Vi%E1%BB%87t_Nam.svg.png> .
 

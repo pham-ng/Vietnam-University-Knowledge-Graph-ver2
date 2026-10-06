@@ -19,19 +19,19 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-cong-thuong",
   "@type": [
-    "vnedu:GoverningBody",
-    "vnedu:Organization",
-    "schema:Organization",
     "vnedu:Ministry",
     "foaf:Organization",
-    "schema:GovernmentOrganization"
+    "schema:Organization",
+    "schema:GovernmentOrganization",
+    "vnedu:Organization",
+    "vnedu:GoverningBody"
   ],
   "owl:sameAs": [
     {
-      "@id": "dbr:Ministry_of_Industry_and_Trade_(Vietnam)"
+      "@id": "wd:Q6867197"
     },
     {
-      "@id": "wd:Q6867197"
+      "@id": "dbr:Ministry_of_Industry_and_Trade_(Vietnam)"
     }
   ],
   "rdfs:label": {
@@ -46,25 +46,25 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-sao-do"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghiep-viet-tri"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-dien-luc"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghiep-viet-hung"
     },
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-cong-nghiep-ha-noi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghiep-viet-tri"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghiep-quang-ninh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-dien-luc"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghiep-thanh-pho-ho-chi-minh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-ky-thuat-cong-nghiep"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-cong-nghiep-ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghiep-thanh-pho-ho-chi-minh"
     }
   ]
 }

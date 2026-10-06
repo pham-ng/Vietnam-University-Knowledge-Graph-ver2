@@ -30,120 +30,160 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-hien",
-  "@type": [
-    "foaf:Organization",
-    "vnedu:PrivateInstitution",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.vhu.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C4%83n_Hi%E1%BA%BFn"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-hien",
+      "@type": [
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PrivateInstitution",
+        "dbo:University",
+        "schema:Organization",
+        "foaf:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Văn Hiến (tiếng Anh: Van Hien University) là một cơ sở giáo dục đại học tư thục định hướng ứng dụng tại Thành phố Hồ Chí Minh, Việt Nam. Trường được thành lập ngày 11 tháng 7 năm 1997 theo Quyết định số 517/TTg của Thủ tướng Chính phủ và chuyển đổi loại hình sang tư thục theo Quyết định số 58/QĐ-TTg ngày 08 tháng 01 năm 2016. Đến nay, Trường Đại học Văn Hiến là một trong những trường đại học tư thục có uy tín tại Việt Nam, đào tạo đa ngành, đa lĩnh vực từ bậc đại học đến tiến sĩ."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.vhu.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C4%83n_Hi%E1%BA%BFn"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/V%C4%83n_Hi%E1%BA%BFn_University"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.8037"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.685"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/00vbzs544"
+        },
+        {
+          "@id": "wd:Q7913402"
+        },
+        {
+          "@id": "dbr:Văn_Hiến_University"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q7913402"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75479973"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Van Hien University"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Văn Hiến"
+        }
+      ],
+      "schema:employee": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-hau"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-4"
+        }
+      ],
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/4/40/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_V%C4%83n_Hi%E1%BA%BFn.png"
+      },
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Văn Hiến"
+      },
+      "vnedu:address": "613 Âu Cơ, phường Tân Phú",
+      "vnedu:councilChair": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-hau"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1997"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      },
+      "vnedu:hasLeader": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-4"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-hau"
+        }
+      ],
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Văn Hiến được thành lập ngày 11 tháng 7 năm 1997 với tên gọi ban đầu là Đại học Dân lập Văn Hiến theo Quyết định số 517/TTg của Thủ tướng Chính phủ. Ngày 28 tháng 12 năm 2016, Thủ tướng Chính phủ ban hành Quyết định số 58/QĐ-TTg cho phép chuyển đổi loại hình trường từ dân lập sang tư thục, đánh dấu một giai đoạn phát triển mới về quy mô và chất lượng đào tạo.\n\nTrong suốt quá trình phát triển, Nhà trường đã không ngừng mở rộng quy mô đào tạo, đầu tư cơ sở vật chất và nâng cao chất lượng giảng dạy. Hiện nay, trường có nhiều cơ sở đào tạo trên địa bàn Thành phố Hồ Chí Minh, với cơ sở chính đặt tại số 613 Âu Cơ, phường Tân Phú."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Thành Nhân trước thành Danh"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PrivateOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-4"
+      },
+      "vnedu:website": {
+        "@id": "http://www.vhu.edu.vn"
+      }
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/V%C4%83n_Hi%E1%BA%BFn_University"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/4/40/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_V%C4%83n_Hi%E1%BA%BFn.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Logo Trường Đại Học Văn Hiến",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_V%C4%83n_Hi%E1%BA%BFn.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/4/40/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_V%C4%83n_Hi%E1%BA%BFn.png"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.8037"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.685"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "https://ror.org/00vbzs544"
-    },
-    {
-      "@id": "dbr:Văn_Hiến_University"
-    },
-    {
-      "@id": "wd:Q7913402"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q7913402"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75479973"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Văn Hiến"
-    },
-    {
-      "@language": "en",
-      "@value": "Van Hien University"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-4"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Văn Hiến"
-  },
-  "vnedu:address": "613 Âu Cơ, phường Tân Phú",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1997"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-4"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Thành Nhân trước thành Danh"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PrivateOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-4"
-  },
-  "vnedu:website": {
-    "@id": "http://www.vhu.edu.vn"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.8037,106.685],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.8037,106.685],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -161,8 +201,10 @@
 <p class="uri">https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-hien<br>
   <a href="truong-dai-hoc-van-hien.ttl">Turtle</a> · <a href="truong-dai-hoc-van-hien.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-hien">Truy vấn SPARQL</a>
-   · <span class="pill inf">suy luận</span> = 17 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+   · <span class="pill inf">suy luận</span> = 19 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Văn Hiến (tiếng Anh: Van Hien University) là một cơ sở giáo dục đại học tư thục định hướng ứng dụng tại Thành phố Hồ Chí Minh, Việt Nam. Trường được thành lập ngày 11 tháng 7 năm 1997 theo Quyết định số 517/TTg của Thủ tướng Chính phủ và chuyển đổi loại hình sang tư thục theo Quyết định số 58/QĐ-TTg ngày 08 tháng 01 năm 2016. Đến nay, Trường Đại học Văn Hiến là một trong những trường đại học tư thục có uy tín tại Việt Nam, đào tạo đa ngành, đa lĩnh vực từ bậc đại học đến tiến sĩ.</p><h2>Lịch sử</h2><p>Trường Đại học Văn Hiến được thành lập ngày 11 tháng 7 năm 1997 với tên gọi ban đầu là Đại học Dân lập Văn Hiến theo Quyết định số 517/TTg của Thủ tướng Chính phủ. Ngày 28 tháng 12 năm 2016, Thủ tướng Chính phủ ban hành Quyết định số 58/QĐ-TTg cho phép chuyển đổi loại hình trường từ dân lập sang tư thục, đánh dấu một giai đoạn phát triển mới về quy mô và chất lượng đào tạo.</p><p>Trong suốt quá trình phát triển, Nhà trường đã không ngừng mở rộng quy mô đào tạo, đầu tư cơ sở vật chất và nâng cao chất lượng giảng dạy. Hiện nay, trường có nhiều cơ sở đào tạo trên địa bàn Thành phố Hồ Chí Minh, với cơ sở chính đặt tại số 613 Âu Cơ, phường Tân Phú.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75479973">«Trường Đại học Văn Hiến»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75479973), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Văn Hiến</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_V%C4%83n_Hi%E1%BA%BFn.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_V%C4%83n_Hi%E1%BA%BFn.png" alt="Biểu trưng Trường Đại học Văn Hiến" loading="lazy"></a><figcaption>CC BY-SA 4.0 · Logo Trường Đại Học Văn Hiến</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>Van Hien University</td></tr><tr><th>Loại hình</th><td>Trường đại học · Tư thục</td></tr><tr><th>Thành lập</th><td>1997</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-4">Nguyễn Minh Đức</a></td></tr><tr><th>Chủ tịch hội đồng trường</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-hau">Trần Văn Hậu</a></td></tr><tr><th>Địa chỉ</th><td>613 Âu Cơ, phường Tân Phú</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Thành Nhân trước thành Danh</i></td></tr><tr><th>Website</th><td><a href="http://www.vhu.edu.vn">vhu.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -190,13 +232,19 @@
 <div><a href="http://www.wikidata.org/entity/Q7913402">wd:Q7913402</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75479973">&lt;https://vi.wikipedia.org/w/index.php?oldid=75479973&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-4">Nguyễn Minh Đức</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-4">Nguyễn Minh Đức</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-hau">Trần Văn Hậu</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/4/40/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_V%C4%83n_Hi%E1%BA%BFn.png">&lt;https://upload.wikimedia.org/wikipedia/commons/4/40/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_V%C4%83n_Hi%E1%BA%BFn.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>613 Âu Cơ, phường Tân Phú</div>
+</td></tr>
+<tr><td class="p">chủ tịch hội đồng trường<small>vnedu:councilChair</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-hau">Trần Văn Hậu</a></div>
 </td></tr>
 <tr><td class="p">năm thành lập<small>vnedu:foundingYear</small></td><td>
 <div>1997 <span class="lang">xsd:gYear</span></div>
@@ -205,7 +253,7 @@
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a></div>
 </td></tr>
 <tr><td class="p">có người đứng đầu<small>vnedu:hasLeader</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-4">Nguyễn Minh Đức</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-4">Nguyễn Minh Đức</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-hau">Trần Văn Hậu</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">đặt tại<small>vnedu:locatedIn</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -227,11 +275,11 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-4">Nguyễn Minh Đức</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
 <tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-4">Nguyễn Minh Đức</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-van-hau">Trần Văn Hậu</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

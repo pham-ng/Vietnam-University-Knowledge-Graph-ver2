@@ -27,6 +27,7 @@ university:truong-dai-hoc-kinh-te-ky-thuat-cong-nghiep a dbo:University,
         schema:Organization ;
     rdfs:label "University of Economics - Technology for Industries"@en,
         "Trường Đại học Kinh tế – Kỹ thuật Công nghiệp"@vi ;
+    dbo:abstract "Trường Đại học Kinh tế - Kỹ thuật Công Nghiệp (tên tiếng Anh: University of Economics - Technology for Industries, tên viết tắt: UNETI), là trường đại học công lập định hướng nghề nghiệp ứng dụng, đào tạo cử nhân và kỹ sư hệ chính quy 4 năm, trực thuộc Bộ Công Thương Việt Nam, được thành lập năm 2007, trên cơ sở nâng cấp Trường Cao đẳng Kinh tế Kỹ thuật Công nghiệp I, thành lập từ năm 1956, đào tạo đa cấp, đa ngành."@vi ;
     owl:sameAs wd:Q10829072,
         <https://ror.org/035d00922> ;
     skos:prefLabel "Trường Đại học Kinh tế – Kỹ thuật Công nghiệp"@vi ;
@@ -46,7 +47,15 @@ university:truong-dai-hoc-kinh-te-ky-thuat-cong-nghiep a dbo:University,
     vnedu:rector person:tran-hoang-long ;
     vnedu:website <http://www.uneti.edu.vn/> ;
     schema:employee person:tran-hoang-long ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/3/3f/Uneti-2.png> ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:telephone "0945948353" .
+
+<https://upload.wikimedia.org/wikipedia/commons/3/3f/Uneti-2.png> a schema:ImageObject ;
+    schema:creditText "Ngochithanh1404" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Uneti-2.png> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/commons/3/3f/Uneti-2.png> .
 

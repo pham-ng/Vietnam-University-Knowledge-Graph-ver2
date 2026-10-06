@@ -30,141 +30,171 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-thuy-loi",
-  "@type": [
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "http://tlu.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Thuyloi_University"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-thuy-loi",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Thủy lợi (tiếng Anh: Thuyloi University) là trường đại học đào tạo lĩnh vực thủy lợi, môi trường, phòng chống và giảm nhẹ thiên tai và các nhóm ngành khác tại Việt Nam. Trường trực thuộc Bộ Nông nghiệp và Môi trường."
+      },
+      "foaf:homepage": {
+        "@id": "http://tlu.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/Thuyloi_University"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%E1%BB%A7y_l%E1%BB%A3i"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.007381"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.824519"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "dbr:Thuyloi_University"
+        },
+        {
+          "@id": "wd:Q7973360"
+        },
+        {
+          "@id": "https://ror.org/04afshy24"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75154006"
+        },
+        {
+          "@id": "wd:Q7973360"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Thuyloi University"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Thủy lợi"
+        }
+      ],
+      "schema:email": "phonghcth@tlu.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-trung-viet"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/b/bc/Logo-Thuy_Loi.png"
+      },
+      "schema:telephone": "024) 3852 2201",
+      "skos:altLabel": "TLU, Thuyloi University",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Thủy lợi"
+      },
+      "vnedu:address": "Số 175 Tây Sơn, Phường Kim Liên",
+      "vnedu:campus": "72.568 m²",
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Học Viện Thủy Lợi Điện Lực, WRU"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1959"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-nong-nghiep-va-moi-truong"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-huy-tuan"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-van-lap"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hong-t-pham"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-an-tran"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quang-viet-ly"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-trung-viet"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Tiền thân của Trường là Học viện Thủy lợi Điện lực được thành lập năm 1959. Tháng 1 năm 1963, Học viện Thủy lợi Điện lực chia thành 4 đơn vị là Trung cấp điện, Trung cấp Thủy lợi, Viện Nghiên cứu khoa học Thủy lợi và Trường Đại học Thủy lợi. Ban đầu, Trường có 3 ngành đào tạo: Thủy công, Thủy nông, Thủy văn. Các phòng thí nghiệm được lắp đặt: Sức bền vật liệu, Thủy lực, Thủy công, Thủy điện, Cơ đất... Năm 1965 nhà hành chính được xây dựng hoàn thành, với nhiều phòng học và phòng thí nghiệm phục vụ giảng dạy. Cũng trong năm này, trường mở thêm ngành Thủy điện (khoá 7).\n\nTháng 6 năm 1965, trường sở sơ tán lên vùng núi xã Nghĩa Phương, thuộc huyện Lục Nam, tỉnh Bắc Giang. Năm 1966, mở thêm ngành Cơ khí Thủy lợi (khoá 8). Năm 1967 mở thêm ngành Thi công (khoá 9). Năm 1970, trường sở trở về Hà Nội, nhưng đến năm 1972, một lần nữa lại sơ tán lên Việt Yên, Hiệp Hòa, tỉnh Bắc Giang và một số nơi khác. Năm 1973, trường sở lại về Hà Nội.\n\nTừ năm 1975 trở đi, Trường đã sắp xếp tổ chức lại ngành nghề đào tạo theo hướng diện rộng, chuyên môn hoá hợp lý bao gồm: Công trình Thủy lợi; Thủy văn và Kỹ thuật môi trường; Thủy năng và Trạm Thủy điện; Thủy nông và Cải tạo đất; Cơ khí Thủy lợi; Kinh tế Thủy lợi.\n\nNăm 1979, trường được chính thức công nhận là một cơ sở đào tạo Sau đại học. Đây cũng là giai đoạn Nhà trường phát triển mối quan hệ những mối quan hệ quốc tế có hiệu quả với nhiều trường ở Liên Xô (cũ) với các nước Đông Âu, Lào, Ấn Độ, Hà Lan...\n\nNgày 8 tháng 12 năm 1986, Trung tâm kết hợp đào tạo - nghiên cứu khoa học và thực hành khoa học kỹ thuật Thủy lợi tại Nam Bộ được thành lập trên cơ sở Đoàn Quy hoạch - Khảo sát và Thiết kế thủy lợi Nam Bộ. Ngày 25 tháng 2 năm 1997, Trường Đại học Thủy lợi tiếp nhận Trung tâm, và chuyển đổi thành cơ sở 2 đào tạo theo Quyết định số 288NN-TCCB/QĐ của Bộ trưởng Bộ Nông nghiệp và Phát triển Nông thôn và giữ tên gọi đó cho đến hiện nay.\n\nHiện tại, Trường Đại học Thủy lợi với 9 ngành 20 chuyên ngành nhằm phủ kín nội dung hoạt động về kỹ thuật tài nguyên nước ở Việt Nam. Dù là một trường chuyên ngành nhưng việc đào tạo của nhà trường đã đang bắt đầu mang tính liên ngành đa lĩnh vực."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Học tập vì ngày mai lập nghiệp"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-trung-viet"
+      },
+      "vnedu:website": {
+        "@id": "http://tlu.edu.vn"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%E1%BB%A7y_l%E1%BB%A3i"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/b/bc/Logo-Thuy_Loi.png",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo-Thuy_Loi.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/b/bc/Logo-Thuy_Loi.png"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.007381"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.824519"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "wd:Q7973360"
-    },
-    {
-      "@id": "https://ror.org/04afshy24"
-    },
-    {
-      "@id": "dbr:Thuyloi_University"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75154006"
-    },
-    {
-      "@id": "wd:Q7973360"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Thuyloi University"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Thủy lợi"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-trung-viet"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Thủy lợi"
-  },
-  "vnedu:address": "Số 175 Tây Sơn, Phường Kim Liên",
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Học Viện Thủy Lợi Điện Lực, WRU"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1959"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-nong-nghiep-va-moi-truong"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-van-lap"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-huy-tuan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quang-viet-ly"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-an-tran"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hong-t-pham"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-trung-viet"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Học tập vì ngày mai lập nghiệp"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-trung-viet"
-  },
-  "vnedu:website": {
-    "@id": "http://tlu.edu.vn"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([21.007381,105.824519],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([21.007381,105.824519],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -183,7 +213,9 @@
   <a href="truong-dai-hoc-thuy-loi.ttl">Turtle</a> · <a href="truong-dai-hoc-thuy-loi.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-thuy-loi">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 22 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Thủy lợi (tiếng Anh: Thuyloi University) là trường đại học đào tạo lĩnh vực thủy lợi, môi trường, phòng chống và giảm nhẹ thiên tai và các nhóm ngành khác tại Việt Nam. Trường trực thuộc Bộ Nông nghiệp và Môi trường.</p><h2>Lịch sử</h2><p>Tiền thân của Trường là Học viện Thủy lợi Điện lực được thành lập năm 1959. Tháng 1 năm 1963, Học viện Thủy lợi Điện lực chia thành 4 đơn vị là Trung cấp điện, Trung cấp Thủy lợi, Viện Nghiên cứu khoa học Thủy lợi và Trường Đại học Thủy lợi. Ban đầu, Trường có 3 ngành đào tạo: Thủy công, Thủy nông, Thủy văn. Các phòng thí nghiệm được lắp đặt: Sức bền vật liệu, Thủy lực, Thủy công, Thủy điện, Cơ đất... Năm 1965 nhà hành chính được xây dựng hoàn thành, với nhiều phòng học và phòng thí nghiệm phục vụ giảng dạy. Cũng trong năm này, trường mở thêm ngành Thủy điện (khoá 7).</p><p>Tháng 6 năm 1965, trường sở sơ tán lên vùng núi xã Nghĩa Phương, thuộc huyện Lục Nam, tỉnh Bắc Giang. Năm 1966, mở thêm ngành Cơ khí Thủy lợi (khoá 8). Năm 1967 mở thêm ngành Thi công (khoá 9). Năm 1970, trường sở trở về Hà Nội, nhưng đến năm 1972, một lần nữa lại sơ tán lên Việt Yên, Hiệp Hòa, tỉnh Bắc Giang và một số nơi khác. Năm 1973, trường sở lại về Hà Nội.</p><details><summary>Đọc tiếp (4 đoạn)</summary><p>Từ năm 1975 trở đi, Trường đã sắp xếp tổ chức lại ngành nghề đào tạo theo hướng diện rộng, chuyên môn hoá hợp lý bao gồm: Công trình Thủy lợi; Thủy văn và Kỹ thuật môi trường; Thủy năng và Trạm Thủy điện; Thủy nông và Cải tạo đất; Cơ khí Thủy lợi; Kinh tế Thủy lợi.</p><p>Năm 1979, trường được chính thức công nhận là một cơ sở đào tạo Sau đại học. Đây cũng là giai đoạn Nhà trường phát triển mối quan hệ những mối quan hệ quốc tế có hiệu quả với nhiều trường ở Liên Xô (cũ) với các nước Đông Âu, Lào, Ấn Độ, Hà Lan...</p><p>Ngày 8 tháng 12 năm 1986, Trung tâm kết hợp đào tạo - nghiên cứu khoa học và thực hành khoa học kỹ thuật Thủy lợi tại Nam Bộ được thành lập trên cơ sở Đoàn Quy hoạch - Khảo sát và Thiết kế thủy lợi Nam Bộ. Ngày 25 tháng 2 năm 1997, Trường Đại học Thủy lợi tiếp nhận Trung tâm, và chuyển đổi thành cơ sở 2 đào tạo theo Quyết định số 288NN-TCCB/QĐ của Bộ trưởng Bộ Nông nghiệp và Phát triển Nông thôn và giữ tên gọi đó cho đến hiện nay.</p><p>Hiện tại, Trường Đại học Thủy lợi với 9 ngành 20 chuyên ngành nhằm phủ kín nội dung hoạt động về kỹ thuật tài nguyên nước ở Việt Nam. Dù là một trường chuyên ngành nhưng việc đào tạo của nhà trường đã đang bắt đầu mang tính liên ngành đa lĩnh vực.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75154006">«Trường Đại học Thủy lợi»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75154006), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Thủy lợi</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo-Thuy_Loi.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://upload.wikimedia.org/wikipedia/vi/b/bc/Logo-Thuy_Loi.png" alt="Biểu trưng Trường Đại học Thủy lợi" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên khác</th><td>TLU, Thuyloi University</td></tr><tr><th>Tên tiếng Anh</th><td>Thuyloi University</td></tr><tr><th>Tên cũ</th><td>Học Viện Thủy Lợi Điện Lực, WRU</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>1959</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-nong-nghiep-va-moi-truong">Bộ Nông nghiệp và Môi trường</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">GS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-trung-viet">Nguyễn Trung Việt</a></td></tr><tr><th>Địa chỉ</th><td>Số 175 Tây Sơn, Phường Kim Liên</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Khuôn viên</th><td>72.568 m²</td></tr><tr><th>Khẩu hiệu</th><td><i>Học tập vì ngày mai lập nghiệp</i></td></tr><tr><th>Điện thoại</th><td>024) 3852 2201</td></tr><tr><th>Email</th><td><a href="mailto:phonghcth@tlu.edu.vn">phonghcth@tlu.edu.vn</a></td></tr><tr><th>Website</th><td><a href="http://tlu.edu.vn">tlu.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -210,14 +242,29 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q7973360">wd:Q7973360</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75154006">&lt;https://vi.wikipedia.org/w/index.php?oldid=75154006&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>phonghcth@tlu.edu.vn</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-trung-viet">Nguyễn Trung Việt</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/b/bc/Logo-Thuy_Loi.png">&lt;https://upload.wikimedia.org/wikipedia/vi/b/bc/Logo-Thuy_Loi.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>024) 3852 2201</div>
+</td></tr>
+<tr><td class="p">tên khác<small>skos:altLabel</small></td><td>
+<div>TLU, Thuyloi University</div>
+</td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>Số 175 Tây Sơn, Phường Kim Liên</div>
+</td></tr>
+<tr><td class="p">khuôn viên<small>vnedu:campus</small></td><td>
+<div>72.568 m²</div>
 </td></tr>
 <tr><td class="p">tên cũ<small>vnedu:formerName</small></td><td>
 <div>Học Viện Thủy Lợi Điện Lực, WRU <span class="lang">@vi</span></div>
@@ -254,14 +301,14 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
+<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-an-tran">Dang An Tran</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hong-t-pham">Hong T Pham</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-van-lap">Phạm Văn Lập</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/quang-viet-ly">Quang Viet Ly</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-huy-tuan">Trần Huy Tuấn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-an-tran">Dang An Tran</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hong-t-pham">Hong T Pham</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-van-lap">Phạm Văn Lập</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/quang-viet-ly">Quang Viet Ly</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-huy-tuan">Trần Huy Tuấn</a></div>
 </td></tr>
 <tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-nong-nghiep-va-moi-truong">Bộ Nông nghiệp và Môi trường</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
-<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-an-tran">Dang An Tran</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hong-t-pham">Hong T Pham</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-van-lap">Phạm Văn Lập</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/quang-viet-ly">Quang Viet Ly</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-huy-tuan">Trần Huy Tuấn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-trung-viet">Nguyễn Trung Việt</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

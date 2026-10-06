@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -27,6 +28,7 @@ university:hoc-vien-hai-quan a foaf:Organization,
         schema:Organization ;
     rdfs:label "Vietnam Naval Academy"@en,
         "Học viện Hải quân"@vi ;
+    dbo:abstract "Học viện Hải quân (HQH) là một học viện quân sự trực thuộc quân chủng Hải quân của Bộ Quốc phòng chuyên đào tạo sĩ quan chỉ huy hải quân & cảnh sát biển cấp phân đội và chỉ huy tham mưu hải quân & cảnh sát biển cấp chiến thuật - chiến dịch trình độ đại học quân sự, sau đại học. Thành lập: Ngày 26/4/1955 Trụ sở chính: 30, đường Trần Phú, phường Nha Trang, tỉnh Khánh Hòa"@vi ;
     owl:sameAs dbr:Vietnam_Naval_Academy,
         wd:Q7928533,
         <https://ror.org/02wqs8977> ;
@@ -42,12 +44,28 @@ university:hoc-vien-hai-quan a foaf:Organization,
     vnedu:foundingYear "1955"^^xsd:gYear ;
     vnedu:governedBy vnedu:MinistryOfNationalDefence,
         organization:quan-chung-hai-quan ;
+    vnedu:history "Ngày 26 tháng 4 năm 1955 theo quyết định số 1125/QF/TTL của Bộ Quốc phòng Việt Nam, Trường Huấn luyện Bờ biển được thành lập (mật danh là C45) với nhiệm vụ: Huấn luyện, đào tạo cán bộ thủy binh cho các thủy đội và đài quan sát Cùng Bộ nghiên cứu kế hoạch huấn luyện và hoạt động của hải quân Theo kế hoạch của Bộ Tổng tư lệnh và Cục Phòng thủ Bờ biển (Bộ Tư lệnh Hải quân hiện nay), trường đã tiếp quản trại lính Thủy quân lục chiến Pháp nằm trên ngã ba bờ sông Tam Bạc và sông Cấm, cách cầu Hạ Lý 300 m. Ngày 6 tháng 6 năm 1955, khóa học đầu tiên đã được khai giảng. Học viên là cán bộ, chiến sĩ bộ binh, công binh,... của các sư đoàn 330, 308 và một số đơn vị khác đã tham gia tại nhiều chiến trường; văn hóa không đồng đều mà chủ yếu là lớp 2, lớp 3. Ngày 24 tháng 1 năm 1959, Trường được đổi tên thành \"Trường Huấn luyện Hải quân\". Khu doanh trại mới dời về ngã sáu Hải Phòng (khu E) và được xây dựng thêm để đáp ứng việc tăng số lượng học viên của trường. Tháng 1 năm 1961, trường được đổi tên thành \"Trường Hải quân Việt Nam\". Tháng 4 năm 1966, Bộ Tư lệnh Hải quân quyết định chuyển trường ra Tiên Yên để vừa thực hiện nhiệm vụ đào tạo, vừa tăng cường lực lượng vũ trang ở vùng Đông Bắc. Tháng 7 năm 1969 trường đã di chuyển ra đảo Vạn Hoa, tiếp nhận toàn bộ cơ sở của Trung đoàn 170. Theo quyết định của Quân chủng, nhà trường trở về Quảng Yên làm nhiệm vụ đào tạo sĩ quan \"không phải đảm nhiệm huấn luyện hạ sĩ quan và nhân viên kỹ thuật nữa\", Tiểu đoàn 8 và Tiểu đoàn 9 của trường vẫn ở lại Vạn Hoa thành lập Trung đoàn 170 để làm nhiệm vụ huấn luyện hạ sĩ quan và nhân viên kỹ thuật. Chấp hành chỉ thị của Bộ Quốc phòng, ngày 10 tháng 9 năm 1975 Đảng ủy Quân chủng Hải quân ra nghị quyết số 986/ĐU và ngày 15 tháng 9 năm 1975, Tư lệnh Hải quân ra chỉ thị số 1005/TL quyết định chia Trường Sĩ quan Hải quân thành 2 trường: Trường Sĩ quan Hải quân I và Trường sĩ quan Hải quân 2. Trường Sĩ quan Hải quân I đóng quân tại thị trấn Quảng Yên huyện Yên Hưng tỉnh Quảng Ninh. Trường Sĩ quan Hải quân II tiếp quản Trung tâm Huấn luyện Hải quân Nha Trang của Việt Nam Cộng hòa tại Nha Trang tỉnh Khánh Hòa. Ngày 28 tháng 7 năm 1979, Tư lệnh Hải quân đã ký quyết định sáp nhập 2 trường Sĩ quan Hải quân I và II thành Trường Sĩ quan Hải quân Việt Nam. Ngày 23 tháng 10 năm 1980, Trường Sĩ quan Hải quân Việt Nam đổi tên thành Trường Sĩ quan Chỉ huy-Kỹ thuật Hải quân."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:khanh-hoa,
         region:trung-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:website <http://hocvienhaiquan.edu.vn/> ;
+    schema:foundingDate "1955-04-26"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/4/41/Haiquan.png> ;
     schema:location country:viet-nam,
         province:khanh-hoa,
-        region:trung-bo .
+        region:trung-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/0/06/Vietnam_People%27s_Navy_flag.svg> .
+
+<https://upload.wikimedia.org/wikipedia/commons/0/06/Vietnam_People%27s_Navy_flag.svg> a schema:ImageObject ;
+    schema:creditText "Vietnam People's Navy" ;
+    schema:license "Public domain" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Vietnam_People%27s_Navy_flag.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Vietnam_People%27s_Navy_flag.svg/330px-Vietnam_People%27s_Navy_flag.svg.png> .
+
+<https://upload.wikimedia.org/wikipedia/commons/4/41/Haiquan.png> a schema:ImageObject ;
+    schema:creditText "Thongth4992" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Haiquan.png> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/commons/4/41/Haiquan.png> .
 

@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -25,6 +26,7 @@ university:hoc-vien-tu-phap a foaf:Organization,
         schema:Organization ;
     rdfs:label "Judicial Academy"@en,
         "Học viện Tư pháp"@vi ;
+    dbo:abstract "Học viện Tư pháp Việt Nam là cơ sở đào tạo và nghiên cứu khoa học cấp đại học tại Việt Nam, chuyên ngành đào tạo, bồi dưỡng các chức danh tư pháp tại Việt Nam."@vi ;
     owl:sameAs wd:Q10771905,
         <https://ror.org/04m3c6y30> ;
     geo:lat 21.043832 ;
@@ -35,14 +37,20 @@ university:hoc-vien-tu-phap a foaf:Organization,
     foaf:homepage <http://www.hocvientuphap.edu.vn/> ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_T%C6%B0_ph%C3%A1p_%28Vi%E1%BB%87t_Nam%29> ;
     vnedu:address "Số 9 phố Trần Vỹ, phường Phú Diễn" ;
+    vnedu:campus "Nội thành" ;
     vnedu:foundingYear "2004"^^xsd:gYear ;
     vnedu:hasAlumnus person:bui-son-truong ;
+    vnedu:history """Học viện Tư pháp Việt Nam được thành lập theo Quyết định số 23/2004/QĐ-TTg ngày 25 tháng 2 năm 2004 của Thủ tướng Chính phủ, trực thuộc Bộ Tư pháp. Học viện Tư pháp là đơn vị sự nghiệp có thu, có tư cách pháp nhân, có con dấu hình quốc huy, có tài khoản riêng, có trụ sở tại Hà Nội và cơ sở tại thành phố Hồ Chí Minh.
+
+Ngày 30 tháng 9 năm 2022, Thủ tướng Chính phủ ban hành Quyết định 1155/QĐ-TTg về việc phê duyệt Đề án "Tiếp tục xây dựng Học viện Tư pháp thành trung tâm lớn đào tạo các chức danh tư pháp"."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:website <http://www.hocvientuphap.edu.vn/> ;
+    schema:foundingDate "2004-02-25"^^xsd:date ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:telephone "024)37566129" .
 

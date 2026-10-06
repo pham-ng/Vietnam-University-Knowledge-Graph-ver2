@@ -28,6 +28,7 @@ university:truong-dai-hoc-bac-lieu a dbo:University,
         schema:Organization ;
     rdfs:label "Bac Lieu University"@en,
         "Trường Đại học Bạc Liêu"@vi ;
+    dbo:abstract "Trường Đại học Bạc Liêu (tiếng Anh: Bac Lieu University, viết tắt: BLU) là trường đại học công lập đa ngành trực thuộc Ủy ban Nhân dân tỉnh Cà Mau giữ vai trò là trung tâm đào tạo nguồn nhân lực, nghiên cứu khoa học và chuyển giao công nghệ trọng điểm của tỉnh. Trường được thành lập vào năm 2006 trên cơ sở hợp nhất Trường Cao đẳng Sư phạm Bạc Liêu và Trung tâm Giáo dục thường xuyên tỉnh, với định hướng đào tạo các lĩnh vực thế mạnh của vùng như nông nghiệp – thủy sản, kinh tế và sư phạm."@vi ;
     owl:sameAs wd:Q10829021,
         <https://ror.org/0447bxp64> ;
     geo:lat 9.291609 ;
@@ -40,8 +41,20 @@ university:truong-dai-hoc-bac-lieu a dbo:University,
     vnedu:academicStaff "215"^^xsd:nonNegativeInteger ;
     vnedu:address "178 Võ Thị Sáu, phường Bạc Liêu, tỉnh Cà Mau" ;
     vnedu:foundingYear "2006"^^xsd:gYear ;
+    vnedu:funding "22,17 tỷ đồng" ;
     vnedu:governedBy organization:ubnd-tinh-ca-mau ;
     vnedu:hasLeader person:tu-diep-cong-thanh ;
+    vnedu:history """Trường Đại học Bạc Liêu được thành lập theo Quyết định số 1558/QĐ-TT ngày 24/11/2006 của Thủ tướng Chính phủ, nhằm mục tiêu đào tạo nguồn nhân lực phục vụ cho sự nghiệp phát triển kinh tế - xã hội không chỉ của tỉnh Cà Mau mà còn cho cả khu vực Bán đảo Cà Mau với các nhiệm vụ chính là: Đào tạo, bồi dưỡng nguồn nhân lực có trình độ đại học, cao đẳng. Liên kết đào tạo đại học, sau đại học. Nghiên cứu khoa học và chuyển giao công nghệ.
+
+Trường có 2 cơ sở tọa lạc trên địa bàn phường Bạc Liêu, tỉnh Cà Mau với tổng diện tích vỏn vẹn 5 héc-ta.
+
+Cơ sở 1: Số 178 Đường Võ Thị Sáu, phường Bạc Liêu Cơ sở 2: Số 112 Đường Lê Duẩn, phường Bạc Liêu
+
+Cơ sở vật chất của trường không ngừng được đầu tư nâng cấp, trang thiết bị mới và đồng bộ với các giảng đường, phòng học khang trang, trang bị các phương tiện nghe nhìn hiện đại, giáo trình, tài liệu tham khảo, Thư viện điện tử, các phòng máy tính, phòng thực hành, thí nghiệm đáp ứng được yêu cầu đào tạo và nghiên cứu khoa học.
+
+Trường hiện có 18 đơn vị trực thuộc Ban giám hiệu. Trong đó gồm 8 phòng: Phòng Tổ chức - cán bộ, Phòng Hành chính - Quản trị, Phòng Kế hoạch – Tài chính, Phòng Đào tạo, Phòng Công tác Chính trị và Quản lý sinh viên, Phòng Quản lý Khoa học, Phòng Hợp tác quốc tế; Phòng Thanh tra - Pháp chế.
+
+Ngoài tuyển sinh hệ Đại học chính quy, trường có tuyển sinh hệ Đại học chính quy văn bằng 2."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:bac-lieu,
         province:ca-mau,
@@ -51,9 +64,18 @@ university:truong-dai-hoc-bac-lieu a dbo:University,
     vnedu:rector person:tu-diep-cong-thanh ;
     vnedu:shortName "BLU" ;
     vnedu:website <https://blu.edu.vn/> ;
+    schema:email "mail@blu.edu.vn" ;
     schema:employee person:tu-diep-cong-thanh ;
+    schema:foundingDate "2006-11-24"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/vi/c/c1/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_B%E1%BA%A1c_Li%C3%AAu.jpg> ;
     schema:location country:viet-nam,
         province:bac-lieu,
         province:ca-mau,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:telephone "+84)7813822653" .
+
+<https://upload.wikimedia.org/wikipedia/vi/c/c1/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_B%E1%BA%A1c_Li%C3%AAu.jpg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:%C4%90%E1%BA%A1i_h%E1%BB%8Dc_B%E1%BA%A1c_Li%C3%AAu.jpg> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/vi/c/c1/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_B%E1%BA%A1c_Li%C3%AAu.jpg> .
 

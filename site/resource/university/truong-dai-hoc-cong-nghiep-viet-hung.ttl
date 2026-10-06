@@ -26,8 +26,10 @@ university:truong-dai-hoc-cong-nghiep-viet-hung a dbo:University,
         schema:Organization ;
     rdfs:label "Viet-Hung Industrial University"@en,
         "Trường Đại học Công nghiệp Việt – Hung"@vi ;
+    dbo:abstract "Trường Đại học Công nghiệp Việt – Hung (tiếng Anh: Vietnam–Hungary Industrial University – VIU) là trường đại học công lập trực thuộc Bộ Công Thương, chịu sự quản lý của Bộ Giáo dục và Đào tạo."@vi ;
     owl:sameAs wd:Q16480995,
         <https://ror.org/02sndnx77> ;
+    skos:altLabel "Đại học Việt Hung" ;
     skos:prefLabel "Trường Đại học Công nghiệp Việt – Hung"@vi ;
     prov:wasDerivedFrom wd:Q16480995,
         <https://vi.wikipedia.org/w/index.php?oldid=75101686> ;
@@ -36,6 +38,13 @@ university:truong-dai-hoc-cong-nghiep-viet-hung a dbo:University,
     vnedu:address "Khu A: Số 16 phố Hữu Nghị, phường Xuân Khanh, thị xã Sơn Tây, thành phố Hà Nội" ;
     vnedu:foundingYear "1977"^^xsd:gYear ;
     vnedu:governedBy organization:bo-cong-thuong ;
+    vnedu:history """Năm 1977: trường Công nhân kỹ thuật Hữu nghị Việt Nam-Hungary được thành lập nhờ sự giúp đỡ to lớn và quý báu của Hungary. Trường có sứ mệnh đào tạo những lớp thanh niên mới trở thành những người lao động có kỹ thuật cao, có kỷ luật và tác phong công nghiệp để xây dựng đất nước sau chiến tranh. Quy mô thiết kế ban đầu của trường là 1.000 học sinh, đào tạo các nhóm ngành Cơ khí và Điện.
+
+Năm 1988: Trường được nâng cấp và đổi tên thành trường Trung học Công nghiệp Việt-Hung, với nhiệm vụ đào tạo các kỹ thuật viên trung cấp tham gia vào sự nghiệp công nghiệp hóa và hiện đại hóa đất nước. Quy mô của trường được nâng lên 2.500 học sinh. Các ngành đào tạo được mở rộng đáp ứng nhu cầu xã hội. Nhà trường đào tạo thêm các ngành Kế toán và Công nghệ thông tin.
+
+Năm 2005: Trường được nâng cấp thành trường Cao đẳng với tên gọi mới Trường Cao đẳng Công nghiệp Việt-Hung, đánh dấu bước trưởng thành vượt bậc về chất của nhà trường. Trình độ đội ngũ giáo viên được nâng lên rõ rệt. Cơ sở vật chất được bổ sung đáp ứng quy mô đào tạo 4.500 học sinh, sinh viên. Nhà trường tiếp tục hoạch định chiến lược chuẩn bị các điều kiện để trở thành trường Đại học.
+
+Năm 2010: Trường được Nhà nước nâng cấp thành trường Đại học Công nghiệp Việt-Hung. Qua 3 lần nâng cấp từ công nhân lên trung cấp, từ trung cấp lên cao đẳng và từ cao đẳng lên Đại học nhà trường vẫn giữ tên gọi trường Việt-Hung."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -43,5 +52,12 @@ university:truong-dai-hoc-cong-nghiep-viet-hung a dbo:University,
     vnedu:website <https://viu.edu.vn/> ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/3/3b/Logo_viethung.png> ;
+    schema:telephone "+84 433 838 345" .
+
+<https://upload.wikimedia.org/wikipedia/vi/3/3b/Logo_viethung.png> a schema:ImageObject ;
+    schema:license "KTD" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_viethung.png> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/vi/3/3b/Logo_viethung.png> .
 

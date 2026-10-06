@@ -29,6 +29,7 @@ university:truong-dai-hoc-van-hien a dbo:University,
         schema:Organization ;
     rdfs:label "Van Hien University"@en,
         "Trường Đại học Văn Hiến"@vi ;
+    dbo:abstract "Trường Đại học Văn Hiến (tiếng Anh: Van Hien University) là một cơ sở giáo dục đại học tư thục định hướng ứng dụng tại Thành phố Hồ Chí Minh, Việt Nam. Trường được thành lập ngày 11 tháng 7 năm 1997 theo Quyết định số 517/TTg của Thủ tướng Chính phủ và chuyển đổi loại hình sang tư thục theo Quyết định số 58/QĐ-TTg ngày 08 tháng 01 năm 2016. Đến nay, Trường Đại học Văn Hiến là một trong những trường đại học tư thục có uy tín tại Việt Nam, đào tạo đa ngành, đa lĩnh vực từ bậc đại học đến tiến sĩ."@vi ;
     owl:sameAs dbr:Văn_Hiến_University,
         wd:Q7913402,
         <https://ror.org/00vbzs544> ;
@@ -41,9 +42,14 @@ university:truong-dai-hoc-van-hien a dbo:University,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/V%C4%83n_Hi%E1%BA%BFn_University>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C4%83n_Hi%E1%BA%BFn> ;
     vnedu:address "613 Âu Cơ, phường Tân Phú" ;
+    vnedu:councilChair person:tran-van-hau ;
     vnedu:foundingYear "1997"^^xsd:gYear ;
     vnedu:governedBy organization:bo-giao-duc-va-dao-tao ;
-    vnedu:hasLeader person:nguyen-minh-duc-4 ;
+    vnedu:hasLeader person:nguyen-minh-duc-4,
+        person:tran-van-hau ;
+    vnedu:history """Trường Đại học Văn Hiến được thành lập ngày 11 tháng 7 năm 1997 với tên gọi ban đầu là Đại học Dân lập Văn Hiến theo Quyết định số 517/TTg của Thủ tướng Chính phủ. Ngày 28 tháng 12 năm 2016, Thủ tướng Chính phủ ban hành Quyết định số 58/QĐ-TTg cho phép chuyển đổi loại hình trường từ dân lập sang tư thục, đánh dấu một giai đoạn phát triển mới về quy mô và chất lượng đào tạo.
+
+Trong suốt quá trình phát triển, Nhà trường đã không ngừng mở rộng quy mô đào tạo, đầu tư cơ sở vật chất và nâng cao chất lượng giảng dạy. Hiện nay, trường có nhiều cơ sở đào tạo trên địa bàn Thành phố Hồ Chí Minh, với cơ sở chính đặt tại số 613 Âu Cơ, phường Tân Phú."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -51,8 +57,16 @@ university:truong-dai-hoc-van-hien a dbo:University,
     vnedu:ownership vnedu:PrivateOwnership ;
     vnedu:rector person:nguyen-minh-duc-4 ;
     vnedu:website <http://www.vhu.edu.vn> ;
-    schema:employee person:nguyen-minh-duc-4 ;
+    schema:employee person:nguyen-minh-duc-4,
+        person:tran-van-hau ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/4/40/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_V%C4%83n_Hi%E1%BA%BFn.png> .
+
+<https://upload.wikimedia.org/wikipedia/commons/4/40/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_V%C4%83n_Hi%E1%BA%BFn.png> a schema:ImageObject ;
+    schema:creditText "Logo Trường Đại Học Văn Hiến" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_V%C4%83n_Hi%E1%BA%BFn.png> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/commons/4/40/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_V%C4%83n_Hi%E1%BA%BFn.png> .
 

@@ -17,69 +17,93 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-y-te-cong-cong",
-  "@type": [
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_t%E1%BA%BF_C%C3%B4ng_c%E1%BB%99ng"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q10829176"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "wd:Q10829176"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-y-te-cong-cong",
+      "@type": [
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Y tế Công cộng là một trường đại học được thành lập ngày 26 tháng 4 năm 2001 theo Quyết định số 65/2001 /QĐ-TTG của Thủ tướng Chính phủ, trụ sở cũ của trường được đặt tại số 138B đường Giảng Võ, phường Kim Mã, quận Ba Đình, thành phố Hà Nội. Trường Đại học Y tế công cộng có trụ sở mới tại số 1A đường Đức Thắng, phường Đức Thắng, quận Bắc Từ Liêm, thành phố Hà Nội. Được thành lập từ năm 2001 tiền thân là trường Cán bộ quản lý y tế, trường là trường đại học đầu tiên của cả nước đào tạo về lĩnh vực Y tế công cộng. Ngày 16 tháng 7 năm 2016, trường y tế công cộng được khánh thành trụ sở mới tại số 1A, đường Đức Thắng, phường Đức Thắng, quận Bắc Từ Liêm, thành phố Hà Nội theo hợp đồng hợp tác chuyển giao BT theo hình thức đổi đất lấy hạ tầng."
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_t%E1%BA%BF_C%C3%B4ng_c%E1%BB%99ng"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q10829176"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085569"
+        },
+        {
+          "@id": "wd:Q10829176"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "vi",
+        "@value": "Trường Đại học Y tế Công cộng"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/f/f5/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_t%E1%BA%BF_C%C3%B4ng_c%E1%BB%99ng.JPG"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:telephone": "+84-(0)04. 266 2299",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Y tế Công cộng"
+      },
+      "vnedu:address": "1A đường Đức Thắng, phường Đức Thắng, quận Bắc Từ Liêm",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2001"
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085569"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/f/f5/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_t%E1%BA%BF_C%C3%B4ng_c%E1%BB%99ng.JPG",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Nguyễn Thanh Quang",
+      "schema:license": "CC BY-SA 3.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_t%E1%BA%BF_C%C3%B4ng_c%E1%BB%99ng.JPG"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_t%E1%BA%BF_C%C3%B4ng_c%E1%BB%99ng.JPG/330px-%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_t%E1%BA%BF_C%C3%B4ng_c%E1%BB%99ng.JPG"
+      }
     }
-  ],
-  "rdfs:label": {
-    "@language": "vi",
-    "@value": "Trường Đại học Y tế Công cộng"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Y tế Công cộng"
-  },
-  "vnedu:address": "1A đường Đức Thắng, phường Đức Thắng, quận Bắc Từ Liêm",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2001"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  }
+  ]
 }

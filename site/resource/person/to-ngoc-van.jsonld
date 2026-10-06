@@ -19,17 +19,17 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/to-ngoc-van",
   "@type": [
-    "vnedu:Person",
-    "foaf:Person",
+    "schema:Person",
     "vnedu:Alumnus",
-    "schema:Person"
+    "foaf:Person",
+    "vnedu:Person"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/T%C3%B4_Ng%E1%BB%8Dc_V%C3%A2n"
+      "@id": "https://vi.wikipedia.org/wiki/T%C3%B4_Ng%E1%BB%8Dc_V%C3%A2n"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/T%C3%B4_Ng%E1%BB%8Dc_V%C3%A2n"
+      "@id": "https://en.wikipedia.org/wiki/T%C3%B4_Ng%E1%BB%8Dc_V%C3%A2n"
     }
   ],
   "foaf:name": "Tô Ngọc Vân",
@@ -62,13 +62,13 @@
   },
   "schema:hasOccupation": [
     {
+      "@id": "wd:Q4164507"
+    },
+    {
       "@id": "wd:Q1028181"
     },
     {
       "@id": "wd:Q483501"
-    },
-    {
-      "@id": "wd:Q4164507"
     }
   ],
   "vnedu:alumnusOf": {

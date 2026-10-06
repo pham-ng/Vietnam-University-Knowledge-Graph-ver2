@@ -19,10 +19,10 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-nai",
   "@type": [
-    "schema:AdministrativeArea",
+    "vnedu:AdministrativeUnit",
     "vnedu:CentrallyGovernedCity",
     "vnedu:Province",
-    "vnedu:AdministrativeUnit"
+    "schema:AdministrativeArea"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -42,13 +42,13 @@
   },
   "owl:sameAs": [
     {
+      "@id": "wd:Q33271"
+    },
+    {
       "@id": "dbr:Đồng_Nai_province"
     },
     {
       "@id": "https://sws.geonames.org/1582720/"
-    },
-    {
-      "@id": "wd:Q33271"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -56,11 +56,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Đồng Nai"
     },
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Đồng Nai"
     }
   ],
@@ -73,10 +73,10 @@
   },
   "vnedu:partOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     }
   ],
   "vnedu:population": {

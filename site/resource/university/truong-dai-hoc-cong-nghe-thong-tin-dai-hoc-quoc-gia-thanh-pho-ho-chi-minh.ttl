@@ -29,6 +29,7 @@ university:truong-dai-hoc-cong-nghe-thong-tin-dai-hoc-quoc-gia-thanh-pho-ho-chi-
         schema:Organization ;
     rdfs:label "VNU-HCM University of Information Technology"@en,
         "Trường Đại học Công nghệ Thông tin, Đại học Quốc gia Thành phố Hồ Chí Minh"@vi ;
+    dbo:abstract "Trường Đại học Công nghệ Thông tin ( – UIT) là một trung tâm về nghiên cứu khoa học và chuyển giao công nghệ về công nghệ thông tin – truyền thông, được xếp vào nhóm trường đại học trọng điểm quốc gia và là thành viên của Đại học Quốc gia Thành phố Hồ Chí Minh. Đây cũng là trường đại học trọng điểm về đào tạo lĩnh vực An toàn thông tin của cả nước, từng đạt nhiều thành tích cao trên đấu trường quốc tế. Thành lập theo Quyết định số 134/2006/QĐ-TTg ngày 8 tháng 6 năm 2006 của Thủ tướng Chính phủ."@vi ;
     owl:sameAs dbr:Ho_Chi_Minh_City_University_of_Information_Technology,
         wd:Q5873994,
         <https://ror.org/05kdc4973> ;
@@ -44,6 +45,11 @@ university:truong-dai-hoc-cong-nghe-thong-tin-dai-hoc-quoc-gia-thanh-pho-ho-chi-
     vnedu:foundingYear "2006"^^xsd:gYear ;
     vnedu:hasAlumnus person:nguyen-manh-luat ;
     vnedu:hasLeader person:nguyen-tan-tran-minh-khang ;
+    vnedu:history """Tiền thân của Trường Đại học Công nghệ Thông tin là Trung tâm phát triển Công nghệ Thông tin được thành lập theo quyết định số 416/QĐ/ĐHQG/TCCB của giám đốc Đại học Quốc gia Thành phố Hồ Chí Minh vào ngày 28 tháng 11 năm 1998. Đến ngày 8 tháng 6 năm 2006, Trường Đại học Công nghệ Thông tin được thành lập theo Quyết định số 134/2006/QĐ-TTg của Thủ tướng Chính phủ trên cơ sở Trung tâm Phát triển Công nghệ Thông tin. Trung tâm ban đầu được tái thành lập vào tháng 7 và trở thành một trung tâm trực thuộc trường.
+
+Hiệu trưởng đầu tiên của trường là giáo sư Hoàng Văn Kiếm, nguyên trưởng khoa Công nghệ thông tin của Trường Đại học Khoa học Tự nhiên. Khóa đầu tiên của trường được khai giảng vào tháng 10 cùng năm với khoảng 500 sinh viên cho 5 chuyên ngành học bao gồm Khoa học máy tính, Kỹ thuật máy tính, Công nghệ phần mềm, Mạng máy tính và truyền thông, Hệ thống Thông tin.
+
+Ngày 8 tháng 6 năm 2016, Trường Đại học Công nghệ Thông tin long trọng tổ chức Lễ Kỷ niệm 10 năm thành lập và Đón nhận Huân chương Lao động hạng III."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -53,8 +59,16 @@ university:truong-dai-hoc-cong-nghe-thong-tin-dai-hoc-quoc-gia-thanh-pho-ho-chi-
     vnedu:rector person:nguyen-tan-tran-minh-khang ;
     vnedu:website <http://www.uit.edu.vn> ;
     schema:employee person:nguyen-tan-tran-minh-khang ;
+    schema:foundingDate "2006-06-08"^^xsd:date ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg> ;
     schema:parentOrganization university:dai-hoc-quoc-gia-thanh-pho-ho-chi-minh .
+
+<https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg> a schema:ImageObject ;
+    schema:creditText "HannaUIT" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Logo_UIT_updated.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_UIT_updated.svg/330px-Logo_UIT_updated.svg.png> .
 

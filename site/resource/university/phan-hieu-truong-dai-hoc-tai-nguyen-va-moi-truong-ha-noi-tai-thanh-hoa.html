@@ -30,87 +30,117 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/phan-hieu-truong-dai-hoc-tai-nguyen-va-moi-truong-ha-noi-tai-thanh-hoa",
-  "@type": [
-    "vnedu:Branch",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:Organization",
-    "foaf:Organization"
-  ],
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Ph%C3%A2n_hi%E1%BB%87u_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_T%C3%A0i_nguy%C3%AAn_v%C3%A0_M%C3%B4i_tr%C6%B0%E1%BB%9Dng_H%C3%A0_N%E1%BB%99i_t%E1%BA%A1i_Thanh_H%C3%B3a"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q97964293"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "wd:Q97964293"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/4/4e/HUNRE_Logo.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "HUNRE",
+      "schema:license": "Public domain",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:HUNRE_Logo.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/HUNRE_Logo.png/330px-HUNRE_Logo.png"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75460563"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/phan-hieu-truong-dai-hoc-tai-nguyen-va-moi-truong-ha-noi-tai-thanh-hoa",
+      "@type": [
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:Branch",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "vnedu:PublicInstitution"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Phân hiệu Trường Đại học Tài nguyên và Môi trường Hà Nội tại Thanh Hóa trước đây là Trường Cao đẳng Tài nguyên và Môi trường Miền Trung trực thuộc Bộ Tài nguyên và Môi trường và là phân hiệu của Trường Đại học Tài nguyên và Môi trường Hà Nội. Phân hiệu được đặt tại phường Ba Đình, thị xã Bỉm Sơn, tỉnh Thanh Hóa."
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Ph%C3%A2n_hi%E1%BB%87u_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_T%C3%A0i_nguy%C3%AAn_v%C3%A0_M%C3%B4i_tr%C6%B0%E1%BB%9Dng_H%C3%A0_N%E1%BB%99i_t%E1%BA%A1i_Thanh_H%C3%B3a"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q97964293"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75460563"
+        },
+        {
+          "@id": "wd:Q97964293"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Branch of Hanoi University of Natural Resources and Environment in Thanh Hoa"
+        },
+        {
+          "@language": "vi",
+          "@value": "Phân hiệu Trường Đại học Tài nguyên và Môi trường Hà Nội tại Thanh Hóa"
+        }
+      ],
+      "schema:email": "phanhieu.tnmthn@gmail.com",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-anh-huy"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-hoa"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/4/4e/HUNRE_Logo.png"
+      },
+      "schema:telephone": "02373.824.252",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Phân hiệu Trường Đại học Tài nguyên và Môi trường Hà Nội tại Thanh Hóa"
+      },
+      "vnedu:address": "Số 04 - Trần Phú, phường Ba Đình, thị xã Bỉm Sơn",
+      "vnedu:campus": "40000m2",
+      "vnedu:director": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-anh-huy"
+      },
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Trường Cao đẳng Tài nguyên và Môi trường Miền Trung"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1968"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-anh-huy"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Cao đẳng Tài nguyên và Môi trường Miền Trung, tiền thân là Lớp công nhân Đo đạc, được thành lập theo Quyết định số 115 QĐ/TC ngày 05/09/1968 của Bộ Nông Trường (nay là Bộ Nông nghiệp và Phát triển nông thôn), đóng tại địa bàn huyện Quốc Oai, tỉnh Hà Tây.\n\nCuối năm 1969, được nâng cấp thành thành Trường Trung cấp Đo đạc - Bản đồ và chuyển về xã Hà Dương, huyện Hà Trung, tỉnh Thanh Hoá (nay là phường Ba Đình, thị xã Bỉm Sơn, tỉnh Thanh Hoá).\n\nTrường được đổi tên một số lần cho phù hợp với tên của cơ quan chủ quản và phù hợp với chức năng, nhiệm vụ được giao như: Trường Trung học Đo đạc - Bản đồ và Quản lý ruộng đất, trường Trung học Quản lý ruộng đất, trường Trung học Địa chính Trung ương II, trường Trung học Tài nguyên và Môi trường Trung ương...\n\nNgày 28/07/2008 Quyết định số 4164/ QĐ- BGD&ĐT của Bộ GD&ĐT chính thức thành lập trường Cao đẳng Tài nguyên và Môi trường Miền Trung trên cơ sở trường Trung cấp Tài nguyên và Môi trường Trung ương.\n\nNgày 9/4/2018, Công bố quyết định thành lập Phân hiệu Trường Đại học Tài nguyên và Môi trường Hà Nội tại tỉnh Thanh Hóa, có địa chỉ số 04 - Trần Phú, phường Ba Đình, TX Bỉm Sơn, tỉnh Thanh Hóa."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-hoa"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      }
     }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Branch of Hanoi University of Natural Resources and Environment in Thanh Hoa"
-    },
-    {
-      "@language": "vi",
-      "@value": "Phân hiệu Trường Đại học Tài nguyên và Môi trường Hà Nội tại Thanh Hóa"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-anh-huy"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-hoa"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Phân hiệu Trường Đại học Tài nguyên và Môi trường Hà Nội tại Thanh Hóa"
-  },
-  "vnedu:address": "Số 04 - Trần Phú, phường Ba Đình, thị xã Bỉm Sơn",
-  "vnedu:director": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-anh-huy"
-  },
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Trường Cao đẳng Tài nguyên và Môi trường Miền Trung"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1968"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-anh-huy"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-hoa"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  }
+  ]
 }</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -129,6 +159,8 @@
   <a href="phan-hieu-truong-dai-hoc-tai-nguyen-va-moi-truong-ha-noi-tai-thanh-hoa.ttl">Turtle</a> · <a href="phan-hieu-truong-dai-hoc-tai-nguyen-va-moi-truong-ha-noi-tai-thanh-hoa.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/phan-hieu-truong-dai-hoc-tai-nguyen-va-moi-truong-ha-noi-tai-thanh-hoa">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 13 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Phân hiệu Trường Đại học Tài nguyên và Môi trường Hà Nội tại Thanh Hóa trước đây là Trường Cao đẳng Tài nguyên và Môi trường Miền Trung trực thuộc Bộ Tài nguyên và Môi trường và là phân hiệu của Trường Đại học Tài nguyên và Môi trường Hà Nội. Phân hiệu được đặt tại phường Ba Đình, thị xã Bỉm Sơn, tỉnh Thanh Hóa.</p><h2>Lịch sử</h2><p>Trường Cao đẳng Tài nguyên và Môi trường Miền Trung, tiền thân là Lớp công nhân Đo đạc, được thành lập theo Quyết định số 115 QĐ/TC ngày 05/09/1968 của Bộ Nông Trường (nay là Bộ Nông nghiệp và Phát triển nông thôn), đóng tại địa bàn huyện Quốc Oai, tỉnh Hà Tây.</p><p>Cuối năm 1969, được nâng cấp thành thành Trường Trung cấp Đo đạc - Bản đồ và chuyển về xã Hà Dương, huyện Hà Trung, tỉnh Thanh Hoá (nay là phường Ba Đình, thị xã Bỉm Sơn, tỉnh Thanh Hoá).</p><details><summary>Đọc tiếp (3 đoạn)</summary><p>Trường được đổi tên một số lần cho phù hợp với tên của cơ quan chủ quản và phù hợp với chức năng, nhiệm vụ được giao như: Trường Trung học Đo đạc - Bản đồ và Quản lý ruộng đất, trường Trung học Quản lý ruộng đất, trường Trung học Địa chính Trung ương II, trường Trung học Tài nguyên và Môi trường Trung ương...</p><p>Ngày 28/07/2008 Quyết định số 4164/ QĐ- BGD&amp;ĐT của Bộ GD&amp;ĐT chính thức thành lập trường Cao đẳng Tài nguyên và Môi trường Miền Trung trên cơ sở trường Trung cấp Tài nguyên và Môi trường Trung ương.</p><p>Ngày 9/4/2018, Công bố quyết định thành lập Phân hiệu Trường Đại học Tài nguyên và Môi trường Hà Nội tại tỉnh Thanh Hóa, có địa chỉ số 04 - Trần Phú, phường Ba Đình, TX Bỉm Sơn, tỉnh Thanh Hóa.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75460563">«Phân hiệu Trường Đại học Tài nguyên và Môi trường Hà Nội tại Thanh Hóa»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75460563), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Phân hiệu Trường Đại học Tài nguyên và Môi trường Hà Nội tại Thanh Hóa</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:HUNRE_Logo.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/HUNRE_Logo.png/330px-HUNRE_Logo.png" alt="Biểu trưng Phân hiệu Trường Đại học Tài nguyên và Môi trường Hà Nội tại Thanh Hóa" loading="lazy"></a><figcaption>Public domain · HUNRE</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>Branch of Hanoi University of Natural Resources and Environment in Thanh Hoa</td></tr><tr><th>Tên cũ</th><td>Trường Cao đẳng Tài nguyên và Môi trường Miền Trung</td></tr><tr><th>Loại hình</th><td>Phân hiệu · Công lập</td></tr><tr><th>Thành lập</th><td>1968</td></tr><tr><th>Giám đốc</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-anh-huy">Hoàng Anh Huy</a></td></tr><tr><th>Địa chỉ</th><td>Số 04 - Trần Phú, phường Ba Đình, thị xã Bỉm Sơn</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-hoa">Thanh Hóa</a></td></tr><tr><th>Khuôn viên</th><td>40000m2</td></tr><tr><th>Điện thoại</th><td>02373.824.252</td></tr><tr><th>Email</th><td><a href="mailto:phanhieu.tnmthn@gmail.com">phanhieu.tnmthn@gmail.com</a></td></tr></table></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
 
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
@@ -147,14 +179,26 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q97964293">wd:Q97964293</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75460563">&lt;https://vi.wikipedia.org/w/index.php?oldid=75460563&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>phanhieu.tnmthn@gmail.com</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-anh-huy">Hoàng Anh Huy</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-hoa">Thanh Hóa</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo">Trung Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/4/4e/HUNRE_Logo.png">&lt;https://upload.wikimedia.org/wikipedia/commons/4/4e/HUNRE_Logo.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>02373.824.252</div>
+</td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>Số 04 - Trần Phú, phường Ba Đình, thị xã Bỉm Sơn</div>
+</td></tr>
+<tr><td class="p">khuôn viên<small>vnedu:campus</small></td><td>
+<div>40000m2</div>
 </td></tr>
 <tr><td class="p">giám đốc<small>vnedu:director</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-anh-huy">Hoàng Anh Huy</a></div>

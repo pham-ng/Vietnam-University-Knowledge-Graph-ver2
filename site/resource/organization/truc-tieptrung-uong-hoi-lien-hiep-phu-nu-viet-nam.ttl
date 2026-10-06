@@ -1,0 +1,15 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+
+organization:truc-tieptrung-uong-hoi-lien-hiep-phu-nu-viet-nam a foaf:Organization,
+        vnedu:GoverningBody,
+        vnedu:Organization,
+        schema:GovernmentOrganization,
+        schema:Organization ;
+    rdfs:label "trực tiếpTrung ương Hội Liên hiệp Phụ nữ Việt Nam"@vi ;
+    vnedu:governs university:hoc-vien-phu-nu-viet-nam .
+

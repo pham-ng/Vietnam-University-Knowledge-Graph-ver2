@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -24,8 +25,10 @@ university:truong-si-quan-thong-tin-dai-hoc-thong-tin-lien-lac a foaf:Organizati
         schema:Organization ;
     rdfs:label "Telecommunications University"@en,
         "Trường Sĩ quan Thông tin – Đại học Thông tin Liên lạc"@vi ;
+    dbo:abstract "Trường Sĩ quan Thông tin (TTH) (Telecommunications University) (tên dân sự: Trường Đại học Thông tin liên lạc) là một trường đại học, trực thuộc Binh chủng Thông tin Liên lạc của Bộ Quốc phòng, là trường đào tạo sĩ quan, trình độ cử nhân quân sự chuyên ngành chỉ huy tham mưu thông tin liên lạc và tác chiến không gian mạng."@vi ;
     owl:sameAs wd:Q16480503,
         <https://ror.org/00a3esw81> ;
+    skos:altLabel "Trường Đại học Thông tin liên lạc (tên dân sự)" ;
     skos:prefLabel "Trường Sĩ quan Thông tin – Đại học Thông tin Liên lạc"@vi ;
     prov:wasDerivedFrom wd:Q16480503,
         <https://vi.wikipedia.org/w/index.php?oldid=75566443> ;
@@ -34,13 +37,44 @@ university:truong-si-quan-thong-tin-dai-hoc-thong-tin-lien-lac a foaf:Organizati
     vnedu:address "số 101 Mai Xuân Thưởng, Vĩnh Hòa, Nha Trang, Khánh Hòa, Việt Nam" ;
     vnedu:foundingYear "1951"^^xsd:gYear ;
     vnedu:governedBy vnedu:MinistryOfNationalDefence ;
+    vnedu:history """• Ngày 11 tháng 11 năm 1951, Bộ Quốc phòng ra Quyết định số 132/QĐ về việc thành lập Trường Thông tin. Trường đóng quân tại bản Piềng, xã Thanh Định, huyện Định Hóa, tỉnh Thái Nguyên. Từ đó ngày 11 tháng 11 hằng năm là ngày truyền thống của trường.
+
+• Tháng 7 năm 1958, Bộ Tổng tham mưu ra quyết định sáp nhập Trường Thông tin vào Trường Đại học Sĩ quan Lục quân 1.
+
+• Ngày 21 tháng 5 năm 1965, Bộ Quốc phòng ra Quyết định số 69/QĐ thành lập Trường Sĩ quan Thông tin trên cơ sở tách Khoa Thông tin từ Trường Đại học Sĩ quan Lục quân 1.
+
+• Tháng 9 năm 1978, Nhà trường khai giảng khoá thí điểm đào tạo sĩ quan thông tin cao đẳng chỉ huy và kỹ sư khai thác đầu tiên.
+
+• Tháng 9 năm 1979, Nhà trường chuyển trụ sở đóng quân từ tỉnh Hà Bắc cũ vào thành phố Nha Trang, tỉnh Khánh Hòa. Từ đó, trường đóng quân cho đến ngày nay.
+
+• Ngày 15 tháng 12 năm 1981, Bộ Quốc phòng ra Quyết định số 414 - QĐ/QP đổi tên Trường Sĩ quan Thông tin thành Trường Sĩ quan Chỉ huy Kỹ thuật Thông tin.
+
+• Ngày 14 tháng 10 năm 1997, Bộ Quốc phòng ra Quyết định số 137/QĐQP về việc sáp nhập Trường Trung cấp Kỹ thuật Thông tin vào Trường Sĩ quan Chỉ huy Kỹ thuật Thông tin.
+
+• Ngày 21 tháng 9 năm 1998, Chính phủ ra Quyết định số 480/1998-QĐ-TTg giao nhiệm vụ đào tạo đại học cho Trường Sĩ quan Chỉ huy Kỹ thuật Thông tin.
+
+• Ngày 12 tháng 4 năm 2002, Bộ Quốc phòng ra Quyết định số 53/QĐ-BQP giao nhiệm vụ đào tạo nguồn nhân lực phục vụ sự nghiệp công nghiệp hóa, hiện đại hóa Trường Sĩ quan Chỉ huy Kỹ thuật Thông tin.
+
+• Ngày 31 tháng 8 năm 2009, Bộ Quốc phòng ra Quyết định số 2999/QĐ-BQP thành lập Trung tâm Giáo dục Quốc phòng - An ninh tại khu vực thôn Dục Mỹ, xã Ninh Sim, Ninh Hòa, Khánh Hòa thuộc Trường Sĩ quan Chỉ huy Kỹ thuật Thông tin.
+
+• Ngày 08 tháng 11 năm 2011, Bộ Quốc phòng ra Quyết định số 2999/QĐ-TM đổi tên Trường Sĩ quan Chỉ huy Kỹ thuật Thông tin thành Trường Sĩ quan Thông tin cho đến ngày nay. Cùng với đó, Trường Trung cấp Kỹ thuật Thông tin lại được tách ra khỏi trường và chuyển về đóng quân tại Thị xã Sơn Tây, Hà Nội.
+
+• Ngày 13 tháng 8 năm 2013, Thủ tướng Chính phủ ký Quyết định số 1386/QĐ-TTg về việc thành lập Trường Đại học Thông tin liên lạc trên cơ sở Trường Sĩ quan Thông tin, giao cho trường đào tạo nguồn lực cử nhân dân sự công nghệ thông tin và điện tử viễn thông bậc đại học cho đến năm 2019 thì dừng tuyển sinh. Đến năm 2026, trường bắt đầu mở trở lại hệ dân sự."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:khanh-hoa,
         region:trung-bo ;
     vnedu:motto "CHỦ ĐỘNG SÁNG TẠO, ĐOÀN KẾT KỶ LUẬT, VƯỢT KHÓ VƯƠN LÊN LÀM CHỦ KỸ THUẬT, DẠY TỐT HỌC TỐT"@vi ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:website <https://tcu.edu.vn/> ;
+    schema:foundingDate "1951-11-11"^^xsd:date ;
     schema:location country:viet-nam,
         province:khanh-hoa,
-        region:trung-bo .
+        region:trung-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/7/7f/Logo_TSQTT.png> .
+
+<https://upload.wikimedia.org/wikipedia/commons/7/7f/Logo_TSQTT.png> a schema:ImageObject ;
+    schema:creditText "Thuy10197" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Logo_TSQTT.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Logo_TSQTT.png/330px-Logo_TSQTT.png> .
 

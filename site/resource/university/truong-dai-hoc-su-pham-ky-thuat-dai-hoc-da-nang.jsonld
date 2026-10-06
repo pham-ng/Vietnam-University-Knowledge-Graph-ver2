@@ -17,105 +17,138 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-ky-thuat-dai-hoc-da-nang",
-  "@type": [
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "http://ute.udn.vn"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "16.077851"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "108.213211"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q10828792"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75189196"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-ky-thuat-dai-hoc-da-nang",
+      "@type": [
+        "vnedu:Organization",
+        "vnedu:MemberInstitution",
+        "vnedu:UniversitySchool",
+        "vnedu:EducationalOrganization",
+        "schema:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Sư phạm Kỹ thuật, Đại học Đà Nẵng (tiếng Anh: University of Technology and Education, the University of Da Nang) là một trường đại học chuyên ngành về khối ngành kỹ thuật tại Việt Nam, được đánh giá là một trong những trường đại học đầu ngành về đào tạo khối ngành kỹ thuật tại Miền Trung Việt Nam. Trường trực thuộc hệ thống Đại học Đại học Đà Nẵng, được xếp vào nhóm đại học trọng điểm quốc gia Việt Nam. Trường đồng thời là trung tâm nghiên cứu kỹ thuật lớn của khu vực miền Trung. Tiền thân là trường Kỹ thuật Đà Nẵng, Trường Đại học Sư phạm Kỹ thuật, Đại học Đà Nẵng là một trong 6 trường Đại học Sư phạm Kỹ thuật của cả nước – đào tạo kỹ thuật lấy ứng dụng làm trọng tâm để giảng dạy, có chức năng đào tạo kỹ sư công nghệ, kỹ sư theo định hướng ứng dụng và giáo viên kỹ thuật."
+      },
+      "foaf:homepage": {
+        "@id": "http://ute.udn.vn"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "16.077851"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "108.213211"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q10828792"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10828792"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75189196"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Sư phạm Kỹ thuật, Đại học Đà Nẵng"
+        },
+        {
+          "@language": "en",
+          "@value": "UDN University of Technology and Education"
+        }
+      ],
+      "schema:email": "vntien@ud.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-le-hung"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1962-09-05"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/5/5b/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-da-nang"
+      },
+      "schema:telephone": "+84-0236-822571",
+      "skos:altLabel": "Trường Kỹ thuật sư phạm Nguyễn Văn Trỗi",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Sư phạm Kỹ thuật, Đại học Đà Nẵng"
+      },
+      "vnedu:address": "48 Cao Thắng, phường Hải Châu",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1962"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-le-hung"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Năm 1960, Đặt viên đá đầu tiên xây dựng trường trung học Kỹ thuật Đà Nẵng.\n\nNgày 5 tháng 9 năm 1962: Khai giảng khóa đầu tiên, ngày thành lập được tính từ đây.\n\nNăm 1976: Trường được đổi tên thành Trường Công nhân Kỹ thuật Nguyễn Văn Trỗi.\n\nNgày 4 tháng 4 năm 1994: Theo nghị định 32–CP của chính phủ, Đại học Đà Nẵng được thành lập trên cơ sở sáp nhập trường Đại học Bách khoa Đà Nẵng, Đại học Sư phạm ngoại ngữ Đà Nẵng, Cao đẳng Sư phạm Đà Nẵng và trường Công nhân kỹ thuật Nguyễn Văn Trỗi. Đồng thời thành lập:\n\nTrường Đại học Đại cương. Trường Đại học Kinh tế và Quản trị kinh doanh (nay là Đại học Kinh tế Đà Nẵng). Trường Đại học Kỹ thuật (Đại học Bách khoa Đà Nẵng). Trường Đại học Sư phạm (nay là Đại học Ngoại ngữ Đà Nẵng và Đại học Sư phạm Đà Nẵng). Trường Cao đẳng công nghệ (nay là Đại học Sư phạm Kỹ thuật Đà Nẵng).\n\nNgày 8 tháng 11 năm 2017: Thủ tướng Chính phủ Việt Nam đã ký Quyết định số 1749/QĐ–TTg thành lập trường Đại học Sư phạm Kỹ thuật thuộc Đại học Đà Nẵng trên cơ sở tổ chức lại trường Cao đẳng Công nghệ và Khoa Sư phạm kỹ thuật Trường Đại học Bách khoa, Đại học Đà Nẵng. Hiện nay trường có bề dày truyền thống lịch sử lâu đời nhất trong hệ thống các trường Đại học thành viên của Đại học Đà Nẵng."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-da-nang"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-le-hung"
+      },
+      "vnedu:website": {
+        "@id": "http://ute.udn.vn"
+      }
     },
     {
-      "@id": "wd:Q10828792"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/5/5b/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt,_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/5/5b/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg.png"
+      }
     }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "UDN University of Technology and Education"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Sư phạm Kỹ thuật, Đại học Đà Nẵng"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-le-hung"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-da-nang"
-  },
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Sư phạm Kỹ thuật, Đại học Đà Nẵng"
-  },
-  "vnedu:address": "48 Cao Thắng, phường Hải Châu",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1962"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-le-hung"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-da-nang"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-le-hung"
-  },
-  "vnedu:website": {
-    "@id": "http://ute.udn.vn"
-  }
+  ]
 }

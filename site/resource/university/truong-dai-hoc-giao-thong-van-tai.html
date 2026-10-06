@@ -30,136 +30,165 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-giao-thong-van-tai",
-  "@type": [
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://en.utc.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Giao_th%C3%B4ng_V%E1%BA%ADn_t%E1%BA%A3i"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-giao-thong-van-tai",
+      "@type": [
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Giao thông Vận tải (tiếng Anh: University of Transport and Communications, tên viết tắt: UTC) là một trường đại học công lập đứng đầu ngành Giao thông vận tải, theo định hướng nghiên cứu, có nhiệm vụ đào tạo các chuyên ngành thuộc lĩnh vực về kỹ thuật và kinh tế trong giao thông vận tải của Việt Nam."
+      },
+      "foaf:homepage": {
+        "@id": "http://en.utc.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Giao_th%C3%B4ng_V%E1%BA%ADn_t%E1%BA%A3i"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/University_of_Transport_and_Communications"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.028778"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.803577"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "dbr:University_of_Transport_and_Communications"
+        },
+        {
+          "@id": "wd:Q10829041"
+        },
+        {
+          "@id": "https://ror.org/006qk6d61"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75603122"
+        },
+        {
+          "@id": "wd:Q10829041"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "University of Transport and Communications"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Giao thông Vận tải"
+        }
+      ],
+      "schema:email": "dhgtvt@utc.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hung"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/f/fa/LogoUTC.jpg"
+      },
+      "schema:telephone": "84.4) 37663311",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Giao thông Vận tải"
+      },
+      "vnedu:address": "Số 3 đường Cầu Giấy, phường Láng, Hà Nội",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1902"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-chung-tran"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-hoai-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/binh-thai-pham"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nam-lethanh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tan-d-le"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-viet-oanh"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hung"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Năm 1902, Trường Cao đẳng Công chính (École Supérieure des Travaux Publics) được thành lập với mục đích đào tạo người bản xứ cho các cơ quan công chính của Liên bang Đông Dương. Sau khi Việt Nam giành được độc lập vào ngày 2 tháng 9 năm 1945, ngày 15 tháng 11 năm 1945, Chủ tịch Hồ Chí Minh ký sắc lệnh khai giảng lại Nhà trường với tên gọi Trường Cao đẳng Công chính Việt Nam. Ngày 15 tháng 11 hàng năm được lấy là ngày Truyền thống của Trường. Tháng 8 năm 1960, Ban Xây dựng Trường Đại học Giao thông vận tải được thành lập và tuyển sinh khóa 1 trình độ Đại học. Ngày 24 tháng 03 năm 1962, trường chính thức mang tên Trường Đại học Giao thông vận tải theo Quyết định số 42/CP ngày 24 tháng 03 năm 1962 của Hội đồng Chính phủ.\n\nTừ năm 1945 đến nay, trải qua nhiều đổi thay Trường đã lần lượt trải qua các cột mốc và mang các tên gọi sau: Ngày 13 tháng 4 năm 1946, Chủ tịch Hồ Chí Minh ký sắc lệnh đổi tên Trường Cao đẳng Công chính Việt Nam thành Trường Đại học Công chính; Tháng 12 năm 1946, Trường ngừng công tác giảng dạy và đào tạo học tập để phục vụ kháng chiến; Tháng 10 năm 1947, Trường được tái giảng dạy tại Chùa Viên, huyện Phú Xuyên, tỉnh Hà Đông (nay là xã Đại Xuyên, thành phố Hà Nội); Tháng 4 năm 1948, Trường rời địa điểm tới huyện Yên Mô, tỉnh Ninh Bình; Ngày 1 tháng 2 năm 1949, theo sắc lệnh số 02/SL và theo nghị quyết số 60 ngày 24 tháng 2 năm 1949, Trường Đại học Công chính đổi tên thành Trường Cao đẳng Kỹ thuật; Ngày 1 tháng 1 năm 1952, Trường được đổi tên thành Trường Cao đẳng Giao thông Công chính; Tháng 4 năm 1955, Trường trở về Hà Nội tái xây dựng cơ sở mới tại Cầu Giấy (ở vị trí mà ngày nay thuộc phường Láng); Tháng 8 năm 1956, Trường được tách ra thành hai trường: Trung cấp Giao thông và Trung cấp Thủy lợi – Kiến trúc; Tháng 8 năm 1960, Bộ Giao thông Vận tải quyết định thành lập ban xây dựng Trường Đại học Giao thông Vận tải; Ngày 24 tháng 3 năm 1962, Thủ tướng Phạm Văn Đồng ký quyết định số 42/CP thành lập Trường Đại học Giao thông Vận tải, Ngày 24 tháng 3 được lấy làm ngày Thành lập Trường; Tháng 8 năm 1965, Trường đưa toàn bộ lực lượng đi sơ tán tại Mai Sưu - Lục Nam - Bắc Giang."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hung"
+      },
+      "vnedu:website": {
+        "@id": "http://en.utc.edu.vn"
+      }
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/University_of_Transport_and_Communications"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/f/fa/LogoUTC.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "HXNam",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:LogoUTC.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/LogoUTC.jpg/330px-LogoUTC.jpg"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.028778"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.803577"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "dbr:University_of_Transport_and_Communications"
-    },
-    {
-      "@id": "https://ror.org/006qk6d61"
-    },
-    {
-      "@id": "wd:Q10829041"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75603122"
-    },
-    {
-      "@id": "wd:Q10829041"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "University of Transport and Communications"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Giao thông Vận tải"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hung"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Giao thông Vận tải"
-  },
-  "vnedu:address": "Số 3 đường Cầu Giấy, phường Láng, Hà Nội",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1902"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nam-lethanh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-viet-oanh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/binh-thai-pham"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-hoai-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tan-d-le"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-chung-tran"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hung"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hung"
-  },
-  "vnedu:website": {
-    "@id": "http://en.utc.edu.vn"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([21.028778,105.803577],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([21.028778,105.803577],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -178,7 +207,9 @@
   <a href="truong-dai-hoc-giao-thong-van-tai.ttl">Turtle</a> · <a href="truong-dai-hoc-giao-thong-van-tai.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-giao-thong-van-tai">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 23 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Giao thông Vận tải (tiếng Anh: University of Transport and Communications, tên viết tắt: UTC) là một trường đại học công lập đứng đầu ngành Giao thông vận tải, theo định hướng nghiên cứu, có nhiệm vụ đào tạo các chuyên ngành thuộc lĩnh vực về kỹ thuật và kinh tế trong giao thông vận tải của Việt Nam.</p><h2>Lịch sử</h2><p>Năm 1902, Trường Cao đẳng Công chính (École Supérieure des Travaux Publics) được thành lập với mục đích đào tạo người bản xứ cho các cơ quan công chính của Liên bang Đông Dương. Sau khi Việt Nam giành được độc lập vào ngày 2 tháng 9 năm 1945, ngày 15 tháng 11 năm 1945, Chủ tịch Hồ Chí Minh ký sắc lệnh khai giảng lại Nhà trường với tên gọi Trường Cao đẳng Công chính Việt Nam. Ngày 15 tháng 11 hàng năm được lấy là ngày Truyền thống của Trường. Tháng 8 năm 1960, Ban Xây dựng Trường Đại học Giao thông vận tải được thành lập và tuyển sinh khóa 1 trình độ Đại học. Ngày 24 tháng 03 năm 1962, trường chính thức mang tên Trường Đại học Giao thông vận tải theo Quyết định số 42/CP ngày 24 tháng 03 năm 1962 của Hội đồng Chính phủ.</p><p>Từ năm 1945 đến nay, trải qua nhiều đổi thay Trường đã lần lượt trải qua các cột mốc và mang các tên gọi sau: Ngày 13 tháng 4 năm 1946, Chủ tịch Hồ Chí Minh ký sắc lệnh đổi tên Trường Cao đẳng Công chính Việt Nam thành Trường Đại học Công chính; Tháng 12 năm 1946, Trường ngừng công tác giảng dạy và đào tạo học tập để phục vụ kháng chiến; Tháng 10 năm 1947, Trường được tái giảng dạy tại Chùa Viên, huyện Phú Xuyên, tỉnh Hà Đông (nay là xã Đại Xuyên, thành phố Hà Nội); Tháng 4 năm 1948, Trường rời địa điểm tới huyện Yên Mô, tỉnh Ninh Bình; Ngày 1 tháng 2 năm 1949, theo sắc lệnh số 02/SL và theo nghị quyết số 60 ngày 24 tháng 2 năm 1949, Trường Đại học Công chính đổi tên thành Trường Cao đẳng Kỹ thuật; Ngày 1 tháng 1 năm 1952, Trường được đổi tên thành Trường Cao đẳng Giao thông Công chính; Tháng 4 năm 1955, Trường trở về Hà Nội tái xây dựng cơ sở mới tại Cầu Giấy (ở vị trí mà ngày nay thuộc phường Láng); Tháng 8 năm 1956, Trường được tách ra thành hai trường: Trung cấp Giao thông và Trung cấp Thủy lợi – Kiến trúc; Tháng 8 năm 1960, Bộ Giao thông Vận tải quyết định thành lập ban xây dựng Trường Đại học Giao thông Vận tải; Ngày 24 tháng 3 năm 1962, Thủ tướng Phạm Văn Đồng ký quyết định số 42/CP thành lập Trường Đại học Giao thông Vận tải, Ngày 24 tháng 3 được lấy làm ngày Thành lập Trường; Tháng 8 năm 1965, Trường đưa toàn bộ lực lượng đi sơ tán tại Mai Sưu - Lục Nam - Bắc Giang.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75603122">«Trường Đại học Giao thông Vận tải»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75603122), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Giao thông Vận tải</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:LogoUTC.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/LogoUTC.jpg/330px-LogoUTC.jpg" alt="Biểu trưng Trường Đại học Giao thông Vận tải" loading="lazy"></a><figcaption>CC BY-SA 4.0 · HXNam</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>University of Transport and Communications</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>1902</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hung">Nguyễn Văn Hùng</a></td></tr><tr><th>Địa chỉ</th><td>Số 3 đường Cầu Giấy, phường Láng, Hà Nội</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Điện thoại</th><td>84.4) 37663311</td></tr><tr><th>Email</th><td><a href="mailto:dhgtvt@utc.edu.vn">dhgtvt@utc.edu.vn</a></td></tr><tr><th>Website</th><td><a href="http://en.utc.edu.vn">en.utc.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -205,11 +236,20 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q10829041">wd:Q10829041</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75603122">&lt;https://vi.wikipedia.org/w/index.php?oldid=75603122&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>dhgtvt@utc.edu.vn</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hung">Nguyễn Văn Hùng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/f/fa/LogoUTC.jpg">&lt;https://upload.wikimedia.org/wikipedia/commons/f/fa/LogoUTC.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>84.4) 37663311</div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>Số 3 đường Cầu Giấy, phường Láng, Hà Nội</div>
@@ -243,6 +283,9 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
+<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hung">Nguyễn Văn Hùng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/binh-thai-pham">Binh Thai Pham</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-chung-tran">Le Chung Tran</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nam-lethanh">Nam Lethanh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-viet-oanh">Nguyễn Việt Oanh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tan-d-le">Tan D. Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-hoai-nam">Vu Hoai Nam</a></div>
 </td></tr>
@@ -251,9 +294,6 @@
 </td></tr>
 <tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
-<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-hung">Nguyễn Văn Hùng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

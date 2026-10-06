@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-nguyen-tat-thanh",
   "@type": [
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "foaf:Organization",
     "vnedu:UniversitySchool",
-    "vnedu:PrivateInstitution"
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "dbo:University",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:PrivateInstitution",
+    "foaf:Organization",
+    "schema:Organization",
+    "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Nguyễn Tất Thành là một đại học tư thục tại Việt Nam. Được thành lập vào 5 tháng 6 năm 1999 thuộc quản lý của bộ GD&ĐT . Trước đây là trường công lập sau được sáp nhập thành trường tư nhưng vẫn được điều hành bởi nhà nước Việt Nam Trường hiện có 14 khoa, 54 chương trình đào tạo các bậc thuộc các khối ngành: Sức khỏe, Kinh tế, Xã hội – Nhân văn, Kỹ thuật – Công nghệ, Nghệ thuật – Mỹ thuật."
+  },
   "foaf:homepage": {
     "@id": "http://ntt.edu.vn/ntt_trangchu/"
   },
@@ -46,10 +50,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/04r9s1v23"
+      "@id": "wd:Q10829104"
     },
     {
-      "@id": "wd:Q10829104"
+      "@id": "https://ror.org/04r9s1v23"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -62,23 +66,27 @@
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Nguyễn Tất Thành"
-    },
-    {
       "@language": "en",
       "@value": "Nguyen Tat Thanh University"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Nguyễn Tất Thành"
     }
   ],
   "schema:employee": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-ai-cam"
   },
+  "schema:foundingDate": {
+    "@type": "xsd:date",
+    "@value": "1999-06-05"
+  },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
@@ -96,15 +104,19 @@
   "vnedu:hasLeader": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-ai-cam"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Ra đời năm 1999, trường Đại học Nguyễn Tất Thành khi đó lấy tên gọi là Trung tâm đào tạo Công nhân may thuộc Công ty Dệt may Sài Gòn. Đến năm 2002, trường đổi tên thành Trường Kinh tế Kỹ thuật nghiệp vụ Bán công Nguyễn Tất Thành cho phù hợp hơn với các lĩnh vực đào tạo và nhiệm vụ.\n\nNăm 2005, Đại học Nguyễn Tất Thành có nhiều bước tiến và những phát triển nổi bật, đổi tên thành Trường Cao đẳng Kinh tế Kỹ thuật nghiệp vụ Bán công Nguyễn Tất Thành. Sang năm 2006, trường lấy tên gọi là trường Cao đẳng Nguyễn Tất Thành và từ năm 2011, trường nổi danh với tên gọi Đại học Nguyễn Tất Thành cho đến ngày nay."
+  },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:numberOfStudents": {

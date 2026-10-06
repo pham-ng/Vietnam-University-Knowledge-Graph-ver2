@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -27,6 +28,7 @@ university:hoc-vien-bao-chi-va-tuyen-truyen a foaf:Organization,
         schema:Organization ;
     rdfs:label "Academy of Journalism and Communication - AJC"@en,
         "Học viện Báo chí và Tuyên truyền"@vi ;
+    dbo:abstract "Học viện Báo chí và Tuyên truyền (Academy of Journalism and Communication, AJC) là một học viện tại Việt Nam, được quản lý bởi Học viện Chính trị Quốc gia Hồ Chí Minh – một đơn vị trực thuộc Ban Chấp hành Trung ương Đảng Cộng sản Việt Nam, nằm trên địa bàn thành phố Hà Nội."@vi ;
     owl:sameAs dbr:Academy_of_Journalism_and_Communication,
         wd:Q10771877,
         <https://ror.org/03zwxvq16> ;
@@ -41,6 +43,7 @@ university:hoc-vien-bao-chi-va-tuyen-truyen a foaf:Organization,
         <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_B%C3%A1o_ch%C3%AD_v%C3%A0_Tuy%C3%AAn_truy%E1%BB%81n> ;
     vnedu:address "số 36 đường Xuân Thủy, phường Cầu Giấy" ;
     vnedu:admissionCode "HBT" ;
+    vnedu:campus "57.310 mét vuông" ;
     vnedu:director person:pham-minh-son ;
     vnedu:foundingYear "1962"^^xsd:gYear ;
     vnedu:hasAlumnus person:chau-tho,
@@ -53,6 +56,11 @@ university:hoc-vien-bao-chi-va-tuyen-truyen a foaf:Organization,
         person:nam-linh,
         person:quang-tung ;
     vnedu:hasLeader person:pham-minh-son ;
+    vnedu:history """Học viện Báo chí và Tuyên truyền được thành lập ngày 16/1/1962, theo Nghị quyết số 36 NQ/TW của Ban Bí thư Trung ương Đảng Cộng sản Việt Nam khoá III, trên cơ sở hợp nhất 3 trường: trường Nguyễn Ái Quốc phân hiệu II, trường Tuyên huấn.
+
+Năm 1990, Chủ tịch Hội đồng Bộ trưởng (tên gọi chức danh Thủ tướng Chính phủ lúc trước) đã ra quyết định số 406-HĐBT ngày 20/11/1990 công nhận Trường là trường đại học, kể từ đây Trường vừa là một trường Đảng trực thuộc Ban Bí thư Trung ương, đồng thời là trường đại học trong hệ thống giáo dục Việt Nam.
+
+Năm 1993, theo quyết định số 61 QĐ/TW ngày 10/03/1993 của Bộ Chính trị Ban Chấp hành Trung ương Đảng Cộng sản Việt Nam, Trường trở thành Học viện trực thuộc cơ quan chủ quản là Học viện Chính trị Quốc gia Hồ Chí Minh."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -62,8 +70,16 @@ university:hoc-vien-bao-chi-va-tuyen-truyen a foaf:Organization,
         "HVBCVTT" ;
     vnedu:website <https://ajc.hcma.vn/> ;
     schema:employee person:pham-minh-son ;
+    schema:foundingDate "1962-01-16"^^xsd:date ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
-    schema:parentOrganization university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh .
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/c/cd/Logo_b%C3%A1o_ch%C3%AD.jpg> ;
+    schema:parentOrganization university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh ;
+    schema:telephone "024)37.546.963" .
+
+<https://upload.wikimedia.org/wikipedia/vi/c/cd/Logo_b%C3%A1o_ch%C3%AD.jpg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_b%C3%A1o_ch%C3%AD.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/c/cd/Logo_b%C3%A1o_ch%C3%AD.jpg/330px-Logo_b%C3%A1o_ch%C3%AD.jpg> .
 

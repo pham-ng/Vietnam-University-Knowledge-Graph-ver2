@@ -30,131 +30,179 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-nguyen-va-moi-truong-ha-noi",
-  "@type": [
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution"
-  ],
-  "foaf:homepage": {
-    "@id": "http://hunre.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_T%C3%A0i_nguy%C3%AAn_v%C3%A0_M%C3%B4i_tr%C6%B0%E1%BB%9Dng_H%C3%A0_N%E1%BB%99i"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-nguyen-va-moi-truong-ha-noi",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Tài nguyên và Môi trường Hà Nội (Hanoi University of Natural Resources and Environment; viết tắt: HUNRE), là một trường Đại học công lập tại Hà Nội, trực thuộc Bộ Nông nghiệp và Môi trường và chịu sự quản lý nhà nước về giáo dục của Bộ Giáo dục và Đào tạo. Trường đạt chuẩn 4 sao theo định hướng ứng dụng trên hệ thống xếp hạng đối sánh chất lượng đại học UPM (University Performance Metrics) . Đây là trung tâm nghiên cứu, bồi dưỡng nguồn nhân lực chất lượng cao với trình độ đại học và sau đại học cho các chuyên ngành kinh tế, kỹ thuật, môi trường, khí hậu, biển - hải đảo, trắc địa - bản đồ, đất đai, địa chất, khí tượng, thủy văn,... phục vụ cho lĩnh vực tài nguyên môi trường của đất nước. Trường đang tích cực xây dựng đề án phát triển trở thành trường đại học trọng điểm quốc gia."
+      },
+      "foaf:homepage": {
+        "@id": "http://hunre.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_T%C3%A0i_nguy%C3%AAn_v%C3%A0_M%C3%B4i_tr%C6%B0%E1%BB%9Dng_H%C3%A0_N%E1%BB%99i"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/Hanoi_University_of_Natural_Resources_and_Environment"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.046333"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.762444"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q18461615"
+        },
+        {
+          "@id": "dbr:Hanoi_University_of_Natural_Resources_and_Environment"
+        },
+        {
+          "@id": "https://ror.org/00gxs8147"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75594680"
+        },
+        {
+          "@id": "wd:Q18461615"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Hanoi University of Natural Resources and Environment"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Tài nguyên và Môi trường Hà Nội"
+        }
+      ],
+      "schema:email": "dhtnmt@hunre.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thi-lan-huong"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/3/35/Hunre_green.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/4/4e/HUNRE_Logo.png"
+      },
+      "schema:telephone": "+84.24.38370598",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Tài nguyên và Môi trường Hà Nội"
+      },
+      "vnedu:academicStaff": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "551"
+      },
+      "vnedu:address": "* Cơ sở chính: Số 41A đường Phú Diễn, phường Phú Diễn, thành phố Hà Nội",
+      "vnedu:campus": "68.858 m²",
+      "vnedu:councilChair": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thi-lan-huong"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1955"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-nguyen-va-moi-truong"
+      },
+      "vnedu:hasAlumnus": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/kim-anh-nguyen"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thi-lan-huong"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Tài nguyên và Môi trường Hà Nội được thành lập theo Quyết định số 1583/QĐ-TTg ngày 23 tháng 8 năm 2010 của Thủ tướng Chính phủ trên cơ sở nâng cấp Trường Cao đẳng Tài nguyên và Môi trường Hà Nội. Nhà trường có truyền thống đào tạo hơn 60 năm, tiền thân là Trường Sơ cấp Khí tượng. Đến nay, Trường là cơ sở đào tạo đa ngành với nhiệm vụ đào tạo nguồn nhân lực chất lượng cao phục vụ cho quản lý Nhà nước về lĩnh vực Tài nguyên và Môi trường ở trình độ đại học, sau đại học từ cấp Trung ương đến địa phương, các doanh nghiệp đến cộng đồng.\n\nTrường Đại học Tài nguyên và Môi trường Hà Nội là cơ sở giáo dục đại học công lập thuộc hệ thống giáo dục quốc dân, trực thuộc Bộ Tài nguyên và Môi trường, chịu sự quản lý quản lý Nhà nước về giáo dục và đào tạo của Bộ Giáo dục và đào tạo, có tư cách pháp nhân, có con dấu và tài khoản riêng.\n\nTừ năm 1955 đến năm 2020, Nhà trường đã đào tạo trên 23.000 Kỹ sư, Cử nhân, Trung cấp chuyên nghiệp, Sơ cấp và Công nhân kỹ thuật các ngành: Khí tượng, Thủy văn, Đo đạc bản đồ, Quản lý đất đai, Kỹ thuật môi trường, Quản lý môi trường, Trắc địa – Bản đồ, Địa chính, Tin học...cho đất nước với: 14 khóa sơ cấp, 45 khóa trung cấp, 16 khóa cao đẳng, 27 khóa chuyên tu đại học, 8 khóa đại học liên thông, 9 khóa đại học chính quy, 4 khóa thạc sĩ sau đại học.\n\nCác mốc lịch sử quan trọng của quá trình hình thành và phát triển:\n\nNăm 1955 - 2005: Trường Cán bộ Khí tượng Thủy văn Hà Nội: Trường Cao đẳng Khí tượng thủy văn Hà Nội được thành lập theo Quyết định số 721/QĐ-BGD&ĐT ngày 19 tháng 2 năm 2001 của Bộ trưởng Bộ Giáo dục và Đào tạo với tiền thân là Trường Sơ học Khí tượng (1955-1960), Trường Trung cấp Khí tượng (1961-1966), Trường cán bộ khí tượng (1967-1976), Trường cán bộ Khí tượng thủy văn (1976-1994), và Trường cán bộ Khí tượng thủy văn Hà Nội (1994-2001). Năm 1955 - 1960: Trường Sơ học Khí tượng Năm 1961 - 1966: Trường Trung cấp Khí tượng Năm 1967 - 1976: Trường Cán bộ Khí tượng Năm 1976 - 1994: Trường Cán bộ Khí tượng Thủy văn Năm 1994 - 2001: Trường Cán bộ Khí tượng Thủy văn Hà Nội Năm 2001 - 2005: Trường Cao đẳng Khí tượng Thủy văn Hà Nội Năm 1971 - 2005: Trường Trung học Địa chính Trung ương I: được đổi tên từ Trường Trung học địa chính I (Quyết định số 179/2001/QĐ-TCĐC, ngày 6 tháng 6 năm 2001 của Tổng cục Địa chính), tiền thân là Trường Trung cấp Đo đạc và Bản đồ thành lập năm 1971."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Đoàn kết - Sáng tạo - Chất lượng - Hiệu quả"
+      },
+      "vnedu:numberOfUndergraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "15000"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thi-lan-huong"
+      },
+      "vnedu:website": {
+        "@id": "http://hunre.edu.vn"
+      }
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Hanoi_University_of_Natural_Resources_and_Environment"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/3/35/Hunre_green.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "HUNRE",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Hunre_green.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/3/35/Hunre_green.jpg"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/4/4e/HUNRE_Logo.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "HUNRE",
+      "schema:license": "Public domain",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:HUNRE_Logo.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/HUNRE_Logo.png/330px-HUNRE_Logo.png"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.046333"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.762444"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "https://ror.org/00gxs8147"
-    },
-    {
-      "@id": "wd:Q18461615"
-    },
-    {
-      "@id": "dbr:Hanoi_University_of_Natural_Resources_and_Environment"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75594680"
-    },
-    {
-      "@id": "wd:Q18461615"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Tài nguyên và Môi trường Hà Nội"
-    },
-    {
-      "@language": "en",
-      "@value": "Hanoi University of Natural Resources and Environment"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thi-lan-huong"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Tài nguyên và Môi trường Hà Nội"
-  },
-  "vnedu:academicStaff": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "551"
-  },
-  "vnedu:address": "* Cơ sở chính: Số 41A đường Phú Diễn, phường Phú Diễn, thành phố Hà Nội",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1955"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-nguyen-va-moi-truong"
-  },
-  "vnedu:hasAlumnus": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/kim-anh-nguyen"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thi-lan-huong"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Đoàn kết - Sáng tạo - Chất lượng - Hiệu quả"
-  },
-  "vnedu:numberOfUndergraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "15000"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thi-lan-huong"
-  },
-  "vnedu:website": {
-    "@id": "http://hunre.edu.vn"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([21.046333,105.762444],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([21.046333,105.762444],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -173,7 +221,9 @@
   <a href="truong-dai-hoc-tai-nguyen-va-moi-truong-ha-noi.ttl">Turtle</a> · <a href="truong-dai-hoc-tai-nguyen-va-moi-truong-ha-noi.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-nguyen-va-moi-truong-ha-noi">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 18 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Tài nguyên và Môi trường Hà Nội (Hanoi University of Natural Resources and Environment; viết tắt: HUNRE), là một trường Đại học công lập tại Hà Nội, trực thuộc Bộ Nông nghiệp và Môi trường và chịu sự quản lý nhà nước về giáo dục của Bộ Giáo dục và Đào tạo. Trường đạt chuẩn 4 sao theo định hướng ứng dụng trên hệ thống xếp hạng đối sánh chất lượng đại học UPM (University Performance Metrics) . Đây là trung tâm nghiên cứu, bồi dưỡng nguồn nhân lực chất lượng cao với trình độ đại học và sau đại học cho các chuyên ngành kinh tế, kỹ thuật, môi trường, khí hậu, biển - hải đảo, trắc địa - bản đồ, đất đai, địa chất, khí tượng, thủy văn,... phục vụ cho lĩnh vực tài nguyên môi trường của đất nước. Trường đang tích cực xây dựng đề án phát triển trở thành trường đại học trọng điểm quốc gia.</p><h2>Lịch sử</h2><p>Trường Đại học Tài nguyên và Môi trường Hà Nội được thành lập theo Quyết định số 1583/QĐ-TTg ngày 23 tháng 8 năm 2010 của Thủ tướng Chính phủ trên cơ sở nâng cấp Trường Cao đẳng Tài nguyên và Môi trường Hà Nội. Nhà trường có truyền thống đào tạo hơn 60 năm, tiền thân là Trường Sơ cấp Khí tượng. Đến nay, Trường là cơ sở đào tạo đa ngành với nhiệm vụ đào tạo nguồn nhân lực chất lượng cao phục vụ cho quản lý Nhà nước về lĩnh vực Tài nguyên và Môi trường ở trình độ đại học, sau đại học từ cấp Trung ương đến địa phương, các doanh nghiệp đến cộng đồng.</p><p>Trường Đại học Tài nguyên và Môi trường Hà Nội là cơ sở giáo dục đại học công lập thuộc hệ thống giáo dục quốc dân, trực thuộc Bộ Tài nguyên và Môi trường, chịu sự quản lý quản lý Nhà nước về giáo dục và đào tạo của Bộ Giáo dục và đào tạo, có tư cách pháp nhân, có con dấu và tài khoản riêng.</p><details><summary>Đọc tiếp (3 đoạn)</summary><p>Từ năm 1955 đến năm 2020, Nhà trường đã đào tạo trên 23.000 Kỹ sư, Cử nhân, Trung cấp chuyên nghiệp, Sơ cấp và Công nhân kỹ thuật các ngành: Khí tượng, Thủy văn, Đo đạc bản đồ, Quản lý đất đai, Kỹ thuật môi trường, Quản lý môi trường, Trắc địa – Bản đồ, Địa chính, Tin học...cho đất nước với: 14 khóa sơ cấp, 45 khóa trung cấp, 16 khóa cao đẳng, 27 khóa chuyên tu đại học, 8 khóa đại học liên thông, 9 khóa đại học chính quy, 4 khóa thạc sĩ sau đại học.</p><p>Các mốc lịch sử quan trọng của quá trình hình thành và phát triển:</p><p>Năm 1955 - 2005: Trường Cán bộ Khí tượng Thủy văn Hà Nội: Trường Cao đẳng Khí tượng thủy văn Hà Nội được thành lập theo Quyết định số 721/QĐ-BGD&amp;ĐT ngày 19 tháng 2 năm 2001 của Bộ trưởng Bộ Giáo dục và Đào tạo với tiền thân là Trường Sơ học Khí tượng (1955-1960), Trường Trung cấp Khí tượng (1961-1966), Trường cán bộ khí tượng (1967-1976), Trường cán bộ Khí tượng thủy văn (1976-1994), và Trường cán bộ Khí tượng thủy văn Hà Nội (1994-2001). Năm 1955 - 1960: Trường Sơ học Khí tượng Năm 1961 - 1966: Trường Trung cấp Khí tượng Năm 1967 - 1976: Trường Cán bộ Khí tượng Năm 1976 - 1994: Trường Cán bộ Khí tượng Thủy văn Năm 1994 - 2001: Trường Cán bộ Khí tượng Thủy văn Hà Nội Năm 2001 - 2005: Trường Cao đẳng Khí tượng Thủy văn Hà Nội Năm 1971 - 2005: Trường Trung học Địa chính Trung ương I: được đổi tên từ Trường Trung học địa chính I (Quyết định số 179/2001/QĐ-TCĐC, ngày 6 tháng 6 năm 2001 của Tổng cục Địa chính), tiền thân là Trường Trung cấp Đo đạc và Bản đồ thành lập năm 1971.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75594680">«Trường Đại học Tài nguyên và Môi trường Hà Nội»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75594680), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Tài nguyên và Môi trường Hà Nội</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:HUNRE_Logo.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/HUNRE_Logo.png/330px-HUNRE_Logo.png" alt="Biểu trưng Trường Đại học Tài nguyên và Môi trường Hà Nội" loading="lazy"></a><figcaption>Public domain · HUNRE</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>Hanoi University of Natural Resources and Environment</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>1955</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-nguyen-va-moi-truong">Bộ Tài nguyên và Môi trường</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">GS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thi-lan-huong">Huỳnh Thị Lan Hương</a></td></tr><tr><th>Chủ tịch hội đồng trường</th><td><span class="lang">GS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thi-lan-huong">Huỳnh Thị Lan Hương</a></td></tr><tr><th>Địa chỉ</th><td>* Cơ sở chính: Số 41A đường Phú Diễn, phường Phú Diễn, thành phố Hà Nội</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Khuôn viên</th><td>68.858 m²</td></tr><tr><th>Giảng viên</th><td>551</td></tr><tr><th>Khẩu hiệu</th><td><i>Đoàn kết - Sáng tạo - Chất lượng - Hiệu quả</i></td></tr><tr><th>Điện thoại</th><td>+84.24.38370598</td></tr><tr><th>Email</th><td><a href="mailto:dhtnmt@hunre.edu.vn">dhtnmt@hunre.edu.vn</a></td></tr><tr><th>Website</th><td><a href="http://hunre.edu.vn">hunre.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:Hunre_green.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Hunre_green.jpg" alt="Ảnh Trường Đại học Tài nguyên và Môi trường Hà Nội" loading="lazy"></a><figcaption>CC BY-SA 4.0 · HUNRE</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -200,17 +250,35 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q18461615">wd:Q18461615</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75594680">&lt;https://vi.wikipedia.org/w/index.php?oldid=75594680&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>dhtnmt@hunre.edu.vn</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thi-lan-huong">Huỳnh Thị Lan Hương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/3/35/Hunre_green.jpg">&lt;https://upload.wikimedia.org/wikipedia/commons/3/35/Hunre_green.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/4/4e/HUNRE_Logo.png">&lt;https://upload.wikimedia.org/wikipedia/commons/4/4e/HUNRE_Logo.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84.24.38370598</div>
 </td></tr>
 <tr><td class="p">số giảng viên<small>vnedu:academicStaff</small></td><td>
 <div>551 <span class="lang">xsd:nonNegativeInteger</span></div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>* Cơ sở chính: Số 41A đường Phú Diễn, phường Phú Diễn, thành phố Hà Nội</div>
+</td></tr>
+<tr><td class="p">khuôn viên<small>vnedu:campus</small></td><td>
+<div>68.858 m²</div>
+</td></tr>
+<tr><td class="p">chủ tịch hội đồng trường<small>vnedu:councilChair</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thi-lan-huong">Huỳnh Thị Lan Hương</a></div>
 </td></tr>
 <tr><td class="p">năm thành lập<small>vnedu:foundingYear</small></td><td>
 <div>1955 <span class="lang">xsd:gYear</span></div>
@@ -250,14 +318,14 @@
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thi-lan-huong">Huỳnh Thị Lan Hương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-nguyen-va-moi-truong">Bộ Tài nguyên và Môi trường</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
 <tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/kim-anh-nguyen">Kim Anh Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/kim-anh-nguyen">Kim Anh Nguyen</a></div>
-</td></tr>
-<tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-nguyen-va-moi-truong">Bộ Tài nguyên và Môi trường</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

@@ -28,6 +28,7 @@ university:truong-dai-hoc-dong-thap a dbo:University,
         schema:Organization ;
     rdfs:label "Dong Thap University"@en,
         "Trường Đại học Đồng Tháp"@vi ;
+    dbo:abstract "Trường Đại học Đồng Tháp (tiếng Anh: Dong Thap University, viết tắt: DThU) là một trường đại học công lập đa ngành, tọa lạc tại phường Cao Lãnh (thành phố Cao Lãnh trước đây), tỉnh Đồng Tháp. Với tiền thân là Trường Cao đẳng Sư phạm, đây là một trong những trung tâm đào tạo, bồi dưỡng giáo viên và cán bộ quản lý giáo dục uy tín, đồng thời là một cơ sở nghiên cứu khoa học và chuyển giao công nghệ của khu vực Đồng bằng sông Cửu Long."@vi ;
     owl:sameAs wd:Q30263747,
         <https://ror.org/05h7nhz20> ;
     geo:lat 10.420858 ;
@@ -44,6 +45,9 @@ university:truong-dai-hoc-dong-thap a dbo:University,
     vnedu:hasAlumnus person:danh-duc-ha,
         person:phan-thanh-dat ;
     vnedu:hasLeader person:truong-tan-dat ;
+    vnedu:history """Trường Đại học Đồng Tháp tiền thân là Trường Cao đẳng Sư phạm Đồng Tháp, ngày 10 tháng 1 năm 2003, Phó Thủ tướng Chính phủ Phạm Gia Khiêm đã ký Quyết định số 08/2003/QĐ – TTg, nâng cấp thành Trường Đại học Sư phạm Đồng Tháp.
+
+Đến ngày 4 tháng 9 năm 2008, Phó Thủ tướng Chính phủ Nguyễn Thiện Nhân đã đồng ý cho phép đổi tên Trường Đại học Sư phạm Đồng Tháp thành Trường Đại học Đồng Tháp."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:dong-thap,
         region:nam-bo ;
@@ -52,7 +56,15 @@ university:truong-dai-hoc-dong-thap a dbo:University,
     vnedu:rector person:truong-tan-dat ;
     vnedu:website <http://www.dthu.edu.vn/> ;
     schema:employee person:truong-tan-dat ;
+    schema:foundingDate "2003-01-10"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/vi/4/43/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%E1%BB%93ng_Th%C3%A1p.png> ;
     schema:location country:viet-nam,
         province:dong-thap,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:telephone "+84-(067). 3881 518" .
+
+<https://upload.wikimedia.org/wikipedia/vi/4/43/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%E1%BB%93ng_Th%C3%A1p.png> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%E1%BB%93ng_Th%C3%A1p.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/4/43/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%E1%BB%93ng_Th%C3%A1p.png/330px-%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%E1%BB%93ng_Th%C3%A1p.png> .
 

@@ -20,15 +20,19 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghiep-vinh",
   "@type": [
     "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
+    "vnedu:HigherEducationInstitution",
     "schema:Organization",
-    "vnedu:UniversitySchool",
     "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
+    "vnedu:Organization",
+    "vnedu:UniversitySchool",
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Công nghiệp Vinh được thành lập ngày 12 tháng 6 năm 2013, theo Quyết định số 920 của Chính phủ QĐ-TTg, có trụ sở chính đặt tại thành phố Vinh. Mục tiêu của Trường ĐH Công nghiệp Vinh là trở thành trung tâm giáo dục, nghiên cứu khoa học, ứng dụng và chuyển giao công nghệ, đào tạo nguồn nhân lực cao, phục vụ phát triển kinh tế - xã hội ở khu vực Bắc Trung Bộ và trong cả nước."
+  },
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_nghi%E1%BB%87p_Vinh"
   },
@@ -37,10 +41,10 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75483062"
+      "@id": "wd:Q16480712"
     },
     {
-      "@id": "wd:Q16480712"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75483062"
     }
   ],
   "rdfs:label": {

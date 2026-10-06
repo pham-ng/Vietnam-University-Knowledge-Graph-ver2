@@ -20,16 +20,20 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-si-quan-phao-binh",
   "@type": [
     "schema:Organization",
-    "vnedu:OfficerSchool",
     "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
     "vnedu:Organization",
     "vnedu:MilitaryInstitution",
+    "vnedu:OfficerSchool",
     "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity"
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Sĩ quan Pháo binh (PBH) là một trường đào tạo sĩ quan chỉ huy chiến thuật cấp phân đội chuyên ngành pháo binh trực thuộc Binh chủng Pháo binh của Bộ Quốc phòng. Ngày thành lập: ngày 18 tháng 2 năm 1957. Trụ sở chính: thôn Thanh Vị, phường Tùng Thiện, thành phố Hà Nội. Điện thoại:(+84-24) 33838194 E-mail: tuyensinhsqpb@gmail.com"
+  },
   "foaf:homepage": {
     "@id": "http://tsqpb.edu.vn/"
   },
@@ -41,27 +45,32 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75268519"
+      "@id": "wd:Q10828880"
     },
     {
-      "@id": "wd:Q10828880"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75268519"
     }
   ],
   "rdfs:label": {
     "@language": "vi",
     "@value": "Trường Sĩ quan Pháo binh"
   },
+  "schema:foundingDate": {
+    "@type": "xsd:date",
+    "@value": "1957-02-18"
+  },
   "schema:location": [
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     }
   ],
+  "schema:telephone": "+84) 034-838194",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Sĩ quan Pháo binh"
@@ -73,18 +82,22 @@
   },
   "vnedu:governedBy": [
     {
-      "@id": "vnedu:MinistryOfNationalDefence"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/binh-chung-phao-binh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/binh-chung-phao-binh"
+      "@id": "vnedu:MinistryOfNationalDefence"
     }
   ],
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Trường Đại học Sĩ quan Pháo binh tiền thân là Phân khoa Pháo binh thuộc Trường Sĩ quan Lục quân 1 - Đại học Trần Quốc Tuấn. Ngày 1/5/1949, Phân khoa đã khai giảng lớp học viên đầu tiên và trong 8 năm (1949 - 1957), đã hoàn thành 5 khóa huấn luyện, đào tạo ra trường 1.714 cán bộ pháo binh. Đây là những đồng chí cán bộ sau này trở thành lực lượng nòng cốt xây dựng Binh chủng Pháo binh và xây dựng quân đội.\n\nThực hiện Nghị quyết của Tổng Quân ủy Trung ương, lực lượng Pháo binh có bước phát triển mới, bao gồm pháo mặt đất, pháo cao xạ với quy mô tương đối hiện đại. Những đơn vị pháo binh dự bị chiến lược, pháo binh biên chế của các quân khu, quân đoàn, sư đoàn lần lượt ra đời. Một đội ngũ cán bộ từ trung đội đến sư đoàn được lựa chọn từ các đơn vị trong toàn quân, thực tế đó đòi hỏi phải có một cơ sở đào tạo cán bộ Pháo binh đáp ứng yêu cầu nhiệm vụ. Trước tình hình đó, ngày 18/2/1957, Bộ trưởng Bộ Quốc phòng kiêm Tổng Tư lệnh QĐND Việt Nam đã ra Nghị định số 32/NĐA tách Phân khoa Pháo binh thuộc Trường Sĩ quan Lục quân 1 - Đại học Trần Quốc Tuấn thành Trường Đại học Sĩ quan Pháo binh Việt Nam. Những năm qua, nhà trường đã hoàn thành hàng trăm khóa đào tạo, bồi dưỡng cho ra trường gần 5 vạn cán bộ chỉ huy, cán bộ chính trị cấp phân đội, hàng ngàn cán bộ chỉ huy tham mưu cấp trung, lữ đoàn pháo binh và sĩ quan dự bị, hạ sĩ quan, khẩu, tiểu đội trưởng, nhân viên chuyên môn kỹ thuật và hàng trăm giáo viên quân sự, đáp ứng kịp thời yêu cầu xây dựng và chiến đấu của bộ đội pháo binh qua các thời kỳ của cách mạng và làm tròn nhiệm vụ quốc tế cao cả. Hầu hết cán bộ do trường giáo dục, đào tạo đều có phẩm chất chính trị tốt, kiên định vững vàng; có trình độ kỹ chiến thuật và năng lực quản lý, chỉ huy bộ đội tốt. Trong số đó có nhiều đồng chí trưởng thành là tướng lĩnh, cán bộ lãnh đạo giữ trọng trách trong quân đội, cơ quan Đảng, Nhà nước; một số đồng chí lập công xuất sắc trở thành anh hùng lực lượng vũ trang nhân dân; nhiều đồng chí đã trở thành giáo sư, phó giáo sư, tiến sĩ, thạc sĩ đang công tác tại các cơ quan nghiên cứu khoa học, các học viện, nhà trường trong quân đội. Nhà trường có một đồng chí được phong tặng danh hiệu nhà giáo nhân dân, 7 đồng chí là nhà giáo ưu tú, hàng trăm đồng chí được tặng Huy chương, Kỷ niệm chương “Vì sự nghiệp giáo dục”.\n\nNăm 1998, Trường Đại học Sĩ quan Pháo binh được Bộ Giáo dục và Đào tạo được công nhận là đơn vị sự nghiệp trọng điểm đào tạo quân sự trong lĩnh vực chuyên ngành pháo binh."
+  },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"

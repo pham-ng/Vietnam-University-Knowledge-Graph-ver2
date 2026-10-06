@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -26,10 +27,12 @@ university:truong-si-quan-luc-quan-1-dai-hoc-tran-quoc-tuan a foaf:Organization,
         schema:Organization ;
     rdfs:label "Tran Quoc Tuan University"@en,
         "Trường Sĩ quan Lục quân 1 – Đại học Trần Quốc Tuấn"@vi ;
+    dbo:abstract "Trường Đại học Trần Quốc Tuấn (tiếng Anh: Tran Quoc Tuan University - First Army Academy; Mã trường: LAH) hay Trường Sĩ quan Lục quân 1 là trường đào tạo sĩ quan chỉ huy lục quân sơ cấp phía bắc Việt Nam, trực thuộc Bộ Quốc phòng Việt Nam, là nhà trường đầu tiên trong hệ thống nhà trường quân đội đào tạo sĩ quan lục quân chiến thuật cấp phân đội (trung đội, đại đội, tiểu đoàn) trình độ cử nhân khoa học quân sự (đại học và cao đẳng) các chuyên ngành: bộ binh, bộ binh cơ giới, trinh sát lục quân. Trường được Bộ Giáo dục và Đào tạo Việt Nam công nhận đại học và cho phép đào tạo cử nhân quân sự bậc đại học năm 1998. Trường được coi như là \"anh cả\" trong hệ thống các trường quân đội đào tạo cấp phân đội, được Bác Hồ 9 lần về thăm, trao sáu chữ vàng: \"Trung với nước, hiếu với dân\" sau này trở thành khẩu hiệu của toàn quân. Rất nhiều các thế hệ tướng lĩnh, lãnh đạo xuất sắc của quân đội là học viên, cán bộ Nhà trường."@vi ;
     owl:sameAs wd:Q10829150,
         <https://ror.org/02afea422> ;
     geo:lat 21.041597 ;
     geo:long 105.462682 ;
+    skos:altLabel "Trường Đại học Trần Quốc Tuấn" ;
     skos:prefLabel "Trường Sĩ quan Lục quân 1 – Đại học Trần Quốc Tuấn"@vi ;
     prov:wasDerivedFrom wd:Q10829150,
         <https://vi.wikipedia.org/w/index.php?oldid=75566435> ;
@@ -41,12 +44,36 @@ university:truong-si-quan-luc-quan-1-dai-hoc-tran-quoc-tuan a foaf:Organization,
         person:nguyen-minh-quang,
         person:pham-huu-bong,
         person:yen-thao ;
+    vnedu:history """Trường Đại học Trần Quốc Tuấn ban đầu có tên là Trường Quân chính kháng Nhật được thành lập ngày 15 tháng 4 năm 1945.
+
+Ngày 7 tháng 9 năm 1945, trường được đổi tên thành Trường Quân chính Việt Nam.
+
+Ngày 15 tháng 10 năm 1945, trường được đổi tên thành Trường Huấn luyện cán bộ Việt Nam.
+
+Ngày 15 tháng 4 năm 1946, trường được đổi tên thành Trường Võ bị Trần Quốc Tuấn, và bắt đầu khai giảng khóa 1 tại thị xã Sơn Tây với mục tiêu đào tạo cán bộ chỉ huy cấp trung, đại đội có kiến thức cơ bản về quân sự để chuẩn bị cho ngày toàn quốc kháng chiến.
+
+Tháng 2 năm 1948, trường được đổi tên thành Trường Trung học Lục quân Trần Quốc Tuấn.
+
+Tháng 12 năm 1950, trường được đổi tên thành Trường Lục quân Việt Nam.
+
+Tháng 1 năm 1956, trường được đổi tên thành Trường Đại học Sĩ quan Lục quân.
+
+Năm 1976, trường được đổi tên thành Trường Đại học Sĩ quan Lục quân 1.
+
+Ngày 28 tháng 10 năm 2010, trường được đổi tên thành Trường Đại học Trần Quốc Tuấn."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
     vnedu:motto "Trung với nước, hiếu với dân"@vi ;
     vnedu:ownership vnedu:PublicOwnership ;
+    schema:foundingDate "1945-04-15"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/vi/4/47/Luc_Quan_1.jpg> ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo .
+
+<https://upload.wikimedia.org/wikipedia/vi/4/47/Luc_Quan_1.jpg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Luc_Quan_1.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/4/47/Luc_Quan_1.jpg/330px-Luc_Quan_1.jpg> .
 

@@ -17,98 +17,125 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-an-ninh-nhan-dan",
-  "@type": [
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PoliceInstitution",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "https://dhannd.bocongan.gov.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_An_ninh_nh%C3%A2n_d%C3%A2n_%28Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh%29"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.851342"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.776347"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "wd:Q86012406"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-an-ninh-nhan-dan",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "vnedu:PoliceInstitution",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học An ninh nhân dân (, thường được gọi tắt là VPSU, hoặc T47, T04) là một trường đại học chuyên ngành an ninh hệ công lập trực thuộc Bộ Công an tại Việt Nam. Được thành lập ngày 09 tháng 10 năm 1963, trường có nhiệm vụ chính là đào tạo cán bộ An ninh nhân dân trình độ đại học và sau đại học, bồi dưỡng nghiệp vụ cho cán bộ lãnh đạo, và là trung tâm nghiên cứu khoa học của ngành. Trụ sở chính của trường đặt tại Km18, Xa lộ Hà Nội, phường Linh Xuân, Thành phố Hồ Chí Minh. Trải qua nhiều lần sắp xếp, tường được nâng cấp và đổi tên vào tháng 7 năm 2003, có trụ sở tại Km18, Xa lộ Hà Nội, phường Linh Xuân, Thành phố Thủ Đức, Thành phố Hồ Chí Minh (nay thuộc phường Linh Xuân, Thành phố Hồ Chí Minh). Trường đào tạo đại học, sau đại học, và là một trong những trung tâm nghiên cứu khoa học của ngành Công an nhân dân Việt Nam. Ngày 18 tháng 9 năm 2026, theo Quyết định số 185/QĐ-TTg của Thủ tướng Chính phủ, Trường Đại học An ninh nhân dân được sáp nhập vào Học viện An ninh nhân dân để thành lập phân hiệu của Học viện tại TP. Hồ Chí Minh, mang tên Học viện An ninh nhân dân – Phân hiệu Thành phố Hồ Chí Minh."
+      },
+      "foaf:homepage": {
+        "@id": "https://dhannd.bocongan.gov.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_An_ninh_nh%C3%A2n_d%C3%A2n_%28Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh%29"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.851342"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.776347"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q86012406"
+        },
+        {
+          "@id": "https://ror.org/05qrzcp08"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q86012406"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75566415"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Vietnam People's Security University"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học An ninh nhân dân"
+        }
+      ],
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Flag_of_the_People%27s_Public_Security_of_Vietnam.svg"
+      },
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học An ninh nhân dân"
+      },
+      "vnedu:address": "Km18, Xa lộ Hà Nội, phường Linh Xuân, Thành phố Hồ Chí Minh",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1963"
+      },
+      "vnedu:governedBy": {
+        "@id": "vnedu:MinistryOfPublicSecurity"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "- Trường An ninh Trung ương Cục miền Nam được thành lập ngày 9/10/1963 theo Chỉ thị 69/CT ngày 30/9/1963 của Thường vụ Trung ương Cục miền Nam.\n\n- Trụ sở đầu tiên xây dựng tại Đội Thơ (xã Hòa Hiệp, huyện Tân Biên, tỉnh Tây Ninh). Từ năm 1963 đến năm 1976, Trường 8 lần di dời địa điểm đóng quân, trong đó có 3 lần di dời sang Campuchia (Trảng Tầm Phô, Tà Đạt, Đầm Be).\n\n- Tổ chức bộ máy Nhà trường: Tổ Giáo vụ, Tổ Văn phòng - Quản trị, Tổ Võ thuật, Tổ Hậu cần, Tổ Y tế, Tổ Bảo vệ.\n\n- Đội ngũ giảng viên là lãnh đạo Ban An ninh Trung ương Cục miền Nam: Đồng chí Cao Đăng Chiếm, Huỳnh Việt Thắng, Ngô Quang Nghĩa, Cao Đức Hoàn, Từ Đức Lưu, Bùi Thiện Ngộ và giáo viên Trường Công an Trung ương chi viện: Đồng chí Lê Minh Đốc (Sáu Học), Phan Minh Điện (Mười Quang), Nguyễn Hóa (Ba Dân)...\n\n- Học viên là cán bộ An ninh khu, tỉnh, huyện trong toàn miền Nam.\n\n- Nhiệm vụ của Trường: Mở các lớp bồi dưỡng chính trị, nghiệp vụ cho lực lượng An ninh, phục vụ yêu cầu chiến đấu của chiến trường miền Nam.\n\n- Những thành tựu nổi bật trên các mặt công tác:\n\n+ Công tác đào tạo: Trong giai đoạn 1963 - 1976, Nhà trường đã đào tạo 70 khóa học với hơn 5.000 học viên là cán bộ cốt cán của lực lượng An ninh miền Nam, góp phần vào thắng lợi của cuộc cách mạng giải phóng dân tộc. Nhiều học viên của trường đã trở thành lãnh đạo Đảng, Nhà nước và Công an các tỉnh, thành phố phía Nam.\n\n+ Công tác nghiên cứu: Cán bộ, giáo viên Nhà trường thực hiện nghiên cứu, tổng kết thực tiễn để tham mưu xây dựng các văn kiện chỉ đạo của Trung ương Cục miền Nam (Chỉ thị ngày 9/6/1968 về xây dựng và phát triển lực lượng An ninh, Nghị quyết 165/TV- KNB về những vấn đề cơ bản của công tác An ninh miền Nam…); biên soạn nhiều tài liệu về công tác an ninh trong giai đoạn kháng chiến chống Mỹ, phục vụ các hội nghị quan trọng của Trung ương Cục (Hội nghị Bảo vệ chính trị toàn miền Nam lần thứ I (8/1973), Hội nghị An ninh toàn miền Nam lần thứ II (4/1974), Hội nghị triển khai nhiệm vụ của Đảng bộ miền Nam và Nghị quyết về nhiệm vụ của An ninh miền Nam trong thời kỳ mới…).\n\n+ Công tác hậu cần: Cán bộ, giáo viên Nhà trường tích cực lao động, sản xuất và tổ chức xây dựng hội trường, lớp học, bãi tập, kho tàng, nơi ăn ở trong những lần Trường di dời địa điểm để đảm bảo nhiệm vụ giảng dạy; đồng thời trực tiếp tham gia chiến đấu chống lại các cuộc hành quân càn quét của Mỹ - Ngụy, Trường có 02 cán bộ đã hy sinh trong quá trình chiến đấu bảo vệ Trường."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:website": {
+        "@id": "https://dhannd.bocongan.gov.vn/"
+      }
     },
     {
-      "@id": "https://ror.org/05qrzcp08"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Flag_of_the_People%27s_Public_Security_of_Vietnam.svg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Tom Mai",
+      "schema:license": "Public domain",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Flag_of_the_People%27s_Public_Security_of_Vietnam.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Flag_of_the_People%27s_Public_Security_of_Vietnam.svg/330px-Flag_of_the_People%27s_Public_Security_of_Vietnam.svg.png"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q86012406"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75566415"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Vietnam People's Security University"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học An ninh nhân dân"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học An ninh nhân dân"
-  },
-  "vnedu:address": "Km18, Xa lộ Hà Nội, phường Linh Xuân, Thành phố Hồ Chí Minh",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1963"
-  },
-  "vnedu:governedBy": {
-    "@id": "vnedu:MinistryOfPublicSecurity"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:website": {
-    "@id": "https://dhannd.bocongan.gov.vn/"
-  }
+  ]
 }

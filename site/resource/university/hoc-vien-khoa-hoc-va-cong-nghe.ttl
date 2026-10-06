@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -24,6 +25,7 @@ university:hoc-vien-khoa-hoc-va-cong-nghe a foaf:Organization,
         schema:Organization ;
     rdfs:label "Graduate University of Science and Technology"@en,
         "Học viện Khoa học và Công nghệ"@vi ;
+    dbo:abstract "Học viện Khoa học và Công nghệ (tiếng Anh: Graduate University of Sciences and Technology hay viết tắt là GUST) là một học viện công lập trực thuộc Viện Hàn lâm Khoa học và Công nghệ Việt Nam, nằm trong hệ thống giáo dục quốc dân Việt Nam."@vi ;
     owl:sameAs wd:Q61128190,
         <https://ror.org/03t0zs859> ;
     skos:prefLabel "Học viện Khoa học và Công nghệ"@vi ;
@@ -33,6 +35,9 @@ university:hoc-vien-khoa-hoc-va-cong-nghe a foaf:Organization,
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Khoa_h%E1%BB%8Dc_v%C3%A0_C%C3%B4ng_ngh%E1%BB%87> ;
     vnedu:foundingYear "2014"^^xsd:gYear ;
     vnedu:governedBy organization:vien-han-lam-khoa-hoc-va-cong-nghe-viet-nam ;
+    vnedu:history """Ngày 22 tháng 9 năm 2014, Thủ tướng Chính phủ ra Quyết định số 1691/QĐ-TTg về việc thành lập Học viện Khoa học và Công nghệ.
+
+Học viện Khoa học và Công nghệ là cơ sở giáo dục, đơn vị sự nghiệp trực thuộc Viện Hàn lâm Khoa học và Công nghệ Việt Nam có tư cách pháp nhân, con dấu và tài khoản riêng, có chức năng và nhiệm vụ chính."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;

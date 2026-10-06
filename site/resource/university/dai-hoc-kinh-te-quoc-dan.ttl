@@ -31,6 +31,7 @@ university:dai-hoc-kinh-te-quoc-dan a dbo:University,
         schema:Organization ;
     rdfs:label "National Economics University"@en,
         "Đại học Kinh tế Quốc dân"@vi ;
+    dbo:abstract "Đại học Kinh tế Quốc dân (tiếng Anh: National Economics University, NEU) là đại học công lập trực thuộc Bộ Giáo dục và Đào tạo trong lĩnh vực đào tạo về kinh tế, quản lý và quản trị kinh doanh ở Việt Nam. Tiền thân của Đại học Kinh tế Quốc dân là Trường Đại học Kinh tế Quốc dân. Vào năm 2024, Chính phủ có quyết định chuyển trường thành đại học. Hiện đại học đang có ba trường trực thuộc."@vi ;
     owl:sameAs dbr:National_Economics_University,
         wd:Q6972380,
         <https://ror.org/021xbwv17> ;
@@ -73,6 +74,13 @@ university:dai-hoc-kinh-te-quoc-dan a dbo:University,
         person:trid-minh,
         person:truong-quoc-huy ;
     vnedu:hasLeader person:bui-duc-tho ;
+    vnedu:history """Trường Đại học Kinh tế Quốc dân được thành lập theo Nghị định số 678-TTg ngày 25 tháng 1 năm 1956 với tên gọi ban đầu là Trường Kinh tế Tài chính. Lúc đó, Trường được đặt trong hệ thống Đại học nhân dân Việt Nam.
+
+Ngày 22 tháng 5 năm 1958: Nghị định số 252-TTg của Thủ tướng Chính phủ đổi tên trường thành Trường Đại học Kinh tế Tài chính trực thuộc Bộ Giáo dục. Tháng 1 năm 1965, trường đổi tên thành Trường Đại học Kinh tế Kế hoạch.
+
+Ngày 22 tháng 10 năm 1985: Bộ trưởng Bộ Đại học và Trung học chuyên nghiệp Nguyễn Đình Tứ ra Quyết định số 1443/QĐ-KH đổi tên trường thành Trường Đại học Kinh tế Quốc dân. Năm 1989: trường Đại học Kinh tế Quốc dân được Chính phủ giao thực hiện 3 nhiệm vụ chính là:
+
+Tư vấn về chính sách kinh tế vĩ mô và vi mô. Đào tạo về kinh tế, quản lý và quản trị kinh doanh ở bậc đại học và sau đại học Đào tạo cán bộ quản lý cho các doanh nghiệp thuộc các thành phần kinh tế Đầu năm 2024, Đại học Kinh tế Quốc dân thành lập 3 trường trực thuộc là Kinh tế và Quản lý công, Kinh doanh và Công nghệ. Đến ngày 15 tháng 11 năm 2024, Phó Thủ tướng Chính phủ Lê Thành Long ký Quyết định số 1386/QĐ-TTg ngày 15/11/2024 chuyển Trường Đại học Kinh tế Quốc dân thành Đại học Kinh tế Quốc dân."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -97,7 +105,15 @@ university:dai-hoc-kinh-te-quoc-dan a dbo:University,
         major:7510605 ;
     vnedu:website <http://www.en.neu.edu.vn/> ;
     schema:employee person:bui-duc-tho ;
+    schema:foundingDate "1956-01-25"^^xsd:date ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/3/30/Logo-NEU.PNG> ;
+    schema:telephone "+84.4 36.280.280" .
+
+<https://upload.wikimedia.org/wikipedia/vi/3/30/Logo-NEU.PNG> a schema:ImageObject ;
+    schema:license "KTD" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo-NEU.PNG> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/3/30/Logo-NEU.PNG/330px-Logo-NEU.PNG> .
 

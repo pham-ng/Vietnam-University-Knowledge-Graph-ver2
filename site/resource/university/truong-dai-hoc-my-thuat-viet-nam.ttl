@@ -28,6 +28,7 @@ university:truong-dai-hoc-my-thuat-viet-nam a dbo:University,
         schema:Organization ;
     rdfs:label "Hanoi College of Fine Arts"@en,
         "Trường Đại học Mỹ thuật Việt Nam"@vi ;
+    dbo:abstract "Trường Đại học Mỹ thuật Việt Nam là một trường đại học công lập của Việt Nam chuyên đào tạo nhóm ngành mỹ thuật, thuộc Bộ Văn hóa, Thể thao và Du lịch, tiền thân theo đơn vị này là Trường Cao đẳng Mỹ thuật Đông Dương. Năm 2008, trường được đổi tên là Trường Đại học Mỹ thuật Việt Nam, trước đó là Trường Đại học Mỹ thuật Hà Nội."@vi ;
     owl:sameAs dbr:Vietnam_University_of_Fine_Arts,
         wd:Q3815307,
         <https://ror.org/00pnmpx53> ;
@@ -64,11 +65,19 @@ university:truong-dai-hoc-my-thuat-viet-nam a dbo:University,
         person:ton-duc-luong,
         person:tran-van-can,
         person:vuong-duy-bien ;
+    vnedu:history """Tiền thân theo đơn vị này tự nhận là Trường Cao đẳng Mỹ thuật Đông Dương thuộc Viện Đại học Đông Dương, thành lập theo Nghị định của Toàn quyền Đông Dương do Martial Merlin ký vào ngày 27 tháng 10 năm 1924. Đến tháng 11 năm 1925 Trường Cao đẳng Mỹ thuật Đông Dương khai giảng khóa đầu tiên, đánh dấu mốc son chính thức về khởi đầu hành trình phát triển của nhà trường. Họa sỹ Victor Tardieu, Giải thưởng Đông Dương (Prix de l'Indochine) năm 1920, trở thành vị Hiệu trưởng đầu tiên của trường từ 1925 đến khi ông qua đời tại Hà Nội năm 1937.
+
+Từ khi thành lập đến nay nhà trường đã trải qua các giai đoạn khác nhau và thay đổi tên trường như sau:
+
+Giai đoạn 1925 - 1945: Trường Cao đẳng Mỹ thuật Đông Dương; Giai đoạn 1945 - 1950: Trường Cao đẳng Mỹ thuật (thuộc Bộ Quốc gia Giáo dục); Giai đoạn 1950 - 1957: Trường Mỹ thuật trung cấp (thuộc Vụ VHVN), giai đoạn này nhà trường đã đào tạo 2 khóa đặc biệt của mỹ thuật Việt Nam – Khóa Kháng chiến và Khóa Tô Ngọc Vân; Giai đoạn 1957 - 1981: Trường Cao đẳng Mỹ thuật Việt Nam (thuộc Bộ Văn hóa); Giai đoạn 1981 - 2008, Trường Đại học Mỹ thuật Hà Nội (thuộc Bộ Văn hóa – Thông tin); Giai đoạn 2008 - nay: Trường Đại học Mỹ thuật Việt Nam, Tên tiếng Anh: Vietnam University of Fine Arts (thuộc Bộ Văn hóa, Thể thao và Du lịch).
+
+Thành lập năm 1962 Viện Mỹ thuật do họa sĩ Nguyễn Đỗ Cung làm Viện trưởng. Năm 1995 trường sáp nhập với trường Đại học Mỹ thuật Hà Nội (nay là Trường Đại học Mỹ thuật Việt Nam). Trong giai đoạn này Viện đã có nhiều công trình nghiên cứu đã xuất bản như: Mỹ thuật Lý, Trần, Lê, Mạc Mỹ thuật Nguyễn ở Huế, Bản rập họa tiết Mỹ thuật cổ Việt Nam, Hình tượng con người trong chạm khắc cổ Việt Nam, Mỹ thuật Việt Nam Hiện đại, Bãi đá cổ Sapa dưới con mắt tạo hình."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:website <http://mythuatvietnam.edu.vn/> ;
+    schema:foundingDate "1924-10-27"^^xsd:date ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo .

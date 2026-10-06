@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -29,6 +30,7 @@ university:hoc-vien-nong-nghiep-viet-nam a foaf:Organization,
         schema:Organization ;
     rdfs:label "VNUA - Vietnam National University of Agriculture"@en,
         "Học viện Nông nghiệp Việt Nam"@vi ;
+    dbo:abstract "Học viện Nông nghiệp Việt Nam (, viết tắt là VNUA), tiền thân là Trường Đại học Nông nghiệp 1 – Hà Nội, là học viện đào tạo nhóm ngành nông – lâm – ngư nghiệp tại miền Bắc Việt Nam, thuộc nhóm 30 trường đại học đứng đầu Đông Nam Á trực thuộc Bộ Nông nghiệp và Môi trường. Học viện tọa lạc tại xã Gia Lâm, thành phố Hà Nội, trong bối cảnh đơn vị hành chính cấp huyện đã được bãi bỏ theo Nghị quyết số 202/2025/QH15 của Quốc hội."@vi ;
     owl:sameAs dbr:Vietnam_National_University_of_Agriculture,
         wd:Q5649335,
         <https://ror.org/01abaah21> ;
@@ -43,9 +45,11 @@ university:hoc-vien-nong-nghiep-viet-nam a foaf:Organization,
     vnedu:academicStaff "800"^^xsd:nonNegativeInteger ;
     vnedu:address "Đường Ngô Xuân Quảng, xã Gia Lâm" ;
     vnedu:admissionCode "HVN" ;
+    vnedu:campus "210 ha" ;
     vnedu:director person:nguyen-thi-lan ;
     vnedu:formerName "Trường Đại học Nông nghiệp I – Hà Nội"@vi ;
     vnedu:foundingYear "1956"^^xsd:gYear ;
+    vnedu:funding "Ngân hàng Thế giới (WB) 54,2 triệu USD" ;
     vnedu:governedBy organization:bo-nong-nghiep-va-moi-truong ;
     vnedu:hasAlumnus person:bang-nguyen-tran,
         person:bui-tran-anh-dao,
@@ -80,6 +84,15 @@ university:hoc-vien-nong-nghiep-viet-nam a foaf:Organization,
         person:xuan-hoa-nguyen,
         person:xuan-trach-nguyen ;
     vnedu:hasLeader person:nguyen-thi-lan ;
+    vnedu:history """Học viện Nông nghiệp Việt Nam tiền thân là Trường Đại học Nông Lâm, được thành lập ngày 12 tháng 10 năm 1956 theo Nghị định số 53/NĐ-NL của Bộ Nông Lâm, là một trong ba trường đại học đầu tiên của nước Việt Nam Dân chủ Cộng hòa được thành lập sau ngày hòa bình lập lại ở miền Bắc. Khi mới thành lập, Trường trực thuộc Bộ Nông Lâm, có ba khoa với bốn chuyên ngành đào tạo: Khoa Nông học gồm hai ngành trồng trọt và cơ khí hóa nông nghiệp; Khoa Chăn nuôi Thú y có ngành Chăn nuôi - Thú y; Khoa Lâm học có ngành Lâm học. Đội ngũ cán bộ giảng dạy lúc đó có 27 người. Thầy Bùi Huy Đáp được bổ nhiệm làm Giám đốc Trường cùng hai thầy Phó Giám đốc là thầy Nguyễn Đăng và thầy Lương Định Của.
+
+Tháng 12 năm 1958, Chính phủ ra Quyết định sáp nhập Viện Khảo cứu trồng trọt, Viện Khảo cứu chăn nuôi, Phòng Nghiên cứu gỗ, Phòng Nghiên cứu Lâm sinh với Trường Đại học Nông Lâm thành Học viện Nông Lâm nhằm tập trung sức lực, trí tuệ của cán bộ và khả năng sử dụng hiệu quả trang thiết bị, đồng thời gắn liền hoạt động đào tạo với nghiên cứu khoa học phục vụ sản xuất. Từ năm học 1959-1960, Học viện Nông Lâm được chuyển về cơ sở mới ở xã Trâu Quỳ, huyện Gia Lâm (tỉnh Bắc Ninh). Ngày 24 tháng 12 năm 1960, Học viện đã tổ chức lễ tốt nghiệp cho sinh viên khóa I và vinh dự được Thủ tướng Phạm Văn Đồng về dự.
+
+Năm 1961, mở thêm ngành nuôi trồng và đánh bắt chế biến thủy sản; thành lập thêm khoa Kinh tế nông nghiệp. Năm 1963, Học viện chuyển một phần cán bộ và cơ sở vật chất kỹ thuật để thành lập Viện Khoa học Nông nghiệp. Năm 1964, Học viện tách khoa Lâm học, phòng nghiên cứu gỗ và lâm sinh, một phần tổ bộ môn cơ khí, một phần các tổ bộ môn khoa kinh tế để thành lập trường Đại học Lâm nghiệp (nay là Đại học Lâm nghiệp Việt Nam). Lúc này phần còn lại của trường đổi tên thành Đại học Nông nghiệp.
+
+Năm 1967, Trường Đại học Nông nghiệp được tách thành hai trường: Đại học Nông nghiệp I và Đại học Nông nghiệp II (nay là Đại học Nông lâm Huế) theo Quyết định số 124/CP ngày 14 tháng 8 năm 1967 của Thủ tướng Chính phủ. Trường giữ lại tên gọi chính thức là Trường Đại học Nông nghiệp I. Năm 1968, Trường tách khoa Thủy sản ra để thành lập trường Đại học Thủy sản (nay là Đại học Nha Trang) theo quyết định số 155-CP của Thủ tướng Chính phủ. Năm 1969, Trường lại một lần nữa san sẻ lực lượng góp phần xây dựng Trường Đại học Nông nghiệp III (đóng tại Bắc Thái).
+
+Năm 1977, Trường được Chính phủ giao nhiệm vụ đào tạo Phó tiến sĩ, mở đầu cho việc đào tạo sau đại học của Trường."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -94,8 +107,11 @@ university:hoc-vien-nong-nghiep-viet-nam a foaf:Organization,
     vnedu:trainsMajor major:7340301,
         major:7420201,
         major:7620110 ;
+    schema:email "webmaster@vnua.edu.vn" ;
     schema:employee person:nguyen-thi-lan ;
+    schema:foundingDate "1956-10-12"^^xsd:date ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:telephone "844 8276346" .
 

@@ -1,0 +1,16 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
+@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
+
+person:ho-dac-loc a foaf:Person,
+        vnedu:InstitutionLeader,
+        vnedu:Person,
+        schema:Person ;
+    rdfs:label "Hồ Đắc Lộc"@vi ;
+    foaf:name "Hồ Đắc Lộc" ;
+    vnedu:honorific "GS TSKH" ;
+    vnedu:leads university:truong-dai-hoc-cong-nghe-thanh-pho-ho-chi-minh .
+

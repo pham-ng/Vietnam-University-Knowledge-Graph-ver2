@@ -25,7 +25,7 @@
     void:linkPredicate owl:sameAs ;
     void:objectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/dbpedia> ;
     void:subjectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset> ;
-    void:triples 258 .
+    void:triples 260 .
 
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-geonames-sameAs> a void:Linkset ;
     void:linkPredicate owl:sameAs ;
@@ -49,7 +49,7 @@
     void:linkPredicate owl:sameAs ;
     void:objectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/wikidata> ;
     void:subjectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset> ;
-    void:triples 1878 .
+    void:triples 1880 .
 
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikipedia-isPrimaryTopicOf> a void:Linkset ;
     void:linkPredicate foaf:isPrimaryTopicOf ;
@@ -97,7 +97,7 @@
     void:dataDump <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-data.ttl>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-links.ttl> ;
-    void:entities 2213 ;
+    void:entities 2484 ;
     void:exampleResource university:dai-hoc-bach-khoa-ha-noi ;
     void:sparqlEndpoint <http://localhost:3030/vnedu/sparql> ;
     void:subset <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-dbpedia-closeMatch>,
@@ -107,7 +107,7 @@
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-closeMatch>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-sameAs>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikipedia-isPrimaryTopicOf> ;
-    void:triples 21610 ;
+    void:triples 24120 ;
     void:uriSpace "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/" ;
     void:vocabulary dbo:,
         geo:,

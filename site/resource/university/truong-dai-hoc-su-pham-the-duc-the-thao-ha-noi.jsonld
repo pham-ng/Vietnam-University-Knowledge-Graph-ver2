@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-the-duc-the-thao-ha-noi",
   "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
     "schema:Organization",
     "foaf:Organization",
+    "vnedu:Organization",
     "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University"
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "vnedu:HigherEducationInstitution"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Sư phạm Thể dục Thể thao Hà Nội được nâng cấp thành trường đại học từ năm 2003, trụ sở của trường được đặt tại xã Phụng Châu, huyện Chương Mỹ, thành phố Hà Nội. Trường hoạt động theo cơ chế đại học công lập."
+  },
   "foaf:homepage": {
     "@id": "http://dhsptdtthanoi.edu.vn/"
   },
@@ -46,20 +50,20 @@
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10829134"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085454"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085454"
+      "@id": "wd:Q10829134"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Hanoi University of Education and Sport"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Sư phạm Thể dục Thể thao Hà Nội"
+    },
+    {
+      "@language": "en",
+      "@value": "Hanoi University of Education and Sport"
     }
   ],
   "schema:employee": {
@@ -67,15 +71,16 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     }
   ],
+  "schema:telephone": "+84-(04) 33866 899",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Sư phạm Thể dục Thể thao Hà Nội"
@@ -93,13 +98,13 @@
   },
   "vnedu:locatedIn": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     }
   ],
   "vnedu:ownership": {

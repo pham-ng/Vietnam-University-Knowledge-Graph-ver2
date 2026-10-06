@@ -17,11 +17,11 @@ ví dụ URI: [`…/resource/university/dai-hoc-bach-khoa-ha-noi`](https://pham-
 | Phân loại do suy luận | 221 công lập · 35 tư thục · 44 trường thành viên · 21 trường quân đội · 7 trường công an · 11 cơ sở đã giải thể |
 | Đơn vị hành chính | 34 tỉnh/thành (từ 01/07/2025) + 29 tỉnh cũ đã sáp nhập + 3 miền + quốc gia |
 | Cơ quan chủ quản / chủ sở hữu | 47 (15 Bộ, UBND tỉnh, cơ quan Đảng, quân chủng/binh chủng, 5 tập đoàn giáo dục) |
-| Người | 1.668 (1.481 cựu sinh viên, 187 người đứng đầu cơ sở) |
+| Người | 1.695 (1.481 cựu sinh viên, 214 người đứng đầu / chủ tịch hội đồng trường) |
 | Ngành / lĩnh vực đào tạo | 37 / 16 (TT 09/2022/TT-BGDĐT) |
-| Triple | 17.940 khẳng định + 3.670 liên kết + **14.484 suy luận** = 36.750 (kèm ontology, VoID) |
-| Liên kết ra ngoài | 1.878 Wikidata · 258 DBpedia · 195 ROR · 63 GeoNames · 1.188 Wikipedia · 88 skos:closeMatch |
-| Tái sử dụng URI có sẵn | 217 URI Wikidata làm giá trị (nghề nghiệp, giới tính); 72% triple dùng từ vựng chuẩn — xem [docs/uri-strategy.md](docs/uri-strategy.md) |
+| Triple | 20.446 khẳng định + 3.674 liên kết + **14.666 suy luận** = 39.507 (kèm ontology, VoID) |
+| Liên kết ra ngoài | 1.880 Wikidata · 260 DBpedia · 195 ROR · 63 GeoNames · 1.188 Wikipedia · 88 skos:closeMatch |
+| Tái sử dụng URI có sẵn | 222 URI Wikidata làm giá trị (nghề nghiệp, giới tính); 74% triple dùng từ vựng chuẩn — xem [docs/uri-strategy.md](docs/uri-strategy.md) |
 
 ## Chạy nhanh
 
@@ -241,13 +241,13 @@ rdflib đều gửi từng URI đã biết sang endpoint ngoài (bind join) thay
 
 | Đường dẫn | Nội dung |
 |---|---|
-| `resource/<loại>/<tên>` | **2.211 URI tra cứu được** — HTML cho người, **JSON-LD nhúng** (JSON-LD 1.1) cho máy, `<link rel="alternate">` tới `.ttl` / `.jsonld` |
+| `resource/<loại>/<tên>` | **2.241 URI tra cứu được** — HTML cho người, **JSON-LD nhúng** (JSON-LD 1.1) cho máy, `<link rel="alternate">` tới `.ttl` / `.jsonld` |
 | `ontology` (+`.ttl`, `.jsonld`) | tài liệu ontology + **cây lớp tương tác** (D3); `ontology#Lop` neo đúng mục |
 | `dataset` | VoID + DCAT (giấy phép, linkset, phân phối) |
 | `/` | thống kê (theo tỉnh 2025, miền × sở hữu, thập kỷ thành lập, loại hình, chủ quản, liên kết), chỉ số chất lượng |
 | `map` | bản đồ Leaflet: điểm theo miền, lớp mật độ theo tỉnh, lọc theo sở hữu/loại hình, popup dẫn tới URI |
 | `explore` | tra cứu không dấu, lọc, sắp xếp, **xuất CSV** |
-| `sparql` | **SPARQL 1.1 trong trình duyệt** (Oxigraph WebAssembly) trên toàn bộ 36.750 triple — không cần máy chủ |
+| `sparql` | **SPARQL 1.1 trong trình duyệt** (Oxigraph WebAssembly) trên toàn bộ 39.507 triple — không cần máy chủ |
 | `download/` | dump Turtle, N-Triples, ZIP, shapes, JSON Schema |
 
 GitHub Pages là hosting tĩnh nên không có content negotiation phía máy chủ; máy đọc lấy RDF bằng JSON-LD nhúng trong
@@ -298,7 +298,7 @@ Những điểm **họ còn thiếu** (đã kiểm chứng trên file của họ
 | 13.273/14.057 literal là `xsd:string` (RAM, dung lượng, kích thước) | Kiểu dữ liệu chuẩn (`xsd:gYear`, `nonNegativeInteger`, `decimal`, `date`) + SHACL kiểm khoảng giá trị |
 | Không SHACL, không kiểm tra nhất quán, không test | SHACL + kiểm tra nhất quán OWL 2 RL + 46 test |
 | Silk θ = 0.2, chỉ 53/814 thiết bị có liên kết; nhiều bước làm tay qua GUI, CSV tải từ trình duyệt | Liên kết tự động, tái lập được; 99% cơ sở có liên kết |
-| URI `semanticweb.org` không dereference được; không có VoID | 2.211 URI công khai tra cứu được trên GitHub Pages; VoID + DCAT |
+| URI `semanticweb.org` không dereference được; không có VoID | 2.241 URI công khai tra cứu được trên GitHub Pages; VoID + DCAT |
 | ChatGPT là một nguồn dữ liệu (không truy được nguồn gốc) | Chỉ dùng nguồn mở có giấy phép; `prov:wasDerivedFrom` tới bản sửa đổi cụ thể |
 
 ## Giới hạn đã biết

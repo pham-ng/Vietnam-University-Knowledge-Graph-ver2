@@ -19,10 +19,10 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/kien-ung",
   "@type": [
-    "schema:Person",
     "vnedu:Person",
-    "foaf:Person",
-    "vnedu:Alumnus"
+    "schema:Person",
+    "vnedu:Alumnus",
+    "foaf:Person"
   ],
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/Ki%C3%AAn_%E1%BB%A8ng"
@@ -36,20 +36,20 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Kiên Ứng"
     },
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Kiên Ứng"
     }
   ],
   "schema:alumniOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-san-khau-dien-anh-ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-am-nhac-quoc-gia-viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-am-nhac-quoc-gia-viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-san-khau-dien-anh-ha-noi"
     }
   ],
   "schema:gender": {
@@ -57,30 +57,30 @@
   },
   "schema:hasOccupation": [
     {
-      "@id": "wd:Q12369034"
-    },
-    {
-      "@id": "wd:Q47541952"
-    },
-    {
       "@id": "wd:Q222344"
     },
     {
-      "@id": "wd:Q3455803"
+      "@id": "wd:Q12369034"
     },
     {
       "@id": "wd:Q55960555"
     },
     {
       "@id": "wd:Q177220"
+    },
+    {
+      "@id": "wd:Q3455803"
+    },
+    {
+      "@id": "wd:Q47541952"
     }
   ],
   "vnedu:alumnusOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-san-khau-dien-anh-ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-am-nhac-quoc-gia-viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-am-nhac-quoc-gia-viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-san-khau-dien-anh-ha-noi"
     }
   ],
   "vnedu:birthDate": {

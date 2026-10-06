@@ -29,11 +29,13 @@ university:truong-dai-hoc-hoa-sen a dbo:University,
         schema:Organization ;
     rdfs:label "Hoa Sen University"@en,
         "Trường Đại học Hoa Sen"@vi ;
+    dbo:abstract "Trường Đại học Hoa Sen (HSU) là một trường đại học của Việt Nam đào tạo các ngành kinh tế, kinh doanh và quản lý, du lịch, công nghệ, thiết kế nghệ thuật và ngôn ngữ."@vi ;
     owl:sameAs dbr:Hoa_Sen_University,
         wd:Q1002930,
         <https://ror.org/05pq46g90> ;
     geo:lat 10.770454 ;
     geo:long 106.692519 ;
+    skos:altLabel "Hoa Sen University, Université Hoa Sen" ;
     skos:prefLabel "Trường Đại học Hoa Sen"@vi ;
     prov:wasDerivedFrom wd:Q1002930,
         <https://vi.wikipedia.org/w/index.php?oldid=75551176> ;
@@ -45,6 +47,11 @@ university:truong-dai-hoc-hoa-sen a dbo:University,
     vnedu:hasAlumnus person:hoang-ton,
         person:nguyen-thuc-thuy-tien ;
     vnedu:hasLeader person:nguyen-huu-huy-nhut ;
+    vnedu:history """Trường được thành lập năm 1991 với tên gọi Trường Nghiệp vụ Tin học và Quản lý Hoa Sen. Năm 1994, trường Hoa Sen trở thành trường bán công. Năm 1996, trường đã chuyển trụ sở đến tòa nhà số 8 Nguyễn Văn Tráng.
+
+Năm 1999, Thủ tướng Chính phủ ra quyết định công nhận thành lập Trường Cao đẳng Bán công Hoa Sen. Ngày 30 tháng 11 năm 2006, trường được nâng cấp thành Trường Đại học Hoa Sen. Năm 2016, Trường Đại học Hoa Sen được cấp phép đào tạo thạc sĩ chuyên ngành Quản trị Kinh doanh.
+
+Năm 2018, Tập đoàn giáo dục Nguyễn Hoàng mua lại Trường Đại học Hoa Sen."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -54,8 +61,24 @@ university:truong-dai-hoc-hoa-sen a dbo:University,
     vnedu:rector person:nguyen-huu-huy-nhut ;
     vnedu:website <https://www.hoasen.edu.vn/> ;
     schema:employee person:nguyen-huu-huy-nhut ;
+    schema:foundingDate "1991-08-12"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/7/79/HSU-B-VIE.png> ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
-    schema:parentOrganization organization:tap-doan-giao-duc-nguyen-hoang .
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/a/af/HSU-B-ENG.png> ;
+    schema:parentOrganization organization:tap-doan-giao-duc-nguyen-hoang ;
+    schema:telephone "028 37091991" .
+
+<https://upload.wikimedia.org/wikipedia/commons/7/79/HSU-B-VIE.png> a schema:ImageObject ;
+    schema:creditText "Trandothoainhan" ;
+    schema:license "CC0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:HSU-B-VIE.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/HSU-B-VIE.png/330px-HSU-B-VIE.png> .
+
+<https://upload.wikimedia.org/wikipedia/commons/a/af/HSU-B-ENG.png> a schema:ImageObject ;
+    schema:creditText "Trandothoainhan" ;
+    schema:license "CC0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:HSU-B-ENG.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/HSU-B-ENG.png/330px-HSU-B-ENG.png> .
 

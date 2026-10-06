@@ -26,6 +26,7 @@ university:truong-dai-hoc-ky-thuat-y-te-hai-duong a dbo:University,
         schema:Organization ;
     rdfs:label "Hai Duong Medical Technical University"@en,
         "Trường Đại học Kỹ thuật Y tế Hải Dương"@vi ;
+    dbo:abstract "Trường Đại học Kỹ thuật Y tế Hải Dương được thành lập ngày 12/7/2007, trụ sở của trường tọa lạc tại thành phố Hải Dương, tỉnh Hải Dương. Trường hoạt động theo cơ chế đại học công lập. Trực thuộc Bộ Y tế Việt Nam. Với gần 15 chuyên ngành đào tạo như: Bác sĩ đa khoa, Kĩ thuật hình ảnh y học, Kĩ thuật xét nghiệm đa khoa, Điều dưỡng đa khoa, Phục hồi chức năng, Điều dưỡng sản phụ khoa, Nữ hộ sinh...Trường là cơ sở đào tạo kỹ thuật viên y tế có trình độ đại học duy nhất ở miền Bắc, góp phần đáp ứng nhu cầu về nhân lực cho các tỉnh, thành phố miền bắc cũng như cả nước."@vi ;
     owl:sameAs wd:Q10829084,
         <https://ror.org/00gg7ff92> ;
     skos:prefLabel "Trường Đại học Kỹ thuật Y tế Hải Dương"@vi ;
@@ -34,8 +35,23 @@ university:truong-dai-hoc-ky-thuat-y-te-hai-duong a dbo:University,
     foaf:homepage <https://hmtu.edu.vn/> ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_K%E1%BB%B9_thu%E1%BA%ADt_Y_t%E1%BA%BF_H%E1%BA%A3i_D%C6%B0%C6%A1ng> ;
     vnedu:address "Số 1 Vũ Hựu, thành phố Hải Dương, tỉnh Hải Dương, Việt Nam" ;
+    vnedu:councilChair person:dinh-thi-dieu-hang ;
     vnedu:foundingYear "2007"^^xsd:gYear ;
-    vnedu:hasLeader person:pham-thi-cam-hung ;
+    vnedu:hasLeader person:dinh-thi-dieu-hang,
+        person:pham-thi-cam-hung ;
+    vnedu:history """Trường Y sỹ Hải Dương (Quyết định số 18/TCCB ngày 5/9/1960 của Ủy ban Hành chính tỉnh Hải Dương), Trường Cán bộ Y tế Hải Hưng, Trường Trung học Y tế Hải Hưng: đào tạo y sỹ, dược sỹ, y tá, nữ hộ sinh trung học
+
+Trường Trung học Kỹ thuật Y tế 1- Bộ Y tế, đào tạo KTV Xét nghiệm, Xquang, Vật lý trị liệu/ Phục hồi chức năng, Gây mê hồi sức, Y sỹ Nha, Điều dưỡng đa khoa, hộ sinh trung cấp
+
+Nâng cấp thành Trường Cao đẳng Kỹ thuật Y tế 1 - Bộ Y tế (Quyết định số 1952 /QĐ-BGD&ĐT ngày 24/4/2001), đào tạo Điều dưỡng và Kỹ thuật y học 7 chuyên ngành Cao đẳng (KTV Xét nghiệm, Kỹ thuật hình ảnh, Vật lý trị liệu/ Phục hồi chức năng, Điều dưỡng Đa khoa, Điều dưỡng Nha khoa, Điều dưỡng Gây mê hồi sức, Hộ sinh) và 08 chuyên ngành hệ Trung cấp
+
+-Từ 2006: Đào tạo thêm 03 chuyên ngành Cao đẳng: Dinh dưỡng - Tiết chế, Kiểm nghiệm ATVSTP và Y học Dự phòng
+
+- Nâng cấp thành Trường Đại học kỹ thuật Y tế Hải Dương (Quyết định 868/QĐ-TTg ngày 12/7/2007)
+
+-Từ năm học 2008 - 2009: Đào tạo trình độ Đại học các chuyên ngành: Điều dưỡng, Xét nghiệm, Kỹ thuật hình ảnh và VLTL
+
+Bác sĩ đa khoa Xét nghiệm Y học Kỹ thuật hình ảnh y học Phục hồi chức năng Điều dưỡng Điều dưỡng đa khoa Điều dưỡng nha khoa Điều dưỡng Gây mê - Hồi sức Điều dưỡng Sản phụ khoa Sau đại học:"""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:hai-duong,
         province:hai-phong,
@@ -44,9 +60,11 @@ university:truong-dai-hoc-ky-thuat-y-te-hai-duong a dbo:University,
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:pham-thi-cam-hung ;
     vnedu:website <https://hmtu.edu.vn/> ;
-    schema:employee person:pham-thi-cam-hung ;
+    schema:employee person:dinh-thi-dieu-hang,
+        person:pham-thi-cam-hung ;
     schema:location country:viet-nam,
         province:hai-duong,
         province:hai-phong,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:telephone "+84-(0220).389 1799" .
 

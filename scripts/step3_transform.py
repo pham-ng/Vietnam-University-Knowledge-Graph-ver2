@@ -18,7 +18,7 @@ from rdflib.namespace import FOAF, RDF, RDFS, SKOS, XSD
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config  # noqa: E402
-from common import GEO, SCHEMA, VNEDU, Minter, bind_prefixes, field_uri, major_uri, read_csv, record_manifest, vn_key  # noqa: E402
+from common import DBO, GEO, SCHEMA, VNEDU, Minter, bind_prefixes, field_uri, major_uri, read_csv, record_manifest, vn_key  # noqa: E402
 
 PROV = Namespace("http://www.w3.org/ns/prov#")
 WD = Namespace("http://www.wikidata.org/entity/")
@@ -54,6 +54,23 @@ def add_reused(g, s, p, item):
     for lang in ("vi", "en"):
         if item.get(lang):
             g.add((o, RDFS.label, Literal(item[lang], lang=lang)))
+
+
+def add_media(g, s, p, m):
+    """Ảnh/biểu trưng: URI của chính tệp trên Wikimedia (tái sử dụng), kèm ảnh thu nhỏ, trang mô tả, giấy phép, ghi công."""
+    if not m:
+        return
+    o = URIRef(m["url"])
+    g.add((s, p, o))
+    g.add((o, RDF.type, SCHEMA.ImageObject))
+    if m.get("thumb"):
+        g.add((o, SCHEMA.thumbnailUrl, URIRef(m["thumb"])))
+    if m.get("page"):
+        g.add((o, SCHEMA.mainEntityOfPage, URIRef(m["page"])))
+    if m.get("license"):
+        g.add((o, SCHEMA.license, Literal(m["license"])))
+    if m.get("artist"):
+        g.add((o, SCHEMA.creditText, Literal(m["artist"])))
 
 
 def add(g, s, p, o):
@@ -137,6 +154,24 @@ def main() -> None:
         add(g, s, VNEDU.numberOfPostgraduates, lit(i.get("postgraduates"), XSD.nonNegativeInteger))
         add(g, s, VNEDU.academicStaff, lit(i.get("academic_staff"), XSD.nonNegativeInteger))
         add(g, s, VNEDU.address, lit(i.get("address")))
+        for n in i.get("alt_names", []):
+            g.add((s, SKOS.altLabel, Literal(n)))
+        add(g, s, SCHEMA.foundingDate, lit(i.get("founding_date"), XSD.date))
+        add(g, s, SCHEMA.telephone, lit(i.get("telephone")))
+        add(g, s, SCHEMA.email, lit(i.get("email")))
+        add(g, s, VNEDU.campus, lit(i.get("campus")))
+        add(g, s, VNEDU.funding, lit(i.get("funding")))
+        add(g, s, DBO.abstract, lit(i.get("abstract"), lang="vi"))
+        add(g, s, VNEDU.history, lit(i.get("history"), lang="vi"))
+        add_media(g, s, SCHEMA.logo, i.get("logo"))
+        add_media(g, s, SCHEMA.image, i.get("image"))
+        # Đối tác: trỏ thẳng tới cơ sở trong dataset nếu có, nếu không thì tới URI Wikidata (tái sử dụng)
+        qid_inst = {x["qid"]: kk for kk, x in insts.items() if x.get("qid")}
+        for pt in i.get("partners", []):
+            if pt["qid"] in qid_inst:
+                g.add((s, DBO.affiliation, u_inst[qid_inst[pt["qid"]]]))
+            else:
+                add_reused(g, s, DBO.affiliation, {"qid": pt["qid"], "vi": pt["name"]})
         add(g, s, GEO.lat, lit(i.get("lat"), XSD.decimal))
         add(g, s, GEO.long, lit(i.get("long"), XSD.decimal))
         if i.get("website"):
@@ -175,7 +210,8 @@ def main() -> None:
         for sch in p["alumnus_of"]:
             g.add((s, VNEDU.alumnusOf, u_inst[sch]))
         for l in p["leads"]:
-            g.add((u_inst[l["org"]], VNEDU.rector if l["role"] == "rector" else VNEDU.director, s))
+            role_prop = {"rector": VNEDU.rector, "director": VNEDU.director, "chair": VNEDU.councilChair}[l["role"]]
+            g.add((u_inst[l["org"]], role_prop, s))
         if p["qid"]:
             g.add((s, PROV.wasDerivedFrom, WD[p["qid"]]))
 

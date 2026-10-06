@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-nghe-thuat-trung-uong",
   "@type": [
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
     "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
+    "schema:EducationalOrganization",
     "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "foaf:Organization",
+    "schema:Organization",
     "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Sư phạm Nghệ thuật Trung ương là cơ sở đào tạo, bồi dưỡng nguồn nhân lực có trình độ đại học, sau đại học và nghiên cứu khoa học, chuyển giao công nghệ trong lĩnh vực Văn hóa, Giáo dục nghệ thuật, trực thuộc Bộ Giáo dục và Đào tạo. Cơ sở của trường tọa lạc tại số 18 ngõ 55 đường Trần Phú, phường Thanh Liệt, thành phố Hà Nội."
+  },
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Ngh%E1%BB%87_thu%E1%BA%ADt_Trung_%C6%B0%C6%A1ng"
   },
@@ -62,10 +66,10 @@
   },
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/trinh-lam-tung"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/do-quang-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/do-quang-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/trinh-lam-tung"
     }
   ],
   "vnedu:ownership": {

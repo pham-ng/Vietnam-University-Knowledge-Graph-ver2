@@ -17,116 +17,147 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-giao-duc-dai-hoc-quoc-gia-ha-noi",
-  "@type": [
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
-  ],
-  "foaf:homepage": {
-    "@id": "http://education.vnu.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Gi%C3%A1o_d%E1%BB%A5c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "wd:Q10829046"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/d/db/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Gi%C3%A1o_d%E1%BB%A5c.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Gi%C3%A1o_d%E1%BB%A5c.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/d/db/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Gi%C3%A1o_d%E1%BB%A5c.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Gi%C3%A1o_d%E1%BB%A5c.svg.png"
+      }
     },
     {
-      "@id": "https://ror.org/03p84hv22"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-giao-duc-dai-hoc-quoc-gia-ha-noi",
+      "@type": [
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:MemberInstitution",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Giáo dục, Đại học Quốc gia Hà Nội ( – VNU-UEd) là một trường đại học chuyên ngành sư phạm, chuyên đào tạo, bồi dưỡng chuyên gia giáo dục và nhà giáo cho mọi bậc học ở Việt Nam thuộc Đại học Quốc gia Hà Nội - đại học trong nhóm trọng điểm quốc gia và đại học tinh hoa của Việt Nam. Trường được thành lập từ năm 1999 và được sắp xếp, tổ chức lại theo Quyết định số 441/QĐ-TTg của Thủ tướng Chính phủ ký ngày 03 tháng 04 năm 2009. Đây là cơ sở giáo dục tiên phong tại Việt Nam trong đào tạo giáo viên dạy học các môn tích hợp ở bậc trung học cơ sở, gồm Sư phạm Lịch sử & Địa lý và Sư phạm Khoa học Tự nhiên; đồng thời triển khai đào tạo ở một số lĩnh vực mới của khoa học giáo dục như Quản trị trường học, Quản trị chất lượng giáo dục, Tham vấn học đường và Công nghệ Giáo dục. Năm 2024, trường là cơ sở giáo dục đầu tiên và duy nhất của Việt Nam được xếp hạng thế giới trong lĩnh vực Giáo dục. Đây cũng là đơn vị duy nhất tại Việt Nam đồng thời đào tạo giáo viên và các nhà giáo dục, với mô hình đào tạo a+b. Đồng thời đây cũng là trường đại học có tỷ lệ cán bộ đạt trình độ tiến sĩ trở lên thuộc nhóm cao nhất trong các cơ sở giáo dục đại học Việt Nam và khối trường đào tạo giáo viên. Ngoài động đào tạo, trường còn tham gia vào các hoạt động phát triển chính sách giáo dục quốc gia. Một số giảng viên của trường đảm nhiệm vai trò như Chủ tịch, Phó chủ tịch Hội đồng Giáo sư Nhà nước ngành Giáo dục; hay nhiều cán bộ của trường tham gia biên soạn Chương trình Giáo dục Phổ thông 2018. Trong các đợt phê duyệt sách giáo khoa lớp 2 và lớp 6 của Bộ Giáo dục và Đào tạo, có 08 đầu sách ghi nhận sự tham gia của giảng viên nhà trường trong vai trò tác giả hoặc đồng tác giả."
+      },
+      "foaf:homepage": {
+        "@id": "http://education.vnu.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Gi%C3%A1o_d%E1%BB%A5c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10829046"
+        },
+        {
+          "@id": "https://ror.org/03p84hv22"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829046"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75483106"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "VNU University of Education"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Giáo dục, Đại học Quốc gia Hà Nội"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thanh-nam"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "2009-04-03"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/d/db/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Gi%C3%A1o_d%E1%BB%A5c.svg"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+      },
+      "schema:telephone": "+84- (4)- 7.548.092",
+      "skos:notation": "QHS",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Giáo dục, Đại học Quốc gia Hà Nội"
+      },
+      "vnedu:academicStaff": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "118"
+      },
+      "vnedu:address": "Tòa nhà G7, số 144 Đường Xuân Thủy, quận Cầu Giấy",
+      "vnedu:admissionCode": "QHS",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2009"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thanh-nam"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Năm 1993, Đại học Quốc gia Hà Nội được thành lập trên cơ sở ba trường đại học Tổng hợp Hà Nội, Sư phạm Hà Nội I và Sư phạm Ngoại ngữ Hà Nội. Tuy nhiên, sau một thời gian, hai trường gồm đại học Tổng hợp và đại học Sư phạm gần như trùng lặp về cơ cấu chuyên môn, tổ chức. Vì vậy, tháng 10/1999, trường Đại học Sư phạm Hà Nội tách ra. Thay vào đó, Đại học Quốc gia Hà Nội thành lập khoa Sư phạm.\n\nNgày 21/12/1999: Khoa Sư phạm chính thức được thành lập theo Quyết định số 1481/TCCB của Giám đốc ĐHQGHN. Khi đó, cơ cấu tổ chức của Khoa gồm 2 phòng chức năng, 4 bộ môn và 6 ngành đào tạo cử nhân.\n\nSự kiện này đánh dấu sự ra đời của mô hình đào tạo giáo viên mới ở Việt Nam, học hỏi từ các quốc gia phát triển với mô hình 3+1 (hay a+b). Theo đó, sinh viên dành ba năm đầu để học kiến thức khoa học cơ bản là thế mạnh cốt lõi của Đại học Quốc gia Hà Nội tại các trường thành viên của ĐHQGHN và năm cuối tập trung đào tạo nghiệp vụ sư phạm và khoa học giáo dục tại Trường.\n\nTính đến năm 2007: Khoa đã có 7 ngành đào tạo cử nhân, 7 chuyên ngành đào tạo bậc thạc sĩ và 1 chuyên ngành đào tạo tiến sĩ.\n\nNgày 03/04/2009: Thủ tướng Chính phủ đã ký Quyết định số 441/QĐ-TTg thành lập Trường Đại học Giáo dục trên cơ sở Khoa Sư phạm. Trường đã trở thành trường đại học thành viên thứ sáu của ĐHQGHN. Cơ cấu tổ chức của Trường Đại học Giáo dục khi đó gồm 4 phòng chức năng, 3 khoa, 6 trung tâm trực thuộc.\n\nNgày 03/03/2016: Trường THPT Khoa học Giáo dục trực thuộc Trường Đại học Giáo dục – ĐHQGHN chính thức được thành lập theo Quyết định số 1036/QĐ-UBND của Chủ tịch Uỷ ban nhân dân thành phố Hà Nội.\n\nNăm 2017: Trường thành lập 2 khoa mới là Khoa Công nghệ Giáo dục và Khoa Quản trị chất lượng; chuyển đổi Trung tâm Đảm bảo chất lượng thành Phòng Đảm bảo chất lượng và Thanh tra; thành lập và sắp xếp lại bộ môn ở các khoa như Khoa học Dữ liệu trong Giáo dục,...\n\nNgày 26/09/2022: Hiệu trưởng Trường Đại học Giáo dục – ĐHQGHN đã ký Quyết định số 1688/QĐ-ĐHGD về việc thành lập Viện Nghiên cứu lâm sàng về xã hội, tâm lý và giáo dục trực thuộc Trường trên cơ sở nâng cấp Trung tâm Thông tin hướng nghiệp và Nghiên cứu, Ứng dụng tâm lý.\n\nNgày 26/04/2024: Khoa Giáo dục sớm và tiểu học được thành lập theo Quyết định số 43 của Hội đồng Trường Đại học Giáo dục, Đại học Quốc gia Hà Nội. Khoa được thành lập trên cơ sở hai bộ môn: Bộ môn Giáo dục mầm non trực thuộc Khoa Các Khoa học Giáo dục và Bộ môn Giáo dục tiểu học, trực thuộc Khoa Sư phạm."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+      },
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Education for Tomorrow"
+      },
+      "vnedu:numberOfPostgraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1066"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thanh-nam"
+      },
+      "vnedu:website": {
+        "@id": "http://education.vnu.edu.vn"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75483106"
-    },
-    {
-      "@id": "wd:Q10829046"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "VNU University of Education"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Giáo dục, Đại học Quốc gia Hà Nội"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thanh-nam"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
-  },
-  "skos:notation": "QHS",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Giáo dục, Đại học Quốc gia Hà Nội"
-  },
-  "vnedu:academicStaff": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "118"
-  },
-  "vnedu:address": "Tòa nhà G7, số 144 Đường Xuân Thủy, quận Cầu Giấy",
-  "vnedu:admissionCode": "QHS",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2009"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thanh-nam"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
-  },
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Education for Tomorrow"
-  },
-  "vnedu:numberOfPostgraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "1066"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thanh-nam"
-  },
-  "vnedu:website": {
-    "@id": "http://education.vnu.edu.vn"
-  }
+  ]
 }

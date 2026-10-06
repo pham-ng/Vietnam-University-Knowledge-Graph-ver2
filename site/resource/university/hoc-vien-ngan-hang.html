@@ -32,16 +32,20 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ngan-hang",
   "@type": [
-    "schema:Organization",
-    "vnedu:Academy",
-    "foaf:Organization",
+    "schema:CollegeOrUniversity",
     "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
     "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity"
+    "foaf:Organization",
+    "schema:Organization",
+    "vnedu:Organization",
+    "vnedu:Academy",
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Học viện Ngân hàng (tiếng Anh: Banking Academy of Vietnam – BAV) được thành lập theo Quyết định số 30/1998/QĐ-TTg ngày 09 tháng 02 năm 1998 của Thủ tướng Chính phủ. Học viện Ngân hàng là trường đại học công lập đa ngành trực thuộc Ngân hàng Nhà nước Việt Nam và Bộ Giáo dục & Đào tạo, Học viện có trụ sở chính tại Hà Nội, phân viện Bắc Ninh, phân viện Phú Yên, phân viện Thành phố Hồ Chí Minh (tồn tại đến năm 2003) và cơ sở đào tạo Sơn Tây với hơn 16.000 sinh viên đang theo học. Trường được xếp top 1201-1300 tại châu Á theo QS Rankings và top 14 tại Việt Nam theo Bảng xếp hạng Đại học Việt Nam VNUR."
+  },
   "foaf:homepage": {
     "@id": "https://hvnh.edu.vn/"
   },
@@ -58,10 +62,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q10771894"
+      "@id": "https://ror.org/00p5kn310"
     },
     {
-      "@id": "https://ror.org/00p5kn310"
+      "@id": "wd:Q10771894"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -85,22 +89,27 @@
   "schema:employee": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-huu-toan"
   },
+  "schema:foundingDate": {
+    "@type": "xsd:date",
+    "@value": "1961-09-13"
+  },
   "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
+  "schema:telephone": "00 561 595",
   "skos:notation": [
-    "NHS",
+    "NHP",
     "NHH",
-    "NHB",
-    "NHP"
+    "NHS",
+    "NHB"
   ],
   "skos:prefLabel": {
     "@language": "vi",
@@ -109,10 +118,13 @@
   "vnedu:address": "12 phố Chùa Bộc, phường Kim Liên, TP.Hà Nội, Việt Nam",
   "vnedu:admissionCode": [
     "NHP",
-    "NHS",
     "NHH",
+    "NHS",
     "NHB"
   ],
+  "vnedu:councilChair": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-huu-toan"
+  },
   "vnedu:director": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-huu-toan"
   },
@@ -126,21 +138,25 @@
   },
   "vnedu:governedBy": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ngan-hang-nha-nuoc-viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ngan-hang-nha-nuoc-viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
     }
   ],
   "vnedu:hasLeader": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-huu-toan"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Trường Cao cấp nghiệp vụ Ngân hàng được thành lập theo Quyết định số 3072-VG ngày 13/9/1961 của Thủ tướng Chính phủ với nhiệm vụ chủ yếu là đào tạo học sinh phổ thông trở thành cán bộ trung cấp ngân hàng, bổ túc cán bộ sơ cấp, trung cấp nghiệp vụ thành cán bộ có trình độ Cao cấp nghiệp vụ Ngân hàng và trình độ đại học chuyên tu, tại chức cho đội ngũ cán bộ ngân hàng.\n\nTổng Giám đốc Ngân hàng Nhà nước Việt Nam đã ký quyết định số 1229/NH-TCCB ngày 16/12/1976 về việc thành lập cơ sở II Trường Cao cấp nghiệp vụ Ngân hàng mở cơ sở hai đặt tại Thành phố Hồ Chí Minh để đào tạo hệ chuyên tu và tại chức cho cán bộ trong ngành ở các tỉnh phía Nam.\n\nNgày 18/10/1978, Thủ tướng Chính phủ thay mặt Hội đồng Chính phủ ký Quyết định số 264/CP cho phép Ngân hàng Nhà nước Việt Nam mở hệ cao đẳng trong Trường chuyên tu cao cấp Ngân hàng, bắt đầu từ năm học 1978-1979, để đào tạo cán bộ đại học thực hành Ngân hàng phục vụ yêu cầu xây dựng và phát triển đất nước.\n\nNgày 03/5/1980, Thủ tướng Chính phủ ký Quyết định số 149/TTg cho phép Ngân hàng Nhà nước Việt Nam mở một lớp Đại học nghiệp vụ Ngân hàng tại Thành phố Hồ Chí Minh, để đào tạo cán bộ nghiệp vụ Ngân hàng cho các tỉnh phía Nam.\n\nTrung tâm Đào tạo và Nghiên cứu Khoa học Ngân hàng được thành lập theo Quyết định số 112- TTg ngày 23/3/1993 của Thủ tướng Chính phủ trên cơ sở tổ chức lại Viện tiền tệ - Tín dụng, Trường Cao cấp nghiệp vụ Ngân hàng Hà Nội, Trường Cao cấp nghiệp vụ Ngân hàng Thành phố Hồ Chí Minh, Trường Trung học Ngân hàng I, Trường Trung học Ngân hàng II, Trường Trung học Ngân hàng III, Trường Trung học Ngân hàng IV.\n\nNgày 8/3/1996, Thủ tướng Chính phủ đã ký Quyết định số 143-TTg giao nhiệm vụ đào tạo trên đại học cho Viện Khoa học Ngân hàng (Ngân hàng Nhà nước).\n\nHọc viện Ngân hàng (HVNH) được thành lập theo Quyết định số 30/1998/QĐ-TTg ngày 09/02/1998 của Thủ tướng Chính phủ trên cơ sở tổ chức lại Trung tâm Đào tạo và Nghiên cứu khoa học Ngân hàng. Theo đó, HVNH là tổ chức đào tạo và Nghiên cứu khoa học của Nhà nước về lĩnh vực ngân hàng."
+  },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
@@ -174,7 +190,9 @@
   <a href="hoc-vien-ngan-hang.ttl">Turtle</a> · <a href="hoc-vien-ngan-hang.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ngan-hang">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 20 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Học viện Ngân hàng (tiếng Anh: Banking Academy of Vietnam – BAV) được thành lập theo Quyết định số 30/1998/QĐ-TTg ngày 09 tháng 02 năm 1998 của Thủ tướng Chính phủ. Học viện Ngân hàng là trường đại học công lập đa ngành trực thuộc Ngân hàng Nhà nước Việt Nam và Bộ Giáo dục &amp; Đào tạo, Học viện có trụ sở chính tại Hà Nội, phân viện Bắc Ninh, phân viện Phú Yên, phân viện Thành phố Hồ Chí Minh (tồn tại đến năm 2003) và cơ sở đào tạo Sơn Tây với hơn 16.000 sinh viên đang theo học. Trường được xếp top 1201-1300 tại châu Á theo QS Rankings và top 14 tại Việt Nam theo Bảng xếp hạng Đại học Việt Nam VNUR.</p><h2>Lịch sử</h2><p>Trường Cao cấp nghiệp vụ Ngân hàng được thành lập theo Quyết định số 3072-VG ngày 13/9/1961 của Thủ tướng Chính phủ với nhiệm vụ chủ yếu là đào tạo học sinh phổ thông trở thành cán bộ trung cấp ngân hàng, bổ túc cán bộ sơ cấp, trung cấp nghiệp vụ thành cán bộ có trình độ Cao cấp nghiệp vụ Ngân hàng và trình độ đại học chuyên tu, tại chức cho đội ngũ cán bộ ngân hàng.</p><p>Tổng Giám đốc Ngân hàng Nhà nước Việt Nam đã ký quyết định số 1229/NH-TCCB ngày 16/12/1976 về việc thành lập cơ sở II Trường Cao cấp nghiệp vụ Ngân hàng mở cơ sở hai đặt tại Thành phố Hồ Chí Minh để đào tạo hệ chuyên tu và tại chức cho cán bộ trong ngành ở các tỉnh phía Nam.</p><details><summary>Đọc tiếp (5 đoạn)</summary><p>Ngày 18/10/1978, Thủ tướng Chính phủ thay mặt Hội đồng Chính phủ ký Quyết định số 264/CP cho phép Ngân hàng Nhà nước Việt Nam mở hệ cao đẳng trong Trường chuyên tu cao cấp Ngân hàng, bắt đầu từ năm học 1978-1979, để đào tạo cán bộ đại học thực hành Ngân hàng phục vụ yêu cầu xây dựng và phát triển đất nước.</p><p>Ngày 03/5/1980, Thủ tướng Chính phủ ký Quyết định số 149/TTg cho phép Ngân hàng Nhà nước Việt Nam mở một lớp Đại học nghiệp vụ Ngân hàng tại Thành phố Hồ Chí Minh, để đào tạo cán bộ nghiệp vụ Ngân hàng cho các tỉnh phía Nam.</p><p>Trung tâm Đào tạo và Nghiên cứu Khoa học Ngân hàng được thành lập theo Quyết định số 112- TTg ngày 23/3/1993 của Thủ tướng Chính phủ trên cơ sở tổ chức lại Viện tiền tệ - Tín dụng, Trường Cao cấp nghiệp vụ Ngân hàng Hà Nội, Trường Cao cấp nghiệp vụ Ngân hàng Thành phố Hồ Chí Minh, Trường Trung học Ngân hàng I, Trường Trung học Ngân hàng II, Trường Trung học Ngân hàng III, Trường Trung học Ngân hàng IV.</p><p>Ngày 8/3/1996, Thủ tướng Chính phủ đã ký Quyết định số 143-TTg giao nhiệm vụ đào tạo trên đại học cho Viện Khoa học Ngân hàng (Ngân hàng Nhà nước).</p><p>Học viện Ngân hàng (HVNH) được thành lập theo Quyết định số 30/1998/QĐ-TTg ngày 09/02/1998 của Thủ tướng Chính phủ trên cơ sở tổ chức lại Trung tâm Đào tạo và Nghiên cứu khoa học Ngân hàng. Theo đó, HVNH là tổ chức đào tạo và Nghiên cứu khoa học của Nhà nước về lĩnh vực ngân hàng.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75612028">«Học viện Ngân hàng (Việt Nam)»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75612028), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Học viện Ngân hàng</div><table><tr><th>Tên tiếng Anh</th><td>Banking Academy of Vietnam - BAV</td></tr><tr><th>Viết tắt</th><td>BAV, HVNH</td></tr><tr><th>Mã trường</th><td>NHB, NHH, NHP, NHS</td></tr><tr><th>Tên cũ</th><td>Trường Cao cấp Nghiệp vụ Ngân hàng</td></tr><tr><th>Loại hình</th><td>Học viện · Công lập</td></tr><tr><th>Thành lập</th><td>13 tháng 9 năm 1961</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a><br><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ngan-hang-nha-nuoc-viet-nam">Ngân hàng Nhà nước Việt Nam</a></td></tr><tr><th>Giám đốc</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-huu-toan">Bùi Hữu Toàn</a></td></tr><tr><th>Chủ tịch hội đồng trường</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-huu-toan">Bùi Hữu Toàn</a></td></tr><tr><th>Địa chỉ</th><td>12 phố Chùa Bộc, phường Kim Liên, TP.Hà Nội, Việt Nam</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Điện thoại</th><td>00 561 595</td></tr><tr><th>Website</th><td><a href="https://hvnh.edu.vn/">hvnh.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -204,8 +222,14 @@
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-huu-toan">Bùi Hữu Toàn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1961-09-13 <span class="lang">xsd:date</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>00 561 595</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>NHB <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div>NHH <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div>NHP <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div>NHS <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -215,6 +239,9 @@
 </td></tr>
 <tr><td class="p">mã trường (tuyển sinh)<small>vnedu:admissionCode</small></td><td>
 <div>NHB</div><div>NHH</div><div>NHP</div><div>NHS</div>
+</td></tr>
+<tr><td class="p">chủ tịch hội đồng trường<small>vnedu:councilChair</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-huu-toan">Bùi Hữu Toàn</a></div>
 </td></tr>
 <tr><td class="p">giám đốc<small>vnedu:director</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-huu-toan">Bùi Hữu Toàn</a></div>
@@ -248,11 +275,11 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ngan-hang-nha-nuoc-viet-nam">Ngân hàng Nhà nước Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-huu-toan">Bùi Hữu Toàn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ngan-hang-nha-nuoc-viet-nam">Ngân hàng Nhà nước Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

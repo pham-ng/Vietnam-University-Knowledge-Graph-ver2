@@ -17,97 +17,124 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-can-bo-thanh-pho-ho-chi-minh",
-  "@type": [
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "vnedu:Academy",
-    "schema:Organization",
-    "foaf:Organization"
-  ],
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_C%C3%A1n_b%E1%BB%99_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.812578"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.702581"
-  },
-  "prov:wasDerivedFrom": {
-    "@id": "https://vi.wikipedia.org/w/index.php?oldid=75492312"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Ho Chi Minh Cadre Academy"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-can-bo-thanh-pho-ho-chi-minh",
+      "@type": [
+        "vnedu:Organization",
+        "vnedu:Academy",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "foaf:Organization",
+        "schema:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Cán bộ Thành phố Hồ Chí Minh (, viết tắt: HCA) là một cơ sở giáo dục bậc đại học công lập và trường chính trị trực thuộc Thành ủy Thành phố Hồ Chí Minh. Trường có trụ sở chính tại số 324, đường Chu Văn An, phường Bình Thạnh, thành phố Hồ Chí Minh."
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_C%C3%A1n_b%E1%BB%99_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.812578"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.702581"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "https://vi.wikipedia.org/w/index.php?oldid=75492312"
+      },
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Học viện Cán bộ Thành phố Hồ Chí Minh"
+        },
+        {
+          "@language": "en",
+          "@value": "Ho Chi Minh Cadre Academy"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-y"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/c/c1/Logo_h%E1%BB%8Dc_vi%E1%BB%87n_C%C3%A1n_b%E1%BB%99.jpg"
+      },
+      "schema:telephone": "02838412405",
+      "skos:notation": "HVC",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Cán bộ Thành phố Hồ Chí Minh"
+      },
+      "vnedu:address": "Số 324 đường Chu Văn An, phường Bình Thạnh",
+      "vnedu:admissionCode": "HVC",
+      "vnedu:director": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-y"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1965"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/thanh-uy-thanh-pho-ho-chi-minh"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-y"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Học viện Cán bộ Thành phố Hồ Chí Minh thành lập theo quyết định số 1878/QĐ–TTg do Phó Thủ tướng Vũ Đức Đam ký ngày 15/10/2014 trên cơ sở nâng cấp Trường Cán bộ Thành phố Hồ Chí Minh. Trường Cán bộ Thành phố Hồ Chí Minh thành lập theo quyết định số 5509/QĐ–UB–NC ngày 19/10/1998 của Ủy ban nhân dân Thành phố Hồ Chí Minh trên cơ sở sáp nhập Trường Chính trị Nguyễn Văn Cừ và Trường Hành chính Thành phố, nếu tính từ tháng 12 năm 1996 là sự sáp nhập của 4 trường: Trường Đảng Nguyễn Văn Cừ. Trường Hành chính Thành phố. Trường Đào tạo tại chức. Trung tâm Giáo dục Chính trị."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Trách nhiệm - Chuyên nghiệp - Sáng tạo - Bản lĩnh - Hiện đại"
+      },
+      "vnedu:numberOfUndergraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "4000"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:shortName": "HCA"
     },
     {
-      "@language": "vi",
-      "@value": "Học viện Cán bộ Thành phố Hồ Chí Minh"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/c/c1/Logo_h%E1%BB%8Dc_vi%E1%BB%87n_C%C3%A1n_b%E1%BB%99.jpg",
+      "@type": "schema:ImageObject",
+      "schema:license": "không tự do",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_h%E1%BB%8Dc_vi%E1%BB%87n_C%C3%A1n_b%E1%BB%99.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/c/c1/Logo_h%E1%BB%8Dc_vi%E1%BB%87n_C%C3%A1n_b%E1%BB%99.jpg/330px-Logo_h%E1%BB%8Dc_vi%E1%BB%87n_C%C3%A1n_b%E1%BB%99.jpg"
+      }
     }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-y"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:notation": "HVC",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Cán bộ Thành phố Hồ Chí Minh"
-  },
-  "vnedu:address": "Số 324 đường Chu Văn An, phường Bình Thạnh",
-  "vnedu:admissionCode": "HVC",
-  "vnedu:director": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-y"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1965"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/thanh-uy-thanh-pho-ho-chi-minh"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-y"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Trách nhiệm - Chuyên nghiệp - Sáng tạo - Bản lĩnh - Hiện đại"
-  },
-  "vnedu:numberOfUndergraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "4000"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:shortName": "HCA"
+  ]
 }

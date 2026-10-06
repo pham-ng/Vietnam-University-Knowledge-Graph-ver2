@@ -50,7 +50,7 @@
 <div class="step">
   <h2><span class="n">1</span>Tổng quan dataset<span class="t">1 phút</span></h2>
   <p class="say">Đây là đồ thị tri thức mở về giáo dục đại học Việt Nam: 300 cơ sở, 63 tỉnh (34 tỉnh mới và 29 tỉnh cũ),
-    1.668 người, 36.750 triple. Dữ liệu thu từ Wikidata, Wikipedia, DBpedia, OSM, đi qua ba tầng bronze, silver, gold và được kiểm định bằng JSON Schema, SHACL.</p>
+    1.695 người, 39.507 triple. Dữ liệu thu từ Wikidata, Wikipedia, DBpedia, OSM, đi qua ba tầng bronze, silver, gold và được kiểm định bằng JSON Schema, SHACL.</p>
   <div class="btns"><a href="/Vietnam-University-Knowledge-Graph-ver2/">Trang tổng quan</a><a href="/Vietnam-University-Knowledge-Graph-ver2/map">Bản đồ</a><a href="/Vietnam-University-Knowledge-Graph-ver2/explore?q=bach khoa">Tra cứu "bach khoa"</a></div>
   <p class="see">biểu đồ theo tỉnh 2025, miền, thập kỷ; bản đồ có lớp mật độ theo tỉnh; tra cứu không cần gõ dấu.</p>
 </div>
@@ -63,6 +63,7 @@
     <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi">ĐH Bách khoa Hà Nội (HTML)</a>
     <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi.ttl">.ttl</a>
     <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi.jsonld">.jsonld</a>
+    <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-vinuni">Trường ĐH VinUni (infobox, lịch sử, đối tác)</a>
   </div>
   <p class="see">nhãn vi/en, mã tuyển sinh BKA, loại hình công lập, chủ quản, lãnh đạo, nguồn gốc <code>prov:wasDerivedFrom</code> tới đúng bản sửa đổi Wikipedia, và các liên kết ra ngoài.</p>
 </div>
@@ -74,13 +75,14 @@
     rồi dùng <code>owl:sameAs</code> để khẳng định đó cùng là một thực thể với URI đã có. Đây là khuyến nghị của W3C
     (<i>Best Practices for Publishing Linked Data</i>).</p>
   <ol class="points">
-    <li><b>Dùng lại từ vựng:</b> 72% triple dùng thuộc tính chuẩn (rdfs, schema.org, foaf, prov, geo, skos); mọi lớp riêng
+    <li><b>Dùng lại từ vựng:</b> 74% triple dùng thuộc tính chuẩn (rdfs, schema.org, foaf, prov, geo, skos); mọi lớp riêng
       đều là <code>rdfs:subClassOf</code> lớp của schema.org / FOAF / DBpedia.
       <div class="btns"><a class="q" data-q="vocab" href="#">Đếm triple: từ vựng chuẩn và vnedu</a></div></li>
-    <li><b>Dùng lại URI làm giá trị:</b> nghề nghiệp và giới tính trỏ thẳng tới URI Wikidata (217 URI), không tạo URI riêng
-      vì mình không mô tả gì thêm về chúng.
+    <li><b>Dùng lại URI làm giá trị:</b> nghề nghiệp và giới tính trỏ thẳng tới URI Wikidata (222 URI), không tạo URI riêng
+      vì mình không mô tả gì thêm về chúng. Tương tự, đối tác (<code>dbo:affiliation</code>) của VinUni trỏ thẳng tới
+      URI Wikidata của Đại học Cornell, Pennsylvania…; logo/ảnh dùng chính URI tệp trên Wikimedia.
       <div class="btns"><a class="q" data-q="reuse" href="#">Nghề nghiệp = URI Wikidata</a></div></li>
-    <li><b>owl:sameAs — trỏ về cùng một thực thể:</b> 85% thực thể tự tạo có <code>owl:sameAs</code> tới Wikidata (1.878), DBpedia (258),
+    <li><b>owl:sameAs — trỏ về cùng một thực thể:</b> 84% thực thể tự tạo có <code>owl:sameAs</code> tới Wikidata (1.880), DBpedia (260),
       ROR (195), GeoNames (63), đều đã kiểm chứng.
       <div class="btns"><a class="q" data-q="sameas" href="#">sameAs của ĐH Bách khoa HN</a>
         <a href="https://www.wikidata.org/wiki/Q3075696">Mở Q3075696 trên Wikidata</a></div></li>
@@ -95,7 +97,7 @@
       mình không lưu (truy vấn federated 12–13, chạy trên Fuseki).</li>
   </ol>
   <p class="see">truy vấn nghề nghiệp ra <code>wd:Q1650915</code> nhà nghiên cứu (740 người), <code>wd:Q82955</code> chính khách (164)…;
-    ĐH Luật Hà Nội khớp 3 QID; từ vựng chuẩn 28.623 triple so với vnedu 8.127.</p>
+    ĐH Luật Hà Nội khớp 3 QID; từ vựng chuẩn 30.975 triple so với vnedu 8.532.</p>
   <div class="btns"><a href="/Vietnam-University-Knowledge-Graph-ver2/about">Trang Giới thiệu</a>
     <a href="https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/docs/uri-strategy.md">docs/uri-strategy.md</a></div>
 </div>
@@ -112,7 +114,7 @@
     <a class="q" data-i="0" href="#">Số trường theo 34 tỉnh mới</a>
     <a class="q" data-i="2" href="#">Trường quân đội & công an</a>
   </div>
-  <p class="see">dữ liệu khẳng định 17.940 triple, suy luận thêm 14.484 triple; kiểm tra nhất quán 0 mâu thuẫn (repo cũ có 349).</p>
+  <p class="see">dữ liệu khẳng định 20.446 triple, suy luận thêm 14.666 triple; kiểm tra nhất quán 0 mâu thuẫn (repo cũ có 349).</p>
 </div>
 
 <div class="step">
@@ -130,7 +132,7 @@
 <div class="step">
   <h2><span class="n">6</span>Bằng chứng 5 sao<span class="t">1 phút</span></h2>
   <p class="say">★ có trên Web, giấy phép mở CC BY-SA 4.0. ★★ ★★★ có cấu trúc, định dạng mở. ★★★★ chuẩn W3C (RDF, OWL, SHACL, SPARQL,
-    PROV-O, VoID/DCAT, JSON-LD) và 2.211 URI công khai tra cứu được. ★★★★★ liên kết tới Wikidata, DBpedia, ROR, GeoNames;
+    PROV-O, VoID/DCAT, JSON-LD) và 2.241 URI công khai tra cứu được. ★★★★★ liên kết tới Wikidata, DBpedia, ROR, GeoNames;
     đã kiểm tra mẫu 150/150 liên kết còn sống.</p>
   <div class="btns">
     <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID + DCAT (giấy phép, linkset)</a>

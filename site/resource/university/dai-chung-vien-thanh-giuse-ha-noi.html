@@ -30,48 +30,67 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-thanh-giuse-ha-noi",
-  "@type": [
-    "schema:EducationalOrganization",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization"
-  ],
-  "owl:sameAs": {
-    "@id": "wd:Q10841199"
-  },
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q10841199"
-  },
-  "rdfs:label": {
-    "@language": "vi",
-    "@value": "Đại chủng viện Thánh Giuse Hà Nội"
-  },
-  "schema:location": [
+  "@graph": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-thanh-giuse-ha-noi",
+      "@type": [
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization"
+      ],
+      "owl:sameAs": {
+        "@id": "wd:Q10841199"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q10841199"
+      },
+      "rdfs:label": {
+        "@language": "vi",
+        "@value": "Đại chủng viện Thánh Giuse Hà Nội"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/2/2f/%C4%90%E1%BA%A1i_ch%E1%BB%A7ng_vi%E1%BB%87n_th%C3%A1nh_giuse_H%C3%A0_N%E1%BB%99i.JPG"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Đại chủng viện Thánh Giuse Hà Nội"
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ]
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Đại chủng viện Thánh Giuse Hà Nội"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/2/2f/%C4%90%E1%BA%A1i_ch%E1%BB%A7ng_vi%E1%BB%87n_th%C3%A1nh_giuse_H%C3%A0_N%E1%BB%99i.JPG",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Hoanghatruonggiang at vi.wikipedia",
+      "schema:license": "Public domain",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:%C4%90%E1%BA%A1i_ch%E1%BB%A7ng_vi%E1%BB%87n_th%C3%A1nh_giuse_H%C3%A0_N%E1%BB%99i.JPG"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/%C4%90%E1%BA%A1i_ch%E1%BB%A7ng_vi%E1%BB%87n_th%C3%A1nh_giuse_H%C3%A0_N%E1%BB%99i.JPG/330px-%C4%90%E1%BA%A1i_ch%E1%BB%A7ng_vi%E1%BB%87n_th%C3%A1nh_giuse_H%C3%A0_N%E1%BB%99i.JPG"
+      }
     }
   ]
 }</script>
@@ -92,6 +111,8 @@
   <a href="dai-chung-vien-thanh-giuse-ha-noi.ttl">Turtle</a> · <a href="dai-chung-vien-thanh-giuse-ha-noi.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-thanh-giuse-ha-noi">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 9 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
+<div class="res-grid"><div class="res-main"></div><aside class="ibox"><div class="ibox-title">Đại chủng viện Thánh Giuse Hà Nội</div><table><tr><th>Loại hình</th><td>Chủng viện</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:%C4%90%E1%BA%A1i_ch%E1%BB%A7ng_vi%E1%BB%87n_th%C3%A1nh_giuse_H%C3%A0_N%E1%BB%99i.JPG" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/%C4%90%E1%BA%A1i_ch%E1%BB%A7ng_vi%E1%BB%87n_th%C3%A1nh_giuse_H%C3%A0_N%E1%BB%99i.JPG/330px-%C4%90%E1%BA%A1i_ch%E1%BB%A7ng_vi%E1%BB%87n_th%C3%A1nh_giuse_H%C3%A0_N%E1%BB%99i.JPG" alt="Ảnh Đại chủng viện Thánh Giuse Hà Nội" loading="lazy"></a><figcaption>Public domain · Hoanghatruonggiang at vi.wikipedia</figcaption></figure></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
 
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
@@ -106,6 +127,9 @@
 </td></tr>
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q10841199">wd:Q10841199</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/2/2f/%C4%90%E1%BA%A1i_ch%E1%BB%A7ng_vi%E1%BB%87n_th%C3%A1nh_giuse_H%C3%A0_N%E1%BB%99i.JPG">&lt;https://upload.wikimedia.org/wikipedia/commons/2/2f/%C4%90%E1%BA%A1i_ch%E1%BB%A7ng_vi%E1%BB%87n_th%C3%A1nh_giuse_H%C3%A0_N%E1%BB%99i.JPG&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

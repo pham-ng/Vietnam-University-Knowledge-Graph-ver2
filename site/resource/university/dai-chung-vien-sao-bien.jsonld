@@ -17,26 +17,45 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-sao-bien",
-  "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:Organization",
-    "foaf:Organization"
-  ],
-  "owl:sameAs": {
-    "@id": "wd:Q10841198"
-  },
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q10841198"
-  },
-  "rdfs:label": {
-    "@language": "vi",
-    "@value": "Đại chủng viện Sao Biển"
-  },
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Đại chủng viện Sao Biển"
-  }
+  "@graph": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-chung-vien-sao-bien",
+      "@type": [
+        "vnedu:Organization",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:Organization",
+        "foaf:Organization"
+      ],
+      "owl:sameAs": {
+        "@id": "wd:Q10841198"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q10841198"
+      },
+      "rdfs:label": {
+        "@language": "vi",
+        "@value": "Đại chủng viện Sao Biển"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Nha_Trang_Seminary.JPG"
+      },
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Đại chủng viện Sao Biển"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Nha_Trang_Seminary.JPG",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Vinhtantran",
+      "schema:license": "CC BY-SA 3.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Nha_Trang_Seminary.JPG"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Nha_Trang_Seminary.JPG/330px-Nha_Trang_Seminary.JPG"
+      }
+    }
+  ]
 }

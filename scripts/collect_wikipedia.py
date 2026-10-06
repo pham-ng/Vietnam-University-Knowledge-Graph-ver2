@@ -1,7 +1,8 @@
 """Thu thập từ Wikipedia tiếng Việt: duyệt đệ quy thể loại + đọc infobox.
 
 Đầu ra: data/bronze/viwiki_pages.json — mỗi phần tử:
-  {title, qid, category, template, infobox: {tham_số: giá_trị_đã_làm_sạch}, coords}
+  {title, qid, category, template, infobox: {tham_số: giá_trị_đã_làm_sạch}, coords,
+   links: {tham_số: [bài được liên kết]}, files: [tệp ảnh trong infobox], lead, history}
 
 Làm sạch giá trị infobox (điểm yếu lớn nhất khi parse wikitext):
   * <br>, danh sách {{plainlist}}, xuống dòng  -> phân tách bằng " | " (tránh "BKHNHUST")
@@ -133,20 +134,52 @@ def clean_value(wikicode) -> tuple[str, tuple | None]:
     return text, coords
 
 
-def parse_infobox(wikitext: str) -> tuple[str, dict, tuple | None]:
+FILE_NS = re.compile(r"^\s*(File|Tập tin|Tập_tin|Hình|Image|Ảnh)\s*:", re.I)
+IMAGE_KEY = re.compile(r"^(logo|hình|image|ảnh|biểu trưng|image_name|hình ảnh|huy hiệu|quân kỳ|công an hiệu)$", re.I)
+IMAGE_EXT = re.compile(r"\.(png|jpe?g|svg|gif|webp|tiff?)$", re.I)
+
+
+def image_files(raw: str) -> list[str]:
+    """Tên tệp ảnh trong giá trị infobox: 'X.png', '[[Tập tin:X.png|200px]]' hoặc '{{...|X.svg}}'."""
+    raw = re.sub(r"<!--.*?-->", "", raw, flags=re.S)
+    out = [m.strip() for m in re.findall(r"(?:File|Tập tin|Tập_tin|Hình|Image|Ảnh)\s*:\s*([^|\]\n]+)", raw, re.I)]
+    if not out:
+        for part in re.split(r"[|\n]", raw):
+            part = part.strip().strip("[]{}").strip()
+            if IMAGE_EXT.search(part) and "=" not in part:
+                out.append(part)
+    return [o.replace("_", " ").strip() for o in out if IMAGE_EXT.search(o.strip())]
+
+
+def page_links(wikicode) -> list[str]:
+    """Bài viết được liên kết trong một giá trị infobox (bỏ tệp, thể loại, liên kết liên wiki)."""
+    out = []
+    for link in wikicode.filter_wikilinks(recursive=True):
+        t = str(link.title).split("#")[0].strip()
+        if t and not FILE_NS.match(t) and not re.match(r"^(Thể loại|Category|:?[a-z]{2,3}):", t, re.I):
+            out.append(t[0].upper() + t[1:])
+    return list(dict.fromkeys(out))
+
+
+def parse_infobox(wikitext: str) -> tuple[str, dict, tuple | None, dict, list]:
     code = mw.parse(wikitext)
     for t in code.filter_templates(recursive=False):
         name = str(t.name).strip()
         if INFOBOX.match(name):
-            box, coords = {}, None
+            box, coords, links, files = {}, None, {}, []
             for p in t.params:
                 key = str(p.name).strip().lower()
+                if IMAGE_KEY.match(key):
+                    files += [f for f in image_files(str(p.value)) if f not in files]
+                lk = page_links(p.value)
+                if lk:
+                    links[key] = lk
                 val, c = clean_value(p.value)
                 coords = coords or c
                 if val:
                     box[key] = val
-            return name, box, coords
-    return "", {}, None
+            return name, box, coords, links, files
+    return "", {}, None, {}, []
 
 
 def lead_text(wikitext: str, limit: int = 3000) -> str:
@@ -170,6 +203,55 @@ def lead_text(wikitext: str, limit: int = 3000) -> str:
     return re.sub(r"\s+", " ", text).strip()[:limit]
 
 
+HISTORY_HEAD = re.compile(r"lịch sử|quá trình (hình thành|phát triển)|hình thành và phát triển|sơ lược|thành lập", re.I)
+
+
+def plain_paragraphs(wikitext: str) -> list[str]:
+    """Wikitext -> các đoạn văn thuần (bỏ bản mẫu, ảnh, chú thích, bảng)."""
+    text = re.sub(r"<ref[^>]*/>|<ref[^>]*>.*?</ref>|<!--.*?-->", "", wikitext, flags=re.S)
+    text = re.sub(r"\{\|.*?\|\}", "", text, flags=re.S)
+    code = mw.parse(text)
+    for t in code.filter_templates(recursive=False):
+        try:
+            code.remove(t)
+        except ValueError:
+            continue
+    for link in code.filter_wikilinks(recursive=False):
+        if FILE_NS.match(str(link.title)):
+            try:
+                code.remove(link)
+            except ValueError:
+                continue
+    paras = []
+    for block in re.split(r"\n\s*\n|\n(?==)", str(code)):
+        block = re.sub(r"^=+[^=\n]+=+\s*$", "", block.strip(), flags=re.M)
+        lines = [re.sub(r"^[*#:;]+\s*", "", ln).strip() for ln in block.split("\n")]
+        plain = re.sub(r"\s+", " ", mw.parse(" ".join(lines)).strip_code()).strip()
+        plain = re.sub(r"\[\[(?:File|Tập tin|Hình|Image):[^\]]*\]\]", "", plain).strip()
+        if len(plain) >= 40:
+            paras.append(plain)
+    return paras
+
+
+def history_text(wikitext: str, limit: int = 2500) -> str:
+    """Mục 'Lịch sử' (hoặc tương đương) cấp 2, gồm cả mục con; cắt ở ranh giới câu, các đoạn cách nhau bởi dòng trống."""
+    parts = re.split(r"^==([^=].*?)==\s*$", wikitext, flags=re.M)
+    for i in range(1, len(parts) - 1, 2):
+        if HISTORY_HEAD.search(parts[i]):
+            out, n = [], 0
+            for para in plain_paragraphs(parts[i + 1]):
+                if n + len(para) > limit:
+                    cut = para[:max(0, limit - n)]
+                    cut = cut[:cut.rfind(". ") + 1] if ". " in cut else ""
+                    if cut:
+                        out.append(cut)
+                    break
+                out.append(para)
+                n += len(para)
+            return "\n\n".join(out)
+    return ""
+
+
 # ------------------------------------------------------------------ tải nội dung
 
 def fetch_pages(titles: list[str]) -> list[dict]:
@@ -183,13 +265,14 @@ def fetch_pages(titles: list[str]) -> list[dict]:
                 if "revisions" not in pg:
                     continue
                 wikitext = pg["revisions"][0]["slots"]["main"]["content"]
-                template, box, coords = parse_infobox(wikitext)
+                template, box, coords, links, files = parse_infobox(wikitext)
                 if not coords and pg.get("coordinates"):
                     coords = (pg["coordinates"][0]["lat"], pg["coordinates"][0]["lon"])
                 out.append({"title": pg["title"], "qid": pg.get("pageprops", {}).get("wikibase_item", ""),
                             "revid": pg["revisions"][0].get("revid"), "template": template,
                             "infobox": box, "coords": list(coords) if coords else None,
-                            "lead": lead_text(wikitext)})
+                            "links": links, "files": files,
+                            "lead": lead_text(wikitext), "history": history_text(wikitext)})
         print(f"    viwiki: {min(i + 50, len(titles))}/{len(titles)}")
     return out
 
@@ -241,6 +324,59 @@ def collect(extra_titles: list[str], guesses: dict[str, str] | None = None) -> l
         keep.append(p)
     print(f"  giữ {len(keep)} bài về cơ sở giáo dục đại học (có infobox hoặc có sitelink Wikidata)")
     return keep
+
+
+def resolve_titles(titles: list[str]) -> dict[str, str]:
+    """Bài viwiki -> QID Wikidata (theo dõi chuẩn hoá tên và chuyển hướng). Bài chưa có / chưa nối Wikidata thì bỏ qua."""
+    out = {}
+    titles = sorted(set(titles))
+    for i in range(0, len(titles), 50):
+        chunk = titles[i:i + 50]
+        for r in mediawiki(API, action="query", prop="pageprops", ppprop="wikibase_item", titles="|".join(chunk),
+                           redirects=1):
+            q = r["query"]
+            alias: dict[str, list[str]] = {}
+            for m in q.get("normalized", []) + q.get("redirects", []):
+                alias.setdefault(m["to"], []).append(m["from"])
+            for pg in q.get("pages", []):
+                qid = pg.get("pageprops", {}).get("wikibase_item")
+                if not qid:
+                    continue
+                names, k = [pg["title"]], 0
+                while k < len(names):
+                    names += [a for a in alias.get(names[k], []) if a not in names]
+                    k += 1
+                for n in names:
+                    out[n] = qid
+    print(f"  liên kết trong infobox: {len(out)} tên bài -> QID ({len(titles)} bài được hỏi)")
+    return out
+
+
+def image_info(files: list[str]) -> dict[str, dict]:
+    """Thông tin tệp ảnh (tệp cục bộ của viwiki hoặc Commons): URL, ảnh thu nhỏ, giấy phép, tác giả."""
+    out = {}
+    files = sorted(set(files))
+    for i in range(0, len(files), 50):
+        chunk = ["Tập tin:" + f for f in files[i:i + 50]]
+        for r in mediawiki(API, action="query", prop="imageinfo", iiprop="url|extmetadata", iiurlwidth=320,
+                           iiextmetadatafilter="LicenseShortName|Artist|UsageTerms",
+                           titles="|".join(chunk)):
+            q = r["query"]
+            back = {m["to"]: m["from"] for m in q.get("normalized", [])}
+            for pg in q.get("pages", []):
+                ii = (pg.get("imageinfo") or [None])[0]
+                if not ii:
+                    continue
+                meta = ii.get("extmetadata", {})
+
+                def val(k):
+                    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", (meta.get(k) or {}).get("value", ""))).strip()
+                name = back.get(pg["title"], pg["title"]).split(":", 1)[1].replace("_", " ")
+                out[name] = {"url": ii.get("url"), "thumb": ii.get("thumburl"), "page": ii.get("descriptionurl"),
+                             "license": val("LicenseShortName") or val("UsageTerms"), "artist": val("Artist")[:200],
+                             "commons": pg.get("imagerepository") == "shared"}
+    print(f"  ảnh: {len(out)}/{len(files)} tệp có thông tin")
+    return out
 
 
 if __name__ == "__main__":

@@ -30,112 +30,151 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-sach-va-phat-trien",
-  "@type": [
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "vnedu:Academy",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://apd.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Ch%C3%ADnh_s%C3%A1ch_v%C3%A0_Ph%C3%A1t_tri%E1%BB%83n"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.001131"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.716813"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q109440209"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75594635"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-sach-va-phat-trien",
+      "@type": [
+        "vnedu:Academy",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Chính sách và Phát triển (tiếng Anh: Academy of Policy and Development - APD) là trường đại học công lập trong hệ thống giáo dục quốc dân trực thuộc Bộ Tài chính Học viện có trụ sở tại xã An Khánh, Thành phố Hà Nội và phân viện tại thành phố Bắc Ninh và thành phố Đà Nẵng."
+      },
+      "foaf:homepage": {
+        "@id": "http://apd.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Ch%C3%ADnh_s%C3%A1ch_v%C3%A0_Ph%C3%A1t_tri%E1%BB%83n"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.001131"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.716813"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q109440209"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75594635"
+        },
+        {
+          "@id": "wd:Q109440209"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Học viện Chính sách và Phát triển"
+        },
+        {
+          "@language": "en",
+          "@value": "Academy of Policy and Development - APD"
+        }
+      ],
+      "schema:email": "vwa@vwa.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-trong-nguyen"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "2008-01-04"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/b/bf/T%E1%BA%A3i_xu%E1%BB%91ng.png"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "schema:telephone": "024) 3747 3186",
+      "skos:notation": "HCP",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Chính sách và Phát triển"
+      },
+      "vnedu:address": "Khu đô thị Nam An Khánh, xã An Khánh",
+      "vnedu:admissionCode": "HCP",
+      "vnedu:campus": "5000 mét vuông",
+      "vnedu:director": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-trong-nguyen"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2008"
+      },
+      "vnedu:governedBy": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-ke-hoach-va-dau-tu"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-chinh"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-trong-nguyen"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Học viện Chính sách và Phát triển được thành lập theo Quyết định số 10/QĐ-TTg ngày 4 tháng 1 năm 2008 của Thủ tướng Chính phủ, là học viện công lập thuộc hệ thống giáo dục quốc dân. Về tổ chức, Học viện trực thuộc Bộ Kế hoạch và Đầu tư - cơ quan của Chính phủ Việt Nam, thực hiện chức năng quản lý nhà nước về kế hoạch, đầu tư phát triển và thống kê, bao gồm: tham mưu tổng hợp về chiến lược, kế hoạch phát triển kinh tế - xã hội của cả nước; quy hoạch phát triển, cơ chế, chính sách quản lý kinh tế chung và một số lĩnh vực cụ thể; đầu tư trong nước, đầu tư của nước ngoài vào Việt Nam và đầu tư của Việt Nam ra nước ngoài; khu kinh tế (bao gồm cả khu công nghiệp, khu kinh tế cửa khẩu, khu công nghệ cao và các loại hình khu kinh tế khác); quản lý nguồn hỗ trợ phát triển chính thức và viện trợ chi phí chính phủ nước ngoài; đấu thầu; thành lập, phát triển doanh nghiệp và khu vực kinh tế tập thể, hợp tác xã; thống kê; quản lý nhà nước các dịch vụ công trong các ngành, lĩnh vực thuộc phạm vi quản lý của Bộ theo quy định của pháp luật. Là cơ sở đào tạo trong lĩnh vực chính sách phát triển, kinh tế và quản lý, Học viện Chính sách và Phát triển định hướng trở thành trường đại học có uy tín trong hệ thống giáo dục quốc dân về đào tạo, nghiên cứu khoa học, tư vấn và phản biện chính sách vĩ mô. Học viện đã được công nhận đạt tiêu chuẩn chất lượng giáo dục của Bộ Giáo dục và Đào tạo với 03 ngành đào tạo đại học đạt chuẩn kiểm định chất lượng. Đội ngũ cán bộ, giảng viên cơ hữu của Học viện bao gồm Nhà giáo ưu tú, các Phó Giáo sư, Tiến sỹ, Thạc sỹ được đào tạo tại các trường Đại học uy tín ở Việt Nam và nước ngoài. Để nâng cao tính thực tiễn trong đào tạo, Học viện đã mời các chuyên gia từ các Cơ quan quản lý Nhà nước, Viện nghiên cứu, các doanh nghiệp, giảng viên từ các Trường đại học danh tiếng trong và ngoài nước tham gia giảng dạy. Bên cạnh đó, cơ sơ vật chất phục vụ cho học tập, giảng dạy và nghiên cứu được trang bị đầy đủ và hiện đại.\n\nHọc viện bắt đầu đào tạo khóa I từ tháng 9 năm 2010."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Trí tuệ và Phát triển"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:shortName": [
+        "APD",
+        "HVCSVPT"
+      ],
+      "vnedu:website": {
+        "@id": "http://apd.edu.vn"
+      }
     },
     {
-      "@id": "wd:Q109440209"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/b/bf/T%E1%BA%A3i_xu%E1%BB%91ng.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Học Viện Chính Sách Và Phát Triển",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:T%E1%BA%A3i_xu%E1%BB%91ng.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/b/bf/T%E1%BA%A3i_xu%E1%BB%91ng.png"
+      }
     }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Academy of Policy and Development - APD"
-    },
-    {
-      "@language": "vi",
-      "@value": "Học viện Chính sách và Phát triển"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-trong-nguyen"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:notation": "HCP",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Chính sách và Phát triển"
-  },
-  "vnedu:address": "Khu đô thị Nam An Khánh, xã An Khánh",
-  "vnedu:admissionCode": "HCP",
-  "vnedu:director": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-trong-nguyen"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2008"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-chinh"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-trong-nguyen"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Trí tuệ và Phát triển"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:shortName": [
-    "APD",
-    "HVCSVPT"
-  ],
-  "vnedu:website": {
-    "@id": "http://apd.edu.vn"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([21.001131,105.716813],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([21.001131,105.716813],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -154,7 +193,9 @@
   <a href="hoc-vien-chinh-sach-va-phat-trien.ttl">Turtle</a> · <a href="hoc-vien-chinh-sach-va-phat-trien.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-sach-va-phat-trien">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 17 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Học viện Chính sách và Phát triển (tiếng Anh: Academy of Policy and Development - APD) là trường đại học công lập trong hệ thống giáo dục quốc dân trực thuộc Bộ Tài chính Học viện có trụ sở tại xã An Khánh, Thành phố Hà Nội và phân viện tại thành phố Bắc Ninh và thành phố Đà Nẵng.</p><h2>Lịch sử</h2><p>Học viện Chính sách và Phát triển được thành lập theo Quyết định số 10/QĐ-TTg ngày 4 tháng 1 năm 2008 của Thủ tướng Chính phủ, là học viện công lập thuộc hệ thống giáo dục quốc dân. Về tổ chức, Học viện trực thuộc Bộ Kế hoạch và Đầu tư - cơ quan của Chính phủ Việt Nam, thực hiện chức năng quản lý nhà nước về kế hoạch, đầu tư phát triển và thống kê, bao gồm: tham mưu tổng hợp về chiến lược, kế hoạch phát triển kinh tế - xã hội của cả nước; quy hoạch phát triển, cơ chế, chính sách quản lý kinh tế chung và một số lĩnh vực cụ thể; đầu tư trong nước, đầu tư của nước ngoài vào Việt Nam và đầu tư của Việt Nam ra nước ngoài; khu kinh tế (bao gồm cả khu công nghiệp, khu kinh tế cửa khẩu, khu công nghệ cao và các loại hình khu kinh tế khác); quản lý nguồn hỗ trợ phát triển chính thức và viện trợ chi phí chính phủ nước ngoài; đấu thầu; thành lập, phát triển doanh nghiệp và khu vực kinh tế tập thể, hợp tác xã; thống kê; quản lý nhà nước các dịch vụ công trong các ngành, lĩnh vực thuộc phạm vi quản lý của Bộ theo quy định của pháp luật. Là cơ sở đào tạo trong lĩnh vực chính sách phát triển, kinh tế và quản lý, Học viện Chính sách và Phát triển định hướng trở thành trường đại học có uy tín trong hệ thống giáo dục quốc dân về đào tạo, nghiên cứu khoa học, tư vấn và phản biện chính sách vĩ mô. Học viện đã được công nhận đạt tiêu chuẩn chất lượng giáo dục của Bộ Giáo dục và Đào tạo với 03 ngành đào tạo đại học đạt chuẩn kiểm định chất lượng. Đội ngũ cán bộ, giảng viên cơ hữu của Học viện bao gồm Nhà giáo ưu tú, các Phó Giáo sư, Tiến sỹ, Thạc sỹ được đào tạo tại các trường Đại học uy tín ở Việt Nam và nước ngoài. Để nâng cao tính thực tiễn trong đào tạo, Học viện đã mời các chuyên gia từ các Cơ quan quản lý Nhà nước, Viện nghiên cứu, các doanh nghiệp, giảng viên từ các Trường đại học danh tiếng trong và ngoài nước tham gia giảng dạy. Bên cạnh đó, cơ sơ vật chất phục vụ cho học tập, giảng dạy và nghiên cứu được trang bị đầy đủ và hiện đại.</p><p>Học viện bắt đầu đào tạo khóa I từ tháng 9 năm 2010.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75594635">«Học viện Chính sách và Phát triển»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75594635), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Học viện Chính sách và Phát triển</div><table><tr><th>Tên tiếng Anh</th><td>Academy of Policy and Development - APD</td></tr><tr><th>Viết tắt</th><td>APD, HVCSVPT</td></tr><tr><th>Mã trường</th><td>HCP</td></tr><tr><th>Loại hình</th><td>Học viện · Công lập</td></tr><tr><th>Thành lập</th><td>4 tháng 1 năm 2008</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-ke-hoach-va-dau-tu">Bộ Kế hoạch và Đầu tư</a><br><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-chinh">Bộ Tài chính</a></td></tr><tr><th>Giám đốc</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-trong-nguyen">Trần Trọng Nguyên</a></td></tr><tr><th>Địa chỉ</th><td>Khu đô thị Nam An Khánh, xã An Khánh</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Khuôn viên</th><td>5000 mét vuông</td></tr><tr><th>Khẩu hiệu</th><td><i>Trí tuệ và Phát triển</i></td></tr><tr><th>Điện thoại</th><td>024) 3747 3186</td></tr><tr><th>Email</th><td><a href="mailto:vwa@vwa.edu.vn">vwa@vwa.edu.vn</a></td></tr><tr><th>Website</th><td><a href="http://apd.edu.vn">apd.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:T%E1%BA%A3i_xu%E1%BB%91ng.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/T%E1%BA%A3i_xu%E1%BB%91ng.png" alt="Ảnh Học viện Chính sách và Phát triển" loading="lazy"></a><figcaption>CC BY-SA 4.0 · Học Viện Chính Sách Và Phát Triển</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -181,11 +222,23 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q109440209">wd:Q109440209</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75594635">&lt;https://vi.wikipedia.org/w/index.php?oldid=75594635&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>vwa@vwa.edu.vn</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-trong-nguyen">Trần Trọng Nguyên</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>2008-01-04 <span class="lang">xsd:date</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/b/bf/T%E1%BA%A3i_xu%E1%BB%91ng.png">&lt;https://upload.wikimedia.org/wikipedia/commons/b/bf/T%E1%BA%A3i_xu%E1%BB%91ng.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>024) 3747 3186</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>HCP <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -196,6 +249,9 @@
 <tr><td class="p">mã trường (tuyển sinh)<small>vnedu:admissionCode</small></td><td>
 <div>HCP</div>
 </td></tr>
+<tr><td class="p">khuôn viên<small>vnedu:campus</small></td><td>
+<div>5000 mét vuông</div>
+</td></tr>
 <tr><td class="p">giám đốc<small>vnedu:director</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-trong-nguyen">Trần Trọng Nguyên</a></div>
 </td></tr>
@@ -203,7 +259,7 @@
 <div>2008 <span class="lang">xsd:gYear</span></div>
 </td></tr>
 <tr><td class="p">có cơ quan chủ quản<small>vnedu:governedBy</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-chinh">Bộ Tài chính</a></div>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-ke-hoach-va-dau-tu">Bộ Kế hoạch và Đầu tư</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-chinh">Bộ Tài chính</a></div>
 </td></tr>
 <tr><td class="p">có người đứng đầu<small>vnedu:hasLeader</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-trong-nguyen">Trần Trọng Nguyên</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -229,7 +285,7 @@
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
 <tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-chinh">Bộ Tài chính</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-ke-hoach-va-dau-tu">Bộ Kế hoạch và Đầu tư</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-chinh">Bộ Tài chính</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-trong-nguyen">Trần Trọng Nguyên</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

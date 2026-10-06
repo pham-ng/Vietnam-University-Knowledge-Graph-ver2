@@ -17,102 +17,126 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-ky-thuat-cong-nghiep",
-  "@type": [
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.uneti.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_K%E1%BB%B9_thu%E1%BA%ADt_C%C3%B4ng_nghi%E1%BB%87p"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "wd:Q10829072"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-ky-thuat-cong-nghiep",
+      "@type": [
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Kinh tế - Kỹ thuật Công Nghiệp (tên tiếng Anh: University of Economics - Technology for Industries, tên viết tắt: UNETI), là trường đại học công lập định hướng nghề nghiệp ứng dụng, đào tạo cử nhân và kỹ sư hệ chính quy 4 năm, trực thuộc Bộ Công Thương Việt Nam, được thành lập năm 2007, trên cơ sở nâng cấp Trường Cao đẳng Kinh tế Kỹ thuật Công nghiệp I, thành lập từ năm 1956, đào tạo đa cấp, đa ngành."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.uneti.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_K%E1%BB%B9_thu%E1%BA%ADt_C%C3%B4ng_nghi%E1%BB%87p"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/035d00922"
+        },
+        {
+          "@id": "wd:Q10829072"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75297214"
+        },
+        {
+          "@id": "wd:Q10829072"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "University of Economics - Technology for Industries"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Kinh tế – Kỹ thuật Công nghiệp"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-hoang-long"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Uneti-2.png"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "schema:telephone": "0945948353",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Kinh tế – Kỹ thuật Công nghiệp"
+      },
+      "vnedu:address": "456 đường Minh Khai, phường Vĩnh Tuy, quận Hai Bà Trưng",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1956"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-cong-thuong"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-hoang-long"
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Học tập để Kiến Tạo Tương Lai"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-hoang-long"
+      },
+      "vnedu:website": {
+        "@id": "http://www.uneti.edu.vn/"
+      }
     },
     {
-      "@id": "https://ror.org/035d00922"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Uneti-2.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Ngochithanh1404",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Uneti-2.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Uneti-2.png"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q10829072"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75297214"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Kinh tế – Kỹ thuật Công nghiệp"
-    },
-    {
-      "@language": "en",
-      "@value": "University of Economics - Technology for Industries"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-hoang-long"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Kinh tế – Kỹ thuật Công nghiệp"
-  },
-  "vnedu:address": "456 đường Minh Khai, phường Vĩnh Tuy, quận Hai Bà Trưng",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1956"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-cong-thuong"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-hoang-long"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Học tập để Kiến Tạo Tương Lai"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-hoang-long"
-  },
-  "vnedu:website": {
-    "@id": "http://www.uneti.edu.vn/"
-  }
+  ]
 }

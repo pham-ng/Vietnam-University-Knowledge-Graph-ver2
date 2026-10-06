@@ -30,121 +30,149 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-nguyen-va-moi-truong-thanh-pho-ho-chi-minh",
-  "@type": [
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.hcmunre.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_T%C3%A0i_nguy%C3%AAn_v%C3%A0_M%C3%B4i_tr%C6%B0%E1%BB%9Dng_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.799246"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.661606"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "https://ror.org/05hdqw609"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/4/46/Logo_HCMUNRE.png",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_HCMUNRE.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/4/46/Logo_HCMUNRE.png"
+      }
     },
     {
-      "@id": "wd:Q10829153"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-nguyen-va-moi-truong-thanh-pho-ho-chi-minh",
+      "@type": [
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh (tiếng Anh: Ho Chi Minh University of Natural Resources and Environment) là một trường đại học đa ngành tại Việt Nam. Trường trực thuộc Bộ Nông nghiệp và Môi trường."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.hcmunre.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_T%C3%A0i_nguy%C3%AAn_v%C3%A0_M%C3%B4i_tr%C6%B0%E1%BB%9Dng_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.799246"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.661606"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/05hdqw609"
+        },
+        {
+          "@id": "wd:Q10829153"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75449876"
+        },
+        {
+          "@id": "wd:Q10829153"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh"
+        },
+        {
+          "@language": "en",
+          "@value": "Ho Chi Minh University of Natural Resources and Environment"
+        }
+      ],
+      "schema:email": "bts@hcmunre.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-quyen"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/4/46/Logo_HCMUNRE.png"
+      },
+      "schema:telephone": "+84 028 38443 006",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh"
+      },
+      "vnedu:academicStaff": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "240"
+      },
+      "vnedu:address": "236B Lê Văn Sỹ, phường Tân Sơn Hòa, Thành phố Hồ Chí Minh",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1976"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-nong-nghiep-va-moi-truong"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-quyen"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Năm 1976, ngay sau khi giải phóng Miền Nam, trường Trung học Đo đạc Bản đồ 2 ra đời theo quyết định số 850/QĐ của Cục Đo đạc và Bản đồ Nhà nước. Lúc mới thành lập, trường đào tạo 2 chuyên ngành: Đo đạc Công trình và Biên vẽ Bản đồ.\n\nKhoảng những Năm 1976 trường Bồi dưỡng Cán bộ Khí tượng Thủy văn được thành lập tại địa chỉ 236b Lê Văn Sỹ, P1 Q Tân Bình, Tp HCM- với nhiệm vụ đào tạo bồi dưỡng các cán bộ làm công tác khí tượng thủy văn khu vực miền Nam.\n\nNăm 1994, Tổng cục Địa chính được thành lập trên cơ sở hợp nhất Tổng cục Quản lý Ruộng đất và Cục Đo đạc và Bản đồ Nhà nước. Ngay sau đó, trường Trung học Đo đạc Bản đồ 2 được đổi tên thành trường Trung học Địa chính 3. Khi đó, bốn chuyên ngành đào tạo chủ yếu là Đo đạc địa hình, Đo đạc Địa chính, Đo đạc Công trình và Quản lý đất đai.\n\nNăm 2001, trường trung học Địa chính 3 được đổi tên thành trường Trung học Địa chính Trung ương 3. Lúc này trường có hai khoa chuyên ngành gồm Khoa Trắc địa bản đồ và Khoa Quản lý đất đai.\n\nNăm 2006, cùng với việc sáp nhập hai trường trung cấp là trung cấp bồi dưỡng cán bộ khí tượng thủy văn (địa chỉ tại 236b Lê Văn Sỹ, P1 ,Q Tân Bình TPHCM) và trung cấp địa chính trung ương 3 (địa chỉ Ấp Long Đức 3, Phùng Hưng, Tam Phước, Long Thành, Đồng Nai) thành trường Cao đẳng Tài Nguyên Và Môi trường Thành phố Hồ Chí Minh.\n\nLúc này trường Cao đẳng Tài Nguyên Và Môi trường Thành phố Hồ Chí Minh có 2 cơ sở - trụ sở trường là trường trung cấp bồi dưỡng cán bộ khí tượng thủy văn- cơ sở 2 là trường trung cấp địa chính trung ương 3.\n\nNgày 19 tháng 8 năm 2011, Trường Cao đẳng Tài nguyên và Môi trường Thành phố Hồ Chí Minh được nâng cấp thành trường đại học theo quyết định số 1430/QĐ-TTg của Thủ tướng Chính phủ, trên cơ sở nâng cấp trường Cao đẳng Tài nguyên và Môi trường thành phố Hồ Chí Minh. Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh chính thức trực thuộc Bộ Tài nguyên và Môi trường và được giám sát về chất lượng đào tạo bởi Bộ Giáo dục và Đào tạo."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Sáng tạo - Chất lượng - Hiệu quả"
+      },
+      "vnedu:numberOfUndergraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "7451"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-quyen"
+      },
+      "vnedu:shortName": "HCMUNRE",
+      "vnedu:website": {
+        "@id": "http://www.hcmunre.edu.vn/"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q10829153"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75449876"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Ho Chi Minh University of Natural Resources and Environment"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-quyen"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh"
-  },
-  "vnedu:academicStaff": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "240"
-  },
-  "vnedu:address": "236B Lê Văn Sỹ, phường Tân Sơn Hòa, Thành phố Hồ Chí Minh",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1976"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-nong-nghiep-va-moi-truong"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-quyen"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Sáng tạo - Chất lượng - Hiệu quả"
-  },
-  "vnedu:numberOfUndergraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "7451"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-quyen"
-  },
-  "vnedu:shortName": "HCMUNRE",
-  "vnedu:website": {
-    "@id": "http://www.hcmunre.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.799246,106.661606],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.799246,106.661606],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -163,7 +191,9 @@
   <a href="truong-dai-hoc-tai-nguyen-va-moi-truong-thanh-pho-ho-chi-minh.ttl">Turtle</a> · <a href="truong-dai-hoc-tai-nguyen-va-moi-truong-thanh-pho-ho-chi-minh.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tai-nguyen-va-moi-truong-thanh-pho-ho-chi-minh">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 17 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh (tiếng Anh: Ho Chi Minh University of Natural Resources and Environment) là một trường đại học đa ngành tại Việt Nam. Trường trực thuộc Bộ Nông nghiệp và Môi trường.</p><h2>Lịch sử</h2><p>Năm 1976, ngay sau khi giải phóng Miền Nam, trường Trung học Đo đạc Bản đồ 2 ra đời theo quyết định số 850/QĐ của Cục Đo đạc và Bản đồ Nhà nước. Lúc mới thành lập, trường đào tạo 2 chuyên ngành: Đo đạc Công trình và Biên vẽ Bản đồ.</p><p>Khoảng những Năm 1976 trường Bồi dưỡng Cán bộ Khí tượng Thủy văn được thành lập tại địa chỉ 236b Lê Văn Sỹ, P1 Q Tân Bình, Tp HCM- với nhiệm vụ đào tạo bồi dưỡng các cán bộ làm công tác khí tượng thủy văn khu vực miền Nam.</p><details><summary>Đọc tiếp (5 đoạn)</summary><p>Năm 1994, Tổng cục Địa chính được thành lập trên cơ sở hợp nhất Tổng cục Quản lý Ruộng đất và Cục Đo đạc và Bản đồ Nhà nước. Ngay sau đó, trường Trung học Đo đạc Bản đồ 2 được đổi tên thành trường Trung học Địa chính 3. Khi đó, bốn chuyên ngành đào tạo chủ yếu là Đo đạc địa hình, Đo đạc Địa chính, Đo đạc Công trình và Quản lý đất đai.</p><p>Năm 2001, trường trung học Địa chính 3 được đổi tên thành trường Trung học Địa chính Trung ương 3. Lúc này trường có hai khoa chuyên ngành gồm Khoa Trắc địa bản đồ và Khoa Quản lý đất đai.</p><p>Năm 2006, cùng với việc sáp nhập hai trường trung cấp là trung cấp bồi dưỡng cán bộ khí tượng thủy văn (địa chỉ tại 236b Lê Văn Sỹ, P1 ,Q Tân Bình TPHCM) và trung cấp địa chính trung ương 3 (địa chỉ Ấp Long Đức 3, Phùng Hưng, Tam Phước, Long Thành, Đồng Nai) thành trường Cao đẳng Tài Nguyên Và Môi trường Thành phố Hồ Chí Minh.</p><p>Lúc này trường Cao đẳng Tài Nguyên Và Môi trường Thành phố Hồ Chí Minh có 2 cơ sở - trụ sở trường là trường trung cấp bồi dưỡng cán bộ khí tượng thủy văn- cơ sở 2 là trường trung cấp địa chính trung ương 3.</p><p>Ngày 19 tháng 8 năm 2011, Trường Cao đẳng Tài nguyên và Môi trường Thành phố Hồ Chí Minh được nâng cấp thành trường đại học theo quyết định số 1430/QĐ-TTg của Thủ tướng Chính phủ, trên cơ sở nâng cấp trường Cao đẳng Tài nguyên và Môi trường thành phố Hồ Chí Minh. Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh chính thức trực thuộc Bộ Tài nguyên và Môi trường và được giám sát về chất lượng đào tạo bởi Bộ Giáo dục và Đào tạo.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75449876">«Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75449876), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_HCMUNRE.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://upload.wikimedia.org/wikipedia/vi/4/46/Logo_HCMUNRE.png" alt="Biểu trưng Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>Ho Chi Minh University of Natural Resources and Environment</td></tr><tr><th>Viết tắt</th><td>HCMUNRE</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>1976</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-nong-nghiep-va-moi-truong">Bộ Nông nghiệp và Môi trường</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-quyen">Huỳnh Quyền</a></td></tr><tr><th>Địa chỉ</th><td>236B Lê Văn Sỹ, phường Tân Sơn Hòa, Thành phố Hồ Chí Minh</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></td></tr><tr><th>Giảng viên</th><td>240</td></tr><tr><th>Khẩu hiệu</th><td><i>Sáng tạo - Chất lượng - Hiệu quả</i></td></tr><tr><th>Điện thoại</th><td>+84 028 38443 006</td></tr><tr><th>Email</th><td><a href="mailto:bts@hcmunre.edu.vn">bts@hcmunre.edu.vn</a></td></tr><tr><th>Website</th><td><a href="http://www.hcmunre.edu.vn/">hcmunre.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -190,11 +220,20 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q10829153">wd:Q10829153</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75449876">&lt;https://vi.wikipedia.org/w/index.php?oldid=75449876&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>bts@hcmunre.edu.vn</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-quyen">Huỳnh Quyền</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/4/46/Logo_HCMUNRE.png">&lt;https://upload.wikimedia.org/wikipedia/vi/4/46/Logo_HCMUNRE.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84 028 38443 006</div>
 </td></tr>
 <tr><td class="p">số giảng viên<small>vnedu:academicStaff</small></td><td>
 <div>240 <span class="lang">xsd:nonNegativeInteger</span></div>
@@ -237,11 +276,11 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-quyen">Huỳnh Quyền</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
 <tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-nong-nghiep-va-moi-truong">Bộ Nông nghiệp và Môi trường</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-quyen">Huỳnh Quyền</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

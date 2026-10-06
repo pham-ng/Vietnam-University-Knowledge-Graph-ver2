@@ -30,103 +30,129 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tan-tao",
-  "@type": [
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:PrivateInstitution",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://ttu.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://en.wikipedia.org/wiki/T%C3%A2n_T%E1%BA%A1o_University"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/4/45/Tan_Tao_University.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Tuong Lam Photos",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Tan_Tao_University.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Tan_Tao_University.jpg/330px-Tan_Tao_University.jpg"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_T%C3%A2n_T%E1%BA%A1o"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tan-tao",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PrivateInstitution",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Tân Tạo (tên giao dịch tiếng Anh: Tan Tao University, viết tắt TTU) là một trường đại học tư thục của Việt Nam giảng dạy bằng tiếng Anh và Tiếng Việt theo chương trình của Viện Đại học Duke của Hoa Kỳ, đặt tại Long An cũ (nay là Tây Ninh). Trường được sáng lập bởi bà Đặng Thị Hoàng Yến - Chủ tịch hội đồng quản trị của Tập đoàn Tân Tạo."
+      },
+      "foaf:homepage": {
+        "@id": "http://ttu.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/T%C3%A2n_T%E1%BA%A1o_University"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_T%C3%A2n_T%E1%BA%A1o"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.8003"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.455"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "dbr:Tân_Tạo_University"
+        },
+        {
+          "@id": "wd:Q10829155"
+        },
+        {
+          "@id": "https://ror.org/03q6f0894"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=74868637"
+        },
+        {
+          "@id": "wd:Q10829155"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "vi",
+        "@value": "Trường Đại học Tân Tạo"
+      },
+      "schema:email": "info@ttu.edu.vn",
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/4/45/Tan_Tao_University.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/tay-ninh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "schema:telephone": "0084 272 376 9216",
+      "skos:altLabel": "Tan Tao University",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Tân Tạo"
+      },
+      "vnedu:address": "Đại lộ Tân Tạo, Thành phố Tri Thức Tân Đức, xã Đức Hòa, tỉnh Tây Ninh, Việt Nam",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2010"
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/tay-ninh"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Vươn đến đỉnh cao bằng tri thức"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PrivateOwnership"
+      },
+      "vnedu:shortName": "TTU",
+      "vnedu:website": {
+        "@id": "http://ttu.edu.vn/"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.8003"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.455"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "wd:Q10829155"
-    },
-    {
-      "@id": "dbr:Tân_Tạo_University"
-    },
-    {
-      "@id": "https://ror.org/03q6f0894"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74868637"
-    },
-    {
-      "@id": "wd:Q10829155"
-    }
-  ],
-  "rdfs:label": {
-    "@language": "vi",
-    "@value": "Trường Đại học Tân Tạo"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/tay-ninh"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Tân Tạo"
-  },
-  "vnedu:address": "Đại lộ Tân Tạo, Thành phố Tri Thức Tân Đức, xã Đức Hòa, tỉnh Tây Ninh, Việt Nam",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2010"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/tay-ninh"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Vươn đến đỉnh cao bằng tri thức"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PrivateOwnership"
-  },
-  "vnedu:shortName": "TTU",
-  "vnedu:website": {
-    "@id": "http://ttu.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.8003,106.455],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.8003,106.455],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -145,7 +171,9 @@
   <a href="truong-dai-hoc-tan-tao.ttl">Turtle</a> · <a href="truong-dai-hoc-tan-tao.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tan-tao">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 15 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Tân Tạo (tên giao dịch tiếng Anh: Tan Tao University, viết tắt TTU) là một trường đại học tư thục của Việt Nam giảng dạy bằng tiếng Anh và Tiếng Việt theo chương trình của Viện Đại học Duke của Hoa Kỳ, đặt tại Long An cũ (nay là Tây Ninh). Trường được sáng lập bởi bà Đặng Thị Hoàng Yến - Chủ tịch hội đồng quản trị của Tập đoàn Tân Tạo.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=74868637">«Trường Đại học Tân Tạo»</a> trên Wikipedia tiếng Việt (bản sửa đổi 74868637), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Tân Tạo</div><table><tr><th>Tên khác</th><td>Tan Tao University</td></tr><tr><th>Viết tắt</th><td>TTU</td></tr><tr><th>Loại hình</th><td>Trường đại học · Tư thục</td></tr><tr><th>Thành lập</th><td>2010</td></tr><tr><th>Địa chỉ</th><td>Đại lộ Tân Tạo, Thành phố Tri Thức Tân Đức, xã Đức Hòa, tỉnh Tây Ninh, Việt Nam</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/tay-ninh">Tây Ninh</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Vươn đến đỉnh cao bằng tri thức</i></td></tr><tr><th>Điện thoại</th><td>0084 272 376 9216</td></tr><tr><th>Email</th><td><a href="mailto:info@ttu.edu.vn">info@ttu.edu.vn</a></td></tr><tr><th>Website</th><td><a href="http://ttu.edu.vn/">ttu.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:Tan_Tao_University.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Tan_Tao_University.jpg/330px-Tan_Tao_University.jpg" alt="Ảnh Trường Đại học Tân Tạo" loading="lazy"></a><figcaption>CC BY-SA 4.0 · Tuong Lam Photos</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -172,8 +200,20 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q10829155">wd:Q10829155</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=74868637">&lt;https://vi.wikipedia.org/w/index.php?oldid=74868637&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>info@ttu.edu.vn</div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/4/45/Tan_Tao_University.jpg">&lt;https://upload.wikimedia.org/wikipedia/commons/4/45/Tan_Tao_University.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/tay-ninh">Tây Ninh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>0084 272 376 9216</div>
+</td></tr>
+<tr><td class="p">tên khác<small>skos:altLabel</small></td><td>
+<div>Tan Tao University</div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>Đại lộ Tân Tạo, Thành phố Tri Thức Tân Đức, xã Đức Hòa, tỉnh Tây Ninh, Việt Nam</div>

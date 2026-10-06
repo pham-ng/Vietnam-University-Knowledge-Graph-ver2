@@ -30,146 +30,205 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh",
-  "@type": [
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization"
-  ],
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Education"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh",
+      "@type": [
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Sư phạm Thành phố Hồ Chí Minh (tiếng Anh: Ho Chi Minh City University of Education – HCMUE) được thành lập ngày 27 tháng 10 năm 1976 theo Quyết định số 426/TTg của Thủ tướng Chính phủ, là một trường đại học chuyên ngành sư phạm và ngôn ngữ, được xếp vào nhóm trường đại học trọng điểm quốc gia Việt Nam. Trường trực thuộc Bộ Giáo dục và Đào tạo."
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Education"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.761583"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.682194"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10489198"
+        },
+        {
+          "@id": "https://ror.org/01cs0jg44"
+        },
+        {
+          "@id": "dbr:Ho_Chi_Minh_City_Pedagogical_University"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75582420"
+        },
+        {
+          "@id": "wd:Q10489198"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Sư phạm Thành phố Hồ Chí Minh"
+        },
+        {
+          "@language": "en",
+          "@value": "Ho Chi Minh City University of Education"
+        }
+      ],
+      "schema:employee": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-son"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-minh-hong"
+        }
+      ],
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1976-10-27"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/8/82/A_SP_HCMUE.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/9/9e/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg"
+      },
+      "schema:telephone": "84.28.38352020",
+      "skos:notation": "SPS",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Sư phạm Thành phố Hồ Chí Minh"
+      },
+      "vnedu:address": "280 An Dương Vương, phường Chợ Quán",
+      "vnedu:admissionCode": "SPS",
+      "vnedu:councilChair": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-minh-hong"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1976"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hung-quoc"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duy-khoi-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thanh-c-ho"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thuc-duy-le"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-phuc-dinh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-bin-ho"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dai-nam-le"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ly-lan"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hieu-thao"
+        }
+      ],
+      "vnedu:hasLeader": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-minh-hong"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-son"
+        }
+      ],
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Tiền thân của trường là Phân khoa Sư phạm (Faculté de Pédagogie) thuộc Viện Đại học Sài Gòn (còn gọi là Trường Đại học Sư phạm Sài Gòn), được thành lập vào năm 1957 dưới chính thể Việt Nam Cộng hòa.\n\nNgày 8 tháng 11 năm 1975, Chính phủ Cách mạng lâm thời Cộng hòa miền Nam Việt Nam thành lập Viện Đại học Sài Gòn gồm 11 trường đại học trên địa bàn, trong đó có cả Trường Đại học Sư phạm Sài Gòn. Sau khi Việt Nam thống nhất, ngày 27 tháng 10 năm 1976, Thủ tướng Chính phủ Việt Nam đã ban hành Quyết định số 426/TTg thành lập Trường Đại học Sư phạm Thành phố Hồ Chí Minh trên cơ sở của Trường Đại học Sư phạm Sài Gòn.\n\nNăm 1995, Trường Đại học Sư phạm Thành phố Hồ Chí Minh đã được nhập vào làm một thành viên của Đại học Quốc gia Thành phố Hồ Chí Minh. Tuy nhiên, vào năm 1999, Đại học Quốc gia Thành phố Hồ Chí Minh được tổ chức lại trên cơ sở chia tách và thành lập mới. Theo đó, Trường Đại học Sư phạm Thành phố Hồ Chí Minh lại được Thủ tướng Chính phủ tách ra thành một trường trực thuộc Bộ Giáo dục và Đào tạo Việt Nam. Theo quyết định của Thủ tướng Chính phủ, Trường Đại học Sư phạm Thành phố Hồ Chí Minh là hiện là một trong 15 trường đại học trọng điểm quốc gia Việt Nam và cũng là một trong hai trường đại học sư phạm lớn của Việt Nam (cùng với Trường Đại học Sư phạm Hà Nội)."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Chất lượng – Sáng tạo – Nhân văn"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-son"
+      },
+      "vnedu:shortName": "HCMUE"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/8/82/A_SP_HCMUE.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "t-h-nam",
+      "schema:license": "CC0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:A_SP_HCMUE.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/A_SP_HCMUE.jpg/330px-A_SP_HCMUE.jpg"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/9/9e/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/9/9e/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg.png"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.761583"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.682194"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "https://ror.org/01cs0jg44"
-    },
-    {
-      "@id": "dbr:Ho_Chi_Minh_City_Pedagogical_University"
-    },
-    {
-      "@id": "wd:Q10489198"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q10489198"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75582420"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Ho Chi Minh City University of Education"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Sư phạm Thành phố Hồ Chí Minh"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-son"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:notation": "SPS",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Sư phạm Thành phố Hồ Chí Minh"
-  },
-  "vnedu:address": "280 An Dương Vương, phường Chợ Quán",
-  "vnedu:admissionCode": "SPS",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1976"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thanh-c-ho"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hung-quoc"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thuc-duy-le"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-phuc-dinh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ly-lan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-bin-ho"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hieu-thao"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dai-nam-le"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duy-khoi-nguyen"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-son"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Chất lượng – Sáng tạo – Nhân văn"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-son"
-  },
-  "vnedu:shortName": "HCMUE"
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.761583,106.682194],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.761583,106.682194],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -187,8 +246,10 @@
 <p class="uri">https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh<br>
   <a href="truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh.ttl">Turtle</a> · <a href="truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh">Truy vấn SPARQL</a>
-   · <span class="pill inf">suy luận</span> = 26 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+   · <span class="pill inf">suy luận</span> = 28 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Sư phạm Thành phố Hồ Chí Minh (tiếng Anh: Ho Chi Minh City University of Education – HCMUE) được thành lập ngày 27 tháng 10 năm 1976 theo Quyết định số 426/TTg của Thủ tướng Chính phủ, là một trường đại học chuyên ngành sư phạm và ngôn ngữ, được xếp vào nhóm trường đại học trọng điểm quốc gia Việt Nam. Trường trực thuộc Bộ Giáo dục và Đào tạo.</p><h2>Lịch sử</h2><p>Tiền thân của trường là Phân khoa Sư phạm (Faculté de Pédagogie) thuộc Viện Đại học Sài Gòn (còn gọi là Trường Đại học Sư phạm Sài Gòn), được thành lập vào năm 1957 dưới chính thể Việt Nam Cộng hòa.</p><p>Ngày 8 tháng 11 năm 1975, Chính phủ Cách mạng lâm thời Cộng hòa miền Nam Việt Nam thành lập Viện Đại học Sài Gòn gồm 11 trường đại học trên địa bàn, trong đó có cả Trường Đại học Sư phạm Sài Gòn. Sau khi Việt Nam thống nhất, ngày 27 tháng 10 năm 1976, Thủ tướng Chính phủ Việt Nam đã ban hành Quyết định số 426/TTg thành lập Trường Đại học Sư phạm Thành phố Hồ Chí Minh trên cơ sở của Trường Đại học Sư phạm Sài Gòn.</p><details><summary>Đọc tiếp (1 đoạn)</summary><p>Năm 1995, Trường Đại học Sư phạm Thành phố Hồ Chí Minh đã được nhập vào làm một thành viên của Đại học Quốc gia Thành phố Hồ Chí Minh. Tuy nhiên, vào năm 1999, Đại học Quốc gia Thành phố Hồ Chí Minh được tổ chức lại trên cơ sở chia tách và thành lập mới. Theo đó, Trường Đại học Sư phạm Thành phố Hồ Chí Minh lại được Thủ tướng Chính phủ tách ra thành một trường trực thuộc Bộ Giáo dục và Đào tạo Việt Nam. Theo quyết định của Thủ tướng Chính phủ, Trường Đại học Sư phạm Thành phố Hồ Chí Minh là hiện là một trong 15 trường đại học trọng điểm quốc gia Việt Nam và cũng là một trong hai trường đại học sư phạm lớn của Việt Nam (cùng với Trường Đại học Sư phạm Hà Nội).</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75582420">«Trường Đại học Sư phạm Thành phố Hồ Chí Minh»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75582420), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Sư phạm Thành phố Hồ Chí Minh</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/9/9e/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg.png" alt="Biểu trưng Trường Đại học Sư phạm Thành phố Hồ Chí Minh" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>Ho Chi Minh City University of Education</td></tr><tr><th>Viết tắt</th><td>HCMUE</td></tr><tr><th>Mã trường</th><td>SPS</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>27 tháng 10 năm 1976</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">GS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-son">Huỳnh Văn Sơn</a></td></tr><tr><th>Chủ tịch hội đồng trường</th><td><span class="lang">TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-minh-hong">Nguyễn Thị Minh Hồng</a></td></tr><tr><th>Địa chỉ</th><td>280 An Dương Vương, phường Chợ Quán</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Chất lượng – Sáng tạo – Nhân văn</i></td></tr><tr><th>Điện thoại</th><td>84.28.38352020</td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:A_SP_HCMUE.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/A_SP_HCMUE.jpg/330px-A_SP_HCMUE.jpg" alt="Ảnh Trường Đại học Sư phạm Thành phố Hồ Chí Minh" loading="lazy"></a><figcaption>CC0 · t-h-nam</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -213,10 +274,22 @@
 <div><a href="http://www.wikidata.org/entity/Q10489198">wd:Q10489198</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75582420">&lt;https://vi.wikipedia.org/w/index.php?oldid=75582420&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-son">Huỳnh Văn Sơn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-son">Huỳnh Văn Sơn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-minh-hong">Nguyễn Thị Minh Hồng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1976-10-27 <span class="lang">xsd:date</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/8/82/A_SP_HCMUE.jpg">&lt;https://upload.wikimedia.org/wikipedia/commons/8/82/A_SP_HCMUE.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/9/9e/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg">&lt;https://upload.wikimedia.org/wikipedia/vi/9/9e/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>84.28.38352020</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>SPS <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -226,6 +299,9 @@
 </td></tr>
 <tr><td class="p">mã trường (tuyển sinh)<small>vnedu:admissionCode</small></td><td>
 <div>SPS</div>
+</td></tr>
+<tr><td class="p">chủ tịch hội đồng trường<small>vnedu:councilChair</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-minh-hong">Nguyễn Thị Minh Hồng</a></div>
 </td></tr>
 <tr><td class="p">năm thành lập<small>vnedu:foundingYear</small></td><td>
 <div>1976 <span class="lang">xsd:gYear</span></div>
@@ -237,7 +313,7 @@
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dai-nam-le">Dai-Nam Le</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/duy-khoi-nguyen">Duy-Khoi Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-bin-ho">Le Bin Ho</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ly-lan">Lý Lan</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hieu-thao">Nguyen Hieu Thao</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hung-quoc">Nguyễn Hưng Quốc</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thanh-c-ho">Thanh C Ho</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thuc-duy-le">Thuc Duy Le</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-phuc-dinh">Van-Phuc Dinh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">có người đứng đầu<small>vnedu:hasLeader</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-son">Huỳnh Văn Sơn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-son">Huỳnh Văn Sơn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-minh-hong">Nguyễn Thị Minh Hồng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">đặt tại<small>vnedu:locatedIn</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -259,17 +335,17 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
+<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-son">Huỳnh Văn Sơn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-minh-hong">Nguyễn Thị Minh Hồng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dai-nam-le">Dai-Nam Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/duy-khoi-nguyen">Duy-Khoi Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-bin-ho">Le Bin Ho</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ly-lan">Lý Lan</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hieu-thao">Nguyen Hieu Thao</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hung-quoc">Nguyễn Hưng Quốc</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thanh-c-ho">Thanh C Ho</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thuc-duy-le">Thuc Duy Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-phuc-dinh">Van-Phuc Dinh</a></div>
 </td></tr>
 <tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dai-nam-le">Dai-Nam Le</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/duy-khoi-nguyen">Duy-Khoi Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-bin-ho">Le Bin Ho</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ly-lan">Lý Lan</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hieu-thao">Nguyen Hieu Thao</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hung-quoc">Nguyễn Hưng Quốc</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thanh-c-ho">Thanh C Ho</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thuc-duy-le">Thuc Duy Le</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-phuc-dinh">Van-Phuc Dinh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
-<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-van-son">Huỳnh Văn Sơn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
-<tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

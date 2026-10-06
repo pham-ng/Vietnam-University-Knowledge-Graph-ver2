@@ -17,114 +17,146 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-khoa-hoc-dai-hoc-thai-nguyen",
-  "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University"
-  ],
-  "foaf:homepage": {
-    "@id": "https://tnus.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.587591"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.797951"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "https://ror.org/01fj37d94"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/9/9f/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc,_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/9/9f/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg.png"
+      }
     },
     {
-      "@id": "wd:Q10829057"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-khoa-hoc-dai-hoc-thai-nguyen",
+      "@type": [
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:MemberInstitution",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Khoa học là một trong những trường đại học thành viên của Đại học Thái Nguyên. Được thành lập vào 10 năm 2002 với tên gọi Khoa Khoa học Tự nhiên. Đến năm 2005, đổi tên thành Khoa Khoa học Tự nhiên và Xã hội. Đến năm 2006, đổi thành Đại học Khoa học. Trường có tên giao dịch quốc tế là: Thai Nguyen University of Sciences (TNUS)."
+      },
+      "foaf:homepage": {
+        "@id": "https://tnus.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.587591"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.797951"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10829057"
+        },
+        {
+          "@id": "https://ror.org/01fj37d94"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829057"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75420757"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Thai Nguyen University of Scicences"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Khoa học, Đại học Thái Nguyên"
+        }
+      ],
+      "schema:email": "contact@tnus.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-dang-2"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "2002-10-24"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/9/9f/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen"
+      },
+      "schema:telephone": "+84(0) 989821199",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Khoa học, Đại học Thái Nguyên"
+      },
+      "vnedu:address": "Tổ 2, Phường Quyết Thắng",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2002"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-dang-2"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Khoa học (ĐHKH) thuộc Đại học Thái Nguyên (ĐHTN) tiền thân là Khoa Khoa học Tự nhiên, được thành lập năm 2002 theo Quyết định số 1286/QĐ-BGD&ĐT-TCCB ngày 28/03/2002 của Bộ trưởng Bộ Giáo dục và Đào tạo (Bộ GD&ĐT) với nhiệm vụ đào tạo, nghiên cứu khoa học và chuyển giao công nghệ các ngành thuộc lĩnh vực khoa học tự nhiên.\n\nĐến tháng 11 năm 2006, để phù hợp với sự mở rộng về quy mô và ngành đào tạo các lĩnh vực khoa học tự nhiên, xã hội và nhân văn, Giám đốc ĐHTN đã ký Quyết định số 803/QĐ-TCCB đổi tên thành Khoa Khoa học Tự nhiên và Xã hội.\n\nTháng 12 năm 2008, Thủ tướng Chính phủ đã ký Quyết định số 1901/QĐ – TTg ngày 23 tháng 12 năm 2008 về việc thành lập trường Đại học Khoa học trên cơ sở nâng cấp khoa Khoa học Tự nhiên và Xã hội thuộc ĐHTN.\n\nNăm 2022, kỷ niệm 20 năm thành trường, Trường vinh dự đón nhận Huân Chương Hữu nghị Việt - Lào và Bằng khen của Thủ tướng chính phủ."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen"
+      },
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Sáng tri thức - Vững tương lai"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-dang-2"
+      },
+      "vnedu:website": {
+        "@id": "https://tnus.edu.vn/"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q10829057"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75420757"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Khoa học, Đại học Thái Nguyên"
-    },
-    {
-      "@language": "en",
-      "@value": "Thai Nguyen University of Scicences"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-dang-2"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen"
-  },
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Khoa học, Đại học Thái Nguyên"
-  },
-  "vnedu:address": "Tổ 2, Phường Quyết Thắng",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2002"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-dang-2"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thai-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-thai-nguyen"
-  },
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Sáng tri thức - Vững tương lai"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-dang-2"
-  },
-  "vnedu:website": {
-    "@id": "https://tnus.edu.vn/"
-  }
+  ]
 }

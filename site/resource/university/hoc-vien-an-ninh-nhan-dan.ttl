@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
@@ -24,8 +25,10 @@ university:hoc-vien-an-ninh-nhan-dan a foaf:Organization,
         schema:EducationalOrganization,
         schema:Organization ;
     rdfs:label "Học viện An ninh nhân dân"@vi ;
+    dbo:abstract "Học viện An ninh nhân dân () (T01/C500) trực thuộc Bộ Công an có trách nhiệm đào tạo trình độ chuyên môn, nghiệp vụ và bồi dưỡng phẩm chất đạo đức, nhân cách của người cán bộ An ninh; nghiên cứu khoa học về An ninh nhân dân phục vụ cho yêu cầu phát triển kinh tế - xã hội. Mã trường: ANH."@vi ;
     owl:sameAs wd:Q25417473,
         <https://ror.org/01ptcf347> ;
+    skos:altLabel "T01/C500" ;
     skos:prefLabel "Học viện An ninh nhân dân"@vi ;
     prov:wasDerivedFrom wd:Q25417473,
         <https://vi.wikipedia.org/w/index.php?oldid=75613407> ;
@@ -45,11 +48,21 @@ university:hoc-vien-an-ninh-nhan-dan a foaf:Organization,
         person:tran-viet-tan,
         person:trang-a-tua,
         person:truong-thai-hien ;
+    vnedu:history """Ngày 25 tháng 6 năm 1946, Trường Huấn luyện Công an được thành lập (Theo Nghị định số 215/NĐ-P2 của Bộ Nội vụ).
+
+Tên gọi qua các thời kỳ: Trường Huấn luyện Công an (1946-1949) Trường Công an Trung cấp (1949-1953) Trường Công an Trung ương (1953-1974) Trường Sĩ quan An ninh (1974-1981) Trường Đại học An ninh nhân dân (1981-2001) Học viện An ninh Nhân dân (2001-nay)."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/d/d5/Flag_of_the_People%27s_Public_Security_of_Vietnam.svg> .
+
+<https://upload.wikimedia.org/wikipedia/commons/d/d5/Flag_of_the_People%27s_Public_Security_of_Vietnam.svg> a schema:ImageObject ;
+    schema:creditText "Tom Mai" ;
+    schema:license "Public domain" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Flag_of_the_People%27s_Public_Security_of_Vietnam.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Flag_of_the_People%27s_Public_Security_of_Vietnam.svg/330px-Flag_of_the_People%27s_Public_Security_of_Vietnam.svg.png> .
 

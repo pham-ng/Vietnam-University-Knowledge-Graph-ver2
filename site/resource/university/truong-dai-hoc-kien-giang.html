@@ -32,17 +32,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kien-giang",
   "@type": [
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "foaf:Organization",
     "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
     "schema:EducationalOrganization",
-    "vnedu:PublicInstitution"
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "vnedu:HigherEducationInstitution",
+    "foaf:Organization",
+    "schema:Organization",
+    "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Kiên Giang (tiếng Anh: Kien Giang University, viết tắt: KGU) là một trường đại học công lập định hướng ứng dụng, trực thuộc Bộ Giáo dục và Đào tạo, tọa lạc tại xã Châu Thành, tỉnh An Giang. Được thành lập vào năm 2014 theo Quyết định số 758/QĐ/TTg trên cơ sở Phân hiệu của Trường Đại học Nha Trang tại Kiên Giang, trường có nhiệm vụ đào tạo nguồn nhân lực đa ngành, tập trung vào các lĩnh vực thế mạnh của vùng Đồng bằng sông Cửu Long và kinh tế biển như nông nghiệp, thủy sản, công nghệ thực phẩm, du lịch và kinh tế."
+  },
   "foaf:homepage": {
     "@id": "https://www.vnkgu.edu.vn"
   },
@@ -59,28 +63,28 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q65172352"
+      "@id": "https://ror.org/00y8rfx07"
     },
     {
-      "@id": "https://ror.org/00y8rfx07"
+      "@id": "wd:Q65172352"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75088483"
+      "@id": "wd:Q65172352"
     },
     {
-      "@id": "wd:Q65172352"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75088483"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Kien Giang University"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Kiên Giang"
+    },
+    {
+      "@language": "en",
+      "@value": "Kien Giang University"
     }
   ],
   "schema:employee": {
@@ -88,15 +92,16 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     }
   ],
+  "schema:telephone": "0297.3.926714",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Kiên Giang"
@@ -112,12 +117,16 @@
   "vnedu:hasLeader": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-thanh"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Ngày 04 tháng 6 năm 2006, Bộ GD&ĐT ban hành Quyết định số 1704/QĐ-BGDĐT thành lập Phân hiệu Kiên Giang của Trường Đại học Thủy sản mà nay là Trường Đại học Nha Trang.\n\nNgày 21 tháng 5 năm 2014, Thủ tướng Chính phủ ra Quyết định số 758/QĐ/TTg thành lập trường Đại học Kiên Giang trên cơ sở Phân hiệu Trường Đại học Nha Trang tại Kiên Giang."
+  },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
@@ -154,7 +163,9 @@
   <a href="truong-dai-hoc-kien-giang.ttl">Turtle</a> · <a href="truong-dai-hoc-kien-giang.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kien-giang">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 17 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Kiên Giang (tiếng Anh: Kien Giang University, viết tắt: KGU) là một trường đại học công lập định hướng ứng dụng, trực thuộc Bộ Giáo dục và Đào tạo, tọa lạc tại xã Châu Thành, tỉnh An Giang. Được thành lập vào năm 2014 theo Quyết định số 758/QĐ/TTg trên cơ sở Phân hiệu của Trường Đại học Nha Trang tại Kiên Giang, trường có nhiệm vụ đào tạo nguồn nhân lực đa ngành, tập trung vào các lĩnh vực thế mạnh của vùng Đồng bằng sông Cửu Long và kinh tế biển như nông nghiệp, thủy sản, công nghệ thực phẩm, du lịch và kinh tế.</p><h2>Lịch sử</h2><p>Ngày 04 tháng 6 năm 2006, Bộ GD&amp;ĐT ban hành Quyết định số 1704/QĐ-BGDĐT thành lập Phân hiệu Kiên Giang của Trường Đại học Thủy sản mà nay là Trường Đại học Nha Trang.</p><p>Ngày 21 tháng 5 năm 2014, Thủ tướng Chính phủ ra Quyết định số 758/QĐ/TTg thành lập trường Đại học Kiên Giang trên cơ sở Phân hiệu Trường Đại học Nha Trang tại Kiên Giang.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75088483">«Trường Đại học Kiên Giang»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75088483), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Kiên Giang</div><table><tr><th>Tên tiếng Anh</th><td>Kien Giang University</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>2014</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">Tiến sĩ</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-thanh">Nguyễn Văn Thành</a></td></tr><tr><th>Địa chỉ</th><td>320A, Quốc lộ 61</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang">An Giang</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Tận tâm - Uy tín - Chất lượng - Hội nhập</i></td></tr><tr><th>Điện thoại</th><td>0297.3.926714</td></tr><tr><th>Website</th><td><a href="https://www.vnkgu.edu.vn">vnkgu.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -186,6 +197,9 @@
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang">An Giang</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>0297.3.926714</div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>320A, Quốc lộ 61</div>

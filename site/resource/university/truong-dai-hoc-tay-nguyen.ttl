@@ -27,6 +27,7 @@ university:truong-dai-hoc-tay-nguyen a dbo:University,
         schema:Organization ;
     rdfs:label "Tay Nguyen University"@en,
         "Trường Đại học Tây Nguyên"@vi ;
+    dbo:abstract "Trường Đại học Tây Nguyên (Tay Nguyen University) là một trong những trường đại học công lập đa ngành tại miền Trung Việt Nam. Trường được đề cử vào nhóm trường đại học trọng điểm quốc gia Việt Nam, đồng thời là trung tâm nghiên cứu khoa học lớn của vùng Tây Nguyên. Trường trực thuộc Bộ Giáo dục và Đào tạo."@vi ;
     owl:sameAs wd:Q16480583,
         <https://ror.org/01s7bde64> ;
     skos:notation "TTN" ;
@@ -42,6 +43,7 @@ university:truong-dai-hoc-tay-nguyen a dbo:University,
     vnedu:hasAlumnus person:dinh-ng-nguyen,
         person:van-bon-nguyen ;
     vnedu:hasLeader person:nguyen-thanh-truc ;
+    vnedu:history "Trường Đại học Tây Nguyên được thành lập theo Quyết định số 298/CP ngày 11/11/1977 của Hội đồng Chính phủ với nhiệm vụ đào tạo cán bộ có trình độ đại học phục vụ yêu cầu phát triển kinh tế, văn hóa, xã hội toàn vùng Tây Nguyên. Từ xuất phát điểm chỉ có 6 chuyên ngành đào tạo của 4 khoa: Sư phạm, Y dược, Nông lâm và Lâm nghiệp. Đến nay, Trường đã trở thành trung tâm đào tạo, nghiên cứu khoa học,chuyển giao công nghệ góp phần quan trọng trong việc đào tạo nguồn nhân lực cho vùng Tây Nguyên, Duyên hải Nam Trung Bộ và các nước Lào, Campuchia."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:dak-lak,
         region:trung-bo ;
@@ -50,8 +52,10 @@ university:truong-dai-hoc-tay-nguyen a dbo:University,
     vnedu:rector person:nguyen-thanh-truc ;
     vnedu:shortName "TNU" ;
     vnedu:website <https://www.ttn.edu.vn/> ;
+    schema:email "daihoctn@dng.vnn.vn" ;
     schema:employee person:nguyen-thanh-truc ;
     schema:location country:viet-nam,
         province:dak-lak,
-        region:trung-bo .
+        region:trung-bo ;
+    schema:telephone "+84-(0) 262 3825185" .
 

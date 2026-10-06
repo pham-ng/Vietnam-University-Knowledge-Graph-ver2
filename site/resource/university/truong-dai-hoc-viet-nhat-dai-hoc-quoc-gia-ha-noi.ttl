@@ -29,11 +29,13 @@ university:truong-dai-hoc-viet-nhat-dai-hoc-quoc-gia-ha-noi a dbo:University,
         schema:Organization ;
     rdfs:label "VNU Vietnam Japan University"@en,
         "Trường Đại học Việt Nhật, Đại học Quốc gia Hà Nội"@vi ;
+    dbo:abstract "là một trường đại học của Đại học Quốc gia Hà Nội - đại học trong nhóm trọng điểm quốc gia và đại học tinh hoa của Việt Nam. Trường được thành lập theo Quyết định 1186/QĐ-TTg ngày 21/7/2014 của Thủ tướng Chính phủ, ra đời dựa trên ý tưởng của lãnh đạo cấp cao của hai nước Việt Nam và Nhật Bản, phát triển theo mô hình đại học nghiên cứu, tập trung vào hai lĩnh vực công nghệ kỹ thuật tiên tiến và khoa học liên ngành. Thế mạnh của Trường là mạng lưới đối tác đại học Nhật Bản như Đại học Tokyo, Đại học Osaka, Đại học Tsukuba, Đại học Quốc lập Yokohama, Đại học Waseda, Đại học Ritsumeikan, Đại học Ibaraki. Hiệu trưởng hiện nay là Giáo sư - Tiến sĩ , nguyên Phó Giám đốc thường trực Đại học Tokyo. Đây là trường duy nhất thuộc Đại học Quốc gia Hà Nội có Hiệu trưởng là người nước ngoài."@vi ;
     owl:sameAs dbr:VNU_Vietnam_Japan_University,
         wd:Q20026262,
         <https://ror.org/056kdz329> ;
     geo:lat 21.032917 ;
     geo:long 105.7625 ;
+    skos:altLabel "日越大学" ;
     skos:notation "QHJ" ;
     skos:prefLabel "Trường Đại học Việt Nhật, Đại học Quốc gia Hà Nội"@vi ;
     prov:wasDerivedFrom wd:Q20026262,
@@ -45,6 +47,11 @@ university:truong-dai-hoc-viet-nhat-dai-hoc-quoc-gia-ha-noi a dbo:University,
     vnedu:foundingYear "2016"^^xsd:gYear ;
     vnedu:hasAlumnus person:do-quang-minh ;
     vnedu:hasLeader person:furuta-motoo ;
+    vnedu:history """Ngày 9 tháng 9 năm 2016, Trường Đại học Việt Nhật tổ chức lễ khai trường và khai giảng các chương trình đào tạo đầu tiên, chính thức vận hành các hoạt động đào tạo và nghiên cứu với 6 chương trình thạc sĩ gồm: Công nghệ Nano, Kỹ thuật môi trường, Kỹ thuật hạ tầng, Chính sách công, Khu vực học và Quản trị kinh doanh. Năm 2018, trường tiếp tục khai giảng chương trình thạc sĩ thứ 7: Biến đổi khí hậu và Phát triển. Từ năm 2019, chương trình thứ 8 mang tên Lãnh đạo toàn cầu (Global leadership) tuyển sinh khóa đầu tiên.
+
+Ngoài đội ngũ giảng viên cơ hữu của Trường Đại học Việt Nhật và của Đại học Quốc gia Hà Nội, 50% giảng viên của Trường đến từ các trường Đại học đối tác "danh giá" hàng đầu Nhật Bản như Đại học Tokyo, Đại học Osaka, Đại học Tsukuba, Đại học Quốc lập Yokohama,...
+
+Trường đặt mục tiêu đến năm 2024 sẽ có tổng quy mô khoảng 2000 người học."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -52,9 +59,18 @@ university:truong-dai-hoc-viet-nhat-dai-hoc-quoc-gia-ha-noi a dbo:University,
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:furuta-motoo ;
     vnedu:shortName "VNU-VJU" ;
+    schema:email "info@vju.ac.vn" ;
     schema:employee person:furuta-motoo ;
+    schema:foundingDate "2016-09-09"^^xsd:date ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
-    schema:parentOrganization university:dai-hoc-quoc-gia-ha-noi .
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/a/a0/Logo_vju.svg> ;
+    schema:parentOrganization university:dai-hoc-quoc-gia-ha-noi ;
+    schema:telephone "+84) 24 7306 6001" .
+
+<https://upload.wikimedia.org/wikipedia/vi/a/a0/Logo_vju.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_vju.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/a/a0/Logo_vju.svg/330px-Logo_vju.svg.png> .
 

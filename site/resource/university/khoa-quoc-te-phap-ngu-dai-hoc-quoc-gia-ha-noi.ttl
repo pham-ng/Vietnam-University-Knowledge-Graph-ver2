@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -21,6 +22,7 @@ university:khoa-quoc-te-phap-ngu-dai-hoc-quoc-gia-ha-noi a foaf:Organization,
         schema:Organization ;
     rdfs:label "Institut de la Francophonie pour l'Informatique"@en,
         "Khoa Quốc tế Pháp ngữ, Đại học Quốc gia Hà Nội"@vi ;
+    dbo:abstract "Khoa Quốc tế Pháp ngữ (viết tắt là IFI từ tên tiếng Pháp International Francophone Institute) hoặc còn gọi là Viện Quốc tế Pháp ngữ, là một cơ sở đào tạo bậc đại học và sau đại học về khoa học máy tính ở Việt Nam. Khoa được sáng lập và tài trợ bởi Tổ chức hợp tác Đại học khối Pháp ngữ (AUF, viết tắt của Agence universitaire de la Francophonie trong tiếng Pháp, tiếng Anh là Association of Universities of the Francophonie) vào năm 1995 theo yêu cầu từ chính phủ Việt Nam trong việc đào tạo các kỹ sư cấp cao và các giáo sư đại học về ngành khoa học máy tính cho Việt Nam. Các nước và các vùng/lãnh thổ tài trợ dự án là Bỉ-Wallonia, Canada-Québec, Pháp, Thụy Sĩ và Luxembourg. IFI tuyển dụng các sinh viên của mình tại Việt Nam và các nước nói tiếng Pháp khác. Hàng năm, các giảng viên quốc tế (từ các nước Pháp, Bỉ, Canađa, Môn-đa-vi, Việt Nam...) là giáo sư tại các trường đại học thành viên của AUF (như ENST Paris, Université catholique de Louvain, UQAM...) đến IFI để giảng dạy. Tất cả các khóa học được sử dụng tiếng Pháp, sinh viên được học thêm một ngoại Ngữ là tiếng Anh. Học phí được miến 100%, ngoài ra sinh viên còn có thể nhận thêm học bổng. Thông thường, kỳ thực tập tốt nghiệp của các học viên sẽ diễn ra ở nước ngoài (Châu Âu hoặc Canada) tại các doanh nghiệp lớn hoặc các phòng nghiên cứu mũi nhọn. Các học viên thường học ở đây sau đó làm luận án tiến sĩ (PhD). 70 % sinh viên các khóa cuối của IFI đã đăng ký tiếp tục làm nghiên cứu sinh. IFI là một trong những trường đào tạo về khoa học máy tính uy tín nhất Việt Nam, 1/3 các học viên tốt nghiệp từ trường này tiếp tục nghiên cứu tiến sĩ tại các trường đại học quốc tế, nhiều người trở thành các giáo sư hoặc là người sáng lập của công ty phần mềm ở Việt Nam."@vi ;
     owl:sameAs <http://dbpedia.org/resource/Institut_de_la_Francophonie_pour_l'Informatique>,
         wd:Q2496369 ;
     geo:lat 21.003122 ;
@@ -31,8 +33,18 @@ university:khoa-quoc-te-phap-ngu-dai-hoc-quoc-gia-ha-noi a foaf:Organization,
     foaf:homepage <http://www.ifi.auf.org> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Institut_de_la_Francophonie_pour_l%27Informatique>,
         <https://vi.wikipedia.org/wiki/Khoa_Qu%E1%BB%91c_t%E1%BA%BF_Ph%C3%A1p_ng%E1%BB%AF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i> ;
+    vnedu:campus "Đại học Quốc gia Hà Nội" ;
     vnedu:foundingYear "1995"^^xsd:gYear ;
     vnedu:hasAlumnus person:kim-khoa-nguyen ;
+    vnedu:history """Năm 1997, Viện Tin học Pháp ngữ (Institut de la Francophonie pour l'Informatique) được thành lập.
+
+Năm 2006, Trung tâm Đại học Pháp tại Hà Nội (Pôle Universitaire Français à Hanoi) được thành lập.
+
+Năm 2014, Viện Tin học Pháp ngữ tiếp nhận Trung tâm Đại học Pháp tại Hà Nội và đổi tên thành Viện Quốc tế Pháp ngữ (International Francophone Institute).
+
+Ngày 01/3/2023, Viện Quốc tế Pháp ngữ được chuyển đổi mô hình tổ chức thành Khoa Quốc tế Pháp ngữ theo Quyết định số 280/QĐ-ĐHQGHN với tên gọi quốc tế vẫn giữ nguyên là Institut Francophone International (tiếng Pháp) và International Francophone Institute (tiếng Anh).
+
+Năm 2024 với tên gọi mới, IFI có chức năng chính là tổ chức đào tạo trình độ đại học và sau đại học, Khoa Quốc tế Pháp ngữ tổ chức đạo tạo chương trình cử nhân với 2 chuyên ngành Truyền thông số và Marketing số và ngành Kinh doanh số."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;

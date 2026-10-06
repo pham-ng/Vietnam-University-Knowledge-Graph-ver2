@@ -17,102 +17,130 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tien-giang",
-  "@type": [
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.tgu.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ti%E1%BB%81n_Giang"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "https://ror.org/01gff7046"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-tien-giang",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Tiền Giang (tiếng Anh: Tien Giang University, viết tắt: TGU) là một trường đại học công lập đa ngành, định hướng ứng dụng, tọa lạc tại xã Châu Thành, tỉnh Đồng Tháp. Trường được thành lập vào năm 2005 trên cơ sở sáp nhập Trường Cao đẳng Sư phạm Tiền Giang và Trường Cao đẳng Cộng đồng Tiền Giang, đóng vai trò là trung tâm đào tạo nguồn nhân lực, nghiên cứu khoa học và chuyển giao công nghệ quan trọng của tỉnh và các vùng lân cận."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.tgu.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ti%E1%BB%81n_Giang"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/01gff7046"
+        },
+        {
+          "@id": "wd:Q10829147"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75189269"
+        },
+        {
+          "@id": "wd:Q10829147"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Tiền Giang"
+        },
+        {
+          "@language": "en",
+          "@value": "Tien Giang University"
+        }
+      ],
+      "schema:email": "daihoctg@tgu.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vo-ngoc-ha"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-thap"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/d/d1/Logo_tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ti%E1%BB%81n_Giang.svg"
+      },
+      "schema:telephone": "02733872624",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Tiền Giang"
+      },
+      "vnedu:address": "Ấp Thân Bình, xã Châu Thành",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2005"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/uy-ban-nhan-dan-tinh-dong-thap"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vo-ngoc-ha"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Tiền Giang được thành lập theo quyết định số 132/2005/QĐ-TTg ngày 06/06/2005 của Thủ tướng Chính phủ, trên cơ sở hợp nhất Trường Cao đẳng Sư phạm Tiền Giang (thành lập 09/1997) và Trường Trung học sư phạm mà tiền thân là 4 trường Sư phạm của tỉnh được thành lập từ sau ngày miền Nam hoàn toàn giải phóng) và Trường Cao đẳng Cộng đồng Tiền Giang (thành lập 08/2000, trên cơ sở hợp nhất Trung tâm Đào tạo và Bồi dưỡng tại chức liên tỉnh gồm Tiền Giang, Long An, Bến Tre mà tiền thân là Viện Đại học Cộng đồng Tiền Giang ra đời 1971 và Trường Công nhân Kỹ thuật Tiền Giang)."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-thap"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Thiết thực - Hiệu quả - Hài Hòa"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vo-ngoc-ha"
+      },
+      "vnedu:website": {
+        "@id": "http://www.tgu.edu.vn"
+      }
     },
     {
-      "@id": "wd:Q10829147"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/d/d1/Logo_tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ti%E1%BB%81n_Giang.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ti%E1%BB%81n_Giang.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/d/d1/Logo_tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ti%E1%BB%81n_Giang.svg/330px-Logo_tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ti%E1%BB%81n_Giang.svg.png"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q10829147"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75189269"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Tiền Giang"
-    },
-    {
-      "@language": "en",
-      "@value": "Tien Giang University"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vo-ngoc-ha"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-thap"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Tiền Giang"
-  },
-  "vnedu:address": "Ấp Thân Bình, xã Châu Thành",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2005"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/uy-ban-nhan-dan-tinh-dong-thap"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vo-ngoc-ha"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-thap"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Thiết thực - Hiệu quả - Hài Hòa"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vo-ngoc-ha"
-  },
-  "vnedu:website": {
-    "@id": "http://www.tgu.edu.vn"
-  }
+  ]
 }

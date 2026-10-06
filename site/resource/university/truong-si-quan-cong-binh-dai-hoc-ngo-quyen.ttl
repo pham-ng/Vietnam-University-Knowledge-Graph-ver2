@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -25,6 +26,7 @@ university:truong-si-quan-cong-binh-dai-hoc-ngo-quyen a foaf:Organization,
         schema:EducationalOrganization,
         schema:Organization ;
     rdfs:label "Trường Sĩ quan Công binh – Đại học Ngô Quyền"@vi ;
+    dbo:abstract "Trường Sĩ quan Công binh (SNH) (tên dân sự: Trường Đại học Ngô Quyền) là một trường đại học quân sự có trụ sở đặt tại thành phố Hồ Chí Minh, trực thuộc Binh chủng Công binh của Bộ Quốc phòng. Đào tạo cử nhân quân sự trình độ đại học các chuyên ngành chỉ huy kỹ thuật công binh và đào tạo cử nhân kỹ thuật hệ dân sự. Trường Đại học Sĩ quan Công binh là đơn vị sự nghiệp hệ công lập có tư cách pháp nhân, con dấu và tài khoản riêng. Ngày thành lập: 26 tháng 12 năm 1955. Trụ sở chính: 229B, đường Bạch Đằng, phường Thủ Dầu Một, thành phố Hồ Chí Minh."@vi ;
     owl:sameAs wd:Q10828879 ;
     skos:prefLabel "Trường Sĩ quan Công binh – Đại học Ngô Quyền"@vi ;
     prov:wasDerivedFrom wd:Q10828879,
@@ -34,6 +36,7 @@ university:truong-si-quan-cong-binh-dai-hoc-ngo-quyen a foaf:Organization,
     vnedu:governedBy vnedu:MinistryOfNationalDefence,
         organization:binh-chung-cong-binh-cua-bo-quoc-phong ;
     vnedu:hasAlumnus person:nguyen-huu-hung ;
+    vnedu:history "Trường Đại học Sĩ quan Công binh tiền thân là các lớp học đầu tiên do Cục Công binh tổ chức và Phân khoa Công binh, thuộc Trường Sĩ quan Lục quân 1 - Đại học Trần Quốc Tuấn. Ngày 26 tháng 12 năm 1955, tại thôn Nội Ninh, Ninh Sơn, Việt Yên, Hà Bắc (nay là Bắc Giang) khai giảng lớp học đầu tiên và từ đó, ngày 26/12 hàng năm trở thành Ngày truyền thống của Nhà trường. Tháng 3 năm 1956, di chuyển Phân hiệu Công binh từ Việt Yên về Đáp Cầu (thị xã Bắc Ninh, Hà Bắc) (nay là phường Đáp Cầu, thành phố Bắc Ninh, tỉnh Bắc Ninh); Ngày 27 tháng 4 năm 1964, Phân hiệu Công binh tách khỏi Trường Sĩ quan Lục quân 1 để tái thành lập Trường Đại học Sĩ quan Công binh. Ngày 8 tháng 8 năm 2013, Thủ tướng Chính phủ đã ký Quyết định số 1359/QĐ-TTg: Về việc thành lập Trường Đại học Ngô Quyền trên cơ sở Trường Đại học Sĩ quan Công binh. Trường Đại học Ngô Quyền có trụ sở chính tại thành phố Thủ Dầu Một, tỉnh Bình Dương. Ngày 20 tháng 9 năm 2013, Trường Đại học Ngô Quyền đã làm lễ công bố thành lập và khai giảng năm học 2013-2014."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;

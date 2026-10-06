@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-thai-binh-duong",
   "@type": [
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:PrivateInstitution",
-    "vnedu:HigherEducationInstitution",
     "dbo:University",
-    "vnedu:EducationalOrganization"
+    "vnedu:PrivateInstitution",
+    "schema:Organization",
+    "foaf:Organization",
+    "vnedu:Organization",
+    "vnedu:UniversitySchool",
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:HigherEducationInstitution"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Thái Bình Dương () được thành lập theo quyết định số 1929/QĐ-TTg ngày 31 tháng 12 năm 2008 của Phó Thủ tướng Chính phủ Nguyễn Thiện Nhân. Trụ sở của trường được đặt tại Số 79, đường Mai Thị Dõng, phường Tây Nha Trang, tỉnh Khánh Hòa. Trường là một đại học đa ngành, đa lĩnh vực, đào tạo bậc đại học các ngành thuộc khối Kỹ thuật, Công nghệ, Kinh tế, Ngoại ngữ, Du lịch, Luật..."
+  },
   "foaf:homepage": {
     "@id": "https://tbd.edu.vn"
   },
@@ -46,10 +50,10 @@
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10829139"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75362897"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75362897"
+      "@id": "wd:Q10829139"
     }
   ],
   "rdfs:label": [
@@ -65,17 +69,22 @@
   "schema:employee": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-thanh-phong-2"
   },
+  "schema:foundingDate": {
+    "@type": "xsd:date",
+    "@value": "2008-12-31"
+  },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
+  "schema:telephone": "+84-(058)3727181 - 3",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Thái Bình Dương"
@@ -93,10 +102,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa"
     }
   ],
   "vnedu:motto": {

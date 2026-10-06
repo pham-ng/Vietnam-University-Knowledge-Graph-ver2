@@ -30,111 +30,144 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-quan-tri-va-kinh-doanh-dai-hoc-quoc-gia-ha-noi",
-  "@type": [
-    "vnedu:MemberInstitution",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization"
-  ],
-  "foaf:homepage": {
-    "@id": "https://www.hsb.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_Qu%E1%BA%A3n_tr%E1%BB%8B_v%C3%A0_Kinh_doanh%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.036807"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.785613"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "https://ror.org/04w94d148"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-quan-tri-va-kinh-doanh-dai-hoc-quoc-gia-ha-noi",
+      "@type": [
+        "vnedu:MemberInstitution",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Quản trị và Kinh doanh - Đại học Quốc gia Hà Nội (tên tiếng Anh: VNU Hanoi School of Business and Management, viết tắt là HSB) là một đơn vị trực thuộc Đại học Quốc gia Hà Nội - đại học trong nhóm trọng điểm quốc gia và đại học tinh hoa của Việt Nam. Trường được thành lập ngày 13 tháng 7 năm 1995 theo quyết định của cố giáo sư, viện sĩ Nguyễn Văn Đạo, giám đốc đầu tiên của Đại học Quốc gia Hà Nội. Bên cạnh lĩnh vực quản trị kinh doanh, trường cũng là nơi tiên phong đào tạo lĩnh vực an ninh phi truyền thống đại học và sau đại học đầu tiên ở Việt Nam. Đây là trường đại học công lập đầu tiên của Việt Nam đạt chuẩn QS 5 sao."
+      },
+      "foaf:homepage": {
+        "@id": "https://www.hsb.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_Qu%E1%BA%A3n_tr%E1%BB%8B_v%C3%A0_Kinh_doanh%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.036807"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.785613"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10779338"
+        },
+        {
+          "@id": "https://ror.org/04w94d148"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75480938"
+        },
+        {
+          "@id": "wd:Q10779338"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Quản trị và Kinh doanh, Đại học Quốc gia Hà Nội"
+        },
+        {
+          "@language": "en",
+          "@value": "VNU School of Business and Management"
+        }
+      ],
+      "schema:email": "hsb@hsb.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-phi"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1995-07-13"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/b/bf/Logo_Tr%C6%B0%E1%BB%9Dng_Qu%E1%BA%A3n_tr%E1%BB%8B_v%C3%A0_Kinh_doanh%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i.svg"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+      },
+      "schema:telephone": "024-3-754 8456",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Quản trị và Kinh doanh, Đại học Quốc gia Hà Nội"
+      },
+      "vnedu:address": "Nhà B1 - Số 144, đường Xuân Thủy, Quận Cầu Giấy",
+      "vnedu:campus": "Nội thành",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1995"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-phi"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Tiền thân của trường là Khoa Quản trị và Kinh doanh, Đại học Quốc gia Hà Nội được thành lập từ ngày 13 tháng 7 năm 1995, trụ sở chính được đặt tại 144 Xuân Thủy, quận Cầu Giấy, thành phố Hà Nội. Sau ngày 1 tháng 12 năm 2021, Khoa được chuyển đổi, nâng cấp mô hình trở thành một Trường trực thuộc Đại học Quốc gia Hà Nội.\n\nTrường Quản trị và Kinh doanh là một đơn vị hoạt động theo hình thức hạch toán độc lập bằng nguồn vốn tài trợ và đóng góp phi lợi nhuận của các cá nhân, tổ chức và các công ty tư­ nhân trong - ngoài nước và đồng thời không phụ thuộc vào ngân sách của Nhà nước.\n\nHiện nay HSB đã trở thành một thương hiệu uy tín và dẫn đầu Việt Nam với các chương trình đào tạo cử nhân, thạc sĩ, tiến sĩ, các khóa đào tạo quản trị điều hành và các hoạt động tư vấn cho cả khu vực công và tư với hơn 13.000 cựu học viên thành đạt, trong số đó có nhiều người đang giữ chức vụ Bộ trưởng, Thứ trưởng, Chủ tịch và các CEO nổi tiếng của Việt Nam.\n\nHSB được biết tới là một tổ chức đào tạo đầu tiên ở Việt Nam được nhận ISO cho tất cả các hoạt động tư vấn và đào tạo từ năm 1996. Hiện nay HSB đang có quan hệ hợp tác nghiên cứu và đào tạo với nhiều nhà khoa học xuất sắc và nhiều trường đại học nổi tiếng thế giới như: ĐH Queensland (Úc), Trường Ipag (CH Pháp), ĐH Công nghệ Nanyang (Singapore), ĐHQG Singapore (NUS)... Các hoạt động hợp tác trong nước và quốc tế được tăng cường bao gồm việc tổ chức tham quan thực tế, trao đổi giảng viên, học viên và chuyên gia trong nhiều chương trình đào tạo liên ngành."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+      },
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Sáng tạo - Tiên phong - Chất lượng"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-phi"
+      },
+      "vnedu:shortName": "HSB",
+      "vnedu:website": {
+        "@id": "https://www.hsb.edu.vn/"
+      }
     },
     {
-      "@id": "wd:Q10779338"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/b/bf/Logo_Tr%C6%B0%E1%BB%9Dng_Qu%E1%BA%A3n_tr%E1%BB%8B_v%C3%A0_Kinh_doanh%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_Qu%E1%BA%A3n_tr%E1%BB%8B_v%C3%A0_Kinh_doanh,_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/b/bf/Logo_Tr%C6%B0%E1%BB%9Dng_Qu%E1%BA%A3n_tr%E1%BB%8B_v%C3%A0_Kinh_doanh%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_Qu%E1%BA%A3n_tr%E1%BB%8B_v%C3%A0_Kinh_doanh%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i.svg.png"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q10779338"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75480938"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "VNU School of Business and Management"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Quản trị và Kinh doanh, Đại học Quốc gia Hà Nội"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-phi"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
-  },
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Quản trị và Kinh doanh, Đại học Quốc gia Hà Nội"
-  },
-  "vnedu:address": "Nhà B1 - Số 144, đường Xuân Thủy, Quận Cầu Giấy",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1995"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-phi"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
-  },
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Sáng tạo - Tiên phong - Chất lượng"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-phi"
-  },
-  "vnedu:shortName": "HSB",
-  "vnedu:website": {
-    "@id": "https://www.hsb.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([21.036807,105.785613],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([21.036807,105.785613],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -153,7 +186,9 @@
   <a href="truong-quan-tri-va-kinh-doanh-dai-hoc-quoc-gia-ha-noi.ttl">Turtle</a> · <a href="truong-quan-tri-va-kinh-doanh-dai-hoc-quoc-gia-ha-noi.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-quan-tri-va-kinh-doanh-dai-hoc-quoc-gia-ha-noi">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 16 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Quản trị và Kinh doanh - Đại học Quốc gia Hà Nội (tên tiếng Anh: VNU Hanoi School of Business and Management, viết tắt là HSB) là một đơn vị trực thuộc Đại học Quốc gia Hà Nội - đại học trong nhóm trọng điểm quốc gia và đại học tinh hoa của Việt Nam. Trường được thành lập ngày 13 tháng 7 năm 1995 theo quyết định của cố giáo sư, viện sĩ Nguyễn Văn Đạo, giám đốc đầu tiên của Đại học Quốc gia Hà Nội. Bên cạnh lĩnh vực quản trị kinh doanh, trường cũng là nơi tiên phong đào tạo lĩnh vực an ninh phi truyền thống đại học và sau đại học đầu tiên ở Việt Nam. Đây là trường đại học công lập đầu tiên của Việt Nam đạt chuẩn QS 5 sao.</p><h2>Lịch sử</h2><p>Tiền thân của trường là Khoa Quản trị và Kinh doanh, Đại học Quốc gia Hà Nội được thành lập từ ngày 13 tháng 7 năm 1995, trụ sở chính được đặt tại 144 Xuân Thủy, quận Cầu Giấy, thành phố Hà Nội. Sau ngày 1 tháng 12 năm 2021, Khoa được chuyển đổi, nâng cấp mô hình trở thành một Trường trực thuộc Đại học Quốc gia Hà Nội.</p><p>Trường Quản trị và Kinh doanh là một đơn vị hoạt động theo hình thức hạch toán độc lập bằng nguồn vốn tài trợ và đóng góp phi lợi nhuận của các cá nhân, tổ chức và các công ty tư­ nhân trong - ngoài nước và đồng thời không phụ thuộc vào ngân sách của Nhà nước.</p><details><summary>Đọc tiếp (2 đoạn)</summary><p>Hiện nay HSB đã trở thành một thương hiệu uy tín và dẫn đầu Việt Nam với các chương trình đào tạo cử nhân, thạc sĩ, tiến sĩ, các khóa đào tạo quản trị điều hành và các hoạt động tư vấn cho cả khu vực công và tư với hơn 13.000 cựu học viên thành đạt, trong số đó có nhiều người đang giữ chức vụ Bộ trưởng, Thứ trưởng, Chủ tịch và các CEO nổi tiếng của Việt Nam.</p><p>HSB được biết tới là một tổ chức đào tạo đầu tiên ở Việt Nam được nhận ISO cho tất cả các hoạt động tư vấn và đào tạo từ năm 1996. Hiện nay HSB đang có quan hệ hợp tác nghiên cứu và đào tạo với nhiều nhà khoa học xuất sắc và nhiều trường đại học nổi tiếng thế giới như: ĐH Queensland (Úc), Trường Ipag (CH Pháp), ĐH Công nghệ Nanyang (Singapore), ĐHQG Singapore (NUS)... Các hoạt động hợp tác trong nước và quốc tế được tăng cường bao gồm việc tổ chức tham quan thực tế, trao đổi giảng viên, học viên và chuyên gia trong nhiều chương trình đào tạo liên ngành.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75480938">«Trường Quản trị và Kinh doanh, Đại học Quốc gia Hà Nội»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75480938), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Quản trị và Kinh doanh, Đại học Quốc gia Hà Nội</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_Qu%E1%BA%A3n_tr%E1%BB%8B_v%C3%A0_Kinh_doanh,_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i.svg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/b/bf/Logo_Tr%C6%B0%E1%BB%9Dng_Qu%E1%BA%A3n_tr%E1%BB%8B_v%C3%A0_Kinh_doanh%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_Qu%E1%BA%A3n_tr%E1%BB%8B_v%C3%A0_Kinh_doanh%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i.svg.png" alt="Biểu trưng Trường Quản trị và Kinh doanh, Đại học Quốc gia Hà Nội" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>VNU School of Business and Management</td></tr><tr><th>Viết tắt</th><td>HSB</td></tr><tr><th>Loại hình</th><td>Đơn vị GDĐH khác</td></tr><tr><th>Thành lập</th><td>13 tháng 7 năm 1995</td></tr><tr><th>Thành viên của</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi">Đại học Quốc gia Hà Nội</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-phi">Hoàng Đình Phi</a></td></tr><tr><th>Địa chỉ</th><td>Nhà B1 - Số 144, đường Xuân Thủy, Quận Cầu Giấy</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Khuôn viên</th><td>Nội thành</td></tr><tr><th>Khẩu hiệu</th><td><i>Sáng tạo - Tiên phong - Chất lượng</i></td></tr><tr><th>Điện thoại</th><td>024-3-754 8456</td></tr><tr><th>Email</th><td><a href="mailto:hsb@hsb.edu.vn">hsb@hsb.edu.vn</a></td></tr><tr><th>Website</th><td><a href="https://www.hsb.edu.vn/">hsb.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -180,17 +215,32 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q10779338">wd:Q10779338</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75480938">&lt;https://vi.wikipedia.org/w/index.php?oldid=75480938&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>hsb@hsb.edu.vn</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-phi">Hoàng Đình Phi</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1995-07-13 <span class="lang">xsd:date</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/b/bf/Logo_Tr%C6%B0%E1%BB%9Dng_Qu%E1%BA%A3n_tr%E1%BB%8B_v%C3%A0_Kinh_doanh%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i.svg">&lt;https://upload.wikimedia.org/wikipedia/vi/b/bf/Logo_Tr%C6%B0%E1%BB%9Dng_Qu%E1%BA%A3n_tr%E1%BB%8B_v%C3%A0_Kinh_doanh%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i.svg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:parentOrganization<small>schema:parentOrganization</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi">Đại học Quốc gia Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>024-3-754 8456</div>
+</td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>Nhà B1 - Số 144, đường Xuân Thủy, Quận Cầu Giấy</div>
+</td></tr>
+<tr><td class="p">khuôn viên<small>vnedu:campus</small></td><td>
+<div>Nội thành</div>
 </td></tr>
 <tr><td class="p">năm thành lập<small>vnedu:foundingYear</small></td><td>
 <div>1995 <span class="lang">xsd:gYear</span></div>
@@ -224,11 +274,11 @@
 <tr><td class="p">schema:subOrganization<small>schema:subOrganization</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi">Đại học Quốc gia Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
-<tr><td class="p">có đơn vị thành viên<small>vnedu:hasMember</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi">Đại học Quốc gia Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-dinh-phi">Hoàng Đình Phi</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">có đơn vị thành viên<small>vnedu:hasMember</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi">Đại học Quốc gia Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

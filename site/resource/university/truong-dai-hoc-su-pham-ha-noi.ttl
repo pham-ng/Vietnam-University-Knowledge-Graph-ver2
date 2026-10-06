@@ -30,11 +30,13 @@ university:truong-dai-hoc-su-pham-ha-noi a dbo:University,
         schema:Organization ;
     rdfs:label "Hanoi National University of Education"@en,
         "Trường Đại học Sư phạm Hà Nội"@vi ;
+    dbo:abstract "Trường Đại học Sư phạm Hà Nội (tiếng Anh: Hanoi National University of Education, viết tắt: HNUE) là một trường đại học công lập trọng điểm quốc gia của Việt Nam, đóng vai trò đầu tàu trong hệ thống đào tạo giáo viên và nghiên cứu khoa học giáo dục. Theo Bảng xếp hạng Đại học Việt Nam (VNUR) năm 2026, trường tiếp tục đứng đầu trong khối ngành Sư phạm, xếp thứ 13 toàn quốc trong bảng xếp hạng đại học tổng thể. Ngoài ra, Trường Đại học Sư phạm Hà Nội được xếp thứ 847 tại Châu Á. Tại khu vực Đông Nam Á, trường đứng thứ 138."@vi ;
     owl:sameAs dbr:Hanoi_National_University_of_Education,
         wd:Q5649329,
         <https://ror.org/0360g3z42> ;
     geo:lat 21.038056 ;
     geo:long 105.784056 ;
+    skos:altLabel "Đại học Sư phạm Hà Nội 1 nhằm phân biệt với trường Đại học Sư phạm Hà Nội 2" ;
     skos:prefLabel "Trường Đại học Sư phạm Hà Nội"@vi ;
     prov:wasDerivedFrom wd:Q5649329,
         <https://vi.wikipedia.org/w/index.php?oldid=75606286> ;
@@ -71,6 +73,13 @@ university:truong-dai-hoc-su-pham-ha-noi a dbo:University,
         person:viet-anh-pham-ba,
         person:viet-hung-nguyen ;
     vnedu:hasLeader person:nguyen-duc-son ;
+    vnedu:history """Tiền thân của Trường Đại học Sư phạm Hà Nội là Trường Sư phạm Cao cấp, được thành lập ngày 11 tháng 10 năm 1951 theo Nghị định số 276/NĐ của Bộ Quốc gia Giáo dục. Trong những năm kháng chiến chống Pháp, trường đóng tại vùng tự do Liên khu IV, sau đó chuyển về Hà Nội sau khi hòa bình lập lại năm 1954.
+
+Ngày 14 tháng 8 năm 1967, Hội đồng Chính phủ ban hành Quyết định số 128/CP, chia tách Trường Đại học Sư phạm Hà Nội thành ba trường: Trường Đại học Sư phạm Hà Nội I (tức HNUE ngày nay), Trường Đại học Sư phạm Hà Nội 2 và Trường Đại học Ngoại ngữ, Đại học Quốc gia Hà Nội . Trường Đại học Sư phạm Hà Nội I đảm nhiệm đào tạo các ngành khoa học xã hội và nhân văn.
+
+Ngày 10 tháng 12 năm 1993, Chính phủ ban hành Nghị định 97/CP, sáp nhập Trường Đại học Sư phạm Hà Nội I vào Đại học Quốc gia Hà Nội với tên gọi Trường Đại học Sư phạm – Đại học Quốc gia Hà Nội.
+
+Ngày 12 tháng 10 năm 1999, Thủ tướng Chính phủ ban hành Quyết định 201/QĐ-TTg, tách Trường Đại học Sư phạm khỏi Đại học Quốc gia Hà Nội và đổi tên thành Trường Đại học Sư phạm Hà Nội. Năm 2025, trường kỷ niệm 74 năm thành lập và hướng tới kỷ niệm 75 năm vào tháng 10 năm 2026."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -89,8 +98,23 @@ university:truong-dai-hoc-su-pham-ha-noi a dbo:University,
         major:7310401,
         major:7480201 ;
     vnedu:website <http://english.hnue.edu.vn/> ;
+    schema:email "vanthu@dhsphn.edu.vn" ;
     schema:employee person:nguyen-duc-son ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/2/23/%C4%90HSPHN_04102025.jpg> ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/1/1e/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_H%C3%A0_N%E1%BB%99i.png> ;
+    schema:telephone "+84-(0)24-37547823" .
+
+<https://upload.wikimedia.org/wikipedia/commons/2/23/%C4%90HSPHN_04102025.jpg> a schema:ImageObject ;
+    schema:creditText "Chuhai07" ;
+    schema:license "CC0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:%C4%90HSPHN_04102025.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/%C4%90HSPHN_04102025.jpg/330px-%C4%90HSPHN_04102025.jpg> .
+
+<https://upload.wikimedia.org/wikipedia/vi/1/1e/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_H%C3%A0_N%E1%BB%99i.png> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_H%C3%A0_N%E1%BB%99i.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/1/1e/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_H%C3%A0_N%E1%BB%99i.png/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_H%C3%A0_N%E1%BB%99i.png> .
 

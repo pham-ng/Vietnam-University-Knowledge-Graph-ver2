@@ -30,174 +30,206 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quoc-te-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh",
-  "@type": [
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:MemberInstitution"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.hcmiu.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_International_University"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/2/29/Logo-HCMIU.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo-HCMIU.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/2/29/Logo-HCMIU.svg/330px-Logo-HCMIU.svg.png"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_t%E1%BA%BF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quoc-te-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh",
+      "@type": [
+        "vnedu:Organization",
+        "vnedu:MemberInstitution",
+        "vnedu:UniversitySchool",
+        "vnedu:EducationalOrganization",
+        "schema:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Quốc tế (tiếng Anh: Ho Chi Minh City International University - HCMIU) là một trong tám trường đại học thành viên của Đại học Quốc gia Thành phố Hồ Chí Minh, được thành lập vào ngày 05 tháng 12 năm 2003. Đây là trường đại học công lập đa ngành đầu tiên tại Việt Nam giảng dạy hoàn toàn tiếng Anh. Năm 2019, trường Đại học Quốc tế là trường thứ 3 của Việt Nam và thứ 7 của Đông Nam Á đạt chuẩn kiểm định AUN cấp cơ sở đào tạo. Hiện nay, trường đang đào tạo hệ chính quy bậc đại học và sau đại học. Nhà trường tập trung đào tạo các ngành học thuộc lĩnh vực mũi nhọn như như kinh tế, quản lý, khoa học và kỹ thuật. Mô hình hoạt động của trường được xây dựng hiện đại theo tiêu chuẩn quốc tế về đội ngũ giảng viên, giáo trình, chương trình học có định hướng và liên thông với các trường đại học tại các quốc gia có nền giáo dục phát triển tại Bắc Mỹ, Châu Âu và khu vực Châu Á – Thái Bình Dương. Mục tiêu của trường Đại học Quốc tế là trở thành một trong những trường đại học nghiên cứu hàng đầu tại Việt Nam và trong khu vực, là cơ sở đào tạo nhận được sự hợp tác tin cậy của các đối tác giáo dục và nghiên cứu khoa học có uy tín trên thế giới, của doanh nghiệp, các địa phương và xã hội ở Việt Nam."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.hcmiu.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_International_University"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_t%E1%BA%BF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.8777"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.802"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "dbr:Ho_Chi_Minh_City_International_University"
+        },
+        {
+          "@id": "https://ror.org/003szmg30"
+        },
+        {
+          "@id": "wd:Q5873959"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q5873959"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75594693"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "International University - Vietnam National University Ho Chi Minh City"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Quốc tế, Đại học Quốc gia Thành phố Hồ Chí Minh"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quoc-chinh"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "2003-12-05"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/2/29/Logo-HCMIU.svg"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
+      },
+      "schema:telephone": "+84-28-3724 4270",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Quốc tế, Đại học Quốc gia Thành phố Hồ Chí Minh"
+      },
+      "vnedu:address": "Khu phố 33, phường Linh Xuân",
+      "vnedu:campus": "Ngoại ô thành phố, 11.52 ha",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2003"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nha-k-huynh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vy-thi-lan-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-phuc-dang"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thanh-truc-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/diem-huong-nguyen-tran"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bao-t-le"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bao-le"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-van-canh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/khoa-van-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tung-nguyen-thanh-uong"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dat-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tri-huynh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/khanh-l-ly"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quoc-chinh"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Ngày 5/12/2003 trường Đại học Quốc tế được thành lập căn cứ Quyết định số 260/2003/QĐ-TTg của Thủ tướng Chính phủ trên cơ sở Quy hoạch mạng lưới đại học, cao đẳng giai đoạn 2001 – 2010 ban hành kèm theo Quyết định số 47/2001/QĐ-TTg ngày 04/04/2001 của Thủ tướng Chính phủ có yêu cầu: \"Các trường đại học và cao đẵng ở Hà Nội và thành phố Hồ Chí Minh cần phải đi đầu trong quá trình hội nhập với nền giáo dục đại học, cao đẳng của các nước trong khu vực và quốc tế, đa dạng hóa các hình thức đầu tư trong và ngoài nước, liên kết với các trường đại học, cao đẳng có uy tín trên thế giới để nâng cao chất lượng đào tạo\" và Chiến lược trung hạn xây dựng và phát triển giai đoạn 2001 – 2005 của Đại học Quốc gia Thành phố Hồ Chí Minh đã nêu rõ \"Thành lập Trường Đại học Quốc Tế trên cơ sở liên kết với các trường nước ngoài có uy tín, tạo điều kiện cho cán bộ, sinh viên du học tại chỗ và qua đó, ĐHQG-HCM có thể học tập, đối chiếu kinh nghiệm và chất lượng, đào tạo của mình\".\n\nNăm 2004: Nhà trường đã tuyển sinh khoá đầu với 2 khoa đầu tiên: khoa Quản trị kinh doanh và khoa Khoa học máy tính và Kĩ thuật.\n\nNiên khoá 2005: Nhà trường tiếp tục mở thêm 2 khoa trong chương trình đào tạo cử nhân: khoa Điện tử Viễn thông và khoa Công nghệ sinh học. Trong năm này, trường cũng đã tiến hành liên kết đào tạo chương trình Đại học theo hình thức 2+2 với Đại học Nottingham và Đại học West of England của Vương Quốc Anh.\n\nTrong năm 2006: Nhà trường tiếp tục liên kết đào tạo chương trình Đại học với Đại học Công nghệ Auckland của New Zealand.\n\nNăm 2007: Khoa Khoa học máy tính và Kĩ thuật của trường mở chuyên ngành đào tạo Khoa học máy tính song song với các chuyên ngành của khoa khác. Trong năm này, trường cũng liên kết đào tạo bậc đại học, ngành Quản trị kinh doanh và Điện tử Viễn thông với Đại học New South Wales của Úc.\n\nNăm 2008: Trường mở thêm liên kết đào tạo với Đại học Rutgers tại tiểu bang New Jersey của Hoa Kỳ.\n\nNăm 2009: Trường tiếp tục hợp tác liên kết đào tạo với Đại học SUNY Binghamton của Hoa Kỳ. Đồng thời trường cũng thành lập thêm Bộ môn Kỹ thuật Y sinh vào tháng 3 năm 2009.\n\nNăm 2010: Trường mở thêm liên kết ngành quản trị kinh doanh với Đại học Houston, USA.\n\nNăm 2013: Trường kỉ niệm 10 năm thành lập, khánh thành toà nhà mới \"Khối phòng học và thí nghiệm 2\" và đón nhận \"Huân chương Lao động hạng Ba\"."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
+      },
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Together we make differences. Tạm dịch: Cùng nhau tạo nên điều khác biệt"
+      },
+      "vnedu:numberOfPostgraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "933"
+      },
+      "vnedu:numberOfUndergraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "11539"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quoc-chinh"
+      },
+      "vnedu:shortName": "VNU HCMC-IU",
+      "vnedu:website": {
+        "@id": "http://www.hcmiu.edu.vn/"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.8777"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.802"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "wd:Q5873959"
-    },
-    {
-      "@id": "dbr:Ho_Chi_Minh_City_International_University"
-    },
-    {
-      "@id": "https://ror.org/003szmg30"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75594693"
-    },
-    {
-      "@id": "wd:Q5873959"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "International University - Vietnam National University Ho Chi Minh City"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Quốc tế, Đại học Quốc gia Thành phố Hồ Chí Minh"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quoc-chinh"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
-  },
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Quốc tế, Đại học Quốc gia Thành phố Hồ Chí Minh"
-  },
-  "vnedu:address": "Khu phố 33, phường Linh Xuân",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2003"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tri-huynh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dat-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vy-thi-lan-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nha-k-huynh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/khanh-l-ly"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bao-le"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-van-canh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bao-t-le"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/diem-huong-nguyen-tran"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thanh-truc-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tung-nguyen-thanh-uong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/khoa-van-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-phuc-dang"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quoc-chinh"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
-  },
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Together we make differences. Tạm dịch: Cùng nhau tạo nên điều khác biệt"
-  },
-  "vnedu:numberOfPostgraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "933"
-  },
-  "vnedu:numberOfUndergraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "11539"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quoc-chinh"
-  },
-  "vnedu:shortName": "VNU HCMC-IU",
-  "vnedu:website": {
-    "@id": "http://www.hcmiu.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.8777,106.802],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.8777,106.802],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -216,7 +248,9 @@
   <a href="truong-dai-hoc-quoc-te-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh.ttl">Turtle</a> · <a href="truong-dai-hoc-quoc-te-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quoc-te-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 32 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Quốc tế (tiếng Anh: Ho Chi Minh City International University - HCMIU) là một trong tám trường đại học thành viên của Đại học Quốc gia Thành phố Hồ Chí Minh, được thành lập vào ngày 05 tháng 12 năm 2003. Đây là trường đại học công lập đa ngành đầu tiên tại Việt Nam giảng dạy hoàn toàn tiếng Anh. Năm 2019, trường Đại học Quốc tế là trường thứ 3 của Việt Nam và thứ 7 của Đông Nam Á đạt chuẩn kiểm định AUN cấp cơ sở đào tạo. Hiện nay, trường đang đào tạo hệ chính quy bậc đại học và sau đại học. Nhà trường tập trung đào tạo các ngành học thuộc lĩnh vực mũi nhọn như như kinh tế, quản lý, khoa học và kỹ thuật. Mô hình hoạt động của trường được xây dựng hiện đại theo tiêu chuẩn quốc tế về đội ngũ giảng viên, giáo trình, chương trình học có định hướng và liên thông với các trường đại học tại các quốc gia có nền giáo dục phát triển tại Bắc Mỹ, Châu Âu và khu vực Châu Á – Thái Bình Dương. Mục tiêu của trường Đại học Quốc tế là trở thành một trong những trường đại học nghiên cứu hàng đầu tại Việt Nam và trong khu vực, là cơ sở đào tạo nhận được sự hợp tác tin cậy của các đối tác giáo dục và nghiên cứu khoa học có uy tín trên thế giới, của doanh nghiệp, các địa phương và xã hội ở Việt Nam.</p><h2>Lịch sử</h2><p>Ngày 5/12/2003 trường Đại học Quốc tế được thành lập căn cứ Quyết định số 260/2003/QĐ-TTg của Thủ tướng Chính phủ trên cơ sở Quy hoạch mạng lưới đại học, cao đẳng giai đoạn 2001 – 2010 ban hành kèm theo Quyết định số 47/2001/QĐ-TTg ngày 04/04/2001 của Thủ tướng Chính phủ có yêu cầu: &quot;Các trường đại học và cao đẵng ở Hà Nội và thành phố Hồ Chí Minh cần phải đi đầu trong quá trình hội nhập với nền giáo dục đại học, cao đẳng của các nước trong khu vực và quốc tế, đa dạng hóa các hình thức đầu tư trong và ngoài nước, liên kết với các trường đại học, cao đẳng có uy tín trên thế giới để nâng cao chất lượng đào tạo&quot; và Chiến lược trung hạn xây dựng và phát triển giai đoạn 2001 – 2005 của Đại học Quốc gia Thành phố Hồ Chí Minh đã nêu rõ &quot;Thành lập Trường Đại học Quốc Tế trên cơ sở liên kết với các trường nước ngoài có uy tín, tạo điều kiện cho cán bộ, sinh viên du học tại chỗ và qua đó, ĐHQG-HCM có thể học tập, đối chiếu kinh nghiệm và chất lượng, đào tạo của mình&quot;.</p><p>Năm 2004: Nhà trường đã tuyển sinh khoá đầu với 2 khoa đầu tiên: khoa Quản trị kinh doanh và khoa Khoa học máy tính và Kĩ thuật.</p><details><summary>Đọc tiếp (7 đoạn)</summary><p>Niên khoá 2005: Nhà trường tiếp tục mở thêm 2 khoa trong chương trình đào tạo cử nhân: khoa Điện tử Viễn thông và khoa Công nghệ sinh học. Trong năm này, trường cũng đã tiến hành liên kết đào tạo chương trình Đại học theo hình thức 2+2 với Đại học Nottingham và Đại học West of England của Vương Quốc Anh.</p><p>Trong năm 2006: Nhà trường tiếp tục liên kết đào tạo chương trình Đại học với Đại học Công nghệ Auckland của New Zealand.</p><p>Năm 2007: Khoa Khoa học máy tính và Kĩ thuật của trường mở chuyên ngành đào tạo Khoa học máy tính song song với các chuyên ngành của khoa khác. Trong năm này, trường cũng liên kết đào tạo bậc đại học, ngành Quản trị kinh doanh và Điện tử Viễn thông với Đại học New South Wales của Úc.</p><p>Năm 2008: Trường mở thêm liên kết đào tạo với Đại học Rutgers tại tiểu bang New Jersey của Hoa Kỳ.</p><p>Năm 2009: Trường tiếp tục hợp tác liên kết đào tạo với Đại học SUNY Binghamton của Hoa Kỳ. Đồng thời trường cũng thành lập thêm Bộ môn Kỹ thuật Y sinh vào tháng 3 năm 2009.</p><p>Năm 2010: Trường mở thêm liên kết ngành quản trị kinh doanh với Đại học Houston, USA.</p><p>Năm 2013: Trường kỉ niệm 10 năm thành lập, khánh thành toà nhà mới &quot;Khối phòng học và thí nghiệm 2&quot; và đón nhận &quot;Huân chương Lao động hạng Ba&quot;.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75594693">«Trường Đại học Quốc tế, Đại học Quốc gia Thành phố Hồ Chí Minh»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75594693), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Quốc tế, Đại học Quốc gia Thành phố Hồ Chí Minh</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo-HCMIU.svg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/2/29/Logo-HCMIU.svg/330px-Logo-HCMIU.svg.png" alt="Biểu trưng Trường Đại học Quốc tế, Đại học Quốc gia Thành phố Hồ Chí Minh" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>International University - Vietnam National University Ho Chi Minh City</td></tr><tr><th>Viết tắt</th><td>VNU HCMC-IU</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>5 tháng 12 năm 2003</td></tr><tr><th>Thành viên của</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh">Đại học Quốc gia Thành phố Hồ Chí Minh</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quoc-chinh">Nguyễn Quốc Chính</a></td></tr><tr><th>Địa chỉ</th><td>Khu phố 33, phường Linh Xuân</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></td></tr><tr><th>Khuôn viên</th><td>Ngoại ô thành phố, 11.52 ha</td></tr><tr><th>Khẩu hiệu</th><td><i>Together we make differences. Tạm dịch: Cùng nhau tạo nên điều khác biệt</i></td></tr><tr><th>Điện thoại</th><td>+84-28-3724 4270</td></tr><tr><th>Website</th><td><a href="http://www.hcmiu.edu.vn/">hcmiu.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -246,14 +280,26 @@
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quoc-chinh">Nguyễn Quốc Chính</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>2003-12-05 <span class="lang">xsd:date</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/2/29/Logo-HCMIU.svg">&lt;https://upload.wikimedia.org/wikipedia/vi/2/29/Logo-HCMIU.svg&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
 <tr><td class="p">schema:parentOrganization<small>schema:parentOrganization</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh">Đại học Quốc gia Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84-28-3724 4270</div>
+</td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>Khu phố 33, phường Linh Xuân</div>
+</td></tr>
+<tr><td class="p">khuôn viên<small>vnedu:campus</small></td><td>
+<div>Ngoại ô thành phố, 11.52 ha</div>
 </td></tr>
 <tr><td class="p">năm thành lập<small>vnedu:foundingYear</small></td><td>
 <div>2003 <span class="lang">xsd:gYear</span></div>
@@ -299,11 +345,11 @@
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bao-le">Bao Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bao-t-le">Bao T Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dat-nguyen">Dat Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/diem-huong-nguyen-tran">Diem-Huong Nguyen Tran</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-phuc-dang">Hoang Phuc Dang</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/khanh-l-ly">Khanh L Ly</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/khoa-van-nguyen">Khoa Van Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-van-canh">Le Van Canh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nha-k-huynh">Nha K Huynh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thanh-truc-nguyen">Thanh-Truc Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tri-huynh">Tri Huynh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tung-nguyen-thanh-uong">Tung Nguyen Thanh Uong</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vy-thi-lan-nguyen">Vy Thi Lan Nguyen</a></div>
 </td></tr>
-<tr><td class="p">có đơn vị thành viên<small>vnedu:hasMember</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh">Đại học Quốc gia Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
 <tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bao-le">Bao Le</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bao-t-le">Bao T Le</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dat-nguyen">Dat Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/diem-huong-nguyen-tran">Diem-Huong Nguyen Tran</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-phuc-dang">Hoang Phuc Dang</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/khanh-l-ly">Khanh L Ly</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/khoa-van-nguyen">Khoa Van Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-van-canh">Le Van Canh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nha-k-huynh">Nha K Huynh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thanh-truc-nguyen">Thanh-Truc Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tri-huynh">Tri Huynh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tung-nguyen-thanh-uong">Tung Nguyen Thanh Uong</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vy-thi-lan-nguyen">Vy Thi Lan Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">có đơn vị thành viên<small>vnedu:hasMember</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh">Đại học Quốc gia Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">schema:subOrganization<small>schema:subOrganization</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh">Đại học Quốc gia Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

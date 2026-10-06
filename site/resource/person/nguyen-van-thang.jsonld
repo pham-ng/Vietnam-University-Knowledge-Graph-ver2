@@ -19,9 +19,9 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-thang",
   "@type": [
-    "foaf:Person",
-    "vnedu:Alumnus",
     "schema:Person",
+    "vnedu:Alumnus",
+    "foaf:Person",
     "vnedu:Person"
   ],
   "foaf:isPrimaryTopicOf": {
@@ -36,11 +36,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Nguyễn Văn Thắng"
     },
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Nguyễn Văn Thắng"
     }
   ],
@@ -52,13 +52,13 @@
   },
   "schema:hasOccupation": [
     {
-      "@id": "wd:Q188094"
-    },
-    {
       "@id": "wd:Q43845"
     },
     {
       "@id": "wd:Q82955"
+    },
+    {
+      "@id": "wd:Q188094"
     }
   ],
   "vnedu:alumnusOf": {

@@ -19,26 +19,30 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-khoa-hoc-va-cong-nghe-ha-noi",
   "@type": [
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
     "vnedu:PublicInstitution",
+    "dbo:University",
+    "foaf:Organization",
+    "schema:Organization",
+    "vnedu:Organization",
+    "vnedu:UniversitySchool",
     "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity"
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:HigherEducationInstitution"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Khoa học và Công nghệ Hà Nội (tiếng Anh: University of Science and Technology of Hanoi, viết tắt là USTH), còn được gọi là Đại học Việt Pháp (Vietnam France University) là trường đại học công lập đạt chuẩn quốc tế được thành lập năm 2009 trong khuôn khổ Thỏa thuận hợp tác giữa Chính phủ hai nước Việt Nam và Pháp ký ngày 12/11/2009 và Quyết định số 2067/QĐ-TTg ngày 09/12/2009 của Thủ tướng Chính phủ."
+  },
   "foaf:homepage": {
     "@id": "http://www.usth.edu.vn"
   },
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/University_of_Science_and_Technology_of_Hanoi"
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_v%C3%A0_C%C3%B4ng_ngh%E1%BB%87_H%C3%A0_N%E1%BB%99i"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_v%C3%A0_C%C3%B4ng_ngh%E1%BB%87_H%C3%A0_N%E1%BB%99i"
+      "@id": "https://en.wikipedia.org/wiki/University_of_Science_and_Technology_of_Hanoi"
     }
   ],
   "geo:lat": {
@@ -51,13 +55,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/02wdwrr89"
+      "@id": "wd:Q15260958"
     },
     {
       "@id": "dbr:University_of_Science_and_Technology_of_Hanoi"
     },
     {
-      "@id": "wd:Q15260958"
+      "@id": "https://ror.org/02wdwrr89"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -70,25 +74,28 @@
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "University of Science and Technology of Hanoi"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Khoa học và Công nghệ Hà Nội"
+    },
+    {
+      "@language": "en",
+      "@value": "University of Science and Technology of Hanoi"
     }
   ],
+  "schema:email": "officeusth@usth.edu.vn",
   "schema:location": [
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
+  "schema:telephone": "+84 04) 37 91 69 60",
+  "skos:altLabel": "USTH, Đại học Việt Pháp",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Khoa học và Công nghệ Hà Nội"
@@ -103,13 +110,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "vnedu:ownership": {

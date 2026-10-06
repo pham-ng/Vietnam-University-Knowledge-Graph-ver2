@@ -26,6 +26,7 @@ university:truong-dai-hoc-quang-nam a dbo:University,
         schema:Organization ;
     rdfs:label "Quang Nam University"@en,
         "Trường Đại học Quảng Nam"@vi ;
+    dbo:abstract "Trường Đại học Quảng Nam là một trường đại học công lập đa ngành tại Quảng Nam. Trường được nâng cấp thành trường đại học theo quyết định số 722/QĐ – TTg của Thủ tướng Chính phủ từ trường Trung học Sư phạm Quảng Nam lên thành Trường Cao đẳng Sư phạm Quảng Nam."@vi ;
     owl:sameAs wd:Q10829117,
         wd:Q2707502,
         <https://ror.org/00j4fc191> ;
@@ -37,6 +38,7 @@ university:truong-dai-hoc-quang-nam a dbo:University,
     vnedu:address "Số 102-Hùng Vương-Tp.Tam Kỳ-Tỉnh Quảng Nam" ;
     vnedu:foundingYear "1997"^^xsd:gYear ;
     vnedu:hasLeader person:huynh-trong-duong ;
+    vnedu:history "Trường Đại học Quảng Nam là một trường đại học đa ngành tại Quảng Nam có tiền thân là Trường Trung học Sư phạm Quảng Nam được thành lập vào năm 1997 theo quyết định số 1686/QĐ-UBND ngày 3/9/1997 của Chủ tịch Ủy ban nhân dân tỉnh Quảng Nam. Năm 2000, Bộ trưởng Bộ Giáo dục và Đào tạo ký quyết định số 4845/QĐ-BGD&ĐT-TCCB ngày 14/11/2000 nâng cấp từ trường Trung học Sư phạm Quảng Nam lên thành Trường Cao đẳng Sư phạm Quảng Nam. Đến năm 2007, Trường Đại học Quảng Nam được hình thành trên cơ sở nâng cấp từ Trường Cao đẳng Sư phạm Quảng Nam theo Quyết định số 722/QĐ – TTg của Thủ tướng Chính phủ."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:da-nang,
         province:quang-nam,
@@ -44,9 +46,11 @@ university:truong-dai-hoc-quang-nam a dbo:University,
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:huynh-trong-duong ;
     vnedu:website <http://qnamuni.edu.vn/> ;
+    schema:email "hopthu@qnamuni.edu.vn" ;
     schema:employee person:huynh-trong-duong ;
     schema:location country:viet-nam,
         province:da-nang,
         province:quang-nam,
-        region:trung-bo .
+        region:trung-bo ;
+    schema:telephone "0510)3812834" .
 

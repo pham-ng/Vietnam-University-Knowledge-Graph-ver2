@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
@@ -23,8 +24,10 @@ university:truong-khoa-hoc-lien-nganh-va-nghe-thuat-dai-hoc-quoc-gia-ha-noi a fo
         schema:Organization ;
     rdfs:label "VNU School of Interdisciplinary Sciences and Arts"@en,
         "Trường Khoa học liên ngành và Nghệ thuật, Đại học Quốc gia Hà Nội"@vi ;
+    dbo:abstract "Trường Khoa học liên ngành và Nghệ thuật - Đại học Quốc gia Hà Nội (tiếng Anh: VNU School of Interdisciplinary Sciences and Arts – VNU-SIS) là một cơ sở giáo dục bậc đại học trực thuộc Đại học Quốc gia Hà Nội - đại học trong nhóm trọng điểm quốc gia và đại học tinh hoa của Việt Nam. Trường chuyên đào tạo về lĩnh vực công nghiệp văn hóa, công nghiệp sáng tạo và nghệ thuật trên nền tảng Khoa học liên ngành. Trường được thành lập ngày 20 tháng 5 năm 2002 theo quyết định của Giám đốc Đại học Quốc gia Hà Nội với tên gọi Khoa Sau đại học. Ngày 25 tháng 1 năm 2017 Khoa Sau đại học được chính thức đổi tên thành Khoa Các khoa học liên ngành. Ngày 29 tháng 1 năm 2024 theo Quyết định số 333/QĐ-ĐHQGHN của Giám đốc Đại học Quốc gia Hà Nội, Khoa được chuyển đổi mô hình và tổ chức lại thành Trường Khoa học liên ngành và Nghệ thuật kể từ ngày 01 tháng 03 năm 2024."@vi ;
     geo:lat 21.038431 ;
     geo:long 105.781252 ;
+    skos:altLabel "Trường liên ngành" ;
     skos:notation "QHK" ;
     skos:prefLabel "Trường Khoa học liên ngành và Nghệ thuật, Đại học Quốc gia Hà Nội"@vi ;
     prov:wasDerivedFrom <https://vi.wikipedia.org/w/index.php?oldid=75591557> ;
@@ -35,6 +38,11 @@ university:truong-khoa-hoc-lien-nganh-va-nghe-thuat-dai-hoc-quoc-gia-ha-noi a fo
     vnedu:formerName "Khoa các Khoa học liên ngành"@vi ;
     vnedu:foundingYear "2002"^^xsd:gYear ;
     vnedu:hasLeader person:nguyen-van-hieu ;
+    vnedu:history """Như quy hoạch phát triển tổng thể đến năm 2015 đã được Chính phủ phê duyệt, nhiệm vụ đào tạo trình độ cao đòi hỏi phải tăng mạnh quy mô đào tạo sau đại học để có thể đạt tỉ lệ 25% tổng quy mô đào tạo chính quy. Ngày 20 tháng 5 năm 2002 theo quyết định của Giám đốc Đại học Quốc gia Hà Nội Khoa Sau đại học (viết tắt SGS) chính thức ra đời. Ngoài chức năng quản lý, thẩm định chuyên môn nghiệp vụ trong đào tạo sau đại học, khoa còn được giao tổ chức đào tạo khối kiến thức chung, các chương trình đào tạo có tính liên ngành, liên quan đến nhiều đơn vị, các chương trình đào tạo thí điểm các chuyên ngành mới chưa có trong danh mục các ngành đào tạo của Nhà nước và tổ chức thực hiện một số chương trình liên kết quốc tế sau đại học.
+
+Năm 2011, Khoa Sau đại học được tổ chức lại nhằm tạo điều kiện để khoa tập trung vào nhiệm vụ chuyên môn, tổ chức đào tạo các bậc sau đại học một số lĩnh vực mới, có tính liên ngành cao và triển khai các nghiên cứu về đổi mới đào tạo sau đại học. Chức năng và nhiệm vụ quản lý nhà nước trước đây của Khoa được chuyển giao cho Ban Đào tạo.
+
+Ngày 25 tháng 1 năm 2017 Khoa Sau đại học được chính thức đổi tên thành Khoa Các khoa học liên ngành, tập trung phát triển các khoa học liên ngành mới cung cấp nguồn nhân lực có trình độ, có tư duy khoa học liên ngành đáp ứng những nhu cầu cấp bách của đất nước. Năm 2021 Khoa bắt tuyển tuyển sinh lứa cử nhân đầu tiên với 2 ngành đào tạo là Quản trị thương hiệu và Quản trị tài nguyên di sản. Đến ngày 29 tháng 1 năm 2024 theo Quyết định số 333/QĐ-ĐHQGHN của Giám đốc Đại học Quốc gia Hà Nội, Khoa được chuyển đổi mô hình và tổ chức lại thành Trường Khoa học liên ngành và Nghệ thuật kể từ ngày 01 tháng 03 năm 2024."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -44,9 +52,23 @@ university:truong-khoa-hoc-lien-nganh-va-nghe-thuat-dai-hoc-quoc-gia-ha-noi a fo
     vnedu:rector person:nguyen-van-hieu ;
     vnedu:shortName "VNU-SIS" ;
     vnedu:website <https://sis.vnu.edu.vn/> ;
+    schema:email "sis@vnu.edu.vn" ;
     schema:employee person:nguyen-van-hieu ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/c/c5/C%E1%BB%95ng_tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt_c%C6%A1_s%E1%BB%9F_Nam_T%E1%BB%AB_Li%C3%AAm.jpg> ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/b/b8/Logo_Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt.svg> ;
     schema:parentOrganization university:dai-hoc-quoc-gia-ha-noi .
+
+<https://upload.wikimedia.org/wikipedia/commons/c/c5/C%E1%BB%95ng_tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt_c%C6%A1_s%E1%BB%9F_Nam_T%E1%BB%AB_Li%C3%AAm.jpg> a schema:ImageObject ;
+    schema:creditText "Người lạ dưới gió xuân" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:C%E1%BB%95ng_tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt_c%C6%A1_s%E1%BB%9F_Nam_T%E1%BB%AB_Li%C3%AAm.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/C%E1%BB%95ng_tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt_c%C6%A1_s%E1%BB%9F_Nam_T%E1%BB%AB_Li%C3%AAm.jpg/330px-C%E1%BB%95ng_tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt_c%C6%A1_s%E1%BB%9F_Nam_T%E1%BB%AB_Li%C3%AAm.jpg> .
+
+<https://upload.wikimedia.org/wikipedia/vi/b/b8/Logo_Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/b/b8/Logo_Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_Khoa_h%E1%BB%8Dc_li%C3%AAn_ng%C3%A0nh_v%C3%A0_Ngh%E1%BB%87_thu%E1%BA%ADt.svg.png> .
 

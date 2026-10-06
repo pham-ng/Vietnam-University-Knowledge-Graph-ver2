@@ -17,130 +17,179 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-luat-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh",
-  "@type": [
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.uel.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_Lu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-luat-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh",
+      "@type": [
+        "vnedu:MemberInstitution",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Kinh tế – Luật ( – UEL) là trường đại học đào tạo và nghiên cứu khối ngành kinh tế, kinh doanh và luật hàng đầu Việt Nam nói chung và tại khu vực phía Nam nói riêng, được xếp vào nhóm trường đại học trọng điểm quốc gia Việt Nam. Tiền thân của Trường là Khoa Kinh tế thuộc Đại học Quốc gia Thành phố Hồ Chí Minh (ĐHQG-HCM). Trường đã đạt được nhiều thành tựu trong đào tạo, nghiên cứu khoa học và phục vụ cộng đồng, trở thành một trong những cơ sở giáo dục đại học có chất lượng đào tạo tốt nhất và điểm đầu vào cao nhất tại khu vực phía Nam đối với lĩnh vực kinh tế, kinh doanh và luật."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.uel.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/University_of_Economics_and_Law"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_Lu%E1%BA%ADt%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.867874"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.781687"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10829073"
+        },
+        {
+          "@id": "dbr:University_of_Economics_and_Law"
+        },
+        {
+          "@id": "https://ror.org/0138jhg57"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829073"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75498788"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Kinh tế – Luật, Đại học Quốc gia Thành phố Hồ Chí Minh"
+        },
+        {
+          "@language": "en",
+          "@value": "VNU-HCM University of Economics and Law"
+        }
+      ],
+      "schema:email": "phongtruyenthong@uel.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-cong-gia-khanh"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "2000-11-06"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/f/f5/To%C3%A0_nh%C3%A0_h%E1%BB%8Dc_t%E1%BA%ADp_B1_v%C3%A0_to%C3%A0_nh%C3%A0_th%C6%B0_vi%E1%BB%87n_B2_UEL.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/8/88/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_kinh_t%E1%BA%BF_-_Lu%E1%BA%ADt_%28UEL%29%2C_%C4%90HQG-HCM%2C_220px.png"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
+      },
+      "schema:telephone": "+84 028 3724 4555",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Kinh tế – Luật, Đại học Quốc gia Thành phố Hồ Chí Minh"
+      },
+      "vnedu:address": "669 Đỗ Mười, Khu phố 3, Phường Linh Xuân",
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Khoa Kinh tế - Đại học Quốc gia Thành phố Hồ Chí Minh"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2000"
+      },
+      "vnedu:funding": "119,6 tỷ đồng",
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-cong-gia-khanh"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Ngày 9 tháng 7 năm 1996, theo Quyết định số 2819/GD-ĐT của Bộ trưởng Bộ Giáo dục và Đào tạo, trên cơ sở hợp nhất 3 trường đại học đào tạo lĩnh vực Kinh tế lúc bấy giờ (Trường Đại học Kinh tế Thành phố Hồ Chí Minh (cũ), Đại học Tài chính Kế toán Thành phố Hồ Chí Minh và Khoa Kinh tế thuộc trường Đại học Tổng hợp Thành phố Hồ Chí Minh), Trường Đại học Kinh tế trực thuộc ĐHQG-HCM được thành lập. Năm 2001, theo Quyết định số 15/2001/QĐ-TTg của Thủ tướng Chính phủ Phan Văn Khải về việc tổ chức lại 2 hệ thống Đại học Quốc gia ở Hà Nội và TP.HCM, một số trường Đại học thành viên trực thuộc ĐHQG-HCM trước đây được tách ra hoạt động độc lập và chỉ trực Bộ Giáo dục và Đào tạo.\n\nNgày 10 tháng 10 năm 2000, Thủ tướng Chính phủ ban hành Quyết định 118/2000/QĐ-TTg, chính thức tách Trường Đại học Kinh tế ra khỏi hệ thống các trường thành viên của ĐHQG-HCM và thành lập Trường Đại học Kinh tế TP.HCM trực thuộc Bộ Giáo dục và Đào tạo. Đến ngày 6 tháng 11 năm 2000, Giám đốc ĐHQG-HCM ban hành Quyết định số 441/QĐ-ĐHQG-TCCB về việc thành lập Khoa Kinh tế trực thuộc ĐHQG-HCM nhằm kế thừa và tiếp tục thực hiện các nhiệm vụ nghiên cứu, đào tạo lĩnh vực Kinh tế của Trường Đại học Kinh tế - ĐHQG-HCM (cũ). Khoa Kinh tế ĐHQG-HCM chính thức tuyển sinh đại học hệ chính quy khóa đầu tiên vào năm 2001 với 3 ngành: Kinh tế học, Kinh tế công cộng và Kinh tế đối ngoại. Năm 2002, Khoa Kinh tế ĐHQG-HCM mở 2 ngành đào tạo mới là Tài chính – Ngân hàng và Kế toán – Kiểm toán. Năm 2004, Khoa Kinh tế ĐHQG-HCM chuyển từ hình thức đào tạo niên chế sang đào tạo theo học chế tín chỉ và tuyển sinh khóa đầu tiên ngành Luật kinh doanh, Hệ thống thông tin quản lý (tiền đề cho việc đào tạo lĩnh vực luật và quản lý của Trường). Trụ sở hoạt động của Khoa đặt tại Nhà điều hành ĐHQG TP.HCM (Linh Trung, Thủ Đức) và trong khuôn viên cơ sở Nguyễn Văn Cừ của trường Đại học Khoa học Tự nhiên (Quận 5).\n\nNgày 24 tháng 3 năm 2010, theo Quyết định số 377/QĐ-TTg của Thủ tướng Chính phủ, Trường Đại học Kinh tế - Luật được thành lập trên cơ sở Khoa Kinh tế trực thuộc ĐHQG-HCM, đồng thời mở rộng lĩnh vực hoạt động, nghiên cứu và đào tạo từ Kinh tế thành Kinh tế, kinh doanh và luật."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
+      },
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Thống nhất - Vượt trội - Tiên phong"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-cong-gia-khanh"
+      },
+      "vnedu:shortName": [
+        "VNUHCM-UEL",
+        "UEL"
+      ],
+      "vnedu:website": {
+        "@id": "http://www.uel.edu.vn/"
+      }
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/University_of_Economics_and_Law"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/8/88/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_kinh_t%E1%BA%BF_-_Lu%E1%BA%ADt_%28UEL%29%2C_%C4%90HQG-HCM%2C_220px.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Phamthibevi",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_kinh_t%E1%BA%BF_-_Lu%E1%BA%ADt_(UEL),_%C4%90HQG-HCM,_220px.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/8/88/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_kinh_t%E1%BA%BF_-_Lu%E1%BA%ADt_%28UEL%29%2C_%C4%90HQG-HCM%2C_220px.png"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/f/f5/To%C3%A0_nh%C3%A0_h%E1%BB%8Dc_t%E1%BA%ADp_B1_v%C3%A0_to%C3%A0_nh%C3%A0_th%C6%B0_vi%E1%BB%87n_B2_UEL.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Thkd0610",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:To%C3%A0_nh%C3%A0_h%E1%BB%8Dc_t%E1%BA%ADp_B1_v%C3%A0_to%C3%A0_nh%C3%A0_th%C6%B0_vi%E1%BB%87n_B2_UEL.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/To%C3%A0_nh%C3%A0_h%E1%BB%8Dc_t%E1%BA%ADp_B1_v%C3%A0_to%C3%A0_nh%C3%A0_th%C6%B0_vi%E1%BB%87n_B2_UEL.jpg/330px-To%C3%A0_nh%C3%A0_h%E1%BB%8Dc_t%E1%BA%ADp_B1_v%C3%A0_to%C3%A0_nh%C3%A0_th%C6%B0_vi%E1%BB%87n_B2_UEL.jpg"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.867874"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.781687"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "https://ror.org/0138jhg57"
-    },
-    {
-      "@id": "dbr:University_of_Economics_and_Law"
-    },
-    {
-      "@id": "wd:Q10829073"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q10829073"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75498788"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "VNU-HCM University of Economics and Law"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Kinh tế – Luật, Đại học Quốc gia Thành phố Hồ Chí Minh"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-cong-gia-khanh"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
-  },
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Kinh tế – Luật, Đại học Quốc gia Thành phố Hồ Chí Minh"
-  },
-  "vnedu:address": "669 Đỗ Mười, Khu phố 3, Phường Linh Xuân",
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Khoa Kinh tế - Đại học Quốc gia Thành phố Hồ Chí Minh"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2000"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-cong-gia-khanh"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
-  },
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Thống nhất - Vượt trội - Tiên phong"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-cong-gia-khanh"
-  },
-  "vnedu:shortName": [
-    "VNUHCM-UEL",
-    "UEL"
-  ],
-  "vnedu:website": {
-    "@id": "http://www.uel.edu.vn/"
-  }
+  ]
 }

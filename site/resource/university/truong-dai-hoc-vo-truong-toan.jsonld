@@ -17,98 +17,129 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-vo-truong-toan",
-  "@type": [
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:PrivateInstitution",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "http://vttu.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C3%B5_Tr%C6%B0%E1%BB%9Dng_To%E1%BA%A3n"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "9.968483"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.737531"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q10829161"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75167893"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/d/d4/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C3%B5_Tr%C6%B0%E1%BB%9Dng_To%E1%BA%A3n.JPG",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C3%B5_Tr%C6%B0%E1%BB%9Dng_To%E1%BA%A3n.JPG"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/d/d4/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C3%B5_Tr%C6%B0%E1%BB%9Dng_To%E1%BA%A3n.JPG/330px-%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C3%B5_Tr%C6%B0%E1%BB%9Dng_To%E1%BA%A3n.JPG"
+      }
     },
     {
-      "@id": "wd:Q10829161"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-vo-truong-toan",
+      "@type": [
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PrivateInstitution",
+        "schema:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Võ Trường Toản là một đại học tư thục tại thành phố Cần Thơ, Việt Nam, được thành lập ngày 18 tháng 2 năm 2008. Trường đào tạo đa ngành - đa lĩnh vực, tập trung vào các ngành phục vụ cho kinh tế mũi nhọn của tỉnh Hậu Giang là công nghiệp, nông nghiệp và dịch vụ du lịch. Đây là trường đại học đầu tiên được thành lập tại tỉnh Hậu Giang (cũ). Trường được xây dựng theo mô hình \"Thành phố đại học\" mang phong cách châu Âu trên diện tích 20 hecta và được ví như cung điện châu Âu độc nhất vô nhị ở Việt Nam."
+      },
+      "foaf:homepage": {
+        "@id": "http://vttu.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C3%B5_Tr%C6%B0%E1%BB%9Dng_To%E1%BA%A3n"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "9.968483"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.737531"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q10829161"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75167893"
+        },
+        {
+          "@id": "wd:Q10829161"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Vo Truong Toàn University"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Võ Trường Toản"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duong-dang-khoa"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "2008-02-18"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/d/d4/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C3%B5_Tr%C6%B0%E1%BB%9Dng_To%E1%BA%A3n.JPG"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:telephone": "+84-(0)711.3953200",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Võ Trường Toản"
+      },
+      "vnedu:address": "Quốc lộ 1, xã Thạnh Xuân, thành phố Cần Thơ",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2008"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duong-dang-khoa"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Được thành lập ngày 18 tháng 02 năm 2008 theo quyết định số 196/QĐ-TTg của Thủ tướng Chính phủ, Trường Đại học Võ Trường Toản (tiền thân là Trường Đại học tư thục Miền Tây) thuộc Bộ Giáo dục và Đào Tạo, nhà trường được giao nhiệm vụ đào tạo đa hệ, đa ngành và đa trình độ nhằm tạo nguồn nhân lực chất lượng cao có trí tuệ, bản lĩnh, sáng tạo cho vùng đồng bằng sông Cửu Long nói riêng và cả nước nói chung.\n\nTrường Đại học Võ Trường Toản hướng đến xây dựng mẫu hình trường Đại học hiện đại, mang tầm vóc quốc tế về quy mô và chất lượng. Được xây dựng theo mô hình \"Thành phố đại học\" mang phong cách châu Âu trên diện tích 20 hecta, đến năm 2015, Trường Đại học Võ Trường Toản sẽ trở thành một trung tâm đào tạo nguồn nhân lực uy tín trong hệ thống giáo dục đại học tiên tiến; góp phần nâng cao trình độ dân trí và trình độ lực lượng lao động sản xuất trong bối cảnh hội nhập nền kinh tế quốc tế; hỗ trợ tích cực cho công tác quản lý và đặc biệt là xây dựng đội ngũ những người lao động trẻ có trình độ, dễ dàng tiếp thu sự chuyển giao công nghệ từ các nước tiên tiến, các đối tác mang tầm quốc tế.\n\nNăm 2011, Trường được Bộ GD&ĐT cấp phép đào tạo ngành Y khoa và Dược học.\n\nNăm 2017, Trường vinh được chuyên trang World Directory of Medical Schools cập nhật trong danh bạ các trường đào tạo y khoa được công nhận trên toàn thế giới.\n\nNăm 2021, Trường đạt chuẩn kiểm định chất lượng giáo dục theo bộ tiêu chuẩn mới của Bộ GD&ĐT.\n\nNăm 2024, Trường bắt đầu đào tạo ngành Răng - Hàm - Mặt\n\nĐơn vị đào tạo Trường Đại học Võ Trường Toản hiện có 07 khoa: Khoa Y, Khoa Răng-Hàm-Mặt, Khoa Dược, Khoa Công nghệ thông tin, Khoa Kinh tế Luật, Khoa Sau Đại học và Khoa GDQP&AN; 03 trung tâm đào tạo: Trung tâm Nghiên cứu và Hợp tác quốc tế, Trung tâm đào tạo theo nhu cầu xã hội, Trung tâm Công nghệ phần mềm và các đơn vị khác.\n\nHiệu trưởng qua các thời kỳ: TS.Huỳnh Công Tín PGS.TS.Hồ Trọng Viện TS.Dương Đăng Khoa"
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PrivateOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duong-dang-khoa"
+      },
+      "vnedu:website": {
+        "@id": "http://vttu.edu.vn"
+      }
     }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Võ Trường Toản"
-    },
-    {
-      "@language": "en",
-      "@value": "Vo Truong Toàn University"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duong-dang-khoa"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Võ Trường Toản"
-  },
-  "vnedu:address": "Quốc lộ 1, xã Thạnh Xuân, thành phố Cần Thơ",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2008"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duong-dang-khoa"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PrivateOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duong-dang-khoa"
-  },
-  "vnedu:website": {
-    "@id": "http://vttu.edu.vn"
-  }
+  ]
 }

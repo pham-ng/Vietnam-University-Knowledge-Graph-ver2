@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -25,6 +26,7 @@ university:hoc-vien-khoa-hoc-xa-hoi a foaf:Organization,
         schema:Organization ;
     rdfs:label "Graduate Academy of Social Sciences"@en,
         "Học viện Khoa học Xã hội"@vi ;
+    dbo:abstract "Học viện Khoa học Xã hội (tên giao dịch quốc tế: Graduate Academy of Social Sciences, GASS) được thành lập theo Quyết định số 35/QĐ-TTg ngày 10/1/2010 của Thủ tướng Chính phủ. Học viện Khoa học xã hội là cơ sở giáo dục, đơn vị sự nghiệp trực thuộc Viện Hàn lâm Khoa học xã hội Việt Nam có tư cách pháp nhân, con dấu và tài khoản riêng, có chức năng và nhiệm vụ chính sau đây: Đào tạo và cấp văn bằng thạc sĩ và tiến sĩ về khoa học xã hội theo quy định của pháp luật; quản lý thống nhất các hoạt động đào tạo sau đại học của các cơ sở đào tạo thuộc Viện Hàn lâm Khoa học Xã hội Việt Nam; Gắn kết đào tạo với nghiên cứu khoa học về khoa học xã hội; Tư vấn về đào tạo và phát triển nguồn nhân lực có chất lượng cao về khoa học xã hội. Học viện Khoa học xã hội hoạt động theo Quy chế tổ chức và hoạt động do Viện Hàn lâm Khoa học xã hội Việt Nam ban hành, phù hợp với Điều lệ trường Đại học ban hành kèm theo Quyết định 153/2003/QĐ-TTg ngày 30/7/2003 của Thủ tướng Chính phủ."@vi ;
     owl:sameAs wd:Q10771889,
         <https://ror.org/0226brd56> ;
     skos:prefLabel "Học viện Khoa học Xã hội"@vi ;

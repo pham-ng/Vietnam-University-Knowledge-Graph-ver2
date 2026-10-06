@@ -30,144 +30,193 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-an-giang-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh",
-  "@type": [
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:MemberInstitution"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.agu.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://en.wikipedia.org/wiki/An_Giang_University"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-an-giang-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh",
+      "@type": [
+        "vnedu:MemberInstitution",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học An Giang ( – AGU) là một trường đại học đa ngành, thành viên của Đại học Quốc gia Thành phố Hồ Chí Minh tại An Giang - hệ thống đại học đa thành viên có vai trò nòng cốt tại Việt Nam. Ngoài đào tạo, trường còn có nhiệm vụ nghiên cứu, ứng dụng và chuyển giao công nghệ cho doanh nghiệp và Chính phủ. Trường có xuất phát điểm là Trường Cao đẳng Sư phạm được Bộ Giáo dục thành lập năm 1976. Đến năm 1995, tỉnh quyết định sáp nhập hai trường Trung học Sư Phạm và Cao đẳng Sư Phạm thành một và lấy tên mới là Cao đẳng Sư Phạm An Giang chuyên đào tạo giáo viên. Ban đầu trường được đặt dưới sự quản lý của Ủy ban nhân dân tỉnh An Giang. Đến năm 2019, trường chính thức trực thuộc Đại học Quốc gia Thành phố Hồ Chí Minh."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.agu.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_An_Giang%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/An_Giang_University"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.3718"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.431"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "dbr:An_Giang_University"
+        },
+        {
+          "@id": "wd:Q4750013"
+        },
+        {
+          "@id": "https://ror.org/023pm6532"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q4750013"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75612886"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "An Giang University - Vietnam National University Ho Chi Minh City"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học An Giang, Đại học Quốc gia Thành phố Hồ Chí Minh"
+        }
+      ],
+      "schema:email": "webmaster@agu.edu.vn",
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1999-12-30"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/4/45/Aguuniversity.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/4/42/Logoagunew2026.jpg"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
+      },
+      "schema:telephone": "+84 296 6256565",
+      "skos:notation": "QSA",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học An Giang, Đại học Quốc gia Thành phố Hồ Chí Minh"
+      },
+      "vnedu:academicStaff": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "490"
+      },
+      "vnedu:address": "18 Ung Văn Khiêm, phường Long Xuyên",
+      "vnedu:admissionCode": "QSA",
+      "vnedu:campus": "419.679,5 m² (Khoảng 42 ha)",
+      "vnedu:formerName": [
+        {
+          "@language": "vi",
+          "@value": "Trường Sư phạm Long Xuyên"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học An Giang"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Cao đẳng Sư phạm An Giang"
+        }
+      ],
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1999"
+      },
+      "vnedu:funding": "155,616 tỷ đồng",
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Năm 1970, Trường Văn khoa và Sư phạm (đôi lúc được gọi là trường Sư phạm hoặc phân khoa Sư phạm) thuộc Viện Đại học Hòa Hảo khai giảng khóa đầu tiên sau khi được chấp thuận từ người đứng đầu Việt Nam Cộng hòa nhân dịp đi dự lễ khánh thành trụ sở Trung ương Giáo hội Phật giáo Hòa Hảo vào tháng 4 năm 1970, chính thức vào năm 1971 bằng Nghị định số 1674-GD/KHPC/NĐ của Việt Nam Cộng Hòa.\n\nSau năm 1975, Trường Cao đẳng Sư Phạm An Giang được thành lập trên cơ sở Trường Văn khoa và Sư phạm thuộc Viện Đại học Hòa Hảo do Bộ Giáo dục ban hành vào năm 1976, sau đó đến năm 1985 thì giao lại cho tỉnh An Giang quản lý rồi được sáp nhập thành Cao đẳng Sư Phạm An Giang chuyên đào tạo giáo viên vào năm 1995 trên cơ sở hai trường Trung học Sư Phạm và Cao đẳng Sư Phạm.\n\nTrường Đại học An Giang được thành lập theo quyết định số 241/1999/QĐ-TTg ngày 30 tháng 12 năm 1999 của Thủ tướng chính phủ, là trường Đại học công lập thứ hai được thành lập ở vùng Đồng bằng sông Cửu Long và khai giảng niên học đầu tiên ngày 9 tháng 9 năm 2000. Xây dựng trên cơ sở trường Cao đẳng Sư phạm An Giang, Trường Đại học An Giang là trường đại học công lập trong hệ thống các trường đại học Việt Nam, trực thuộc Ủy ban nhân dân tỉnh An Giang. Ngoài đào tạo trường còn có nhiệm vụ nghiên cứu, ứng dụng và chuyển giao công nghệ trong vùng.\n\nTừ 2000-2001, Đại học An Giang tuyển sinh khóa đầu tiên với 5 ngành đào tạo đại học. Đến năm 2005–2006, trường đã có 42 ngành đào tạo chính quy trong đó có 20 ngành hệ đại học.\n\nNgày 8 tháng 12 năm 2016, Thủ tướng có văn bản đồng ý chủ trương chuyển Trường Đại học An Giang từ trường Đại học chịu sự quản lý trực tiếp của UBND tỉnh An Giang thành trường Đại học thành viên của Đại học Quốc gia TP. HCM.\n\nNgày 13 tháng 8 năm 2019, Trường Đại học An Giang chính thức trực thuộc Đại học Quốc gia TP HCM, theo quyết định của Thủ tướng Chính phủ Việt Nam."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
+      },
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Chính trực - Tận tâm - Sáng tạo"
+      },
+      "vnedu:numberOfPostgraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "75"
+      },
+      "vnedu:numberOfUndergraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "9926"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:shortName": "AGU - VNUHCM",
+      "vnedu:website": {
+        "@id": "http://www.agu.edu.vn"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_An_Giang%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/4/42/Logoagunew2026.jpg",
+      "@type": "schema:ImageObject",
+      "schema:license": "CC0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Logoagunew2026.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Logoagunew2026.jpg/330px-Logoagunew2026.jpg"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/4/45/Aguuniversity.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Nguyễn Hữu TRí",
+      "schema:license": "CC0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Aguuniversity.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Aguuniversity.jpg/330px-Aguuniversity.jpg"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.3718"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.431"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "https://ror.org/023pm6532"
-    },
-    {
-      "@id": "wd:Q4750013"
-    },
-    {
-      "@id": "dbr:An_Giang_University"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q4750013"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75612886"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học An Giang, Đại học Quốc gia Thành phố Hồ Chí Minh"
-    },
-    {
-      "@language": "en",
-      "@value": "An Giang University - Vietnam National University Ho Chi Minh City"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
-  },
-  "skos:notation": "QSA",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học An Giang, Đại học Quốc gia Thành phố Hồ Chí Minh"
-  },
-  "vnedu:academicStaff": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "490"
-  },
-  "vnedu:address": "18 Ung Văn Khiêm, phường Long Xuyên",
-  "vnedu:admissionCode": "QSA",
-  "vnedu:formerName": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học An Giang"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Sư phạm Long Xuyên"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Cao đẳng Sư phạm An Giang"
-    }
-  ],
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1999"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
-  },
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Chính trực - Tận tâm - Sáng tạo"
-  },
-  "vnedu:numberOfPostgraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "75"
-  },
-  "vnedu:numberOfUndergraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "9926"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:shortName": "AGU - VNUHCM",
-  "vnedu:website": {
-    "@id": "http://www.agu.edu.vn"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.3718,105.431],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.3718,105.431],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -186,7 +235,9 @@
   <a href="truong-dai-hoc-an-giang-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh.ttl">Turtle</a> · <a href="truong-dai-hoc-an-giang-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-an-giang-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 18 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học An Giang ( – AGU) là một trường đại học đa ngành, thành viên của Đại học Quốc gia Thành phố Hồ Chí Minh tại An Giang - hệ thống đại học đa thành viên có vai trò nòng cốt tại Việt Nam. Ngoài đào tạo, trường còn có nhiệm vụ nghiên cứu, ứng dụng và chuyển giao công nghệ cho doanh nghiệp và Chính phủ. Trường có xuất phát điểm là Trường Cao đẳng Sư phạm được Bộ Giáo dục thành lập năm 1976. Đến năm 1995, tỉnh quyết định sáp nhập hai trường Trung học Sư Phạm và Cao đẳng Sư Phạm thành một và lấy tên mới là Cao đẳng Sư Phạm An Giang chuyên đào tạo giáo viên. Ban đầu trường được đặt dưới sự quản lý của Ủy ban nhân dân tỉnh An Giang. Đến năm 2019, trường chính thức trực thuộc Đại học Quốc gia Thành phố Hồ Chí Minh.</p><h2>Lịch sử</h2><p>Năm 1970, Trường Văn khoa và Sư phạm (đôi lúc được gọi là trường Sư phạm hoặc phân khoa Sư phạm) thuộc Viện Đại học Hòa Hảo khai giảng khóa đầu tiên sau khi được chấp thuận từ người đứng đầu Việt Nam Cộng hòa nhân dịp đi dự lễ khánh thành trụ sở Trung ương Giáo hội Phật giáo Hòa Hảo vào tháng 4 năm 1970, chính thức vào năm 1971 bằng Nghị định số 1674-GD/KHPC/NĐ của Việt Nam Cộng Hòa.</p><p>Sau năm 1975, Trường Cao đẳng Sư Phạm An Giang được thành lập trên cơ sở Trường Văn khoa và Sư phạm thuộc Viện Đại học Hòa Hảo do Bộ Giáo dục ban hành vào năm 1976, sau đó đến năm 1985 thì giao lại cho tỉnh An Giang quản lý rồi được sáp nhập thành Cao đẳng Sư Phạm An Giang chuyên đào tạo giáo viên vào năm 1995 trên cơ sở hai trường Trung học Sư Phạm và Cao đẳng Sư Phạm.</p><details><summary>Đọc tiếp (4 đoạn)</summary><p>Trường Đại học An Giang được thành lập theo quyết định số 241/1999/QĐ-TTg ngày 30 tháng 12 năm 1999 của Thủ tướng chính phủ, là trường Đại học công lập thứ hai được thành lập ở vùng Đồng bằng sông Cửu Long và khai giảng niên học đầu tiên ngày 9 tháng 9 năm 2000. Xây dựng trên cơ sở trường Cao đẳng Sư phạm An Giang, Trường Đại học An Giang là trường đại học công lập trong hệ thống các trường đại học Việt Nam, trực thuộc Ủy ban nhân dân tỉnh An Giang. Ngoài đào tạo trường còn có nhiệm vụ nghiên cứu, ứng dụng và chuyển giao công nghệ trong vùng.</p><p>Từ 2000-2001, Đại học An Giang tuyển sinh khóa đầu tiên với 5 ngành đào tạo đại học. Đến năm 2005–2006, trường đã có 42 ngành đào tạo chính quy trong đó có 20 ngành hệ đại học.</p><p>Ngày 8 tháng 12 năm 2016, Thủ tướng có văn bản đồng ý chủ trương chuyển Trường Đại học An Giang từ trường Đại học chịu sự quản lý trực tiếp của UBND tỉnh An Giang thành trường Đại học thành viên của Đại học Quốc gia TP. HCM.</p><p>Ngày 13 tháng 8 năm 2019, Trường Đại học An Giang chính thức trực thuộc Đại học Quốc gia TP HCM, theo quyết định của Thủ tướng Chính phủ Việt Nam.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75612886">«Trường Đại học An Giang, Đại học Quốc gia Thành phố Hồ Chí Minh»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75612886), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học An Giang, Đại học Quốc gia Thành phố Hồ Chí Minh</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:Logoagunew2026.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Logoagunew2026.jpg/330px-Logoagunew2026.jpg" alt="Biểu trưng Trường Đại học An Giang, Đại học Quốc gia Thành phố Hồ Chí Minh" loading="lazy"></a><figcaption>CC0</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>An Giang University - Vietnam National University Ho Chi Minh City</td></tr><tr><th>Viết tắt</th><td>AGU - VNUHCM</td></tr><tr><th>Mã trường</th><td>QSA</td></tr><tr><th>Tên cũ</th><td>Trường Cao đẳng Sư phạm An Giang<br>Trường Sư phạm Long Xuyên<br>Trường Đại học An Giang</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>30 tháng 12 năm 1999</td></tr><tr><th>Thành viên của</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh">Đại học Quốc gia Thành phố Hồ Chí Minh</a></td></tr><tr><th>Địa chỉ</th><td>18 Ung Văn Khiêm, phường Long Xuyên</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang">An Giang</a></td></tr><tr><th>Khuôn viên</th><td>419.679,5 m² (Khoảng 42 ha)</td></tr><tr><th>Tài trợ / ngân sách</th><td>155,616 tỷ đồng</td></tr><tr><th>Giảng viên</th><td>490</td></tr><tr><th>Khẩu hiệu</th><td><i>Chính trực - Tận tâm - Sáng tạo</i></td></tr><tr><th>Điện thoại</th><td>+84 296 6256565</td></tr><tr><th>Email</th><td><a href="mailto:webmaster@agu.edu.vn">webmaster@agu.edu.vn</a></td></tr><tr><th>Website</th><td><a href="http://www.agu.edu.vn">agu.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:Aguuniversity.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Aguuniversity.jpg/330px-Aguuniversity.jpg" alt="Ảnh Trường Đại học An Giang, Đại học Quốc gia Thành phố Hồ Chí Minh" loading="lazy"></a><figcaption>CC0 · Nguyễn Hữu TRí</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -213,11 +264,26 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q4750013">wd:Q4750013</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75612886">&lt;https://vi.wikipedia.org/w/index.php?oldid=75612886&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>webmaster@agu.edu.vn</div>
+</td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1999-12-30 <span class="lang">xsd:date</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/4/45/Aguuniversity.jpg">&lt;https://upload.wikimedia.org/wikipedia/commons/4/45/Aguuniversity.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang">An Giang</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/4/42/Logoagunew2026.jpg">&lt;https://upload.wikimedia.org/wikipedia/commons/4/42/Logoagunew2026.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:parentOrganization<small>schema:parentOrganization</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh">Đại học Quốc gia Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84 296 6256565</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>QSA <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -231,11 +297,17 @@
 <tr><td class="p">mã trường (tuyển sinh)<small>vnedu:admissionCode</small></td><td>
 <div>QSA</div>
 </td></tr>
+<tr><td class="p">khuôn viên<small>vnedu:campus</small></td><td>
+<div>419.679,5 m² (Khoảng 42 ha)</div>
+</td></tr>
 <tr><td class="p">tên cũ<small>vnedu:formerName</small></td><td>
 <div>Trường Cao đẳng Sư phạm An Giang <span class="lang">@vi</span></div><div>Trường Sư phạm Long Xuyên <span class="lang">@vi</span></div><div>Trường Đại học An Giang <span class="lang">@vi</span></div>
 </td></tr>
 <tr><td class="p">năm thành lập<small>vnedu:foundingYear</small></td><td>
 <div>1999 <span class="lang">xsd:gYear</span></div>
+</td></tr>
+<tr><td class="p">tài trợ, ngân sách, vốn đầu tư<small>vnedu:funding</small></td><td>
+<div>155,616 tỷ đồng</div>
 </td></tr>
 <tr><td class="p">đặt tại<small>vnedu:locatedIn</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang">An Giang</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

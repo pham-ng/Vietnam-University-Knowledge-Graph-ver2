@@ -28,6 +28,7 @@ university:truong-dai-hoc-my-thuat-cong-nghiep a dbo:University,
         schema:Organization ;
     rdfs:label "University of Arts and Design"@en,
         "Trường Đại học Mỹ thuật Công nghiệp"@vi ;
+    dbo:abstract "Trường Đại học Mỹ thuật Công nghiệp là trường đại học công lập chuyên đào tạo các ngành mỹ thuật công nghiệp tại thành phố Hà Nội, trực thuộc Bộ Giáo dục và Đào tạo."@vi ;
     owl:sameAs wd:Q16481353,
         <https://ror.org/05vwv8t08> ;
     geo:lat 21.020975 ;
@@ -55,7 +56,13 @@ university:truong-dai-hoc-my-thuat-cong-nghiep a dbo:University,
     vnedu:shortName "UAD" ;
     vnedu:website <https://uad.edu.vn> ;
     schema:employee person:pham-hung-cuong ;
+    schema:image <https://upload.wikimedia.org/wikipedia/vi/2/21/Dai-hoc-my-thuat-cong-nghiep.png> ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo .
+
+<https://upload.wikimedia.org/wikipedia/vi/2/21/Dai-hoc-my-thuat-cong-nghiep.png> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Dai-hoc-my-thuat-cong-nghiep.png> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/vi/2/21/Dai-hoc-my-thuat-cong-nghiep.png> .
 

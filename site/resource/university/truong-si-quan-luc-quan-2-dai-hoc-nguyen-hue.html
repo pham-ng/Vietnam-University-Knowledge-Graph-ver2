@@ -30,104 +30,136 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-si-quan-luc-quan-2-dai-hoc-nguyen-hue",
-  "@type": [
-    "foaf:Organization",
-    "vnedu:OfficerSchool",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:MilitaryInstitution",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization"
-  ],
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_S%C4%A9_quan_L%E1%BB%A5c_qu%C3%A2n_2_%E2%80%93_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Nguy%E1%BB%85n_Hu%E1%BB%87"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q10829101"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75566425"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-si-quan-luc-quan-2-dai-hoc-nguyen-hue",
+      "@type": [
+        "vnedu:MilitaryInstitution",
+        "vnedu:OfficerSchool",
+        "vnedu:EducationalOrganization",
+        "schema:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Sĩ quan Lục quân 2 (tiếng Anh: Nguyen Hue University - Army Officer College No.2, mã trường: LBH) hay còn có tên dân sự là Trường Đại học Nguyễn Huệ là một trung tâm đào tạo Sĩ quan Chỉ huy Tham mưu Lục quân cấp phân đội (trung đội, đại đội, tiểu đoàn) ở khu vực phía Nam Việt Nam, trực thuộc Bộ Quốc phòng. Bắt đầu từ năm 1998, Nhà trường được Chính phủ giao nhiệm vụ đào tạo bậc Đại học quân sự. Các chuyên ngành đào tạo đại học và cao đẳng quân sự gồm: Binh chủng hợp thành; Trinh sát bộ binh; Trinh sát đặc nhiệm."
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_S%C4%A9_quan_L%E1%BB%A5c_qu%C3%A2n_2_%E2%80%93_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Nguy%E1%BB%85n_Hu%E1%BB%87"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q10829101"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829101"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75566425"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "vi",
+        "@value": "Trường Sĩ quan Lục quân 2 – Đại học Nguyễn Huệ"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1961-08-27"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-nai"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/0/08/Flag_of_the_People%27s_Army_of_Vietnam.svg"
+      },
+      "skos:altLabel": "Đại học Nguyễn Huệ",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Sĩ quan Lục quân 2 – Đại học Nguyễn Huệ"
+      },
+      "vnedu:address": "Đường số 6, Khu phố Long Đức 1, phường Tam Phước, Thành phố Đồng Nai, Việt Nam",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1961"
+      },
+      "vnedu:governedBy": {
+        "@id": "vnedu:MinistryOfNationalDefence"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-dan"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-xuan-truong"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vo-van-hoi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-van-lam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-dinh-thanh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-van-the"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thai-dai-ngoc"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tam-hung"
+        }
+      ],
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Ngày 27 tháng 8 năm 1961, tại ấp Lò Gò, Xóm Rẫy, xã Hoà Hiệp (trước đây thuộc huyện Châu Thành, nay thuộc huyện Tân Biên), Trường Quân chính sơ cấp Quân Giải phóng miền Nam - tiền thân của Trường Sĩ quan Lục quân 2 đã ra đời. Trường đặt dưới sự lãnh đạo của Trung ương Cục và sự chỉ đạo trực tiếp của Ban Quân sự Miền. Trong suốt cuộc kháng chiến chống Mỹ cứu nước, nhà trường đã di chuyển đến nhiều địa điểm, kể cả trên đất bạn Campuchia, với nhiều tên gọi, phiên hiệu khác nhau. Cùng với nhiệm vụ đào tạo, nhà trường còn trực tiếp tham gia nhiều trận chiến đấu, lập nhiều chiến công xuất sắc, tiêu diệt hàng ngàn tên địch, bắn cháy và phá huỷ hàng chục máy bay, xe tăng, thu hàng trăm vũ khí các loại và phương tiện chiến tranh của địch. Sau ngày miền Nam hoàn toàn giải phóng, nhà trường được về tiếp quản thị xã Thủ Dầu Một, huyện Bến Cát, tỉnh Bình Dương, tiếp tục thực hiện nhiệm vụ huấn luyện. Ngày 10 tháng 10 năm 1975, Bộ Quốc phòng ký quyết định thành lập Trường Sĩ quan Lục quân 2 trên cơ sở Trường Lục quân tổng hợp H28, trực thuộc Bộ Quốc phòng, đóng quân ở xã Hoà Hiệp, huyện Tân Biên, tỉnh Tây Ninh. Tháng 12 năm 1975, nhà trường chuyển về đóng quân tại căn cứ Nước Trong, thuộc xã Tam Phước, huyện Long Thành, tỉnh Đồng Nai (nay là phường Tam Phước), tiếp tục làm nhiệm vụ đào tạo sĩ quan chỉ huy binh chủng hợp thành cấp phân đội cho quân đội. Ngày 28 tháng 10 năm 2010, Thủ tướng Chính phủ đã ra Quyết định thành lập Trường Đại học Nguyễn Huệ trên cơ sở nâng cấp Trường Đại học Sĩ quan Lục quân 2. Từ đây, Nhà trường có 2 tên gọi khác nhau: Trường Sĩ quan Lục quân 2 là tên dùng trong quân đội; Trường Đại học Nguyễn Huệ là tên giao dịch dân sự và giao dịch quốc tế."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-nai"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Trung với nước, hiếu với dân"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      }
     },
     {
-      "@id": "wd:Q10829101"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/0/08/Flag_of_the_People%27s_Army_of_Vietnam.svg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Lưu Ly",
+      "schema:license": "Public domain",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Flag_of_the_People%27s_Army_of_Vietnam.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_the_People%27s_Army_of_Vietnam.svg/330px-Flag_of_the_People%27s_Army_of_Vietnam.svg.png"
+      }
     }
-  ],
-  "rdfs:label": {
-    "@language": "vi",
-    "@value": "Trường Sĩ quan Lục quân 2 – Đại học Nguyễn Huệ"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-nai"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Sĩ quan Lục quân 2 – Đại học Nguyễn Huệ"
-  },
-  "vnedu:address": "Đường số 6, Khu phố Long Đức 1, phường Tam Phước, Thành phố Đồng Nai, Việt Nam",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1961"
-  },
-  "vnedu:governedBy": {
-    "@id": "vnedu:MinistryOfNationalDefence"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-xuan-truong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-van-lam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-dinh-thanh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tam-hung"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-van-the"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-dan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vo-van-hoi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thai-dai-ngoc"
-    }
-  ],
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-nai"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Trung với nước, hiếu với dân"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  }
+  ]
 }</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -146,6 +178,8 @@
   <a href="truong-si-quan-luc-quan-2-dai-hoc-nguyen-hue.ttl">Turtle</a> · <a href="truong-si-quan-luc-quan-2-dai-hoc-nguyen-hue.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-si-quan-luc-quan-2-dai-hoc-nguyen-hue">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 22 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Sĩ quan Lục quân 2 (tiếng Anh: Nguyen Hue University - Army Officer College No.2, mã trường: LBH) hay còn có tên dân sự là Trường Đại học Nguyễn Huệ là một trung tâm đào tạo Sĩ quan Chỉ huy Tham mưu Lục quân cấp phân đội (trung đội, đại đội, tiểu đoàn) ở khu vực phía Nam Việt Nam, trực thuộc Bộ Quốc phòng. Bắt đầu từ năm 1998, Nhà trường được Chính phủ giao nhiệm vụ đào tạo bậc Đại học quân sự. Các chuyên ngành đào tạo đại học và cao đẳng quân sự gồm: Binh chủng hợp thành; Trinh sát bộ binh; Trinh sát đặc nhiệm.</p><h2>Lịch sử</h2><p>Ngày 27 tháng 8 năm 1961, tại ấp Lò Gò, Xóm Rẫy, xã Hoà Hiệp (trước đây thuộc huyện Châu Thành, nay thuộc huyện Tân Biên), Trường Quân chính sơ cấp Quân Giải phóng miền Nam - tiền thân của Trường Sĩ quan Lục quân 2 đã ra đời. Trường đặt dưới sự lãnh đạo của Trung ương Cục và sự chỉ đạo trực tiếp của Ban Quân sự Miền. Trong suốt cuộc kháng chiến chống Mỹ cứu nước, nhà trường đã di chuyển đến nhiều địa điểm, kể cả trên đất bạn Campuchia, với nhiều tên gọi, phiên hiệu khác nhau. Cùng với nhiệm vụ đào tạo, nhà trường còn trực tiếp tham gia nhiều trận chiến đấu, lập nhiều chiến công xuất sắc, tiêu diệt hàng ngàn tên địch, bắn cháy và phá huỷ hàng chục máy bay, xe tăng, thu hàng trăm vũ khí các loại và phương tiện chiến tranh của địch. Sau ngày miền Nam hoàn toàn giải phóng, nhà trường được về tiếp quản thị xã Thủ Dầu Một, huyện Bến Cát, tỉnh Bình Dương, tiếp tục thực hiện nhiệm vụ huấn luyện. Ngày 10 tháng 10 năm 1975, Bộ Quốc phòng ký quyết định thành lập Trường Sĩ quan Lục quân 2 trên cơ sở Trường Lục quân tổng hợp H28, trực thuộc Bộ Quốc phòng, đóng quân ở xã Hoà Hiệp, huyện Tân Biên, tỉnh Tây Ninh. Tháng 12 năm 1975, nhà trường chuyển về đóng quân tại căn cứ Nước Trong, thuộc xã Tam Phước, huyện Long Thành, tỉnh Đồng Nai (nay là phường Tam Phước), tiếp tục làm nhiệm vụ đào tạo sĩ quan chỉ huy binh chủng hợp thành cấp phân đội cho quân đội. Ngày 28 tháng 10 năm 2010, Thủ tướng Chính phủ đã ra Quyết định thành lập Trường Đại học Nguyễn Huệ trên cơ sở nâng cấp Trường Đại học Sĩ quan Lục quân 2. Từ đây, Nhà trường có 2 tên gọi khác nhau: Trường Sĩ quan Lục quân 2 là tên dùng trong quân đội; Trường Đại học Nguyễn Huệ là tên giao dịch dân sự và giao dịch quốc tế.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75566425">«Trường Sĩ quan Lục quân 2 – Đại học Nguyễn Huệ»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75566425), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Sĩ quan Lục quân 2 – Đại học Nguyễn Huệ</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:Flag_of_the_People%27s_Army_of_Vietnam.svg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_the_People%27s_Army_of_Vietnam.svg/330px-Flag_of_the_People%27s_Army_of_Vietnam.svg.png" alt="Biểu trưng Trường Sĩ quan Lục quân 2 – Đại học Nguyễn Huệ" loading="lazy"></a><figcaption>Public domain · Lưu Ly</figcaption></figure><table><tr><th>Tên khác</th><td>Đại học Nguyễn Huệ</td></tr><tr><th>Loại hình</th><td>Trường sĩ quan · Công lập</td></tr><tr><th>Thành lập</th><td>27 tháng 8 năm 1961</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology#MinistryOfNationalDefence">Bộ Quốc phòng</a></td></tr><tr><th>Địa chỉ</th><td>Đường số 6, Khu phố Long Đức 1, phường Tam Phước, Thành phố Đồng Nai, Việt Nam</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-nai">Đồng Nai</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Trung với nước, hiếu với dân</i></td></tr></table></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
 
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
@@ -164,8 +198,17 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q10829101">wd:Q10829101</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75566425">&lt;https://vi.wikipedia.org/w/index.php?oldid=75566425&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1961-08-27 <span class="lang">xsd:date</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-nai">Đồng Nai</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/0/08/Flag_of_the_People%27s_Army_of_Vietnam.svg">&lt;https://upload.wikimedia.org/wikipedia/commons/0/08/Flag_of_the_People%27s_Army_of_Vietnam.svg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">tên khác<small>skos:altLabel</small></td><td>
+<div>Đại học Nguyễn Huệ</div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>Đường số 6, Khu phố Long Đức 1, phường Tam Phước, Thành phố Đồng Nai, Việt Nam</div>

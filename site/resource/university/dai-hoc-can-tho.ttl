@@ -29,6 +29,7 @@ university:dai-hoc-can-tho a dbo:University,
         schema:Organization ;
     rdfs:label "Can Tho University"@en,
         "Đại học Cần Thơ"@vi ;
+    dbo:abstract "Đại học Cần Thơ ( – CTU) là đại học vùng, đa ngành, giữ vai trò trụ cột trong hệ thống giáo dục đại học Việt Nam. Trường là trung tâm đào tạo, nghiên cứu khoa học và chuyển giao công nghệ, đồng thời là thành viên cốt lõi của Mạng lưới Đại học ASEAN (AUN) với nhiều chương trình đạt chuẩn kiểm định quốc tế AUN-QA. Thành lập năm 1966, theo báo cáo cuối năm 2024, trường hiện có 39.220 người đang theo học tại các hệ đào tạo với 94 chương trình đại học, 56 chương trình thạc sĩ và nhiều chương trình tiến sĩ, tiếp tục đóng góp nguồn nhân lực chất lượng cao cho sự phát triển đất nước."@vi ;
     owl:sameAs dbr:Can_Tho_University,
         wd:Q5029090,
         <https://ror.org/0071qz696> ;
@@ -74,6 +75,15 @@ university:dai-hoc-can-tho a dbo:University,
         person:vu-h-nguyen,
         person:yen-d-h-nguyen ;
     vnedu:hasLeader person:tran-ngoc-hai ;
+    vnedu:history """Viện Đại học Cần Thơ được thành lập ngày 31 tháng 3 năm 1966. Trường được thiết kế bởi kiến trúc sư Nguyễn Quang Nhạc, cựu Trưởng khoa Kiến trúc, Trường Đại học Kiến Trúc. Đây là viện đại học thứ năm của Việt Nam Cộng hòa (bốn viện đại học kia là Viện Đại học Sài Gòn, Viện Đại học Huế, Viện Đại học Đà Lạt, và Viện Đại học Vạn Hạnh). Viện Đại học Cần Thơ có bốn phân khoa đại học: Khoa học, Luật khoa và Khoa học Xã hội, Văn khoa và Sư phạm. Sau đó viện đại học này mở thêm phân khoa Canh nông. Ngoài ra, Phân khoa Sư phạm có Trường Trung học Kiểu mẫu.
+
+Năm đầu tiên đó có 985 sinh viên ghi danh học với viện trưởng là Giáo sư Phạm Hoàng Hộ. Viện đại học có ba khuôn viên: trụ sở chính ở Công trường Hòa Bình trong thành phố, một số phân khoa đặt ở Cái Răng và khuôn viên thứ ba ở Cái Khế. Trong cuộc tổng công kích Tết Mậu Thân (1968) cơ sở ở Công trường Hòa Bình gồm thư viện, giảng đường và phòng thí nghiệm khoa học trong thị xã bị quân Mặt trận Giải phóng tiến chiếm. Trong cuộc phản công hai bên đánh nhau gây thiệt hại nặng nề nhưng sau đó được tái thiết.
+
+Sau năm 1975: Viện Đại học Cần Thơ được đổi thành Trường Đại học Cần Thơ. Khoa Sư phạm được tách thành Khoa Sư phạm Tự nhiên và Khoa Sư phạm Xã hội đào tạo giáo viên phổ thông trung học gồm Toán học, Vật lý học, Hóa học, Sinh vật học, Văn học, Lịch sử, Địa lý, và Ngoại ngữ. Sau đó mở rộng thành 5 khoa: Toán - Lý (1980), Hóa - Sinh (1980), Sử - Địa (1982), Ngữ văn (1983) và Ngoại ngữ (1983).
+
+Trường Cao đẳng Nông nghiệp được đổi tên thành Khoa Nông nghiệp, đào tạo 2 ngành Trồng trọt và Chăn nuôi. Đến năm 1979, Khoa Nông nghiệp được mở rộng thành 7 khoa: Trồng trọt (1977), Chăn nuôi - Thú y (1978), Thủy nông và Cải tạo đất (1978), Cơ khí Nông nghiệp (1978), Chế biến và Bảo quản Nông sản (1978), Kinh tế Nông nghiệp (1979), và Thủy sản (1979).
+
+Năm 1978: Khoa đại học Tại chức được thành lập, có nhiệm vụ quản lý và thiết kế chương trình bồi dưỡng và đào tạo giáo viên phổ thông trung học và kỹ sư thực hành chỉ đạo sản xuất cho các tỉnh ĐBSCL. Thời gian đào tạo là 5 năm. Từ năm 1981 do yêu cầu của các địa phương, công tác đào tạo tại chức cần được mở rộng hơn và trường đã liên kết với các tỉnh mở các trung tâm Đào tạo - Bồi dưỡng đại học Tại chức mà tên gọi hiện nay là Trung tâm Giáo dục Thường xuyên: Tiền Giang - Long An - Bến Tre, Vĩnh Long - Đồng Tháp, Cần Thơ, An Giang, Sóc Trăng, Trà Vinh, Kiên Giang và Minh Hải."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:can-tho,
         region:nam-bo ;
@@ -84,7 +94,14 @@ university:dai-hoc-can-tho a dbo:University,
     vnedu:shortName "CTU" ;
     vnedu:website <https://www.ctu.edu.vn> ;
     schema:employee person:tran-ngoc-hai ;
+    schema:foundingDate "1966-03-31"^^xsd:date ;
     schema:location country:viet-nam,
         province:can-tho,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/6/6c/Logo_Dai_hoc_Can_Tho.svg> .
+
+<https://upload.wikimedia.org/wikipedia/vi/6/6c/Logo_Dai_hoc_Can_Tho.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Dai_hoc_Can_Tho.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/6/6c/Logo_Dai_hoc_Can_Tho.svg/330px-Logo_Dai_hoc_Can_Tho.svg.png> .
 

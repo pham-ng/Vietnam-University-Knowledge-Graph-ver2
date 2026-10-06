@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-thu-dau-mot",
   "@type": [
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
     "vnedu:Organization",
+    "vnedu:UniversitySchool",
     "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
     "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity"
+    "dbo:University",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "foaf:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Thủ Dầu Một (tiếng Anh: Thu Dau Mot University) là một trường đại học đa ngành tại Thành phố Hồ Chí Minh, Việt Nam được thành lập theo quyết định số 900/QĐ-TTg ngày 24/06/2009 của Thủ tướng Chính phủ."
+  },
   "foaf:homepage": {
     "@id": "https://tdmu.edu.vn/"
   },
@@ -38,10 +42,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q10829145"
+      "@id": "https://ror.org/010y5b925"
     },
     {
-      "@id": "https://ror.org/010y5b925"
+      "@id": "wd:Q10829145"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -65,20 +69,25 @@
   "schema:employee": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-tuan-anh-3"
   },
+  "schema:foundingDate": {
+    "@type": "xsd:date",
+    "@value": "2009-06-24"
+  },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/binh-duong"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
+  "schema:telephone": "+84-(274) 382 2518",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Thủ Dầu Một"
@@ -93,16 +102,16 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/binh-duong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     }
   ],
   "vnedu:motto": {

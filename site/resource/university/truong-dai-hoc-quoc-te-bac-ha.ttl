@@ -28,6 +28,7 @@ university:truong-dai-hoc-quoc-te-bac-ha a dbo:University,
         schema:Organization ;
     rdfs:label "Bac Ha International University"@en,
         "Trường Đại học Quốc tế Bắc Hà"@vi ;
+    dbo:abstract "Trường Đại học quốc tế Bắc Hà là một trường đại học có trụ sở chính tại phường Tiên Du, thành phố Bắc Ninh. Trường được thành lập năm 2007. Điểm học hiện tại Khu văn hóa nghệ thuật, phường Nghĩa Đô, Hà Nội. Đây là trường Đại học Quốc tế chất lượng cao ngoài công lập của Việt Nam. Trường đào tạo hai cấp là đại học (cử nhân, kỹ sư) và cao đẳng, bao gồm những lĩnh vực sau: Điện tử - Tin học - Viễn thông, Tài chính-Ngân hàng, Kế toán, Quản trị kinh doanh; ngoài ra Trường còn có Chương trình đào tạo liên kết du học chuyển tiếp với các trường đại học uy tín trên thế giới ở Anh, Úc và Pháp. Cơ sở chính của Trường đang được xây dựng tại Làng Đại học thuộc phường Tiên Du, thành phố Bắc Ninh, bên cạnh Quốc lộ 1, cách trung tâm thành phố Hà Nội 28 km. Điểm học hiện tại ở số 36, đường Xuân Thủy, phường Cầu Giấy, thành phố Hà Nội."@vi ;
     owl:sameAs dbr:Bac_Ha_International_University,
         wd:Q10829118,
         <https://ror.org/00k5tp492> ;
@@ -44,6 +45,11 @@ university:truong-dai-hoc-quoc-te-bac-ha a dbo:University,
     vnedu:admissionCode "DBH" ;
     vnedu:foundingYear "2007"^^xsd:gYear ;
     vnedu:hasLeader person:nguyen-quoc-trung ;
+    vnedu:history """Dự án xây dựng Trường Đại học Quốc tế Bắc Hà do một số nhà khoa học đã và đang công tác trong các cơ quan Đảng và Nhà nước, các cơ sở đào tạo, nghiên cứu khoa học khởi xướng, Liên hiệp các tổ chức hữu nghị Việt Nam và Hội Hữu nghị Việt - Nga bảo trợ, được trình lên Chính phủ năm 2003.
+
+Ngày 25 tháng 11 năm 2005, Thủ tướng Chính phủ đã đồng ý về nguyên tắc Ngày 10 tháng 10 năm 2007 Thủ tướng Chính phủ đã ký Quyết định số 1369/QĐ – TTg cho phép chính thức thành lập Trường Đại học Quốc tế Bắc Hà.
+
+Ngày 4 tháng 4 năm 2011, tại Hà Nội, Trường Đại học Bắc Hà tổ chức Lễ Công bố thành lập Trường Đại học Quốc tế Bắc Hà."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:bac-ninh,
         region:bac-bo ;
@@ -54,5 +60,6 @@ university:truong-dai-hoc-quoc-te-bac-ha a dbo:University,
     schema:employee person:nguyen-quoc-trung ;
     schema:location country:viet-nam,
         province:bac-ninh,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:telephone "0869.197.599 - 097" .
 

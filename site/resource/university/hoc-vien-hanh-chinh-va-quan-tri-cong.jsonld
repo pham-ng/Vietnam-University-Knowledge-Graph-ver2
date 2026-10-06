@@ -17,152 +17,183 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-hanh-chinh-va-quan-tri-cong",
-  "@type": [
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "vnedu:Academy",
-    "schema:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "https://apag.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0nh_ch%C3%ADnh_v%C3%A0_Qu%E1%BA%A3n_tr%E1%BB%8B_c%C3%B4ng"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/9/93/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0nh_ch%C3%ADnh_v%C3%A0_Qu%E1%BA%A3n_tr%E1%BB%8B_c%C3%B4ng.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Học viện Hành chính và Quản trị công",
+      "schema:license": "CC0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Logo_H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0nh_ch%C3%ADnh_v%C3%A0_Qu%E1%BA%A3n_tr%E1%BB%8B_c%C3%B4ng.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0nh_ch%C3%ADnh_v%C3%A0_Qu%E1%BA%A3n_tr%E1%BB%8B_c%C3%B4ng.png/330px-Logo_H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0nh_ch%C3%ADnh_v%C3%A0_Qu%E1%BA%A3n_tr%E1%BB%8B_c%C3%B4ng.png"
+      }
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Academy_of_Public_Administration_and_Governance"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-hanh-chinh-va-quan-tri-cong",
+      "@type": [
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:MemberInstitution",
+        "vnedu:Academy",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Hành chính và Quản trị công (tên tiếng Anh: Academy of Public Administration and Governance; APAG) là đơn vị sự nghiệp công lập trực thuộc Học viện Chính trị Quốc gia Hồ Chí Minh, đơn vị chịu sự quản lý của Ban Chấp hành Trung ương Đảng Cộng sản Việt Nam. Học viện có chức năng đào tạo, bồi dưỡng năng lực, kiến thức, kỹ năng cho đội ngũ cán bộ, công chức, viên chức của Đảng & Nhà nước Việt Nam về hành chính, lãnh đạo, quản lý của toàn bộ nền công vụ Việt Nam."
+      },
+      "foaf:homepage": {
+        "@id": "https://apag.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/Academy_of_Public_Administration_and_Governance"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0nh_ch%C3%ADnh_v%C3%A0_Qu%E1%BA%A3n_tr%E1%BB%8B_c%C3%B4ng"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.026251"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.81153"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10771885"
+        },
+        {
+          "@id": "https://ror.org/02dg2kf02"
+        },
+        {
+          "@id": "dbr:National_Academy_of_Public_Administration_(Vietnam)"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75599552"
+        },
+        {
+          "@id": "wd:Q10771885"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Học viện Hành chính và Quản trị công"
+        },
+        {
+          "@language": "en",
+          "@value": "Academy of Public Administration and Governance"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-chien"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1959-05-29"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/9/93/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0nh_ch%C3%ADnh_v%C3%A0_Qu%E1%BA%A3n_tr%E1%BB%8B_c%C3%B4ng.png"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
+      },
+      "skos:notation": "HCH",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Hành chính và Quản trị công"
+      },
+      "vnedu:address": "số 77 đường Nguyễn Chí Thanh, phường Láng Thượng, quận Đống Đa, thủ đô Hà Nội, nước Việt Nam",
+      "vnedu:admissionCode": "HCH",
+      "vnedu:director": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-chien"
+      },
+      "vnedu:formerName": [
+        {
+          "@language": "vi",
+          "@value": "Trường Hành chính"
+        },
+        {
+          "@language": "vi",
+          "@value": "Học viện Hành chính Quốc gia"
+        },
+        {
+          "@language": "vi",
+          "@value": "Học viện Hành chính"
+        }
+      ],
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1959"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-dai-quang"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-tan-sang"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-van-doan"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-chien"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Học viện Hành chính và Quản trị công tiền thân là Trường Hành chính, được thành lập năm 1959 trực thuộc Bộ Nội vụ, với nhiệm vụ huấn luyện cán bộ chính quyền cấp huyện. Trường đặt tại huyện Từ Sơn, tỉnh Bắc Ninh và khai giảng khóa đầu tiên vào ngày 16 tháng 10 năm 1959.\n\nNăm 1961, trường được đổi tên thành Trường Hành chính Trung ương và chuyển trụ sở về Láng Hạ, Hà Nội. Năm 1980, trường được sáp nhập với Trường Kinh tế Trung ương thành Trường Hành chính – Kinh tế Trung ương; đến năm 1981 được tách trở lại thành Trường Hành chính Trung ương.\n\nNăm 1990, trường đổi tên thành Trường Hành chính Quốc gia; đến năm 1992 đổi tên thành Học viện Hành chính Quốc gia.\n\nGiai đoạn 2007–2013, Học viện trực thuộc Học viện Chính trị Quốc gia Hồ Chí Minh với tên gọi Học viện Hành chính. Từ năm 2013, Học viện trở lại trực thuộc Bộ Nội vụ theo Nghị quyết số 121/NQ-CP.\n\nNăm 2017, Học viện tiếp nhận Trường Đào tạo, bồi dưỡng cán bộ, công chức trực thuộc Bộ Nội vụ. Năm 2022, Trường Đại học Nội vụ Hà Nội được sáp nhập vào Học viện.\n\nTừ năm 2025, Học viện mang tên Học viện Hành chính và Quản trị công và trực thuộc Học viện Chính trị Quốc gia Hồ Chí Minh."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
+      },
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Trí tuệ - Chất lượng - Hiện đại"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:shortName": [
+        "HVHC&QTC",
+        "APAG"
+      ],
+      "vnedu:website": {
+        "@id": "https://apag.edu.vn"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.026251"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.81153"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "wd:Q10771885"
-    },
-    {
-      "@id": "dbr:National_Academy_of_Public_Administration_(Vietnam)"
-    },
-    {
-      "@id": "https://ror.org/02dg2kf02"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q10771885"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75599552"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Academy of Public Administration and Governance"
-    },
-    {
-      "@language": "vi",
-      "@value": "Học viện Hành chính và Quản trị công"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-chien"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
-  },
-  "skos:notation": "HCH",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Hành chính và Quản trị công"
-  },
-  "vnedu:address": "số 77 đường Nguyễn Chí Thanh, phường Láng Thượng, quận Đống Đa, thủ đô Hà Nội, nước Việt Nam",
-  "vnedu:admissionCode": "HCH",
-  "vnedu:director": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-chien"
-  },
-  "vnedu:formerName": [
-    {
-      "@language": "vi",
-      "@value": "Học viện Hành chính"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Hành chính"
-    },
-    {
-      "@language": "vi",
-      "@value": "Học viện Hành chính Quốc gia"
-    }
-  ],
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1959"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/truong-tan-sang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-van-doan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-dai-quang"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-chien"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-quoc-gia-ho-chi-minh"
-  },
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Trí tuệ - Chất lượng - Hiện đại"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:shortName": [
-    "APAG",
-    "HVHC&QTC"
-  ],
-  "vnedu:website": {
-    "@id": "https://apag.edu.vn"
-  }
+  ]
 }

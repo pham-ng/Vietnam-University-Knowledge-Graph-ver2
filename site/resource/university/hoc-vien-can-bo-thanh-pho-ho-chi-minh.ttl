@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
@@ -24,6 +25,7 @@ university:hoc-vien-can-bo-thanh-pho-ho-chi-minh a foaf:Organization,
         schema:Organization ;
     rdfs:label "Ho Chi Minh Cadre Academy"@en,
         "Học viện Cán bộ Thành phố Hồ Chí Minh"@vi ;
+    dbo:abstract "Học viện Cán bộ Thành phố Hồ Chí Minh (, viết tắt: HCA) là một cơ sở giáo dục bậc đại học công lập và trường chính trị trực thuộc Thành ủy Thành phố Hồ Chí Minh. Trường có trụ sở chính tại số 324, đường Chu Văn An, phường Bình Thạnh, thành phố Hồ Chí Minh."@vi ;
     geo:lat 10.812578 ;
     geo:long 106.702581 ;
     skos:notation "HVC" ;
@@ -36,6 +38,7 @@ university:hoc-vien-can-bo-thanh-pho-ho-chi-minh a foaf:Organization,
     vnedu:foundingYear "1965"^^xsd:gYear ;
     vnedu:governedBy organization:thanh-uy-thanh-pho-ho-chi-minh ;
     vnedu:hasLeader person:nguyen-van-y ;
+    vnedu:history "Học viện Cán bộ Thành phố Hồ Chí Minh thành lập theo quyết định số 1878/QĐ–TTg do Phó Thủ tướng Vũ Đức Đam ký ngày 15/10/2014 trên cơ sở nâng cấp Trường Cán bộ Thành phố Hồ Chí Minh. Trường Cán bộ Thành phố Hồ Chí Minh thành lập theo quyết định số 5509/QĐ–UB–NC ngày 19/10/1998 của Ủy ban nhân dân Thành phố Hồ Chí Minh trên cơ sở sáp nhập Trường Chính trị Nguyễn Văn Cừ và Trường Hành chính Thành phố, nếu tính từ tháng 12 năm 1996 là sự sáp nhập của 4 trường: Trường Đảng Nguyễn Văn Cừ. Trường Hành chính Thành phố. Trường Đào tạo tại chức. Trung tâm Giáo dục Chính trị."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -46,5 +49,12 @@ university:hoc-vien-can-bo-thanh-pho-ho-chi-minh a foaf:Organization,
     schema:employee person:nguyen-van-y ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/c/c1/Logo_h%E1%BB%8Dc_vi%E1%BB%87n_C%C3%A1n_b%E1%BB%99.jpg> ;
+    schema:telephone "02838412405" .
+
+<https://upload.wikimedia.org/wikipedia/vi/c/c1/Logo_h%E1%BB%8Dc_vi%E1%BB%87n_C%C3%A1n_b%E1%BB%99.jpg> a schema:ImageObject ;
+    schema:license "không tự do" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_h%E1%BB%8Dc_vi%E1%BB%87n_C%C3%A1n_b%E1%BB%99.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/c/c1/Logo_h%E1%BB%8Dc_vi%E1%BB%87n_C%C3%A1n_b%E1%BB%99.jpg/330px-Logo_h%E1%BB%8Dc_vi%E1%BB%87n_C%C3%A1n_b%E1%BB%99.jpg> .
 

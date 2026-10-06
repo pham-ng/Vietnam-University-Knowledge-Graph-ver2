@@ -30,11 +30,13 @@ university:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh a dbo:University,
         schema:Organization ;
     rdfs:label "University of Medicine and Pharmacy at Ho Chi Minh City"@en,
         "Trường Đại học Y Dược Thành phố Hồ Chí Minh"@vi ;
+    dbo:abstract "Đại học Y Dược Thành phố Hồ Chí Minh (UMP; tiếng Anh: University of Medicine and Pharmacy at Ho Chi Minh City) một trường đại học đầu ngành y khoa tại Việt Nam, có sứ mệnh đào tạo bác sĩ, dược sĩ có trình độ đại học, sau đại học, nghiên cứu khoa học và chuyển giao công nghệ y dược, hỗ trợ phát triển hệ thống y tế nhằm đáp ứng nhu cầu chăm sóc sức khỏe cho nhân dân khu vực Đông Nam Bộ."@vi ;
     owl:sameAs dbr:Ho_Chi_Minh_City_Medicine_and_Pharmacy_University,
         wd:Q986462,
         <https://ror.org/025kb2624> ;
     geo:lat 10.7556 ;
     geo:long 106.663 ;
+    skos:altLabel "Đại học Y Dược" ;
     skos:prefLabel "Trường Đại học Y Dược Thành phố Hồ Chí Minh"@vi ;
     prov:wasDerivedFrom wd:Q986462,
         <https://vi.wikipedia.org/w/index.php?oldid=75539355> ;
@@ -42,6 +44,7 @@ university:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh a dbo:University,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Medicine_and_Pharmacy>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> ;
     vnedu:address "217 Hồng Bàng, phường Chợ Lớn" ;
+    vnedu:councilChair person:tran-diep-tuan ;
     vnedu:foundingYear "1947"^^xsd:gYear ;
     vnedu:hasAlumnus person:chi-huu-nguyen,
         person:chi-thanh-ma,
@@ -106,6 +109,19 @@ university:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh a dbo:University,
         person:van-minh-tu-hoang,
         person:vo-linh-tu ;
     vnedu:hasLeader person:tran-diep-tuan ;
+    vnedu:history """Tiền thân của cơ sở giáo dục này là Trường Đại học Y khoa Sài Gòn.
+
+Trường Đại học Y khoa Sài Gòn, thường gọi là Y khoa Đại học đường Sài Gòn, được thành lập năm 1947, như một phân hiệu của trường Y khoa Hà Nội. GS. C.Massias được bổ nhiệm làm Hiệu trưởng phân hiệu này.
+
+Cơ sở đầu tiên của trường Y khoa Sài Gòn tại 28 đường Testard Q3 (nay là đường Võ Văn Tần)
+
+Ngày 31 tháng 8 năm 1961, Y Dược Đại học đường Sài Gòn được phân chia thành Y khoa Đại học đường Sài Gòn và Dược khoa Đại học đường Sài Gòn. Ngày 12 tháng 8 năm 1962, Ban Nha khoa thuộc Y khoa Đại học đường Sài Gòn trở thành Nha khoa Đại học đường Sài Gòn. Cả 3 trường hoạt động độc lập trong Viện Đại học Sài Gòn.
+
+Khi mới thành lập, trụ sở chính được đặt tại số 28 đường Trần Quý Cáp (nay là đường Võ Văn Tần, Quận 3, TP. Hồ Chí Minh), gồm một căn nhà 2 tầng dùng làm văn phòng, thư viện, phòng họp giảng viên, và 3 căn nhà ngang dùng làm nơi giảng dạy lý thuyết.
+
+Các phòng thực tập khoa học cơ bản và y học cơ sở nằm rải rác trong Sài Gòn như Cơ thể học Viện (dùng cho sinh viên thực tập giải phẫu học) ở đường Trần Hoàng Quân (nay là đường Nguyễn Chí Thanh), bệnh viện Sài Gòn (dùng cho sinh viên thực tập hóa học), Viện Pasteur (dùng cho sinh viên thực tập vi sinh và ký sinh học). Một cơ sở riêng cạnh bên Cơ thể học Viện được dùng làm nơi thực tập cho các môn sinh lý, cơ thể bệnh lý (giải phẫu bệnh) và mô học. Sinh viên y khoa và dược khoa sử dụng chung trường tại số 28 Trần Quý Cáp cho tới năm 1961 khi Dược khoa Đại học đường được thành lập và đặt trụ sở tại nơi khác tại số 169 đường Công Lý (nay là trụ sở Cung văn hóa thiếu nhi TP Hồ Chí Minh, đường Nam Kỳ Khởi Nghĩa).
+
+Ngày 16 tháng 11 năm 1966, Y khoa Đại học đường Sài Gòn và Nha khoa Đại học đường Sài Gòn chính thức chuyển về Trung tâm Giáo dục Y khoa trên đường Hồng Bàng, Quận 5. Trung tâm có cơ sở vật chất khá tiện nghi, hiện đại lúc bấy giờ, được sử dụng chung cho 2 trường: Y khoa Đại học đường Sài Gòn và Nha khoa Đại học đường Sài Gòn, với 1 đại giảng đường 500 chỗ ngồi, 3 giảng đường với mỗi giảng đường có 300 chỗ ngồi, thư viện và đầy đủ các khu y học cơ sở cùng với các phòng thí nghiệm."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -120,8 +136,16 @@ university:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh a dbo:University,
         major:7720301,
         major:7720501 ;
     vnedu:website <http://yds.edu.vn> ;
+    schema:email "daihocyduoc@ump.edu.vn" ;
     schema:employee person:tran-diep-tuan ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/6/64/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg> ;
+    schema:telephone "+84-28) 3855 8411" .
+
+<https://upload.wikimedia.org/wikipedia/vi/6/64/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/6/64/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg/330px-Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg.png> .
 

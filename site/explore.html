@@ -71,7 +71,7 @@
     const xs = current();
     $("n").textContent = `${VN.fmt(xs.length)} / ${VN.fmt(rows.length)} cơ sở`;
     $("t").tBodies[0].innerHTML = xs.map(r => `<tr>
-      <td><a href="${r.href}">${VN.esc(r.name)}</a>${r.en ? `<small>${VN.esc(r.en)}</small>` : ""}</td>
+      <td>${r.logo ? `<img class="thumb-logo" src="${VN.esc(r.logo)}" alt="" loading="lazy">` : ""}<a href="${r.href}">${VN.esc(r.name)}</a>${r.en ? `<small>${VN.esc(r.en)}</small>` : ""}</td>
       <td>${VN.esc(r.kindVi)}${r.military ? ' <span class="pill">quân đội</span>' : ""}${r.police ? ' <span class="pill">công an</span>' : ""}</td>
       <td>${VN.esc(r.prov || "—")}${r.provOld ? `<small>ghi ở ${VN.esc(r.provOld)}</small>` : ""}</td>
       <td class="num">${r.year || "—"}${r.end ? `<small>giải thể ${r.end}</small>` : ""}</td>

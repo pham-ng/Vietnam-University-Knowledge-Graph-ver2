@@ -19,14 +19,18 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/giao-hoang-hoc-vien-thanh-pio-x-da-lat",
   "@type": [
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
     "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
     "schema:CollegeOrUniversity",
-    "schema:Organization"
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "foaf:Organization",
+    "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Giáo hoàng Học viện Piô X Đà Lạt là một cơ sở đào tạo tu sĩ Công giáo tại Miền Nam Việt Nam trước năm 1975 (tương đương với Học viện Công giáo Việt Nam ngày nay)."
+  },
   "foaf:isPrimaryTopicOf": [
     {
       "@id": "https://en.wikipedia.org/wiki/Pontifical_College_of_St._Pius_X"
@@ -37,10 +41,10 @@
   ],
   "owl:sameAs": [
     {
-      "@id": "wd:Q10761706"
+      "@id": "dbr:Pontifical_College_of_St._Pius_X"
     },
     {
-      "@id": "dbr:Pontifical_College_of_St._Pius_X"
+      "@id": "wd:Q10761706"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -68,5 +72,9 @@
   "vnedu:foundingYear": {
     "@type": "xsd:gYear",
     "@value": "1958"
+  },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Năm 1957, linh mục Ferdinand Lacretelle đến Sài Gòn khởi sự một cộng đoàn Dòng Tên truyền giáo, sau này phát triển thành Trung tâm Đắc Lộ. Sau đó, ông lên Đà Lạt để giảng dạy vì tại đây chuẩn bị thành lập một Đại học Công giáo. Cũng trong năm đó, các Giám mục miền Nam Việt Nam đã thỉnh cầu Tòa Thánh cho thiết lập một \"Giáo hoàng Học viện\" tại Việt Nam như là một cơ sở chính thức đào tạo tu sĩ Công giáo \"nhằm giúp cho các giáo sĩ tương lai của Việt Nam được đào tạo nghiêm túc về trí thức và tu đức\" (\"une sérieuse formation intellectuelle et spirituelle\"). Đại học Công giáo và Giáo hoàng Học viện là hai tổ chức hoàn toàn khác nhau.\n\nNgày 25 tháng 1 năm 1957, sau khi đã được Thánh bộ Truyền giáo của Tòa Thánh chấp thuận, các Giám mục đó xin Dòng Tên đảm nhận việc điều hành Học viện.\n\nNgày 13 tháng 9 năm 1958 Học viện bắt đầu khai giảng khóa đầu tiên với bốn linh mục và 24 chủng sinh, sinh hoạt trong một khu nhà do Đại học Công giáo nhượng. Đầu tiên, Học viện lấy tên là \"Giáo hoàng Học viện Mẫu tâm Vô nhiễm\" (Seminarium Pontificale Immaculati Cordis B.M.V.). Đến năm 1959, Khâm sứ Tòa Thánh tại Việt Nam Giuseppe Caprio đổi tên thành \"Giáo hoàng Học viện Thánh Pio X\" (Collegium Pontificium Sancti Pii X).\n\nNgày 1 tháng 8 năm 1961, \"Lễ đặt viên đá đầu tiên\" xây dựng tòa nhà Học viện, do Giám mục Mario Brini, Khâm sứ Tòa thánh tại Việt Nam, chủ sự với sự hiện diện của nhiều Giám mục miền Nam Việt Nam. Ngày 22 tháng 7 năm 1963 Học viện bắt đầu sinh hoạt tại cơ sở mới này nhưng đến ngày 23 tháng 4 năm 1964 mới khánh thành.\n\nHọc viện nằm tại số 13 Đinh Tiên Hoàng, trong một khuôn viên rộng gần 8 mẫu tây, kế cận trường trung học Bùi Thị Xuân và đồi cù, gần Viện Đại học Công giáo, không xa trung tâm thành phố, và trước mặt là hồ Xuân Hương do kiến trúc sư Tô Công Văn thực hiện xây cất.\n\nHọc viện tiếp nhận chủng sinh từ các giáo phận miền Nam Việt Nam, có thêm một vài chủng sinh từ Lào và Campuchia.\n\nHội đồng giáo dục gồm các linh mục Dòng Tên. Ngoài ra, Học viện cũng mời các giáo sư ngoài Dòng Tên (thuộc các dòng tu khác, linh mục triều, giáo sư đại học thuần túy và cả giáo dân) đảm trách một số môn chuyên biệt.\n\nNgày 28 tháng 8 năm 1975, tất cả các giáo sư, thừa sai nước ngoài nhận lệnh phải rời khỏi Việt Nam. Tháng 8/1975, Giám mục Giáo phận Đà Lạt khi ấy - Bartôlômêô Nguyễn Sơn Lâm - mời một số linh mục triều và các dòng điều hành Học viện và dạy chủng sinh. Ngày 9 tháng 8 năm 1977, Học viện phải giải tán."
   }
 }

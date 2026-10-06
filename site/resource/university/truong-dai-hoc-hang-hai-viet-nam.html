@@ -30,134 +30,180 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-hang-hai-viet-nam",
-  "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University"
-  ],
-  "foaf:homepage": {
-    "@id": "http://vimaru.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Vietnam_Maritime_University"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-hang-hai-viet-nam",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Hàng hải Việt Nam ( – VMU) là một đơn vị giáo dục trực thuộc Bộ Xây Dựng, chuyên đào tạo về kỹ thuật, với thế mạnh về đào tạo nhóm ngành hàng hải và logistics được xếp vào nhóm trường đại học trọng điểm quốc gia. Trường Đại học Hàng hải Việt Nam hiện đang là thành viên của Hiệp hội các trường Đại học Hàng hải châu Á - Thái Bình Dương (AMETIAP) và Hiệp hội các trường Đại học Hàng hải Quốc tế (AMU)."
+      },
+      "foaf:homepage": {
+        "@id": "http://vimaru.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/Vietnam_Maritime_University"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "20.837335"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.695632"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "dbr:Vietnam_Maritime_University"
+        },
+        {
+          "@id": "wd:Q7928523"
+        },
+        {
+          "@id": "https://ror.org/03z9fzp04"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q7928523"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75526007"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Hàng hải Việt Nam"
+        },
+        {
+          "@language": "en",
+          "@value": "Vietnam Maritime University"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-xuan-duong"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1956-04-01"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/4/47/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_h%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.JPG"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/1/11/Bi%E1%BB%83u_tr%C6%B0ng_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.svg"
+      },
+      "skos:altLabel": "Biệt danh VMU và VIMARU",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Hàng hải Việt Nam"
+      },
+      "vnedu:address": "484, Lạch Tray, Phường Lê Chân",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1956"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-xay-dung"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/mac-trung-kien"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-quang-duong"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thanh-tam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-nhat"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-xuan-duong"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường sơ cấp Hàng hải, tiền thân của Trường Đại học Hàng hải Việt Nam, được thành lập vào ngày 01/04/1956 tại Hải Phòng. Năm 1957, Trường được nâng cấp thành Trường Trung cấp Hàng hải. Năm 1976, Trường được nâng cấp thành Trường Đại học Hàng hải. Năm 1984, Trường Đại học Giao thông thủy sáp nhập vào Trường Đại học Hàng hải. Tháng 8 năm 2013, Trường chính thức được đổi tên thành Trường Đại học Hàng hải Việt Nam và trở thành một trong các trường được đầu tư để trở thành trường trọng điểm quốc gia. Trải qua lịch sử gần 60 năm xây dựng, trưởng thành và phát triển, Trường Đại học hàng hải Việt Nam đã và đang đóng vai trò quan trọng hàng đầu trong chiến lược đào tạo nguồn nhân lực có trình độ cao, phục vụ nền kinh tế hướng ra biển của đất nước. Với những cống hiến to lớn của các thế hệ thầy và trò Nhà trường cho Tổ quốc, Trường đã vinh dự được Đảng, Nhà nước và Chính phủ trao tặng nhiều phần thưởng cao quý, trong đó có danh hiệu Anh hùng Lao động, Huân chương Hồ Chí Minh, Huân chương Độc lập hạng Nhất, Nhì, Ba, cùng nhiều danh hiệu cao quý khác. Tháng 11 năm 2002, Trường được công nhận là thành viên chính thức của Hiệp hội các Trường Đại học Hàng hải khu vực châu Á - Thái Bình Dương (AMETIAP), nay là Global MET. Đặc biệt, tháng 8 năm 2004, Trường đã được công nhận trở thành thành viên đầy đủ của Hiệp hội các Trường Đại học Hàng hải Quốc tế (IAMU). Tháng 5 năm 2005, Trường đã vượt qua quá trình đánh giá của Tổng cục đo lường chất lượng (STAMEQ) và vinh dự là đơn vị đầu tiên trong hệ thống các trường đại học, cao đẳng cả nước được cấp Chứng nhận phù hợp tiêu chuẩn quốc tế ISO 9001: 2000 và đã được nâng cấp lên phiên bản ISO 9001: 2008 từ tháng 11 năm 2012. Sau quá trình kiểm định chất lượng giáo dục đại học, ngày 25 tháng 2 năm 2009, Bộ Giáo dục & Đào tạo ra thông báo số 110/TB-BGDĐT công nhận Trường Đại học Hàng hải Việt Nam đạt tiêu chuẩn chất lượng giáo dục quốc gia."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "trường đại học hàng hải Việt Nam tại thành phố Hải Phòng"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-xuan-duong"
+      },
+      "vnedu:website": {
+        "@id": "http://vimaru.edu.vn"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/1/11/Bi%E1%BB%83u_tr%C6%B0ng_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Bi%E1%BB%83u_tr%C6%B0ng_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/1/11/Bi%E1%BB%83u_tr%C6%B0ng_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.svg/330px-Bi%E1%BB%83u_tr%C6%B0ng_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.svg.png"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/4/47/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_h%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.JPG",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Kinh nghiệm - bán không ai mua, mua không ai bán (thảo luận)",
+      "schema:license": "Phạm vi công cộng",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:%C4%90%E1%BA%A1i_h%E1%BB%8Dc_h%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.JPG"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/4/47/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_h%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.JPG/330px-%C4%90%E1%BA%A1i_h%E1%BB%8Dc_h%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.JPG"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "20.837335"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.695632"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "wd:Q7928523"
-    },
-    {
-      "@id": "dbr:Vietnam_Maritime_University"
-    },
-    {
-      "@id": "https://ror.org/03z9fzp04"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q7928523"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75526007"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Hàng hải Việt Nam"
-    },
-    {
-      "@language": "en",
-      "@value": "Vietnam Maritime University"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-xuan-duong"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Hàng hải Việt Nam"
-  },
-  "vnedu:address": "484, Lạch Tray, Phường Lê Chân",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1956"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-xay-dung"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-nhat"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thanh-tam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-quang-duong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/mac-trung-kien"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-xuan-duong"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "trường đại học hàng hải Việt Nam tại thành phố Hải Phòng"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-xuan-duong"
-  },
-  "vnedu:website": {
-    "@id": "http://vimaru.edu.vn"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([20.837335,106.695632],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([20.837335,106.695632],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -176,7 +222,9 @@
   <a href="truong-dai-hoc-hang-hai-viet-nam.ttl">Turtle</a> · <a href="truong-dai-hoc-hang-hai-viet-nam.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-hang-hai-viet-nam">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 21 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Hàng hải Việt Nam ( – VMU) là một đơn vị giáo dục trực thuộc Bộ Xây Dựng, chuyên đào tạo về kỹ thuật, với thế mạnh về đào tạo nhóm ngành hàng hải và logistics được xếp vào nhóm trường đại học trọng điểm quốc gia. Trường Đại học Hàng hải Việt Nam hiện đang là thành viên của Hiệp hội các trường Đại học Hàng hải châu Á - Thái Bình Dương (AMETIAP) và Hiệp hội các trường Đại học Hàng hải Quốc tế (AMU).</p><h2>Lịch sử</h2><p>Trường sơ cấp Hàng hải, tiền thân của Trường Đại học Hàng hải Việt Nam, được thành lập vào ngày 01/04/1956 tại Hải Phòng. Năm 1957, Trường được nâng cấp thành Trường Trung cấp Hàng hải. Năm 1976, Trường được nâng cấp thành Trường Đại học Hàng hải. Năm 1984, Trường Đại học Giao thông thủy sáp nhập vào Trường Đại học Hàng hải. Tháng 8 năm 2013, Trường chính thức được đổi tên thành Trường Đại học Hàng hải Việt Nam và trở thành một trong các trường được đầu tư để trở thành trường trọng điểm quốc gia. Trải qua lịch sử gần 60 năm xây dựng, trưởng thành và phát triển, Trường Đại học hàng hải Việt Nam đã và đang đóng vai trò quan trọng hàng đầu trong chiến lược đào tạo nguồn nhân lực có trình độ cao, phục vụ nền kinh tế hướng ra biển của đất nước. Với những cống hiến to lớn của các thế hệ thầy và trò Nhà trường cho Tổ quốc, Trường đã vinh dự được Đảng, Nhà nước và Chính phủ trao tặng nhiều phần thưởng cao quý, trong đó có danh hiệu Anh hùng Lao động, Huân chương Hồ Chí Minh, Huân chương Độc lập hạng Nhất, Nhì, Ba, cùng nhiều danh hiệu cao quý khác. Tháng 11 năm 2002, Trường được công nhận là thành viên chính thức của Hiệp hội các Trường Đại học Hàng hải khu vực châu Á - Thái Bình Dương (AMETIAP), nay là Global MET. Đặc biệt, tháng 8 năm 2004, Trường đã được công nhận trở thành thành viên đầy đủ của Hiệp hội các Trường Đại học Hàng hải Quốc tế (IAMU). Tháng 5 năm 2005, Trường đã vượt qua quá trình đánh giá của Tổng cục đo lường chất lượng (STAMEQ) và vinh dự là đơn vị đầu tiên trong hệ thống các trường đại học, cao đẳng cả nước được cấp Chứng nhận phù hợp tiêu chuẩn quốc tế ISO 9001: 2000 và đã được nâng cấp lên phiên bản ISO 9001: 2008 từ tháng 11 năm 2012. Sau quá trình kiểm định chất lượng giáo dục đại học, ngày 25 tháng 2 năm 2009, Bộ Giáo dục &amp; Đào tạo ra thông báo số 110/TB-BGDĐT công nhận Trường Đại học Hàng hải Việt Nam đạt tiêu chuẩn chất lượng giáo dục quốc gia.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75526007">«Trường Đại học Hàng hải Việt Nam»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75526007), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Hàng hải Việt Nam</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Bi%E1%BB%83u_tr%C6%B0ng_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.svg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/1/11/Bi%E1%BB%83u_tr%C6%B0ng_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.svg/330px-Bi%E1%BB%83u_tr%C6%B0ng_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.svg.png" alt="Biểu trưng Trường Đại học Hàng hải Việt Nam" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên khác</th><td>Biệt danh VMU và VIMARU</td></tr><tr><th>Tên tiếng Anh</th><td>Vietnam Maritime University</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>1 tháng 4 năm 1956</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-xay-dung">Bộ Xây dựng</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-xuan-duong">Phạm Xuân Dương</a></td></tr><tr><th>Địa chỉ</th><td>484, Lạch Tray, Phường Lê Chân</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong">Hải Phòng</a></td></tr><tr><th>Khẩu hiệu</th><td><i>trường đại học hàng hải Việt Nam tại thành phố Hải Phòng</i></td></tr><tr><th>Website</th><td><a href="http://vimaru.edu.vn">vimaru.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:%C4%90%E1%BA%A1i_h%E1%BB%8Dc_h%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.JPG" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/4/47/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_h%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.JPG/330px-%C4%90%E1%BA%A1i_h%E1%BB%8Dc_h%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.JPG" alt="Ảnh Trường Đại học Hàng hải Việt Nam" loading="lazy"></a><figcaption>Phạm vi công cộng · Kinh nghiệm - bán không ai mua, mua không ai bán (thảo luận)</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -206,8 +254,20 @@
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-xuan-duong">Phạm Xuân Dương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1956-04-01 <span class="lang">xsd:date</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/4/47/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_h%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.JPG">&lt;https://upload.wikimedia.org/wikipedia/vi/4/47/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_h%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.JPG&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong">Hải Phòng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/1/11/Bi%E1%BB%83u_tr%C6%B0ng_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.svg">&lt;https://upload.wikimedia.org/wikipedia/vi/1/11/Bi%E1%BB%83u_tr%C6%B0ng_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0ng_h%E1%BA%A3i_Vi%E1%BB%87t_Nam.svg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">tên khác<small>skos:altLabel</small></td><td>
+<div>Biệt danh VMU và VIMARU</div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>484, Lạch Tray, Phường Lê Chân</div>
@@ -244,11 +304,11 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thanh-tam">Đặng Thành Tâm</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/mac-trung-kien">Mạc Trung Kiên</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-nhat">Nguyễn Nhật</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-quang-duong">Xuan Quang Duong</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thanh-tam">Đặng Thành Tâm</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/mac-trung-kien">Mạc Trung Kiên</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-nhat">Nguyễn Nhật</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-quang-duong">Xuan Quang Duong</a></div>
+</td></tr>
+<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thanh-tam">Đặng Thành Tâm</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/mac-trung-kien">Mạc Trung Kiên</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-nhat">Nguyễn Nhật</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/xuan-quang-duong">Xuan Quang Duong</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-xuan-duong">Phạm Xuân Dương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

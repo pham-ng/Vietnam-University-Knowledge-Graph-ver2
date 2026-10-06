@@ -27,6 +27,7 @@ university:truong-dai-hoc-phuong-dong a dbo:University,
         schema:Organization ;
     rdfs:label "University of Phuong Dong"@en,
         "Trường Đại học Phương Đông"@vi ;
+    dbo:abstract "Trường Đại học Phương Đông được thành lập năm 1994, đào tạo khoảng 9.000 sinh viên tại 6 khoa và 1 trung tâm, với 21 ngành bậc đại học, 4 ngành bậc cao đẳng. Trường sẽ bắt đầu đào tạo trình độ Thạc sĩ cho 2 ngành từ năm 2013."@vi ;
     owl:sameAs wd:Q10829112,
         <https://ror.org/00cnrny66> ;
     geo:lat 21.006036 ;
@@ -45,8 +46,10 @@ university:truong-dai-hoc-phuong-dong a dbo:University,
     vnedu:ownership vnedu:PrivateOwnership ;
     vnedu:rector person:bui-thien-du ;
     vnedu:website <https://phuongdong.edu.vn/> ;
+    schema:email "dhphuongdong@hn.vnn.vn" ;
     schema:employee person:bui-thien-du ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:telephone "+84.24 3784.8512" .
 

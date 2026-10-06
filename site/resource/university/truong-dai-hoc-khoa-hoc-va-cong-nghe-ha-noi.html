@@ -32,26 +32,30 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-khoa-hoc-va-cong-nghe-ha-noi",
   "@type": [
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
     "vnedu:PublicInstitution",
+    "dbo:University",
+    "foaf:Organization",
+    "schema:Organization",
+    "vnedu:Organization",
+    "vnedu:UniversitySchool",
     "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity"
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:HigherEducationInstitution"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Khoa học và Công nghệ Hà Nội (tiếng Anh: University of Science and Technology of Hanoi, viết tắt là USTH), còn được gọi là Đại học Việt Pháp (Vietnam France University) là trường đại học công lập đạt chuẩn quốc tế được thành lập năm 2009 trong khuôn khổ Thỏa thuận hợp tác giữa Chính phủ hai nước Việt Nam và Pháp ký ngày 12/11/2009 và Quyết định số 2067/QĐ-TTg ngày 09/12/2009 của Thủ tướng Chính phủ."
+  },
   "foaf:homepage": {
     "@id": "http://www.usth.edu.vn"
   },
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/University_of_Science_and_Technology_of_Hanoi"
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_v%C3%A0_C%C3%B4ng_ngh%E1%BB%87_H%C3%A0_N%E1%BB%99i"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_v%C3%A0_C%C3%B4ng_ngh%E1%BB%87_H%C3%A0_N%E1%BB%99i"
+      "@id": "https://en.wikipedia.org/wiki/University_of_Science_and_Technology_of_Hanoi"
     }
   ],
   "geo:lat": {
@@ -64,13 +68,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/02wdwrr89"
+      "@id": "wd:Q15260958"
     },
     {
       "@id": "dbr:University_of_Science_and_Technology_of_Hanoi"
     },
     {
-      "@id": "wd:Q15260958"
+      "@id": "https://ror.org/02wdwrr89"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -83,25 +87,28 @@
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "University of Science and Technology of Hanoi"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Khoa học và Công nghệ Hà Nội"
+    },
+    {
+      "@language": "en",
+      "@value": "University of Science and Technology of Hanoi"
     }
   ],
+  "schema:email": "officeusth@usth.edu.vn",
   "schema:location": [
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
+  "schema:telephone": "+84 04) 37 91 69 60",
+  "skos:altLabel": "USTH, Đại học Việt Pháp",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Khoa học và Công nghệ Hà Nội"
@@ -116,13 +123,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "vnedu:ownership": {
@@ -150,7 +157,9 @@
   <a href="truong-dai-hoc-khoa-hoc-va-cong-nghe-ha-noi.ttl">Turtle</a> · <a href="truong-dai-hoc-khoa-hoc-va-cong-nghe-ha-noi.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-khoa-hoc-va-cong-nghe-ha-noi">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 15 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Khoa học và Công nghệ Hà Nội (tiếng Anh: University of Science and Technology of Hanoi, viết tắt là USTH), còn được gọi là Đại học Việt Pháp (Vietnam France University) là trường đại học công lập đạt chuẩn quốc tế được thành lập năm 2009 trong khuôn khổ Thỏa thuận hợp tác giữa Chính phủ hai nước Việt Nam và Pháp ký ngày 12/11/2009 và Quyết định số 2067/QĐ-TTg ngày 09/12/2009 của Thủ tướng Chính phủ.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=74327343">«Trường Đại học Khoa học và Công nghệ Hà Nội»</a> trên Wikipedia tiếng Việt (bản sửa đổi 74327343), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Khoa học và Công nghệ Hà Nội</div><table><tr><th>Tên khác</th><td>USTH, Đại học Việt Pháp</td></tr><tr><th>Tên tiếng Anh</th><td>University of Science and Technology of Hanoi</td></tr><tr><th>Viết tắt</th><td>USTH</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>2009</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/vien-han-lam-khoa-hoc-va-cong-nghe-viet-nam">Viện Hàn lâm Khoa học và Công nghệ Việt Nam</a></td></tr><tr><th>Địa chỉ</th><td>Tòa nhà A1, Viện Hàn lâm Khoa học và Công nghệ Việt Nam, 18 Hoàng Quốc Việt, phường Nghĩa Đô, quận Cầu Giấy</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Điện thoại</th><td>+84 04) 37 91 69 60</td></tr><tr><th>Email</th><td><a href="mailto:officeusth@usth.edu.vn">officeusth@usth.edu.vn</a></td></tr><tr><th>Website</th><td><a href="http://www.usth.edu.vn">usth.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -177,8 +186,17 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q15260958">wd:Q15260958</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=74327343">&lt;https://vi.wikipedia.org/w/index.php?oldid=74327343&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>officeusth@usth.edu.vn</div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84 04) 37 91 69 60</div>
+</td></tr>
+<tr><td class="p">tên khác<small>skos:altLabel</small></td><td>
+<div>USTH, Đại học Việt Pháp</div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>Tòa nhà A1, Viện Hàn lâm Khoa học và Công nghệ Việt Nam, 18 Hoàng Quốc Việt, phường Nghĩa Đô, quận Cầu Giấy</div>

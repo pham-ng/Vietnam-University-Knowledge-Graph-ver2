@@ -28,6 +28,7 @@ university:truong-dai-hoc-cong-thuong-thanh-pho-ho-chi-minh a dbo:University,
         schema:Organization ;
     rdfs:label "Ho Chi Minh City University of Industry and Trade"@en,
         "Trường Đại học Công Thương Thành phố Hồ Chí Minh"@vi ;
+    dbo:abstract "Trường Đại học Công Thương Thành phố Hồ Chí Minh (tiếng Anh: Ho Chi Minh City University of Industry and Trade; HUIT) là một là một cơ sở giáo dục đại học công lập trực thuộc Bộ Công Thương, đào tạo đa ngành, đa lĩnh vực, có thế mạnh trong lĩnh vực công nghiệp và thương mại, được thành lập ngày 9 tháng 9 năm 1982."@vi ;
     owl:sameAs wd:Q10829026 ;
     geo:lat 10.807035 ;
     geo:long 106.628703 ;
@@ -43,6 +44,15 @@ university:truong-dai-hoc-cong-thuong-thanh-pho-ho-chi-minh a dbo:University,
     vnedu:foundingYear "1982"^^xsd:gYear ;
     vnedu:governedBy organization:bo-cong-thuong ;
     vnedu:hasLeader person:nguyen-xuan-hoan ;
+    vnedu:history """Năm 1982: Trường được thành lập theo quyết định số 986/CNTP, ngày 9/9/1982 của Bộ trưởng Bộ Công nghiệp Thực phẩm với tên gọi: Trường Cán bộ Kinh tế Kỹ thuật Công nghiệp Thực phẩm thành phố Hồ Chí Minh;
+
+Năm 1987: Trường được đổi tên thành Trường Trung học Công nghiệp Thực phẩm thành phố Hồ Chí Minh theo quyết định số 25 CNTP/TCCB ngày 3/5/1987 của Bộ trưởng Bộ Công nghiệp Thực phẩm;
+
+Năm 2001: Trường được nâng cấp lên Trường Cao đẳng Công nghiệp Thực phẩm thành phố Hồ Chí Minh theo quyết định số 18/QĐ-BGD&ĐT -TCCB ngày 2/1/2001 của Bộ trưởng Bộ Giáo dục & Đào tạo;
+
+Năm 2010: Trường chính thức trở thành Trường Đại học Công nghiệp Thực phẩm Thành phố Hồ Chí Minh theo Quyết định số 284/QĐ-TTg, thành lập Trường Đại học Công nghiệp Thực phẩm Thành phố Hồ Chí Minh của Thủ tướng Chính phủ.
+
+Ngày 01 tháng 7 năm 2023, Phó Thủ tướng Chính phủ Trần Hồng Hà đã ký quyết định số 789/QĐ-TTg đổi tên Trường Đại học Công nghiệp Thực phẩm Thành phố Hồ Chí Minh thành Trường Đại học Công Thương Thành phố Hồ Chí Minh."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -51,8 +61,18 @@ university:truong-dai-hoc-cong-thuong-thanh-pho-ho-chi-minh a dbo:University,
     vnedu:rector person:nguyen-xuan-hoan ;
     vnedu:shortName "HUIT" ;
     vnedu:website <http://www.cntp.edu.vn/> ;
+    schema:email "infor@huit.edu.vn" ;
     schema:employee person:nguyen-xuan-hoan ;
+    schema:foundingDate "1982-09-09"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/2/22/Th%C6%B0_vi%E1%BB%87n_HUIT.jpg> ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:telephone "0283 8163 318" .
+
+<https://upload.wikimedia.org/wikipedia/commons/2/22/Th%C6%B0_vi%E1%BB%87n_HUIT.jpg> a schema:ImageObject ;
+    schema:creditText "Nguoisinhvien" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Th%C6%B0_vi%E1%BB%87n_HUIT.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Th%C6%B0_vi%E1%BB%87n_HUIT.jpg/330px-Th%C6%B0_vi%E1%BB%87n_HUIT.jpg> .
 

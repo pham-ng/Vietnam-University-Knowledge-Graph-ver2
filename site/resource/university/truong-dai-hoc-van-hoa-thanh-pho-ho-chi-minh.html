@@ -30,126 +30,177 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-hoa-thanh-pho-ho-chi-minh",
-  "@type": [
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "https://www.hcmuc.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C4%83n_h%C3%B3a_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-hoa-thanh-pho-ho-chi-minh",
+      "@type": [
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Văn hóa Thành phố Hồ Chí Minh (tên gọi quốc tế: Ho Chi Minh City University of Culture, viết tắt: HCMUC) là cơ sở giáo dục đại học công lập, trực thuộc Bộ Văn hóa, Thể thao và Du lịch, do Bộ Giáo dục và Đào tạo quản lý về đào tạo, đào tạo và nghiên cứu khoa học các lĩnh vực: văn hóa, nghệ thuật, thông tin, truyền thông và du lịch. Trường Đại học Văn hóa Thành phố Hồ Chí Minh là trường Đại học đầu tiên thuộc Bộ Văn hóa, Thể thao và Du lịch đạt chuẩn kiểm định chất lượng giáo dục theo tiêu chuẩn mới của Bộ Giáo dục và Đào tạo."
+      },
+      "foaf:homepage": {
+        "@id": "https://www.hcmuc.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Culture"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C4%83n_h%C3%B3a_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.8058"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.731"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q5873981"
+        },
+        {
+          "@id": "dbr:Ho_Chi_Minh_City_University_of_Culture"
+        },
+        {
+          "@id": "https://ror.org/02xpmtg36"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q5873981"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085609"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Ho Chi Minh City University of Culture"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Văn hóa Thành phố Hồ Chí Minh"
+        }
+      ],
+      "schema:email": "dhvh@hcmuc.edu.vn",
+      "schema:employee": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/trinh-dang-khoa"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-nhan"
+        }
+      ],
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1976-01-03"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/a/a5/Logo-Dai-hoc-Van-hoa-TPHCM.png"
+      },
+      "schema:telephone": "028)3899.2901",
+      "skos:altLabel": [
+        "Trường Lý luận và Nghiệp vụ II (30/08/1976 - 19/09/1981)",
+        "Trường Cao đẳng Văn hóa Thành phố Hồ Chí Minh (26/04/1995 - 23/06/2005)",
+        "Trường Nghiệp vụ Thông tin Văn hóa miền Nam Việt Nam (01/01/1976 - 30/08/1976)",
+        "Trường Văn hóa tại Thành phố Hồ Chí Minh (19/09/1981 - 26/04/1995)"
+      ],
+      "skos:notation": "VHS",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Văn hóa Thành phố Hồ Chí Minh"
+      },
+      "vnedu:address": "*CS1: 51 Quốc Hương, P. An Khánh, Thành phố Hồ Chí Minh",
+      "vnedu:admissionCode": "VHS",
+      "vnedu:councilChair": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/trinh-dang-khoa"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1976"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-van-hoa-the-thao-va-du-lich"
+      },
+      "vnedu:hasAlumnus": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-anh-khoa"
+      },
+      "vnedu:hasLeader": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-nhan"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/trinh-dang-khoa"
+        }
+      ],
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Văn hóa Thành phố Hồ Chí Minh tiền thân là Trường Nghiệp vụ Thông tin Văn hóa miền Nam (đào tạo bậc trung học) thành lập ngày 03/01/1976 theo Quyết định số 58/TTVH/TC của Bộ trưởng Bộ Thông tin Văn hóa Chính phủ Cách mạng lâm thời Cộng hòa miền Nam Việt Nam (do Bộ trưởng Lưu Hữu Phước ký ban hành).\n\nNgày 30/08/1976, theo Quyết định số 110/VH/QĐ của Bộ trưởng Bộ Văn hóa, Trường đổi tên thành Trường Lý luận và Nghiệp vụ II.\n\nNgày 19/09/1981, theo Quyết định số 121/VHTT/QĐ của Bộ trưởng Bộ Văn hóa Thông tin, Trường được đổi tên thành Trường Văn hóa tại Thành phố Hồ Chí Minh.\n\nNgày 10/07/1998 theo Quyết định số 124/1998/QĐ-TTg của Thủ tướng Chính phủ quyết định nâng cấp thành Trường Cao đẳng Văn hóa Thành phố Hồ Chí Minh.\n\nĐến ngày 23/06/2005, Trường Cao đẳng Văn hóa Thành phố Hồ Chí Minh được nâng cấp thành Trường Đại học Văn hóa Thành phố Hồ Chí Minh theo Quyết định số 154/2005/QĐ-TTg của Thủ tướng Chính phủ."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Tôn trọng - Trách nhiệm - Thân thiện"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-nhan"
+      },
+      "vnedu:shortName": "HCMUC",
+      "vnedu:website": {
+        "@id": "https://www.hcmuc.edu.vn"
+      }
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Culture"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/a/a5/Logo-Dai-hoc-Van-hoa-TPHCM.png",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo-Dai-hoc-Van-hoa-TPHCM.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/a/a5/Logo-Dai-hoc-Van-hoa-TPHCM.png"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.8058"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.731"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "dbr:Ho_Chi_Minh_City_University_of_Culture"
-    },
-    {
-      "@id": "wd:Q5873981"
-    },
-    {
-      "@id": "https://ror.org/02xpmtg36"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q5873981"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085609"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Văn hóa Thành phố Hồ Chí Minh"
-    },
-    {
-      "@language": "en",
-      "@value": "Ho Chi Minh City University of Culture"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-nhan"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "skos:notation": "VHS",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Văn hóa Thành phố Hồ Chí Minh"
-  },
-  "vnedu:address": "*CS1: 51 Quốc Hương, P. An Khánh, Thành phố Hồ Chí Minh",
-  "vnedu:admissionCode": "VHS",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1976"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-van-hoa-the-thao-va-du-lich"
-  },
-  "vnedu:hasAlumnus": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-anh-khoa"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-nhan"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Tôn trọng - Trách nhiệm - Thân thiện"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-nhan"
-  },
-  "vnedu:shortName": "HCMUC",
-  "vnedu:website": {
-    "@id": "https://www.hcmuc.edu.vn"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.8058,106.731],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.8058,106.731],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -167,8 +218,10 @@
 <p class="uri">https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-hoa-thanh-pho-ho-chi-minh<br>
   <a href="truong-dai-hoc-van-hoa-thanh-pho-ho-chi-minh.ttl">Turtle</a> · <a href="truong-dai-hoc-van-hoa-thanh-pho-ho-chi-minh.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-hoa-thanh-pho-ho-chi-minh">Truy vấn SPARQL</a>
-   · <span class="pill inf">suy luận</span> = 19 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+   · <span class="pill inf">suy luận</span> = 21 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Văn hóa Thành phố Hồ Chí Minh (tên gọi quốc tế: Ho Chi Minh City University of Culture, viết tắt: HCMUC) là cơ sở giáo dục đại học công lập, trực thuộc Bộ Văn hóa, Thể thao và Du lịch, do Bộ Giáo dục và Đào tạo quản lý về đào tạo, đào tạo và nghiên cứu khoa học các lĩnh vực: văn hóa, nghệ thuật, thông tin, truyền thông và du lịch. Trường Đại học Văn hóa Thành phố Hồ Chí Minh là trường Đại học đầu tiên thuộc Bộ Văn hóa, Thể thao và Du lịch đạt chuẩn kiểm định chất lượng giáo dục theo tiêu chuẩn mới của Bộ Giáo dục và Đào tạo.</p><h2>Lịch sử</h2><p>Trường Đại học Văn hóa Thành phố Hồ Chí Minh tiền thân là Trường Nghiệp vụ Thông tin Văn hóa miền Nam (đào tạo bậc trung học) thành lập ngày 03/01/1976 theo Quyết định số 58/TTVH/TC của Bộ trưởng Bộ Thông tin Văn hóa Chính phủ Cách mạng lâm thời Cộng hòa miền Nam Việt Nam (do Bộ trưởng Lưu Hữu Phước ký ban hành).</p><p>Ngày 30/08/1976, theo Quyết định số 110/VH/QĐ của Bộ trưởng Bộ Văn hóa, Trường đổi tên thành Trường Lý luận và Nghiệp vụ II.</p><details><summary>Đọc tiếp (3 đoạn)</summary><p>Ngày 19/09/1981, theo Quyết định số 121/VHTT/QĐ của Bộ trưởng Bộ Văn hóa Thông tin, Trường được đổi tên thành Trường Văn hóa tại Thành phố Hồ Chí Minh.</p><p>Ngày 10/07/1998 theo Quyết định số 124/1998/QĐ-TTg của Thủ tướng Chính phủ quyết định nâng cấp thành Trường Cao đẳng Văn hóa Thành phố Hồ Chí Minh.</p><p>Đến ngày 23/06/2005, Trường Cao đẳng Văn hóa Thành phố Hồ Chí Minh được nâng cấp thành Trường Đại học Văn hóa Thành phố Hồ Chí Minh theo Quyết định số 154/2005/QĐ-TTg của Thủ tướng Chính phủ.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75085609">«Trường Đại học Văn hóa Thành phố Hồ Chí Minh»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75085609), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Văn hóa Thành phố Hồ Chí Minh</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo-Dai-hoc-Van-hoa-TPHCM.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://upload.wikimedia.org/wikipedia/vi/a/a5/Logo-Dai-hoc-Van-hoa-TPHCM.png" alt="Biểu trưng Trường Đại học Văn hóa Thành phố Hồ Chí Minh" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên khác</th><td>Trường Nghiệp vụ Thông tin Văn hóa miền Nam Việt Nam (01/01/1976 - 30/08/1976)<br>Trường Lý luận và Nghiệp vụ II (30/08/1976 - 19/09/1981)<br>Trường Văn hóa tại Thành phố Hồ Chí Minh (19/09/1981 - 26/04/1995)<br>Trường Cao đẳng Văn hóa Thành phố Hồ Chí Minh (26/04/1995 - 23/06/2005)</td></tr><tr><th>Tên tiếng Anh</th><td>Ho Chi Minh City University of Culture</td></tr><tr><th>Viết tắt</th><td>HCMUC</td></tr><tr><th>Mã trường</th><td>VHS</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>3 tháng 1 năm 1976</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-van-hoa-the-thao-va-du-lich">Bộ Văn hóa, Thể thao và Du lịch</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-nhan">Lâm Nhân</a></td></tr><tr><th>Chủ tịch hội đồng trường</th><td><span class="lang">TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/trinh-dang-khoa">Trịnh Đăng Khoa</a></td></tr><tr><th>Địa chỉ</th><td>*CS1: 51 Quốc Hương, P. An Khánh, Thành phố Hồ Chí Minh</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Tôn trọng - Trách nhiệm - Thân thiện</i></td></tr><tr><th>Điện thoại</th><td>028)3899.2901</td></tr><tr><th>Email</th><td><a href="mailto:dhvh@hcmuc.edu.vn">dhvh@hcmuc.edu.vn</a></td></tr><tr><th>Website</th><td><a href="https://www.hcmuc.edu.vn">hcmuc.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -195,11 +248,26 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q5873981">wd:Q5873981</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75085609">&lt;https://vi.wikipedia.org/w/index.php?oldid=75085609&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>dhvh@hcmuc.edu.vn</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-nhan">Lâm Nhân</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-nhan">Lâm Nhân</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/trinh-dang-khoa">Trịnh Đăng Khoa</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1976-01-03 <span class="lang">xsd:date</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/a/a5/Logo-Dai-hoc-Van-hoa-TPHCM.png">&lt;https://upload.wikimedia.org/wikipedia/vi/a/a5/Logo-Dai-hoc-Van-hoa-TPHCM.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>028)3899.2901</div>
+</td></tr>
+<tr><td class="p">tên khác<small>skos:altLabel</small></td><td>
+<div>Trường Cao đẳng Văn hóa Thành phố Hồ Chí Minh (26/04/1995 - 23/06/2005)</div><div>Trường Lý luận và Nghiệp vụ II (30/08/1976 - 19/09/1981)</div><div>Trường Nghiệp vụ Thông tin Văn hóa miền Nam Việt Nam (01/01/1976 - 30/08/1976)</div><div>Trường Văn hóa tại Thành phố Hồ Chí Minh (19/09/1981 - 26/04/1995)</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>VHS <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -209,6 +277,9 @@
 </td></tr>
 <tr><td class="p">mã trường (tuyển sinh)<small>vnedu:admissionCode</small></td><td>
 <div>VHS</div>
+</td></tr>
+<tr><td class="p">chủ tịch hội đồng trường<small>vnedu:councilChair</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/trinh-dang-khoa">Trịnh Đăng Khoa</a></div>
 </td></tr>
 <tr><td class="p">năm thành lập<small>vnedu:foundingYear</small></td><td>
 <div>1976 <span class="lang">xsd:gYear</span></div>
@@ -220,7 +291,7 @@
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-anh-khoa">Phạm Anh Khoa</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">có người đứng đầu<small>vnedu:hasLeader</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-nhan">Lâm Nhân</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-nhan">Lâm Nhân</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/trinh-dang-khoa">Trịnh Đăng Khoa</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">đặt tại<small>vnedu:locatedIn</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -245,17 +316,17 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-van-hoa-the-thao-va-du-lich">Bộ Văn hóa, Thể thao và Du lịch</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-nhan">Lâm Nhân</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-nhan">Lâm Nhân</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/trinh-dang-khoa">Trịnh Đăng Khoa</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-anh-khoa">Phạm Anh Khoa</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-anh-khoa">Phạm Anh Khoa</a></div>
 </td></tr>
-<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-anh-khoa">Phạm Anh Khoa</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-van-hoa-the-thao-va-du-lich">Bộ Văn hóa, Thể thao và Du lịch</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

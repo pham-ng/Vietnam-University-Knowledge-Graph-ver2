@@ -28,6 +28,7 @@ university:dai-hoc-duy-tan a dbo:University,
         schema:Organization ;
     rdfs:label "Duy Tan University"@en,
         "Đại học Duy Tân"@vi ;
+    dbo:abstract "Đại học Duy Tân (tiếng Anh: Duy Tan University) là đại học tư thục đầu tiên và lớn nhất tại miền Trung Việt Nam, tiền thân là Trường Đại học Duy Tân, thành lập năm 1994. Năm 2019, trường được trao Huân chương Lao động hạng Nhất. Ngày 7 tháng 10 năm 2024, Phó Thủ tướng Chính phủ Lê Thành Long ký Quyết định số 1115/QĐ-TTg chuyển Trường Đại học Duy Tân thành Đại học Duy Tân. Đại học Duy Tân trở thành Đại học thứ 8 tại Việt Nam sau Đại học Quốc gia Hà Nội, Đại học Quốc gia Thành phố Hồ Chí Minh, Đại học Thái Nguyên, Đại học Huế, Đại học Đà Nẵng, Đại học Bách khoa Hà Nội và Đại học Kinh tế Thành phố Hồ Chí Minh. Đại học Duy Tân cũng là cơ sở giáo dục tư thục đầu tiên được chuyển đổi từ “Trường Đại học” lên thành “Đại học”. Trường hợp tác với nhiều Đại học quốc tế, có mặt trong các bảng xếp hạng đại học quốc tế. Tuy nhiên, trường gây nhiều tranh cãi trong dư luận xung quanh sai phạm về liêm chính trong nghiên cứu khoa học, sa thải giảng viên vì bình luận về cách chính quyền xử lý đại dịch COVID-19, sai phạm về tuyển sinh, sử dụng người lao động và tài chính."@vi ;
     owl:sameAs dbr:Duy_Tan_University,
         wd:Q5317667,
         <https://ror.org/05ezss144> ;
@@ -47,6 +48,11 @@ university:dai-hoc-duy-tan a dbo:University,
         person:tran-dong-xuan,
         person:van-duc-tran ;
     vnedu:hasLeader person:le-nguyen-bao ;
+    vnedu:history """Trường Đại học Duy Tân được thành lập vào ngày 11/11/1994 theo Quyết định Số 666/TTg của Thủ tướng Chính phủ. Nhà giáo Ưu tú Lê Công Cơ là Hiệu trưởng đầu tiên.
+
+Năm 2002, Cơ sở 254 Nguyễn Văn Linh được đưa vào vận hành. Năm 2018, Tiến sĩ Lê Nguyên Bảo tiếp nhận và trở thành Hiệu trưởng tiếp theo của Trường Đại học Duy Tân.
+
+Ngày 07/10/2024 Trường Đại học Duy Tân được chuyển thành Đại học Duy Tân và là Đại học thứ 8 tại Việt Nam."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:da-nang,
         region:trung-bo ;
@@ -55,7 +61,21 @@ university:dai-hoc-duy-tan a dbo:University,
     vnedu:shortName "DTU" ;
     vnedu:website <http://www.duytan.edu.vn/> ;
     schema:employee person:le-nguyen-bao ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/1/19/Duy_Tan_University.jpg> ;
     schema:location country:viet-nam,
         province:da-nang,
-        region:trung-bo .
+        region:trung-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/1/12/Logo_dtu_footer.png> ;
+    schema:telephone "+84) 236.3650403" .
+
+<https://upload.wikimedia.org/wikipedia/commons/1/19/Duy_Tan_University.jpg> a schema:ImageObject ;
+    schema:creditText "Truyenthong.wkp" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Duy_Tan_University.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Duy_Tan_University.jpg/330px-Duy_Tan_University.jpg> .
+
+<https://upload.wikimedia.org/wikipedia/vi/1/12/Logo_dtu_footer.png> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_dtu_footer.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/1/12/Logo_dtu_footer.png/330px-Logo_dtu_footer.png> .
 

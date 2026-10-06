@@ -17,115 +17,142 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-canh-sat-nhan-dan",
-  "@type": [
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PoliceInstitution",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "vnedu:Academy",
-    "schema:Organization",
-    "foaf:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.hvcsnd.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_C%E1%BA%A3nh_s%C3%A1t_nh%C3%A2n_d%C3%A2n"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "wd:Q10771884"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-canh-sat-nhan-dan",
+      "@type": [
+        "vnedu:PublicInstitution",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:Academy",
+        "vnedu:PoliceInstitution",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Cảnh sát nhân dân (tên tiếng Anh: People's Police Academy, viết tắt là PPA và còn được gọi là T02, T18 hoặc T32) là cơ sở đào tạo đại học, sau đại học hệ công lập hàng đầu phục vụ cho lực lượng Công an nhân dân Việt Nam trực thuộc Bộ Công an tại Việt Nam, đào tạo những sĩ quan cảnh sát có trình độ đại học và sau đại học cho lực lượng cảnh sát."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.hvcsnd.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_C%E1%BA%A3nh_s%C3%A1t_nh%C3%A2n_d%C3%A2n"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/04fsj1906"
+        },
+        {
+          "@id": "wd:Q10771884"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75613391"
+        },
+        {
+          "@id": "wd:Q10771884"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "the Vietnam People's Police Academy"
+        },
+        {
+          "@language": "vi",
+          "@value": "Học viện Cảnh sát nhân dân"
+        }
+      ],
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Flag_of_the_People%27s_Public_Security_of_Vietnam.svg"
+      },
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Cảnh sát nhân dân"
+      },
+      "vnedu:address": "Phạm Văn Nghị, Đông Ngạc, Hà Nội, (Cơ sở chính)",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1968"
+      },
+      "vnedu:governedBy": {
+        "@id": "vnedu:MinistryOfPublicSecurity"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-cong-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-quy-ngo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/cao-ngoc-oanh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-thi-nguyet-thu"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thanh-hung"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thoi-an"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tien-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-minh-tien"
+        }
+      ],
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Tiền thân của Học viện Cảnh sát nhân dân là Khoa Cảnh sát của Trường Công an Trung ương.\n\nNgày 15 tháng 5 năm 1968, Bộ Công an ra Quyết định 514/CA/QĐ \"tách phân hiệu Cảnh sát nhân dân ra khỏi trường Công an Trung ương, thành lập trường riêng, có nhiệm vụ đào tạo bậc trung học cho lực lượng Cảnh sát nhân dân\", chính thức thành lập Trường Cảnh sát nhân dân. Về sau, ngày này được lấy làm ngày truyền thống của Học viện Cảnh sát nhân dân.\n\nTrường lấy mật hiệu là T18, trường sở ban đầu tại thôn Phong Vân, Ba Vì, Hà Tây, với 153 cán bộ giáo viên, công nhân viên và 1.789 học viên của 20 lớp học (trong đó có 6 lớp sơ học), đào tạo các hạ sĩ quan Cảnh sát.\n\nNgày 27 tháng 11 năm 1976, Hội đồng Chính phủ ra Quyết định 231/CP \"công nhận Trường sĩ quan Cảnh sát nhân dân của Bộ Nội vụ thuộc hệ thống giáo dục Đại học quốc gia\". Trường đổi tên thành Trường Đại học Cảnh sát nhân dân cơ sở phía Bắc và bắt đầu đào tạo sĩ quan Cảnh sát bậc đại học.\n\nNgày 15 tháng 5 năm 1992, Bộ trưởng Bộ Giáo dục và Đào tạo ra Quyết định 998/QĐ/SĐH, giao nhiệm vụ cho trường Đại học Cảnh sát nhân dân đào tạo hệ cao học (chuyên ngành Điều tra tội phạm). Ngày 24 tháng 5 năm 1995, Thủ tướng Chính phủ ra Quyết định 315/TTg giao nhiệm vụ đào tạo trên đại học cho trường Đại học Cảnh sát.\n\nNgày 15 tháng 11 năm 2001, Quyết định 969/2001/BCA(X13) của Bộ trưởng Bộ Công an nâng cấp từ trường Đại học Cảnh sát nhân dân lên Học viện Cảnh sát nhân dân.\n\nNgày 18 tháng 9 năm 2026, Thủ tướng Chính phủ Lê Minh Hưng ký Quyết định số 1805/QĐ-TTg ngày 18/9/2026 về việc sắp xếp các Học viện, trường Công an nhân dân. Trong đó, sáp nhập Trường Đại học Cảnh sát nhân dân và các tổ chức trực thuộc vào Học viện Cảnh sát nhân dân để thành lập Phân hiệu của Học viện Cảnh sát nhân dân tại Thành phố Hồ Chí Minh (trên cơ sở Trường Đại học Cảnh sát nhân dân). Tên phân hiệu: Học viện Cảnh sát nhân dân – Phân hiệu Thành phố Hồ Chí Minh.\n\nTrụ sở chính của trường tại phố Phạm Văn Nghị, phường Đông Ngạc, Thành phố Hà Nội. Trường có 1 phân hiệu tại số 36, đường Nguyễn Hữu Thọ, phường Tân Hưng, Thành phố Hồ Chí Minh."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:website": {
+        "@id": "http://www.hvcsnd.edu.vn/"
+      }
     },
     {
-      "@id": "https://ror.org/04fsj1906"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Flag_of_the_People%27s_Public_Security_of_Vietnam.svg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Tom Mai",
+      "schema:license": "Public domain",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Flag_of_the_People%27s_Public_Security_of_Vietnam.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Flag_of_the_People%27s_Public_Security_of_Vietnam.svg/330px-Flag_of_the_People%27s_Public_Security_of_Vietnam.svg.png"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75613391"
-    },
-    {
-      "@id": "wd:Q10771884"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "the Vietnam People's Police Academy"
-    },
-    {
-      "@language": "vi",
-      "@value": "Học viện Cảnh sát nhân dân"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Cảnh sát nhân dân"
-  },
-  "vnedu:address": "Phạm Văn Nghị, Đông Ngạc, Hà Nội, (Cơ sở chính)",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1968"
-  },
-  "vnedu:governedBy": {
-    "@id": "vnedu:MinistryOfPublicSecurity"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-quy-ngo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-minh-tien"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/cao-ngoc-oanh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-thoi-an"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-cong-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-thi-nguyet-thu"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thanh-hung"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tien-nam"
-    }
-  ],
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:website": {
-    "@id": "http://www.hvcsnd.edu.vn/"
-  }
+  ]
 }

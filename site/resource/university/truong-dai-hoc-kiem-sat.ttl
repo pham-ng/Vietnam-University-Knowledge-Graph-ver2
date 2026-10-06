@@ -26,8 +26,10 @@ university:truong-dai-hoc-kiem-sat a dbo:University,
         schema:Organization ;
     rdfs:label "Hanoi Procuratorate University"@en,
         "Trường Đại học Kiểm sát"@vi ;
+    dbo:abstract "Trường Đại học Kiểm sát là cơ sở giáo dục đại học công lập trong hệ thống giáo dục quốc dân Việt Nam, trực thuộc Viện Kiểm sát Nhân dân tối cao. Hiện tại, trường đào tạo 4 ngành đại học là Luật Kiểm sát, Luật chung, Luật kinh tế và Ngôn ngữ Anh; hai ngành sau đại học là Luật và Luật hình sự và tố tụng hình sự."@vi ;
     owl:sameAs wd:Q18415683,
         <https://ror.org/009tqft73> ;
+    skos:altLabel "VPU, Vietnam Procuratorate University" ;
     skos:prefLabel "Trường Đại học Kiểm sát"@vi ;
     prov:wasDerivedFrom wd:Q18415683,
         <https://vi.wikipedia.org/w/index.php?oldid=75381895> ;
@@ -37,6 +39,15 @@ university:truong-dai-hoc-kiem-sat a dbo:University,
     vnedu:foundingYear "2013"^^xsd:gYear ;
     vnedu:hasAlumnus person:nguyen-khac-than ;
     vnedu:hasLeader person:nguyen-van-khoat ;
+    vnedu:history """Ngày 21/4/1970, Viện trưởng Viện Kiểm sát Nhân dân Tối cao đã ký Quyết định số 62/QĐ-TC về tổ chức bộ máy của VKSND tối cao, trong đó có Trường Bổ túc và đào tạo cán bộ kiểm sát (Ngày 12/10/1964 đồng chí Hoàng Quốc Việt đã ký Quyết định thành lập Trường Cán bộ kiểm sát trực thuộc Viện kiểm sát nhân dân tối cao). Quyết định này được Ủy ban Thường vụ Quốc hội phê chuẩn tại Nghị quyết số 900/NQ-UBTVQH ngày 25/4/1970, ngày 25/4 hàng năm được coi là ngày truyền thống của Trường.
+
+Có thể chia quá trình xây dựng và phát triển của trường thành 4 giai đoạn:
+
+Giai đoạn thứ nhất: Tổ chức và hoạt động của Trường Bổ túc và đào tạo cán bộ kiểm sát (1970-1981). Giai đoạn thứ hai: Tổ chức và hoạt động của Trường Cao đẳng kiểm sát (1982-2005). Giai đoạn thứ ba: Tổ chức và hoạt động của Trường Đào tạo, bồi dưỡng nghiệp vụ kiểm sát (từ năm 2005 - 4/2013). Giai đoạn thứ tư: Tổ chức và hoạt động của Trường Đại học Kiểm sát Hà Nội.
+
+Ngày 24/04/2013, Thủ tướng Chính phủ đã ký Quyết định số 614/QĐ-TTg về việc thành lập Trường Đại học Kiểm sát Hà Nội trên cơ sở nâng cấp Trường Đào tạo, bồi dưỡng nghiệp vụ kiểm sát.
+
+Ngày 07/02/2025, Viện trưởng VKSND tối cao đã ban hành Quyết định số 01 trong đó sáp nhập trường Đại học Kiểm sát Hà Nội với trường Bồi dưỡng nghiệp vụ Kiểm sát, lấy tên là trường Đại học Kiểm sát."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -45,8 +56,16 @@ university:truong-dai-hoc-kiem-sat a dbo:University,
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:nguyen-van-khoat ;
     vnedu:website <https://tks.edu.vn/> ;
+    schema:email "truongks@tks.edu.vn" ;
     schema:employee person:nguyen-van-khoat ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/2/25/Ph%C3%B9_hi%E1%BB%87u_Tr%C6%B0%E1%BB%9Dng_%C4%90HKS_H%C3%A0_N%E1%BB%99i.svg> ;
+    schema:telephone "+84.24 33.580.467" .
+
+<https://upload.wikimedia.org/wikipedia/vi/2/25/Ph%C3%B9_hi%E1%BB%87u_Tr%C6%B0%E1%BB%9Dng_%C4%90HKS_H%C3%A0_N%E1%BB%99i.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Ph%C3%B9_hi%E1%BB%87u_Tr%C6%B0%E1%BB%9Dng_%C4%90HKS_H%C3%A0_N%E1%BB%99i.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/2/25/Ph%C3%B9_hi%E1%BB%87u_Tr%C6%B0%E1%BB%9Dng_%C4%90HKS_H%C3%A0_N%E1%BB%99i.svg/330px-Ph%C3%B9_hi%E1%BB%87u_Tr%C6%B0%E1%BB%9Dng_%C4%90HKS_H%C3%A0_N%E1%BB%99i.svg.png> .
 

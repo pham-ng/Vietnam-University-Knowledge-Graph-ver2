@@ -20,16 +20,20 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-si-quan-tang-thiet-giap",
   "@type": [
     "schema:Organization",
-    "vnedu:OfficerSchool",
     "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
     "vnedu:Organization",
     "vnedu:MilitaryInstitution",
+    "vnedu:OfficerSchool",
     "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
     "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity"
+    "vnedu:HigherEducationInstitution"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Sĩ quan Tăng – Thiết giáp (TGH) trực thuộc Bộ Tư lệnh Tăng - Thiết giáp của Bộ Quốc phòng, là trường đào tạo sĩ quan chỉ huy chiến thuật tăng và thiết giáp cấp phân đội, trình độ cử nhân quân sự, bậc đại học và cao đẳng. Trực thuộc: Bộ tư lệnh Tăng - Thiết giáp của Bộ Quốc phòng. Thành lập vào: ngày 22 tháng 06 năm 1965. Viết tắt: ĐHSQTTG/MUTAO. Tên tiếng Anh: Military Unversity of Tank Armour Officer Mã trường: TGH. Phục vụ: Lực lượng Vũ trang Quân đội Nhân dân Việt Nam. Trực thuộc: Bộ tư lệnh Tăng - Thiết giáp của Bộ Quốc phòng."
+  },
   "foaf:homepage": {
     "@id": "http://siquantangthietgiap.vn"
   },
@@ -49,15 +53,18 @@
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Sĩ quan Tăng – Thiết giáp"
-    },
-    {
       "@language": "en",
       "@value": "Armored and Tank Officer School (Vietnam)"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Sĩ quan Tăng – Thiết giáp"
     }
   ],
   "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho"
+    },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-phuc"
     },
@@ -66,11 +73,10 @@
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho"
     }
   ],
+  "schema:telephone": "0211 353 9021",
+  "skos:altLabel": "Military University of Tank Armour Officer - MUTAO",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Sĩ quan Tăng – Thiết giáp"
@@ -91,7 +97,14 @@
   "vnedu:hasAlumnus": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-van-giang"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Ngày 05 tháng 10 năm 1959, Bộ Quốc phòng ra Quyết định số 499/NĐ thành lập Trung đoàn xe tăng 202, trung đoàn xe tăng đầu tiên của Quân đội Nhận dân Việt Nam. Ngay từ những ngày đầu thành lập ngoài các tiểu đoàn xe tăng, pháo tự hành, các phân đội phục vụ bảo đảm có trong biên chế, trung đoàn còn có một đại đội có nhiệm vụ huấn luyện tập trung về xe tăng cho bộ đội mang phiên hiệu Đại đội 15.\n\nNgày 22 tháng 06 năm 1965, Bộ trưởng Bộ Quốc Phòng ra Quyết định số 101/QĐ-QP thành lập Bộ Tư lệnh Tăng Thiết giáp. Lực lượng trực thuộc Bộ Tư lệnh gồm 2 trung đoàn xe tăng 202, 203; ba cơ quan ( Tham mưu, Chính trị, Hậu cần kỹ thuật) và đặt biệt là một Tiểu đoàn huấn luyện mang phiên hiệu Tiểu đoàn 10 đặt dưới sự chỉ đạo trực tiếp của Bộ Tư lệnh Thiết giáp. Về biên chế, Tiểu đoàn 10 có 3 Đại đội huấn luyện, cán bộ đại đội, trung đội vừa quản lý bộ đội vừa quản lý cơ sở vật chất đồng thời kiêm nghiệm giáo viên huấn luyện. Địa bàn đóng quân của nhà trường thuộc địa phận xã Kim Long , huyện Tam Dương, tỉnh Vĩnh Phúc.\n\nNgày 22 tháng 06 năm 1965 trở thành dấu mốc khởi đầu trong chặng đường xây dựng, trưởng thành của Trường Đại học Sĩ quan Tăng - Thiết giáp, đồng thời trở thành ngày hội truyền thống hàng năm của Nhà trường.\n\nNgày 08 tháng 03 năm 1969, Thường vụ Đảng ủy Binh chủng đã đề nghị lên Quân ủy Trung ương, Bộ Quốc phòng cho phép Binh chủng tổ chức một Nhà trường có quy mô phù hợp hơn để đào tạo, bổ túc cán bộ, chiến sĩ xe tăng thiết giáp, kịp thời bổ sung cho các đơn vị. Trong thời gian chờ cấp trên chuẩn y, ngày 09 tháng 01 năm 1970, Đảng ủy Binh chủng đã ra Nghị quyết chuyên đề về tăng cường biên chế, tổ chức cho Tiểu đoàn 10 thành Đoàn Huấn luyện.\n\nNgày 07 tháng 01 năm 1972, Bộ Quốc phòng chính thước ra quyết định thành lập Đoàn 10 mang mật danh T600. Đoàn 10 được thành lập có nhiệm vụ: Bổ túc,đào tạo cán bộ chỉ huy sơ cấp; Bổ túc,đào tạo cán bộ kỹ thuật bậc trung học; Đào tạo chính trị viên phó đại đội; Mở các lớp tập huấn cán bộ tiểu đoàn bậc phó theo yêu cầu nhiệm vụ trên giao; Giúp đỡ nước bạn Lào bổ túc, đào tạo cán bộ, chiến sĩ, xe tăng, thiết giáp.\n\nNgày 10 tháng 04 năm 1973, căn cứ vào Sắc lệnh số 1121/SL ngày 11 tháng 07 năm 1959 quy định tổ chức của Bộ Quốc Phòng, theo đề nghị của Thủ trưởng Bộ Tổng tham mưu và Tổng cục Chính trị. Bộ trưởng Bộ Quốc phòng ra Quyết định số 56/QD-QP thành lập Trường Sĩ quan Thiết giáp thuộc Bộ Tư lệnh Thiết giáp."
+  },
   "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho"
+    },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-phuc"
     },
@@ -100,9 +113,6 @@
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho"
     }
   ],
   "vnedu:motto": {

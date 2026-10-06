@@ -20,16 +20,20 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-si-quan-dac-cong",
   "@type": [
     "vnedu:OfficerSchool",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
     "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "vnedu:MilitaryInstitution",
+    "vnedu:EducationalOrganization",
     "schema:CollegeOrUniversity",
+    "vnedu:PublicInstitution",
+    "vnedu:HigherEducationInstitution",
+    "foaf:Organization",
     "schema:Organization",
-    "foaf:Organization"
+    "vnedu:Organization",
+    "vnedu:MilitaryInstitution"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Sĩ quan Đặc công (DCH) là một đơn vị sự nghiệp trực thuộc Binh chủng Đặc công của Bộ Quốc phòng có chức năng đào tạo, bồi dưỡng cán bộ, sĩ quan, hạ sĩ quan và nhân viên chuyên môn kỹ thuật cho binh chủng đặc công và các đơn vị trong toàn quân."
+  },
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_S%C4%A9_quan_%C4%90%E1%BA%B7c_c%C3%B4ng"
   },
@@ -38,25 +42,29 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10828885"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75543966"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75543966"
+      "@id": "wd:Q10828885"
     }
   ],
   "rdfs:label": {
     "@language": "vi",
     "@value": "Trường Sĩ quan Đặc công"
   },
+  "schema:foundingDate": {
+    "@type": "xsd:date",
+    "@value": "1967-07-20"
+  },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "skos:prefLabel": {
@@ -70,21 +78,25 @@
   },
   "vnedu:governedBy": [
     {
-      "@id": "vnedu:MinistryOfNationalDefence"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/binh-chung-dac-cong-cua-bo-quoc-phong"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/binh-chung-dac-cong-cua-bo-quoc-phong"
+      "@id": "vnedu:MinistryOfNationalDefence"
     }
   ],
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Cùng với sự phát triển, trưởng thành về quy mô lực lượng của toàn Binh chủng trong cuộc chống Mỹ cứu nước và trước nhu cầu đội ngũ cán bộ trong xây dựng, phát triển lực lượng Đặc công, ngày 20 tháng 7 năm 1967, Tổng Tham mưu trưởng ra quyết định thành lập Trường Bổ túc cán bộ Đặc công trực thuộc Bộ Tư lệnh Binh chủng. Tiếp đến ngày 12 tháng 2 năm 1974, Bộ trưởng Bộ Quốc phòng ra Quyết định số 13 chuyển Trường bổ túc cán bộ Đặc công thành Trường Đại học Sĩ quan Đặc công. Từ năm 1993 Nhà trường đào tạo sĩ quan chỉ huy có trình độ cao đẳng. Đến tháng 9 năm 1998 cùng với các trường sĩ quan trong toàn quân thực hiện quyết định của Thủ tướng Chính phủ, Nhà trường đào tạo sĩ quan Đặc công có trình độ đại học theo ba chuyên ngành: Đặc công Nước, Đặc công Bộ và Đặc công Biệt động. Hiện nay Nhà trường đứng chân trên địa bàn xã Tân Tiến, huyện Chương Mỹ, thủ đô Hà Nội.\n\n- Chức năng của Nhà trường là: Đào tạo, bồi dưỡng cán bộ, hạ sĩ quan chỉ huy, nhân viên chuyên môn kỹ thuật Đặc công theo yêu cầu, nhiệm vụ cấp trên giao và nghiên cứu, ứng dụng, phát triển Khoa học Nghệ thuật Quân sự Đặc công, các lĩnh vực liên quan đến tác chiến Đặc công và Khoa học giáo dục - đào tạo quân sự.\n\n+ Tuyển sinh đào tạo, bồi dưỡng đội ngũ cán bộ; hạ sĩ quan chỉ huy, nhân viên chuyên môn kỹ thuật Đặc công Việt Nam và Quốc tế.\n\n+ Tổ chức nghiên cứu Khoa học Nghệ thuật Quân sự Đặc công.\n\n+ Xây dựng nhà trường cách mạng, chính quy, tinh nhuệ, từng bước hiện đại, có môi trường văn hoá lành mạnh.\n\n+ Sẵn sàng chiến đấu, phòng chống “DBHB”- BLLĐ và chống khủng bố; phòng chống bão lụt, tìm kiếm cứu hộ, cứu nạn.\n\n+ Trình diễn kỹ, chiến thuật Đặc công phục vụ các phái đoàn trong nước và quốc tế nghiên cứu, học tập.\n\n+ Trong những năm gần đây Nhà trường được giao thêm nhiệm vụ đào tạo lực lượng Đặc công chống khủng bố và liên kết đào tạo trình độ cao đẳng cho Bộ Công an.\n\n- Trải qua gần 50 năm chiến đấu, xây dựng và trưởng thành, Nhà trường luôn hoàn thành xuất sắc mọi nhiệm vụ được giao đặc biệt là:\n\n+ Trong cuộc kháng chiến chống Mỹ cứu nước Nhà trường đã bổ túc, đào tạo được hàng vạn cán bộ Đặc công cho Binh chủng, cho các chiến trường, cho toàn quân và bạn bè quốc tế."
+  },
   "vnedu:locatedIn": [
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     }
   ],
   "vnedu:motto": {

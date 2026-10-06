@@ -28,6 +28,7 @@ university:truong-dai-hoc-cong-nghe-van-xuan a dbo:University,
         schema:Organization ;
     rdfs:label "Van Xuan University of Technology"@en,
         "Trường Đại học Công nghệ Vạn Xuân"@vi ;
+    dbo:abstract "Trường Đại học Công nghệ Vạn Xuân (tiếng Anh: Van Xuan University of Technology, viết tắt là VXUT). Trường được thành lập ngày 6 tháng 8 năm 2008 theo Quyết định 1068/QĐ-TTg của Thủ tướng Chính phủ Việt Nam. Trụ sở chính của Trường ở tại 103 Đại lộ Nguyễn Sinh Cung, phường Cửa Lò (trước đây thuộc thành phố Vinh), tỉnh Nghệ An, Việt Nam và Cơ sở 2 ở tại Km 2 Đại lộ Lê-nin, thành phố Vinh, tỉnh Nghệ An, Việt Nam."@vi ;
     owl:sameAs dbr:Van_Xuan_University_of_Technology,
         wd:Q7913787,
         <https://ror.org/01pjwns67> ;
@@ -48,8 +49,17 @@ university:truong-dai-hoc-cong-nghe-van-xuan a dbo:University,
     vnedu:ownership vnedu:PrivateOwnership ;
     vnedu:rector person:nguyen-luu-thuy ;
     vnedu:website <https://www.vxut.edu.vn/> ;
+    schema:email "vanxuan@vxut.edu.vn" ;
     schema:employee person:nguyen-luu-thuy ;
+    schema:foundingDate "2008-08-06"^^xsd:date ;
     schema:location country:viet-nam,
         province:nghe-an,
-        region:trung-bo .
+        region:trung-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/f/f0/Logo_VXUT_2.jpg> ;
+    schema:telephone "0238-3956561" .
+
+<https://upload.wikimedia.org/wikipedia/vi/f/f0/Logo_VXUT_2.jpg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_VXUT_2.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/f/f0/Logo_VXUT_2.jpg/330px-Logo_VXUT_2.jpg> .
 

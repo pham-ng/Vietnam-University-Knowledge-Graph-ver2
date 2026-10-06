@@ -19,26 +19,26 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-la-thang",
   "@type": [
-    "vnedu:Person",
-    "foaf:Person",
+    "schema:Person",
     "vnedu:Alumnus",
-    "schema:Person"
+    "foaf:Person",
+    "vnedu:Person"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/%C4%90inh_La_Th%C4%83ng"
+      "@id": "https://vi.wikipedia.org/wiki/%C4%90inh_La_Th%C4%83ng"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/%C4%90inh_La_Th%C4%83ng"
+      "@id": "https://en.wikipedia.org/wiki/%C4%90inh_La_Th%C4%83ng"
     }
   ],
   "foaf:name": "Đinh La Thăng",
   "owl:sameAs": [
     {
-      "@id": "wd:Q94392"
+      "@id": "dbr:Đinh_La_Thăng"
     },
     {
-      "@id": "dbr:Đinh_La_Thăng"
+      "@id": "wd:Q94392"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -46,11 +46,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Đinh La Thăng"
     },
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Đinh La Thăng"
     }
   ],

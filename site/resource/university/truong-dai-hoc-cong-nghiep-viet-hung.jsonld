@@ -17,89 +17,117 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghiep-viet-hung",
-  "@type": [
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "https://viu.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_nghi%E1%BB%87p_Vi%E1%BB%87t_%E2%80%93_Hung"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "wd:Q16480995"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghiep-viet-hung",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghiệp Việt – Hung (tiếng Anh: Vietnam–Hungary Industrial University – VIU) là trường đại học công lập trực thuộc Bộ Công Thương, chịu sự quản lý của Bộ Giáo dục và Đào tạo."
+      },
+      "foaf:homepage": {
+        "@id": "https://viu.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_nghi%E1%BB%87p_Vi%E1%BB%87t_%E2%80%93_Hung"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/02sndnx77"
+        },
+        {
+          "@id": "wd:Q16480995"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75101686"
+        },
+        {
+          "@id": "wd:Q16480995"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Viet-Hung Industrial University"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Công nghiệp Việt – Hung"
+        }
+      ],
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/3/3b/Logo_viethung.png"
+      },
+      "schema:telephone": "+84 433 838 345",
+      "skos:altLabel": "Đại học Việt Hung",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghiệp Việt – Hung"
+      },
+      "vnedu:address": "Khu A: Số 16 phố Hữu Nghị, phường Xuân Khanh, thị xã Sơn Tây, thành phố Hà Nội",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1977"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-cong-thuong"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Năm 1977: trường Công nhân kỹ thuật Hữu nghị Việt Nam-Hungary được thành lập nhờ sự giúp đỡ to lớn và quý báu của Hungary. Trường có sứ mệnh đào tạo những lớp thanh niên mới trở thành những người lao động có kỹ thuật cao, có kỷ luật và tác phong công nghiệp để xây dựng đất nước sau chiến tranh. Quy mô thiết kế ban đầu của trường là 1.000 học sinh, đào tạo các nhóm ngành Cơ khí và Điện.\n\nNăm 1988: Trường được nâng cấp và đổi tên thành trường Trung học Công nghiệp Việt-Hung, với nhiệm vụ đào tạo các kỹ thuật viên trung cấp tham gia vào sự nghiệp công nghiệp hóa và hiện đại hóa đất nước. Quy mô của trường được nâng lên 2.500 học sinh. Các ngành đào tạo được mở rộng đáp ứng nhu cầu xã hội. Nhà trường đào tạo thêm các ngành Kế toán và Công nghệ thông tin.\n\nNăm 2005: Trường được nâng cấp thành trường Cao đẳng với tên gọi mới Trường Cao đẳng Công nghiệp Việt-Hung, đánh dấu bước trưởng thành vượt bậc về chất của nhà trường. Trình độ đội ngũ giáo viên được nâng lên rõ rệt. Cơ sở vật chất được bổ sung đáp ứng quy mô đào tạo 4.500 học sinh, sinh viên. Nhà trường tiếp tục hoạch định chiến lược chuẩn bị các điều kiện để trở thành trường Đại học.\n\nNăm 2010: Trường được Nhà nước nâng cấp thành trường Đại học Công nghiệp Việt-Hung. Qua 3 lần nâng cấp từ công nhân lên trung cấp, từ trung cấp lên cao đẳng và từ cao đẳng lên Đại học nhà trường vẫn giữ tên gọi trường Việt-Hung."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:website": {
+        "@id": "https://viu.edu.vn/"
+      }
     },
     {
-      "@id": "https://ror.org/02sndnx77"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/3/3b/Logo_viethung.png",
+      "@type": "schema:ImageObject",
+      "schema:license": "KTD",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_viethung.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/3/3b/Logo_viethung.png"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q16480995"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75101686"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Viet-Hung Industrial University"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Công nghiệp Việt – Hung"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Công nghiệp Việt – Hung"
-  },
-  "vnedu:address": "Khu A: Số 16 phố Hữu Nghị, phường Xuân Khanh, thị xã Sơn Tây, thành phố Hà Nội",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1977"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-cong-thuong"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:website": {
-    "@id": "https://viu.edu.vn/"
-  }
+  ]
 }

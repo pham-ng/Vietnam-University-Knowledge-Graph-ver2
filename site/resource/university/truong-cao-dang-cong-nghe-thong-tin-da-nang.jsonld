@@ -19,14 +19,18 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-cong-nghe-thong-tin-da-nang",
   "@type": [
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:EducationalOrganization",
-    "vnedu:VocationalCollege",
     "vnedu:Organization",
     "schema:EducationalOrganization",
-    "vnedu:PublicInstitution"
+    "vnedu:EducationalOrganization",
+    "vnedu:PublicInstitution",
+    "vnedu:VocationalCollege",
+    "schema:Organization",
+    "foaf:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Cao đẳng Công nghệ Thông tin, Đại học Đà Nẵng (tên tiếng Anh: College of Information Technology - The University of Danang) là một trường công lập, thành viên của Đại học Đà Nẵng. Trường được thành lập theo quyết định số 5553/QĐ-BGD&ĐT-TCCB ngày 14 tháng 10 năm 2003 của Bộ trưởng Bộ Giáo dục và Đào tạo. Trường Cao đẳng Công nghệ Thông tin - Đại học Đà Nẵng có chức năng đào tạo nguồn nhân lực công nghệ thông tin trình độ cao đẳng, góp phần tích cực vào sự phát triển của nền công nghiệp Công nghệ Thông tin Việt Nam. Đồng thời tiến hành nghiên cứu khoa học và chuyển giao công nghệ thông tin tiên tiến, đặc biệt là hướng vào các ứng dụng nhằm góp phần đẩy mạnh sự nghiệp công nghiệp hóa, hiện đại hóa đất nước."
+  },
   "foaf:homepage": {
     "@id": "http://www.cit.udn.vn"
   },
@@ -46,30 +50,32 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74850037"
+      "@id": "wd:Q10828790"
     },
     {
-      "@id": "wd:Q10828790"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74850037"
     }
   ],
   "rdfs:label": {
     "@language": "vi",
     "@value": "Trường Cao đẳng Công nghệ Thông tin Đà Nẵng"
   },
+  "schema:email": "tuyensinh@cit.udn.vn",
   "schema:employee": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huynh-cong-phap"
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
     }
   ],
+  "schema:telephone": "84) 0511-3667113",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Cao đẳng Công nghệ Thông tin Đà Nẵng"
@@ -88,13 +94,13 @@
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/da-nang"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     }
   ],
   "vnedu:numberOfStudents": {

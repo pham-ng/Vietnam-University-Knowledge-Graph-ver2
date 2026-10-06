@@ -9,13 +9,13 @@ Mọi con số dưới đây đều do script đo được và chạy lại đư
 
 | Tiêu chí | Repo cũ (`vio`) | VN-Edu 2.0 |
 |---|---|---|
-| Triple | 9.649 | 36.161 (17.348 khẳng định + 3.670 liên kết + 14.484 suy luận) |
+| Triple | 9.649 | 39.507 (20.446 khẳng định + 3.674 liên kết + 14.666 suy luận) |
 | Thực thể "trường" | 327, gắn kiểu `University` cho cả bệnh viện (Bệnh viện Quân y 103), ký túc xá, dự án khu đô thị, trường trung học, thậm chí một chính khách (Trường Chinh) | 300, phân theo loại hình pháp lý; 68 thực thể bị loại có ghi lý do |
 | **Nhất quán logic** khi suy luận OWL 2 RL | **349 mâu thuẫn** (344 `Site ⊥ Place` do `geo:lat rdfs:domain Site`; 5 trường có 2 năm thành lập) | **0** (có test tự động) |
 | Câu hỏi có đáp án chuẩn (năm thành lập, trụ sở, chủ quản) | **13/21** (ĐH Luật HN "1727", HV Hải quân "2022", ĐH An Giang "1976", ĐH Thủ Dầu Một ở "Bình Phước") | **21/21** |
 | Câu hỏi tổng hợp/so sánh: công lập vs tư thục, theo miền, sau sáp nhập tỉnh, đã giải thể, theo mã tuyển sinh | không biểu diễn được (thiếu khái niệm) | trả lời được |
 | Thành viên ĐHQG HN | 62 (sai) | 12 |
-| Liên kết ngoài | 305, chỉ Wikidata | 1.878 Wikidata · 258 DBpedia · 195 ROR · 63 GeoNames · 1.188 Wikipedia |
+| Liên kết ngoài | 305, chỉ Wikidata | 1.880 Wikidata · 260 DBpedia · 195 ROR · 63 GeoNames · 1.188 Wikipedia |
 | Kiểm định | không | JSON Schema (silver) + SHACL + kiểm tra nhất quán + 46 test |
 
 **Những điểm repo cũ làm tốt hơn** (nói thật):
@@ -72,7 +72,7 @@ Xác minh chéo DBpedia đã loại 14 liên kết mơ hồ, ví dụ `dbr:Pleik
 |---|---|---|
 | ★ | **Có trên Web** + giấy phép mở | ✅ **Đã khắc phục**: công bố tại https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ (GitHub Pages), giấy phép CC BY-SA 4.0 (`LICENSE-DATA.md`, VoID/DCAT, `*.meta.json`). *Trước đó: chỉ nằm trên máy cục bộ — chưa đạt.* |
 | ★★ ★★★ | Có cấu trúc, định dạng mở | ✅ JSON/CSV/Turtle |
-| ★★★★ | Chuẩn W3C + **URI để người khác trỏ tới** | ✅ **Đã khắc phục**: URI gốc đổi từ `http://localhost:8000/` sang `https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/`; 2.211 URI tra cứu được (HTML + JSON-LD nhúng, `.ttl`, `.jsonld`). Repo cũ dùng `http://vi.dbpedia.org/…` — tên miền không thuộc quyền mình — nên không đạt. |
+| ★★★★ | Chuẩn W3C + **URI để người khác trỏ tới** | ✅ **Đã khắc phục**: URI gốc đổi từ `http://localhost:8000/` sang `https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/`; 2.241 URI tra cứu được (HTML + JSON-LD nhúng, `.ttl`, `.jsonld`). Repo cũ dùng `http://vi.dbpedia.org/…` — tên miền không thuộc quyền mình — nên không đạt. |
 | ★★★★★ | Liên kết tới dataset khác | ✅ hợp lệ và đã kiểm chứng |
 
 **Kết luận (cập nhật): sau bước 7, dataset đạt đủ 5 sao** — có trên Web, giấy phép mở, URI công khai cố định tra cứu

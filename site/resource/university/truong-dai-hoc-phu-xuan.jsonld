@@ -17,119 +17,179 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-phu-xuan",
-  "@type": [
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:PrivateInstitution",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.phuxuan.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ph%C3%BA_Xu%C3%A2n"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "16.464592"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "107.592368"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q16481063"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "wd:Q16481063"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/8/80/Logo_PXU_%C4%91%E1%BB%8F_-_navy.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Lyth77",
+      "schema:license": "CC0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Logo_PXU_%C4%91%E1%BB%8F_-_navy.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Logo_PXU_%C4%91%E1%BB%8F_-_navy.png/330px-Logo_PXU_%C4%91%E1%BB%8F_-_navy.png"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75562380"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-phu-xuan",
+      "@type": [
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PrivateInstitution"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Phú Xuân (tiếng Anh: Phu Xuan University, viết tắt PXU) là một trường đại học tư thục tại thành phố Huế, Việt Nam. Trường được thành lập ngày 11 tháng 7 năm 2003 theo Quyết định số 140/2003/QĐ-TTg của Thủ tướng Chính phủ, với tên gọi ban đầu là Trường Đại học dân lập Phú Xuân, do Hội Khuyến học Thừa Thiên – Huế sáng lập. Từ năm 2018, trường trở thành thành viên của Tập đoàn Giáo dục EQuest và tiến hành tái cấu trúc chương trình đào tạo, thu hẹp một số ngành cũ và mở các ngành mới theo định hướng thị trường lao động. Tính đến năm 2026, trường đào tạo tám ngành trình độ đại học với tổng chỉ tiêu 1.278 sinh viên, tập trung vào công nghệ thông tin, công nghệ kỹ thuật ô tô, du lịch, kinh doanh và ngôn ngữ. Trường đạt chuẩn kiểm định chất lượng cơ sở giáo dục theo bộ tiêu chuẩn trong nước, và có ba chương trình đào tạo trình độ đại học được công nhận đạt chuẩn chất lượng. Tháng 7 năm 2026, trường công bố bổ nhiệm Tiến sĩ Vũ Thành Tự Anh làm Chủ tịch Hội đồng trường và Tiến sĩ Nguyễn Quốc Toàn làm Hiệu trưởng, đồng thời công bố chiến lược phát triển mang tên PXU 2.0."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.phuxuan.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ph%C3%BA_Xu%C3%A2n"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "16.464592"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "107.592368"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q16481063"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75562380"
+        },
+        {
+          "@id": "wd:Q16481063"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Phu Xuan University"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Phú Xuân"
+        }
+      ],
+      "schema:employee": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-thanh-tu-anh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quoc-toan"
+        }
+      ],
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "2003-07-11"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/a/a2/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ph%C3%BA_Xu%C3%A2n.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/8/80/Logo_PXU_%C4%91%E1%BB%8F_-_navy.png"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tap-doan-giao-duc-equest"
+      },
+      "schema:telephone": "0234 7306888",
+      "skos:notation": "DPX",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Phú Xuân"
+      },
+      "vnedu:address": "176 Trần Phú, phường Phước Vĩnh",
+      "vnedu:admissionCode": "DPX",
+      "vnedu:councilChair": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-thanh-tu-anh"
+      },
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Trường Đại học dân lập Phú Xuân"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2003"
+      },
+      "vnedu:hasLeader": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quoc-toan"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-thanh-tu-anh"
+        }
+      ],
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường được thành lập bởi Hội Khuyến học Thừa Thiên – Huế ngày 11 tháng 7 năm 2003 theo Quyết định số 140/2003/QĐ-TTg của Thủ tướng Chính phủ, dưới tên Trường Đại học dân lập Phú Xuân.\n\nHội đồng sáng lập gồm nhiều nhà giáo và thành viên các cơ quan chức năng của tỉnh đương thời. Bốn thành viên chủ chốt là ông Nguyễn Đình Ngộ, ông Vương Hồng, ông Dương Đình Khôi và ông Nguyễn Văn Dũng.\n\nNăm 2018, trường nhận đầu tư từ Tập đoàn Giáo dục EQuest và trở thành thành viên của tổ chức này, kèm theo thay đổi về chủ sở hữu và ban lãnh đạo. Đàm Quang Minh được bổ nhiệm làm Hiệu trưởng khi EQuest đầu tư vào trường.\n\nNgày 15 tháng 11 năm 2020, Tiến sĩ Đàm Quang Minh thôi giữ chức Hiệu trưởng và chuyển sang phụ trách phát triển hệ thống giáo dục phổ thông của Tập đoàn EQuest, đồng thời tiếp tục giữ chức Chủ tịch Hội đồng trường. Hồ Thị Hạnh Tiên, khi đó là Phó Hiệu trưởng, được bổ nhiệm thay thế.\n\nNgày 2 tháng 7 năm 2026, trường công bố bổ nhiệm Tiến sĩ Vũ Thành Tự Anh giữ chức Chủ tịch Hội đồng trường và Nguyễn Quốc Toàn giữ chức Hiệu trưởng. Ông Vũ Thành Tự Anh nhận bằng tiến sĩ kinh tế tại Boston College và từng là Giám đốc Trường Chính sách công và Quản lý Fulbright thuộc Đại học Fulbright Việt Nam. Ông Nguyễn Quốc Toàn nhận bằng tiến sĩ kinh tế học tại Đại học New York, đồng thời là đồng sáng lập và Tổng giám đốc Tập đoàn Giáo dục EQuest.\n\nSau khi tiếp nhận, trường bỏ phần lớn các khoa và ngành học cũ để chuyển sang hệ thống khoa và ngành học mới. Ngành Ngôn ngữ Anh là một trong những ngành hình thành qua quá trình chuyển đổi này.\n\nNgày 31 tháng 12 năm 2023, trường thông báo dừng hoạt động tuyển sinh và đào tạo đối với bốn ngành trình độ đại học kể từ ngày 1 tháng 1 năm 2024: Việt Nam học, Công nghệ thực phẩm, Truyền thông đa phương tiện và Quan hệ công chúng. Số ngành tuyển sinh giảm từ 13 ngành năm 2023 xuống 9 ngành năm 2024 và 6 ngành năm 2025, trước khi tăng trở lại 8 ngành trong năm 2026.\n\nCùng với đợt bổ nhiệm lãnh đạo tháng 7 năm 2026, trường công bố một chiến lược phát triển mang tên PXU 2.0. Theo công bố của trường, chiến lược này đặt trọng tâm vào đào tạo gắn với thực tiễn, ứng dụng công nghệ và hợp tác quốc tế.\n\nCác nhóm ngành được trường xác định là ưu tiên gồm STEM, công nghệ cao, trí tuệ nhân tạo, khoa học dữ liệu, an ninh mạng và blockchain, bên cạnh các ngành khoa học xã hội, kinh doanh và quản lý."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Gieo tri thức – Gặt thịnh vượng"
+      },
+      "vnedu:numberOfUndergraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "6000"
+      },
+      "vnedu:ownedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tap-doan-giao-duc-equest"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PrivateOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quoc-toan"
+      },
+      "vnedu:shortName": "PXU",
+      "vnedu:website": {
+        "@id": "http://www.phuxuan.edu.vn/"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/a/a2/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ph%C3%BA_Xu%C3%A2n.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Lyth77",
+      "schema:license": "CC0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ph%C3%BA_Xu%C3%A2n.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ph%C3%BA_Xu%C3%A2n.jpg/330px-%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ph%C3%BA_Xu%C3%A2n.jpg"
+      }
     }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Phu Xuan University"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Phú Xuân"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quoc-toan"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tap-doan-giao-duc-equest"
-  },
-  "skos:notation": "DPX",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Phú Xuân"
-  },
-  "vnedu:address": "176 Trần Phú, phường Phước Vĩnh",
-  "vnedu:admissionCode": "DPX",
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Trường Đại học dân lập Phú Xuân"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2003"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quoc-toan"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Gieo tri thức – Gặt thịnh vượng"
-  },
-  "vnedu:numberOfUndergraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "6000"
-  },
-  "vnedu:ownedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tap-doan-giao-duc-equest"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PrivateOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-quoc-toan"
-  },
-  "vnedu:shortName": "PXU",
-  "vnedu:website": {
-    "@id": "http://www.phuxuan.edu.vn/"
-  }
+  ]
 }

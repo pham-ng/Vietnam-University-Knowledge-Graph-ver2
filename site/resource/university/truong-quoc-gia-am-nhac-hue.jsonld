@@ -19,15 +19,19 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-quoc-gia-am-nhac-hue",
   "@type": [
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:DefunctInstitution",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
+    "schema:EducationalOrganization",
     "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization"
+    "schema:CollegeOrUniversity",
+    "vnedu:DefunctInstitution",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "foaf:Organization",
+    "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Quốc gia Âm nhạc Huế là một cơ sở giáo dục chuyên về âm nhạc nhất là nhạc truyền thống Việt Nam. Trường hoạt động từ năm 1962 đến năm 1975 thì giải thể."
+  },
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_Qu%E1%BB%91c_gia_%C3%82m_nh%E1%BA%A1c_Hu%E1%BA%BF"
   },
@@ -51,10 +55,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:prefLabel": {
@@ -69,12 +73,16 @@
     "@type": "xsd:gYear",
     "@value": "1962"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Địa điểm của Trường là nhà hát Duyệt Thị Đường trong Đại Nội, Huế.\n\nCác giáo sư danh tiếng từng giảng dạy ở cơ sở này gồm có Trần Kích (nhã nhạc), Nguyễn Hữu Ba, Nguyễn Kế (ca Huế). Sinh viên do Trường đào tạo có những người thành tài như nhạc sĩ Hoàng Ngọc Quỳnh, Trần Quang Lộc.\n\nVăn Giảng: nhạc sĩ Nguyễn Hữu Ba: nhạc sĩ Trần Nhật Hiền\n\nNhạc sĩ Trần Quang Lộc Nhạc sĩ Lô Thanh Giáo sư Otto Söllner, Sau cuộc Tổng công kích Tết Mậu Thân 1968, Söllner rời Việt Nam và định cư ở Freilassing."
+  },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"

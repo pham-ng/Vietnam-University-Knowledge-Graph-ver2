@@ -17,95 +17,135 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-lao-dong-xa-hoi",
-  "@type": [
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.ulsa.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Lao_%C4%91%E1%BB%99ng_%E2%80%93_X%C3%A3_h%E1%BB%99i"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q10829085"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "wd:Q10829085"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/e/e2/Dai_hoc_LaoDongXaHoi.PNG",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Dai_hoc_LaoDongXaHoi.PNG"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/e/e2/Dai_hoc_LaoDongXaHoi.PNG"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75532521"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-lao-dong-xa-hoi",
+      "@type": [
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "vnedu:EducationalOrganization",
+        "schema:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Lao động – Xã hội là trường đại học công lập được thành lập trên cơ sở Trường Cao đẳng Lao động - Xã hội theo Quyết định số 26/2005/QĐ-TTg ngày 31/1/2005 của Thủ tướng Chính phủ chịu sự lãnh đạo và quản lý trực tiếp của Bộ Nội vụ và chịu sự quản lý về chuyên môn của Bộ Giáo dục và Đào tạo. Trụ sở chính của trường được đặt tại số 43 đường Trần Duy Hưng, phường Yên Hoà, thành phố Hà Nội. Năm thành lập trường được chọn là năm 1961. Ngày truyền thống của Trường là ngày 27 tháng 5."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.ulsa.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Lao_%C4%91%E1%BB%99ng_%E2%80%93_X%C3%A3_h%E1%BB%99i"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q10829085"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829085"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75532521"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "University of Labour and Social Affairs"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Lao động – Xã hội"
+        }
+      ],
+      "schema:employee": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-thanh-ha"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-ngoc-thanh"
+        }
+      ],
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/e/e2/Dai_hoc_LaoDongXaHoi.PNG"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "schema:telephone": "+84-(0)4. 556 6175",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Lao động – Xã hội"
+      },
+      "vnedu:address": "•43 đường Trần Duy Hưng, phường Yên Hòa, Thành phố Hà Nội (cơ sở 1)",
+      "vnedu:councilChair": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-thanh-ha"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1961"
+      },
+      "vnedu:hasLeader": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-thanh-ha"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-ngoc-thanh"
+        }
+      ],
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Lao động và Xã hội tiền thân là trường Trung học Lao động Tiền lương thuộc Bộ Lao động. Khởi nguồn từ tháng 3/1960, tại Miền Bắc lần đầu tiên hình thành Trường Cán bộ Lao động tại Cầu Diễn, Nam Từ Liêm, Hà Nội. Ngày 30/5/1961, Bộ trưởng Bộ Lao động Nguyễn Văn Tạo chính thức ký Quyết định thành lập Trường Lao động - Tiền lương trực thuộc Bộ Lao động cũng tại địa điểm trên, với nhiệm vụ ban đầu là đào tạo cán bộ lao động tiền lương cho toàn miền bắc .\n\nNgày 04/6/1962, Trường khai giảng khóa chuyên tu lao động - tiền lương đầu tiên và Trường mang tên Trường trung học Lao động - Tiền lương. Ngày 27/2/1988, Bộ Lao động giao thêm cho Trường nhiệm vụ đào tạo ngành Bảo trợ xã hội và Trường được đổi tên thành Trường trung học Lao động - Tiền lương và Bảo trợ xã hội (gọi tắt là Trường Trung học Lao động và Xã hội I vì cùng thời điểm, Bộ cũng thành lập Trường Trung học Lao động và Xã hội II ở TP. Hồ Chí Minh) .\n\nNgày 27/5/1991, Trường hợp nhất với Trường Quản lý Cán bộ Thương binh Xã hội, lấy tên là Trường Cán bộ Lao động và Xã hội, đóng tại địa bàn Trụ sở chính hiện nay tại xã Trung Hòa - huyện Từ Liêm - Hà Nội (nay là phố Trần Duy Hưng, phường Trung Hòa, quận Cầu Giấy, Hà Nội). Ngày 27/5 được chọn là ngày thành lập Trường (Trường Quản lý Cán bộ Thương binh Xã hội, tiền thân là Trường Cán bộ Thương binh Xã hội thuộc Bộ Nội vụ, được tách ra từ Trường Hành chính Trung ương).\n\nTháng 1/1997, Thủ tướng Chính phủ đã ký Quyết định nâng cấp Trường lên thành trường Cao đẳng Lao động và Xã hội.\n\nNgày 31/1/2005, Thủ tướng Chính phủ đã ra Quyết định số 26/2005/QĐ-TTg, thành lập trường Đại học Lao động và Xã hội trên cơ sở nâng cấp trường Cao đẳng Lao động và Xã hội với các ngành đào tạo chính là Quản trị nhân sự, Công tác xã hội, Bảo hiểm và Kế toán.\n\nTháng 12/2006, Bộ trưởng Bộ Lao động, Thương binh và Xã hội đã ra Quyết định sáp nhập Trường trung học Lao động và Xã hội tại Thành phố Hồ Chí Minh và Trường Kỹ nghệ I tại thị xã Sơn Tây(Hà Nội) thành Cơ sở II và Cơ sở Sơn Tây của Trường Đại học Lao động và xã hội."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Cùng bạn tạo dựng tương lai!"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-ngoc-thanh"
+      },
+      "vnedu:shortName": "ULSA",
+      "vnedu:website": {
+        "@id": "http://www.ulsa.edu.vn/"
+      }
     }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Lao động – Xã hội"
-    },
-    {
-      "@language": "en",
-      "@value": "University of Labour and Social Affairs"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-ngoc-thanh"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Lao động – Xã hội"
-  },
-  "vnedu:address": "•43 đường Trần Duy Hưng, phường Yên Hòa, Thành phố Hà Nội (cơ sở 1)",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1961"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-ngoc-thanh"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Cùng bạn tạo dựng tương lai!"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-ngoc-thanh"
-  },
-  "vnedu:shortName": "ULSA",
-  "vnedu:website": {
-    "@id": "http://www.ulsa.edu.vn/"
-  }
+  ]
 }

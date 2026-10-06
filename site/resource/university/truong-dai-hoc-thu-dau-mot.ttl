@@ -26,6 +26,7 @@ university:truong-dai-hoc-thu-dau-mot a dbo:University,
         schema:Organization ;
     rdfs:label "Thu Dau Mot University"@en,
         "Trường Đại học Thủ Dầu Một"@vi ;
+    dbo:abstract "Trường Đại học Thủ Dầu Một (tiếng Anh: Thu Dau Mot University) là một trường đại học đa ngành tại Thành phố Hồ Chí Minh, Việt Nam được thành lập theo quyết định số 900/QĐ-TTg ngày 24/06/2009 của Thủ tướng Chính phủ."@vi ;
     owl:sameAs wd:Q10829145,
         <https://ror.org/010y5b925> ;
     skos:prefLabel "Trường Đại học Thủ Dầu Một"@vi ;
@@ -45,8 +46,10 @@ university:truong-dai-hoc-thu-dau-mot a dbo:University,
     vnedu:rector person:le-tuan-anh-3 ;
     vnedu:website <https://tdmu.edu.vn/> ;
     schema:employee person:le-tuan-anh-3 ;
+    schema:foundingDate "2009-06-24"^^xsd:date ;
     schema:location country:viet-nam,
         province:binh-duong,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:telephone "+84-(274) 382 2518" .
 

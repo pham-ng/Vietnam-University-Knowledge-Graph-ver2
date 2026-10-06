@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -23,6 +24,7 @@ university:truong-si-quan-khong-quan a foaf:Organization,
         schema:EducationalOrganization,
         schema:Organization ;
     rdfs:label "Trường Sĩ quan Không quân"@vi ;
+    dbo:abstract "Trường Sĩ quan Không quân (KGH) là trường đại học quân sự trực thuộc Quân chủng Phòng không- Không quân- Bộ Quốc phòng Việt Nam, chuyên đào tạo phi công quân sự, nhân viên kỹ thuật hàng không trình độ cao đẳng và trung cấp kỹ thuật cho Quân đội nhân dân Việt Nam. Ngày truyền thống: 20/08/1959 ngày thành lập trường Hàng không Việt Nam. Trụ sở chính: Cổng số 03 - Đường Biệt Thự - phường Nha Trang - Khánh Hòa"@vi ;
     owl:sameAs wd:Q10828884 ;
     skos:prefLabel "Trường Sĩ quan Không quân"@vi ;
     prov:wasDerivedFrom wd:Q10828884,
@@ -32,12 +34,21 @@ university:truong-si-quan-khong-quan a foaf:Organization,
     vnedu:address "Cổng 3, đường Biệt Thự Nha Trang, Khánh Hòa" ;
     vnedu:foundingYear "1959"^^xsd:gYear ;
     vnedu:governedBy vnedu:MinistryOfNationalDefence ;
+    vnedu:history "Ngày 20/08/1959, Bộ Quốc phòng ra Nghị định số 427/NĐ thành lập Trường Huấn luyện hàng không (tiền thân của Trường Sĩ quan Không quân) tại sân bay Cát Bi, thành phố Hải Phòng. Tính đến tháng 8 năm 1965, Trường đã hoàn thành 5 khoá đào tạo phi công trên các loại máy bay cánh quạt, trực thăng và vận tải quân sự. Ngoài công tác đào tạo, Trường còn trực tiếp tham gia vận tải đường không cho tuyến vận tải chiến lược 559 và chiến trường Lào (1960 -1962). Từ tháng 9 năm 1965 đến tháng 5 năm 1975, Trường sơ tán ra nước ngoài (Trung Quốc) tiếp tục làm nhiệm vụ đào tạo phi công vận tải cánh quạt và đào tạo phi công phản lực chiến đấu MiG-17; đồng thời làm nhiệm vụ bảo quản các loại máy bay dự trữ chiến đấu cho Không quân. Sau đại thắng mùa Xuân 1975, Trường tiếp quản các sân bay Nha Trang, Cam Ranh, Phan Rang. Hợp nhất các đơn vị: Trung đoàn 910 và Phân hiệu đào tạo sĩ quan Tham mưu (thuộc Trường Không quân), khoa Không quân và Tiểu đoàn kỹ thuật Không quân (thuộc Trường trung cấp kỹ thuật Phòng không-Không quân) thành Trường Đại học Sĩ quan Không quân. Đến tháng 1 năm 1981 Trường được đổi tên thành Trường Sĩ quan Chỉ huy-Kỹ thuật Không quân. Trong giai đoạn từ 1975 đến 1994, Trường có nhiệm vụ đào tạo phi công các loại máy bay cánh quạt, trực thăng và phản lực chiến đấu; đào tạo sĩ quan tham mưu, chính trị, kỹ thuật và nhân viên trung cấp kỹ thuật hàng không. Theo quyết định số 392/QĐ-QP ngày 31/12/1994 của Bộ Quốc phòng, Trường được đổi tên thành Trường Huấn luyện bay-Kỹ thuật Không quân có nhiệm vụ đào tạo nhân viên kỹ thuật hàng không trình độ cao đẳng. Năm 1995, Trường Đại học Sĩ quan Không quân đã liên kết với Học viện Không quân đào tạo phi công quân sự có trình độ đại học (Trường đảm nhiệm giai đoạn đào tạo chuyên ngành và thực hành bay; đào tạo nhân viên kỹ thuật hàng không trình độ cao đẳng. Học viện Không quân đảm nhiệm giai đoạn đào tạo đại học đại cương, một phần chuyên ngành và cấp bằng tốt nghiệp). Ngày 25/02/ 2002, Bộ Quốc phòng ra quyết định số 31/2002/QĐ-BQP về việc đổi tên Trường Huấn luyện bay - Kỹ thuật Không quân thành Trường Đại học Sĩ quan Không quân; có nhiệm vụ tiếp tục liên kết với Học viện Phòng không - Không quân đào tạo phi công quân sự trình độ đại học và tích cực hoàn thiện các điều kiện đào tạo phi công quân sự có trình độ đại học một cách độc lập; đào tạo nhân viên kỹ thuật hàng không trình độ cao đẳng. Ngày 05/01/2006 Thủ tướng Chính phủ ký Quyết định số 03/2006/QĐ-TTg giao nhiệm vụ đào tạo đại học cho Trường Sĩ quan Không quân."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:khanh-hoa,
         region:trung-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:website <http://tsqkq.edu.vn/> ;
+    schema:foundingDate "1959-08-20"^^xsd:date ;
     schema:location country:viet-nam,
         province:khanh-hoa,
-        region:trung-bo .
+        region:trung-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_the_Vietnam_People%27s_Air_Force.svg> .
+
+<https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_the_Vietnam_People%27s_Air_Force.svg> a schema:ImageObject ;
+    schema:creditText "Vietnam People's Air Force" ;
+    schema:license "Public domain" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Flag_of_the_Vietnam_People%27s_Air_Force.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Vietnam_People%27s_Air_Force.svg/330px-Flag_of_the_Vietnam_People%27s_Air_Force.svg.png> .
 

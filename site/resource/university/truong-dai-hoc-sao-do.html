@@ -30,101 +30,129 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-sao-do",
-  "@type": [
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution"
-  ],
-  "foaf:homepage": {
-    "@id": "http://saodo.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Sao_%C4%90%E1%BB%8F"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q10829121"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "wd:Q10829121"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-sao-do",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Sao Đỏ (tên tiếng Anh: Red Star University) là trường Đại học công lập được thành lập năm 2010 trên cơ sở nâng cấp Trường Cao đẳng Công nghiệp Sao Đỏ, có trụ sở chính tại Số 76, Đường Nguyễn Thị Duệ, Tổ dân phố Thái Học 2, Phường Chu Văn An, TP. Hải Phòng. Trường là đơn vị sự nghiệp công lập về giáo dục trực thuộc Bộ Công thương, Trường có chức năng đào tạo, bồi dưỡng nguồn nhân lực có trình độ đại học, sau đại học và các trình độ thấp hơn theo quy định của pháp luật; đồng thời là trung tâm nghiên cứu, ứng dụng, chuyển giao khoa học - công nghệ đa ngành, đa lĩnh vực, chất lượng cao, đạt trình độ tiên tiến trong hệ thống giáo dục quốc dân, đáp ứng nhu cầu phát triển kinh tế, xã hội của đất nước. Hiện nay, trường đào tạo các hệ Đại học, Đại học liên thông, Cao đẳng, Cao đẳng liên thông, Trung cấp chuyên nghiệp, Cao đẳng nghề, Trung cấp nghề,... trong nhiều lĩnh vực, chủ yếu là kinh tế, kỹ thuật công nghiệp."
+      },
+      "foaf:homepage": {
+        "@id": "http://saodo.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Sao_%C4%90%E1%BB%8F"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q10829121"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75525960"
+        },
+        {
+          "@id": "wd:Q10829121"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "vi",
+        "@value": "Trường Đại học Sao Đỏ"
+      },
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-van-nhuong"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/4/49/Logo_dhsaodo_moi.PNG"
+      },
+      "schema:telephone": "+84 0320 3882 269",
+      "skos:altLabel": "SDU, Đại học Sao Đỏ, Trường Cơ điện",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Sao Đỏ"
+      },
+      "vnedu:academicStaff": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "284"
+      },
+      "vnedu:address": "Số 76, Đường Nguyễn Thị Duệ, TDP Thái Học 2, phường Chu Văn An",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2010"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-cong-thuong"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-van-nhuong"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Tiền thân của Trường là Trường Công nhân Cơ điện Mỏ, thành lập ngày 15 tháng 5 năm 1969, và Trường Công nhân Cơ khí Chí Linh thành lập ngày 8 tháng 4 năm 1975 thuộc Cục Đào tạo – Bộ Điện than. Năm 1979 chuyển về trực thuộc Công ty Than Uông Bí.\n\nNăm 1991, Bộ Năng lượng (nay là Bộ Công thương) quyết định sáp nhập 2 trường thành Trường Công nhân Cơ điện Chí Linh trực thuộc Công ty Cơ khí Mỏ. Năm 1995, Trường chuyển về trực thuộc Công ty Than Cẩm Phả. Năm 1997 trực thuộc Tổng Công ty Than Việt Nam. Từ năm 1999, Trường chuyển về trực thuộc Bộ Công nghiệp (nay là Bộ Công thương)\n\nNgày 13 tháng 3 năm 2001, Bộ trưởng Bộ Công nghiệp đã ký Quyết định số 13/2001/QĐ-BCN về việc thành lập Trường Trung học Công nghiệp Cơ điện trên cơ sở nâng cấp Trường Đào tạo nghề Cơ điện.\n\nNgày 4 tháng 10 năm 2004, Bộ trưởng Bộ Giáo dục và Đào tạo đã ký Quyết định số 5738/QĐ-BGD&ĐT-TCCB về việc thành lập Trường Cao đẳng Công nghiệp Sao Đỏ trên cơ sở nâng cấp Trường Trung học Công nghiệp Cơ điện.\n\nĐến ngày 24 tháng 3 năm 2010, Thủ tướng chính phủ đã ký Quyết định số 376/2010/QĐ-TTg về việc thành lập Trường Đại học Sao Đỏ trên cơ sở nâng cấp Trường Cao đẳng Công nghiệp Sao Đỏ."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Tri thức – Yếu tố quan trọng nhất của sản xuất; Sáng tạo – Động lực chủ yếu của phát triển!"
+      },
+      "vnedu:numberOfUndergraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "14500"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-van-nhuong"
+      },
+      "vnedu:website": {
+        "@id": "http://saodo.edu.vn"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75525960"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/4/49/Logo_dhsaodo_moi.PNG",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_dhsaodo_moi.PNG"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/4/49/Logo_dhsaodo_moi.PNG/330px-Logo_dhsaodo_moi.PNG"
+      }
     }
-  ],
-  "rdfs:label": {
-    "@language": "vi",
-    "@value": "Trường Đại học Sao Đỏ"
-  },
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-van-nhuong"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Sao Đỏ"
-  },
-  "vnedu:academicStaff": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "284"
-  },
-  "vnedu:address": "Số 76, Đường Nguyễn Thị Duệ, TDP Thái Học 2, phường Chu Văn An",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2010"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-cong-thuong"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-van-nhuong"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Tri thức – Yếu tố quan trọng nhất của sản xuất; Sáng tạo – Động lực chủ yếu của phát triển!"
-  },
-  "vnedu:numberOfUndergraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "14500"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-van-nhuong"
-  },
-  "vnedu:website": {
-    "@id": "http://saodo.edu.vn"
-  }
+  ]
 }</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -143,6 +171,8 @@
   <a href="truong-dai-hoc-sao-do.ttl">Turtle</a> · <a href="truong-dai-hoc-sao-do.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-sao-do">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 17 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Sao Đỏ (tên tiếng Anh: Red Star University) là trường Đại học công lập được thành lập năm 2010 trên cơ sở nâng cấp Trường Cao đẳng Công nghiệp Sao Đỏ, có trụ sở chính tại Số 76, Đường Nguyễn Thị Duệ, Tổ dân phố Thái Học 2, Phường Chu Văn An, TP. Hải Phòng. Trường là đơn vị sự nghiệp công lập về giáo dục trực thuộc Bộ Công thương, Trường có chức năng đào tạo, bồi dưỡng nguồn nhân lực có trình độ đại học, sau đại học và các trình độ thấp hơn theo quy định của pháp luật; đồng thời là trung tâm nghiên cứu, ứng dụng, chuyển giao khoa học - công nghệ đa ngành, đa lĩnh vực, chất lượng cao, đạt trình độ tiên tiến trong hệ thống giáo dục quốc dân, đáp ứng nhu cầu phát triển kinh tế, xã hội của đất nước. Hiện nay, trường đào tạo các hệ Đại học, Đại học liên thông, Cao đẳng, Cao đẳng liên thông, Trung cấp chuyên nghiệp, Cao đẳng nghề, Trung cấp nghề,... trong nhiều lĩnh vực, chủ yếu là kinh tế, kỹ thuật công nghiệp.</p><h2>Lịch sử</h2><p>Tiền thân của Trường là Trường Công nhân Cơ điện Mỏ, thành lập ngày 15 tháng 5 năm 1969, và Trường Công nhân Cơ khí Chí Linh thành lập ngày 8 tháng 4 năm 1975 thuộc Cục Đào tạo – Bộ Điện than. Năm 1979 chuyển về trực thuộc Công ty Than Uông Bí.</p><p>Năm 1991, Bộ Năng lượng (nay là Bộ Công thương) quyết định sáp nhập 2 trường thành Trường Công nhân Cơ điện Chí Linh trực thuộc Công ty Cơ khí Mỏ. Năm 1995, Trường chuyển về trực thuộc Công ty Than Cẩm Phả. Năm 1997 trực thuộc Tổng Công ty Than Việt Nam. Từ năm 1999, Trường chuyển về trực thuộc Bộ Công nghiệp (nay là Bộ Công thương)</p><details><summary>Đọc tiếp (3 đoạn)</summary><p>Ngày 13 tháng 3 năm 2001, Bộ trưởng Bộ Công nghiệp đã ký Quyết định số 13/2001/QĐ-BCN về việc thành lập Trường Trung học Công nghiệp Cơ điện trên cơ sở nâng cấp Trường Đào tạo nghề Cơ điện.</p><p>Ngày 4 tháng 10 năm 2004, Bộ trưởng Bộ Giáo dục và Đào tạo đã ký Quyết định số 5738/QĐ-BGD&amp;ĐT-TCCB về việc thành lập Trường Cao đẳng Công nghiệp Sao Đỏ trên cơ sở nâng cấp Trường Trung học Công nghiệp Cơ điện.</p><p>Đến ngày 24 tháng 3 năm 2010, Thủ tướng chính phủ đã ký Quyết định số 376/2010/QĐ-TTg về việc thành lập Trường Đại học Sao Đỏ trên cơ sở nâng cấp Trường Cao đẳng Công nghiệp Sao Đỏ.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75525960">«Trường Đại học Sao Đỏ»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75525960), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Sao Đỏ</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_dhsaodo_moi.PNG" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/4/49/Logo_dhsaodo_moi.PNG/330px-Logo_dhsaodo_moi.PNG" alt="Biểu trưng Trường Đại học Sao Đỏ" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên khác</th><td>SDU, Đại học Sao Đỏ, Trường Cơ điện</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>2010</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-cong-thuong">Bộ Công Thương</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">NGND TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-van-nhuong">Đinh Văn Nhượng</a></td></tr><tr><th>Địa chỉ</th><td>Số 76, Đường Nguyễn Thị Duệ, TDP Thái Học 2, phường Chu Văn An</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong">Hải Phòng</a></td></tr><tr><th>Giảng viên</th><td>284</td></tr><tr><th>Khẩu hiệu</th><td><i>Tri thức – Yếu tố quan trọng nhất của sản xuất; Sáng tạo – Động lực chủ yếu của phát triển!</i></td></tr><tr><th>Điện thoại</th><td>+84 0320 3882 269</td></tr><tr><th>Website</th><td><a href="http://saodo.edu.vn">saodo.edu.vn</a></td></tr></table></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
 
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
@@ -169,6 +199,15 @@
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong">Hải Phòng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/4/49/Logo_dhsaodo_moi.PNG">&lt;https://upload.wikimedia.org/wikipedia/vi/4/49/Logo_dhsaodo_moi.PNG&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84 0320 3882 269</div>
+</td></tr>
+<tr><td class="p">tên khác<small>skos:altLabel</small></td><td>
+<div>SDU, Đại học Sao Đỏ, Trường Cơ điện</div>
 </td></tr>
 <tr><td class="p">số giảng viên<small>vnedu:academicStaff</small></td><td>
 <div>284 <span class="lang">xsd:nonNegativeInteger</span></div>
@@ -208,11 +247,11 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-van-nhuong">Đinh Văn Nhượng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
 <tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-cong-thuong">Bộ Công Thương</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-van-nhuong">Đinh Văn Nhượng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

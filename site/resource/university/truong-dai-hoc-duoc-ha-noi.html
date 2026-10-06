@@ -30,217 +30,260 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-duoc-ha-noi",
-  "@type": [
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.hup.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Hanoi_University_of_Pharmacy"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/e/ea/HanoiUniversityOfPharmacy.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Đại học Dược Hà Nội",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:HanoiUniversityOfPharmacy.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/HanoiUniversityOfPharmacy.jpg/330px-HanoiUniversityOfPharmacy.jpg"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_D%C6%B0%E1%BB%A3c_H%C3%A0_N%E1%BB%99i"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/6/64/LogoHUP.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Đại học Dược Hà Nội",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:LogoHUP.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/6/64/LogoHUP.png"
+      }
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-duoc-ha-noi",
+      "@type": [
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Dược Hà Nội là một trường đại học công lập có trụ sở chính tại Hà Nội. Tiền thân là Khoa Dược thuộc Trường Y Dược khoa Đông Dương, năm 1961 trường được thành lập theo quyết định của Bộ trưởng Bộ Y tế."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.hup.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_D%C6%B0%E1%BB%A3c_H%C3%A0_N%E1%BB%99i"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/Hanoi_University_of_Pharmacy"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.021571"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.858077"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q16944333"
+        },
+        {
+          "@id": "dbr:Hanoi_University_of_Pharmacy"
+        },
+        {
+          "@id": "https://ror.org/03psjxz30"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q16944333"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75483524"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Dược Hà Nội"
+        },
+        {
+          "@language": "en",
+          "@value": "Hanoi University of Pharmacy"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hai-nam-2"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/e/ea/HanoiUniversityOfPharmacy.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/6/64/LogoHUP.png"
+      },
+      "schema:telephone": "+84-(0)4 38254539",
+      "skos:notation": "DKH",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Dược Hà Nội"
+      },
+      "vnedu:address": "13 - 15 Lê Thánh Tông, phường Cửa Nam",
+      "vnedu:admissionCode": "DKH",
+      "vnedu:formerName": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Y Dược Hà Nội"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Y Dược toàn cấp Đông Dương"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Y Dược khoa Đông Dương"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Dược khoa Hà Nội"
+        }
+      ],
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1902"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-y-te"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thu-thuy-le"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/trong-tuan-dao"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thuy-ngan-tran"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-t-h-ngo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-thi-phuong-thao"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thu-thi-pham"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phuong-thao-tran"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thu-ha-pham"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ta-ngoc-dung"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/khac-dung-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-thi-hong-le"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duy-hieu-truong"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nhung-phuong-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-thi-huong-hoa"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tuan-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-nguyen-thanh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-dinh-hoa"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-3"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tuan-hiep-tran"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/cuong-viet-pham"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngan-ha-tran"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dat-t-tran"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hai-pham-the"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hai-nam-2"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Ngày 8 tháng 1 năm 1902, Trường Y khoa Hà Nội được Toàn quyền Đông Dương ký nghị định thành lập. Ngày 26 tháng 7 năm 1909, chính phủ Pháp ra sắc lệnh quy định một số vấn đề về đào tạo dược. Năm 1914, Ban Dược được thành lập, việc đào tạo dược sỹ bắt đầu được thực hiện từ đó. Chương trình học ba năm đối với khoa Dược. Sinh viên tốt nghiệp được cấp bằng Dược sĩ Đông Dương (tương đương dược sĩ trung cấp ngày nay). Khóa tốt nghiệp đầu tiên năm 1917 chỉ có bốn người.\n\nTrường Y khoa Hà Nội (École de Médecine de Hanoi) được thành lập ngày 8 tháng 1 năm 1902 do bác sĩ Alexandre Yersin - giám đốc Viện Pasteur Nha Trang giữ chức hiệu trưởng đầu tiên. Trường được đặt tại Ấp Thái Hà. Đội ngũ giáo viên do Trường Đại học Y khoa Paris phê duyệt.\n\nNăm học đầu tiên (1902) có 19 sinh viên được tuyển chọn trên toàn Đông Dương vào lớp dự bị sau 6 tháng, qua kỳ kiểm tra chỉ còn 15 học sinh. Vì là chương trình của Pháp nên các sinh viên học toàn bàng tiếng Pháp. Bên cạnh trường có một bệnh xá với 40 giường bệnh và một phòng mổ tử thi. Đến năm 1904, trường chuyển về địa chỉ số 13 Lê Thánh Tông. Bệnh viện thực hành nằm ở số 132 Lò Đúc. Phòng mổ tử thi đặt tại Lương Yên. Năm 1906, bệnh viên thực hành được xây dựng mang tên Nhà thương bảo hộ (nay là bệnh viện Việt Đức).\n\nNăm 1906, Toàn quyền Đông Dương Paul Beau thành lập Viện Đại học Đông Dương (nay là Đại học Quốc gia Hà Nội), Trường Y khoa Hà Nội được sáp nhập trở thành một trường thành viên thuộc Viện Đại học Đông Dương.\n\nNgày 20 tháng 7 năm 1914, trường mở thêm khoa Dược đào tạo dược sỹ bậc trung học (sau này gọi là dược sỹ Đông Dương) và đổi tên thành Trường Y Dược khoa Đông Dương. Chương trình học ba năm đối với khoa Dược. Ngày 15 tháng 7 năm 1917, khoá dược sỹ đầu tiên ra trường gồm 4 người Việt Nam.\n\nNgày 22 tháng 4 năm 1924, Toàn quyền Đông Dương ký nghị định quy định trường có nhiệm vụ đào tạo bác sĩ y khoa, dược sĩ hạng nhất (Diplôme de Pharmacien 1ére classe - tương đương dược sĩ đại học ngày nay). Trước năm 1935, sinh viên năm thứ 5 thi và bảo vệ luận án tốt nghiệp tại Pháp.\n\nNăm 1945 sau Cách mạng tháng Tám, trường được thành lập trên cơ sở tiếp quản Trường Y Dược khoa Đông Dương và trở thành một trong 5 ban đại học trực thuộc Đại học Quốc gia Việt Nam với tên gọi Ban Y Dược do Giáo sư Hồ Đắc Di làm hiệu trưởng.\n\nNgày 15 tháng 11 năm 1946, Bộ Quốc gia Giáo dục tổ chức khai giảng khóa đầu tiên. Cuộc kháng chiến toàn quốc bùng nổ, trường tản cư đến vùng tự do Chiêm Hóa, Tuyên Quang."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:offersProgram": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-duoc-ha-noi-7720201"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hai-nam-2"
+      },
+      "vnedu:shortName": "HUP",
+      "vnedu:trainsMajor": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7720201"
+      },
+      "vnedu:website": {
+        "@id": "http://www.hup.edu.vn"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.021571"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.858077"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "https://ror.org/03psjxz30"
-    },
-    {
-      "@id": "dbr:Hanoi_University_of_Pharmacy"
-    },
-    {
-      "@id": "wd:Q16944333"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q16944333"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75483524"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Dược Hà Nội"
-    },
-    {
-      "@language": "en",
-      "@value": "Hanoi University of Pharmacy"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hai-nam-2"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:notation": "DKH",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Dược Hà Nội"
-  },
-  "vnedu:address": "13 - 15 Lê Thánh Tông, phường Cửa Nam",
-  "vnedu:admissionCode": "DKH",
-  "vnedu:formerName": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Dược khoa Hà Nội"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Y Dược Hà Nội"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Y Dược khoa Đông Dương"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Y Dược toàn cấp Đông Dương"
-    }
-  ],
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1902"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-y-te"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/cuong-viet-pham"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/trong-tuan-dao"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thuy-ngan-tran"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tuan-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dat-t-tran"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ta-ngoc-dung"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-thi-phuong-thao"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-dinh-hoa"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hai-pham-the"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-thi-hong-le"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-nguyen-thanh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-t-h-ngo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngan-ha-tran"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-3"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nhung-phuong-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thu-thuy-le"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duy-hieu-truong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tuan-hiep-tran"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-thi-huong-hoa"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thu-thi-pham"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/khac-dung-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thu-ha-pham"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phuong-thao-tran"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hai-nam-2"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    }
-  ],
-  "vnedu:offersProgram": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-duoc-ha-noi-7720201"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hai-nam-2"
-  },
-  "vnedu:shortName": "HUP",
-  "vnedu:trainsMajor": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7720201"
-  },
-  "vnedu:website": {
-    "@id": "http://www.hup.edu.vn"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([21.021571,105.858077],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([21.021571,105.858077],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -259,7 +302,9 @@
   <a href="truong-dai-hoc-duoc-ha-noi.ttl">Turtle</a> · <a href="truong-dai-hoc-duoc-ha-noi.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-duoc-ha-noi">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 43 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Dược Hà Nội là một trường đại học công lập có trụ sở chính tại Hà Nội. Tiền thân là Khoa Dược thuộc Trường Y Dược khoa Đông Dương, năm 1961 trường được thành lập theo quyết định của Bộ trưởng Bộ Y tế.</p><h2>Lịch sử</h2><p>Ngày 8 tháng 1 năm 1902, Trường Y khoa Hà Nội được Toàn quyền Đông Dương ký nghị định thành lập. Ngày 26 tháng 7 năm 1909, chính phủ Pháp ra sắc lệnh quy định một số vấn đề về đào tạo dược. Năm 1914, Ban Dược được thành lập, việc đào tạo dược sỹ bắt đầu được thực hiện từ đó. Chương trình học ba năm đối với khoa Dược. Sinh viên tốt nghiệp được cấp bằng Dược sĩ Đông Dương (tương đương dược sĩ trung cấp ngày nay). Khóa tốt nghiệp đầu tiên năm 1917 chỉ có bốn người.</p><p>Trường Y khoa Hà Nội (École de Médecine de Hanoi) được thành lập ngày 8 tháng 1 năm 1902 do bác sĩ Alexandre Yersin - giám đốc Viện Pasteur Nha Trang giữ chức hiệu trưởng đầu tiên. Trường được đặt tại Ấp Thái Hà. Đội ngũ giáo viên do Trường Đại học Y khoa Paris phê duyệt.</p><details><summary>Đọc tiếp (6 đoạn)</summary><p>Năm học đầu tiên (1902) có 19 sinh viên được tuyển chọn trên toàn Đông Dương vào lớp dự bị sau 6 tháng, qua kỳ kiểm tra chỉ còn 15 học sinh. Vì là chương trình của Pháp nên các sinh viên học toàn bàng tiếng Pháp. Bên cạnh trường có một bệnh xá với 40 giường bệnh và một phòng mổ tử thi. Đến năm 1904, trường chuyển về địa chỉ số 13 Lê Thánh Tông. Bệnh viện thực hành nằm ở số 132 Lò Đúc. Phòng mổ tử thi đặt tại Lương Yên. Năm 1906, bệnh viên thực hành được xây dựng mang tên Nhà thương bảo hộ (nay là bệnh viện Việt Đức).</p><p>Năm 1906, Toàn quyền Đông Dương Paul Beau thành lập Viện Đại học Đông Dương (nay là Đại học Quốc gia Hà Nội), Trường Y khoa Hà Nội được sáp nhập trở thành một trường thành viên thuộc Viện Đại học Đông Dương.</p><p>Ngày 20 tháng 7 năm 1914, trường mở thêm khoa Dược đào tạo dược sỹ bậc trung học (sau này gọi là dược sỹ Đông Dương) và đổi tên thành Trường Y Dược khoa Đông Dương. Chương trình học ba năm đối với khoa Dược. Ngày 15 tháng 7 năm 1917, khoá dược sỹ đầu tiên ra trường gồm 4 người Việt Nam.</p><p>Ngày 22 tháng 4 năm 1924, Toàn quyền Đông Dương ký nghị định quy định trường có nhiệm vụ đào tạo bác sĩ y khoa, dược sĩ hạng nhất (Diplôme de Pharmacien 1ére classe - tương đương dược sĩ đại học ngày nay). Trước năm 1935, sinh viên năm thứ 5 thi và bảo vệ luận án tốt nghiệp tại Pháp.</p><p>Năm 1945 sau Cách mạng tháng Tám, trường được thành lập trên cơ sở tiếp quản Trường Y Dược khoa Đông Dương và trở thành một trong 5 ban đại học trực thuộc Đại học Quốc gia Việt Nam với tên gọi Ban Y Dược do Giáo sư Hồ Đắc Di làm hiệu trưởng.</p><p>Ngày 15 tháng 11 năm 1946, Bộ Quốc gia Giáo dục tổ chức khai giảng khóa đầu tiên. Cuộc kháng chiến toàn quốc bùng nổ, trường tản cư đến vùng tự do Chiêm Hóa, Tuyên Quang.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75483524">«Trường Đại học Dược Hà Nội»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75483524), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Dược Hà Nội</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:LogoHUP.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://upload.wikimedia.org/wikipedia/commons/6/64/LogoHUP.png" alt="Biểu trưng Trường Đại học Dược Hà Nội" loading="lazy"></a><figcaption>CC BY-SA 4.0 · Đại học Dược Hà Nội</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>Hanoi University of Pharmacy</td></tr><tr><th>Viết tắt</th><td>HUP</td></tr><tr><th>Mã trường</th><td>DKH</td></tr><tr><th>Tên cũ</th><td>Trường Y Dược khoa Đông Dương<br>Trường Y Dược toàn cấp Đông Dương<br>Trường Đại học Dược khoa Hà Nội<br>Trường Đại học Y Dược Hà Nội</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>1902</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-y-te">Bộ Y tế</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">GS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hai-nam-2">Nguyễn Hải Nam</a></td></tr><tr><th>Địa chỉ</th><td>13 - 15 Lê Thánh Tông, phường Cửa Nam</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Điện thoại</th><td>+84-(0)4 38254539</td></tr><tr><th>Website</th><td><a href="http://www.hup.edu.vn">hup.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:HanoiUniversityOfPharmacy.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/HanoiUniversityOfPharmacy.jpg/330px-HanoiUniversityOfPharmacy.jpg" alt="Ảnh Trường Đại học Dược Hà Nội" loading="lazy"></a><figcaption>CC BY-SA 4.0 · Đại học Dược Hà Nội</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -289,8 +334,17 @@
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hai-nam-2">Nguyễn Hải Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/e/ea/HanoiUniversityOfPharmacy.jpg">&lt;https://upload.wikimedia.org/wikipedia/commons/e/ea/HanoiUniversityOfPharmacy.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/6/64/LogoHUP.png">&lt;https://upload.wikimedia.org/wikipedia/commons/6/64/LogoHUP.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84-(0)4 38254539</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>DKH <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -342,23 +396,23 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hai-nam-2">Nguyễn Hải Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/cuong-viet-pham">Cuong Viet Pham</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dat-t-tran">Dat T Tran</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/duy-hieu-truong">Duy Hieu Truong</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hai-pham-the">Hai Pham-The</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-nguyen">Hung Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/khac-dung-nguyen">Khac-Dung Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-nguyen-thanh">Le Nguyen Thanh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-thi-huong-hoa">Le Thi Huong Hoa</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-thi-phuong-thao">Le Thi Phuong Thao</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-thi-hong-le">Minh Thi Hong Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngan-ha-tran">Ngan Ha Tran</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-3">Nguyen Minh Duc</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nhung-phuong-nguyen">Nhung Phuong Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/phuong-thao-tran">Phuong-Thao Tran</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ta-ngoc-dung">Tạ Ngọc Dũng</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thu-ha-pham">Thu Ha Pham</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thu-thi-pham">Thu Thi Pham</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thu-thuy-le">Thu Thuy Le</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thuy-ngan-tran">Thuy-Ngan Tran</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/trong-tuan-dao">Trong Tuan Dao</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tuan-hiep-tran">Tuan Hiep Tran</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tuan-nguyen">Tuan Nguyen</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-t-h-ngo">Van T H Ngo</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-dinh-hoa">Vu Dinh Hoa</a></div>
 </td></tr>
 <tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/cuong-viet-pham">Cuong Viet Pham</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dat-t-tran">Dat T Tran</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/duy-hieu-truong">Duy Hieu Truong</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hai-pham-the">Hai Pham-The</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-nguyen">Hung Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/khac-dung-nguyen">Khac-Dung Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-nguyen-thanh">Le Nguyen Thanh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-thi-huong-hoa">Le Thi Huong Hoa</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-thi-phuong-thao">Le Thi Phuong Thao</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-thi-hong-le">Minh Thi Hong Le</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngan-ha-tran">Ngan Ha Tran</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-duc-3">Nguyen Minh Duc</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nhung-phuong-nguyen">Nhung Phuong Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/phuong-thao-tran">Phuong-Thao Tran</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ta-ngoc-dung">Tạ Ngọc Dũng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thu-ha-pham">Thu Ha Pham</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thu-thi-pham">Thu Thi Pham</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thu-thuy-le">Thu Thuy Le</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thuy-ngan-tran">Thuy-Ngan Tran</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/trong-tuan-dao">Trong Tuan Dao</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tuan-hiep-tran">Tuan Hiep Tran</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tuan-nguyen">Tuan Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-t-h-ngo">Van T H Ngo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-dinh-hoa">Vu Dinh Hoa</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hai-nam-2">Nguyễn Hải Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">do ... đào tạo<small>vnedu:offeredBy</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-duoc-ha-noi-7720201">Dược học – Trường Đại học Dược Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
 <tr><td class="p">schema:provider<small>schema:provider</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-duoc-ha-noi-7720201">Dược học – Trường Đại học Dược Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-y-te">Bộ Y tế</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
-<tr><td class="p">do ... đào tạo<small>vnedu:offeredBy</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/truong-dai-hoc-duoc-ha-noi-7720201">Dược học – Trường Đại học Dược Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

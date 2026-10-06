@@ -29,11 +29,13 @@ university:truong-dai-hoc-fpt a dbo:University,
         schema:Organization ;
     rdfs:label "FPT University"@en,
         "Trường Đại học FPT"@vi ;
+    dbo:abstract "Trường Đại học FPT là một cơ sở giáo dục tại Việt Nam được thành lập ngày 8/9/2006 theo Quyết định số 208/2006/QĐ-TTg của Thủ tướng Chính phủ, do Tập đoàn FPT đầu tư 100% vốn, trở thành trường đại học đầu tiên do doanh nghiệp thành lập tại Việt Nam."@vi ;
     owl:sameAs dbr:FPT_University,
         wd:Q610220,
         <https://ror.org/03esj4g97> ;
     geo:lat 21.013667 ;
     geo:long 105.527278 ;
+    skos:altLabel "FPTU, FU" ;
     skos:prefLabel "Trường Đại học FPT"@vi ;
     prov:wasDerivedFrom wd:Q610220,
         <https://vi.wikipedia.org/w/index.php?oldid=75528671> ;
@@ -51,9 +53,23 @@ university:truong-dai-hoc-fpt a dbo:University,
     vnedu:ownership vnedu:PrivateOwnership ;
     vnedu:rector person:nguyen-khac-thanh ;
     vnedu:website <https://daihoc.fpt.edu.vn> ;
+    schema:email "fpteducation@fpt.edu.vn" ;
     schema:employee person:nguyen-khac-thanh ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/6/67/Fpt02.jpg> ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/2/2d/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_FPT.svg> ;
     schema:parentOrganization organization:fpt-education .
+
+<https://upload.wikimedia.org/wikipedia/commons/6/67/Fpt02.jpg> a schema:ImageObject ;
+    schema:creditText "ThuyNTP" ;
+    schema:license "CC BY-SA 3.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Fpt02.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Fpt02.jpg/330px-Fpt02.jpg> .
+
+<https://upload.wikimedia.org/wikipedia/vi/2/2d/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_FPT.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_FPT.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/2/2d/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_FPT.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_FPT.svg.png> .
 

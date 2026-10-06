@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -25,9 +26,11 @@ university:hoc-vien-quan-y a foaf:Organization,
         schema:EducationalOrganization,
         schema:Organization ;
     rdfs:label "Học viện Quân y"@vi ;
+    dbo:abstract "Học viện Quân y (), tên dân sự là Trường Đại học Y Dược Lê Hữu Trác. Nhà trường là Học viện trực thuộc Bộ Quốc phòng nghiên cứu và đào tạo bác sĩ, dược sĩ, điều dưỡng cho Quân đội nhân dân Việt Nam, hỗ trợ đào tạo bác sĩ Công an nhân dân Việt Nam và bác sĩ, dược sĩ cho Quân đội, Công an của hai nước bạn Lào và Campuchia theo diện liên kết. Trong giai đoạn 2002 – 2018, trường cũng tuyển sinh và đào tạo các bác sĩ y khoa, dược sĩ hệ dân sự phục vụ cho sự nghiệp công nghiệp hoá, hiện đại hoá đất nước. Giai đoạn 2019 - 2024, Học viện tạm dừng tuyển sinh hệ dân sự theo đề xuất của Bộ Quốc phòng. Kể từ năm 2025, Học viện tuyển sinh lại hệ dân sự theo đề xuất của Bộ Quốc phòng. Hiện nay, Học viện Quân y tuyển sinh đại học và sau đại học các ngành quân sự và dân sự, bao gồm: Đại học (Bác sĩ Y khoa; Bác sĩ Y học dự phòng, Dược sĩ) , Sau Đại học (Tiến sĩ, Thạc sĩ, Bác sĩ chuyên khoa cấp I, Bác sĩ chuyên khoa cấp II, Bác sĩ nội trú)"@vi ;
     owl:sameAs wd:Q10771896 ;
     geo:lat 20.966829 ;
     geo:long 105.788437 ;
+    skos:altLabel "Trường Đại học Y dược Lê Hữu Trác" ;
     skos:prefLabel "Học viện Quân y"@vi ;
     prov:wasDerivedFrom wd:Q10771896,
         <https://vi.wikipedia.org/w/index.php?oldid=75344071> ;
@@ -38,11 +41,19 @@ university:hoc-vien-quan-y a foaf:Organization,
     vnedu:governedBy vnedu:MinistryOfNationalDefence ;
     vnedu:hasAlumnus person:nguyen-minh-ha,
         person:tran-viet-tien ;
+    vnedu:history """Học viện Quân y (tiền thân là Trường Quân y sĩ Việt Nam) được thành lập theo Sắc lệnh số 234/SL ngày 20 tháng 8 năm 1948 của Chính phủ Việt Nam Dân chủ cộng hòa (nay là Chính phủ nước Cộng hòa xã hội chủ nghĩa Việt Nam) và Nghị định số 187/NĐ ngày 4 tháng 10 năm 1948 của liên Bộ Quốc phòng - Y tế - Giáo dục. Ngày 10 tháng 3 năm 1949, Nhà trường tổ chức lễ khai giảng khóa đào tạo quân y sĩ đầu tiên tại Đồi Trám, thôn Tuần Lũng, xã Hoàng Hoa, huyện Tam Dương, tỉnh Vĩnh Phúc. Từ đó, ngày 10 tháng 3 hàng năm được lấy làm ngày truyền thống của Học viện.
+
+Tháng 7 năm 2014, Thủ tướng Chính phủ đồng ý bổ sung Học viện Quân y vào danh sách các Trường Đại học xây dựng thành trường đại học trọng điểm của mạng lưới các cơ sở giáo dục đại học thuộc hệ thống giáo dục quốc dân. Từ đó, Học viện là một trong 17 nhà trường được Chính phủ quyết định xây dựng, phát triển thành trường trọng điểm quốc gia, trung tâm đào tạo, nghiên cứu khoa học và điều trị có uy tín lớn trong nước, khu vực và quốc tế.
+
+Học viện trực thuộc Bộ Quốc phòng, có 2 bệnh viện thực hành lâm sàng (Bệnh viện Quân y 103, Bệnh viện Bỏng quốc gia Lê Hữu Trác); 3 viện (Viện Mô phôi lâm sàng Quân đội, Viện Đào tạo Dược, Viện Nghiên cứu y dược học quân sự); 1 trường cao đẳng (Trường Cao đẳng Quân y); 1 phân hiệu phía Nam; 11 phòng, ban trực thuộc; 5 trung tâm (Độc học và phóng xạ, Nghiên cứu ứng dụng sản xuất thuốc, Ngoại ngữ, Huấn luyện và đào tạo y học quân sự; Tế bào gốc và y học tái tạo); 57 bộ môn, khoa (trong đó có 37 bộ môn lâm sàng) và 5 hệ quản lý học viên. Đảng bộ Học viện trực thuộc Quân ủy Trung ương, gồm 1 đảng bộ cấp trên trực tiếp cơ sở, 11 đảng bộ cơ sở (trong đó có 1 đảng bộ 3 cấp, 10 đảng bộ 2 cấp), 119 chi bộ (có 81 chi bộ cơ sở).
+
+Năm 2019, Học viện Quân y có hơn 2.000 cán bộ, giảng viên, nhân viên trong đó 100% giảng viên đạt trình độ sau đại học với 18 giáo sư, 106 phó giáo sư; 128 tiến sĩ, 191 thạc sĩ, 28 bác sĩ chuyên khoa cấp 1 và chuyên khoa cấp 2; 15 nhà giáo nhân dân, 35 nhà giáo ưu tú; 20 thầy thuốc nhân dân, 179 thầy thuốc ưu tú; 10 chuyên viên đầu ngành và nhiều chuyên viên kỹ thuật của ngành Quân y... trở thành một trung tâm y tế hàng đầu của quân đội và đất nước trong đào tạo, nghiên cứu khoa học cũng như cứu chữa, chăm sóc, bảo vệ sức khỏe của bộ đội và nhân dân..."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:website <http://hocvienquany.vn/> ;
+    schema:foundingDate "1949-03-10"^^xsd:date ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo .

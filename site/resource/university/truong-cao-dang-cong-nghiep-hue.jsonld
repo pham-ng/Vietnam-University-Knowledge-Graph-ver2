@@ -19,12 +19,12 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-cong-nghiep-hue",
   "@type": [
+    "schema:EducationalOrganization",
     "vnedu:EducationalOrganization",
     "vnedu:VocationalCollege",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
+    "foaf:Organization",
     "schema:Organization",
-    "foaf:Organization"
+    "vnedu:Organization"
   ],
   "foaf:homepage": {
     "@id": "https://hueic.edu.vn/"
@@ -37,23 +37,23 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Cao đẳng Công nghiệp Huế"
-    },
-    {
       "@language": "en",
       "@value": "Hue Industrial College"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Cao đẳng Công nghiệp Huế"
     }
   ],
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:prefLabel": {
@@ -65,10 +65,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hue"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     }
   ],
   "vnedu:website": {

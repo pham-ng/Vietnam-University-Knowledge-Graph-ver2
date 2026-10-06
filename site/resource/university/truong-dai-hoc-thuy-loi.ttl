@@ -29,11 +29,13 @@ university:truong-dai-hoc-thuy-loi a dbo:University,
         schema:Organization ;
     rdfs:label "Thuyloi University"@en,
         "Trường Đại học Thủy lợi"@vi ;
+    dbo:abstract "Trường Đại học Thủy lợi (tiếng Anh: Thuyloi University) là trường đại học đào tạo lĩnh vực thủy lợi, môi trường, phòng chống và giảm nhẹ thiên tai và các nhóm ngành khác tại Việt Nam. Trường trực thuộc Bộ Nông nghiệp và Môi trường."@vi ;
     owl:sameAs dbr:Thuyloi_University,
         wd:Q7973360,
         <https://ror.org/04afshy24> ;
     geo:lat 21.007381 ;
     geo:long 105.824519 ;
+    skos:altLabel "TLU, Thuyloi University" ;
     skos:prefLabel "Trường Đại học Thủy lợi"@vi ;
     prov:wasDerivedFrom wd:Q7973360,
         <https://vi.wikipedia.org/w/index.php?oldid=75154006> ;
@@ -41,6 +43,7 @@ university:truong-dai-hoc-thuy-loi a dbo:University,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Thuyloi_University>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%E1%BB%A7y_l%E1%BB%A3i> ;
     vnedu:address "Số 175 Tây Sơn, Phường Kim Liên" ;
+    vnedu:campus "72.568 m²" ;
     vnedu:formerName "Học Viện Thủy Lợi Điện Lực, WRU"@vi ;
     vnedu:foundingYear "1959"^^xsd:gYear ;
     vnedu:governedBy organization:bo-nong-nghiep-va-moi-truong ;
@@ -50,6 +53,17 @@ university:truong-dai-hoc-thuy-loi a dbo:University,
         person:quang-viet-ly,
         person:tran-huy-tuan ;
     vnedu:hasLeader person:nguyen-trung-viet ;
+    vnedu:history """Tiền thân của Trường là Học viện Thủy lợi Điện lực được thành lập năm 1959. Tháng 1 năm 1963, Học viện Thủy lợi Điện lực chia thành 4 đơn vị là Trung cấp điện, Trung cấp Thủy lợi, Viện Nghiên cứu khoa học Thủy lợi và Trường Đại học Thủy lợi. Ban đầu, Trường có 3 ngành đào tạo: Thủy công, Thủy nông, Thủy văn. Các phòng thí nghiệm được lắp đặt: Sức bền vật liệu, Thủy lực, Thủy công, Thủy điện, Cơ đất... Năm 1965 nhà hành chính được xây dựng hoàn thành, với nhiều phòng học và phòng thí nghiệm phục vụ giảng dạy. Cũng trong năm này, trường mở thêm ngành Thủy điện (khoá 7).
+
+Tháng 6 năm 1965, trường sở sơ tán lên vùng núi xã Nghĩa Phương, thuộc huyện Lục Nam, tỉnh Bắc Giang. Năm 1966, mở thêm ngành Cơ khí Thủy lợi (khoá 8). Năm 1967 mở thêm ngành Thi công (khoá 9). Năm 1970, trường sở trở về Hà Nội, nhưng đến năm 1972, một lần nữa lại sơ tán lên Việt Yên, Hiệp Hòa, tỉnh Bắc Giang và một số nơi khác. Năm 1973, trường sở lại về Hà Nội.
+
+Từ năm 1975 trở đi, Trường đã sắp xếp tổ chức lại ngành nghề đào tạo theo hướng diện rộng, chuyên môn hoá hợp lý bao gồm: Công trình Thủy lợi; Thủy văn và Kỹ thuật môi trường; Thủy năng và Trạm Thủy điện; Thủy nông và Cải tạo đất; Cơ khí Thủy lợi; Kinh tế Thủy lợi.
+
+Năm 1979, trường được chính thức công nhận là một cơ sở đào tạo Sau đại học. Đây cũng là giai đoạn Nhà trường phát triển mối quan hệ những mối quan hệ quốc tế có hiệu quả với nhiều trường ở Liên Xô (cũ) với các nước Đông Âu, Lào, Ấn Độ, Hà Lan...
+
+Ngày 8 tháng 12 năm 1986, Trung tâm kết hợp đào tạo - nghiên cứu khoa học và thực hành khoa học kỹ thuật Thủy lợi tại Nam Bộ được thành lập trên cơ sở Đoàn Quy hoạch - Khảo sát và Thiết kế thủy lợi Nam Bộ. Ngày 25 tháng 2 năm 1997, Trường Đại học Thủy lợi tiếp nhận Trung tâm, và chuyển đổi thành cơ sở 2 đào tạo theo Quyết định số 288NN-TCCB/QĐ của Bộ trưởng Bộ Nông nghiệp và Phát triển Nông thôn và giữ tên gọi đó cho đến hiện nay.
+
+Hiện tại, Trường Đại học Thủy lợi với 9 ngành 20 chuyên ngành nhằm phủ kín nội dung hoạt động về kỹ thuật tài nguyên nước ở Việt Nam. Dù là một trường chuyên ngành nhưng việc đào tạo của nhà trường đã đang bắt đầu mang tính liên ngành đa lĩnh vực."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -57,8 +71,16 @@ university:truong-dai-hoc-thuy-loi a dbo:University,
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:nguyen-trung-viet ;
     vnedu:website <http://tlu.edu.vn> ;
+    schema:email "phonghcth@tlu.edu.vn" ;
     schema:employee person:nguyen-trung-viet ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/b/bc/Logo-Thuy_Loi.png> ;
+    schema:telephone "024) 3852 2201" .
+
+<https://upload.wikimedia.org/wikipedia/vi/b/bc/Logo-Thuy_Loi.png> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo-Thuy_Loi.png> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/vi/b/bc/Logo-Thuy_Loi.png> .
 

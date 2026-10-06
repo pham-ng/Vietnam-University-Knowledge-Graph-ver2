@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix organization: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/> .
@@ -27,6 +28,7 @@ university:hoc-vien-ky-thuat-mat-ma a foaf:Organization,
         schema:Organization ;
     rdfs:label "Academy of Cryptography Techniques"@en,
         "Học viện Kỹ thuật Mật mã"@vi ;
+    dbo:abstract "Học viện Kỹ thuật Mật mã (KMA) (tiếng Anh là: Vietnam Academy of Cryptography Techniques) là một trường đại học công lập trực thuộc Ban Cơ yếu Chính phủ của Bộ Quốc phòng, được thành lập ngày 17 tháng 2 năm 1995 có chức năng đào tạo cán bộ có trình độ đại học, sau đại học và nghiên cứu khoa học kỹ thuật mật mã của ngành Cơ yếu Việt Nam. Học viện cũng được chính phủ Việt Nam lựa chọn là một trong tám cơ sở trọng điểm đào tạo nhân lực an toàn thông tin Việt Nam theo Đề án đào tạo và phát triển nguồn nhân lực an toàn, an ninh thông tin đến năm 2025."@vi ;
     owl:sameAs wd:Q10771890,
         <https://ror.org/05nfbnp91> ;
     geo:lat 21.022816 ;
@@ -41,13 +43,23 @@ university:hoc-vien-ky-thuat-mat-ma a foaf:Organization,
     vnedu:governedBy vnedu:MinistryOfNationalDefence,
         organization:ban-co-yeu-chinh-phu-cua-bo-quoc-phong ;
     vnedu:hasAlumnus person:pham-tien-manh ;
+    vnedu:history "Học viện Kỹ thuật Mật mã tiền thân là Trường Cán bộ Cơ yếu Trung ương (ngày 15 tháng 4 năm 1976), Trường Đại học Kỹ thuật Mật mã (ngày 5 tháng 6 năm 1985) và Viện Nghiên cứu Khoa học Kỹ thuật Mật mã (ngày 17 tháng 2 năm 1980), được thành lập ngày ngày 17 tháng 2 năm 1995 trên cơ sở sáp nhập Trường Đại học Kỹ thuật Mật mã và Viện Nghiên cứu Khoa học Kỹ thuật Mật mã. Học viện là cơ sở duy nhất của Việt Nam có chức năng đào tạo cán bộ có trình độ đại học, sau đại học và nghiên cứu khoa học kỹ thuật mật mã của ngành Cơ yếu Việt Nam. Đây còn là nơi đào tạo và bồi dưỡng đội ngũ cán bộ cơ yếu, sĩ quan chỉ huy kỹ thuật mật mã cho quân đội Việt Nam, Lào, Campuchia và Cuba. Hiện nay Học viện đào tạo thêm đại học chính quy hệ dân sự ngành Công Nghệ Thông Tin (chuyên ngành An toàn thông tin, chuyên ngành Lập trình nhúng và di động) và ngành Điện tử viễn thông (chuyên ngành hệ thống nhúng và điều khiển tự động), Tiến sĩ ngành Mật mã và Thạc sĩ chuyên ngành An toàn thông tin."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
     vnedu:motto "Đoàn kết, Sáng tạo, Nghiệp vụ, An ninh"@vi ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:website <http://actvn.edu.vn/> ;
+    schema:foundingDate "1995-02-17"^^xsd:date ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/7/77/KMA_logo.png> ;
+    schema:telephone "+84 2438 544 244" .
+
+<https://upload.wikimedia.org/wikipedia/commons/7/77/KMA_logo.png> a schema:ImageObject ;
+    schema:creditText "Học viện Kĩ thuật Mật mã" ;
+    schema:license "CC BY 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:KMA_logo.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/KMA_logo.png/330px-KMA_logo.png> .
 

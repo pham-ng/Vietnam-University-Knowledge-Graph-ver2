@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-tri",
   "@type": [
-    "schema:AdministrativeArea",
+    "vnedu:AdministrativeUnit",
     "vnedu:Province",
-    "vnedu:AdministrativeUnit"
+    "schema:AdministrativeArea"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Qu%E1%BA%A3ng_Tr%E1%BB%8B"
+      "@id": "https://en.wikipedia.org/wiki/Qu%E1%BA%A3ng_Tr%E1%BB%8B_province"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Qu%E1%BA%A3ng_Tr%E1%BB%8B_province"
+      "@id": "https://vi.wikipedia.org/wiki/Qu%E1%BA%A3ng_Tr%E1%BB%8B"
     }
   ],
   "geo:lat": {
@@ -41,10 +41,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q36579"
+      "@id": "https://sws.geonames.org/1568733/"
     },
     {
-      "@id": "https://sws.geonames.org/1568733/"
+      "@id": "wd:Q36579"
     }
   ],
   "prov:wasDerivedFrom": {

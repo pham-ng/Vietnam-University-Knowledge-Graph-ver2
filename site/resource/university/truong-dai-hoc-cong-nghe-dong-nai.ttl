@@ -26,10 +26,12 @@ university:truong-dai-hoc-cong-nghe-dong-nai a dbo:University,
         schema:Organization ;
     rdfs:label "Dong Nai Technology University"@en,
         "Trường Đại học Công nghệ Đồng Nai"@vi ;
+    dbo:abstract "Đại học Công nghệ Đồng Nai (tiếng Anh: Dong Nai Technology University) là một trường đại học tại Đồng Nai do TS. Phan Ngọc Sơn đứng tên thành lập theo quyết định số 929/QĐ-TTg ngày 16 tháng 6 năm 2011 của thủ tướng chính phủ."@vi ;
     owl:sameAs wd:Q10829032,
         <https://ror.org/01j85cs18> ;
     geo:lat 10.984778 ;
     geo:long 106.869639 ;
+    skos:altLabel "Dong Nai Technology University - DNTU" ;
     skos:prefLabel "Trường Đại học Công nghệ Đồng Nai"@vi ;
     prov:wasDerivedFrom wd:Q10829032,
         <https://vi.wikipedia.org/w/index.php?oldid=74904746> ;
@@ -44,8 +46,10 @@ university:truong-dai-hoc-cong-nghe-dong-nai a dbo:University,
     vnedu:motto "DNTU Điểm đến thành công"@vi ;
     vnedu:rector person:phan-ngoc-son ;
     vnedu:website <https://dntu.edu.vn/> ;
+    schema:email "truongdaihoccongnghedongnai@dntu.edu.vn" ;
     schema:employee person:phan-ngoc-son ;
     schema:location country:viet-nam,
         province:dong-nai,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:telephone "02513 996 473" .
 

@@ -28,6 +28,7 @@ university:truong-dai-hoc-ton-duc-thang a dbo:University,
         schema:EducationalOrganization,
         schema:Organization ;
     rdfs:label "Trường Đại học Tôn Đức Thắng"@vi ;
+    dbo:abstract "Trường Đại học Tôn Đức Thắng (TDTU) là một trường đại học công lập của Việt Nam. Trường trực thuộc Tổng Liên đoàn Lao động Việt Nam. Trường hoạt động theo cơ chế tự chủ toàn diện. Trường hiện có các cơ sở tại TP. Hồ Chí Minh, tỉnh Khánh Hòa, tỉnh Lâm Đồng."@vi ;
     owl:sameAs dbr:Tôn_Đức_Thắng_University,
         wd:Q1457082,
         <https://ror.org/01drq0835> ;
@@ -60,14 +61,35 @@ university:truong-dai-hoc-ton-duc-thang a dbo:University,
         person:preecha-p-yupapin,
         person:van-sieu-luc ;
     vnedu:hasLeader person:tran-trong-dao ;
+    vnedu:history """Tiền thân của Trường Đại học Tôn Đức Thắng là Trường Đại học Công nghệ Dân lập Tôn Đức Thắng, được thành lập theo quyết định 787/TTg ngày 24/9/1997 của Thủ tướng Chính phủ. Trường do Liên đoàn lao động Thành phố Hồ Chí Minh sáng lập và quản lý thông qua Hội đồng quản trị do Chủ tịch Liên đoàn Lao động Thành phố đương nhiệm làm Chủ tịch.
+
+Ngày 28/01/2003, Thủ tướng Chính phủ ra Quyết định số 18/2003/QĐ-TTg chuyển đổi pháp nhân và đổi tên Trường Đại học Công nghệ Dân lập Tôn Đức Thắng thành Trường Đại học Bán công Tôn Đức Thắng trực thuộc Ủy ban nhân dân Thành phố Hồ Chí Minh.
+
+Ngày 11/6/2008, Thủ tướng Chính phủ ra Quyết định số 747/QĐ-TTg đổi tên Trường Đại học Bán công Tôn Đức Thắng thành Trường Đại học Tôn Đức Thắng và chuyển về thuộc Tổng Liên đoàn Lao động Việt Nam."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:tran-trong-dao ;
     vnedu:website <https://www.tdtu.edu.vn> ;
+    schema:email "tonducthanguniversity@tdtu.edu.vn" ;
     schema:employee person:tran-trong-dao ;
+    schema:foundingDate "1997-09-24"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/4/44/Dai_hoc_Ton_Duc_Thang_tan_phong_q7_tphcmvn_-_panoramio.jpg> ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/1/1b/T%C4%90T_logo.png> ;
+    schema:telephone "028 37 755 035" .
+
+<https://upload.wikimedia.org/wikipedia/commons/4/44/Dai_hoc_Ton_Duc_Thang_tan_phong_q7_tphcmvn_-_panoramio.jpg> a schema:ImageObject ;
+    schema:creditText "trungydang" ;
+    schema:license "CC BY 3.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Dai_hoc_Ton_Duc_Thang_tan_phong_q7_tphcmvn_-_panoramio.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Dai_hoc_Ton_Duc_Thang_tan_phong_q7_tphcmvn_-_panoramio.jpg/330px-Dai_hoc_Ton_Duc_Thang_tan_phong_q7_tphcmvn_-_panoramio.jpg> .
+
+<https://upload.wikimedia.org/wikipedia/vi/1/1b/T%C4%90T_logo.png> a schema:ImageObject ;
+    schema:license "KTD" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:T%C4%90T_logo.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/1/1b/T%C4%90T_logo.png/330px-T%C4%90T_logo.png> .
 

@@ -19,26 +19,30 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-hung-vuong",
   "@type": [
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
     "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
     "dbo:University",
+    "foaf:Organization",
+    "schema:Organization",
+    "vnedu:Organization",
+    "vnedu:UniversitySchool",
+    "schema:EducationalOrganization",
     "vnedu:EducationalOrganization",
-    "vnedu:Organization"
+    "schema:CollegeOrUniversity"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Hùng Vương (Tiếng Anh: Hung Vuong University, HVU) là trường đại học công lập tại tỉnh Phú Thọ được thành lập vào ngày 29 tháng 4 năm 2003, trên cơ sở của Trường Cao đẳng Sư phạm Phú Thọ với bề dày truyền thống hơn 50 năm."
+  },
   "foaf:homepage": {
     "@id": "http://hvu.edu.vn"
   },
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_H%C3%B9ng_V%C6%B0%C6%A1ng"
+      "@id": "https://en.wikipedia.org/wiki/Hung_Vuong_University"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Hung_Vuong_University"
+      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_H%C3%B9ng_V%C6%B0%C6%A1ng"
     }
   ],
   "geo:lat": {
@@ -70,12 +74,12 @@
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Hùng Vương"
-    },
-    {
       "@language": "en",
       "@value": "Hung Vuong University"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Hùng Vương"
     }
   ],
   "schema:employee": {
@@ -92,6 +96,7 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
+  "schema:telephone": "+84 2103 993369",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Hùng Vương"
@@ -104,15 +109,19 @@
   "vnedu:hasLeader": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/do-khac-thanh"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Trường Đại học Hùng Vương được thành lập vào ngày 29 tháng 04 năm 2003 theo Quyết định số 81/2003/QĐ-TTg của Thủ tướng Chính phủ, trên cơ sở Trường Cao đẳng Sư phạm Phú Thọ và có bề dày truyền thống hơn 46 năm."
+  },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:ownership": {

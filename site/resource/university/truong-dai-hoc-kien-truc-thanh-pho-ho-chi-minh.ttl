@@ -29,6 +29,7 @@ university:truong-dai-hoc-kien-truc-thanh-pho-ho-chi-minh a dbo:University,
         schema:Organization ;
     rdfs:label "University of Architecture Ho Chi Minh City"@en,
         "Trường Đại học Kiến trúc Thành phố Hồ Chí Minh"@vi ;
+    dbo:abstract "Trường Đại học Kiến trúc Thành phố Hồ Chí Minh (, thường được gọi tắt là UAH) là trường đại học chuyên ngành, giữ vai trò tiên phong trong đào tạo và nghiên cứu nhóm ngành kiến trúc, xây dựng và mỹ thuật ứng dụng tại Việt Nam, trực thuộc sự quản lý của Bộ Xây dựng. Ngoài nhiệm vụ chính là đào tạo, Trường còn là trung tâm nghiên cứu khoa học, tư vấn và triển khai các dự án trọng điểm cho Chính phủ, doanh nghiệp. Đội ngũ chuyên gia, giảng viên của Trường đã tham gia thực hiện các công trình như: Cầu Vàng (Đà Nẵng), Đường hoa Nguyễn Huệ, Báo và đài truyền hình Đồng Nai. Trường có tiền thân là Ban Kiến trúc thuộc Trường Mỹ thuật Đông Dương thành lập năm 1926 tại Hà Nội bởi chính quyền thuộc địa Pháp, qua nhiều giai đoạn phát triển và di dời, trường được tái lập năm 1976 và đã có tên như ngày nay, trở thành cơ sở giáo dục trọng điểm của nhóm ngành xây dựng - thiết kế tại Việt Nam."@vi ;
     owl:sameAs dbr:Ho_Chi_Minh_City_University_of_Architecture,
         wd:Q3037890,
         <https://ror.org/02tyvzz27> ;
@@ -44,6 +45,7 @@ university:truong-dai-hoc-kien-truc-thanh-pho-ho-chi-minh a dbo:University,
     vnedu:academicStaff "283"^^xsd:nonNegativeInteger ;
     vnedu:address "196 Pasteur, phường Xuân Hòa, Thành phố Hồ Chí Minh" ;
     vnedu:admissionCode "KTS" ;
+    vnedu:councilChair person:hoang-bac-an ;
     vnedu:foundingYear "1926"^^xsd:gYear ;
     vnedu:governedBy organization:bo-giao-duc-va-dao-tao,
         organization:bo-xay-dung ;
@@ -51,7 +53,25 @@ university:truong-dai-hoc-kien-truc-thanh-pho-ho-chi-minh a dbo:University,
         person:midu,
         person:nguyen-thi-thu-trang,
         person:tran-thi-ngu-ngon ;
-    vnedu:hasLeader person:pham-trong-thuat ;
+    vnedu:hasLeader person:hoang-bac-an,
+        person:pham-trong-thuat ;
+    vnedu:history """Ghi chú: Thời Pháp thuộc tại Liên bang Đông Dương chỉ có Ban Kiến trúc thuộc Trường Mỹ thuật Đông Dương (École des Beaux-Arts) tại Hà Nội đào tạo ngành kiến trúc, lập ra năm 1926. Ngày 27/10/1924: Trường Mỹ thuật Đông Dương (École Supérieure des Beaux-Arts de l'Indochine) được thành lập tại Hà Nội theo sắc lệnh của Toàn quyền Đông Dương Martial Merlin, Hiệu trưởng lúc này là họa sĩ Victor Tardieu. Sau quá trình phát triển, nay trường trở thành Trường Đại học Mỹ thuật Việt Nam.
+
+Ngày 01/10/1926: Toàn quyền Alexandre Varenne mới chính thức ban hành nghị định thành lập Ban Kiến trúc (Section d'Architecture) trực thuộc Trường Mỹ thuật Đông Dương.
+
+Ngày 22/10/1942: Trường Mỹ thuật Đông Dương phân thành Trường Mỹ nghệ thực hành Hà Nội và Trường Cao đẳng Mỹ thuật Đông Dương. Ban Kiến trúc trở thành đơn vị trực thuộc Trường Cao đẳng Mỹ thuật Đông Dương. Đến năm 1943, do hoàn cảnh chiến tranh, Ban Kiến trúc phải dời về Đà Lạt.
+
+Ngày 22/02/1944: Ban Kiến trúc được nâng cấp thành Trường Kiến trúc, trực thuộc Trường Cao đẳng Mỹ thuật Quốc gia Paris, với văn bằng được chính phủ Pháp công nhận.
+
+Tháng 05/1945: Nhật đảo chính Pháp tại Đông Dương, Trường Kiến trúc Đà Lạt bị đóng cửa. Đến năm 1947, trường dần tái thiết sau khi Pháp tái đô hộ Liên bang Đông Dương.
+
+Ngày 06/09/1948: Trường tách khỏi Trường Cao đẳng Mỹ thuật Quốc gia Paris, hợp nhất vào Viện Đại học Đông Dương (sau đổi thành Viện Đại học Hà Nội) nâng lên thành Trường Cao đẳng Kiến trúc và mở cửa trở lại ngày 01/02/1949.
+
+Cuối năm 1950: Trường Cao đẳng Kiến trúc được chuyển về Sài Gòn, trực thuộc Viện Đại học Hà Nội chi nhánh miền Nam. Năm 1957, khi Mỹ can thiệp vào Việt Nam, chi nhánh này đổi tên thành Viện Đại học Sài Gòn thuộc chính thể Việt Nam Cộng hòa.
+
+Ngày 30/10/1967: Trường Đại học Kiến trúc Sài Gòn được thành lập theo sắc lệnh số 159/SL/QĐ. Chương trình đào tạo của trường lúc này là 6 năm.
+
+Năm 1972: Trường được xây mới dựa trên đồ án tốt nghiệp cùng năm của sinh viên Trương Văn Long, được chỉ đạo xây dựng bởi Giáo sư, Tiến sĩ Phạm Văn Thâng. Công trình có hình khối, phong cách kiến trúc tuân thủ chặt chẽ theo trường phái Kiến trúc Hiện đại, với đặc trưng là khối nhà hộp đặt trên hệ cột và có lam chắn nắng bằng bê tông. Lúc này các dãy nhà trệt mái ngói vẫn bao bọc xung quanh khối nhà chính. Đến khoảng năm 1994, công trình được tiếp tục xây dựng các khối nhà mới kết cấu thay cho các dãy nhà mái ngói xung quanh."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -63,8 +83,23 @@ university:truong-dai-hoc-kien-truc-thanh-pho-ho-chi-minh a dbo:University,
     vnedu:shortName "HCMUARC",
         "UAH" ;
     vnedu:website <https://ump.edu.vn/> ;
-    schema:employee person:pham-trong-thuat ;
+    schema:employee person:hoang-bac-an,
+        person:pham-trong-thuat ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/5/59/HCMC_Dai_Hoc_Kien_Truc_01.JPG> ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/8/80/Logo_of_University_of_Architecture_Ho_Chi_Minh_City_red_version.png> ;
+    schema:telephone "+84 283 822 2748" .
+
+<https://upload.wikimedia.org/wikipedia/commons/5/59/HCMC_Dai_Hoc_Kien_Truc_01.JPG> a schema:ImageObject ;
+    schema:creditText "Dragfyre" ;
+    schema:license "CC BY-SA 3.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:HCMC_Dai_Hoc_Kien_Truc_01.JPG> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/HCMC_Dai_Hoc_Kien_Truc_01.JPG/330px-HCMC_Dai_Hoc_Kien_Truc_01.JPG> .
+
+<https://upload.wikimedia.org/wikipedia/vi/8/80/Logo_of_University_of_Architecture_Ho_Chi_Minh_City_red_version.png> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_of_University_of_Architecture_Ho_Chi_Minh_City_red_version.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/8/80/Logo_of_University_of_Architecture_Ho_Chi_Minh_City_red_version.png/330px-Logo_of_University_of_Architecture_Ho_Chi_Minh_City_red_version.png> .
 

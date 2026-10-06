@@ -341,7 +341,8 @@ HONOR_PHRASES = re.compile(r"^(Giáo sư|Phó Giáo sư|Tiến sĩ khoa học|Ti
                            r"Nhà giáo Nhân dân|Nhà giáo Ưu tú|Thầy thuốc Nhân dân|Thầy thuốc Ưu tú|Anh hùng Lao động|"
                            r"Đại tướng|Thượng tướng|Trung tướng|Thiếu tướng|Đại tá|Thượng tá|Trung tá|Thiếu tá|"
                            r"Chuẩn Đô đốc|Phó Đô đốc|Đô đốc|Hòa thượng|Thượng tọa|Đại đức|Linh mục|Phụ trách)\b[\s.,]*", re.I)
-NAME_OK = re.compile(r"^[A-ZĐÀ-Ỹ][a-zà-ỹđ'-]*(\s[A-ZĐÀ-Ỹ][a-zà-ỹđ'-]*){1,5}$")
+NAME_TOKEN = r"[A-ZĐÀ-Ỹ][a-zà-ỹđ']*(?:-[A-ZĐÀ-Ỹa-zà-ỹđ][a-zà-ỹđ']*)*"
+NAME_OK = re.compile(rf"^{NAME_TOKEN}(\s{NAME_TOKEN}){{1,5}}$")
 
 
 def parse_person(text: str):
@@ -407,12 +408,63 @@ def ownership_from_text(text: str):
     return None
 
 
+# Tham số infobox tiếng Anh (bản mẫu "Thông tin trường đại học", "Infobox university") -> tên tham số tiếng Việt.
+# Tham số tiếng Việt có sẵn trong cùng infobox luôn được ưu tiên.
+INFOBOX_ALIASES = {
+    "name": "tên", "native_name": "tên bản địa", "other_name": "tên khác", "other_names": "tên khác",
+    "tên gọi khác": "tên khác", "former_name": "tên cũ", "former_names": "tên cũ", "abbreviation": "viết tắt",
+    "established": "ngày thành lập", "founded": "ngày thành lập", "type": "loại hình",
+    "parent": "tổ chức mẹ", "affiliation": "liên kết", "affiliations": "liên kết",
+    "endowment": "tài trợ", "budget": "ngân sách",
+    "chairman": "chủ tịch hội đồng trường", "chair": "chủ tịch hội đồng trường",
+    "chủ tịch hội đồng": "chủ tịch hội đồng trường",
+    "president": "hiệu trưởng", "principal": "hiệu trưởng", "rector": "hiệu trưởng", "director": "giám đốc",
+    "address": "địa chỉ", "city": "thành phố", "province": "tỉnh", "country": "quốc gia",
+    "campus": "khuôn viên", "motto": "khẩu hiệu", "website": "web", "students": "sinh viên",
+    "undergrad": "sinh viên đại học", "postgrad": "sinh viên sau đại học", "doctoral": "nghiên cứu sinh",
+    "faculty": "giảng viên", "academic_staff": "giảng viên", "telephone": "điện thoại", "phone": "điện thoại",
+}
+LOGO_FILE = re.compile(r"logo|biểu trưng|huy hiệu|emblem|seal|icon|hiệu kỳ|quân hiệu|công an hiệu|wordmark", re.I)
+EMAIL = re.compile(r"[\w.+-]+@[\w-]+(\.[\w-]+)+")
+PHONE = re.compile(r"(\+?84|0)[\d .()\-]{7,16}\d")
+
+
+def normalize_infobox(box: dict) -> dict:
+    out = dict(box)
+    for k, v in box.items():
+        vk = INFOBOX_ALIASES.get(k)
+        if vk and vk not in box:
+            out[vk] = v
+    return out
+
+
+def media_of(page: dict | None, wd: dict, images: dict) -> dict:
+    """Chọn biểu trưng và ảnh: infobox viwiki trước (đã được biên tập viên chọn), rồi Wikidata P154/P18.
+    Chỉ nhận tệp tồn tại (có trong imageinfo) để không sinh liên kết ảnh hỏng."""
+    logos, photos = [], []
+    for f in (page or {}).get("files", []):
+        (logos if LOGO_FILE.search(f) or f.lower().endswith(".svg") else photos).append(f)
+    logos += wd.get("logo", [])
+    photos += wd.get("image", [])
+    out = {}
+    for kind, cands in (("logo", logos), ("image", photos)):
+        for f in cands:
+            info = images.get(f) or images.get(f[0].upper() + f[1:])
+            if info and info.get("url") and info["url"] != (out.get("logo") or {}).get("url"):
+                out[kind] = {"file": f, **{k_: (v_.split("?utm_")[0] if isinstance(v_, str) else v_)
+                                           for k_, v_ in info.items() if k_ != "commons"}}
+                break
+    return out
+
+
 def build_institutions(provs):
     wdi = {f["qid"]: f for f in load("wd_institutions.json")}
     ents = load("wd_entities.json")
     pages = load("viwiki_pages.json")
     dbp_years = load("dbp_years.json")
     page_by_q = {p["qid"]: p for p in pages if p["qid"]}
+    images = load("viwiki_images.json")
+    link_qids = load("viwiki_links.json")
     keys = sorted(set(wdi) | {p["qid"] or "vi:" + p["title"] for p in pages}, key=lambda k: (k[0] != "Q", k))
     nopage = {"vi:" + p["title"]: p for p in pages if not p["qid"]}
 
@@ -420,7 +472,8 @@ def build_institutions(provs):
     for k in keys:
         f = wdi.get(k, {})
         page = page_by_q.get(k) or nopage.get(k)
-        box = page["infobox"] if page else {}
+        box = normalize_infobox(page["infobox"]) if page else {}
+        links = normalize_infobox(page.get("links", {})) if page else {}
         lab = f.get("labels", {})
         title = page["title"] if page else (lab.get("vititle") or lab.get("vi") or lab.get("en") or "")
         if not title:
@@ -603,7 +656,8 @@ def build_institutions(provs):
         # --- quan hệ tổ chức (thô; phân giải sau khi có đủ danh sách cơ sở)
         targets = [("wikidata", q, (ents.get(q) or {}).get("vi") or (wdi.get(q, {}).get("labels", {}).get("vi", "")))
                    for q in f.get("parents", [])]
-        for fld in ("thành viên của", "thuộc tổ chức", "trực thuộc", "bộ phận của", "cơ quan chủ quản", "chủ quản"):
+        for fld in ("thành viên của", "thuộc tổ chức", "trực thuộc", "bộ phận của", "cơ quan chủ quản", "chủ quản",
+                    "tổ chức mẹ", "bộ chủ quản"):
             for v in split_multi(box.get(fld, "")):
                 for part in re.split(r",?\s+trực thuộc\s+", v):
                     part = clean_org_name(part)
@@ -621,7 +675,7 @@ def build_institutions(provs):
         for r in f.get("leaders", []):
             lab_p = ents.get(r["v"], {})
             if lab_p.get("vi") or lab_p.get("en"):
-                leaders.append({"role": "director" if r["r"] in ("director", "chair") else "rector",
+                leaders.append({"role": {"director": "director", "chair": "chair"}.get(r["r"], "rector"),
                                 "qid": r["v"], "name": lab_p.get("vi") or lab_p.get("en"), "honorific": "", "source": "wikidata"})
         roles = [("hiệu trưởng", "rector"), ("giám đốc", "director")]
         for i in (1, 2):
@@ -645,7 +699,50 @@ def build_institutions(provs):
                 leaders = []   # infobox viwiki thường cập nhật hơn Wikidata về lãnh đạo hiện tại
             leaders.append({"role": role, "qid": "", "name": nm, "honorific": honor, "source": "viwiki"})
             break
+        # --- chủ tịch hội đồng trường (vai trò riêng, không thay thế hiệu trưởng/giám đốc)
+        chair_val = split_multi(box.get("chủ tịch hội đồng trường", "") or box.get("chủ tịch", ""))
+        if chair_val:
+            nm, honor = parse_person(chair_val[0])
+            if nm and not any(l["role"] == "chair" and vn_key(l["name"]) == vn_key(nm) for l in leaders):
+                leaders = [l for l in leaders if l["role"] != "chair"]   # infobox cập nhật hơn
+                leaders.append({"role": "chair", "qid": "", "name": nm, "honorific": honor, "source": "viwiki"})
         inst["leaders"] = leaders
+
+        # --- tên khác, ngày thành lập đầy đủ, liên hệ, khuôn viên, tài chính
+        alts = []
+        for fld in ("tên khác", "tên bản địa"):
+            for v in split_multi(box.get(fld, "")):
+                v = re.sub(r"\s*\((tiếng [^)]*|viết tắt[^)]*)\)\s*$", "", v).strip(" ;,")
+                if re.search(r"\bmã\b|\bhoặc\b", v, re.I) or re.fullmatch(r"[A-Z0-9&\-]{2,10}", v):
+                    continue
+                if 3 <= len(v) <= 120 and vn_key(v) not in {vn_key(name), vn_key(en)} and v not in alts:
+                    alts.append(v)
+        inst["alt_names"] = alts
+        for fld in ("ngày thành lập", "thành lập", "năm thành lập"):
+            m = re.match(r"^(\d{4})-(\d{2})-(\d{2})$", box.get(fld, "").split(" | ")[0].strip())
+            if m:
+                inst["founding_date"] = m.group(0)
+                break
+        m = EMAIL.search(box.get("email", "") or box.get("thư điện tử", ""))
+        inst["email"] = m.group(0).lower() if m else ""
+        m = PHONE.search(box.get("điện thoại", ""))
+        inst["telephone"] = re.sub(r"\s+", " ", m.group(0)).strip() if m else ""
+        inst["campus"] = (split_multi(box.get("khuôn viên", "")) or [""])[0][:120]
+        fund = (split_multi(box.get("tài trợ", "") or box.get("ngân sách", "")) or [""])[0][:120]
+        inst["funding"] = fund if re.search(r"\d", fund) else ""
+
+        # --- đối tác / liên kết: chỉ nhận khi bài liên kết phân giải được QID (để trỏ tới URI có sẵn)
+        partners = []
+        for t in links.get("liên kết", []) + links.get("đối tác", []):
+            q = link_qids.get(t)
+            if q and q != k and all(p_["qid"] != q for p_ in partners):
+                partners.append({"qid": q, "name": t})
+        inst["partners"] = partners
+
+        # --- văn bản giới thiệu (CC BY-SA, ghi nguồn bằng bản sửa đổi viwiki) và ảnh
+        inst["abstract"] = lead if len(lead) >= 40 else ""
+        inst["history"] = page.get("history", "") if page else ""
+        inst.update(media_of(page, f, images))
         inst["english_only"] = not page and not lab.get("vi")
         insts[k] = inst
 

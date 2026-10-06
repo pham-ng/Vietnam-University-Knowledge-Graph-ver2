@@ -28,6 +28,7 @@ university:truong-dai-hoc-ngoai-ngu-dai-hoc-hue a dbo:University,
         schema:Organization ;
     rdfs:label "Hue University of Foreign Languages and International Studies"@en,
         "Trường Đại học Ngoại ngữ, Đại học Huế"@vi ;
+    dbo:abstract "Đại học Ngoại ngữ Huế là một trường đại học trực thuộc hệ thống Đại học Huế, được xếp vào nhóm đại học trọng điểm của quốc gia Việt Nam. Trường được thành lập ngày 13 tháng 7 năm 2004 trên cơ sở sáp nhập các khoa và tổ ngoại ngữ từ 6 trường thành viên của Đại học Huế với bề dày truyền thống gần 50 năm kể từ năm 1957."@vi ;
     owl:sameAs dbr:Huế_College_of_Foreign_Languages,
         wd:Q10829097 ;
     geo:lat 16.466806 ;
@@ -48,8 +49,16 @@ university:truong-dai-hoc-ngoai-ngu-dai-hoc-hue a dbo:University,
     vnedu:rector person:nguyen-vu-quoc-huy ;
     vnedu:website <http://hucfl.edu.vn/en/> ;
     schema:employee person:nguyen-vu-quoc-huy ;
+    schema:foundingDate "2004-07-13"^^xsd:date ;
     schema:location country:viet-nam,
         province:hue,
         region:trung-bo ;
-    schema:parentOrganization university:dai-hoc-hue .
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/5/55/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngo%E1%BA%A1i_ng%E1%BB%AF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg> ;
+    schema:parentOrganization university:dai-hoc-hue ;
+    schema:telephone "0234.3830677" .
+
+<https://upload.wikimedia.org/wikipedia/vi/5/55/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngo%E1%BA%A1i_ng%E1%BB%AF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngo%E1%BA%A1i_ng%E1%BB%AF,_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/5/55/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngo%E1%BA%A1i_ng%E1%BB%AF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngo%E1%BA%A1i_ng%E1%BB%AF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF.svg.png> .
 

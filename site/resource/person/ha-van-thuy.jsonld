@@ -19,10 +19,10 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ha-van-thuy",
   "@type": [
-    "vnedu:Person",
-    "foaf:Person",
+    "schema:Person",
     "vnedu:Alumnus",
-    "schema:Person"
+    "foaf:Person",
+    "vnedu:Person"
   ],
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/H%C3%A0_V%C4%83n_Th%C3%B9y"
@@ -52,13 +52,13 @@
   },
   "schema:hasOccupation": [
     {
+      "@id": "wd:Q1930187"
+    },
+    {
       "@id": "wd:Q4263842"
     },
     {
       "@id": "wd:Q36180"
-    },
-    {
-      "@id": "wd:Q1930187"
     }
   ],
   "vnedu:alumnusOf": {

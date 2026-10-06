@@ -17,102 +17,133 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-mua-viet-nam",
-  "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "vnedu:Academy",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.vnad.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_M%C3%BAa_Vi%E1%BB%87t_Nam"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.038444"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.7755"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q65172277"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75497384"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-mua-viet-nam",
+      "@type": [
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:Academy",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "foaf:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Múa Việt Nam là cơ sở giáo dục công lập trong hệ thống giáo dục quốc dân trực thuộc Bộ Văn hóa, Thể thao và Du lịch; chịu sự quản lý nhà nước của Bộ Giáo dục và Đào tạo, nằm trên địa bàn thành phố Hà Nội."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.vnad.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_M%C3%BAa_Vi%E1%BB%87t_Nam"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.038444"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.7755"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q65172277"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75497384"
+        },
+        {
+          "@id": "wd:Q65172277"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "vi",
+        "@value": "Học viện Múa Việt Nam"
+      },
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thuy-nga"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1959-10-25"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/7/71/Hvmlogo.jpg"
+      },
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Múa Việt Nam"
+      },
+      "vnedu:address": "Khu Văn hóa Nghệ thuật Mai Dịch, đường Hồ Tùng Mậu, phường Phú Diễn",
+      "vnedu:director": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thuy-nga"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1959"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-van-hoa-the-thao-va-du-lich"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-huan"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoai-anh-2"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thuy-nga"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Ngày 25 tháng 10 năm 1959 là mốc son đáng nhớ đánh dấu sự ra đời của Trường Múa Việt Nam. Trải qua bao thăng trầm lịch sử và nhiều giai đoạn phát triển, Trường được nâng cấp lên thành trường Cao đẳng Múa Việt Nam (năm 2001). Theo Quyết định số 01/QĐ-TTg, ngày 03/01/2019 của Thủ tướng Chính phủ đồng ý phê duyệt thành lập Học viện Múa Việt Nam trên cơ sở trường Cao đẳng Múa Việt Nam.\n\nNgay từ những ngày đầu mới thành lập, nhà trường đã nhận được sự quan tâm đặc biệt của Đảng, Nhà nước và Bác Hồ kính yêu. Nhà trường đã vinh dự được đón Bác hai lần đến thăm, động viên, khích lệ và giao nhiệm vụ đào tạo những mầm non nghệ thuật múa cho đất nước. Trải qua 60 năm xây dựng và phát triển, chặng đường lịch sử của nhà trường luôn đồng hành với những bước đi lên của đất nước, luôn giữ vững vị thế \"cánh chim đầu đàn\", xứng đáng là \"chiếc nôi của ngành múa Việt Nam\". Nhà trường đã đào tạo nhiều thế hệ nghệ sĩ, nhiều tài năng nghệ thuật múa trưởng thành, hiện đang công tác trong lĩnh vực biểu diễn, sáng tác, nghiên cứu, lý luận, phê bình... Nhiều người đã và đang đảm nhận những chức trách quan trọng trong bộ máy quản lý Nhà nước của ngành Văn hoá; có người đã trở thành đại biểu Quốc hội, Cục trưởng Cục nghệ thuật biểu diễn, nhiều người đã được phong tặng học hàm, học vị GS, PGS, TS, và những danh hiệu cao quý khác của Đảng, Nhà nước như: \"Nhà giáo nhân dân\", \"Nghệ sĩ nhân dân\", \"Nhà giáo ưu tú\", \"Nghệ sĩ ưu tú\"...\n\nVới sự nỗ lực phấn đấu không ngừng, Học viện Múa Việt Nam đã được Đảng và Nhà nước tặng thưởng Huân chương Độc lập hạng Nhất, hạng Nhì, hạng Ba; Huân chương Lao động hạng Nhất, hạng Nhì, hạng Ba cùng các giải thưởng văn học nghệ thuật, giải thưởng Hồ Chí Minh và giải thưởng Nhà nước.\n\nNăm 2019 là một năm đánh dấu sự kiện có ý nghĩa vô cùng quan trọng đối với toàn thể cán bộ, giáo viên, công nhân viên và học sinh, sinh viên toàn trường – Trường được nâng cấp lên thành Học viện Múa Việt Nam. Tự hào với truyền thống đào tạo trong suốt 60 năm qua, hy vọng hơn 3000 học sinh, sinh viên được đào tạo tại ngôi trường này đã và đang công tác trong lĩnh vực biểu diễn, sáng tác, giảng dạy, nghiên cứu phê bình về nghệ thuật múa sẽ viết tiếp những trang sử vàng, góp phần vào sự trưởng thành của Học viện Múa Việt Nam."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:website": {
+        "@id": "http://www.vnad.edu.vn"
+      }
     },
     {
-      "@id": "wd:Q65172277"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/7/71/Hvmlogo.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Yunichi hvmvn",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Hvmlogo.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Hvmlogo.jpg/330px-Hvmlogo.jpg"
+      }
     }
-  ],
-  "rdfs:label": {
-    "@language": "vi",
-    "@value": "Học viện Múa Việt Nam"
-  },
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thuy-nga"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Múa Việt Nam"
-  },
-  "vnedu:address": "Khu Văn hóa Nghệ thuật Mai Dịch, đường Hồ Tùng Mậu, phường Phú Diễn",
-  "vnedu:director": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thuy-nga"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1959"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-van-hoa-the-thao-va-du-lich"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-huan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoai-anh-2"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thuy-nga"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:website": {
-    "@id": "http://www.vnad.edu.vn"
-  }
+  ]
 }

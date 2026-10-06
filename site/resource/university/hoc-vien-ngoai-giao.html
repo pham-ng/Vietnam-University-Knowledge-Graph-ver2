@@ -30,188 +30,216 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ngoai-giao",
-  "@type": [
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "vnedu:Academy",
-    "schema:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.dav.edu.vn/en/"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Diplomatic_Academy_of_Vietnam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ngoai-giao",
+      "@type": [
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:Academy",
+        "schema:EducationalOrganization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Ngoại giao (tiếng Anh: Diplomatic Academy of Vietnam, viết tắt: DAV) là cơ sở giáo dục đào tạo trình độ đại học, sau đại học và bồi dưỡng nghiệp vụ đối ngoại trực thuộc Bộ Ngoại giao tại Việt Nam."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.dav.edu.vn/en/"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Ngo%E1%BA%A1i_giao_%28Vi%E1%BB%87t_Nam%29"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/Diplomatic_Academy_of_Vietnam"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.0232"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.8071"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10771893"
+        },
+        {
+          "@id": "dbr:Diplomatic_Academy_of_Vietnam"
+        },
+        {
+          "@id": "https://ror.org/02n7f7n49"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10771893"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75590298"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Diplomatic Academy of Vietnam"
+        },
+        {
+          "@language": "vi",
+          "@value": "Học viện Ngoại giao"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hung-son"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_Ngo%E1%BA%A1i_giao_Vi%E1%BB%87t_Nam.png"
+      },
+      "schema:telephone": "+84-24) 3834 4540",
+      "skos:notation": "HQT",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Ngoại giao"
+      },
+      "vnedu:address": "số 69 phố Chùa Láng, phường Láng, thành phố Hà Nội",
+      "vnedu:admissionCode": "HQT",
+      "vnedu:director": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hung-son"
+      },
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Học viện Quan hệ quốc tế"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1959"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-ngoai-giao"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thi-hong-an"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-luong-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-hoang-giang"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngo-huong-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-lan-dung"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hoanh-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/do-ngoc-duong"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hai-anh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-cam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-manh-dung"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/my-my"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-tan"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-hai-binh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-chau"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hong-ha"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-hang"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-sanh-chau"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/trinh-duc-du"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-hung"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hung-son"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Năm 1959, Học viện Ngoại giao được thành lập với tên ban đầu là Trường Ngoại giao do Thường vụ Hội đồng Chính phủ ra quyết định thành lập.\n\nĐến năm 1960, Trường sáp nhập vào Trường Đại học Kinh tế – Tài chính (nay là Trường Đại học Kinh tế Quốc dân) và trở thành Khoa Quan hệ Quốc tế. Tuy là khoa thuộc Trường Đại học Kinh tế - Tài chính, nhưng lại do Bộ Ngoại giao trực tiếp quản lý. Khoa Quan hệ quốc tế lúc đó có 2 bộ môn: bộ môn Ngoại giao và bộ môn Ngoại thương, Chủ nhiệm Khoa là cán bộ do Bộ Ngoại giao bổ nhiệm.\n\nNăm 1964, Thủ tướng Chính phủ đã ra quyết định tách Khoa Quan hệ quốc tế ra khỏi Trường Đại học Kinh tế - Tài chính để tái thành lập Trường Cán bộ Ngoại giao - Ngoại thương trực thuộc Bộ Ngoại giao.\n\nNăm 1965, Thủ tướng Chính phủ ra quyết định chia Trường Cán bộ Ngoại giao – Ngoại thương thành hai trường: Trường Đại học Ngoại giao và Trường Đại học Ngoại thương.\n\nNgày 19 tháng 5 năm 1987, Hội đồng Bộ trưởng đã ban hành Nghị định số 78/HĐBT về việc sáp nhập Trường Đại học Ngoại giao với Viện Quan hệ quốc tế để thành lập Viện Quan hệ quốc tế Bộ Ngoại giao.\n\nNgày 1 tháng 8 năm 1992, Chủ tịch Hội đồng Bộ trưởng đã ban hành Quyết định số 279/CT về việc đổi tên Viện Quan hệ quốc tế Bộ Ngoại giao thành Học viện Quan hệ quốc tế.\n\nNgày 23 tháng 6 năm 2008, Thủ tướng Chính phủ ra Quyết định số 82/2008/QĐ-TTg nâng cấp Học viện Quan hệ Quốc tế thành Học viện Ngoại giao, với cơ cấu tổ chức và chức năng của cơ quan cấp Tổng cục.\n\nNgày 12 tháng 7 năm 2012, Thủ tướng Chính phủ ra Quyết định số 29/2012/QĐ-TTg sửa đổi, bổ sung Điều 3 Quyết định số 82/2008/QĐ-TTg ngày 23 tháng 6 năm 2008 của Thủ tướng Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Học viện Ngoại giao trực thuộc Bộ Ngoại giao, theo đó thành lập Viện Biển Đông trực thuộc Học viện Ngoại giao.\n\nNgày 24 tháng 12 năm 2014, Thủ tướng Chính phủ ra Quyết định số 75/2014/QĐ-TTg quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Học viện Ngoại giao trực thuộc Bộ Ngoại giao, theo đó thành lập Ban Đào tạo trực thuộc Học viện Ngoại giao.\n\nTheo Quyết định số 07/2019/QĐ-TTg ngày 15/02/2019 của Thủ tướng Chính phủ, thay thế quyết định cũ, quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Học viện Ngoại giao trực thuộc Bộ Ngoại giao: \"Học viện Ngoại giao là tổ chức sự nghiệp công lập trực thuộc Bộ Ngoại giao, thực hiện chức năng nghiên cứu chiến lược về quan hệ quốc tế và chính sách đối ngoại; đào tạo đại học, sau đại học và bồi dưỡng nghiệp vụ đối ngoại\"."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Năng động - Sáng tạo - Tầm nhìn Vị thế quốc gia - Tầm vóc quốc tế"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:shortName": [
+        "DAV",
+        "HVNG"
+      ],
+      "vnedu:website": {
+        "@id": "http://www.dav.edu.vn/en/"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Ngo%E1%BA%A1i_giao_%28Vi%E1%BB%87t_Nam%29"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_Ngo%E1%BA%A1i_giao_Vi%E1%BB%87t_Nam.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Diplomatic Academy of Vietnam",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Logo_H%E1%BB%8Dc_vi%E1%BB%87n_Ngo%E1%BA%A1i_giao_Vi%E1%BB%87t_Nam.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_Ngo%E1%BA%A1i_giao_Vi%E1%BB%87t_Nam.png/330px-Logo_H%E1%BB%8Dc_vi%E1%BB%87n_Ngo%E1%BA%A1i_giao_Vi%E1%BB%87t_Nam.png"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.0232"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.8071"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "https://ror.org/02n7f7n49"
-    },
-    {
-      "@id": "dbr:Diplomatic_Academy_of_Vietnam"
-    },
-    {
-      "@id": "wd:Q10771893"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75590298"
-    },
-    {
-      "@id": "wd:Q10771893"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Học viện Ngoại giao"
-    },
-    {
-      "@language": "en",
-      "@value": "Diplomatic Academy of Vietnam"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hung-son"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:notation": "HQT",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Ngoại giao"
-  },
-  "vnedu:address": "số 69 phố Chùa Láng, phường Láng, thành phố Hà Nội",
-  "vnedu:admissionCode": "HQT",
-  "vnedu:director": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hung-son"
-  },
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Học viện Quan hệ quốc tế"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1959"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-ngoai-giao"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/my-my"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-thi-hong-an"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ngo-huong-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-hoang-giang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-hang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-luong-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-chau"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hoanh-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/trinh-duc-du"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-sanh-chau"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/do-ngoc-duong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-lan-dung"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-manh-dung"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hong-ha"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-cam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-hai-binh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-tan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-hung"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hai-anh"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hung-son"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Năng động - Sáng tạo - Tầm nhìn Vị thế quốc gia - Tầm vóc quốc tế"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:shortName": [
-    "DAV",
-    "HVNG"
-  ],
-  "vnedu:website": {
-    "@id": "http://www.dav.edu.vn/en/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([21.0232,105.8071],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([21.0232,105.8071],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -230,7 +258,9 @@
   <a href="hoc-vien-ngoai-giao.ttl">Turtle</a> · <a href="hoc-vien-ngoai-giao.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ngoai-giao">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 36 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Học viện Ngoại giao (tiếng Anh: Diplomatic Academy of Vietnam, viết tắt: DAV) là cơ sở giáo dục đào tạo trình độ đại học, sau đại học và bồi dưỡng nghiệp vụ đối ngoại trực thuộc Bộ Ngoại giao tại Việt Nam.</p><h2>Lịch sử</h2><p>Năm 1959, Học viện Ngoại giao được thành lập với tên ban đầu là Trường Ngoại giao do Thường vụ Hội đồng Chính phủ ra quyết định thành lập.</p><p>Đến năm 1960, Trường sáp nhập vào Trường Đại học Kinh tế – Tài chính (nay là Trường Đại học Kinh tế Quốc dân) và trở thành Khoa Quan hệ Quốc tế. Tuy là khoa thuộc Trường Đại học Kinh tế - Tài chính, nhưng lại do Bộ Ngoại giao trực tiếp quản lý. Khoa Quan hệ quốc tế lúc đó có 2 bộ môn: bộ môn Ngoại giao và bộ môn Ngoại thương, Chủ nhiệm Khoa là cán bộ do Bộ Ngoại giao bổ nhiệm.</p><details><summary>Đọc tiếp (8 đoạn)</summary><p>Năm 1964, Thủ tướng Chính phủ đã ra quyết định tách Khoa Quan hệ quốc tế ra khỏi Trường Đại học Kinh tế - Tài chính để tái thành lập Trường Cán bộ Ngoại giao - Ngoại thương trực thuộc Bộ Ngoại giao.</p><p>Năm 1965, Thủ tướng Chính phủ ra quyết định chia Trường Cán bộ Ngoại giao – Ngoại thương thành hai trường: Trường Đại học Ngoại giao và Trường Đại học Ngoại thương.</p><p>Ngày 19 tháng 5 năm 1987, Hội đồng Bộ trưởng đã ban hành Nghị định số 78/HĐBT về việc sáp nhập Trường Đại học Ngoại giao với Viện Quan hệ quốc tế để thành lập Viện Quan hệ quốc tế Bộ Ngoại giao.</p><p>Ngày 1 tháng 8 năm 1992, Chủ tịch Hội đồng Bộ trưởng đã ban hành Quyết định số 279/CT về việc đổi tên Viện Quan hệ quốc tế Bộ Ngoại giao thành Học viện Quan hệ quốc tế.</p><p>Ngày 23 tháng 6 năm 2008, Thủ tướng Chính phủ ra Quyết định số 82/2008/QĐ-TTg nâng cấp Học viện Quan hệ Quốc tế thành Học viện Ngoại giao, với cơ cấu tổ chức và chức năng của cơ quan cấp Tổng cục.</p><p>Ngày 12 tháng 7 năm 2012, Thủ tướng Chính phủ ra Quyết định số 29/2012/QĐ-TTg sửa đổi, bổ sung Điều 3 Quyết định số 82/2008/QĐ-TTg ngày 23 tháng 6 năm 2008 của Thủ tướng Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Học viện Ngoại giao trực thuộc Bộ Ngoại giao, theo đó thành lập Viện Biển Đông trực thuộc Học viện Ngoại giao.</p><p>Ngày 24 tháng 12 năm 2014, Thủ tướng Chính phủ ra Quyết định số 75/2014/QĐ-TTg quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Học viện Ngoại giao trực thuộc Bộ Ngoại giao, theo đó thành lập Ban Đào tạo trực thuộc Học viện Ngoại giao.</p><p>Theo Quyết định số 07/2019/QĐ-TTg ngày 15/02/2019 của Thủ tướng Chính phủ, thay thế quyết định cũ, quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Học viện Ngoại giao trực thuộc Bộ Ngoại giao: &quot;Học viện Ngoại giao là tổ chức sự nghiệp công lập trực thuộc Bộ Ngoại giao, thực hiện chức năng nghiên cứu chiến lược về quan hệ quốc tế và chính sách đối ngoại; đào tạo đại học, sau đại học và bồi dưỡng nghiệp vụ đối ngoại&quot;.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75590298">«Học viện Ngoại giao (Việt Nam)»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75590298), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Học viện Ngoại giao</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:Logo_H%E1%BB%8Dc_vi%E1%BB%87n_Ngo%E1%BA%A1i_giao_Vi%E1%BB%87t_Nam.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_Ngo%E1%BA%A1i_giao_Vi%E1%BB%87t_Nam.png/330px-Logo_H%E1%BB%8Dc_vi%E1%BB%87n_Ngo%E1%BA%A1i_giao_Vi%E1%BB%87t_Nam.png" alt="Biểu trưng Học viện Ngoại giao" loading="lazy"></a><figcaption>CC BY-SA 4.0 · Diplomatic Academy of Vietnam</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>Diplomatic Academy of Vietnam</td></tr><tr><th>Viết tắt</th><td>DAV, HVNG</td></tr><tr><th>Mã trường</th><td>HQT</td></tr><tr><th>Tên cũ</th><td>Học viện Quan hệ quốc tế</td></tr><tr><th>Loại hình</th><td>Học viện · Công lập</td></tr><tr><th>Thành lập</th><td>1959</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-ngoai-giao">Bộ Ngoại giao</a></td></tr><tr><th>Giám đốc</th><td><span class="lang">Tiến sĩ</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-hung-son">Nguyễn Hùng Sơn</a></td></tr><tr><th>Địa chỉ</th><td>số 69 phố Chùa Láng, phường Láng, thành phố Hà Nội</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Năng động - Sáng tạo - Tầm nhìn Vị thế quốc gia - Tầm vóc quốc tế</i></td></tr><tr><th>Điện thoại</th><td>+84-24) 3834 4540</td></tr><tr><th>Website</th><td><a href="http://www.dav.edu.vn/en/">dav.edu.vn/en</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -262,6 +292,12 @@
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/5/5c/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_Ngo%E1%BA%A1i_giao_Vi%E1%BB%87t_Nam.png">&lt;https://upload.wikimedia.org/wikipedia/commons/5/5c/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_Ngo%E1%BA%A1i_giao_Vi%E1%BB%87t_Nam.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84-24) 3834 4540</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>HQT <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

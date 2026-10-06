@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ha-long",
   "@type": [
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
+    "vnedu:UniversitySchool",
     "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
+    "vnedu:EducationalOrganization",
     "schema:CollegeOrUniversity",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
+    "dbo:University",
     "schema:Organization",
     "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution"
+    "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Hạ Long (Ha Long University) là trường công lập, trực thuộc Ủy ban Nhân dân tỉnh Quảng Ninh. Trường Đại học Hạ Long đào tạo đa ngành, đa lĩnh vực, cung cấp nguồn nhân lực trình độ cao về khoa học, công nghệ, kinh tế, giáo dục và xã hội nhân văn; là trung tâm nghiên cứu khoa học, chuyển giao công nghệ phục vụ sự phát triển kinh tế – xã hội của tỉnh Quảng Ninh và khu vực đồng bằng Bắc Bộ."
+  },
   "foaf:homepage": {
     "@id": "http://www.uhl.edu.vn"
   },
@@ -41,24 +45,34 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75564205"
+      "@id": "wd:Q65165392"
     },
     {
-      "@id": "wd:Q65165392"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75564205"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Hạ Long"
-    },
-    {
       "@language": "en",
       "@value": "Ha Long University"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Hạ Long"
     }
   ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tiep"
+  "schema:email": "tonghop@daihochalong.edu.vn",
+  "schema:employee": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tiep"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-hoang-thong"
+    }
+  ],
+  "schema:foundingDate": {
+    "@type": "xsd:date",
+    "@value": "2014-10-13"
   },
   "schema:location": [
     {
@@ -71,27 +85,40 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
+  "schema:telephone": "0203.3850304",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Hạ Long"
   },
   "vnedu:address": "258, Bạch Đằng, Uông Bí",
+  "vnedu:councilChair": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-hoang-thong"
+  },
   "vnedu:foundingYear": {
     "@type": "xsd:gYear",
     "@value": "2014"
   },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tiep"
+  "vnedu:hasLeader": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-hoang-thong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tiep"
+    }
+  ],
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Trường được thành lập theo Quyết định số 1869/QĐ-TTg ngày 13/10/2014 của Thủ tướng Chính phủ về việc thành lập Trường ĐH Hạ Long trên cơ sở 2 trường Cao đẳng Sư phạm Quảng Ninh và Cao đẳng Văn hóa, Nghệ thuật và Du lịch Hạ Long. Trường Đại học Hạ Long có hai cơ sở:\n\nCơ sở 1: số 258, Phường Nam Khê, Thành phố Uông Bí, Tỉnh Quảng Ninh (tại vị trí của Trường Cao đẳng Sư phạm Quảng Ninh cũ).\n\nCơ sở 2: số 58, Phường Hồng Hải, Thành phố Hạ Long, Tỉnh Quảng Ninh (tại vị trí của Trường Cao đẳng Văn hóa, Nghệ thuật và Du lịch Hạ Long cũ)."
   },
   "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-ninh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "vnedu:motto": {

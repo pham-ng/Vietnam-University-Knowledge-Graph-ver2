@@ -32,17 +32,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ha-long",
   "@type": [
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
+    "vnedu:UniversitySchool",
     "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
+    "vnedu:EducationalOrganization",
     "schema:CollegeOrUniversity",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
+    "dbo:University",
     "schema:Organization",
     "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution"
+    "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Hạ Long (Ha Long University) là trường công lập, trực thuộc Ủy ban Nhân dân tỉnh Quảng Ninh. Trường Đại học Hạ Long đào tạo đa ngành, đa lĩnh vực, cung cấp nguồn nhân lực trình độ cao về khoa học, công nghệ, kinh tế, giáo dục và xã hội nhân văn; là trung tâm nghiên cứu khoa học, chuyển giao công nghệ phục vụ sự phát triển kinh tế – xã hội của tỉnh Quảng Ninh và khu vực đồng bằng Bắc Bộ."
+  },
   "foaf:homepage": {
     "@id": "http://www.uhl.edu.vn"
   },
@@ -54,24 +58,34 @@
   },
   "prov:wasDerivedFrom": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75564205"
+      "@id": "wd:Q65165392"
     },
     {
-      "@id": "wd:Q65165392"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75564205"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Hạ Long"
-    },
-    {
       "@language": "en",
       "@value": "Ha Long University"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Hạ Long"
     }
   ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tiep"
+  "schema:email": "tonghop@daihochalong.edu.vn",
+  "schema:employee": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tiep"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-hoang-thong"
+    }
+  ],
+  "schema:foundingDate": {
+    "@type": "xsd:date",
+    "@value": "2014-10-13"
   },
   "schema:location": [
     {
@@ -84,27 +98,40 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
+  "schema:telephone": "0203.3850304",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Hạ Long"
   },
   "vnedu:address": "258, Bạch Đằng, Uông Bí",
+  "vnedu:councilChair": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-hoang-thong"
+  },
   "vnedu:foundingYear": {
     "@type": "xsd:gYear",
     "@value": "2014"
   },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tiep"
+  "vnedu:hasLeader": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-hoang-thong"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tiep"
+    }
+  ],
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Trường được thành lập theo Quyết định số 1869/QĐ-TTg ngày 13/10/2014 của Thủ tướng Chính phủ về việc thành lập Trường ĐH Hạ Long trên cơ sở 2 trường Cao đẳng Sư phạm Quảng Ninh và Cao đẳng Văn hóa, Nghệ thuật và Du lịch Hạ Long. Trường Đại học Hạ Long có hai cơ sở:\n\nCơ sở 1: số 258, Phường Nam Khê, Thành phố Uông Bí, Tỉnh Quảng Ninh (tại vị trí của Trường Cao đẳng Sư phạm Quảng Ninh cũ).\n\nCơ sở 2: số 58, Phường Hồng Hải, Thành phố Hạ Long, Tỉnh Quảng Ninh (tại vị trí của Trường Cao đẳng Văn hóa, Nghệ thuật và Du lịch Hạ Long cũ)."
   },
   "vnedu:locatedIn": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-ninh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "vnedu:motto": {
@@ -138,7 +165,9 @@
 <p class="uri">https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ha-long<br>
   <a href="truong-dai-hoc-ha-long.ttl">Turtle</a> · <a href="truong-dai-hoc-ha-long.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ha-long">Truy vấn SPARQL</a>
-   · <span class="pill inf">suy luận</span> = 17 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
+   · <span class="pill inf">suy luận</span> = 19 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Hạ Long (Ha Long University) là trường công lập, trực thuộc Ủy ban Nhân dân tỉnh Quảng Ninh. Trường Đại học Hạ Long đào tạo đa ngành, đa lĩnh vực, cung cấp nguồn nhân lực trình độ cao về khoa học, công nghệ, kinh tế, giáo dục và xã hội nhân văn; là trung tâm nghiên cứu khoa học, chuyển giao công nghệ phục vụ sự phát triển kinh tế – xã hội của tỉnh Quảng Ninh và khu vực đồng bằng Bắc Bộ.</p><h2>Lịch sử</h2><p>Trường được thành lập theo Quyết định số 1869/QĐ-TTg ngày 13/10/2014 của Thủ tướng Chính phủ về việc thành lập Trường ĐH Hạ Long trên cơ sở 2 trường Cao đẳng Sư phạm Quảng Ninh và Cao đẳng Văn hóa, Nghệ thuật và Du lịch Hạ Long. Trường Đại học Hạ Long có hai cơ sở:</p><p>Cơ sở 1: số 258, Phường Nam Khê, Thành phố Uông Bí, Tỉnh Quảng Ninh (tại vị trí của Trường Cao đẳng Sư phạm Quảng Ninh cũ).</p><details><summary>Đọc tiếp (1 đoạn)</summary><p>Cơ sở 2: số 58, Phường Hồng Hải, Thành phố Hạ Long, Tỉnh Quảng Ninh (tại vị trí của Trường Cao đẳng Văn hóa, Nghệ thuật và Du lịch Hạ Long cũ).</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75564205">«Trường Đại học Hạ Long»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75564205), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Hạ Long</div><table><tr><th>Tên tiếng Anh</th><td>Ha Long University</td></tr><tr><th>Viết tắt</th><td>UHL</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>13 tháng 10 năm 2014</td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tiep">Nguyễn Đức Tiệp</a></td></tr><tr><th>Chủ tịch hội đồng trường</th><td><span class="lang">TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-hoang-thong">Đặng Hoàng Thông</a></td></tr><tr><th>Địa chỉ</th><td>258, Bạch Đằng, Uông Bí</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-ninh">Quảng Ninh</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Học để thành công</i></td></tr><tr><th>Điện thoại</th><td>0203.3850304</td></tr><tr><th>Email</th><td><a href="mailto:tonghop@daihochalong.edu.vn">tonghop@daihochalong.edu.vn</a></td></tr><tr><th>Website</th><td><a href="http://www.uhl.edu.vn">uhl.edu.vn</a></td></tr></table></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
 
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
@@ -160,20 +189,32 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q65165392">wd:Q65165392</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75564205">&lt;https://vi.wikipedia.org/w/index.php?oldid=75564205&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>tonghop@daihochalong.edu.vn</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tiep">Nguyễn Đức Tiệp</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-hoang-thong">Đặng Hoàng Thông</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tiep">Nguyễn Đức Tiệp</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>2014-10-13 <span class="lang">xsd:date</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-ninh">Quảng Ninh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>0203.3850304</div>
+</td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>258, Bạch Đằng, Uông Bí</div>
+</td></tr>
+<tr><td class="p">chủ tịch hội đồng trường<small>vnedu:councilChair</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-hoang-thong">Đặng Hoàng Thông</a></div>
 </td></tr>
 <tr><td class="p">năm thành lập<small>vnedu:foundingYear</small></td><td>
 <div>2014 <span class="lang">xsd:gYear</span></div>
 </td></tr>
 <tr><td class="p">có người đứng đầu<small>vnedu:hasLeader</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tiep">Nguyễn Đức Tiệp</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-hoang-thong">Đặng Hoàng Thông</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tiep">Nguyễn Đức Tiệp</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">đặt tại<small>vnedu:locatedIn</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-ninh">Quảng Ninh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -199,7 +240,7 @@
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tiep">Nguyễn Đức Tiệp</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-hoang-thong">Đặng Hoàng Thông</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tiep">Nguyễn Đức Tiệp</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

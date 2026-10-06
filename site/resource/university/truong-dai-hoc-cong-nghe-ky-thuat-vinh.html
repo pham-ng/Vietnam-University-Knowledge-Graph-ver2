@@ -30,99 +30,126 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-ky-thuat-vinh",
-  "@type": [
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://vute.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_K%E1%BB%B9_thu%E1%BA%ADt_Vinh"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "18.659562"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.697031"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "wd:Q10829132"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/e/e1/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Vinh.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Vinh.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/e/e1/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Vinh.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Vinh.svg.png"
+      }
     },
     {
-      "@id": "https://ror.org/01nwr1552"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-ky-thuat-vinh",
+      "@type": [
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ Kỹ thuật Vinh là một trong sáu Trường Đại học Sư phạm Kỹ thuật trực thuộc Bộ Giáo dục và Đào tạo - định hướng khoa học ứng dụng và thực hành, có chức năng đào tạo kỹ sư công nghệ, cử nhân kinh tế và quản lý, giáo viên dạy nghề trình độ đại học, cao đẳng. Được đánh giá là một trong những trường đại học sư phạm kỹ thuật chất lượng cao, đồng thời, cũng là trung tâm nghiên cứu khoa học và chuyển giao công nghệ lớn tại Vùng Bắc Trung Bộ Việt Nam."
+      },
+      "foaf:homepage": {
+        "@id": "http://vute.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_K%E1%BB%B9_thu%E1%BA%ADt_Vinh"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "18.659562"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.697031"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10829132"
+        },
+        {
+          "@id": "https://ror.org/01nwr1552"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829132"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75532504"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Công nghệ Kỹ thuật Vinh"
+        },
+        {
+          "@language": "en",
+          "@value": "Vinh University of"
+        }
+      ],
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/e/e1/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Vinh.svg"
+      },
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ Kỹ thuật Vinh"
+      },
+      "vnedu:address": "Phường Trường Vinh",
+      "vnedu:campus": "phường Trường Vinh, tỉnh Nghệ An",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1960"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Năm 1960, Trường Công nhân kỹ thuật Vinh được thành lập và là tiền thân của trường Đại học Sư phạm Kỹ thuật Vinh.\n\nNăm 1999, Trường Cao đẳng Sư phạm Kỹ thuật Vinh thành lập dựa trên cơ sở Trường Công nhân kỹ thuật Vinh theo theo quyết định số: 129/1999/QĐ-TTg của Thủ tướng chính phủ ngày 28 tháng 5 năm 1999. Trường chủ yếu là đào tạo giáo viên dạy nghề (GVDN) và kỹ thuật viên (KTV) trình độ cao đẳng.\n\nNăm 2006, Trường Đại học Sư phạm Kỹ thuật Vinh được thành lập dựa trên cơ sở Trường Cao đẳng Sư phạm Kỹ thuật Vinh theo quyết định số 78/2006/QĐ-TTg của Thủ tướng Chính phủ Việt Nam ngày 14 tháng 4 năm 2006. Trường đào tạo các ngành nghề trình độ đại học, cao đẳng, kỹ sư và kỹ thuật viên. Trường là cơ sở đào tạo trình độ cao ở khu vực miền Trung và cả Việt Nam; thực hiện công tác nghiên cứu khoa học, gắn kết chặt chẽ công tác đào tạo giáo viên dạy nghề với đào tạo nghề sản xuất.\n\nTừ năm 1996 đến năm 2002, Hiệu trưởng: ông Lê Hữu Việt. Từ năm 2002 đến năm 11/2010, Hiệu trưởng: ông TS. Nguyễn Xuân Mai. Từ tháng 01/01/2011, Quyền Hiệu trưởng: ông TS. Cao Việt Dũng. Từ tháng 10/2012 đến 10/2014, TS. Nguyễn Hồng Minh. Từ tháng 10/2014 đến 01/2020, Hiệu trưởng: PGS.TS. Hoàng Thị Minh Phương. Từ 02/2020 đến nay, Hiệu trưởng: TS. Phạm Hữu Truyền"
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:website": {
+        "@id": "http://vute.edu.vn/"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75532504"
-    },
-    {
-      "@id": "wd:Q10829132"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Vinh University of"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Công nghệ Kỹ thuật Vinh"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Công nghệ Kỹ thuật Vinh"
-  },
-  "vnedu:address": "Phường Trường Vinh",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1960"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:website": {
-    "@id": "http://vute.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([18.659562,105.697031],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([18.659562,105.697031],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -141,7 +168,9 @@
   <a href="truong-dai-hoc-cong-nghe-ky-thuat-vinh.ttl">Turtle</a> · <a href="truong-dai-hoc-cong-nghe-ky-thuat-vinh.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-ky-thuat-vinh">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 15 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Công nghệ Kỹ thuật Vinh là một trong sáu Trường Đại học Sư phạm Kỹ thuật trực thuộc Bộ Giáo dục và Đào tạo - định hướng khoa học ứng dụng và thực hành, có chức năng đào tạo kỹ sư công nghệ, cử nhân kinh tế và quản lý, giáo viên dạy nghề trình độ đại học, cao đẳng. Được đánh giá là một trong những trường đại học sư phạm kỹ thuật chất lượng cao, đồng thời, cũng là trung tâm nghiên cứu khoa học và chuyển giao công nghệ lớn tại Vùng Bắc Trung Bộ Việt Nam.</p><h2>Lịch sử</h2><p>Năm 1960, Trường Công nhân kỹ thuật Vinh được thành lập và là tiền thân của trường Đại học Sư phạm Kỹ thuật Vinh.</p><p>Năm 1999, Trường Cao đẳng Sư phạm Kỹ thuật Vinh thành lập dựa trên cơ sở Trường Công nhân kỹ thuật Vinh theo theo quyết định số: 129/1999/QĐ-TTg của Thủ tướng chính phủ ngày 28 tháng 5 năm 1999. Trường chủ yếu là đào tạo giáo viên dạy nghề (GVDN) và kỹ thuật viên (KTV) trình độ cao đẳng.</p><details><summary>Đọc tiếp (2 đoạn)</summary><p>Năm 2006, Trường Đại học Sư phạm Kỹ thuật Vinh được thành lập dựa trên cơ sở Trường Cao đẳng Sư phạm Kỹ thuật Vinh theo quyết định số 78/2006/QĐ-TTg của Thủ tướng Chính phủ Việt Nam ngày 14 tháng 4 năm 2006. Trường đào tạo các ngành nghề trình độ đại học, cao đẳng, kỹ sư và kỹ thuật viên. Trường là cơ sở đào tạo trình độ cao ở khu vực miền Trung và cả Việt Nam; thực hiện công tác nghiên cứu khoa học, gắn kết chặt chẽ công tác đào tạo giáo viên dạy nghề với đào tạo nghề sản xuất.</p><p>Từ năm 1996 đến năm 2002, Hiệu trưởng: ông Lê Hữu Việt. Từ năm 2002 đến năm 11/2010, Hiệu trưởng: ông TS. Nguyễn Xuân Mai. Từ tháng 01/01/2011, Quyền Hiệu trưởng: ông TS. Cao Việt Dũng. Từ tháng 10/2012 đến 10/2014, TS. Nguyễn Hồng Minh. Từ tháng 10/2014 đến 01/2020, Hiệu trưởng: PGS.TS. Hoàng Thị Minh Phương. Từ 02/2020 đến nay, Hiệu trưởng: TS. Phạm Hữu Truyền</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75532504">«Trường Đại học Công nghệ Kỹ thuật Vinh»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75532504), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Công nghệ Kỹ thuật Vinh</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Vinh.svg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/e/e1/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Vinh.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Vinh.svg.png" alt="Biểu trưng Trường Đại học Công nghệ Kỹ thuật Vinh" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>Vinh University of</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>1960</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a></td></tr><tr><th>Địa chỉ</th><td>Phường Trường Vinh</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an">Nghệ An</a></td></tr><tr><th>Khuôn viên</th><td>phường Trường Vinh, tỉnh Nghệ An</td></tr><tr><th>Website</th><td><a href="http://vute.edu.vn/">vute.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -171,8 +200,14 @@
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an">Nghệ An</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo">Trung Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/e/e1/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Vinh.svg">&lt;https://upload.wikimedia.org/wikipedia/vi/e/e1/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_Vinh.svg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>Phường Trường Vinh</div>
+</td></tr>
+<tr><td class="p">khuôn viên<small>vnedu:campus</small></td><td>
+<div>phường Trường Vinh, tỉnh Nghệ An</div>
 </td></tr>
 <tr><td class="p">năm thành lập<small>vnedu:foundingYear</small></td><td>
 <div>1960 <span class="lang">xsd:gYear</span></div>

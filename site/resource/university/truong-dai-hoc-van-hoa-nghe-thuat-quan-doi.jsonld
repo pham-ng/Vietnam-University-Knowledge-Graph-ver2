@@ -19,18 +19,22 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-van-hoa-nghe-thuat-quan-doi",
   "@type": [
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
     "dbo:University",
-    "vnedu:EducationalOrganization",
+    "foaf:Organization",
+    "schema:Organization",
     "vnedu:Organization",
     "vnedu:MilitaryInstitution",
+    "vnedu:UniversitySchool",
+    "vnedu:EducationalOrganization",
     "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
     "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool"
+    "vnedu:HigherEducationInstitution"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Văn hoá - Nghệ thuật Quân đội trực thuộc Tổng cục Chính trị - Quân đội Nhân dân Việt Nam của Bộ Quốc phòng là trường đại học chuyên đào tạo các văn nghệ sĩ biểu diễn, nhạc sĩ sáng tác, biên đạo múa chuyên nghiệp, cán bộ quản lý văn hoá, nhà văn, sân khấu, điện ảnh cho quân đội và quốc gia."
+  },
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C4%83n_h%C3%B3a_%E2%80%93_Ngh%E1%BB%87_thu%E1%BA%ADt_Qu%C3%A2n_%C4%91%E1%BB%99i"
   },
@@ -55,20 +59,20 @@
   ],
   "rdfs:label": [
     {
-      "@language": "vi",
-      "@value": "Trường Đại học Văn hóa – Nghệ thuật Quân đội"
-    },
-    {
       "@language": "en",
       "@value": "Military University of Culture and Arts"
+    },
+    {
+      "@language": "vi",
+      "@value": "Trường Đại học Văn hóa – Nghệ thuật Quân đội"
     }
   ],
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
@@ -93,42 +97,46 @@
   ],
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/luong-thuy-linh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quan-a-p"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/congb"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tiep"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/minh-chuyen"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/y-phon-ksor"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tiep"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thai-thuy-linh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/luong-thuy-linh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ha-pham-phu"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/to-nga"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thai-thuy-linh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quan-a-p"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/y-phon-ksor"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/congb"
     }
   ],
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Trường Đại học Văn hoá - Nghệ thuật Quân đội (tiền thân là Trường Nghệ thuật Quân đội) được thành lập từ năm 1955 là trường đào tạo sĩ quan văn hóa nghệ thuật trong Quân đội đầu tiên trên cả nước. Cuối năm 1992 Trường được giao thêm nhiệm vụ đào tạo cán bộ văn hóa cho các đơn vị cơ sở trong toàn quân bên cạnh nhiệm vụ đào tạo cán bộ, diễn viên cho các đoàn nghệ thuật chuyên nghiệp.\n\nTừ sau năm 1995, Nhà trường mở rộng ngành nghề và loại hình đào tạo, đối tượng đào tạo. Từ chỗ chỉ đào tạo đối tượng là quân nhân, Nhà trường mở rộng đào tạo ra các đối tượng khác, đặc biệt là con em các dân tộc vùng sâu, vùng xa như Tây Nguyên, các tỉnh miền núi phía Bắc.\n\nNgày 3/1/2006, Phó thủ tướng Phạm Gia Khiêm đã ký quyết định thành lập Trường Đại học Văn hóa - Nghệ thuật quân đội trên cơ sở Trường Cao đẳng Văn hóa - Nghệ thuật quân đội. Trường có tư cách pháp nhân, có con dấu, tài khoản riêng, hoạt động theo Điều lệ trường Đại học."
+  },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "vnedu:ownership": {

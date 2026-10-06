@@ -29,11 +29,16 @@ university:truong-dai-hoc-van-hoa-thanh-pho-ho-chi-minh a dbo:University,
         schema:Organization ;
     rdfs:label "Ho Chi Minh City University of Culture"@en,
         "Trường Đại học Văn hóa Thành phố Hồ Chí Minh"@vi ;
+    dbo:abstract "Trường Đại học Văn hóa Thành phố Hồ Chí Minh (tên gọi quốc tế: Ho Chi Minh City University of Culture, viết tắt: HCMUC) là cơ sở giáo dục đại học công lập, trực thuộc Bộ Văn hóa, Thể thao và Du lịch, do Bộ Giáo dục và Đào tạo quản lý về đào tạo, đào tạo và nghiên cứu khoa học các lĩnh vực: văn hóa, nghệ thuật, thông tin, truyền thông và du lịch. Trường Đại học Văn hóa Thành phố Hồ Chí Minh là trường Đại học đầu tiên thuộc Bộ Văn hóa, Thể thao và Du lịch đạt chuẩn kiểm định chất lượng giáo dục theo tiêu chuẩn mới của Bộ Giáo dục và Đào tạo."@vi ;
     owl:sameAs dbr:Ho_Chi_Minh_City_University_of_Culture,
         wd:Q5873981,
         <https://ror.org/02xpmtg36> ;
     geo:lat 10.8058 ;
     geo:long 106.731 ;
+    skos:altLabel "Trường Cao đẳng Văn hóa Thành phố Hồ Chí Minh (26/04/1995 - 23/06/2005)",
+        "Trường Lý luận và Nghiệp vụ II (30/08/1976 - 19/09/1981)",
+        "Trường Nghiệp vụ Thông tin Văn hóa miền Nam Việt Nam (01/01/1976 - 30/08/1976)",
+        "Trường Văn hóa tại Thành phố Hồ Chí Minh (19/09/1981 - 26/04/1995)" ;
     skos:notation "VHS" ;
     skos:prefLabel "Trường Đại học Văn hóa Thành phố Hồ Chí Minh"@vi ;
     prov:wasDerivedFrom wd:Q5873981,
@@ -43,10 +48,21 @@ university:truong-dai-hoc-van-hoa-thanh-pho-ho-chi-minh a dbo:University,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_V%C4%83n_h%C3%B3a_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> ;
     vnedu:address "*CS1: 51 Quốc Hương, P. An Khánh, Thành phố Hồ Chí Minh" ;
     vnedu:admissionCode "VHS" ;
+    vnedu:councilChair person:trinh-dang-khoa ;
     vnedu:foundingYear "1976"^^xsd:gYear ;
     vnedu:governedBy organization:bo-van-hoa-the-thao-va-du-lich ;
     vnedu:hasAlumnus person:pham-anh-khoa ;
-    vnedu:hasLeader person:lam-nhan ;
+    vnedu:hasLeader person:lam-nhan,
+        person:trinh-dang-khoa ;
+    vnedu:history """Trường Đại học Văn hóa Thành phố Hồ Chí Minh tiền thân là Trường Nghiệp vụ Thông tin Văn hóa miền Nam (đào tạo bậc trung học) thành lập ngày 03/01/1976 theo Quyết định số 58/TTVH/TC của Bộ trưởng Bộ Thông tin Văn hóa Chính phủ Cách mạng lâm thời Cộng hòa miền Nam Việt Nam (do Bộ trưởng Lưu Hữu Phước ký ban hành).
+
+Ngày 30/08/1976, theo Quyết định số 110/VH/QĐ của Bộ trưởng Bộ Văn hóa, Trường đổi tên thành Trường Lý luận và Nghiệp vụ II.
+
+Ngày 19/09/1981, theo Quyết định số 121/VHTT/QĐ của Bộ trưởng Bộ Văn hóa Thông tin, Trường được đổi tên thành Trường Văn hóa tại Thành phố Hồ Chí Minh.
+
+Ngày 10/07/1998 theo Quyết định số 124/1998/QĐ-TTg của Thủ tướng Chính phủ quyết định nâng cấp thành Trường Cao đẳng Văn hóa Thành phố Hồ Chí Minh.
+
+Đến ngày 23/06/2005, Trường Cao đẳng Văn hóa Thành phố Hồ Chí Minh được nâng cấp thành Trường Đại học Văn hóa Thành phố Hồ Chí Minh theo Quyết định số 154/2005/QĐ-TTg của Thủ tướng Chính phủ."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -55,8 +71,18 @@ university:truong-dai-hoc-van-hoa-thanh-pho-ho-chi-minh a dbo:University,
     vnedu:rector person:lam-nhan ;
     vnedu:shortName "HCMUC" ;
     vnedu:website <https://www.hcmuc.edu.vn> ;
-    schema:employee person:lam-nhan ;
+    schema:email "dhvh@hcmuc.edu.vn" ;
+    schema:employee person:lam-nhan,
+        person:trinh-dang-khoa ;
+    schema:foundingDate "1976-01-03"^^xsd:date ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/a/a5/Logo-Dai-hoc-Van-hoa-TPHCM.png> ;
+    schema:telephone "028)3899.2901" .
+
+<https://upload.wikimedia.org/wikipedia/vi/a/a5/Logo-Dai-hoc-Van-hoa-TPHCM.png> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo-Dai-hoc-Van-hoa-TPHCM.png> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/vi/a/a5/Logo-Dai-hoc-Van-hoa-TPHCM.png> .
 

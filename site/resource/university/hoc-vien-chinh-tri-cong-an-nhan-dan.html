@@ -30,82 +30,108 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-cong-an-nhan-dan",
-  "@type": [
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PoliceInstitution",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:Academy",
-    "foaf:Organization"
-  ],
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Ch%C3%ADnh_tr%E1%BB%8B_C%C3%B4ng_an_nh%C3%A2n_d%C3%A2n_%28Vi%E1%BB%87t_Nam%29"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.259716"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.850804"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q122143828"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "wd:Q122143828"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-cong-an-nhan-dan",
+      "@type": [
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PoliceInstitution",
+        "vnedu:PublicInstitution",
+        "vnedu:HigherEducationInstitution",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:Academy"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Chính trị Công an nhân dân (, thường được gọi tắt là PPPA, hoặc T03) là cơ sở giáo dục đào tạo bậc đại học và trên đại học trực thuộc Bộ Công an có chức năng đào tạo trình độ và bồi dưỡng phẩm chất cán bộ cán bộ có trình độ đại học, sau đại học, cán bộ lãnh đạo, chỉ huy của lực lượng tham mưu, xây dựng lực lượng CAND; đào tạo, bồi dưỡng lý luận chính trị cho cán bộ Công an; đào tạo, bồi dưỡng các hệ chức danh lãnh đạo, chỉ huy khác và hợp tác quốc tế về giáo dục, đào tạo theo kế hoạch của Bộ Công an; là trung tâm nghiên cứu khoa học của lực lượng Công an nhân dân."
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Ch%C3%ADnh_tr%E1%BB%8B_C%C3%B4ng_an_nh%C3%A2n_d%C3%A2n_%28Vi%E1%BB%87t_Nam%29"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.259716"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.850804"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q122143828"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75563808"
+        },
+        {
+          "@id": "wd:Q122143828"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "vi",
+        "@value": "Học viện Chính trị Công an nhân dân"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/3/35/Logo_hoc_vien_chinh_tri_CAND.png"
+      },
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Chính trị Công an nhân dân"
+      },
+      "vnedu:address": "Sóc Sơn, Hà Nội",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1971"
+      },
+      "vnedu:governedBy": {
+        "@id": "vnedu:MinistryOfPublicSecurity"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Ngày 29/10/1971, Bộ trưởng Bộ Công an Trần Quốc Hoàn ban hành Quyết định số 1250/QĐ-CA thành lập Trường Đào tạo cán bộ An ninh miền Nam đóng tại thôn Tĩnh Luyện, xã Đồng Tĩnh, huyện Tam Dương, tỉnh Vĩnh Phúc. Hồi đó, đồng chí Thứ trưởng Trần Quyết là Hiệu trưởng danh dự của trường. Trong cuộc kháng chiến chống Mỹ, cứu nước, trường đã đào tạo, bồi dưỡng và tiễn 2.580 học viên lên đường vào miền Nam Việt Nam chiến đấu. Nhiều học viên học tập, rèn luyện trở về miền Nam chiến đấu, công tác và đã trưởng thành, có đồng chí là Anh hùng LLVTND như chị Nguyễn Thị Minh Hiền, học viên lớp E52; đồng chí Ksor Phước, học viên lớp E52, nguyên Ủy viên Trung ương Đảng, Chủ tịch Hội đồng Dân tộc của Quốc hội; Trung tướng Trương Hòa Bình, Bí thư Trung ương Đảng (đã bị cách chức), nguyên Phó Thủ tướng Thường trực Chính phủ,...\n\nSau khi miền Nam hoàn toàn giải phóng, Trường E1171 tiếp tục đào tạo các lớp trực tiếp phục vụ cho nhiệm vụ cấp bách của các tỉnh phía Bắc như bảo vệ chính trị, cơ yếu, sưu tập.\n\nNgày 28/9/1978, Bộ Nội vụ (nay là Bộ Công an) ra Quyết định số 161/QĐ-BNV chuyển Trường Đào tạo cán bộ An ninh miền Nam thành Trường Hậu cần CAND. Ngày 21/11/1988, Trường Hậu cần CAND chuyển từ Vĩnh Phúc về Đông Ngạc, Từ Liêm, Hà Nội, tạo ra một cơ hội mới cho sự phát triển toàn diện của trường. Nhiều đồng chí học viên của Trường đã trưởng thành là cán bộ lãnh đạo của nhiều Vụ, Cục ở Bộ và địa phương, có đồng chí là Anh hùng Lực lượng vũ trang như liệt sĩ Đặng Văn Khoan, học viên lớp ĐT1.\n\nĐến tháng 1/1996, Bộ Nội vụ quyết định đổi tên Trường Hậu cần CAND thành Trường Bồi dưỡng nghiệp vụ Công an nhân dân (T41). Trường có nhiệm vụ bồi dưỡng chức danh, bồi dưỡng chuyên đề, bồi dưỡng và tập huấn các chuyên ngành nghiệp vụ trong toàn lực lượng CAND. Trường đã coi trọng xây dựng đội ngũ giáo viên kiêm nhiệm trong ngành và ngoài ngành...\n\nHọc viện Chính trị Công an nhân dân được thành lập trên cơ sở Trường Bồi dưỡng nghiệp vụ Công an (T41). (Trường Bồi dưỡng nghiệp vụ Công an nguyên là Trường Đào tạo cán bộ An ninh miền Nam E1171 và Trường Hậu cần Công an nhân dân) Ngày 1/3/2014, Thủ tướng Chính phủ có Quyết định số 315/QĐ-TTg về việc thành lập Học viện Chính trị Công an nhân dân."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75563808"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/3/35/Logo_hoc_vien_chinh_tri_CAND.png",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_hoc_vien_chinh_tri_CAND.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/3/35/Logo_hoc_vien_chinh_tri_CAND.png/330px-Logo_hoc_vien_chinh_tri_CAND.png"
+      }
     }
-  ],
-  "rdfs:label": {
-    "@language": "vi",
-    "@value": "Học viện Chính trị Công an nhân dân"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Chính trị Công an nhân dân"
-  },
-  "vnedu:address": "Sóc Sơn, Hà Nội",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1971"
-  },
-  "vnedu:governedBy": {
-    "@id": "vnedu:MinistryOfPublicSecurity"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([21.259716,105.850804],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([21.259716,105.850804],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -124,7 +150,9 @@
   <a href="hoc-vien-chinh-tri-cong-an-nhan-dan.ttl">Turtle</a> · <a href="hoc-vien-chinh-tri-cong-an-nhan-dan.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-chinh-tri-cong-an-nhan-dan">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 14 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Học viện Chính trị Công an nhân dân (, thường được gọi tắt là PPPA, hoặc T03) là cơ sở giáo dục đào tạo bậc đại học và trên đại học trực thuộc Bộ Công an có chức năng đào tạo trình độ và bồi dưỡng phẩm chất cán bộ cán bộ có trình độ đại học, sau đại học, cán bộ lãnh đạo, chỉ huy của lực lượng tham mưu, xây dựng lực lượng CAND; đào tạo, bồi dưỡng lý luận chính trị cho cán bộ Công an; đào tạo, bồi dưỡng các hệ chức danh lãnh đạo, chỉ huy khác và hợp tác quốc tế về giáo dục, đào tạo theo kế hoạch của Bộ Công an; là trung tâm nghiên cứu khoa học của lực lượng Công an nhân dân.</p><h2>Lịch sử</h2><p>Ngày 29/10/1971, Bộ trưởng Bộ Công an Trần Quốc Hoàn ban hành Quyết định số 1250/QĐ-CA thành lập Trường Đào tạo cán bộ An ninh miền Nam đóng tại thôn Tĩnh Luyện, xã Đồng Tĩnh, huyện Tam Dương, tỉnh Vĩnh Phúc. Hồi đó, đồng chí Thứ trưởng Trần Quyết là Hiệu trưởng danh dự của trường. Trong cuộc kháng chiến chống Mỹ, cứu nước, trường đã đào tạo, bồi dưỡng và tiễn 2.580 học viên lên đường vào miền Nam Việt Nam chiến đấu. Nhiều học viên học tập, rèn luyện trở về miền Nam chiến đấu, công tác và đã trưởng thành, có đồng chí là Anh hùng LLVTND như chị Nguyễn Thị Minh Hiền, học viên lớp E52; đồng chí Ksor Phước, học viên lớp E52, nguyên Ủy viên Trung ương Đảng, Chủ tịch Hội đồng Dân tộc của Quốc hội; Trung tướng Trương Hòa Bình, Bí thư Trung ương Đảng (đã bị cách chức), nguyên Phó Thủ tướng Thường trực Chính phủ,...</p><p>Sau khi miền Nam hoàn toàn giải phóng, Trường E1171 tiếp tục đào tạo các lớp trực tiếp phục vụ cho nhiệm vụ cấp bách của các tỉnh phía Bắc như bảo vệ chính trị, cơ yếu, sưu tập.</p><details><summary>Đọc tiếp (3 đoạn)</summary><p>Ngày 28/9/1978, Bộ Nội vụ (nay là Bộ Công an) ra Quyết định số 161/QĐ-BNV chuyển Trường Đào tạo cán bộ An ninh miền Nam thành Trường Hậu cần CAND. Ngày 21/11/1988, Trường Hậu cần CAND chuyển từ Vĩnh Phúc về Đông Ngạc, Từ Liêm, Hà Nội, tạo ra một cơ hội mới cho sự phát triển toàn diện của trường. Nhiều đồng chí học viên của Trường đã trưởng thành là cán bộ lãnh đạo của nhiều Vụ, Cục ở Bộ và địa phương, có đồng chí là Anh hùng Lực lượng vũ trang như liệt sĩ Đặng Văn Khoan, học viên lớp ĐT1.</p><p>Đến tháng 1/1996, Bộ Nội vụ quyết định đổi tên Trường Hậu cần CAND thành Trường Bồi dưỡng nghiệp vụ Công an nhân dân (T41). Trường có nhiệm vụ bồi dưỡng chức danh, bồi dưỡng chuyên đề, bồi dưỡng và tập huấn các chuyên ngành nghiệp vụ trong toàn lực lượng CAND. Trường đã coi trọng xây dựng đội ngũ giáo viên kiêm nhiệm trong ngành và ngoài ngành...</p><p>Học viện Chính trị Công an nhân dân được thành lập trên cơ sở Trường Bồi dưỡng nghiệp vụ Công an (T41). (Trường Bồi dưỡng nghiệp vụ Công an nguyên là Trường Đào tạo cán bộ An ninh miền Nam E1171 và Trường Hậu cần Công an nhân dân) Ngày 1/3/2014, Thủ tướng Chính phủ có Quyết định số 315/QĐ-TTg về việc thành lập Học viện Chính trị Công an nhân dân.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75563808">«Học viện Chính trị Công an nhân dân (Việt Nam)»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75563808), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Học viện Chính trị Công an nhân dân</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_hoc_vien_chinh_tri_CAND.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/3/35/Logo_hoc_vien_chinh_tri_CAND.png/330px-Logo_hoc_vien_chinh_tri_CAND.png" alt="Biểu trưng Học viện Chính trị Công an nhân dân" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Loại hình</th><td>Học viện · Công lập</td></tr><tr><th>Thành lập</th><td>1971</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology#MinistryOfPublicSecurity">Bộ Công an</a></td></tr><tr><th>Địa chỉ</th><td>Sóc Sơn, Hà Nội</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -150,6 +178,9 @@
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/3/35/Logo_hoc_vien_chinh_tri_CAND.png">&lt;https://upload.wikimedia.org/wikipedia/vi/3/35/Logo_hoc_vien_chinh_tri_CAND.png&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>Sóc Sơn, Hà Nội</div>

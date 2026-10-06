@@ -2,23 +2,39 @@
  "bronze": {
   "data/bronze/dbp_years.json": {
    "count": 72,
-   "generated_at": "2026-10-06T11:01:36",
+   "generated_at": "2026-10-06T15:12:49",
    "license": "CC BY-SA 3.0",
    "sha256": "7a669856282ba9c2b4f21e06cf1a7887733631ecf3f8a49206bd7ff0d1956dc1",
    "source": "https://dbpedia.org/sparql",
    "unit": "records"
   },
+  "data/bronze/viwiki_images.json": {
+   "count": 280,
+   "generated_at": "2026-10-06T15:13:09",
+   "license": "CC BY-SA 4.0",
+   "sha256": "25e5393d6f993585bcee7c69ad9f82ab6f74a1a814a51ce78988f1ef57148d2b",
+   "source": "https://vi.wikipedia.org/w/api.php",
+   "unit": "records"
+  },
+  "data/bronze/viwiki_links.json": {
+   "count": 80,
+   "generated_at": "2026-10-06T15:12:43",
+   "license": "CC BY-SA 4.0",
+   "sha256": "d80ec77b0f91a607f737f93e3936749ec91a012a1ee4e64d1b64dd914b8e26f3",
+   "source": "https://vi.wikipedia.org/w/api.php",
+   "unit": "records"
+  },
   "data/bronze/viwiki_pages.json": {
    "count": 279,
-   "generated_at": "2026-10-06T11:01:35",
+   "generated_at": "2026-10-06T15:12:40",
    "license": "CC BY-SA 4.0",
-   "sha256": "bdf7dd176216ff5e4cb2dcee6b18e3fc7c7afbf4dff079f5119cd8a478a7af81",
+   "sha256": "c210a0fb69ca41a1613ccf480d1f89abf7ec62af69b3a724ce850a9444b48ef3",
    "source": "https://vi.wikipedia.org/w/api.php",
    "unit": "records"
   },
   "data/bronze/wd_alumni.json": {
    "count": 1531,
-   "generated_at": "2026-10-06T11:02:02",
+   "generated_at": "2026-10-06T15:13:10",
    "license": "CC0 1.0",
    "sha256": "05c0781d29f82f890461d0603a0ed09100b53c2fe3d82aae0973846fdc81c59a",
    "source": "https://query.wikidata.org/sparql",
@@ -26,7 +42,7 @@
   },
   "data/bronze/wd_entities.json": {
    "count": 5,
-   "generated_at": "2026-10-06T11:01:36",
+   "generated_at": "2026-10-06T15:13:10",
    "license": "CC0 1.0",
    "sha256": "e52e8701c307ab756356b7050b73cea875caf60ac6b02a8ce08715b9019c47b3",
    "source": "https://query.wikidata.org/sparql",
@@ -34,15 +50,15 @@
   },
   "data/bronze/wd_institutions.json": {
    "count": 363,
-   "generated_at": "2026-10-06T11:01:36",
+   "generated_at": "2026-10-06T15:12:49",
    "license": "CC0 1.0",
-   "sha256": "0bb7368d5b1d65bdcc6e59bc012ec12e4edb4c3b75c1619ceffec1ab216400ce",
+   "sha256": "58e7799e04d1a32bb36aff94665e525af87231381e7e34bc3fdc8905e5c5f3ec",
    "source": "https://query.wikidata.org/sparql",
    "unit": "records"
   },
   "data/bronze/wd_provinces.json": {
    "count": 63,
-   "generated_at": "2026-10-06T11:01:36",
+   "generated_at": "2026-10-06T15:13:10",
    "license": "CC0 1.0",
    "sha256": "e27588d03d6080904b83234d043343bc43e03df1b0cbe1a08be80da062c60807",
    "source": "https://query.wikidata.org/sparql",
@@ -52,77 +68,77 @@
  "gold": {
   "data/gold/vnedu-all.ttl": {
    "consistent": true,
-   "count": 36750,
-   "generated_at": "2026-10-06T14:05:40",
-   "sha256": "555d18b750f585491055f679935c24cdada53ab085c585005b545ab383c8442b",
+   "count": 39507,
+   "generated_at": "2026-10-06T15:20:17",
+   "sha256": "f6ea58d599430c520754796142c284b7c5ccae6c1936aa2ceea81fafd21b42b0",
    "shacl_conforms": true,
    "shacl_results": {
     "Info": 1,
-    "Warning": 36
+    "Warning": 37
    },
    "unit": "triples"
   },
   "data/gold/vnedu-data.ttl": {
-   "count": 17940,
+   "count": 20446,
    "derived_from": "data/silver/*.json",
-   "generated_at": "2026-10-06T14:04:55",
-   "sha256": "5fe1bf47ca64fad56f518f212f116f78bd6e1fd1ab2c39696f79b574f555f95d",
+   "generated_at": "2026-10-06T15:16:49",
+   "sha256": "c97b1aa958803d5c423ec97ac922af5de237690b3e4d95484147c7e6f3f545b9",
    "unit": "triples"
   },
   "data/gold/vnedu-inferred.ttl": {
-   "count": 14484,
-   "generated_at": "2026-10-06T14:05:27",
+   "count": 14666,
+   "generated_at": "2026-10-06T15:20:06",
    "reasoner": "owlrl OWL 2 RL",
-   "sha256": "51428252484d07389230f4269dc5577476ca682b359cf49934e64f3e508246c7",
+   "sha256": "76ddb91d7e5db7c8afeb4e9d5714c75e890ad35dc5155025cac63c5c7f746aec",
    "unit": "triples"
   },
   "data/gold/vnedu-links.ttl": {
-   "count": 3670,
-   "generated_at": "2026-10-06T14:04:57",
+   "count": 3674,
+   "generated_at": "2026-10-06T15:17:27",
    "linksets": {
-    "dbpedia|owl:sameAs": 258,
+    "dbpedia|owl:sameAs": 260,
     "dbpedia|skos:closeMatch": 37,
     "geonames|owl:sameAs": 63,
     "ror|owl:sameAs": 195,
-    "wikidata|owl:sameAs": 1878,
+    "wikidata|owl:sameAs": 1880,
     "wikidata|skos:closeMatch": 51,
     "wikipedia|foaf:isPrimaryTopicOf": 1188
    },
-   "sha256": "e313f8b31c6832f8be8e315591f347a80838524dcbe6b60a8892da044035e353",
+   "sha256": "9058bbfe77eb0c68fe0229afa7540c5f5bbba675a38542c01be680ef006b4e7f",
    "unit": "triples"
   },
   "data/gold/void.ttl": {
    "count": 96,
-   "generated_at": "2026-10-06T14:04:57",
-   "sha256": "639e70eead3d780e4fc9bca2dc3f4713196a2056b8cb9c07d378be7885b30684",
+   "generated_at": "2026-10-06T15:17:28",
+   "sha256": "a4deaa82127c245ba6cdffc48a5cceee429f61dfff37bed1f5c0ed3ab6098467",
    "unit": "triples"
   }
  },
  "silver": {
   "data/silver/governing_bodies.json": {
-   "count": 47,
-   "generated_at": "2026-10-06T11:05:20",
+   "count": 50,
+   "generated_at": "2026-10-06T15:15:11",
    "schema": "schemas/silver.schema.json",
-   "sha256": "ccffa0054580219f280e7dd2467856f64b2a0a1daaeffcaeabf97767acad0d5e",
+   "sha256": "c04e931b132e3e424bd6c2e834d2fe540115f3f410f3cd775a394644969c7fb8",
    "unit": "records"
   },
   "data/silver/institutions.json": {
    "count": 300,
-   "generated_at": "2026-10-06T11:05:20",
+   "generated_at": "2026-10-06T15:15:11",
    "schema": "schemas/silver.schema.json",
-   "sha256": "ab01a17c40afcf09c725626c0d22fdb7fbca015515242e31c64e738c66df9068",
+   "sha256": "27636ab77b9366e05b29d935170b613093ecff5bb388125806b3a2779922eb0f",
    "unit": "records"
   },
   "data/silver/people.json": {
-   "count": 1668,
-   "generated_at": "2026-10-06T11:05:21",
+   "count": 1695,
+   "generated_at": "2026-10-06T15:15:11",
    "schema": "schemas/silver.schema.json",
-   "sha256": "e97912df19c1b3f5c64e5ace9345f4c7154415d1342e12ad991836cc275835ac",
+   "sha256": "8ff587a7c45d212be6ba79eb07b0f9d4642482a090846f1c27bfee983b3defa1",
    "unit": "records"
   },
   "data/silver/provinces.json": {
    "count": 63,
-   "generated_at": "2026-10-06T11:05:21",
+   "generated_at": "2026-10-06T15:15:11",
    "schema": "schemas/silver.schema.json",
    "sha256": "a3275bbe296d39000f1a5270afc88757a423ca27eb0a1cc08c3244313ad3e2ea",
    "unit": "records"

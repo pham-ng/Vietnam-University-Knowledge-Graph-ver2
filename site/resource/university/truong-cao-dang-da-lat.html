@@ -30,78 +30,97 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-da-lat",
-  "@type": [
-    "schema:EducationalOrganization",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:EducationalOrganization",
-    "vnedu:VocationalCollege",
-    "vnedu:Organization"
-  ],
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://en.wikipedia.org/wiki/Lyc%C3%A9e_Yersin"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "11.946339"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "108.452933"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "dbr:Lycée_Yersin"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-da-lat",
+      "@type": [
+        "vnedu:EducationalOrganization",
+        "schema:EducationalOrganization",
+        "vnedu:VocationalCollege",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://en.wikipedia.org/wiki/Lyc%C3%A9e_Yersin"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "11.946339"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "108.452933"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10828808"
+        },
+        {
+          "@id": "dbr:Lycée_Yersin"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q10828808"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Lycée Yersin"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Cao đẳng Đà Lạt"
+        }
+      ],
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Truong_Cao_dang_Su_pham_Da_Lat_-_Tran_Huy_Phuong_1.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/lam-dong"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Cao đẳng Đà Lạt"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1927"
+      },
+      "vnedu:hasAlumnus": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-quang-dung"
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/lam-dong"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        }
+      ]
     },
     {
-      "@id": "wd:Q10828808"
-    }
-  ],
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q10828808"
-  },
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Cao đẳng Đà Lạt"
-    },
-    {
-      "@language": "en",
-      "@value": "Lycée Yersin"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/lam-dong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Cao đẳng Đà Lạt"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1927"
-  },
-  "vnedu:hasAlumnus": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/lam-quang-dung"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/lam-dong"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Truong_Cao_dang_Su_pham_Da_Lat_-_Tran_Huy_Phuong_1.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Trần Huy Phương",
+      "schema:license": "CC BY-SA 3.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Truong_Cao_dang_Su_pham_Da_Lat_-_Tran_Huy_Phuong_1.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Truong_Cao_dang_Su_pham_Da_Lat_-_Tran_Huy_Phuong_1.jpg/330px-Truong_Cao_dang_Su_pham_Da_Lat_-_Tran_Huy_Phuong_1.jpg"
+      }
     }
   ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([11.946339,108.452933],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([11.946339,108.452933],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
@@ -122,7 +141,9 @@
   <a href="truong-cao-dang-da-lat.ttl">Turtle</a> · <a href="truong-cao-dang-da-lat.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-cao-dang-da-lat">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 11 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"></div><aside class="ibox"><div class="ibox-title">Trường Cao đẳng Đà Lạt</div><table><tr><th>Tên tiếng Anh</th><td>Lycée Yersin</td></tr><tr><th>Loại hình</th><td>Cao đẳng</td></tr><tr><th>Thành lập</th><td>1927</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/lam-dong">Lâm Đồng</a></td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:Truong_Cao_dang_Su_pham_Da_Lat_-_Tran_Huy_Phuong_1.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Truong_Cao_dang_Su_pham_Da_Lat_-_Tran_Huy_Phuong_1.jpg/330px-Truong_Cao_dang_Su_pham_Da_Lat_-_Tran_Huy_Phuong_1.jpg" alt="Ảnh Trường Cao đẳng Đà Lạt" loading="lazy"></a><figcaption>CC BY-SA 3.0 · Trần Huy Phương</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -145,6 +166,9 @@
 </td></tr>
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q10828808">wd:Q10828808</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/c/c3/Truong_Cao_dang_Su_pham_Da_Lat_-_Tran_Huy_Phuong_1.jpg">&lt;https://upload.wikimedia.org/wikipedia/commons/c/c3/Truong_Cao_dang_Su_pham_Da_Lat_-_Tran_Huy_Phuong_1.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/lam-dong">Lâm Đồng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo">Trung Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

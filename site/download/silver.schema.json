@@ -44,19 +44,44 @@
         "branch_of": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
         "governed_by": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
         "owned_by": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "alt_names": { "type": "array", "items": { "type": "string", "minLength": 3, "maxLength": 120 }, "uniqueItems": true },
+        "founding_date": { "type": "string", "pattern": "^(1[89]|20)\\d\\d-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$" },
+        "email": { "type": "string", "pattern": "^([\\w.+-]+@[\\w-]+(\\.[\\w-]+)+)?$" },
+        "telephone": { "type": "string", "maxLength": 30 },
+        "campus": { "type": "string", "maxLength": 120 },
+        "funding": { "type": "string", "maxLength": 120 },
+        "partners": { "type": "array", "items": { "type": "object", "required": ["qid", "name"],
+                      "properties": { "qid": { "$ref": "#/$defs/qid" }, "name": { "$ref": "#/$defs/nonEmpty" } } } },
+        "abstract": { "type": "string" },
+        "history": { "type": "string" },
+        "logo": { "$ref": "#/$defs/media" },
+        "image": { "$ref": "#/$defs/media" },
         "leaders": {
           "type": "array",
           "items": {
             "type": "object",
             "required": ["role", "name", "source"],
             "properties": {
-              "role": { "enum": ["rector", "director"] },
+              "role": { "enum": ["rector", "director", "chair"] },
               "qid": { "$ref": "#/$defs/qidOrEmpty" },
               "name": { "type": "string", "pattern": "^\\S+(\\s\\S+){1,5}$" },
               "source": { "enum": ["wikidata", "viwiki"] }
             }
           }
         }
+      }
+    },
+
+    "media": {
+      "type": "object",
+      "required": ["file", "url"],
+      "properties": {
+        "file": { "$ref": "#/$defs/nonEmpty" },
+        "url": { "type": "string", "pattern": "^https://upload\\.wikimedia\\.org/" },
+        "thumb": { "type": ["string", "null"] },
+        "page": { "type": ["string", "null"] },
+        "license": { "type": "string" },
+        "artist": { "type": "string" }
       }
     },
 

@@ -17,94 +17,120 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-khoa-hoc-quan-su",
-  "@type": [
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:MilitaryInstitution",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "vnedu:Academy",
-    "schema:Organization",
-    "foaf:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "https://hvkhqs.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Khoa_h%E1%BB%8Dc_Qu%C3%A2n_s%E1%BB%B1"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "https://ror.org/0100cq511"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-khoa-hoc-quan-su",
+      "@type": [
+        "vnedu:Academy",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:MilitaryInstitution"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Khoa học Quân sự (NQH) (tiếng Anh là: Military Science Academy - MSA) là một học viện quân sự trực thuộc Tổng cục II, Bộ Quốc phòng Việt Nam chuyên đào tạo sĩ quan các ngành: tình báo, ngoại ngữ, đối ngoại quân sự, trinh sát kỹ thuật. Bên cạnh đào tạo sĩ quan ngoại ngữ, học viện còn đào tạo cử nhân ngoại ngữ phục vụ toàn dân trong hệ thống giáo dục của bộ giáo dục ban hành."
+      },
+      "foaf:homepage": {
+        "@id": "https://hvkhqs.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_Khoa_h%E1%BB%8Dc_Qu%C3%A2n_s%E1%BB%B1"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10771888"
+        },
+        {
+          "@id": "https://ror.org/0100cq511"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75518101"
+        },
+        {
+          "@id": "wd:Q10771888"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Military Science Academy"
+        },
+        {
+          "@language": "vi",
+          "@value": "Học viện Khoa học Quân sự"
+        }
+      ],
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/1/1a/Hoc-vien-khoa-hoc-quan-su.png"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Khoa học Quân sự"
+      },
+      "vnedu:address": "số 322E Lê Trọng Tấn, Định Công, Hoàng Mai, Hà Nội, Việt Nam",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1957"
+      },
+      "vnedu:governedBy": [
+        {
+          "@id": "vnedu:MinistryOfNationalDefence"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tong-cuc-tinh-bao-bo-quoc-phong"
+        }
+      ],
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Ngày 10-6-1957, Học viện Khoa học Quân sự (tiền thân là Phòng Huấn luyện 77) được thành lập. Học viện được thành lập năm 1957 trên cơ sở sáp nhập 3 trường chính: Đại học Ngoại ngữ Quân sự 1982 Trường Sĩ quan Trinh sát kỹ thuật. Trường Sĩ quan Quân báo. Trải qua quá trình xây dựng, chiến đấu và trưởng thành, Học viện Khoa học Quân sự đã trở thành trung tâm hàng đầu đào tạo ngoại ngữ và quan hệ quốc tế về quốc phòng trong Quân đội. Hiện nay, Học viện được giao nhiệm vụ đào tạo cử nhân, thạc sĩ, tiến sĩ chuyên ngành Khoa học Quân sự; cử nhân ngoại ngữ quân sự các chuyên ngành tiếng Anh, tiếng Trung Quốc, tiếng Nga, tiếng Pháp; thạc sĩ ngôn ngữ Anh, ngôn ngữ Trung Quốc; cử nhân Quan hệ quốc tế về quốc phòng; cử nhân Việt Nam học; cử nhân ngoại ngữ dân sự; bồi dưỡng kiến thức quân sự, quốc phòng; liên kết với Học viện Chính trị Quốc gia Hồ Chí Minh đào tạo ngắn hạn cán bộ chính trị cấp trung đoàn; liên kết với Học viện Quốc phòng đào tạo Chỉ huy Tham mưu cao cấp; đào tạo ngoại ngữ cho các học viện, nhà trường trong toàn quân; tổ chức thi và cấp chứng chỉ tiếng Anh trình độ B1, B2 theo khung tham chiếu châu Âu cho các cơ sở đào tạo sau đại học trong và ngoài quân đội. Đào tạo học viên quân sự nước ngoài cho 22 nước theo hiệp định và quan hệ đối đẳng giữa Bộ Quốc phòng Việt Nam với bộ quốc phòng các nước trong khu vực và trên thế giới. Ngoài ra, Học viện còn tham gia tích cực các hoạt động đối ngoại quốc phòng, góp phần xây dựng mối quan hệ hợp tác ngày càng sâu rộng giữa Bộ Quốc phòng Việt Nam với các trên thế giới.\n\nTừ năm 1988 đến nay, Học viện đã đào tạo 753 khóa, 863 lớp, với 18.307 học viên, trong đó có 3.898 cử nhân, 457 thạc sĩ đã ra trường và đang đào tạo 8 khóa với 33 nghiên cứu sinh, 6 khóa với 83 học viên cao học. Hơn 40 học viên được đào tạo tại trường đã trở thành tướng lĩnh trong quân đội.\n\nĐội ngũ giảng viên, cán bộ quản lý giáo dục đã trưởng thành, phát triển về mọi mặt: 100% cán bộ, giảng viên có trình độ từ đại học trở lên, 2 giáo sư, 12 phó giáo sư, 7 nhà giáo ưu tú, 37 tiến sĩ, 218 thạc sĩ (đạt tỷ lệ 63,27% cán bộ, giáo viên có trình độ sau đại học). Từ 2007 đến nay, Học viện có 28 giảng viên đạt danh hiệu Nhà giáo giỏi cấp Bộ Quốc phòng; 433 giảng viên đạt danh hiệu Giảng viên giỏi cấp Học viện...Ngày 14 tháng 3 năm 2017, Bộ Quốc phòng đã có Quyết định số 725/QĐ-BQP về việc phê duyệt Đề án \"Nâng cao chất lượng đào tạo ngoại ngữ và quan hệ quốc tế tại Học viện Khoa học Quân sự giai đoạn 2016-2020\"."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:website": {
+        "@id": "https://hvkhqs.edu.vn/"
+      }
     },
     {
-      "@id": "wd:Q10771888"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/1/1a/Hoc-vien-khoa-hoc-quan-su.png",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Hoc-vien-khoa-hoc-quan-su.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/1/1a/Hoc-vien-khoa-hoc-quan-su.png"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75518101"
-    },
-    {
-      "@id": "wd:Q10771888"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Học viện Khoa học Quân sự"
-    },
-    {
-      "@language": "en",
-      "@value": "Military Science Academy"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Khoa học Quân sự"
-  },
-  "vnedu:address": "số 322E Lê Trọng Tấn, Định Công, Hoàng Mai, Hà Nội, Việt Nam",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1957"
-  },
-  "vnedu:governedBy": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tong-cuc-tinh-bao-bo-quoc-phong"
-    },
-    {
-      "@id": "vnedu:MinistryOfNationalDefence"
-    }
-  ],
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:website": {
-    "@id": "https://hvkhqs.edu.vn/"
-  }
+  ]
 }

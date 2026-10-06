@@ -27,8 +27,10 @@ university:truong-dai-hoc-ky-thuat-cong-nghiep-dai-hoc-thai-nguyen a dbo:Univers
         schema:Organization ;
     rdfs:label "TNU University of Technology"@en,
         "Trường Đại học Kỹ thuật Công nghiệp, Đại học Thái Nguyên"@vi ;
+    dbo:abstract "Trường Đại học Kỹ thuật Công nghiệp là một trong những trường đại học công lập có thương hiệu về đào tạo khối ngành kỹ thuật tại miền bắc Việt Nam. Trường trực thuộc Đại học Thái Nguyên, đồng thời là trung tâm nghiên cứu kỹ thuật lớn nhất của vùng Trung du và miền núi phía Bắc."@vi ;
     owl:sameAs wd:Q10829082,
         <https://ror.org/04k1add31> ;
+    skos:altLabel "Trường Đại học Kỹ thuật Công nghiệp" ;
     skos:prefLabel "Trường Đại học Kỹ thuật Công nghiệp, Đại học Thái Nguyên"@vi ;
     prov:wasDerivedFrom wd:Q10829082,
         <https://vi.wikipedia.org/w/index.php?oldid=75267399> ;
@@ -45,9 +47,18 @@ university:truong-dai-hoc-ky-thuat-cong-nghiep-dai-hoc-thai-nguyen a dbo:Univers
     vnedu:rector person:do-trung-hai ;
     vnedu:shortName "TNUT" ;
     vnedu:website <http://en.tnut.edu.vn/> ;
+    schema:email "office@tnut.edu.vn" ;
     schema:employee person:do-trung-hai ;
+    schema:foundingDate "1965-08-19"^^xsd:date ;
     schema:location country:viet-nam,
         province:thai-nguyen,
         region:bac-bo ;
-    schema:parentOrganization university:dai-hoc-thai-nguyen .
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/4/47/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_K%E1%BB%B9_thu%E1%BA%ADt_C%C3%B4ng_nghi%E1%BB%87p%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg> ;
+    schema:parentOrganization university:dai-hoc-thai-nguyen ;
+    schema:telephone "+84-02083847145" .
+
+<https://upload.wikimedia.org/wikipedia/vi/4/47/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_K%E1%BB%B9_thu%E1%BA%ADt_C%C3%B4ng_nghi%E1%BB%87p%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_K%E1%BB%B9_thu%E1%BA%ADt_C%C3%B4ng_nghi%E1%BB%87p,_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/4/47/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_K%E1%BB%B9_thu%E1%BA%ADt_C%C3%B4ng_nghi%E1%BB%87p%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg/330px-Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_K%E1%BB%B9_thu%E1%BA%ADt_C%C3%B4ng_nghi%E1%BB%87p%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn.svg.png> .
 

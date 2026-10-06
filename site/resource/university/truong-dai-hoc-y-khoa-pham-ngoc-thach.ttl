@@ -28,11 +28,13 @@ university:truong-dai-hoc-y-khoa-pham-ngoc-thach a dbo:University,
         schema:Organization ;
     rdfs:label "Pham Ngoc Thach University of Medicine"@en,
         "Trường Đại học Y khoa Phạm Ngọc Thạch"@vi ;
+    dbo:abstract "Trường Đại học Y khoa Phạm Ngọc Thạch là một trường đại học chuyên ngành y khoa tại Việt Nam. Trường được Thủ tướng Chính phủ thành lập theo Quyết định số 24/QĐ-TTg ban hành ngày 7 tháng 1 năm 2008. Trường chịu sự quản lý trực tiếp của Ủy ban nhân dân Thành phố Hồ Chí Minh, sự quản lý nghiệp vụ của Bộ Giáo dục và Đào tạo và sự quản lý chuyên môn của Bộ Y tế. Trường được thành lập trên cơ sở Trung tâm Đào tạo Bồi dưỡng Cán bộ Y tế Thành phố Hồ Chí Minh. Người đặt nền móng và sáng lập trường là Viện sĩ, Tiến sĩ, Bác sĩ Dương Quang Trung. Nhiệm vụ chính của trường là đào tạo các thế hệ bác sĩ y khoa thuộc các chuyên khoa và đa khoa, nhằm cung cấp nguồn nhân lực ngành y cho Thành phố Hồ Chí Minh. Hiện nay, trường tuyển sinh trong cả nước cũng như nhận sinh viên quốc tế từ Lào và Campuchia."@vi ;
     owl:sameAs dbr:Pham_Ngoc_Thach_University_of_Medicine,
         wd:Q10829174,
         <https://ror.org/003g49r03> ;
     geo:lat 10.7737 ;
     geo:long 106.665 ;
+    skos:altLabel "Pham Ngoc Thach University of Medicine (PNTU)" ;
     skos:notation "TYS" ;
     skos:prefLabel "Trường Đại học Y khoa Phạm Ngọc Thạch"@vi ;
     prov:wasDerivedFrom wd:Q10829174,
@@ -42,6 +44,7 @@ university:truong-dai-hoc-y-khoa-pham-ngoc-thach a dbo:University,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_khoa_Ph%E1%BA%A1m_Ng%E1%BB%8Dc_Th%E1%BA%A1ch> ;
     vnedu:address "2 Dương Quang Trung, phường Hòa Hưng, Thành phố Hồ Chí Minh, Việt Nam" ;
     vnedu:admissionCode "TYS" ;
+    vnedu:campus "đô thị" ;
     vnedu:foundingYear "1989"^^xsd:gYear ;
     vnedu:hasAlumnus person:buu-truong,
         person:gia-ky,
@@ -57,6 +60,11 @@ university:truong-dai-hoc-y-khoa-pham-ngoc-thach a dbo:University,
         person:tuyet-thi-nguyen,
         person:vy-t-pham ;
     vnedu:hasLeader person:ngo-quoc-dat ;
+    vnedu:history """Ngày 15 tháng 3 năm 1989, với Quyết định số 59/CT của Chủ tịch Hội đồng Bộ trưởng, Trung tâm Đào tạo Bồi dưỡng Cán bộ Y tế Thành phố Hồ Chí Minh được phép thành lập. Trung tâm nằm trong hệ thống các trường đại học Việt Nam và đảm nhận công tác đào tạo điều dưỡng trung cấp, nữ hộ sinh và dược tá.
+
+Tháng 9 năm 1989, Trung tâm sáp nhập thêm cơ sở 520 Nguyễn Tri Phương (do Học viện Quân y chuyển giao), bắt đầu giảng dạy niên khóa đầu tiên.
+
+Ngày 7 tháng 1 năm 2008, Thủ tướng Chính phủ Nguyễn Tấn Dũng ký Quyết định số 24/QĐ-TTg đổi tên Trung tâm thành Trường Đại học Y khoa Phạm Ngọc Thạch."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -64,8 +72,17 @@ university:truong-dai-hoc-y-khoa-pham-ngoc-thach a dbo:University,
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:ngo-quoc-dat ;
     vnedu:website <http://pnt.edu.vn/> ;
+    schema:email "info@pnt.edu.vn" ;
     schema:employee person:ngo-quoc-dat ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/a/a8/YPhamNgocThach.png> ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:telephone "028.38.652.435" .
+
+<https://upload.wikimedia.org/wikipedia/commons/a/a8/YPhamNgocThach.png> a schema:ImageObject ;
+    schema:creditText "Nguyenhongphuqui" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:YPhamNgocThach.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/YPhamNgocThach.png/330px-YPhamNgocThach.png> .
 

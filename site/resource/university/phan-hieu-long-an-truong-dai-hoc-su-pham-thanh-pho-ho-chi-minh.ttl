@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -18,6 +19,7 @@ university:phan-hieu-long-an-truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh a foaf
         schema:EducationalOrganization,
         schema:Organization ;
     rdfs:label "Phân hiệu Long An, Trường Đại học Sư phạm Thành phố Hồ Chí Minh"@vi ;
+    dbo:abstract "Phân hiệu Long An là một phân hiệu thuộc Trường Đại học Sư phạm Thành phố Hồ Chí Minh, một trường đại học trọng điểm quốc gia của"@vi ;
     owl:sameAs wd:Q10828805 ;
     skos:prefLabel "Phân hiệu Long An, Trường Đại học Sư phạm Thành phố Hồ Chí Minh"@vi ;
     prov:wasDerivedFrom wd:Q10828805,

@@ -30,108 +30,139 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-noi-vu-ha-noi",
-  "@type": [
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "https://huha.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%E1%BB%99i_v%E1%BB%A5_H%C3%A0_N%E1%BB%99i"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q10829107"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74781779"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-noi-vu-ha-noi",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Nội vụ Hà Nội (tiếng Anh: Hanoi University of Home Affairs - HUHA) là đơn vị sự nghiệp công lập được thành lập vào năm 1971 trực thuộc Bộ Nội vụ. Được đổi tên thành Trường Đại học Nội vụ Hà Nội vào ngày 14 tháng 11 năm 2011 trên cơ sở nâng cấp từ Trường Cao đẳng Nội vụ Hà Nội. Ngày 15 tháng 09 năm 2022, Chính phủ ban hành Nghị định số 63/2022/NĐ-CP quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Nội vụ. Trong đó, quy định Trường Đại học Nội vụ Hà Nội được sáp nhập vào Học viện Hành chính Quốc gia."
+      },
+      "foaf:homepage": {
+        "@id": "https://huha.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_N%E1%BB%99i_v%E1%BB%A5_H%C3%A0_N%E1%BB%99i"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q10829107"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829107"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=74781779"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Nội vụ Hà Nội"
+        },
+        {
+          "@language": "en",
+          "@value": "Hanoi University of Home Affairs - HUHA"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-chien"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/9/97/Logo_HUHA.png"
+      },
+      "schema:telephone": "024.375 32 864-122",
+      "skos:altLabel": [
+        "Nội vụ - HUHA",
+        "Đại học Nội vụ"
+      ],
+      "skos:notation": "DNV",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Nội vụ Hà Nội"
+      },
+      "vnedu:admissionCode": "DNV",
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Trường Trung học Văn thư Lưu trữ Trung ương"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1971"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-noi-vu"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-chien"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Nội vụ Hà Nội (tiền thân là: Trường Trung học Văn thư Lưu trữ Trung ương) là trường đại học hệ công lập được thành lập năm 1971 trực thuộc Bộ Nội vụ nhưng đến ngày 14 tháng 11 năm 2011 trường mới được đổi tên như ngày nay. Trước đây, trường có tên gọi là Trường Cao đẳng Văn thư Lưu trữ Trung ương. Tiền thân là Trường Trung học văn thư Lưu trữ Trung ương, được thành lập năm 1971 theo Quyết định số 109/BT ngày 18/12/1971 của Bộ trưởng Phủ Thủ tướng. Năm 1996, Trường được đổi tên thành Trường Trung cấp Lưu trữ và Nghiệp vụ Văn phòng. Theo quyết định số 3225/QĐ-BGD&ĐT-TCCT ngày 15 tháng 6 năm 2005 của Bộ trưởng Bộ Giáo dục và Đào tạo được đổi tên trường Trường Cao đẳng Văn thư Lưu trữ Trung ương. Ngày 21/4/2008. Thứ trưởng Thường trực Bộ Giáo dục và Đào tạo đã ký Quyết định số 2275/QĐ-BGDĐT đổi tên Trường Cao đẳng Văn thư Lưu trữ Trung ương thành Trường Cao đẳng Nội vụ Hà Nội đến năm 2011 đổi tên là Trường Đại học Nội vụ Hà Nội. Trường Đại học Nội vụ Hà Nội trước đây trực thuộc Cục Văn thư và Lưu trữ Nhà nước nhưng từ năm 2005 đến nay trực thuộc Bộ Nội vụ, địa chỉ trụ sở chính của nhà trường là số 36, 38 đường Xuân La, phường Xuân La, quận Tây Hồ, thành phố Hà Nội, nước Việt Nam và số 371 đường Nguyễn Hoàng Tôn, phường Xuân Tảo, quận Bắc Từ Liêm, thủ đô Hà Nội, nước Việt Nam. Trường đào tạo các ngành như: Quản trị Nguồn nhân lực, Quản trị Văn phòng, Quản lý Nhà Nước, Chính trị học, Xây dựng Đảng & Chính quyền Nhà Nước, Luật, Lưu trữ học, Quản lý Văn hoá, Hệ thống Thông tin, Thông tin - Thư viện, Ngôn ngữ Anh, Văn hóa học, Kinh tế học, v.v... .Trải qua 45 năm hình thành và phát triển, trường Đại học Nội vụ Hà Nội vẫn duy trì và phát huy truyền thống giảng dạy, đào tạo các ngành nghề trước đây. Đồng thời, trường còn mở thêm một số ngành nghề, lĩnh vực cùng hình thức đào tạo đa dạng. Cơ cấu tổ chức của trường gồm 4 đơn vị trực thuộc (bao gồm 2 Phân hiệu tại tỉnh Quảng Nam và thành phố Hồ Chí Minh); 8 phòng chức năng, 8 khoa, 3 trung tâm.\n\nTừ ngày 15 tháng 09 năm 2022, Chính phủ ban hành Nghị định số 63/2022 quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Nội vụ quyết định trường Đại học Nội vụ Hà Nội sáp nhập vào Học viện Hành chính Quốc gia. Ngày 19 tháng 12 năm 2022, Thủ tướng Chính phủ Việt Nam ban hành Quyết định số 27/2022/QĐ-TTg quy định chức năng, nhiệm vụ quyền hạn và cơ cấu tổ chức của Học viện Hành chính Quốc gia trực thuộc Bộ Nội vụ quyết định sáp nhập Trường Đại học Nội vụ Hà Nội vào Học viện Hành chính Quốc gia."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "“Học thật - thi thật để ra đời làm thật”."
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-chien"
+      },
+      "vnedu:shortName": [
+        "HUHA",
+        "ĐHNVHN"
+      ],
+      "vnedu:website": {
+        "@id": "https://huha.edu.vn/"
+      }
     },
     {
-      "@id": "wd:Q10829107"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/9/97/Logo_HUHA.png",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_HUHA.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/9/97/Logo_HUHA.png"
+      }
     }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Nội vụ Hà Nội"
-    },
-    {
-      "@language": "en",
-      "@value": "Hanoi University of Home Affairs - HUHA"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-chien"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:notation": "DNV",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Nội vụ Hà Nội"
-  },
-  "vnedu:admissionCode": "DNV",
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Trường Trung học Văn thư Lưu trữ Trung ương"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1971"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-noi-vu"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-chien"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "“Học thật - thi thật để ra đời làm thật”."
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-chien"
-  },
-  "vnedu:shortName": [
-    "HUHA",
-    "ĐHNVHN"
-  ],
-  "vnedu:website": {
-    "@id": "https://huha.edu.vn/"
-  }
+  ]
 }</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -150,6 +181,8 @@
   <a href="truong-dai-hoc-noi-vu-ha-noi.ttl">Turtle</a> · <a href="truong-dai-hoc-noi-vu-ha-noi.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-noi-vu-ha-noi">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 18 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Nội vụ Hà Nội (tiếng Anh: Hanoi University of Home Affairs - HUHA) là đơn vị sự nghiệp công lập được thành lập vào năm 1971 trực thuộc Bộ Nội vụ. Được đổi tên thành Trường Đại học Nội vụ Hà Nội vào ngày 14 tháng 11 năm 2011 trên cơ sở nâng cấp từ Trường Cao đẳng Nội vụ Hà Nội. Ngày 15 tháng 09 năm 2022, Chính phủ ban hành Nghị định số 63/2022/NĐ-CP quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Nội vụ. Trong đó, quy định Trường Đại học Nội vụ Hà Nội được sáp nhập vào Học viện Hành chính Quốc gia.</p><h2>Lịch sử</h2><p>Trường Đại học Nội vụ Hà Nội (tiền thân là: Trường Trung học Văn thư Lưu trữ Trung ương) là trường đại học hệ công lập được thành lập năm 1971 trực thuộc Bộ Nội vụ nhưng đến ngày 14 tháng 11 năm 2011 trường mới được đổi tên như ngày nay. Trước đây, trường có tên gọi là Trường Cao đẳng Văn thư Lưu trữ Trung ương. Tiền thân là Trường Trung học văn thư Lưu trữ Trung ương, được thành lập năm 1971 theo Quyết định số 109/BT ngày 18/12/1971 của Bộ trưởng Phủ Thủ tướng. Năm 1996, Trường được đổi tên thành Trường Trung cấp Lưu trữ và Nghiệp vụ Văn phòng. Theo quyết định số 3225/QĐ-BGD&amp;ĐT-TCCT ngày 15 tháng 6 năm 2005 của Bộ trưởng Bộ Giáo dục và Đào tạo được đổi tên trường Trường Cao đẳng Văn thư Lưu trữ Trung ương. Ngày 21/4/2008. Thứ trưởng Thường trực Bộ Giáo dục và Đào tạo đã ký Quyết định số 2275/QĐ-BGDĐT đổi tên Trường Cao đẳng Văn thư Lưu trữ Trung ương thành Trường Cao đẳng Nội vụ Hà Nội đến năm 2011 đổi tên là Trường Đại học Nội vụ Hà Nội. Trường Đại học Nội vụ Hà Nội trước đây trực thuộc Cục Văn thư và Lưu trữ Nhà nước nhưng từ năm 2005 đến nay trực thuộc Bộ Nội vụ, địa chỉ trụ sở chính của nhà trường là số 36, 38 đường Xuân La, phường Xuân La, quận Tây Hồ, thành phố Hà Nội, nước Việt Nam và số 371 đường Nguyễn Hoàng Tôn, phường Xuân Tảo, quận Bắc Từ Liêm, thủ đô Hà Nội, nước Việt Nam. Trường đào tạo các ngành như: Quản trị Nguồn nhân lực, Quản trị Văn phòng, Quản lý Nhà Nước, Chính trị học, Xây dựng Đảng &amp; Chính quyền Nhà Nước, Luật, Lưu trữ học, Quản lý Văn hoá, Hệ thống Thông tin, Thông tin - Thư viện, Ngôn ngữ Anh, Văn hóa học, Kinh tế học, v.v... .Trải qua 45 năm hình thành và phát triển, trường Đại học Nội vụ Hà Nội vẫn duy trì và phát huy truyền thống giảng dạy, đào tạo các ngành nghề trước đây. Đồng thời, trường còn mở thêm một số ngành nghề, lĩnh vực cùng hình thức đào tạo đa dạng. Cơ cấu tổ chức của trường gồm 4 đơn vị trực thuộc (bao gồm 2 Phân hiệu tại tỉnh Quảng Nam và thành phố Hồ Chí Minh); 8 phòng chức năng, 8 khoa, 3 trung tâm.</p><p>Từ ngày 15 tháng 09 năm 2022, Chính phủ ban hành Nghị định số 63/2022 quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Nội vụ quyết định trường Đại học Nội vụ Hà Nội sáp nhập vào Học viện Hành chính Quốc gia. Ngày 19 tháng 12 năm 2022, Thủ tướng Chính phủ Việt Nam ban hành Quyết định số 27/2022/QĐ-TTg quy định chức năng, nhiệm vụ quyền hạn và cơ cấu tổ chức của Học viện Hành chính Quốc gia trực thuộc Bộ Nội vụ quyết định sáp nhập Trường Đại học Nội vụ Hà Nội vào Học viện Hành chính Quốc gia.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=74781779">«Trường Đại học Nội vụ Hà Nội»</a> trên Wikipedia tiếng Việt (bản sửa đổi 74781779), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Nội vụ Hà Nội</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_HUHA.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://upload.wikimedia.org/wikipedia/vi/9/97/Logo_HUHA.png" alt="Biểu trưng Trường Đại học Nội vụ Hà Nội" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên khác</th><td>Đại học Nội vụ<br>Nội vụ - HUHA</td></tr><tr><th>Tên tiếng Anh</th><td>Hanoi University of Home Affairs - HUHA</td></tr><tr><th>Viết tắt</th><td>HUHA, ĐHNVHN</td></tr><tr><th>Mã trường</th><td>DNV</td></tr><tr><th>Tên cũ</th><td>Trường Trung học Văn thư Lưu trữ Trung ương</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>1971</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-noi-vu">Bộ Nội vụ</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">Phó Giáo sư Tiến sĩ</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-ba-chien">Nguyễn Bá Chiến</a></td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Khẩu hiệu</th><td><i>“Học thật - thi thật để ra đời làm thật”.</i></td></tr><tr><th>Điện thoại</th><td>024.375 32 864-122</td></tr><tr><th>Website</th><td><a href="https://huha.edu.vn/">huha.edu.vn</a></td></tr></table></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
 
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
@@ -176,6 +209,15 @@
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/9/97/Logo_HUHA.png">&lt;https://upload.wikimedia.org/wikipedia/vi/9/97/Logo_HUHA.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>024.375 32 864-122</div>
+</td></tr>
+<tr><td class="p">tên khác<small>skos:altLabel</small></td><td>
+<div>Nội vụ - HUHA</div><div>Đại học Nội vụ</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>DNV <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

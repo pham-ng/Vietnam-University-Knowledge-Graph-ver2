@@ -30,131 +30,182 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quoc-te-rmit-viet-nam",
-  "@type": [
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.rmit.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_t%E1%BA%BF_RMIT_Vi%E1%BB%87t_Nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quoc-te-rmit-viet-nam",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "vnedu:EducationalOrganization",
+        "schema:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Công nghệ Hoàng gia Melbourne (tiếng Anh: the Royal Melbourne Institute of Technology – RMIT), còn được gọi là Đại học RMIT (tiếng Anh: RMIT University), là một viện đại học Úc hoạt động tại Việt Nam với hai học sở tại Thành phố Hồ Chí Minh và Hà Nội. Phân hiệu tại Việt Nam của RMIT có tên chính thức là Trường Đại học Quốc tế RMIT Việt Nam (tiếng Anh: RMIT University Vietnam), thường được gọi là RMIT Việt Nam (tiếng Anh: RMIT Vietnam). Trường hoàn toàn được đầu tư và điều hành bởi cơ sở chính ở Úc, không thuộc khuôn khổ đại học công lập của Việt Nam."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.rmit.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/Royal_Melbourne_Institute_of_Technology_Vietnam"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_t%E1%BA%BF_RMIT_Vi%E1%BB%87t_Nam"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.75"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.666667"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "dbr:RMIT_University_Vietnam"
+        },
+        {
+          "@id": "https://ror.org/004axh929"
+        },
+        {
+          "@id": "wd:Q7277005"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75045774"
+        },
+        {
+          "@id": "wd:Q7277005"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Quốc tế RMIT Việt Nam"
+        },
+        {
+          "@language": "en",
+          "@value": "RMIT University Vietnam"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/peter-coloe"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/e/ec/RMIT_Coat_of_Arms.png"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/5/51/RMIT_University_Logo.svg"
+      },
+      "skos:altLabel": "Đại học RMIT Việt Nam",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Quốc tế RMIT Việt Nam"
+      },
+      "vnedu:address": "Cổng chính, 702 Đường Nguyễn Văn Linh, Tân Hưng, Quận 7, Hồ Chí Minh 700000",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2000"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/mai-phuong-thuy"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duc-anh-hoang"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/cris-phan"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duy-dang-pham"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thuy-van"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/chi-pu"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-hoang-my"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/peter-coloe"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Năm 1998, Chính phủ Việt Nam ngỏ lời mời Đại học RMIT từ Úc xây dựng một trường đại học nước ngoài đầu tiên tại Việt Nam. Năm 2000, Đại học RMIT Việt Nam được thành lập theo quyết định của Bộ Kế hoạch và Đầu tư Việt Nam, theo đó, trường được phép cung cấp các chương trình giáo dục bậc đại học, sau đại học, đào tạo và nghiên cứu.\n\nĐại học RMIT Việt Nam chính thức đi vào hoạt động từ năm 2001, bắt đầu cung cấp các chương trình giảng dạy ở Thành phố Hồ Chí Minh. Năm 2004, trường mở học sở thứ hai tại thủ đô Hà Nội.\n\nKể từ ngày thành lập tới năm 2015, Đại học RMIT đã trao hơn 800 suất học bổng với tổng giá trị hơn 170 tỉ đồng (tương đương $7.48 triệu USD).\n\nKể từ khi Giải thưởng Rồng Vàng của Thời báo Kinh tế Việt Nam được khởi trao năm 2003 tới năm 2018, Đại học RMIT Việt Nam đã nhận được 15 giải liên tiếp cho hạng mục \"giáo dục xuất sắc\". Trường cũng được Hiệp hội Doanh nghiệp Úc tại Việt Nam (AusCham) trao tặng giải thưởng \"Doanh nghiệp xuất sắc toàn diện\" và nhiều bằng khen từ chính quyền Việt Nam.\n\nNăm 2008, Đại học RMIT Việt Nam nhận bằng khen của Thủ tướng Việt Nam Nguyễn Tấn Dũng vì \"có thành tích trong giáo dục, đóng góp cho phát triển kinh tế xã hội của Việt Nam\"."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Cultivated mind & Skillful hand"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/peter-coloe"
+      },
+      "vnedu:website": {
+        "@id": "http://www.rmit.edu.vn"
+      }
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Royal_Melbourne_Institute_of_Technology_Vietnam"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/5/51/RMIT_University_Logo.svg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Không rõUnknown author",
+      "schema:license": "Public domain",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:RMIT_University_Logo.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/RMIT_University_Logo.svg/330px-RMIT_University_Logo.svg.png"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/e/ec/RMIT_Coat_of_Arms.png",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:RMIT_Coat_of_Arms.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/e/ec/RMIT_Coat_of_Arms.png"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.75"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.666667"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "wd:Q7277005"
-    },
-    {
-      "@id": "https://ror.org/004axh929"
-    },
-    {
-      "@id": "dbr:RMIT_University_Vietnam"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75045774"
-    },
-    {
-      "@id": "wd:Q7277005"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "RMIT University Vietnam"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Quốc tế RMIT Việt Nam"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Quốc tế RMIT Việt Nam"
-  },
-  "vnedu:address": "Cổng chính, 702 Đường Nguyễn Văn Linh, Tân Hưng, Quận 7, Hồ Chí Minh 700000",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2000"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duy-dang-pham"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/duc-anh-hoang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thuy-van"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/cris-phan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/chi-pu"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-hoang-my"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/mai-phuong-thuy"
-    }
-  ],
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Cultivated mind & Skillful hand"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:website": {
-    "@id": "http://www.rmit.edu.vn"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.75,106.666667],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.75,106.666667],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -172,8 +223,10 @@
 <p class="uri">https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quoc-te-rmit-viet-nam<br>
   <a href="truong-dai-hoc-quoc-te-rmit-viet-nam.ttl">Turtle</a> · <a href="truong-dai-hoc-quoc-te-rmit-viet-nam.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quoc-te-rmit-viet-nam">Truy vấn SPARQL</a>
-   · <span class="pill inf">suy luận</span> = 22 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+   · <span class="pill inf">suy luận</span> = 24 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Học viện Công nghệ Hoàng gia Melbourne (tiếng Anh: the Royal Melbourne Institute of Technology – RMIT), còn được gọi là Đại học RMIT (tiếng Anh: RMIT University), là một viện đại học Úc hoạt động tại Việt Nam với hai học sở tại Thành phố Hồ Chí Minh và Hà Nội. Phân hiệu tại Việt Nam của RMIT có tên chính thức là Trường Đại học Quốc tế RMIT Việt Nam (tiếng Anh: RMIT University Vietnam), thường được gọi là RMIT Việt Nam (tiếng Anh: RMIT Vietnam). Trường hoàn toàn được đầu tư và điều hành bởi cơ sở chính ở Úc, không thuộc khuôn khổ đại học công lập của Việt Nam.</p><h2>Lịch sử</h2><p>Năm 1998, Chính phủ Việt Nam ngỏ lời mời Đại học RMIT từ Úc xây dựng một trường đại học nước ngoài đầu tiên tại Việt Nam. Năm 2000, Đại học RMIT Việt Nam được thành lập theo quyết định của Bộ Kế hoạch và Đầu tư Việt Nam, theo đó, trường được phép cung cấp các chương trình giáo dục bậc đại học, sau đại học, đào tạo và nghiên cứu.</p><p>Đại học RMIT Việt Nam chính thức đi vào hoạt động từ năm 2001, bắt đầu cung cấp các chương trình giảng dạy ở Thành phố Hồ Chí Minh. Năm 2004, trường mở học sở thứ hai tại thủ đô Hà Nội.</p><details><summary>Đọc tiếp (3 đoạn)</summary><p>Kể từ ngày thành lập tới năm 2015, Đại học RMIT đã trao hơn 800 suất học bổng với tổng giá trị hơn 170 tỉ đồng (tương đương $7.48 triệu USD).</p><p>Kể từ khi Giải thưởng Rồng Vàng của Thời báo Kinh tế Việt Nam được khởi trao năm 2003 tới năm 2018, Đại học RMIT Việt Nam đã nhận được 15 giải liên tiếp cho hạng mục &quot;giáo dục xuất sắc&quot;. Trường cũng được Hiệp hội Doanh nghiệp Úc tại Việt Nam (AusCham) trao tặng giải thưởng &quot;Doanh nghiệp xuất sắc toàn diện&quot; và nhiều bằng khen từ chính quyền Việt Nam.</p><p>Năm 2008, Đại học RMIT Việt Nam nhận bằng khen của Thủ tướng Việt Nam Nguyễn Tấn Dũng vì &quot;có thành tích trong giáo dục, đóng góp cho phát triển kinh tế xã hội của Việt Nam&quot;.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75045774">«Trường Đại học Quốc tế RMIT Việt Nam»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75045774), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Quốc tế RMIT Việt Nam</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:RMIT_University_Logo.svg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/RMIT_University_Logo.svg/330px-RMIT_University_Logo.svg.png" alt="Biểu trưng Trường Đại học Quốc tế RMIT Việt Nam" loading="lazy"></a><figcaption>Public domain · Không rõUnknown author</figcaption></figure><table><tr><th>Tên khác</th><td>Đại học RMIT Việt Nam</td></tr><tr><th>Tên tiếng Anh</th><td>RMIT University Vietnam</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>2000</td></tr><tr><th>Hiệu trưởng</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/peter-coloe">Peter Coloe</a></td></tr><tr><th>Địa chỉ</th><td>Cổng chính, 702 Đường Nguyễn Văn Linh, Tân Hưng, Quận 7, Hồ Chí Minh 700000</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Cultivated mind &amp; Skillful hand</i></td></tr><tr><th>Website</th><td><a href="http://www.rmit.edu.vn">rmit.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:RMIT_Coat_of_Arms.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://upload.wikimedia.org/wikipedia/vi/e/ec/RMIT_Coat_of_Arms.png" alt="Ảnh Trường Đại học Quốc tế RMIT Việt Nam" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -200,8 +253,20 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q7277005">wd:Q7277005</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75045774">&lt;https://vi.wikipedia.org/w/index.php?oldid=75045774&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">schema:employee<small>schema:employee</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/peter-coloe">Peter Coloe</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/e/ec/RMIT_Coat_of_Arms.png">&lt;https://upload.wikimedia.org/wikipedia/vi/e/ec/RMIT_Coat_of_Arms.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/5/51/RMIT_University_Logo.svg">&lt;https://upload.wikimedia.org/wikipedia/commons/5/51/RMIT_University_Logo.svg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">tên khác<small>skos:altLabel</small></td><td>
+<div>Đại học RMIT Việt Nam</div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>Cổng chính, 702 Đường Nguyễn Văn Linh, Tân Hưng, Quận 7, Hồ Chí Minh 700000</div>
@@ -212,6 +277,9 @@
 <tr><td class="p">có cựu sinh viên<small>vnedu:hasAlumnus</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/chi-pu">Chi Pu</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/cris-phan">Cris Phan</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/duc-anh-hoang">Duc Anh Hoang</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/duy-dang-pham">Duy Dang-Pham</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/mai-phuong-thuy">Mai Phương Thúy</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thuy-van">Thúy Vân</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-hoang-my">Vũ Hoàng My</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">có người đứng đầu<small>vnedu:hasLeader</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/peter-coloe">Peter Coloe</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
 <tr><td class="p">đặt tại<small>vnedu:locatedIn</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
@@ -221,6 +289,9 @@
 <tr><td class="p">loại hình sở hữu<small>vnedu:ownership</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/ontology#PublicOwnership">công lập</a></div>
 </td></tr>
+<tr><td class="p">hiệu trưởng<small>vnedu:rector</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/peter-coloe">Peter Coloe</a></div>
+</td></tr>
 <tr><td class="p">trang web<small>vnedu:website</small></td><td>
 <div><a href="http://www.rmit.edu.vn">&lt;http://www.rmit.edu.vn&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
@@ -229,11 +300,14 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
+<tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/chi-pu">Chi Pu</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/cris-phan">Cris Phan</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/duc-anh-hoang">Duc Anh Hoang</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/duy-dang-pham">Duy Dang-Pham</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/mai-phuong-thuy">Mai Phương Thúy</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thuy-van">Thúy Vân</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-hoang-my">Vũ Hoàng My</a></div>
+</td></tr>
 <tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/chi-pu">Chi Pu</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/cris-phan">Cris Phan</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/duc-anh-hoang">Duc Anh Hoang</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/duy-dang-pham">Duy Dang-Pham</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/mai-phuong-thuy">Mai Phương Thúy</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thuy-van">Thúy Vân</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-hoang-my">Vũ Hoàng My</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
-<tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/chi-pu">Chi Pu</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/cris-phan">Cris Phan</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/duc-anh-hoang">Duc Anh Hoang</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/duy-dang-pham">Duy Dang-Pham</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/mai-phuong-thuy">Mai Phương Thúy</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/thuy-van">Thúy Vân</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-hoang-my">Vũ Hoàng My</a></div>
+<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/peter-coloe">Peter Coloe</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

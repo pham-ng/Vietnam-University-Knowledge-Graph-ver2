@@ -30,127 +30,158 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-thong-tin-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh",
-  "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.uit.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://en.wikipedia.org/wiki/University_of_Information_Technology"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "HannaUIT",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Logo_UIT_updated.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_UIT_updated.svg/330px-Logo_UIT_updated.svg.png"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%B4ng_tin%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-thong-tin-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh",
+      "@type": [
+        "vnedu:MemberInstitution",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ Thông tin ( – UIT) là một trung tâm về nghiên cứu khoa học và chuyển giao công nghệ về công nghệ thông tin – truyền thông, được xếp vào nhóm trường đại học trọng điểm quốc gia và là thành viên của Đại học Quốc gia Thành phố Hồ Chí Minh. Đây cũng là trường đại học trọng điểm về đào tạo lĩnh vực An toàn thông tin của cả nước, từng đạt nhiều thành tích cao trên đấu trường quốc tế. Thành lập theo Quyết định số 134/2006/QĐ-TTg ngày 8 tháng 6 năm 2006 của Thủ tướng Chính phủ."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.uit.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%B4ng_tin%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/University_of_Information_Technology"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.869892"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.803663"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/05kdc4973"
+        },
+        {
+          "@id": "wd:Q5873994"
+        },
+        {
+          "@id": "dbr:Ho_Chi_Minh_City_University_of_Information_Technology"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75483071"
+        },
+        {
+          "@id": "wd:Q5873994"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Công nghệ Thông tin, Đại học Quốc gia Thành phố Hồ Chí Minh"
+        },
+        {
+          "@language": "en",
+          "@value": "VNU-HCM University of Information Technology"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tan-tran-minh-khang"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "2006-06-08"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
+      },
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ Thông tin, Đại học Quốc gia Thành phố Hồ Chí Minh"
+      },
+      "vnedu:address": "Khu phố 34, Phường Linh Xuân",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2006"
+      },
+      "vnedu:hasAlumnus": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-manh-luat"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tan-tran-minh-khang"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Tiền thân của Trường Đại học Công nghệ Thông tin là Trung tâm phát triển Công nghệ Thông tin được thành lập theo quyết định số 416/QĐ/ĐHQG/TCCB của giám đốc Đại học Quốc gia Thành phố Hồ Chí Minh vào ngày 28 tháng 11 năm 1998. Đến ngày 8 tháng 6 năm 2006, Trường Đại học Công nghệ Thông tin được thành lập theo Quyết định số 134/2006/QĐ-TTg của Thủ tướng Chính phủ trên cơ sở Trung tâm Phát triển Công nghệ Thông tin. Trung tâm ban đầu được tái thành lập vào tháng 7 và trở thành một trung tâm trực thuộc trường.\n\nHiệu trưởng đầu tiên của trường là giáo sư Hoàng Văn Kiếm, nguyên trưởng khoa Công nghệ thông tin của Trường Đại học Khoa học Tự nhiên. Khóa đầu tiên của trường được khai giảng vào tháng 10 cùng năm với khoảng 500 sinh viên cho 5 chuyên ngành học bao gồm Khoa học máy tính, Kỹ thuật máy tính, Công nghệ phần mềm, Mạng máy tính và truyền thông, Hệ thống Thông tin.\n\nNgày 8 tháng 6 năm 2016, Trường Đại học Công nghệ Thông tin long trọng tổ chức Lễ Kỷ niệm 10 năm thành lập và Đón nhận Huân chương Lao động hạng III."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
+      },
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Toàn diện - Sáng tạo - Phụng sự"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tan-tran-minh-khang"
+      },
+      "vnedu:website": {
+        "@id": "http://www.uit.edu.vn"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.869892"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.803663"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "dbr:Ho_Chi_Minh_City_University_of_Information_Technology"
-    },
-    {
-      "@id": "https://ror.org/05kdc4973"
-    },
-    {
-      "@id": "wd:Q5873994"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75483071"
-    },
-    {
-      "@id": "wd:Q5873994"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "VNU-HCM University of Information Technology"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Công nghệ Thông tin, Đại học Quốc gia Thành phố Hồ Chí Minh"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tan-tran-minh-khang"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
-  },
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Công nghệ Thông tin, Đại học Quốc gia Thành phố Hồ Chí Minh"
-  },
-  "vnedu:address": "Khu phố 34, Phường Linh Xuân",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2006"
-  },
-  "vnedu:hasAlumnus": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-manh-luat"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tan-tran-minh-khang"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh"
-  },
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Toàn diện - Sáng tạo - Phụng sự"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tan-tran-minh-khang"
-  },
-  "vnedu:website": {
-    "@id": "http://www.uit.edu.vn"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.869892,106.803663],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.869892,106.803663],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -169,7 +200,9 @@
   <a href="truong-dai-hoc-cong-nghe-thong-tin-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh.ttl">Turtle</a> · <a href="truong-dai-hoc-cong-nghe-thong-tin-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-thong-tin-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 20 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Công nghệ Thông tin ( – UIT) là một trung tâm về nghiên cứu khoa học và chuyển giao công nghệ về công nghệ thông tin – truyền thông, được xếp vào nhóm trường đại học trọng điểm quốc gia và là thành viên của Đại học Quốc gia Thành phố Hồ Chí Minh. Đây cũng là trường đại học trọng điểm về đào tạo lĩnh vực An toàn thông tin của cả nước, từng đạt nhiều thành tích cao trên đấu trường quốc tế. Thành lập theo Quyết định số 134/2006/QĐ-TTg ngày 8 tháng 6 năm 2006 của Thủ tướng Chính phủ.</p><h2>Lịch sử</h2><p>Tiền thân của Trường Đại học Công nghệ Thông tin là Trung tâm phát triển Công nghệ Thông tin được thành lập theo quyết định số 416/QĐ/ĐHQG/TCCB của giám đốc Đại học Quốc gia Thành phố Hồ Chí Minh vào ngày 28 tháng 11 năm 1998. Đến ngày 8 tháng 6 năm 2006, Trường Đại học Công nghệ Thông tin được thành lập theo Quyết định số 134/2006/QĐ-TTg của Thủ tướng Chính phủ trên cơ sở Trung tâm Phát triển Công nghệ Thông tin. Trung tâm ban đầu được tái thành lập vào tháng 7 và trở thành một trung tâm trực thuộc trường.</p><p>Hiệu trưởng đầu tiên của trường là giáo sư Hoàng Văn Kiếm, nguyên trưởng khoa Công nghệ thông tin của Trường Đại học Khoa học Tự nhiên. Khóa đầu tiên của trường được khai giảng vào tháng 10 cùng năm với khoảng 500 sinh viên cho 5 chuyên ngành học bao gồm Khoa học máy tính, Kỹ thuật máy tính, Công nghệ phần mềm, Mạng máy tính và truyền thông, Hệ thống Thông tin.</p><details><summary>Đọc tiếp (1 đoạn)</summary><p>Ngày 8 tháng 6 năm 2016, Trường Đại học Công nghệ Thông tin long trọng tổ chức Lễ Kỷ niệm 10 năm thành lập và Đón nhận Huân chương Lao động hạng III.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75483071">«Trường Đại học Công nghệ Thông tin, Đại học Quốc gia Thành phố Hồ Chí Minh»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75483071), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Công nghệ Thông tin, Đại học Quốc gia Thành phố Hồ Chí Minh</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:Logo_UIT_updated.svg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_UIT_updated.svg/330px-Logo_UIT_updated.svg.png" alt="Biểu trưng Trường Đại học Công nghệ Thông tin, Đại học Quốc gia Thành phố Hồ Chí Minh" loading="lazy"></a><figcaption>CC BY-SA 4.0 · HannaUIT</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>VNU-HCM University of Information Technology</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>8 tháng 6 năm 2006</td></tr><tr><th>Thành viên của</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh">Đại học Quốc gia Thành phố Hồ Chí Minh</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tan-tran-minh-khang">Nguyễn Tấn Trần Minh Khang</a></td></tr><tr><th>Địa chỉ</th><td>Khu phố 34, Phường Linh Xuân</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Toàn diện - Sáng tạo - Phụng sự</i></td></tr><tr><th>Website</th><td><a href="http://www.uit.edu.vn">uit.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -199,8 +232,14 @@
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tan-tran-minh-khang">Nguyễn Tấn Trần Minh Khang</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>2006-06-08 <span class="lang">xsd:date</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg">&lt;https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
 <tr><td class="p">schema:parentOrganization<small>schema:parentOrganization</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh">Đại học Quốc gia Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -243,11 +282,11 @@
 <tr><td class="p">schema:subOrganization<small>schema:subOrganization</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh">Đại học Quốc gia Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
-<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-manh-luat">Nguyễn Mạnh Luật</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tan-tran-minh-khang">Nguyễn Tấn Trần Minh Khang</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-manh-luat">Nguyễn Mạnh Luật</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">có đơn vị thành viên<small>vnedu:hasMember</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-thanh-pho-ho-chi-minh">Đại học Quốc gia Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

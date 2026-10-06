@@ -28,6 +28,7 @@ university:truong-dai-hoc-y-duoc-dai-hoc-quoc-gia-ha-noi a dbo:University,
         schema:Organization ;
     rdfs:label "VNU University of Medicine and Pharmacy"@en,
         "Trường Đại học Y Dược, Đại học Quốc gia Hà Nội"@vi ;
+    dbo:abstract "Trường Đại học Y Dược, Đại học Quốc gia Hà Nội ( – VNU-UMP) là trường đại học chuyên ngành y khoa và dược học tại Việt Nam thuộc Đại học Quốc gia Hà Nội - đại học trong nhóm trọng điểm quốc gia và đại học tinh hoa của Việt Nam. Đây là trường đại học đầu tiên của Việt Nam triển khai chương trình đồng hướng dẫn và đồng cấp bằng tiến sĩ trong khối ngành sức khỏe và là cơ sở giáo dục đại học duy nhất tại Việt Nam có Bệnh viện trực thuộc ngay từ khi thành lập. Trường Đại học Y Dược, Đại học Quốc gia Hà Nội còn là một trong ba cơ sở giáo dục đại học duy nhất tại Việt Nam được phép đào tạo trình độ tiến sĩ ở hai chuyên ngành Nhãn khoa và Răng Hàm Mặt, bên cạnh Trường Đại học Y Hà Nội và Trường Đại học Y Dược Thành phố Hồ Chí Minh. Ngoài hoạt động đào tạo, trường còn tham gia vào các hoạt động phát triển chuyên môn và chuẩn hóa đào tạo y khoa quốc gia tại Việt Nam. Một số giảng viên của trường đảm nhiệm các vị trí quan trọng trong như Chủ tịch Hội đồng Giáo sư Nhà nước ngành Y học hay Ủy viên Hội đồng Y khoa Quốc gia. Bệnh viện Đại học Y Dược - Đại học Quốc gia Hà Nội nằm trong nhóm các bệnh viện trường đại học được định hướng đầu tư phát triển nhằm cung cấp dịch vụ kỹ thuật chuyên sâu, nghiên cứu khoa học công nghệ và đào tạo nguồn nhân lực y tế chất lượng cao bên cạnh Bệnh viện Đại học Y Hà Nội, Bệnh viện Quân y 103, v.v."@vi ;
     owl:sameAs wd:Q105335883,
         <https://ror.org/01k6wgm65> ;
     geo:lat 21.040301 ;
@@ -42,8 +43,16 @@ university:truong-dai-hoc-y-duoc-dai-hoc-quoc-gia-ha-noi a dbo:University,
     vnedu:academicStaff "260"^^xsd:nonNegativeInteger ;
     vnedu:address "Nhà Y1, Số 2B Phạm Văn Đồng, phường Phú Diễn" ;
     vnedu:admissionCode "QHY" ;
+    vnedu:campus "Đại học Quốc gia Hà Nội - Quận Cầu Giấy" ;
     vnedu:foundingYear "2010"^^xsd:gYear ;
     vnedu:hasLeader person:le-ngoc-thanh ;
+    vnedu:history """Ngày 20/05/2010, GS.TS. Mai Trọng Nhuận (Nguyên giám đốc Đại học Quốc gia Hà Nội) đã ký Quyết định số 1507/QĐ-TCCB thành lập khoa Y Dược - ĐHQG Hà Nội trên cơ sở kế thừa về mặt truyền thống, tinh thần của Trường Cao đẳng Y khoa thuộc Đại học Đông Dương xưa (tiền thân của Đại học Quốc gia Hà Nội).
+
+Ngày 27/10/2020, trên cơ sở Khoa y dược, Thủ tướng Chính phủ đã ký Quyết định số 1666/QĐ-TTg tổ chức lại khoa y dược cũ thành Trường Đại học Y Dược thuộc Đại học Quốc gia Hà Nội.
+
+Ngày 23/12/2022, thành lập Khoa Răng Hàm Mặt. Ngày 24/5/2023, thành lập Khoa Dược. Ngày 20/11/2023, thành lập Khoa Y. Ngày 24/2/2025, thành lập Khoa Y tế công cộng và Khoa Y Dược học cơ sở.
+
+Hiện nay về cơ cấu tổ chức, Trường Đại học Y Dược - Đại học Quốc gia Hà Nội có 05 khoa trực thuộc (Khoa Y, Khoa Dược, Khoa Răng Hàm Mặt, Khoa Y tế công cộng, Khoa Y Dược học cơ sở); 04 đơn vị trực thuộc gồm: 02 Trung tâm (Trung tâm Đào tạo theo nhu cầu xã hội, Trung tâm Y khoa Đại học); Viện Nghiên cứu và Đào tạo quốc tế và Bệnh viện Đại học Y Dược."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -56,8 +65,17 @@ university:truong-dai-hoc-y-duoc-dai-hoc-quoc-gia-ha-noi a dbo:University,
     vnedu:shortName "VNU-UMP" ;
     vnedu:website <https://ump.vnu.edu.vn/> ;
     schema:employee person:le-ngoc-thanh ;
+    schema:foundingDate "2010-05-20"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/vi/b/ba/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c.png> ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
-    schema:parentOrganization university:dai-hoc-quoc-gia-ha-noi .
+    schema:parentOrganization university:dai-hoc-quoc-gia-ha-noi ;
+    schema:telephone "024 3745 0188" .
+
+<https://upload.wikimedia.org/wikipedia/vi/b/ba/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c.png> a schema:ImageObject ;
+    schema:creditText "Umpvnu" ;
+    schema:license "CC-BY-SA-4.0" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/b/ba/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c.png/330px-%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c.png> .
 

@@ -17,102 +17,132 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-phu-yen",
-  "@type": [
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.pyu.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ph%C3%BA_Y%C3%AAn"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "wd:Q10829111"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/3/37/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_ph%C3%BA_y%C3%AAn_ph%C3%ADa_tr%C6%B0%E1%BB%9Bc_cs_c%C5%A9.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Thổ địa phú yên",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:%C4%90%E1%BA%A1i_h%E1%BB%8Dc_ph%C3%BA_y%C3%AAn_ph%C3%ADa_tr%C6%B0%E1%BB%9Bc_cs_c%C5%A9.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_ph%C3%BA_y%C3%AAn_ph%C3%ADa_tr%C6%B0%E1%BB%9Bc_cs_c%C5%A9.jpg/330px-%C4%90%E1%BA%A1i_h%E1%BB%8Dc_ph%C3%BA_y%C3%AAn_ph%C3%ADa_tr%C6%B0%E1%BB%9Bc_cs_c%C5%A9.jpg"
+      }
     },
     {
-      "@id": "https://ror.org/0589qa052"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-phu-yen",
+      "@type": [
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Phú Yên (tiếng Anh: Phu Yen University) là một trường đại học địa phương, đào tạo đa ngành của tỉnh Đắk Lắk. Trường Đại học Phú Yên trực thuộc UBND tỉnh Đắk Lắk và chịu sự quản lý nhà nước về đào tạo của Bộ Giáo dục và Đào tạo. Trường có địa chỉ tại: số 01 Nguyễn Văn Huyên, phường Tuy Hòa, tỉnh Đắk Lắk."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.pyu.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ph%C3%BA_Y%C3%AAn"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10829111"
+        },
+        {
+          "@id": "https://ror.org/0589qa052"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829111"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=74875165"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Phú Yên"
+        },
+        {
+          "@language": "en",
+          "@value": "Phu Yen University"
+        }
+      ],
+      "schema:email": "daihocphuyen@pyu.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-lang"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/3/37/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_ph%C3%BA_y%C3%AAn_ph%C3%ADa_tr%C6%B0%E1%BB%9Bc_cs_c%C5%A9.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-yen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dak-lak"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:telephone": "+84 257 3843025",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Phú Yên"
+      },
+      "vnedu:address": "01 Nguyễn Văn Huyên",
+      "vnedu:campus": "15 ha",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2007"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-lang"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Được thành lập theo Quyết định số 112/QĐ-TTg ngày 24/01/2007 của Thủ tướng Chính phủ trên cơ sở sáp nhập và nâng cấp Trường CĐSP Phú Yên và Trường Trung học Kinh tế - Kỹ thuật Phú Yên."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dak-lak"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-yen"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-lang"
+      },
+      "vnedu:shortName": "PYU",
+      "vnedu:website": {
+        "@id": "http://www.pyu.edu.vn/"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74875165"
-    },
-    {
-      "@id": "wd:Q10829111"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Phú Yên"
-    },
-    {
-      "@language": "en",
-      "@value": "Phu Yen University"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-lang"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-yen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dak-lak"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Phú Yên"
-  },
-  "vnedu:address": "01 Nguyễn Văn Huyên",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2007"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-lang"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-yen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dak-lak"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-lang"
-  },
-  "vnedu:shortName": "PYU",
-  "vnedu:website": {
-    "@id": "http://www.pyu.edu.vn/"
-  }
+  ]
 }

@@ -17,137 +17,180 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-mo-thanh-pho-ho-chi-minh",
-  "@type": [
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.ou.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%9F_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/b/b2/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%9F_TPHCM.png",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%9F_TPHCM.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/b/b2/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%9F_TPHCM.png"
+      }
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_Open_University"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-mo-thanh-pho-ho-chi-minh",
+      "@type": [
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Mở Thành phố Hồ Chí Minh (Ho Chi Minh City Open University, viết tắt là HCMCOU hoặc OU) là một trường đại học công lập đa ngành tại Việt Nam. Trường trực thuộc Bộ Giáo dục và Đào tạo. Trường hoạt động theo cơ chế tự chủ việc thu chi học phí."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.ou.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%9F_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_Open_University"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.761111"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.692222"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "dbr:Ho_Chi_Minh_City_Open_University"
+        },
+        {
+          "@id": "wd:Q10829094"
+        },
+        {
+          "@id": "https://ror.org/00tean533"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829094"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085482"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Ho Chi Minh City Open University"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Mở Thành phố Hồ Chí Minh"
+        }
+      ],
+      "schema:email": "ou@ou.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-ha-2"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/5/59/Ho_Chi_Minh_City_Open_University.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/b/b2/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%9F_TPHCM.png"
+      },
+      "schema:telephone": "028 38364748",
+      "skos:notation": "MBS",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Mở Thành phố Hồ Chí Minh"
+      },
+      "vnedu:address": "35-37 Hồ Hảo Hớn, phường Cầu Ông Lãnh, Thành phố Hồ Chí Minh",
+      "vnedu:admissionCode": "MBS",
+      "vnedu:formerName": [
+        {
+          "@language": "vi",
+          "@value": "Đại học Mở Bán Công Thành phố Hồ Chí Minh"
+        },
+        {
+          "@language": "vi",
+          "@value": "Viện Đào Tạo Mở Rộng Thành phố Hồ Chí Minh"
+        }
+      ],
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1990"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      },
+      "vnedu:hasAlumnus": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-van-huong"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-ha-2"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Được thành lập vào năm 1990 và trở thành trường đại học công lập từ năm 2006. Đến nay, Trường Đại học Mở Thành phố Hồ Chí Minh luôn là lá cờ đầu trong lĩnh vực đào tạo từ xa khu vực phía Nam và là một trong những trường đại học tiên phong tại Việt Nam triển khai phương thức đào tạo trực tuyến.\n\nGần 3 thập kỷ qua, Nhà trường không ngừng cải cách và nâng cao chất lượng đào tạo bằng việc chủ động mở rộng mối quan hệ hợp tác với nhiều đối tác chất lượng trên thế giới. Trường Đại học Mở Thành phố Hồ Chí Minh hợp tác với nhiều Trường và tổ chức giáo dục danh tiếng như:\n\n- Hội đồng Quốc tế về Đào tạo theo phương thức Mở và hình thức từ xa (ICDE)\n\n- Hiệp hội các Trường Đại học Mở Châu Á (AAOU)\n\n- Trung tâm đào tạo Mở khu vực trực thuộc Hội đồng Bộ trưởng Bộ Giáo dục các quốc gia Đông Nam Á (SEAMEO SEAMOLEC)\n\n- Trường HAMK University of Applied Science (Phần Lan)\n\n- Hệ thống Đại học ASEAN (The ASEAN University Network) (AUN)"
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Cơ hội học tập cho mọi người"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-ha-2"
+      },
+      "vnedu:shortName": [
+        "HCMCOU",
+        "OU"
+      ],
+      "vnedu:website": {
+        "@id": "http://www.ou.edu.vn/"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/5/59/Ho_Chi_Minh_City_Open_University.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Vano111ru",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Ho_Chi_Minh_City_Open_University.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Ho_Chi_Minh_City_Open_University.jpg/330px-Ho_Chi_Minh_City_Open_University.jpg"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.761111"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.692222"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "https://ror.org/00tean533"
-    },
-    {
-      "@id": "wd:Q10829094"
-    },
-    {
-      "@id": "dbr:Ho_Chi_Minh_City_Open_University"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75085482"
-    },
-    {
-      "@id": "wd:Q10829094"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Mở Thành phố Hồ Chí Minh"
-    },
-    {
-      "@language": "en",
-      "@value": "Ho Chi Minh City Open University"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-ha-2"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:notation": "MBS",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Mở Thành phố Hồ Chí Minh"
-  },
-  "vnedu:address": "35-37 Hồ Hảo Hớn, phường Cầu Ông Lãnh, Thành phố Hồ Chí Minh",
-  "vnedu:admissionCode": "MBS",
-  "vnedu:formerName": [
-    {
-      "@language": "vi",
-      "@value": "Đại học Mở Bán Công Thành phố Hồ Chí Minh"
-    },
-    {
-      "@language": "vi",
-      "@value": "Viện Đào Tạo Mở Rộng Thành phố Hồ Chí Minh"
-    }
-  ],
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1990"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
-  },
-  "vnedu:hasAlumnus": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-van-huong"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-ha-2"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Cơ hội học tập cho mọi người"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-ha-2"
-  },
-  "vnedu:shortName": [
-    "OU",
-    "HCMCOU"
-  ],
-  "vnedu:website": {
-    "@id": "http://www.ou.edu.vn/"
-  }
+  ]
 }

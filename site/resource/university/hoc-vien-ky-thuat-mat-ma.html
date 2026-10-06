@@ -30,111 +30,143 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ky-thuat-mat-ma",
-  "@type": [
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "vnedu:MilitaryInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "vnedu:Academy",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://actvn.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_K%E1%BB%B9_thu%E1%BA%ADt_M%E1%BA%ADt_m%C3%A3_%28Vi%E1%BB%87t_Nam%29"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.022816"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.801944"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "https://ror.org/05nfbnp91"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/7/77/KMA_logo.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Học viện Kĩ thuật Mật mã",
+      "schema:license": "CC BY 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:KMA_logo.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/KMA_logo.png/330px-KMA_logo.png"
+      }
     },
     {
-      "@id": "wd:Q10771890"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ky-thuat-mat-ma",
+      "@type": [
+        "vnedu:Academy",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:MilitaryInstitution"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Kỹ thuật Mật mã (KMA) (tiếng Anh là: Vietnam Academy of Cryptography Techniques) là một trường đại học công lập trực thuộc Ban Cơ yếu Chính phủ của Bộ Quốc phòng, được thành lập ngày 17 tháng 2 năm 1995 có chức năng đào tạo cán bộ có trình độ đại học, sau đại học và nghiên cứu khoa học kỹ thuật mật mã của ngành Cơ yếu Việt Nam. Học viện cũng được chính phủ Việt Nam lựa chọn là một trong tám cơ sở trọng điểm đào tạo nhân lực an toàn thông tin Việt Nam theo Đề án đào tạo và phát triển nguồn nhân lực an toàn, an ninh thông tin đến năm 2025."
+      },
+      "foaf:homepage": {
+        "@id": "http://actvn.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_K%E1%BB%B9_thu%E1%BA%ADt_M%E1%BA%ADt_m%C3%A3_%28Vi%E1%BB%87t_Nam%29"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.022816"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.801944"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10771890"
+        },
+        {
+          "@id": "https://ror.org/05nfbnp91"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75584030"
+        },
+        {
+          "@id": "wd:Q10771890"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Học viện Kỹ thuật Mật mã"
+        },
+        {
+          "@language": "en",
+          "@value": "Academy of Cryptography Techniques"
+        }
+      ],
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1995-02-17"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/7/77/KMA_logo.png"
+      },
+      "schema:telephone": "+84 2438 544 244",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Kỹ thuật Mật mã"
+      },
+      "vnedu:address": "141 đường Chiến Thắng, phường Định Công, Hà Nội, Việt Nam",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1995"
+      },
+      "vnedu:governedBy": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ban-co-yeu-chinh-phu-cua-bo-quoc-phong"
+        },
+        {
+          "@id": "vnedu:MinistryOfNationalDefence"
+        }
+      ],
+      "vnedu:hasAlumnus": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-tien-manh"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Học viện Kỹ thuật Mật mã tiền thân là Trường Cán bộ Cơ yếu Trung ương (ngày 15 tháng 4 năm 1976), Trường Đại học Kỹ thuật Mật mã (ngày 5 tháng 6 năm 1985) và Viện Nghiên cứu Khoa học Kỹ thuật Mật mã (ngày 17 tháng 2 năm 1980), được thành lập ngày ngày 17 tháng 2 năm 1995 trên cơ sở sáp nhập Trường Đại học Kỹ thuật Mật mã và Viện Nghiên cứu Khoa học Kỹ thuật Mật mã. Học viện là cơ sở duy nhất của Việt Nam có chức năng đào tạo cán bộ có trình độ đại học, sau đại học và nghiên cứu khoa học kỹ thuật mật mã của ngành Cơ yếu Việt Nam. Đây còn là nơi đào tạo và bồi dưỡng đội ngũ cán bộ cơ yếu, sĩ quan chỉ huy kỹ thuật mật mã cho quân đội Việt Nam, Lào, Campuchia và Cuba. Hiện nay Học viện đào tạo thêm đại học chính quy hệ dân sự ngành Công Nghệ Thông Tin (chuyên ngành An toàn thông tin, chuyên ngành Lập trình nhúng và di động) và ngành Điện tử viễn thông (chuyên ngành hệ thống nhúng và điều khiển tự động), Tiến sĩ ngành Mật mã và Thạc sĩ chuyên ngành An toàn thông tin."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Đoàn kết, Sáng tạo, Nghiệp vụ, An ninh"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:website": {
+        "@id": "http://actvn.edu.vn/"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75584030"
-    },
-    {
-      "@id": "wd:Q10771890"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Học viện Kỹ thuật Mật mã"
-    },
-    {
-      "@language": "en",
-      "@value": "Academy of Cryptography Techniques"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Kỹ thuật Mật mã"
-  },
-  "vnedu:address": "141 đường Chiến Thắng, phường Định Công, Hà Nội, Việt Nam",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1995"
-  },
-  "vnedu:governedBy": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ban-co-yeu-chinh-phu-cua-bo-quoc-phong"
-    },
-    {
-      "@id": "vnedu:MinistryOfNationalDefence"
-    }
-  ],
-  "vnedu:hasAlumnus": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-tien-manh"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Đoàn kết, Sáng tạo, Nghiệp vụ, An ninh"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:website": {
-    "@id": "http://actvn.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([21.022816,105.801944],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([21.022816,105.801944],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -153,7 +185,9 @@
   <a href="hoc-vien-ky-thuat-mat-ma.ttl">Turtle</a> · <a href="hoc-vien-ky-thuat-mat-ma.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ky-thuat-mat-ma">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 17 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Học viện Kỹ thuật Mật mã (KMA) (tiếng Anh là: Vietnam Academy of Cryptography Techniques) là một trường đại học công lập trực thuộc Ban Cơ yếu Chính phủ của Bộ Quốc phòng, được thành lập ngày 17 tháng 2 năm 1995 có chức năng đào tạo cán bộ có trình độ đại học, sau đại học và nghiên cứu khoa học kỹ thuật mật mã của ngành Cơ yếu Việt Nam. Học viện cũng được chính phủ Việt Nam lựa chọn là một trong tám cơ sở trọng điểm đào tạo nhân lực an toàn thông tin Việt Nam theo Đề án đào tạo và phát triển nguồn nhân lực an toàn, an ninh thông tin đến năm 2025.</p><h2>Lịch sử</h2><p>Học viện Kỹ thuật Mật mã tiền thân là Trường Cán bộ Cơ yếu Trung ương (ngày 15 tháng 4 năm 1976), Trường Đại học Kỹ thuật Mật mã (ngày 5 tháng 6 năm 1985) và Viện Nghiên cứu Khoa học Kỹ thuật Mật mã (ngày 17 tháng 2 năm 1980), được thành lập ngày ngày 17 tháng 2 năm 1995 trên cơ sở sáp nhập Trường Đại học Kỹ thuật Mật mã và Viện Nghiên cứu Khoa học Kỹ thuật Mật mã. Học viện là cơ sở duy nhất của Việt Nam có chức năng đào tạo cán bộ có trình độ đại học, sau đại học và nghiên cứu khoa học kỹ thuật mật mã của ngành Cơ yếu Việt Nam. Đây còn là nơi đào tạo và bồi dưỡng đội ngũ cán bộ cơ yếu, sĩ quan chỉ huy kỹ thuật mật mã cho quân đội Việt Nam, Lào, Campuchia và Cuba. Hiện nay Học viện đào tạo thêm đại học chính quy hệ dân sự ngành Công Nghệ Thông Tin (chuyên ngành An toàn thông tin, chuyên ngành Lập trình nhúng và di động) và ngành Điện tử viễn thông (chuyên ngành hệ thống nhúng và điều khiển tự động), Tiến sĩ ngành Mật mã và Thạc sĩ chuyên ngành An toàn thông tin.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75584030">«Học viện Kỹ thuật Mật mã (Việt Nam)»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75584030), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Học viện Kỹ thuật Mật mã</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:KMA_logo.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/KMA_logo.png/330px-KMA_logo.png" alt="Biểu trưng Học viện Kỹ thuật Mật mã" loading="lazy"></a><figcaption>CC BY 4.0 · Học viện Kĩ thuật Mật mã</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>Academy of Cryptography Techniques</td></tr><tr><th>Loại hình</th><td>Học viện · Công lập</td></tr><tr><th>Thành lập</th><td>17 tháng 2 năm 1995</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ban-co-yeu-chinh-phu-cua-bo-quoc-phong">Ban Cơ yếu Chính phủ của Bộ Quốc phòng</a></td></tr><tr><th>Địa chỉ</th><td>141 đường Chiến Thắng, phường Định Công, Hà Nội, Việt Nam</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Đoàn kết, Sáng tạo, Nghiệp vụ, An ninh</i></td></tr><tr><th>Điện thoại</th><td>+84 2438 544 244</td></tr><tr><th>Website</th><td><a href="http://actvn.edu.vn/">actvn.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -180,8 +214,17 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q10771890">wd:Q10771890</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75584030">&lt;https://vi.wikipedia.org/w/index.php?oldid=75584030&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1995-02-17 <span class="lang">xsd:date</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/7/77/KMA_logo.png">&lt;https://upload.wikimedia.org/wikipedia/commons/7/77/KMA_logo.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84 2438 544 244</div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>141 đường Chiến Thắng, phường Định Công, Hà Nội, Việt Nam</div>
@@ -212,14 +255,14 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
+<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-tien-manh">Phạm Tiến Mạnh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
 <tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ban-co-yeu-chinh-phu-cua-bo-quoc-phong">Ban Cơ yếu Chính phủ của Bộ Quốc phòng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-tien-manh">Phạm Tiến Mạnh</a></div>
-</td></tr>
-<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-tien-manh">Phạm Tiến Mạnh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

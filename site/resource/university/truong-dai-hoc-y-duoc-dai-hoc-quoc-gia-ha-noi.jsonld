@@ -17,134 +17,167 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-y-duoc-dai-hoc-quoc-gia-ha-noi",
-  "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:MemberInstitution",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University"
-  ],
-  "foaf:homepage": {
-    "@id": "https://ump.vnu.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-y-duoc-dai-hoc-quoc-gia-ha-noi",
+      "@type": [
+        "vnedu:Organization",
+        "vnedu:MemberInstitution",
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Y Dược, Đại học Quốc gia Hà Nội ( – VNU-UMP) là trường đại học chuyên ngành y khoa và dược học tại Việt Nam thuộc Đại học Quốc gia Hà Nội - đại học trong nhóm trọng điểm quốc gia và đại học tinh hoa của Việt Nam. Đây là trường đại học đầu tiên của Việt Nam triển khai chương trình đồng hướng dẫn và đồng cấp bằng tiến sĩ trong khối ngành sức khỏe và là cơ sở giáo dục đại học duy nhất tại Việt Nam có Bệnh viện trực thuộc ngay từ khi thành lập. Trường Đại học Y Dược, Đại học Quốc gia Hà Nội còn là một trong ba cơ sở giáo dục đại học duy nhất tại Việt Nam được phép đào tạo trình độ tiến sĩ ở hai chuyên ngành Nhãn khoa và Răng Hàm Mặt, bên cạnh Trường Đại học Y Hà Nội và Trường Đại học Y Dược Thành phố Hồ Chí Minh. Ngoài hoạt động đào tạo, trường còn tham gia vào các hoạt động phát triển chuyên môn và chuẩn hóa đào tạo y khoa quốc gia tại Việt Nam. Một số giảng viên của trường đảm nhiệm các vị trí quan trọng trong như Chủ tịch Hội đồng Giáo sư Nhà nước ngành Y học hay Ủy viên Hội đồng Y khoa Quốc gia. Bệnh viện Đại học Y Dược - Đại học Quốc gia Hà Nội nằm trong nhóm các bệnh viện trường đại học được định hướng đầu tư phát triển nhằm cung cấp dịch vụ kỹ thuật chuyên sâu, nghiên cứu khoa học công nghệ và đào tạo nguồn nhân lực y tế chất lượng cao bên cạnh Bệnh viện Đại học Y Hà Nội, Bệnh viện Quân y 103, v.v."
+      },
+      "foaf:homepage": {
+        "@id": "https://ump.vnu.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/VNU_University_of_Medicine_and_Pharmacy"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.040301"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.781566"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/01k6wgm65"
+        },
+        {
+          "@id": "wd:Q105335883"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q105335883"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75578211"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "VNU University of Medicine and Pharmacy"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Y Dược, Đại học Quốc gia Hà Nội"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-ngoc-thanh"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "2010-05-20"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/b/ba/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c.png"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+      },
+      "schema:telephone": "024 3745 0188",
+      "skos:notation": "QHY",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Y Dược, Đại học Quốc gia Hà Nội"
+      },
+      "vnedu:academicStaff": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "260"
+      },
+      "vnedu:address": "Nhà Y1, Số 2B Phạm Văn Đồng, phường Phú Diễn",
+      "vnedu:admissionCode": "QHY",
+      "vnedu:campus": "Đại học Quốc gia Hà Nội - Quận Cầu Giấy",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2010"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-ngoc-thanh"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Ngày 20/05/2010, GS.TS. Mai Trọng Nhuận (Nguyên giám đốc Đại học Quốc gia Hà Nội) đã ký Quyết định số 1507/QĐ-TCCB thành lập khoa Y Dược - ĐHQG Hà Nội trên cơ sở kế thừa về mặt truyền thống, tinh thần của Trường Cao đẳng Y khoa thuộc Đại học Đông Dương xưa (tiền thân của Đại học Quốc gia Hà Nội).\n\nNgày 27/10/2020, trên cơ sở Khoa y dược, Thủ tướng Chính phủ đã ký Quyết định số 1666/QĐ-TTg tổ chức lại khoa y dược cũ thành Trường Đại học Y Dược thuộc Đại học Quốc gia Hà Nội.\n\nNgày 23/12/2022, thành lập Khoa Răng Hàm Mặt. Ngày 24/5/2023, thành lập Khoa Dược. Ngày 20/11/2023, thành lập Khoa Y. Ngày 24/2/2025, thành lập Khoa Y tế công cộng và Khoa Y Dược học cơ sở.\n\nHiện nay về cơ cấu tổ chức, Trường Đại học Y Dược - Đại học Quốc gia Hà Nội có 05 khoa trực thuộc (Khoa Y, Khoa Dược, Khoa Răng Hàm Mặt, Khoa Y tế công cộng, Khoa Y Dược học cơ sở); 04 đơn vị trực thuộc gồm: 02 Trung tâm (Trung tâm Đào tạo theo nhu cầu xã hội, Trung tâm Y khoa Đại học); Viện Nghiên cứu và Đào tạo quốc tế và Bệnh viện Đại học Y Dược."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "vnedu:memberOf": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
+      },
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Cùng kiến tạo cơ hội và chia sẻ thành quả. (Creating opportunities and share results together.)"
+      },
+      "vnedu:numberOfStudents": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "3204"
+      },
+      "vnedu:numberOfUndergraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "2830"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-ngoc-thanh"
+      },
+      "vnedu:shortName": "VNU-UMP",
+      "vnedu:website": {
+        "@id": "https://ump.vnu.edu.vn/"
+      }
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/VNU_University_of_Medicine_and_Pharmacy"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/b/ba/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Umpvnu",
+      "schema:license": "CC-BY-SA-4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/b/ba/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c.png/330px-%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c.png"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.040301"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.781566"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "https://ror.org/01k6wgm65"
-    },
-    {
-      "@id": "wd:Q105335883"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q105335883"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75578211"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Y Dược, Đại học Quốc gia Hà Nội"
-    },
-    {
-      "@language": "en",
-      "@value": "VNU University of Medicine and Pharmacy"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-ngoc-thanh"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
-  },
-  "skos:notation": "QHY",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Y Dược, Đại học Quốc gia Hà Nội"
-  },
-  "vnedu:academicStaff": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "260"
-  },
-  "vnedu:address": "Nhà Y1, Số 2B Phạm Văn Đồng, phường Phú Diễn",
-  "vnedu:admissionCode": "QHY",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2010"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-ngoc-thanh"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:memberOf": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-quoc-gia-ha-noi"
-  },
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Cùng kiến tạo cơ hội và chia sẻ thành quả. (Creating opportunities and share results together.)"
-  },
-  "vnedu:numberOfStudents": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "3204"
-  },
-  "vnedu:numberOfUndergraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "2830"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-ngoc-thanh"
-  },
-  "vnedu:shortName": "VNU-UMP",
-  "vnedu:website": {
-    "@id": "https://ump.vnu.edu.vn/"
-  }
+  ]
 }

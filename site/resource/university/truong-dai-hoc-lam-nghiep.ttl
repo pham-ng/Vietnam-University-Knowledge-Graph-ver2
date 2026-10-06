@@ -28,6 +28,7 @@ university:truong-dai-hoc-lam-nghiep a dbo:University,
         schema:Organization ;
     rdfs:label "Vietnam National University of Forestry"@en,
         "Trường Đại học Lâm nghiệp"@vi ;
+    dbo:abstract "Trường Đại học Lâm nghiệp Việt Nam (tên giao dịch quốc tế: Vietnam National University of Forestry, viết tắt VNUF) là một trường đào tạo đa ngành bậc đại học và sau đại học ở Việt Nam. Trường trực thuộc Bộ Nông nghiệp và Môi trường."@vi ;
     owl:sameAs wd:Q10829090,
         <https://ror.org/02jfkxh18> ;
     geo:lat 20.861247 ;
@@ -39,6 +40,7 @@ university:truong-dai-hoc-lam-nghiep a dbo:University,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Vietnam_National_University_of_Forestry>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_L%C3%A2m_nghi%E1%BB%87p> ;
     vnedu:address "xã Xuân Mai" ;
+    vnedu:councilChair person:cao-quoc-an ;
     vnedu:formerName "Học viện Nông Lâm"@vi,
         "Đại học Lâm nghiệp Việt Nam"@vi,
         "Đại học Nông Lâm"@vi ;
@@ -51,7 +53,9 @@ university:truong-dai-hoc-lam-nghiep a dbo:University,
         person:nghia-van-ha,
         person:thich-minh-tue,
         person:vu-manh-tuong ;
-    vnedu:hasLeader person:pham-van-dien ;
+    vnedu:hasLeader person:cao-quoc-an,
+        person:pham-van-dien ;
+    vnedu:history "Trường được thành lập ngày 12 tháng 10 năm 1956 với tên gọi Đại học Nông Lâm rồi Học viện Nông Lâm (1958), trường gồm 2 khoa chủ chốt là Nông học và Lâm học. Theo Quyết định 127/CP ngày 19 tháng 8 năm 1964 của Thủ tướng Chính phủ, trường tách thành hai trường độc lập là: Đại học Nông nghiệp (nay là Học viện Nông nghiệp) và Đại học Lâm nghiệp. Trường Đại học Lâm nghiệp được thiết lập trên cơ sở khoa Lâm học và tổ cơ khí lâm nghiệp. Sau khi thành lập, trường đào tạo gồm ba ngành chính: Lâm nghiệp, Kinh tế và Công nghiệp rừng. Thời kỳ đầu do thành lập khi đất nước còn chiến tranh nên cơ sở ban đầu của trường đặt tại Đông Triều, Quảng Ninh. Từ tháng 5 năm 1985 trường chuyển về cơ sở tại Xuân Mai, Hà Nội, xây dựng và phát triển cho tới nay. Vào năm 1995 thực hiện chủ trương mở rộng đào tạo của Bộ Lâm nghiệp, trường mở rộng thêm quy mô đào tạo và các ngành nghề mới, với các khoa: Lâm học (tiền thân là khoa Lâm nghiệp), Quản lý tài nguyên rừng và môi trường (tiền thân là khoa Lâm nghiệp), Chế biến lâm sản (tiền thân là khoa Công nghiệp rừng), Công nghiệp phát triển nông thôn (tiền thân là khoa Công nghiệp rừng), Quản trị kinh doanh. Bộ Lâm nghiệp cũng quyết định và gọi tên trường là Đại học Lâm nghiệp Việt Nam. Năm 2008 trường thành lập cơ sở 2 tại thị trấn Trảng Bom, huyện Trảng Bom, tỉnh Đồng Nai, trên cơ sở sáp nhập trường Trung cấp dạy nghề Lâm nghiệp Đồng Nai. Ngày 1 tháng 12 năm 2015, ông Trần Văn Chứ, Hiệu trưởng nhà trường ký Thông báo số 2181/ĐHLN-CT&CTSV về việc sử dụng tên gọi chính trong tiếng Việt của trường là Đại học Lâm nghiệp. Ngày 5 tháng 10 năm 2016, Bộ Giáo dục và Đào tạo ra Quyết định số 4213/QĐ-BGDĐT về việc thành lập Phân hiệu Trường Đại học Lâm nghiệp tại tỉnh Đồng Nai. Năm 2018, Trường THPT Lâm nghiệp được thành lập nằm trong khuôn viên trường Đại học Lâm nghiệp. Ngày 20 tháng 7 năm 2020, Bộ Giáo dục và Đào tạo ra Quyết định số 2020/QĐ-BGDĐT về việc thành lập Phân hiệu Trường Đại học Lâm nghiệp tại tỉnh Gia Lai. Ngày 17 tháng 5 năm 2021, UBND tỉnh Đồng Nai ra Quyết định số 1628/QĐ-UBND về việc thành lập Trường Trung học phổ thông Lâm nghiệp Đồng Nai, trụ sở nằm trong khuôn viên Phân hiệu Trường Đại học Lâm nghiệp tại Đồng Nai."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -60,8 +64,16 @@ university:truong-dai-hoc-lam-nghiep a dbo:University,
     vnedu:rector person:pham-van-dien ;
     vnedu:shortName "VNUF" ;
     vnedu:website <http://en.vnuf.edu.vn/home> ;
-    schema:employee person:pham-van-dien ;
+    schema:employee person:cao-quoc-an,
+        person:pham-van-dien ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/0/0f/Logo_vnuf.jpg> ;
+    schema:telephone "024.33.840.233" .
+
+<https://upload.wikimedia.org/wikipedia/vi/0/0f/Logo_vnuf.jpg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_vnuf.jpg> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/vi/0/0f/Logo_vnuf.jpg> .
 

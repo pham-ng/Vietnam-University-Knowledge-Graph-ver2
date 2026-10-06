@@ -20,15 +20,15 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ninh-thuan",
   "@type": [
     "vnedu:AdministrativeUnit",
-    "vnedu:FormerProvince",
-    "schema:AdministrativeArea"
+    "schema:AdministrativeArea",
+    "vnedu:FormerProvince"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Ninh_Thu%E1%BA%ADn"
+      "@id": "https://en.wikipedia.org/wiki/Ninh_Thu%E1%BA%ADn_province"
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Ninh_Thu%E1%BA%ADn_province"
+      "@id": "https://vi.wikipedia.org/wiki/Ninh_Thu%E1%BA%ADn"
     }
   ],
   "geo:lat": {
@@ -44,10 +44,10 @@
       "@id": "https://sws.geonames.org/1559971/"
     },
     {
-      "@id": "wd:Q36903"
+      "@id": "dbr:Ninh_Thuận_Province"
     },
     {
-      "@id": "dbr:Ninh_Thuận_Province"
+      "@id": "wd:Q36903"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -55,11 +55,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Ninh Thuận"
     },
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Ninh Thuận"
     }
   ],

@@ -30,130 +30,162 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-tai-chinh-thanh-pho-ho-chi-minh",
-  "@type": [
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:PrivateInstitution",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "https://www.uef.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Economics_and_Finance"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-tai-chinh-thanh-pho-ho-chi-minh",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PrivateInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Kinh tế - Tài chính thành phố Hồ Chí Minh (, viết tắt: UEF) là một đại học tư thục tại Việt Nam, được thành lập theo quyết định số 1272/QĐ-TTg ngày 24 tháng 9 năm 2007 của Thủ tướng Chính phủ Nguyễn Tấn Dũng. Vào năm 2014, sau 8 năm hoạt động gắng gượng, các nhà đầu tư của trường Đại học Kinh tế - Tài chính thành phố Hồ Chí Minh đã bán lại trường cho chủ thương hiệu Đại học HUTECH Kiều Xuân Hùng với giá gần 200 tỷ đồng."
+      },
+      "foaf:homepage": {
+        "@id": "https://www.uef.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_T%C3%A0i_ch%C3%ADnh_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Economics_and_Finance"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.798702"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.723092"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "dbr:Ho_Chi_Minh_City_University_of_Economics_and_Finance"
+        },
+        {
+          "@id": "wd:Q10829074"
+        },
+        {
+          "@id": "https://ror.org/00rpn1945"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=74954564"
+        },
+        {
+          "@id": "wd:Q10829074"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Kinh tế – Tài chính Thành phố Hồ Chí Minh"
+        },
+        {
+          "@language": "en",
+          "@value": "Ho Chi Minh City University of"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-giang"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "2007-09-24"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/9/97/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_T%C3%A0i_ch%C3%ADnh_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg"
+      },
+      "schema:telephone": "+84) 028 5422 5555",
+      "skos:notation": "UEF",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Kinh tế – Tài chính Thành phố Hồ Chí Minh"
+      },
+      "vnedu:address": "Số 276 Điện Biên Phủ, phường Gia Định, Thành phố Hồ Chí Minh",
+      "vnedu:admissionCode": "UEF",
+      "vnedu:campus": "10.000m2 tại Trụ sở 276 Điện Biên Phủ",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "2007"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-dang"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-ngoc-chau"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-canh"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-giang"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Kinh tế – Tài chính Thành phố Hồ Chí Minh được thành lập vào ngày 24 tháng 9 năm 2007 theo quyết định số 1272/QĐ-TTg của Thủ tướng Chính phủ Nguyễn Tấn Dũng. Trường được hoạt động với phương châm \"Chất lượng - Hiệu quả - Hội nhập\".\n\nNăm 2014, sau 8 năm gắng gượng trường đã được bán cho Công ty cổ phần Đầu tư phát triển giáo dục HUTECH, Kiều Xuân Hùng, với giá gần 200 tỷ đồng. Bấy giờ, giá học phí của trường lên tới gần 80 triệu đồng / một năm nên trước khi thay tên đổi chủ, việc tuyển sinh của trường lúc nào cũng chưa đạt múc 50% chỉ tiêu."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Chất lượng - Hiệu quả - Hội nhập"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PrivateOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-giang"
+      },
+      "vnedu:website": {
+        "@id": "https://www.uef.edu.vn/"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_T%C3%A0i_ch%C3%ADnh_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/9/97/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_T%C3%A0i_ch%C3%ADnh_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_T%C3%A0i_ch%C3%ADnh_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/9/97/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_T%C3%A0i_ch%C3%ADnh_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_T%C3%A0i_ch%C3%ADnh_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg.png"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.798702"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.723092"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "https://ror.org/00rpn1945"
-    },
-    {
-      "@id": "wd:Q10829074"
-    },
-    {
-      "@id": "dbr:Ho_Chi_Minh_City_University_of_Economics_and_Finance"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=74954564"
-    },
-    {
-      "@id": "wd:Q10829074"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Kinh tế – Tài chính Thành phố Hồ Chí Minh"
-    },
-    {
-      "@language": "en",
-      "@value": "Ho Chi Minh City University of"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-giang"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "skos:notation": "UEF",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Kinh tế – Tài chính Thành phố Hồ Chí Minh"
-  },
-  "vnedu:address": "Số 276 Điện Biên Phủ, phường Gia Định, Thành phố Hồ Chí Minh",
-  "vnedu:admissionCode": "UEF",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "2007"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-canh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-dang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-ngoc-chau"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-giang"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Chất lượng - Hiệu quả - Hội nhập"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PrivateOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-giang"
-  },
-  "vnedu:website": {
-    "@id": "https://www.uef.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.798702,106.723092],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.798702,106.723092],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -172,7 +204,9 @@
   <a href="truong-dai-hoc-kinh-te-tai-chinh-thanh-pho-ho-chi-minh.ttl">Turtle</a> · <a href="truong-dai-hoc-kinh-te-tai-chinh-thanh-pho-ho-chi-minh.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-kinh-te-tai-chinh-thanh-pho-ho-chi-minh">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 21 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Kinh tế - Tài chính thành phố Hồ Chí Minh (, viết tắt: UEF) là một đại học tư thục tại Việt Nam, được thành lập theo quyết định số 1272/QĐ-TTg ngày 24 tháng 9 năm 2007 của Thủ tướng Chính phủ Nguyễn Tấn Dũng. Vào năm 2014, sau 8 năm hoạt động gắng gượng, các nhà đầu tư của trường Đại học Kinh tế - Tài chính thành phố Hồ Chí Minh đã bán lại trường cho chủ thương hiệu Đại học HUTECH Kiều Xuân Hùng với giá gần 200 tỷ đồng.</p><h2>Lịch sử</h2><p>Trường Đại học Kinh tế – Tài chính Thành phố Hồ Chí Minh được thành lập vào ngày 24 tháng 9 năm 2007 theo quyết định số 1272/QĐ-TTg của Thủ tướng Chính phủ Nguyễn Tấn Dũng. Trường được hoạt động với phương châm &quot;Chất lượng - Hiệu quả - Hội nhập&quot;.</p><p>Năm 2014, sau 8 năm gắng gượng trường đã được bán cho Công ty cổ phần Đầu tư phát triển giáo dục HUTECH, Kiều Xuân Hùng, với giá gần 200 tỷ đồng. Bấy giờ, giá học phí của trường lên tới gần 80 triệu đồng / một năm nên trước khi thay tên đổi chủ, việc tuyển sinh của trường lúc nào cũng chưa đạt múc 50% chỉ tiêu.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=74954564">«Trường Đại học Kinh tế – Tài chính Thành phố Hồ Chí Minh»</a> trên Wikipedia tiếng Việt (bản sửa đổi 74954564), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Kinh tế – Tài chính Thành phố Hồ Chí Minh</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_T%C3%A0i_ch%C3%ADnh_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/9/97/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_T%C3%A0i_ch%C3%ADnh_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_T%C3%A0i_ch%C3%ADnh_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg.png" alt="Biểu trưng Trường Đại học Kinh tế – Tài chính Thành phố Hồ Chí Minh" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>Ho Chi Minh City University of</td></tr><tr><th>Mã trường</th><td>UEF</td></tr><tr><th>Loại hình</th><td>Trường đại học · Tư thục</td></tr><tr><th>Thành lập</th><td>24 tháng 9 năm 2007</td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-giang">Nguyễn Thanh Giang</a></td></tr><tr><th>Địa chỉ</th><td>Số 276 Điện Biên Phủ, phường Gia Định, Thành phố Hồ Chí Minh</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></td></tr><tr><th>Khuôn viên</th><td>10.000m2 tại Trụ sở 276 Điện Biên Phủ</td></tr><tr><th>Khẩu hiệu</th><td><i>Chất lượng - Hiệu quả - Hội nhập</i></td></tr><tr><th>Điện thoại</th><td>+84) 028 5422 5555</td></tr><tr><th>Website</th><td><a href="https://www.uef.edu.vn/">uef.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -202,8 +236,17 @@
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-giang">Nguyễn Thanh Giang</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>2007-09-24 <span class="lang">xsd:date</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/9/97/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_T%C3%A0i_ch%C3%ADnh_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg">&lt;https://upload.wikimedia.org/wikipedia/vi/9/97/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_%E2%80%93_T%C3%A0i_ch%C3%ADnh_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84) 028 5422 5555</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>UEF <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -213,6 +256,9 @@
 </td></tr>
 <tr><td class="p">mã trường (tuyển sinh)<small>vnedu:admissionCode</small></td><td>
 <div>UEF</div>
+</td></tr>
+<tr><td class="p">khuôn viên<small>vnedu:campus</small></td><td>
+<div>10.000m2 tại Trụ sở 276 Điện Biên Phủ</div>
 </td></tr>
 <tr><td class="p">năm thành lập<small>vnedu:foundingYear</small></td><td>
 <div>2007 <span class="lang">xsd:gYear</span></div>
@@ -243,14 +289,14 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-ngoc-chau">Nguyễn Thị Ngọc Châu</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-canh">Nguyễn Văn Cảnh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-dang">Nguyễn Văn Đáng</a></div>
+<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-giang">Nguyễn Thanh Giang</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-ngoc-chau">Nguyễn Thị Ngọc Châu</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-canh">Nguyễn Văn Cảnh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-dang">Nguyễn Văn Đáng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
-<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-giang">Nguyễn Thanh Giang</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thi-ngoc-chau">Nguyễn Thị Ngọc Châu</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-canh">Nguyễn Văn Cảnh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-dang">Nguyễn Văn Đáng</a></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

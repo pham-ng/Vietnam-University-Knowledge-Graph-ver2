@@ -32,17 +32,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ngan-hang-thanh-pho-ho-chi-minh",
   "@type": [
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
     "vnedu:UniversitySchool",
-    "foaf:Organization"
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "vnedu:HigherEducationInstitution",
+    "schema:Organization",
+    "foaf:Organization",
+    "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Ngân hàng Thành phố Hồ Chí Minh (Ho Chi Minh University of Banking) là trường đại học công lập trực thuộc Ngân hàng Nhà nước Việt Nam. Trường được thành lập năm 1957 trên cơ sở trường Cao cấp Nghiệp vụ Ngân hàng cơ sở 2. Kể từ 2004, trường bắt đầu đào tạo sau đại học. Trường trực thuộc Ngân hàng Nhà nước Việt Nam."
+  },
   "foaf:homepage": {
     "@id": "https://hub.edu.vn"
   },
@@ -64,13 +68,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q4856328"
-    },
-    {
       "@id": "dbr:Banking_University_of_Ho_Chi_Minh_City"
     },
     {
       "@id": "https://ror.org/03fsckq75"
+    },
+    {
+      "@id": "wd:Q4856328"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -91,20 +95,31 @@
       "@value": "Trường Đại học Ngân hàng Thành phố Hồ Chí Minh"
     }
   ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-trung"
+  "schema:employee": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/doan-thanh-ha"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-trung"
+    }
+  ],
+  "schema:foundingDate": {
+    "@type": "xsd:date",
+    "@value": "1976-12-16"
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     }
   ],
+  "schema:telephone": "028 3829 1901",
+  "skos:altLabel": "Ho Chi Minh University of Banking-HUB",
   "skos:notation": "NHS",
   "skos:prefLabel": {
     "@language": "vi",
@@ -112,30 +127,42 @@
   },
   "vnedu:address": "36 Tôn Thất Đạm, Phường Sài Gòn",
   "vnedu:admissionCode": "NHS",
+  "vnedu:councilChair": {
+    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/doan-thanh-ha"
+  },
   "vnedu:foundingYear": {
     "@type": "xsd:gYear",
     "@value": "1976"
   },
   "vnedu:governedBy": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ngan-hang-nha-nuoc-viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ngan-hang-nha-nuoc-viet-nam"
     }
   ],
   "vnedu:hasAlumnus": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/jaysonlei"
   },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-trung"
+  "vnedu:hasLeader": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/doan-thanh-ha"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-trung"
+    }
+  ],
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Trường Đại học Ngân hàng Thành phố Hồ Chí Minh được nâng cấp từ Trường Cao cấp Nghiệp vụ Ngân hàng cơ sở II, thành lập ngày 16 tháng 12 năm 1976 tại Thành phố Hồ Chí Minh. Cơ sở II của Trường Cao cấp Nghiệp vụ Ngân hàng, trong giai đoạn này, là địa chỉ đào tạo nguồn nhân lực cho hệ thống ngân hàng và các định chế tài chính khác.\n\nNgày 16 tháng 12 năm 1976, Thống đốc Ngân hàng Nhà nước Việt Nam ký Quyết định số 1229/NH-TCCB về việc thành lập cơ sở II Trường Cao cấp nghiệp vụ Ngân hàng đặt tại Thành phố Hồ Chí Minh để đào tạo hệ đại học chuyên tu và đại học tại chức.\n\nNgày 03 tháng 05 năm 1980, Thủ tướng Chính phủ ra Quyết định số 149/TTg cho phép mở lớp đại học hệ chính quy tập trung về ngân hàng tại Thành phố Hồ Chí Minh.\n\nNgày 29 tháng 11 năm 1986, Thống đốc Ngân hàng Nhà nước Việt Nam ký quyết định 169/NH-QĐ quy định cơ cấu tổ chức, bộ máy của Trường Cao cấp Nghiệp vụ Ngân hàng Thành phố Hồ Chí Minh.\n\nNgày 23 tháng 3 năm 1993, Thủ tướng Chính phủ ký quyết định số 112/TTg thành lập Trung tâm Đào tạo và Nghiên cứu Khoa học Ngân hàng trực thuộc Ngân hàng Nhà nước Việt Nam, trong đó có Trung tâm Đào tạo và Nghiên cứu khoa học Ngân hàng, Chi nhánh Thành phố Hồ Chí Minh trên cơ sở nhập hai trường: Trường Cao cấp Nghiệp vụ Ngân hàng Thành phố Hồ Chí Minh và Trường Trung học Ngân hàng III Trung ương (trực thuộc Ngân hàng Nhà nước Việt Nam, đóng tại Thành phố Hồ Chí Minh).\n\nNgày 09 tháng 02 năm 1998, Thủ tướng Chính phủ ký quyết định số 30/1998/QĐ-TTg thành lập Học viện Ngân hàng trực thuộc Ngân hàng Nhà nước Việt Nam trên cơ sở tổ chức lại Trung tâm Đào tạo và Nghiên cứu Khoa học Ngân hàng. Ngoài Học viện Ngân hàng tại Hà Nội còn có Học viện Ngân hàng Phân viện Thành phố Hồ Chí Minh đóng tại Thành phố Hồ Chí Minh.\n\nNgày 20 tháng 08 năm 2003, một mốc lớn trong việc khai sinh trường Đại học Ngân hàng Thành phố Hồ Chí Minh khi Thủ tướng Chính phủ ký quyết định số 174/2003/QĐ-TTg về việc thành lập trường Đại học Ngân hàng Thành phố Hồ Chí Minh trên cơ sở Phân viện Thành phố Hồ Chí Minh thuộc Học viện Ngân hàng. Từ đây, trường chính thức tách khỏi và không còn liên quan gì đến Học viện Ngân hàng.\n\nNgày 19 tháng 01 năm 2004 Thủ tướng Chính phủ ký quyết định số 12/2004/QĐ-TTg giao nhiệm vụ đào tạo thạc sĩ và tiến sĩ cho trường Đại học Ngân hàng thành phố Hồ Chí Minh."
   },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
@@ -172,8 +199,10 @@
 <p class="uri">https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ngan-hang-thanh-pho-ho-chi-minh<br>
   <a href="truong-dai-hoc-ngan-hang-thanh-pho-ho-chi-minh.ttl">Turtle</a> · <a href="truong-dai-hoc-ngan-hang-thanh-pho-ho-chi-minh.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ngan-hang-thanh-pho-ho-chi-minh">Truy vấn SPARQL</a>
-   · <span class="pill inf">suy luận</span> = 19 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+   · <span class="pill inf">suy luận</span> = 21 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Ngân hàng Thành phố Hồ Chí Minh (Ho Chi Minh University of Banking) là trường đại học công lập trực thuộc Ngân hàng Nhà nước Việt Nam. Trường được thành lập năm 1957 trên cơ sở trường Cao cấp Nghiệp vụ Ngân hàng cơ sở 2. Kể từ 2004, trường bắt đầu đào tạo sau đại học. Trường trực thuộc Ngân hàng Nhà nước Việt Nam.</p><h2>Lịch sử</h2><p>Trường Đại học Ngân hàng Thành phố Hồ Chí Minh được nâng cấp từ Trường Cao cấp Nghiệp vụ Ngân hàng cơ sở II, thành lập ngày 16 tháng 12 năm 1976 tại Thành phố Hồ Chí Minh. Cơ sở II của Trường Cao cấp Nghiệp vụ Ngân hàng, trong giai đoạn này, là địa chỉ đào tạo nguồn nhân lực cho hệ thống ngân hàng và các định chế tài chính khác.</p><p>Ngày 16 tháng 12 năm 1976, Thống đốc Ngân hàng Nhà nước Việt Nam ký Quyết định số 1229/NH-TCCB về việc thành lập cơ sở II Trường Cao cấp nghiệp vụ Ngân hàng đặt tại Thành phố Hồ Chí Minh để đào tạo hệ đại học chuyên tu và đại học tại chức.</p><details><summary>Đọc tiếp (6 đoạn)</summary><p>Ngày 03 tháng 05 năm 1980, Thủ tướng Chính phủ ra Quyết định số 149/TTg cho phép mở lớp đại học hệ chính quy tập trung về ngân hàng tại Thành phố Hồ Chí Minh.</p><p>Ngày 29 tháng 11 năm 1986, Thống đốc Ngân hàng Nhà nước Việt Nam ký quyết định 169/NH-QĐ quy định cơ cấu tổ chức, bộ máy của Trường Cao cấp Nghiệp vụ Ngân hàng Thành phố Hồ Chí Minh.</p><p>Ngày 23 tháng 3 năm 1993, Thủ tướng Chính phủ ký quyết định số 112/TTg thành lập Trung tâm Đào tạo và Nghiên cứu Khoa học Ngân hàng trực thuộc Ngân hàng Nhà nước Việt Nam, trong đó có Trung tâm Đào tạo và Nghiên cứu khoa học Ngân hàng, Chi nhánh Thành phố Hồ Chí Minh trên cơ sở nhập hai trường: Trường Cao cấp Nghiệp vụ Ngân hàng Thành phố Hồ Chí Minh và Trường Trung học Ngân hàng III Trung ương (trực thuộc Ngân hàng Nhà nước Việt Nam, đóng tại Thành phố Hồ Chí Minh).</p><p>Ngày 09 tháng 02 năm 1998, Thủ tướng Chính phủ ký quyết định số 30/1998/QĐ-TTg thành lập Học viện Ngân hàng trực thuộc Ngân hàng Nhà nước Việt Nam trên cơ sở tổ chức lại Trung tâm Đào tạo và Nghiên cứu Khoa học Ngân hàng. Ngoài Học viện Ngân hàng tại Hà Nội còn có Học viện Ngân hàng Phân viện Thành phố Hồ Chí Minh đóng tại Thành phố Hồ Chí Minh.</p><p>Ngày 20 tháng 08 năm 2003, một mốc lớn trong việc khai sinh trường Đại học Ngân hàng Thành phố Hồ Chí Minh khi Thủ tướng Chính phủ ký quyết định số 174/2003/QĐ-TTg về việc thành lập trường Đại học Ngân hàng Thành phố Hồ Chí Minh trên cơ sở Phân viện Thành phố Hồ Chí Minh thuộc Học viện Ngân hàng. Từ đây, trường chính thức tách khỏi và không còn liên quan gì đến Học viện Ngân hàng.</p><p>Ngày 19 tháng 01 năm 2004 Thủ tướng Chính phủ ký quyết định số 12/2004/QĐ-TTg giao nhiệm vụ đào tạo thạc sĩ và tiến sĩ cho trường Đại học Ngân hàng thành phố Hồ Chí Minh.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75165742">«Trường Đại học Ngân hàng Thành phố Hồ Chí Minh»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75165742), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Ngân hàng Thành phố Hồ Chí Minh</div><table><tr><th>Tên khác</th><td>Ho Chi Minh University of Banking-HUB</td></tr><tr><th>Tên tiếng Anh</th><td>Banking University of Ho Chi Minh City</td></tr><tr><th>Viết tắt</th><td>HUB</td></tr><tr><th>Mã trường</th><td>NHS</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>16 tháng 12 năm 1976</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a><br><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ngan-hang-nha-nuoc-viet-nam">Ngân hàng Nhà nước Việt Nam</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-trung">Nguyễn Đức Trung</a></td></tr><tr><th>Chủ tịch hội đồng trường</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/doan-thanh-ha">Đoàn Thanh Hà</a></td></tr><tr><th>Địa chỉ</th><td>36 Tôn Thất Đạm, Phường Sài Gòn</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Khai phóng - Liên ngành - Trải nghiệm</i></td></tr><tr><th>Điện thoại</th><td>028 3829 1901</td></tr><tr><th>Website</th><td><a href="https://hub.edu.vn">hub.edu.vn</a></td></tr></table><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -201,10 +230,19 @@
 <div><a href="http://www.wikidata.org/entity/Q4856328">wd:Q4856328</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75165742">&lt;https://vi.wikipedia.org/w/index.php?oldid=75165742&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-trung">Nguyễn Đức Trung</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/doan-thanh-ha">Đoàn Thanh Hà</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-trung">Nguyễn Đức Trung</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1976-12-16 <span class="lang">xsd:date</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>028 3829 1901</div>
+</td></tr>
+<tr><td class="p">tên khác<small>skos:altLabel</small></td><td>
+<div>Ho Chi Minh University of Banking-HUB</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>NHS <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -214,6 +252,9 @@
 </td></tr>
 <tr><td class="p">mã trường (tuyển sinh)<small>vnedu:admissionCode</small></td><td>
 <div>NHS</div>
+</td></tr>
+<tr><td class="p">chủ tịch hội đồng trường<small>vnedu:councilChair</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/doan-thanh-ha">Đoàn Thanh Hà</a></div>
 </td></tr>
 <tr><td class="p">năm thành lập<small>vnedu:foundingYear</small></td><td>
 <div>1976 <span class="lang">xsd:gYear</span></div>
@@ -225,7 +266,7 @@
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/jaysonlei">Jaysonlei</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">có người đứng đầu<small>vnedu:hasLeader</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-trung">Nguyễn Đức Trung</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/doan-thanh-ha">Đoàn Thanh Hà</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-trung">Nguyễn Đức Trung</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">đặt tại<small>vnedu:locatedIn</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -251,16 +292,16 @@
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-trung">Nguyễn Đức Trung</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/doan-thanh-ha">Đoàn Thanh Hà</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-trung">Nguyễn Đức Trung</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/jaysonlei">Jaysonlei</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/ngan-hang-nha-nuoc-viet-nam">Ngân hàng Nhà nước Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/jaysonlei">Jaysonlei</a></div>
-</td></tr>
-<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/jaysonlei">Jaysonlei</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

@@ -30,205 +30,254 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-kinh-te-thanh-pho-ho-chi-minh",
-  "@type": [
-    "schema:Organization",
-    "vnedu:University",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.ueh.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-kinh-te-thanh-pho-ho-chi-minh",
+      "@type": [
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:University",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Đại học Kinh tế Thành phố Hồ Chí Minh (tên viết tắt: UEH, ) là đại học chuyên đào tạo lĩnh vực kinh tế tại Việt Nam, có trụ sở tại Thành phố Hồ Chí Minh. Đơn vị được thành lập năm 1976 với tên gọi Trường Đại học Kinh tế trực thuộc Bộ Đại học và Trung học chuyên nghiệp, UEH đã trải qua nhiều giai đoạn phát triển. Năm 2012, trường bắt đầu quá trình tự chủ. Năm 2021, trường tái cấu trúc theo hướng đại học đa ngành để đến tháng 10/2023, trường chính thức đổi tên thành Đại học Kinh tế Thành phố Hồ Chí Minh. Hiện nay trường đang hoạt động với 10 cơ sở giảng dạy chính tại Thành phố Hồ Chí Minh, một phân hiệu tại Vĩnh Long, 3 ký túc xá sinh viên và một số khuôn viên trường khác. Trụ sở chính đặt tại 59C đường Nguyễn Đình Chiểu, Phường Xuân Hòa, Thành phố Hồ Chí Minh. Đại học Kinh tế Thành phố Hồ Chí Minh được các tổ chức uy tín như QS, Eduniversal và U-Multirank xếp hạng là một trong những trường hàng đầu về kinh tế - kinh doanh trong khu vực và thế giới. Trường có môi trường học thuật năng động với nhiều hoạt động sinh viên nổi bật. Câu lạc bộ CYM Group của trường đã xác lập Kỷ lục Guinness Thế giới năm 2011. Ngoài đào tạo, UEH còn là trung tâm nghiên cứu chính sách kinh tế và quản lý cho Chính phủ và doanh nghiệp. Ngày 11 tháng 02 năm 2026, Đại học Kinh tế Thành phố Hồ Chí Minh (UEH) chính thức được trao chứng nhận Thành viên chiến lược của Trung tâm Tài chính Quốc tế Việt Nam tại Thành phố Hồ Chí Minh (VIFC-HCMC)."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.ueh.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/University_of_Economics_Ho_Chi_Minh_City"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.784"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.694"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "dbr:University_of_Economics_Ho_Chi_Minh_City"
+        },
+        {
+          "@id": "wd:Q2562140"
+        },
+        {
+          "@id": "https://ror.org/010yce376"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75610492"
+        },
+        {
+          "@id": "wd:Q2562140"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Đại học Kinh tế Thành phố Hồ Chí Minh"
+        },
+        {
+          "@language": "en",
+          "@value": "University of Economics Ho Chi Minh City"
+        }
+      ],
+      "schema:email": "info@ueh.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-quang-hung"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1976-10-27"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Campus_A_of_University_of_Economics_Ho_Chi_Minh_City%2C_Sep_2022.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/7/71/Logo_UEH_xanh.png"
+      },
+      "schema:telephone": "+84 028 38295299",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Đại học Kinh tế Thành phố Hồ Chí Minh"
+      },
+      "vnedu:academicStaff": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "767"
+      },
+      "vnedu:address": "59C Nguyễn Đình Chiểu, phường Xuân Hòa",
+      "vnedu:campus": "139.020 m2 (13,9 ha). Bao gồm các Cơ sở A, B, C, D, E, H, I, N và 5 khuôn viên khác",
+      "vnedu:director": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-quang-hung"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1976"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thi-hoang-yen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tri-khai-lam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-tue-an"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/misthy"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huy-duc-dang"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tai"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-nhu-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-phuc-canh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieuthuhai"
+        }
+      ],
+      "vnedu:hasBranch": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/phan-hieu-dai-hoc-kinh-te-thanh-pho-ho-chi-minh-tai-vinh-long"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-quang-hung"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Phiên hiệu của trường được thành lập theo Quyết định số 426/TTg ngày 27 tháng 10 năm 1976 của Thủ tướng Phạm Văn Đồng, trên cơ sở sáp nhập Trường Đại học Luật khoa (nay là Cơ sở A đường Nguyễn Đình Chiểu, Quận 3 của trường) thuộc Viện Đại học Sài Gòn và các Trường Đại học Kinh tế khác của miền Nam trước 1975, trực thuộc Bộ Đại học và Trung học chuyên nghiệp, nay là Bộ Giáo dục và Đào tạo. Ngày 23 tháng 11 năm 1976, khoá học đầu tiên của trường khai giảng.\n\nNăm 1986, Khoa Triết - Kinh tế thuộc Trường Đại học Tổng hợp Thành phố Hồ Chí Minh được tách thành Khoa Triết và Khoa Kinh tế. Trong đó, Khoa Kinh tế có chức năng đào tạo đại học, sau đại học và tổ chức nghiên cứu khoa học về lĩnh vực kinh tế và quản trị kinh doanh, đặc biệt ở chuyên ngành Kinh tế chính trị và Kinh tế học. Từ năm 1990, khoa đào tạo bậc cử nhân theo các chuyên ngành: Kinh tế học, Kinh tế đối ngoại và Quản trị kinh doanh; đào tạo bậc sau đại học chuyên ngành Kinh tế học.\n\nCơ sở II của Trường Đại học Kế toán Hà Nội tại Thành phố Hồ Chí Minh được thành lập vào tháng 10 năm 1988. Ngày 15 tháng 10 năm 1988, Hội đồng Bộ trưởng ban hành Nghị định số 155/HĐBT công nhận chính thức việc thành lập Trường Đại học Tài chính - Kế toán Thành phố Hồ Chí Minh trực thuộc Bộ Tài chính. Ngày 27 tháng 1 năm 1995, Thủ tướng Chính phủ ban hành Nghị định 16/CP về việc thành lập Đại học Quốc gia Thành phố Hồ Chí Minh, Sau đó, ngày 9 tháng 7 năm 1996, Bộ trưởng Bộ Giáo dục và Đào tạo ban hành Quyết định số 2819/GD-ĐT ngày 9 tháng 7 năm 1996 thành lập Trường Đại học Kinh tế thuộc Đại học Quốc gia Thành phố Hồ Chí Minh trên cơ sở hợp nhất 3 đơn vị gồm Trường Đại học Kinh tế Thành phố Hồ Chí Minh (cũ), Trường Đại học Tài chính – Kế toán Thành phố Hồ Chí Minh và Khoa Kinh tế thuộc Trường Đại học Tổng hợp Thành phố Hồ Chí Minh.\n\nĐến ngày 10 tháng 10 năm 2000, Thủ tướng Chính phủ ban hành Quyết định số 118/2000/QĐ-TTg, thay đổi tổ chức của Đại học Quốc gia Thành phố Hồ Chí Minh, trong đó tách Trường Đại học Kinh tế ra khỏi Đại học Quốc gia Thành phố Hồ Chí Minh trực thuộc Bộ Giáo dục và Đào tạo.\n\nThực hiện mục tiêu đào tạo, nghiên cứu và tư vấn của UEH tại Đồng bằng sông Cửu Long, ngày 4 tháng 12 năm 2019, Phân hiệu Đại học Kinh tế Thành phố Hồ Chí Minh tại tỉnh Vĩnh Long được thành lập theo Quyết định số 4650/QĐ-BGDĐT của Bộ Giáo dục và Đào tạo trên cơ sở sáp nhập Trường Cao đẳng Kinh tế - Tài chính Vĩnh Long. Phân hiệu đi vào hoạt động từ tháng 1 năm 2020."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Thỏa sức sáng tạo - Chủ động tương lai - Toàn diện giá trị"
+      },
+      "vnedu:numberOfPostgraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "10000"
+      },
+      "vnedu:numberOfUndergraduates": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "25000"
+      },
+      "vnedu:offersProgram": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340201"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7310101"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340101"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7510605"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340301"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340115"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:shortName": "UEH",
+      "vnedu:trainsMajor": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7340101"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7340301"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7340201"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7510605"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7340115"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7310101"
+        }
+      ],
+      "vnedu:website": {
+        "@id": "http://www.ueh.edu.vn/"
+      }
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/University_of_Economics_Ho_Chi_Minh_City"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/7/71/Logo_UEH_xanh.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Trường Đại học Kinh tế Thành phố Hồ Chí Minh",
+      "schema:license": "Public domain",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Logo_UEH_xanh.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Logo_UEH_xanh.png/330px-Logo_UEH_xanh.png"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Campus_A_of_University_of_Economics_Ho_Chi_Minh_City%2C_Sep_2022.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Tran Trong Nhan",
+      "schema:license": "CC BY-SA 1.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Campus_A_of_University_of_Economics_Ho_Chi_Minh_City,_Sep_2022.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Campus_A_of_University_of_Economics_Ho_Chi_Minh_City%2C_Sep_2022.jpg/330px-Campus_A_of_University_of_Economics_Ho_Chi_Minh_City%2C_Sep_2022.jpg"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.784"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.694"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "dbr:University_of_Economics_Ho_Chi_Minh_City"
-    },
-    {
-      "@id": "wd:Q2562140"
-    },
-    {
-      "@id": "https://ror.org/010yce376"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75610492"
-    },
-    {
-      "@id": "wd:Q2562140"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Đại học Kinh tế Thành phố Hồ Chí Minh"
-    },
-    {
-      "@language": "en",
-      "@value": "University of Economics Ho Chi Minh City"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-quang-hung"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Đại học Kinh tế Thành phố Hồ Chí Minh"
-  },
-  "vnedu:academicStaff": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "767"
-  },
-  "vnedu:address": "59C Nguyễn Đình Chiểu, phường Xuân Hòa",
-  "vnedu:director": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-quang-hung"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1976"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/huy-duc-dang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-nhu-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-phuc-canh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieuthuhai"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/misthy"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thi-hoang-yen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tri-khai-lam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-tue-an"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tai"
-    }
-  ],
-  "vnedu:hasBranch": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/phan-hieu-dai-hoc-kinh-te-thanh-pho-ho-chi-minh-tai-vinh-long"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-quang-hung"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Thỏa sức sáng tạo - Chủ động tương lai - Toàn diện giá trị"
-  },
-  "vnedu:numberOfPostgraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "10000"
-  },
-  "vnedu:numberOfUndergraduates": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "25000"
-  },
-  "vnedu:offersProgram": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340101"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7510605"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340301"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340115"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7310101"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340201"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:shortName": "UEH",
-  "vnedu:trainsMajor": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7340301"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7310101"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7340101"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7340115"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7510605"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/major/7340201"
-    }
-  ],
-  "vnedu:website": {
-    "@id": "http://www.ueh.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.784,106.694],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.784,106.694],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -247,7 +296,9 @@
   <a href="dai-hoc-kinh-te-thanh-pho-ho-chi-minh.ttl">Turtle</a> · <a href="dai-hoc-kinh-te-thanh-pho-ho-chi-minh.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-kinh-te-thanh-pho-ho-chi-minh">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 33 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Đại học Kinh tế Thành phố Hồ Chí Minh (tên viết tắt: UEH, ) là đại học chuyên đào tạo lĩnh vực kinh tế tại Việt Nam, có trụ sở tại Thành phố Hồ Chí Minh. Đơn vị được thành lập năm 1976 với tên gọi Trường Đại học Kinh tế trực thuộc Bộ Đại học và Trung học chuyên nghiệp, UEH đã trải qua nhiều giai đoạn phát triển. Năm 2012, trường bắt đầu quá trình tự chủ. Năm 2021, trường tái cấu trúc theo hướng đại học đa ngành để đến tháng 10/2023, trường chính thức đổi tên thành Đại học Kinh tế Thành phố Hồ Chí Minh. Hiện nay trường đang hoạt động với 10 cơ sở giảng dạy chính tại Thành phố Hồ Chí Minh, một phân hiệu tại Vĩnh Long, 3 ký túc xá sinh viên và một số khuôn viên trường khác. Trụ sở chính đặt tại 59C đường Nguyễn Đình Chiểu, Phường Xuân Hòa, Thành phố Hồ Chí Minh. Đại học Kinh tế Thành phố Hồ Chí Minh được các tổ chức uy tín như QS, Eduniversal và U-Multirank xếp hạng là một trong những trường hàng đầu về kinh tế - kinh doanh trong khu vực và thế giới. Trường có môi trường học thuật năng động với nhiều hoạt động sinh viên nổi bật. Câu lạc bộ CYM Group của trường đã xác lập Kỷ lục Guinness Thế giới năm 2011. Ngoài đào tạo, UEH còn là trung tâm nghiên cứu chính sách kinh tế và quản lý cho Chính phủ và doanh nghiệp. Ngày 11 tháng 02 năm 2026, Đại học Kinh tế Thành phố Hồ Chí Minh (UEH) chính thức được trao chứng nhận Thành viên chiến lược của Trung tâm Tài chính Quốc tế Việt Nam tại Thành phố Hồ Chí Minh (VIFC-HCMC).</p><h2>Lịch sử</h2><p>Phiên hiệu của trường được thành lập theo Quyết định số 426/TTg ngày 27 tháng 10 năm 1976 của Thủ tướng Phạm Văn Đồng, trên cơ sở sáp nhập Trường Đại học Luật khoa (nay là Cơ sở A đường Nguyễn Đình Chiểu, Quận 3 của trường) thuộc Viện Đại học Sài Gòn và các Trường Đại học Kinh tế khác của miền Nam trước 1975, trực thuộc Bộ Đại học và Trung học chuyên nghiệp, nay là Bộ Giáo dục và Đào tạo. Ngày 23 tháng 11 năm 1976, khoá học đầu tiên của trường khai giảng.</p><p>Năm 1986, Khoa Triết - Kinh tế thuộc Trường Đại học Tổng hợp Thành phố Hồ Chí Minh được tách thành Khoa Triết và Khoa Kinh tế. Trong đó, Khoa Kinh tế có chức năng đào tạo đại học, sau đại học và tổ chức nghiên cứu khoa học về lĩnh vực kinh tế và quản trị kinh doanh, đặc biệt ở chuyên ngành Kinh tế chính trị và Kinh tế học. Từ năm 1990, khoa đào tạo bậc cử nhân theo các chuyên ngành: Kinh tế học, Kinh tế đối ngoại và Quản trị kinh doanh; đào tạo bậc sau đại học chuyên ngành Kinh tế học.</p><details><summary>Đọc tiếp (3 đoạn)</summary><p>Cơ sở II của Trường Đại học Kế toán Hà Nội tại Thành phố Hồ Chí Minh được thành lập vào tháng 10 năm 1988. Ngày 15 tháng 10 năm 1988, Hội đồng Bộ trưởng ban hành Nghị định số 155/HĐBT công nhận chính thức việc thành lập Trường Đại học Tài chính - Kế toán Thành phố Hồ Chí Minh trực thuộc Bộ Tài chính. Ngày 27 tháng 1 năm 1995, Thủ tướng Chính phủ ban hành Nghị định 16/CP về việc thành lập Đại học Quốc gia Thành phố Hồ Chí Minh, Sau đó, ngày 9 tháng 7 năm 1996, Bộ trưởng Bộ Giáo dục và Đào tạo ban hành Quyết định số 2819/GD-ĐT ngày 9 tháng 7 năm 1996 thành lập Trường Đại học Kinh tế thuộc Đại học Quốc gia Thành phố Hồ Chí Minh trên cơ sở hợp nhất 3 đơn vị gồm Trường Đại học Kinh tế Thành phố Hồ Chí Minh (cũ), Trường Đại học Tài chính – Kế toán Thành phố Hồ Chí Minh và Khoa Kinh tế thuộc Trường Đại học Tổng hợp Thành phố Hồ Chí Minh.</p><p>Đến ngày 10 tháng 10 năm 2000, Thủ tướng Chính phủ ban hành Quyết định số 118/2000/QĐ-TTg, thay đổi tổ chức của Đại học Quốc gia Thành phố Hồ Chí Minh, trong đó tách Trường Đại học Kinh tế ra khỏi Đại học Quốc gia Thành phố Hồ Chí Minh trực thuộc Bộ Giáo dục và Đào tạo.</p><p>Thực hiện mục tiêu đào tạo, nghiên cứu và tư vấn của UEH tại Đồng bằng sông Cửu Long, ngày 4 tháng 12 năm 2019, Phân hiệu Đại học Kinh tế Thành phố Hồ Chí Minh tại tỉnh Vĩnh Long được thành lập theo Quyết định số 4650/QĐ-BGDĐT của Bộ Giáo dục và Đào tạo trên cơ sở sáp nhập Trường Cao đẳng Kinh tế - Tài chính Vĩnh Long. Phân hiệu đi vào hoạt động từ tháng 1 năm 2020.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75610492">«Đại học Kinh tế Thành phố Hồ Chí Minh»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75610492), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Đại học Kinh tế Thành phố Hồ Chí Minh</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:Logo_UEH_xanh.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Logo_UEH_xanh.png/330px-Logo_UEH_xanh.png" alt="Biểu trưng Đại học Kinh tế Thành phố Hồ Chí Minh" loading="lazy"></a><figcaption>Public domain · Trường Đại học Kinh tế Thành phố Hồ Chí Minh</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>University of Economics Ho Chi Minh City</td></tr><tr><th>Viết tắt</th><td>UEH</td></tr><tr><th>Loại hình</th><td>Đại học · Công lập</td></tr><tr><th>Thành lập</th><td>27 tháng 10 năm 1976</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a></td></tr><tr><th>Giám đốc</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-quang-hung">Bùi Quang Hùng</a></td></tr><tr><th>Địa chỉ</th><td>59C Nguyễn Đình Chiểu, phường Xuân Hòa</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></td></tr><tr><th>Khuôn viên</th><td>139.020 m2 (13,9 ha). Bao gồm các Cơ sở A, B, C, D, E, H, I, N và 5 khuôn viên khác</td></tr><tr><th>Giảng viên</th><td>767</td></tr><tr><th>Khẩu hiệu</th><td><i>Thỏa sức sáng tạo - Chủ động tương lai - Toàn diện giá trị</i></td></tr><tr><th>Điện thoại</th><td>+84 028 38295299</td></tr><tr><th>Email</th><td><a href="mailto:info@ueh.edu.vn">info@ueh.edu.vn</a></td></tr><tr><th>Website</th><td><a href="http://www.ueh.edu.vn/">ueh.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:Campus_A_of_University_of_Economics_Ho_Chi_Minh_City,_Sep_2022.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Campus_A_of_University_of_Economics_Ho_Chi_Minh_City%2C_Sep_2022.jpg/330px-Campus_A_of_University_of_Economics_Ho_Chi_Minh_City%2C_Sep_2022.jpg" alt="Ảnh Đại học Kinh tế Thành phố Hồ Chí Minh" loading="lazy"></a><figcaption>CC BY-SA 1.0 · Tran Trong Nhan</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -274,17 +325,35 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q2562140">wd:Q2562140</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75610492">&lt;https://vi.wikipedia.org/w/index.php?oldid=75610492&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>info@ueh.edu.vn</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-quang-hung">Bùi Quang Hùng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1976-10-27 <span class="lang">xsd:date</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/b/b6/Campus_A_of_University_of_Economics_Ho_Chi_Minh_City%2C_Sep_2022.jpg">&lt;https://upload.wikimedia.org/wikipedia/commons/b/b6/Campus_A_of_University_of_Economics_Ho_Chi_Minh_City%2C_Sep_2022.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/7/71/Logo_UEH_xanh.png">&lt;https://upload.wikimedia.org/wikipedia/commons/7/71/Logo_UEH_xanh.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84 028 38295299</div>
 </td></tr>
 <tr><td class="p">số giảng viên<small>vnedu:academicStaff</small></td><td>
 <div>767 <span class="lang">xsd:nonNegativeInteger</span></div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>59C Nguyễn Đình Chiểu, phường Xuân Hòa</div>
+</td></tr>
+<tr><td class="p">khuôn viên<small>vnedu:campus</small></td><td>
+<div>139.020 m2 (13,9 ha). Bao gồm các Cơ sở A, B, C, D, E, H, I, N và 5 khuôn viên khác</div>
 </td></tr>
 <tr><td class="p">giám đốc<small>vnedu:director</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-quang-hung">Bùi Quang Hùng</a></div>
@@ -336,17 +405,17 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thi-hoang-yen">Đặng Thị Hoàng Yến</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieuthuhai">Hieuthuhai</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-tue-an">Hồ Tuệ An</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huy-duc-dang">Huy Duc Dang</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/misthy">MisThy</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tai">Nguyễn Đức Tài</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-phuc-canh">Nguyen Phuc Canh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-nhu-nguyen">Phan Như Nguyện</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tri-khai-lam">Tri Khai Lam</a></div>
+<tr><td class="p">do ... đào tạo<small>vnedu:offeredBy</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7310101">Kinh tế – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340101">Quản trị kinh doanh – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340115">Marketing – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340201">Tài chính - Ngân hàng – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340301">Kế toán – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7510605">Logistics và quản lý chuỗi cung ứng – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thi-hoang-yen">Đặng Thị Hoàng Yến</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieuthuhai">Hieuthuhai</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-tue-an">Hồ Tuệ An</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huy-duc-dang">Huy Duc Dang</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/misthy">MisThy</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tai">Nguyễn Đức Tài</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-phuc-canh">Nguyen Phuc Canh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-nhu-nguyen">Phan Như Nguyện</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tri-khai-lam">Tri Khai Lam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
-<tr><td class="p">do ... đào tạo<small>vnedu:offeredBy</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7310101">Kinh tế – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340101">Quản trị kinh doanh – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340115">Marketing – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340201">Tài chính - Ngân hàng – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340301">Kế toán – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7510605">Logistics và quản lý chuỗi cung ứng – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-quang-hung">Bùi Quang Hùng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-thi-hoang-yen">Đặng Thị Hoàng Yến</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hieuthuhai">Hieuthuhai</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-tue-an">Hồ Tuệ An</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/huy-duc-dang">Huy Duc Dang</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/misthy">MisThy</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-tai">Nguyễn Đức Tài</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-phuc-canh">Nguyen Phuc Canh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-nhu-nguyen">Phan Như Nguyện</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/tri-khai-lam">Tri Khai Lam</a></div>
 </td></tr>
 <tr><td class="p">schema:provider<small>schema:provider</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7310101">Kinh tế – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340101">Quản trị kinh doanh – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340115">Marketing – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340201">Tài chính - Ngân hàng – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7340301">Kế toán – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/program/dai-hoc-kinh-te-thanh-pho-ho-chi-minh-7510605">Logistics và quản lý chuỗi cung ứng – Đại học Kinh tế Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

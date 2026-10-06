@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-phuong-dong",
   "@type": [
+    "vnedu:UniversitySchool",
     "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
     "schema:CollegeOrUniversity",
+    "dbo:University",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:PrivateInstitution",
     "schema:Organization",
     "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:PrivateInstitution",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
     "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Phương Đông được thành lập năm 1994, đào tạo khoảng 9.000 sinh viên tại 6 khoa và 1 trung tâm, với 21 ngành bậc đại học, 4 ngành bậc cao đẳng. Trường sẽ bắt đầu đào tạo trình độ Thạc sĩ cho 2 ngành từ năm 2013."
+  },
   "foaf:homepage": {
     "@id": "https://phuongdong.edu.vn/"
   },
@@ -46,18 +50,18 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/00cnrny66"
+      "@id": "wd:Q10829112"
     },
     {
-      "@id": "wd:Q10829112"
+      "@id": "https://ror.org/00cnrny66"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q10829112"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75140160"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75140160"
+      "@id": "wd:Q10829112"
     }
   ],
   "rdfs:label": [
@@ -70,20 +74,22 @@
       "@value": "Trường Đại học Phương Đông"
     }
   ],
+  "schema:email": "dhphuongdong@hn.vnn.vn",
   "schema:employee": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-thien-du"
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     }
   ],
+  "schema:telephone": "+84.24 3784.8512",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Phương Đông"
@@ -101,10 +107,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:ownership": {

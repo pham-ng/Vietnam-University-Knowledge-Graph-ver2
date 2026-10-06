@@ -28,6 +28,7 @@ university:truong-dai-hoc-su-pham-dai-hoc-da-nang a dbo:University,
         schema:Organization ;
     rdfs:label "UDN University of Science and Education"@en,
         "Trường Đại học Sư phạm, Đại học Đà Nẵng"@vi ;
+    dbo:abstract "Trường Đại học Sư phạm - Đại học Đà Nẵng (tiếng Anh: University of Science and Education, the University of Da Nang – UDN-UEd) là trường thành viên Đại học Đà Nẵng, chuyên đào tạo các chuyên ngành sư phạm và cử nhân khoa học, được xếp vào nhóm các trường Đại học Sư phạm trọng điểm quốc gia Việt Nam. Trường đồng thời là trung tâm nghiên cứu khoa học giáo dục và triển khai công nghệ phục vụ yêu cầu phát triển kinh tế - xã hội các tỉnh, thành phố miền Trung - Tây Nguyên."@vi ;
     owl:sameAs wd:Q10829126,
         <https://ror.org/03zq1xf40> ;
     geo:lat 16.06165 ;
@@ -41,8 +42,11 @@ university:truong-dai-hoc-su-pham-dai-hoc-da-nang a dbo:University,
     vnedu:academicStaff "267"^^xsd:nonNegativeInteger ;
     vnedu:address "459 Tôn Đức Thắng, phường Hòa Khánh" ;
     vnedu:admissionCode "DDS" ;
+    vnedu:councilChair person:nguyen-thi-tram-anh ;
     vnedu:foundingYear "1994"^^xsd:gYear ;
-    vnedu:hasLeader person:vo-van-minh ;
+    vnedu:hasLeader person:nguyen-thi-tram-anh,
+        person:vo-van-minh ;
+    vnedu:history "Tháng 12 năm 1975, để xây dựng một nền giáo dục mới trên địa bàn Quảng Nam - Đà Nẵng, UBND tỉnh đã quyết định thành lập Trường Trung học Sư phạm Quảng Nam Đà Nẵng Ngày 03 tháng 11 năm 1976, Cơ sở Cao đẳng Sư phạm Quảng Nam - Đà Nẵng trực thuộc trường Đại học Sư phạm Quy Nhơn được thành lập. Ngày 27 tháng 2 năm 1978, Trường Cao đẳng Sư phạm Quảng Nam - Đà Nẵng tách khỏi Đại học Sư phạm Quy Nhơn trở thành đơn vị độc lập trực thuộc Bộ Giáo dục và Đào tạo. Tháng 09 năm 1990, Trường Trung học Sư phạm Quảng Nam - Đà Nẵng (lúc này đã bao gồm Trường Sư phạm Mẫu giáo Quảng Nam Đà Nẵng sáp nhập vào tháng 08 năm 1985, Trường Nuôi dạy trẻ Quảng Nam Đà Nẵng sáp nhập tháng 10 năm 1987 và Trường Bồi dưỡng cán bộ quản lý và Nghiệp vụ giáo dục Quảng Nam Đà Nẵng sáp nhập tháng 07 năm 1988) được UBND tỉnh Quảng Nam Đà Nẵng ra quyết định sáp nhập vào Trường Cao đẳng Sư phạm Quảng Nam Đà Nẵng. Ngày 04 tháng 04 năm 1994, Trường Đại học Sư phạm trực thuộc Đại học Đà Nẵng được thành lập theo Nghị định 32/CP của Chính phủ trên cơ sở tổ chức và sắp xếp lại các đơn vị: Trường Cao đẳng Sư phạm Quảng Nam - Đà Nẵng, cơ sở Đại học Sư phạm Ngoại ngữ Đà Nẵng, bộ môn cơ bản của trường Đại học Bách khoa Đà Nẵng, bộ môn văn hóa của Trường Công nhân kỹ thuật Nguyễn Văn Trỗi. Ngày 26 tháng 8 năm 2002, Trường Đại học Ngoại ngữ trực thuộc Đại học Đà Nẵng được thành lập theo theo quyết định số 709/QĐ-TTg của Thủ tướng chính phủ trên cơ sở tách và tổ chức lại 5 khoa ngoại ngữ của Trường Đại học Sư phạm. Trong các năm 2025 và 2026, thực hiện chủ trương chung của Đảng và Nhà nước về tinh gọn bộ máy. Trường đã tiến hành sắp xếp tổ chức bộ máy còn lại 8 khoa chuyên ngành, 6 phòng chức năng, 6 trung tâm."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:da-nang,
         region:trung-bo ;
@@ -53,9 +57,19 @@ university:truong-dai-hoc-su-pham-dai-hoc-da-nang a dbo:University,
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:rector person:vo-van-minh ;
     vnedu:website <http://ued.udn.vn> ;
-    schema:employee person:vo-van-minh ;
+    schema:email "ued@ued.udn.vn" ;
+    schema:employee person:nguyen-thi-tram-anh,
+        person:vo-van-minh ;
+    schema:foundingDate "1994-04-04"^^xsd:date ;
     schema:location country:viet-nam,
         province:da-nang,
         region:trung-bo ;
-    schema:parentOrganization university:dai-hoc-da-nang .
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/2/28/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg> ;
+    schema:parentOrganization university:dai-hoc-da-nang ;
+    schema:telephone "84) - 236 - 3841 32" .
+
+<https://upload.wikimedia.org/wikipedia/vi/2/28/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m,_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/2/28/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg.png> .
 

@@ -27,19 +27,26 @@ university:truong-dai-hoc-su-pham-dai-hoc-thai-nguyen a dbo:University,
         schema:Organization ;
     rdfs:label "Thai Nguyen University of Education"@en,
         "Trường Đại học Sư phạm, Đại học Thái Nguyên"@vi ;
+    dbo:abstract "Trường Đại học Sư phạm (tiếng Anh: Thai Nguyen University of Education) là một trường đại học thành viên của Đại học Thái Nguyên. Trường có vai trò là trung tâm đào tạo đại học, sau đại học, nghiên cứu và ứng dụng khoa học giáo dục, là một trong các trường trọng điểm trong hệ thống giáo dục đại học các tỉnh trung du, miền núi phía Bắc Việt Nam."@vi ;
     owl:sameAs wd:Q10829125,
         <https://ror.org/044deqz63> ;
+    skos:altLabel "Trường Đại học Sư phạm Thái Nguyên" ;
     skos:prefLabel "Trường Đại học Sư phạm, Đại học Thái Nguyên"@vi ;
     prov:wasDerivedFrom wd:Q10829125,
         <https://vi.wikipedia.org/w/index.php?oldid=75592828> ;
     foaf:homepage <http://tnue.edu.vn> ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Th%C3%A1i_Nguy%C3%AAn> ;
     vnedu:address "Số 20, Đường Lương Ngọc Quyến, phường Phan Đình Phùng" ;
+    vnedu:councilChair person:ha-tran-phuong ;
     vnedu:formerName "Trường Đại học Sư phạm Việt Bắc"@vi ;
     vnedu:foundingYear "1966"^^xsd:gYear ;
     vnedu:hasAlumnus person:hung-m-nguyen,
         person:vinh-d-nguyen ;
-    vnedu:hasLeader person:mai-xuan-truong ;
+    vnedu:hasLeader person:ha-tran-phuong,
+        person:mai-xuan-truong ;
+    vnedu:history """Tên gọi cũ của trường là Trường Đại học Sư phạm Việt Bắc, được thành lập ngày 31 tháng 10 năm 1966. Ngày 4 tháng 4 năm 1994, Trường Đại học Sư phạm Việt Bắc là một trường thành viên trực thuộc Đại học Thái Nguyên và được đổi tên thành Trường Đại học Sư phạm - Đại học Thái Nguyên.
+
+Trong lịch sử phát triển của mình, Trường Đại học Sư phạm - Đại học Thái Nguyên được trao tặng 2 Huân chương Lao động hạng Ba, 2 Huân chương Lao động hạng Nhì, 1 Huân chương Lao động hạng Nhất, 1 Huân chương Độc lập hạng Ba và 1 Huân chương Độc lập hạng Nhì. Ngày 31 tháng 10 năm 2011, nhân dịp kỷ niệm 45 năm ngày thành lập, Trường Đại học Sư phạm - Đại học Thái Nguyên đã được Đảng và Nhà nước Việt Nam trao tặng Huân chương Độc lập hạng Nhất."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thai-nguyen,
         region:bac-bo ;
@@ -48,9 +55,19 @@ university:truong-dai-hoc-su-pham-dai-hoc-thai-nguyen a dbo:University,
     vnedu:rector person:mai-xuan-truong ;
     vnedu:shortName "TNUE" ;
     vnedu:website <http://tnue.edu.vn> ;
-    schema:employee person:mai-xuan-truong ;
+    schema:email "contact@tnue.edu.vn" ;
+    schema:employee person:ha-tran-phuong,
+        person:mai-xuan-truong ;
+    schema:foundingDate "1966-10-31"^^xsd:date ;
     schema:location country:viet-nam,
         province:thai-nguyen,
         region:bac-bo ;
-    schema:parentOrganization university:dai-hoc-thai-nguyen .
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/0/00/LogodhspTN.svg> ;
+    schema:parentOrganization university:dai-hoc-thai-nguyen ;
+    schema:telephone "+84(0) 2803-851013" .
+
+<https://upload.wikimedia.org/wikipedia/vi/0/00/LogodhspTN.svg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:LogodhspTN.svg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/0/00/LogodhspTN.svg/330px-LogodhspTN.svg.png> .
 

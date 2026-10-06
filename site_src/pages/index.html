@@ -107,7 +107,8 @@
       [{ key: "n", label: "Số liên kết", color: "--s1" }], { labelW: 110 });
 
     const fields = [["year", "năm thành lập"], ["prov", "tỉnh/thành"], ["own", "loại hình sở hữu"], ["web", "website"],
-                    ["gov", "cơ quan chủ quản"], ["lat", "toạ độ"], ["codes", "mã tuyển sinh"]];
+                    ["gov", "cơ quan chủ quản"], ["lat", "toạ độ"], ["codes", "mã tuyển sinh"],
+                    ["intro", "giới thiệu chung"], ["hist", "lịch sử"], ["logo", "biểu trưng"]];
     const all = D.institutions.filter(i => i.hei);
     VN.hbar(document.getElementById("c-complete"), fields.map(([f, l]) => {
       const n = all.filter(i => Array.isArray(i[f]) ? i[f].length : i[f]).length;

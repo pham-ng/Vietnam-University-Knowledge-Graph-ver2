@@ -125,6 +125,7 @@ organization:bo-giao-duc-va-dao-tao a foaf:Organization,
         university:truong-dai-hoc-ngoai-thuong,
         university:truong-dai-hoc-nha-trang,
         university:truong-dai-hoc-nong-lam-thanh-pho-ho-chi-minh,
+        university:truong-dai-hoc-quan-ly-va-cong-nghe-hai-phong,
         university:truong-dai-hoc-quy-nhon,
         university:truong-dai-hoc-su-pham-ha-noi-2,
         university:truong-dai-hoc-su-pham-nghe-thuat-trung-uong,
@@ -135,6 +136,13 @@ organization:bo-giao-duc-va-dao-tao a foaf:Organization,
         university:truong-dai-hoc-thuong-mai,
         university:truong-dai-hoc-van-hien,
         university:truong-dai-hoc-vinh .
+
+organization:bo-ke-hoach-va-dau-tu a foaf:Organization,
+        vnedu:GoverningBody,
+        vnedu:Organization,
+        schema:GovernmentOrganization,
+        schema:Organization ;
+    vnedu:governs university:hoc-vien-chinh-sach-va-phat-trien .
 
 organization:bo-khoa-hoc-va-cong-nghe a foaf:Organization,
         vnedu:GoverningBody,
@@ -305,6 +313,12 @@ organization:tong-lien-doan-lao-dong-viet-nam a foaf:Organization,
         schema:Organization ;
     vnedu:governs university:truong-dai-hoc-cong-doan,
         university:truong-dai-hoc-ton-duc-thang .
+
+organization:truc-tieptrung-uong-hoi-lien-hiep-phu-nu-viet-nam a foaf:Organization,
+        vnedu:Organization,
+        schema:GovernmentOrganization,
+        schema:Organization ;
+    vnedu:governs university:hoc-vien-phu-nu-viet-nam .
 
 organization:ubnd-tinh-ca-mau a foaf:Organization,
         vnedu:GoverningBody,
@@ -1126,22 +1140,6 @@ university:truong-dai-hoc-thanh-tay a dbo:University,
         province:ha-noi,
         region:bac-bo .
 
-university:truong-dai-hoc-vinuni a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:Organization,
-        vnedu:PrivateInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    foaf:homepage <http://vinuni.edu.vn/> ;
-    vnedu:locatedIn country:viet-nam,
-        region:bac-bo ;
-    schema:location country:viet-nam,
-        province:ha-noi,
-        region:bac-bo .
-
 university:truong-dai-hoc-y-te-cong-cong a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
@@ -1389,6 +1387,11 @@ organization:tap-doan-giao-duc-van-lang a foaf:Organization,
         schema:Organization .
 
 organization:tap-doan-phenikaa a foaf:Organization,
+        vnedu:Organization,
+        schema:Corporation,
+        schema:Organization .
+
+organization:tap-doan-vingroup a foaf:Organization,
         vnedu:Organization,
         schema:Corporation,
         schema:Organization .
@@ -8143,23 +8146,6 @@ university:hoc-vien-khoa-hoc-va-cong-nghe a foaf:Organization,
         province:ha-noi,
         region:bac-bo .
 
-university:hoc-vien-phu-nu-viet-nam a foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:Organization,
-        vnedu:PublicInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    foaf:homepage <https://hvpnvn.edu.vn/> ;
-    vnedu:hasLeader person:tran-quang-tien ;
-    vnedu:locatedIn country:viet-nam,
-        region:bac-bo ;
-    schema:employee person:tran-quang-tien ;
-    schema:location country:viet-nam,
-        province:ha-noi,
-        region:bac-bo .
-
 university:hoc-vien-quan-ly-giao-duc a foaf:Organization,
         vnedu:EducationalOrganization,
         vnedu:HigherEducationInstitution,
@@ -8444,24 +8430,6 @@ university:truong-dai-hoc-gia-dinh a dbo:University,
         region:nam-bo ;
     schema:parentOrganization organization:tap-doan-giao-duc-nguyen-hoang .
 
-university:truong-dai-hoc-ha-long a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:Organization,
-        vnedu:PublicInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    foaf:homepage <http://www.uhl.edu.vn> ;
-    vnedu:hasLeader person:nguyen-duc-tiep ;
-    vnedu:locatedIn country:viet-nam,
-        region:bac-bo ;
-    schema:employee person:nguyen-duc-tiep ;
-    schema:location country:viet-nam,
-        province:quang-ninh,
-        region:bac-bo .
-
 university:truong-dai-hoc-ha-tinh a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
@@ -8586,26 +8554,6 @@ university:truong-dai-hoc-ky-thuat-cong-nghe-can-tho a dbo:University,
         province:can-tho,
         region:nam-bo .
 
-university:truong-dai-hoc-ky-thuat-y-te-hai-duong a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:Organization,
-        vnedu:PublicInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    foaf:homepage <https://hmtu.edu.vn/> ;
-    vnedu:hasLeader person:pham-thi-cam-hung ;
-    vnedu:locatedIn country:viet-nam,
-        province:hai-phong,
-        region:bac-bo ;
-    schema:employee person:pham-thi-cam-hung ;
-    schema:location country:viet-nam,
-        province:hai-duong,
-        province:hai-phong,
-        region:bac-bo .
-
 university:truong-dai-hoc-lac-hong a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
@@ -8623,24 +8571,6 @@ university:truong-dai-hoc-lac-hong a dbo:University,
     schema:location country:viet-nam,
         province:dong-nai,
         region:nam-bo .
-
-university:truong-dai-hoc-lao-dong-xa-hoi a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:Organization,
-        vnedu:PublicInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    foaf:homepage <http://www.ulsa.edu.vn/> ;
-    vnedu:hasLeader person:pham-ngoc-thanh ;
-    vnedu:locatedIn country:viet-nam,
-        region:bac-bo ;
-    schema:employee person:pham-ngoc-thanh ;
-    schema:location country:viet-nam,
-        province:ha-noi,
-        region:bac-bo .
 
 university:truong-dai-hoc-lao-dong-xa-hoi-co-so-2-thanh-pho-ho-chi-minh a dbo:University,
         foaf:Organization,
@@ -8712,26 +8642,6 @@ university:truong-dai-hoc-phan-chau-trinh a dbo:University,
         province:da-nang,
         region:trung-bo .
 
-university:truong-dai-hoc-phu-xuan a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:Organization,
-        vnedu:PrivateInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    skos:notation "DPX" ;
-    foaf:homepage <http://www.phuxuan.edu.vn/> ;
-    vnedu:hasLeader person:nguyen-quoc-toan ;
-    vnedu:locatedIn country:viet-nam,
-        region:trung-bo ;
-    schema:employee person:nguyen-quoc-toan ;
-    schema:location country:viet-nam,
-        province:hue,
-        region:trung-bo ;
-    schema:parentOrganization organization:tap-doan-giao-duc-equest .
-
 university:truong-dai-hoc-phu-yen a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
@@ -8768,25 +8678,6 @@ university:truong-dai-hoc-phuong-dong a dbo:University,
     schema:employee person:bui-thien-du ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
-
-university:truong-dai-hoc-quan-ly-va-cong-nghe-hai-phong a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:Organization,
-        vnedu:PrivateInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    skos:notation "HPU" ;
-    foaf:homepage <https://hpu.edu.vn/> ;
-    vnedu:hasLeader person:nguyen-tien-thanh-3 ;
-    vnedu:locatedIn country:viet-nam,
-        region:bac-bo ;
-    schema:employee person:nguyen-tien-thanh-3 ;
-    schema:location country:viet-nam,
-        province:hai-phong,
         region:bac-bo .
 
 university:truong-dai-hoc-quang-binh a dbo:University,
@@ -8884,24 +8775,6 @@ university:truong-dai-hoc-su-pham-ky-thuat-nam-dinh a dbo:University,
     schema:location country:viet-nam,
         province:ninh-binh,
         region:bac-bo .
-
-university:truong-dai-hoc-su-pham-the-duc-the-thao-thanh-pho-ho-chi-minh a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:Organization,
-        vnedu:PublicInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    foaf:homepage <http://www.upes.edu.vn> ;
-    vnedu:hasLeader person:chau-vinh-huy ;
-    vnedu:locatedIn country:viet-nam,
-        region:nam-bo ;
-    schema:employee person:chau-vinh-huy ;
-    schema:location country:viet-nam,
-        province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
 
 university:truong-dai-hoc-tai-chinh-marketing-phan-hieu-quang-ngai a foaf:Organization,
         vnedu:EducationalOrganization,
@@ -9324,6 +9197,11 @@ person:cao-manh-linh a foaf:Person,
     schema:alumniOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh,
         university:truong-dai-hoc-luat-ha-noi .
 
+person:cao-quoc-an a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-lam-nghiep .
+
 person:chau-tho a foaf:Person,
         vnedu:Alumnus,
         schema:Person ;
@@ -9357,6 +9235,11 @@ person:dang-hoai-bac a foaf:Person,
         schema:Person ;
     vnedu:leads university:hoc-vien-cong-nghe-buu-chinh-vien-thong .
 
+person:dang-hoang-thong a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-ha-long .
+
 person:dang-hong-sy a foaf:Person,
         vnedu:Alumnus,
         schema:Person ;
@@ -9379,6 +9262,11 @@ person:dang-sy-loc a foaf:Person,
         vnedu:InstitutionLeader,
         schema:Person ;
     vnedu:leads university:hoc-vien-chinh-tri .
+
+person:dang-van-phuoc a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-khoa-hoc-suc-khoe-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh .
 
 person:danh-bich-do a foaf:Person,
         vnedu:Alumnus,
@@ -9430,6 +9318,11 @@ person:dinh-thai-thuy a foaf:Person,
         schema:Person ;
     schema:alumniOf university:truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-thanh-pho-ho-chi-min,
         university:truong-dai-hoc-san-khau-dien-anh-thanh-pho-ho-chi-minh .
+
+person:dinh-thi-dieu-hang a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-ky-thuat-y-te-hai-duong .
 
 person:dinh-van-chau a foaf:Person,
         vnedu:InstitutionLeader,
@@ -9492,6 +9385,11 @@ person:do-trung-hai a foaf:Person,
         schema:Person ;
     vnedu:leads university:truong-dai-hoc-ky-thuat-cong-nghiep-dai-hoc-thai-nguyen .
 
+person:do-tuan-minh a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-ngoai-ngu-dai-hoc-quoc-gia-ha-noi .
+
 person:doan-anh-dung a foaf:Person,
         vnedu:Alumnus,
         schema:Person ;
@@ -9517,6 +9415,11 @@ person:doan-minh-huan a foaf:Person,
         vnedu:InstitutionLeader,
         schema:Person ;
     vnedu:leads university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh .
+
+person:doan-thanh-ha a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-ngan-hang-thanh-pho-ho-chi-minh .
 
 person:dong-ngoc-ba a foaf:Person,
         vnedu:Alumnus,
@@ -9569,11 +9472,21 @@ person:ha-sy-huan a foaf:Person,
     schema:alumniOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh,
         university:hoc-vien-nong-nghiep-viet-nam .
 
+person:ha-tran-phuong a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-su-pham-dai-hoc-thai-nguyen .
+
 person:hang-tran-thi-thu a foaf:Person,
         vnedu:Alumnus,
         schema:Person ;
     schema:alumniOf university:truong-dai-hoc-y-duoc-dai-hoc-hue,
         university:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh .
+
+person:ho-dac-loc a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-cong-nghe-thanh-pho-ho-chi-minh .
 
 person:ho-thanh-phong-2 a foaf:Person,
         vnedu:InstitutionLeader,
@@ -9602,6 +9515,11 @@ person:hoang-anh-tuan a foaf:Person,
         schema:Person ;
     vnedu:leads university:truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-ha-noi .
 
+person:hoang-bac-an a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-kien-truc-thanh-pho-ho-chi-minh .
+
 person:hoang-cong-gia-khanh a foaf:Person,
         vnedu:InstitutionLeader,
         schema:Person ;
@@ -9628,6 +9546,11 @@ person:hoang-thi-doi a foaf:Person,
         schema:Person ;
     schema:alumniOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh,
         university:truong-dai-hoc-su-pham-ha-noi .
+
+person:hoang-tung a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-xay-dung-ha-noi .
 
 person:hoang-van-binh a foaf:Person,
         vnedu:Alumnus,
@@ -9699,6 +9622,11 @@ person:kien-ung a foaf:Person,
         schema:Person ;
     schema:alumniOf university:hoc-vien-am-nhac-quoc-gia-viet-nam,
         university:truong-dai-hoc-san-khau-dien-anh-ha-noi .
+
+person:kieu-tuan a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-cong-nghe-thanh-pho-ho-chi-minh .
 
 person:kieu-xuan-thuc a foaf:Person,
         vnedu:InstitutionLeader,
@@ -9781,6 +9709,11 @@ person:le-hoang-hai a foaf:Person,
     schema:alumniOf university:dai-hoc-bach-khoa-ha-noi,
         university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh .
 
+person:le-mai-lan a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-vinuni .
+
 person:le-manh-hung a foaf:Person,
         vnedu:Alumnus,
         schema:Person ;
@@ -9808,11 +9741,6 @@ person:le-nhat-thanh a foaf:Person,
     schema:alumniOf university:hoc-vien-an-ninh-nhan-dan,
         university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh .
 
-person:le-thanh-ha a foaf:Person,
-        vnedu:InstitutionLeader,
-        schema:Person ;
-    vnedu:leads university:truong-dai-hoc-van-hoa-the-thao-va-du-lich-thanh-hoa .
-
 person:le-thanh-hoan a foaf:Person,
         vnedu:Alumnus,
         schema:Person ;
@@ -9824,11 +9752,26 @@ person:le-thanh-son-2 a foaf:Person,
         schema:Person ;
     vnedu:leads university:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-ha-noi .
 
+person:le-thanh-tung a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-dieu-duong-nam-dinh .
+
+person:le-thi-ngoc-diep a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-thanh-pho-ho-chi-min .
+
 person:le-thi-thu-hang a foaf:Person,
         vnedu:Alumnus,
         schema:Person ;
     schema:alumniOf university:truong-dai-hoc-ha-noi,
         university:truong-dai-hoc-luat-ha-noi .
+
+person:le-thi-thu-thuy a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-ngoai-thuong .
 
 person:le-thi-thuy-2 a foaf:Person,
         vnedu:InstitutionLeader,
@@ -10072,6 +10015,11 @@ person:nguyen-huy-phuong a foaf:Person,
         schema:Person ;
     vnedu:leads university:hoc-vien-am-nhac-quoc-gia-viet-nam .
 
+person:nguyen-ke-binh a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-su-pham-the-duc-the-thao-thanh-pho-ho-chi-minh .
+
 person:nguyen-khac-thanh a foaf:Person,
         vnedu:InstitutionLeader,
         schema:Person ;
@@ -10156,6 +10104,11 @@ person:nguyen-quoc-huy a foaf:Person,
         schema:Person ;
     vnedu:leads university:hoc-vien-y-duoc-hoc-co-truyen-viet-nam .
 
+person:nguyen-quoc-tien a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-y-duoc-thai-binh .
+
 person:nguyen-quoc-toan a foaf:Person,
         vnedu:InstitutionLeader,
         schema:Person ;
@@ -10225,6 +10178,11 @@ person:nguyen-thi-lan a foaf:Person,
         schema:Person ;
     vnedu:leads university:hoc-vien-nong-nghiep-viet-nam .
 
+person:nguyen-thi-minh-hong a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh .
+
 person:nguyen-thi-ngoc-chau a foaf:Person,
         vnedu:Alumnus,
         schema:Person ;
@@ -10258,6 +10216,11 @@ person:nguyen-thi-thu-ha a foaf:Person,
         schema:Person ;
     schema:alumniOf university:hoc-vien-chinh-tri-quoc-gia-ho-chi-minh,
         university:hoc-vien-thanh-thieu-nien-viet-nam .
+
+person:nguyen-thi-tram-anh a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-su-pham-dai-hoc-da-nang .
 
 person:nguyen-thi-yen-nhi a foaf:Person,
         vnedu:Alumnus,
@@ -10423,6 +10386,11 @@ person:nhu-nguyen a foaf:Person,
     schema:alumniOf university:dai-hoc-bach-khoa-ha-noi,
         university:dai-hoc-quoc-gia-ha-noi .
 
+person:peter-coloe a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-quoc-te-rmit-viet-nam .
+
 person:pham-anh-tuan a foaf:Person,
         vnedu:Alumnus,
         schema:Person ;
@@ -10465,6 +10433,11 @@ person:pham-minh-son a foaf:Person,
         vnedu:InstitutionLeader,
         schema:Person ;
     vnedu:leads university:hoc-vien-bao-chi-va-tuyen-truyen .
+
+person:pham-ngoc-thach-2 a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-ha-noi .
 
 person:pham-ngoc-thanh a foaf:Person,
         vnedu:InstitutionLeader,
@@ -10661,6 +10634,11 @@ person:tai-thien-huynh a foaf:Person,
     schema:alumniOf university:truong-dai-hoc-bach-khoa-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh,
         university:truong-dai-hoc-da-lat .
 
+person:tan-yap-peng a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-vinuni .
+
 person:thai-ba-can a foaf:Person,
         vnedu:InstitutionLeader,
         schema:Person ;
@@ -10837,6 +10815,11 @@ person:tran-van-dien a foaf:Person,
         schema:Person ;
     vnedu:leads university:truong-dai-hoc-nong-lam-dai-hoc-thai-nguyen .
 
+person:tran-van-hau a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-van-hien .
+
 person:tran-van-hiep a foaf:Person,
         vnedu:Alumnus,
         schema:Person ;
@@ -10877,6 +10860,11 @@ person:tri-nguyen a foaf:Person,
         schema:Person ;
     schema:alumniOf university:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh,
         university:truong-dai-hoc-y-te-cong-cong-2 .
+
+person:trinh-dang-khoa a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-van-hoa-thanh-pho-ho-chi-minh .
 
 person:trinh-xuan-an a foaf:Person,
         vnedu:Alumnus,
@@ -10975,6 +10963,21 @@ person:vu-hoai-nam a foaf:Person,
         schema:Person ;
     schema:alumniOf university:truong-dai-hoc-giao-thong-van-tai,
         university:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-ha-noi .
+
+person:vu-hoang-linh a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-ha-noi .
+
+person:vu-ngoc-anh a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-kien-truc-ha-noi .
+
+person:vu-thanh-tu-anh a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-phu-xuan .
 
 person:vu-van-truong a foaf:Person,
         vnedu:InstitutionLeader,
@@ -11097,24 +11100,6 @@ university:hoc-vien-can-bo-thanh-pho-ho-chi-minh a foaf:Organization,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo .
 
-university:hoc-vien-chinh-sach-va-phat-trien a foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:Organization,
-        vnedu:PublicInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    skos:notation "HCP" ;
-    foaf:homepage <http://apd.edu.vn> ;
-    vnedu:hasLeader person:tran-trong-nguyen ;
-    vnedu:locatedIn country:viet-nam,
-        region:bac-bo ;
-    schema:employee person:tran-trong-nguyen ;
-    schema:location country:viet-nam,
-        province:ha-noi,
-        region:bac-bo .
-
 university:hoc-vien-ky-thuat-mat-ma a foaf:Organization,
         vnedu:EducationalOrganization,
         vnedu:HigherEducationInstitution,
@@ -11145,6 +11130,23 @@ university:hoc-vien-phat-giao-viet-nam a foaf:Organization,
     vnedu:locatedIn country:viet-nam,
         region:bac-bo ;
     schema:employee person:thich-thanh-quyet ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+
+university:hoc-vien-phu-nu-viet-nam a foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    foaf:homepage <https://hvpnvn.edu.vn/> ;
+    vnedu:hasLeader person:tran-quang-tien ;
+    vnedu:locatedIn country:viet-nam,
+        region:bac-bo ;
+    schema:employee person:tran-quang-tien ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo .
@@ -11417,25 +11419,6 @@ university:truong-dai-hoc-dien-luc a dbo:University,
         province:ha-noi,
         region:bac-bo .
 
-university:truong-dai-hoc-dieu-duong-nam-dinh a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:Organization,
-        vnedu:PublicInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    skos:notation "YDD" ;
-    foaf:homepage <http://ndun.edu.vn> ;
-    vnedu:hasLeader person:truong-tuan-anh ;
-    vnedu:locatedIn country:viet-nam,
-        region:bac-bo ;
-    schema:employee person:truong-tuan-anh ;
-    schema:location country:viet-nam,
-        province:ninh-binh,
-        region:bac-bo .
-
 university:truong-dai-hoc-fpt a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
@@ -11474,6 +11457,26 @@ university:truong-dai-hoc-giao-thong-van-tai-thanh-pho-ho-chi-minh a dbo:Univers
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo .
+
+university:truong-dai-hoc-ha-long a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    foaf:homepage <http://www.uhl.edu.vn> ;
+    vnedu:hasLeader person:dang-hoang-thong,
+        person:nguyen-duc-tiep ;
+    vnedu:locatedIn country:viet-nam,
+        region:bac-bo ;
+    schema:employee person:dang-hoang-thong,
+        person:nguyen-duc-tiep ;
+    schema:location country:viet-nam,
+        province:quang-ninh,
+        region:bac-bo .
 
 university:truong-dai-hoc-hai-phong a dbo:University,
         foaf:Organization,
@@ -11624,6 +11627,48 @@ university:truong-dai-hoc-ky-thuat-y-duoc-da-nang a dbo:University,
         province:da-nang,
         region:trung-bo .
 
+university:truong-dai-hoc-ky-thuat-y-te-hai-duong a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    foaf:homepage <https://hmtu.edu.vn/> ;
+    vnedu:hasLeader person:dinh-thi-dieu-hang,
+        person:pham-thi-cam-hung ;
+    vnedu:locatedIn country:viet-nam,
+        province:hai-phong,
+        region:bac-bo ;
+    schema:employee person:dinh-thi-dieu-hang,
+        person:pham-thi-cam-hung ;
+    schema:location country:viet-nam,
+        province:hai-duong,
+        province:hai-phong,
+        region:bac-bo .
+
+university:truong-dai-hoc-lao-dong-xa-hoi a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    foaf:homepage <http://www.ulsa.edu.vn/> ;
+    vnedu:hasLeader person:le-thanh-ha,
+        person:pham-ngoc-thanh ;
+    vnedu:locatedIn country:viet-nam,
+        region:bac-bo ;
+    schema:employee person:le-thanh-ha,
+        person:pham-ngoc-thanh ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+
 university:truong-dai-hoc-mo-ha-noi a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
@@ -11678,6 +11723,47 @@ university:truong-dai-hoc-pham-van-dong a dbo:University,
     schema:location country:viet-nam,
         province:quang-ngai,
         region:trung-bo .
+
+university:truong-dai-hoc-phu-xuan a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PrivateInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    skos:notation "DPX" ;
+    foaf:homepage <http://www.phuxuan.edu.vn/> ;
+    vnedu:hasLeader person:nguyen-quoc-toan,
+        person:vu-thanh-tu-anh ;
+    vnedu:locatedIn country:viet-nam,
+        region:trung-bo ;
+    schema:employee person:nguyen-quoc-toan,
+        person:vu-thanh-tu-anh ;
+    schema:location country:viet-nam,
+        province:hue,
+        region:trung-bo ;
+    schema:parentOrganization organization:tap-doan-giao-duc-equest .
+
+university:truong-dai-hoc-quan-ly-va-cong-nghe-hai-phong a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PrivateInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    skos:notation "HPU" ;
+    foaf:homepage <https://hpu.edu.vn/> ;
+    vnedu:hasLeader person:nguyen-tien-thanh-3 ;
+    vnedu:locatedIn country:viet-nam,
+        region:bac-bo ;
+    schema:employee person:nguyen-tien-thanh-3 ;
+    schema:location country:viet-nam,
+        province:hai-phong,
+        region:bac-bo .
 
 university:truong-dai-hoc-quoc-te-hong-bang a dbo:University,
         foaf:Organization,
@@ -11751,6 +11837,26 @@ university:truong-dai-hoc-su-pham-the-duc-the-thao-ha-noi a dbo:University,
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo .
+
+university:truong-dai-hoc-su-pham-the-duc-the-thao-thanh-pho-ho-chi-minh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    foaf:homepage <http://www.upes.edu.vn> ;
+    vnedu:hasLeader person:chau-vinh-huy,
+        person:nguyen-ke-binh ;
+    vnedu:locatedIn country:viet-nam,
+        region:nam-bo ;
+    schema:employee person:chau-vinh-huy,
+        person:nguyen-ke-binh ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
 
 university:truong-dai-hoc-tai-chinh-ke-toan a dbo:University,
         foaf:Organization,
@@ -11879,7 +11985,7 @@ university:truong-dai-hoc-tien-giang a dbo:University,
         province:dong-thap,
         region:nam-bo .
 
-university:truong-dai-hoc-van-hien a dbo:University,
+university:truong-dai-hoc-vinuni a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
         vnedu:HigherEducationInstitution,
@@ -11888,14 +11994,17 @@ university:truong-dai-hoc-van-hien a dbo:University,
         schema:CollegeOrUniversity,
         schema:EducationalOrganization,
         schema:Organization ;
-    foaf:homepage <http://www.vhu.edu.vn> ;
-    vnedu:hasLeader person:nguyen-minh-duc-4 ;
+    foaf:homepage <http://vinuni.edu.vn/> ;
+    vnedu:hasLeader person:le-mai-lan,
+        person:tan-yap-peng ;
     vnedu:locatedIn country:viet-nam,
-        region:nam-bo ;
-    schema:employee person:nguyen-minh-duc-4 ;
+        region:bac-bo ;
+    schema:employee person:le-mai-lan,
+        person:tan-yap-peng ;
     schema:location country:viet-nam,
-        province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        province:ha-noi,
+        region:bac-bo ;
+    schema:parentOrganization organization:tap-doan-vingroup .
 
 university:truong-dai-hoc-xay-dung-mien-tay a dbo:University,
         foaf:Organization,
@@ -12208,6 +12317,24 @@ university:dai-hoc-cong-nghiep-ha-noi a dbo:University,
         province:ha-noi,
         region:bac-bo .
 
+university:hoc-vien-chinh-sach-va-phat-trien a foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    skos:notation "HCP" ;
+    foaf:homepage <http://apd.edu.vn> ;
+    vnedu:hasLeader person:tran-trong-nguyen ;
+    vnedu:locatedIn country:viet-nam,
+        region:bac-bo ;
+    schema:employee person:tran-trong-nguyen ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
+
 university:hoc-vien-chinh-tri a foaf:Organization,
         vnedu:EducationalOrganization,
         vnedu:HigherEducationInstitution,
@@ -12341,25 +12468,6 @@ university:truong-dai-hoc-cong-nghe-ky-thuat-thanh-pho-ho-chi-minh a dbo:Univers
         province:thanh-pho-ho-chi-minh,
         region:nam-bo .
 
-university:truong-dai-hoc-cong-nghe-thanh-pho-ho-chi-minh a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:Organization,
-        vnedu:PrivateInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    skos:notation "DKC" ;
-    foaf:homepage <http://www.hutech.edu.vn/> ;
-    vnedu:hasAlumnus person:bui-son-truong,
-        person:mono ;
-    vnedu:locatedIn country:viet-nam,
-        region:nam-bo ;
-    schema:location country:viet-nam,
-        province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
-
 university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
@@ -12379,6 +12487,27 @@ university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-d
         province:da-nang,
         region:trung-bo ;
     schema:parentOrganization university:dai-hoc-da-nang .
+
+university:truong-dai-hoc-dieu-duong-nam-dinh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    skos:notation "YDD" ;
+    foaf:homepage <http://ndun.edu.vn> ;
+    vnedu:hasLeader person:le-thanh-tung,
+        person:truong-tuan-anh ;
+    vnedu:locatedIn country:viet-nam,
+        region:bac-bo ;
+    schema:employee person:le-thanh-tung,
+        person:truong-tuan-anh ;
+    schema:location country:viet-nam,
+        province:ninh-binh,
+        region:bac-bo .
 
 university:truong-dai-hoc-giao-duc-dai-hoc-quoc-gia-ha-noi a dbo:University,
         foaf:Organization,
@@ -12461,26 +12590,6 @@ university:truong-dai-hoc-khoa-hoc-dai-hoc-thai-nguyen a dbo:University,
         province:thai-nguyen,
         region:bac-bo ;
     schema:parentOrganization university:dai-hoc-thai-nguyen .
-
-university:truong-dai-hoc-khoa-hoc-suc-khoe-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:MemberInstitution,
-        vnedu:Organization,
-        vnedu:PublicInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    skos:notation "QSY" ;
-    vnedu:hasLeader person:phan-bach-thang ;
-    vnedu:locatedIn country:viet-nam,
-        region:nam-bo ;
-    schema:employee person:phan-bach-thang ;
-    schema:location country:viet-nam,
-        province:thanh-pho-ho-chi-minh,
-        region:nam-bo ;
-    schema:parentOrganization university:dai-hoc-quoc-gia-thanh-pho-ho-chi-minh .
 
 university:truong-dai-hoc-kinh-te-dai-hoc-hue a dbo:University,
         foaf:Organization,
@@ -12680,27 +12789,6 @@ university:truong-dai-hoc-nong-lam-dai-hoc-hue a dbo:University,
         region:trung-bo ;
     schema:parentOrganization university:dai-hoc-hue .
 
-university:truong-dai-hoc-su-pham-dai-hoc-da-nang a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:MemberInstitution,
-        vnedu:Organization,
-        vnedu:PublicInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    skos:notation "DDS" ;
-    foaf:homepage <http://ued.udn.vn> ;
-    vnedu:hasLeader person:vo-van-minh ;
-    vnedu:locatedIn country:viet-nam,
-        region:trung-bo ;
-    schema:employee person:vo-van-minh ;
-    schema:location country:viet-nam,
-        province:da-nang,
-        region:trung-bo ;
-    schema:parentOrganization university:dai-hoc-da-nang .
-
 university:truong-dai-hoc-su-pham-ky-thuat-dai-hoc-da-nang a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
@@ -12810,22 +12898,22 @@ university:truong-dai-hoc-tong-hop-thanh-pho-ho-chi-minh a dbo:University,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo .
 
-university:truong-dai-hoc-van-hoa-thanh-pho-ho-chi-minh a dbo:University,
+university:truong-dai-hoc-van-hien a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
         vnedu:HigherEducationInstitution,
         vnedu:Organization,
-        vnedu:PublicInstitution,
+        vnedu:PrivateInstitution,
         schema:CollegeOrUniversity,
         schema:EducationalOrganization,
         schema:Organization ;
-    skos:notation "VHS" ;
-    foaf:homepage <https://www.hcmuc.edu.vn> ;
-    vnedu:hasAlumnus person:pham-anh-khoa ;
-    vnedu:hasLeader person:lam-nhan ;
+    foaf:homepage <http://www.vhu.edu.vn> ;
+    vnedu:hasLeader person:nguyen-minh-duc-4,
+        person:tran-van-hau ;
     vnedu:locatedIn country:viet-nam,
         region:nam-bo ;
-    schema:employee person:lam-nhan ;
+    schema:employee person:nguyen-minh-duc-4,
+        person:tran-van-hau ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo .
@@ -12969,6 +13057,12 @@ person:huynh-cong-phap a foaf:Person,
         schema:Person ;
     vnedu:leads university:truong-cao-dang-cong-nghe-thong-tin-da-nang,
         university:truong-dai-hoc-cong-nghe-thong-tin-va-truyen-thong-viet-han-dai-hoc-da-nang .
+
+person:le-thanh-ha a foaf:Person,
+        vnedu:InstitutionLeader,
+        schema:Person ;
+    vnedu:leads university:truong-dai-hoc-lao-dong-xa-hoi,
+        university:truong-dai-hoc-van-hoa-the-thao-va-du-lich-thanh-hoa .
 
 person:nguyen-ba-chien a foaf:Person,
         vnedu:InstitutionLeader,
@@ -13127,6 +13221,28 @@ university:truong-dai-hoc-dong-thap a dbo:University,
         province:dong-thap,
         region:nam-bo .
 
+university:truong-dai-hoc-khoa-hoc-suc-khoe-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    skos:notation "QSY" ;
+    vnedu:hasLeader person:dang-van-phuoc,
+        person:phan-bach-thang ;
+    vnedu:locatedIn country:viet-nam,
+        region:nam-bo ;
+    schema:employee person:dang-van-phuoc,
+        person:phan-bach-thang ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo ;
+    schema:parentOrganization university:dai-hoc-quoc-gia-thanh-pho-ho-chi-minh .
+
 university:truong-dai-hoc-kinh-te-dai-hoc-da-nang a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
@@ -13170,26 +13286,6 @@ university:truong-dai-hoc-kinh-te-tai-chinh-thanh-pho-ho-chi-minh a dbo:Universi
         province:thanh-pho-ho-chi-minh,
         region:nam-bo .
 
-university:truong-dai-hoc-ngan-hang-thanh-pho-ho-chi-minh a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:Organization,
-        vnedu:PublicInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    skos:notation "NHS" ;
-    foaf:homepage <https://hub.edu.vn> ;
-    vnedu:hasAlumnus person:jaysonlei ;
-    vnedu:hasLeader person:nguyen-duc-trung ;
-    vnedu:locatedIn country:viet-nam,
-        region:nam-bo ;
-    schema:employee person:nguyen-duc-trung ;
-    schema:location country:viet-nam,
-        province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
-
 university:truong-dai-hoc-ngoai-ngu-dai-hoc-da-nang a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
@@ -13206,6 +13302,29 @@ university:truong-dai-hoc-ngoai-ngu-dai-hoc-da-nang a dbo:University,
     vnedu:locatedIn country:viet-nam,
         region:trung-bo ;
     schema:employee person:nguyen-van-long ;
+    schema:location country:viet-nam,
+        province:da-nang,
+        region:trung-bo ;
+    schema:parentOrganization university:dai-hoc-da-nang .
+
+university:truong-dai-hoc-su-pham-dai-hoc-da-nang a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    skos:notation "DDS" ;
+    foaf:homepage <http://ued.udn.vn> ;
+    vnedu:hasLeader person:nguyen-thi-tram-anh,
+        person:vo-van-minh ;
+    vnedu:locatedIn country:viet-nam,
+        region:trung-bo ;
+    schema:employee person:nguyen-thi-tram-anh,
+        person:vo-van-minh ;
     schema:location country:viet-nam,
         province:da-nang,
         region:trung-bo ;
@@ -13252,6 +13371,28 @@ university:truong-dai-hoc-thuong-mai a dbo:University,
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo .
+
+university:truong-dai-hoc-van-hoa-thanh-pho-ho-chi-minh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    skos:notation "VHS" ;
+    foaf:homepage <https://www.hcmuc.edu.vn> ;
+    vnedu:hasAlumnus person:pham-anh-khoa ;
+    vnedu:hasLeader person:lam-nhan,
+        person:trinh-dang-khoa ;
+    vnedu:locatedIn country:viet-nam,
+        region:nam-bo ;
+    schema:employee person:lam-nhan,
+        person:trinh-dang-khoa ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
 
 university:truong-dai-hoc-van-lang a dbo:University,
         foaf:Organization,
@@ -13416,6 +13557,29 @@ university:hoc-vien-thanh-thieu-nien-viet-nam a foaf:Organization,
         province:ha-noi,
         region:bac-bo .
 
+university:truong-dai-hoc-cong-nghe-thanh-pho-ho-chi-minh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PrivateInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    skos:notation "DKC" ;
+    foaf:homepage <http://www.hutech.edu.vn/> ;
+    vnedu:hasAlumnus person:bui-son-truong,
+        person:mono ;
+    vnedu:hasLeader person:ho-dac-loc,
+        person:kieu-tuan ;
+    vnedu:locatedIn country:viet-nam,
+        region:nam-bo ;
+    schema:employee person:ho-dac-loc,
+        person:kieu-tuan ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+
 university:truong-dai-hoc-luat-dai-hoc-quoc-gia-ha-noi a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
@@ -13438,27 +13602,27 @@ university:truong-dai-hoc-luat-dai-hoc-quoc-gia-ha-noi a dbo:University,
         region:bac-bo ;
     schema:parentOrganization university:dai-hoc-quoc-gia-ha-noi .
 
-university:truong-dai-hoc-ngoai-ngu-dai-hoc-quoc-gia-ha-noi a dbo:University,
+university:truong-dai-hoc-ngan-hang-thanh-pho-ho-chi-minh a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
         vnedu:HigherEducationInstitution,
-        vnedu:MemberInstitution,
         vnedu:Organization,
         vnedu:PublicInstitution,
         schema:CollegeOrUniversity,
         schema:EducationalOrganization,
         schema:Organization ;
-    skos:notation "QHF" ;
-    foaf:homepage <http://www.ulis.vnu.edu.vn/> ;
-    vnedu:hasAlumnus person:hoang-thi-minh-hong,
-        person:le-minh-duc,
-        person:le-quoc-minh ;
+    skos:notation "NHS" ;
+    foaf:homepage <https://hub.edu.vn> ;
+    vnedu:hasAlumnus person:jaysonlei ;
+    vnedu:hasLeader person:doan-thanh-ha,
+        person:nguyen-duc-trung ;
     vnedu:locatedIn country:viet-nam,
-        region:bac-bo ;
+        region:nam-bo ;
+    schema:employee person:doan-thanh-ha,
+        person:nguyen-duc-trung ;
     schema:location country:viet-nam,
-        province:ha-noi,
-        region:bac-bo ;
-    schema:parentOrganization university:dai-hoc-quoc-gia-ha-noi .
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
 
 university:truong-dai-hoc-nong-lam-dai-hoc-thai-nguyen a dbo:University,
         foaf:Organization,
@@ -13477,28 +13641,6 @@ university:truong-dai-hoc-nong-lam-dai-hoc-thai-nguyen a dbo:University,
     vnedu:locatedIn country:viet-nam,
         region:bac-bo ;
     schema:employee person:tran-van-dien ;
-    schema:location country:viet-nam,
-        province:thai-nguyen,
-        region:bac-bo ;
-    schema:parentOrganization university:dai-hoc-thai-nguyen .
-
-university:truong-dai-hoc-su-pham-dai-hoc-thai-nguyen a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:MemberInstitution,
-        vnedu:Organization,
-        vnedu:PublicInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    foaf:homepage <http://tnue.edu.vn> ;
-    vnedu:hasAlumnus person:hung-m-nguyen,
-        person:vinh-d-nguyen ;
-    vnedu:hasLeader person:mai-xuan-truong ;
-    vnedu:locatedIn country:viet-nam,
-        region:bac-bo ;
-    schema:employee person:mai-xuan-truong ;
     schema:location country:viet-nam,
         province:thai-nguyen,
         region:bac-bo ;
@@ -13613,6 +13755,30 @@ university:truong-dai-hoc-hang-hai-viet-nam a dbo:University,
         province:hai-phong,
         region:bac-bo .
 
+university:truong-dai-hoc-ngoai-ngu-dai-hoc-quoc-gia-ha-noi a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    skos:notation "QHF" ;
+    foaf:homepage <http://www.ulis.vnu.edu.vn/> ;
+    vnedu:hasAlumnus person:hoang-thi-minh-hong,
+        person:le-minh-duc,
+        person:le-quoc-minh ;
+    vnedu:hasLeader person:do-tuan-minh ;
+    vnedu:locatedIn country:viet-nam,
+        region:bac-bo ;
+    schema:employee person:do-tuan-minh ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo ;
+    schema:parentOrganization university:dai-hoc-quoc-gia-ha-noi .
+
 university:truong-dai-hoc-su-pham-dai-hoc-hue a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
@@ -13636,30 +13802,29 @@ university:truong-dai-hoc-su-pham-dai-hoc-hue a dbo:University,
         region:trung-bo ;
     schema:parentOrganization university:dai-hoc-hue .
 
-university:truong-dai-hoc-y-duoc-thai-binh a dbo:University,
+university:truong-dai-hoc-su-pham-dai-hoc-thai-nguyen a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
         vnedu:HigherEducationInstitution,
+        vnedu:MemberInstitution,
         vnedu:Organization,
         vnedu:PublicInstitution,
         schema:CollegeOrUniversity,
         schema:EducationalOrganization,
         schema:Organization ;
-    skos:notation "YTB" ;
-    foaf:homepage <http://www.tbump.edu.vn/> ;
-    vnedu:hasAlumnus person:bui-xuan-huan,
-        person:cu-huy-dao,
-        person:pham-thi-dung,
-        person:phan-sok ;
-    vnedu:hasLeader person:nguyen-duy-cuong ;
+    foaf:homepage <http://tnue.edu.vn> ;
+    vnedu:hasAlumnus person:hung-m-nguyen,
+        person:vinh-d-nguyen ;
+    vnedu:hasLeader person:ha-tran-phuong,
+        person:mai-xuan-truong ;
     vnedu:locatedIn country:viet-nam,
-        province:hung-yen,
         region:bac-bo ;
-    schema:employee person:nguyen-duy-cuong ;
+    schema:employee person:ha-tran-phuong,
+        person:mai-xuan-truong ;
     schema:location country:viet-nam,
-        province:hung-yen,
-        province:thai-binh,
-        region:bac-bo .
+        province:thai-nguyen,
+        region:bac-bo ;
+    schema:parentOrganization university:dai-hoc-thai-nguyen .
 
 field:748 a skos:Concept ;
     skos:notation "748" .
@@ -13735,29 +13900,6 @@ university:hoc-vien-luc-quan a foaf:Organization,
         province:lam-dong,
         region:trung-bo .
 
-university:truong-dai-hoc-kien-truc-thanh-pho-ho-chi-minh a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:Organization,
-        vnedu:PublicInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    skos:notation "KTS" ;
-    foaf:homepage <https://ump.edu.vn/> ;
-    vnedu:hasAlumnus person:hieu-nguyen-van,
-        person:midu,
-        person:nguyen-thi-thu-trang,
-        person:tran-thi-ngu-ngon ;
-    vnedu:hasLeader person:pham-trong-thuat ;
-    vnedu:locatedIn country:viet-nam,
-        region:nam-bo ;
-    schema:employee person:pham-trong-thuat ;
-    schema:location country:viet-nam,
-        province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
-
 university:truong-dai-hoc-luat-thanh-pho-ho-chi-minh a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
@@ -13777,29 +13919,6 @@ university:truong-dai-hoc-luat-thanh-pho-ho-chi-minh a dbo:University,
     vnedu:locatedIn country:viet-nam,
         region:nam-bo ;
     schema:employee person:le-truong-son ;
-    schema:location country:viet-nam,
-        province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
-
-university:truong-dai-hoc-quoc-te-rmit-viet-nam a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:Organization,
-        vnedu:PublicInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    foaf:homepage <http://www.rmit.edu.vn> ;
-    vnedu:hasAlumnus person:chi-pu,
-        person:cris-phan,
-        person:duc-anh-hoang,
-        person:duy-dang-pham,
-        person:mai-phuong-thuy,
-        person:thuy-van,
-        person:vu-hoang-my ;
-    vnedu:locatedIn country:viet-nam,
-        region:nam-bo ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo .
@@ -13825,6 +13944,33 @@ university:truong-dai-hoc-thuy-loi a dbo:University,
     schema:employee person:nguyen-trung-viet ;
     schema:location country:viet-nam,
         province:ha-noi,
+        region:bac-bo .
+
+university:truong-dai-hoc-y-duoc-thai-binh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    skos:notation "YTB" ;
+    foaf:homepage <http://www.tbump.edu.vn/> ;
+    vnedu:hasAlumnus person:bui-xuan-huan,
+        person:cu-huy-dao,
+        person:pham-thi-dung,
+        person:phan-sok ;
+    vnedu:hasLeader person:nguyen-duy-cuong,
+        person:nguyen-quoc-tien ;
+    vnedu:locatedIn country:viet-nam,
+        province:hung-yen,
+        region:bac-bo ;
+    schema:employee person:nguyen-duy-cuong,
+        person:nguyen-quoc-tien ;
+    schema:location country:viet-nam,
+        province:hung-yen,
+        province:thai-binh,
         region:bac-bo .
 
 province:can-tho a vnedu:AdministrativeUnit,
@@ -13922,6 +14068,56 @@ university:truong-dai-hoc-giao-thong-van-tai a dbo:University,
         province:ha-noi,
         region:bac-bo .
 
+university:truong-dai-hoc-kien-truc-thanh-pho-ho-chi-minh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    skos:notation "KTS" ;
+    foaf:homepage <https://ump.edu.vn/> ;
+    vnedu:hasAlumnus person:hieu-nguyen-van,
+        person:midu,
+        person:nguyen-thi-thu-trang,
+        person:tran-thi-ngu-ngon ;
+    vnedu:hasLeader person:hoang-bac-an,
+        person:pham-trong-thuat ;
+    vnedu:locatedIn country:viet-nam,
+        region:nam-bo ;
+    schema:employee person:hoang-bac-an,
+        person:pham-trong-thuat ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+
+university:truong-dai-hoc-quoc-te-rmit-viet-nam a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    foaf:homepage <http://www.rmit.edu.vn> ;
+    vnedu:hasAlumnus person:chi-pu,
+        person:cris-phan,
+        person:duc-anh-hoang,
+        person:duy-dang-pham,
+        person:mai-phuong-thuy,
+        person:thuy-van,
+        person:vu-hoang-my ;
+    vnedu:hasLeader person:peter-coloe ;
+    vnedu:locatedIn country:viet-nam,
+        region:nam-bo ;
+    schema:employee person:peter-coloe ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+
 university:truong-dai-hoc-sai-gon a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
@@ -13999,31 +14195,6 @@ province:hai-phong a vnedu:AdministrativeUnit,
         schema:AdministrativeArea ;
     vnedu:mergedFrom province:hai-duong ;
     vnedu:partOf country:viet-nam .
-
-university:truong-dai-hoc-lam-nghiep a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:Organization,
-        vnedu:PublicInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    foaf:homepage <http://en.vnuf.edu.vn/home> ;
-    vnedu:hasAlumnus person:chu-van-cuong,
-        person:duong-h-nong,
-        person:kim-sara-wagner,
-        person:le-van-hai,
-        person:nghia-van-ha,
-        person:thich-minh-tue,
-        person:vu-manh-tuong ;
-    vnedu:hasLeader person:pham-van-dien ;
-    vnedu:locatedIn country:viet-nam,
-        region:bac-bo ;
-    schema:employee person:pham-van-dien ;
-    schema:location country:viet-nam,
-        province:ha-noi,
-        region:bac-bo .
 
 university:truong-dai-hoc-my-thuat-cong-nghiep a dbo:University,
         foaf:Organization,
@@ -14107,7 +14278,7 @@ province:thai-nguyen a vnedu:AdministrativeUnit,
     vnedu:mergedFrom province:bac-kan ;
     vnedu:partOf country:viet-nam .
 
-university:truong-dai-hoc-kien-truc-ha-noi a dbo:University,
+university:truong-dai-hoc-lam-nghiep a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
         vnedu:HigherEducationInstitution,
@@ -14116,19 +14287,20 @@ university:truong-dai-hoc-kien-truc-ha-noi a dbo:University,
         schema:CollegeOrUniversity,
         schema:EducationalOrganization,
         schema:Organization ;
-    skos:notation "KTA" ;
-    foaf:homepage <http://hau.edu.vn/> ;
-    vnedu:hasAlumnus person:dang-quoc-khanh,
-        person:do-duc-duy,
-        person:duong-hoang-anh,
-        person:nguyen-ha-nam,
-        person:pham-hong-ha,
-        person:pham-ngoc-lan,
-        person:tran-van-khai,
-        person:tran-viet-anh,
-        person:trinh-xuan-thanh ;
+    foaf:homepage <http://en.vnuf.edu.vn/home> ;
+    vnedu:hasAlumnus person:chu-van-cuong,
+        person:duong-h-nong,
+        person:kim-sara-wagner,
+        person:le-van-hai,
+        person:nghia-van-ha,
+        person:thich-minh-tue,
+        person:vu-manh-tuong ;
+    vnedu:hasLeader person:cao-quoc-an,
+        person:pham-van-dien ;
     vnedu:locatedIn country:viet-nam,
         region:bac-bo ;
+    schema:employee person:cao-quoc-an,
+        person:pham-van-dien ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo .
@@ -14214,7 +14386,7 @@ university:truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-ha-noi a 
         province:ha-noi,
         region:bac-bo .
 
-university:truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh a dbo:University,
+university:truong-dai-hoc-kien-truc-ha-noi a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
         vnedu:HigherEducationInstitution,
@@ -14223,23 +14395,24 @@ university:truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh a dbo:University,
         schema:CollegeOrUniversity,
         schema:EducationalOrganization,
         schema:Organization ;
-    skos:notation "SPS" ;
-    vnedu:hasAlumnus person:dai-nam-le,
-        person:duy-khoi-nguyen,
-        person:le-bin-ho,
-        person:ly-lan,
-        person:nguyen-hieu-thao,
-        person:nguyen-hung-quoc,
-        person:thanh-c-ho,
-        person:thuc-duy-le,
-        person:van-phuc-dinh ;
-    vnedu:hasLeader person:huynh-van-son ;
+    skos:notation "KTA" ;
+    foaf:homepage <http://hau.edu.vn/> ;
+    vnedu:hasAlumnus person:dang-quoc-khanh,
+        person:do-duc-duy,
+        person:duong-hoang-anh,
+        person:nguyen-ha-nam,
+        person:pham-hong-ha,
+        person:pham-ngoc-lan,
+        person:tran-van-khai,
+        person:tran-viet-anh,
+        person:trinh-xuan-thanh ;
+    vnedu:hasLeader person:vu-ngoc-anh ;
     vnedu:locatedIn country:viet-nam,
-        region:nam-bo ;
-    schema:employee person:huynh-van-son ;
+        region:bac-bo ;
+    schema:employee person:vu-ngoc-anh ;
     schema:location country:viet-nam,
-        province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        province:ha-noi,
+        region:bac-bo .
 
 university:hoc-vien-an-ninh-nhan-dan a foaf:Organization,
         vnedu:EducationalOrganization,
@@ -14322,6 +14495,35 @@ university:truong-dai-hoc-bach-khoa-dai-hoc-da-nang a dbo:University,
         region:trung-bo ;
     schema:parentOrganization university:dai-hoc-da-nang .
 
+university:truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    skos:notation "SPS" ;
+    vnedu:hasAlumnus person:dai-nam-le,
+        person:duy-khoi-nguyen,
+        person:le-bin-ho,
+        person:ly-lan,
+        person:nguyen-hieu-thao,
+        person:nguyen-hung-quoc,
+        person:thanh-c-ho,
+        person:thuc-duy-le,
+        person:van-phuc-dinh ;
+    vnedu:hasLeader person:huynh-van-son,
+        person:nguyen-thi-minh-hong ;
+    vnedu:locatedIn country:viet-nam,
+        region:nam-bo ;
+    schema:employee person:huynh-van-son,
+        person:nguyen-thi-minh-hong ;
+    schema:location country:viet-nam,
+        province:thanh-pho-ho-chi-minh,
+        region:nam-bo .
+
 university:truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-thanh-pho-ho-chi-min a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
@@ -14343,10 +14545,12 @@ university:truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-dai-hoc-quoc-gia-thanh-pho
         person:nguyen-thuc-thuy-tien,
         person:orange,
         person:tran-van-hiep ;
-    vnedu:hasLeader person:ngo-thi-phuong-lan ;
+    vnedu:hasLeader person:le-thi-ngoc-diep,
+        person:ngo-thi-phuong-lan ;
     vnedu:locatedIn country:viet-nam,
         region:nam-bo ;
-    schema:employee person:ngo-thi-phuong-lan ;
+    schema:employee person:le-thi-ngoc-diep,
+        person:ngo-thi-phuong-lan ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -14532,37 +14736,6 @@ university:truong-dai-hoc-cong-nghe-dai-hoc-quoc-gia-ha-noi a dbo:University,
         region:bac-bo ;
     schema:parentOrganization university:dai-hoc-quoc-gia-ha-noi .
 
-university:truong-dai-hoc-xay-dung-ha-noi a dbo:University,
-        foaf:Organization,
-        vnedu:EducationalOrganization,
-        vnedu:HigherEducationInstitution,
-        vnedu:Organization,
-        vnedu:PublicInstitution,
-        schema:CollegeOrUniversity,
-        schema:EducationalOrganization,
-        schema:Organization ;
-    foaf:homepage <http://nuce.edu.vn> ;
-    vnedu:hasAlumnus person:dinh-pham-van,
-        person:giang-hoang-minh,
-        person:huyen-t-t-dang,
-        person:m-t-vu,
-        person:nguyen-van-tuan,
-        person:nhat-duc-hoang,
-        person:quoc-tri-phung,
-        person:thang-pham,
-        person:thi-thuy-pham,
-        person:tran-tuan-viet,
-        person:trinh-dinh-dung,
-        person:trinh-xuan-truong,
-        person:vi-duc-tho,
-        person:viet-nguyen,
-        person:vu-hieu-nguyen ;
-    vnedu:locatedIn country:viet-nam,
-        region:bac-bo ;
-    schema:location country:viet-nam,
-        province:ha-noi,
-        region:bac-bo .
-
 university:truong-dai-hoc-da-lat a dbo:University,
         foaf:Organization,
         vnedu:EducationalOrganization,
@@ -14627,6 +14800,39 @@ university:truong-dai-hoc-quoc-te-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh a dbo:U
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
     schema:parentOrganization university:dai-hoc-quoc-gia-thanh-pho-ho-chi-minh .
+
+university:truong-dai-hoc-xay-dung-ha-noi a dbo:University,
+        foaf:Organization,
+        vnedu:EducationalOrganization,
+        vnedu:HigherEducationInstitution,
+        vnedu:Organization,
+        vnedu:PublicInstitution,
+        schema:CollegeOrUniversity,
+        schema:EducationalOrganization,
+        schema:Organization ;
+    foaf:homepage <http://nuce.edu.vn> ;
+    vnedu:hasAlumnus person:dinh-pham-van,
+        person:giang-hoang-minh,
+        person:huyen-t-t-dang,
+        person:m-t-vu,
+        person:nguyen-van-tuan,
+        person:nhat-duc-hoang,
+        person:quoc-tri-phung,
+        person:thang-pham,
+        person:thi-thuy-pham,
+        person:tran-tuan-viet,
+        person:trinh-dinh-dung,
+        person:trinh-xuan-truong,
+        person:vi-duc-tho,
+        person:viet-nguyen,
+        person:vu-hieu-nguyen ;
+    vnedu:hasLeader person:hoang-tung ;
+    vnedu:locatedIn country:viet-nam,
+        region:bac-bo ;
+    schema:employee person:hoang-tung ;
+    schema:location country:viet-nam,
+        province:ha-noi,
+        region:bac-bo .
 
 province:hue a vnedu:AdministrativeUnit,
         vnedu:Province,
@@ -14740,10 +14946,12 @@ university:truong-dai-hoc-ha-noi a dbo:University,
         person:tran-t-ha,
         person:van-nguyen,
         person:van-trung-chu ;
-    vnedu:hasLeader person:nguyen-van-trao ;
+    vnedu:hasLeader person:nguyen-van-trao,
+        person:pham-ngoc-thach-2 ;
     vnedu:locatedIn country:viet-nam,
         region:bac-bo ;
-    schema:employee person:nguyen-van-trao ;
+    schema:employee person:nguyen-van-trao,
+        person:pham-ngoc-thach-2 ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo .
@@ -14769,14 +14977,16 @@ university:truong-dai-hoc-ngoai-thuong a dbo:University,
         person:vu-tien-loc,
         person:vuong-dam-minh ;
     vnedu:hasBranch university:phan-hieu-truong-dai-hoc-ngoai-thuong-tai-thanh-pho-ho-chi-minh ;
-    vnedu:hasLeader person:pham-thu-huong ;
+    vnedu:hasLeader person:le-thi-thu-thuy,
+        person:pham-thu-huong ;
     vnedu:locatedIn country:viet-nam,
         region:bac-bo ;
     vnedu:trainsMajor major:7220201,
         major:7310101,
         major:7340101,
         major:7340201 ;
-    schema:employee person:pham-thu-huong ;
+    schema:employee person:le-thi-thu-thuy,
+        person:pham-thu-huong ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo .
@@ -15612,14 +15822,16 @@ university:truong-dai-hoc-khoa-hoc-tu-nhien-dai-hoc-quoc-gia-ha-noi a dbo:Univer
         person:van-tuan-vu,
         person:vu-hoai-nam,
         person:yet-nguyen ;
-    vnedu:hasLeader person:le-thanh-son-2 ;
+    vnedu:hasLeader person:le-thanh-son-2,
+        person:vu-hoang-linh ;
     vnedu:locatedIn country:viet-nam,
         region:bac-bo ;
     vnedu:trainsMajor major:7420201,
         major:7440102,
         major:7440112,
         major:7460101 ;
-    schema:employee person:le-thanh-son-2 ;
+    schema:employee person:le-thanh-son-2,
+        person:vu-hoang-linh ;
     schema:location country:viet-nam,
         province:ha-noi,
         region:bac-bo ;

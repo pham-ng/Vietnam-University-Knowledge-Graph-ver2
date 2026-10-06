@@ -30,131 +30,179 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-hoa-sen",
-  "@type": [
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:PrivateInstitution",
-    "vnedu:HigherEducationInstitution"
-  ],
-  "foaf:homepage": {
-    "@id": "https://www.hoasen.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Hoa_Sen_University"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-hoa-sen",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PrivateInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Hoa Sen (HSU) là một trường đại học của Việt Nam đào tạo các ngành kinh tế, kinh doanh và quản lý, du lịch, công nghệ, thiết kế nghệ thuật và ngôn ngữ."
+      },
+      "foaf:homepage": {
+        "@id": "https://www.hoasen.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hoa_Sen"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/Hoa_Sen_University"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.770454"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.692519"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/05pq46g90"
+        },
+        {
+          "@id": "dbr:Hoa_Sen_University"
+        },
+        {
+          "@id": "wd:Q1002930"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75551176"
+        },
+        {
+          "@id": "wd:Q1002930"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Hoa Sen"
+        },
+        {
+          "@language": "en",
+          "@value": "Hoa Sen University"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-huy-nhut"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1991-08-12"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/7/79/HSU-B-VIE.png"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/a/af/HSU-B-ENG.png"
+      },
+      "schema:parentOrganization": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tap-doan-giao-duc-nguyen-hoang"
+      },
+      "schema:telephone": "028 37091991",
+      "skos:altLabel": "Hoa Sen University, Université Hoa Sen",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Hoa Sen"
+      },
+      "vnedu:address": "Trụ sở chính / Cơ sở 1: 8 Nguyễn Văn Tráng, P. Bến Thành, Thành phố Hồ Chí Minh",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1991"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thuc-thuy-tien"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-ton"
+        }
+      ],
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-huy-nhut"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường được thành lập năm 1991 với tên gọi Trường Nghiệp vụ Tin học và Quản lý Hoa Sen. Năm 1994, trường Hoa Sen trở thành trường bán công. Năm 1996, trường đã chuyển trụ sở đến tòa nhà số 8 Nguyễn Văn Tráng.\n\nNăm 1999, Thủ tướng Chính phủ ra quyết định công nhận thành lập Trường Cao đẳng Bán công Hoa Sen. Ngày 30 tháng 11 năm 2006, trường được nâng cấp thành Trường Đại học Hoa Sen. Năm 2016, Trường Đại học Hoa Sen được cấp phép đào tạo thạc sĩ chuyên ngành Quản trị Kinh doanh.\n\nNăm 2018, Tập đoàn giáo dục Nguyễn Hoàng mua lại Trường Đại học Hoa Sen."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Tôn trọng sự khác biệt"
+      },
+      "vnedu:ownedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tap-doan-giao-duc-nguyen-hoang"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PrivateOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-huy-nhut"
+      },
+      "vnedu:website": {
+        "@id": "https://www.hoasen.edu.vn/"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hoa_Sen"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/7/79/HSU-B-VIE.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Trandothoainhan",
+      "schema:license": "CC0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:HSU-B-VIE.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/HSU-B-VIE.png/330px-HSU-B-VIE.png"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/a/af/HSU-B-ENG.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Trandothoainhan",
+      "schema:license": "CC0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:HSU-B-ENG.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/HSU-B-ENG.png/330px-HSU-B-ENG.png"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.770454"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.692519"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "dbr:Hoa_Sen_University"
-    },
-    {
-      "@id": "https://ror.org/05pq46g90"
-    },
-    {
-      "@id": "wd:Q1002930"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75551176"
-    },
-    {
-      "@id": "wd:Q1002930"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Hoa Sen University"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Hoa Sen"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-huy-nhut"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    }
-  ],
-  "schema:parentOrganization": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tap-doan-giao-duc-nguyen-hoang"
-  },
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Hoa Sen"
-  },
-  "vnedu:address": "Trụ sở chính / Cơ sở 1: 8 Nguyễn Văn Tráng, P. Bến Thành, Thành phố Hồ Chí Minh",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1991"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thuc-thuy-tien"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-ton"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-huy-nhut"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Tôn trọng sự khác biệt"
-  },
-  "vnedu:ownedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tap-doan-giao-duc-nguyen-hoang"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PrivateOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-huy-nhut"
-  },
-  "vnedu:website": {
-    "@id": "https://www.hoasen.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.770454,106.692519],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.770454,106.692519],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -173,7 +221,9 @@
   <a href="truong-dai-hoc-hoa-sen.ttl">Turtle</a> · <a href="truong-dai-hoc-hoa-sen.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-hoa-sen">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 20 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Hoa Sen (HSU) là một trường đại học của Việt Nam đào tạo các ngành kinh tế, kinh doanh và quản lý, du lịch, công nghệ, thiết kế nghệ thuật và ngôn ngữ.</p><h2>Lịch sử</h2><p>Trường được thành lập năm 1991 với tên gọi Trường Nghiệp vụ Tin học và Quản lý Hoa Sen. Năm 1994, trường Hoa Sen trở thành trường bán công. Năm 1996, trường đã chuyển trụ sở đến tòa nhà số 8 Nguyễn Văn Tráng.</p><p>Năm 1999, Thủ tướng Chính phủ ra quyết định công nhận thành lập Trường Cao đẳng Bán công Hoa Sen. Ngày 30 tháng 11 năm 2006, trường được nâng cấp thành Trường Đại học Hoa Sen. Năm 2016, Trường Đại học Hoa Sen được cấp phép đào tạo thạc sĩ chuyên ngành Quản trị Kinh doanh.</p><details><summary>Đọc tiếp (1 đoạn)</summary><p>Năm 2018, Tập đoàn giáo dục Nguyễn Hoàng mua lại Trường Đại học Hoa Sen.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75551176">«Trường Đại học Hoa Sen»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75551176), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Hoa Sen</div><figure class="ibox-logo"><a href="https://commons.wikimedia.org/wiki/File:HSU-B-ENG.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/HSU-B-ENG.png/330px-HSU-B-ENG.png" alt="Biểu trưng Trường Đại học Hoa Sen" loading="lazy"></a><figcaption>CC0 · Trandothoainhan</figcaption></figure><table><tr><th>Tên khác</th><td>Hoa Sen University, Université Hoa Sen</td></tr><tr><th>Tên tiếng Anh</th><td>Hoa Sen University</td></tr><tr><th>Loại hình</th><td>Trường đại học · Tư thục</td></tr><tr><th>Thành lập</th><td>12 tháng 8 năm 1991</td></tr><tr><th>Tổ chức mẹ</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tap-doan-giao-duc-nguyen-hoang">Tập đoàn Giáo dục Nguyễn Hoàng</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-huy-nhut">Nguyễn Hữu Huy Nhựt</a></td></tr><tr><th>Địa chỉ</th><td>Trụ sở chính / Cơ sở 1: 8 Nguyễn Văn Tráng, P. Bến Thành, Thành phố Hồ Chí Minh</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Tôn trọng sự khác biệt</i></td></tr><tr><th>Điện thoại</th><td>028 37091991</td></tr><tr><th>Website</th><td><a href="https://www.hoasen.edu.vn/">hoasen.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:HSU-B-VIE.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/HSU-B-VIE.png/330px-HSU-B-VIE.png" alt="Ảnh Trường Đại học Hoa Sen" loading="lazy"></a><figcaption>CC0 · Trandothoainhan</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -203,11 +253,26 @@
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-huy-nhut">Nguyễn Hữu Huy Nhựt</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1991-08-12 <span class="lang">xsd:date</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/7/79/HSU-B-VIE.png">&lt;https://upload.wikimedia.org/wikipedia/commons/7/79/HSU-B-VIE.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh">Thành phố Hồ Chí Minh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/a/af/HSU-B-ENG.png">&lt;https://upload.wikimedia.org/wikipedia/commons/a/af/HSU-B-ENG.png&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:parentOrganization<small>schema:parentOrganization</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/tap-doan-giao-duc-nguyen-hoang">Tập đoàn Giáo dục Nguyễn Hoàng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>028 37091991</div>
+</td></tr>
+<tr><td class="p">tên khác<small>skos:altLabel</small></td><td>
+<div>Hoa Sen University, Université Hoa Sen</div>
 </td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>Trụ sở chính / Cơ sở 1: 8 Nguyễn Văn Tráng, P. Bến Thành, Thành phố Hồ Chí Minh</div>
@@ -247,11 +312,11 @@
 <tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-ton">Hoàng Tôn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thuc-thuy-tien">Nguyễn Thúc Thùy Tiên</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
-<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-huy-nhut">Nguyễn Hữu Huy Nhựt</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-ton">Hoàng Tôn</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thuc-thuy-tien">Nguyễn Thúc Thùy Tiên</a></div>
+</td></tr>
+<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-huu-huy-nhut">Nguyễn Hữu Huy Nhựt</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

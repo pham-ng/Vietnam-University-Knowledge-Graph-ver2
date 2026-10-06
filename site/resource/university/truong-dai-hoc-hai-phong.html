@@ -30,116 +30,151 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-hai-phong",
-  "@type": [
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.dhhp.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_H%E1%BA%A3i_Ph%C3%B2ng"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/c/c7/DHHP.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Đại học Hải Phòng",
+      "schema:license": "KTD",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:DHHP.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/c/c7/DHHP.png/330px-DHHP.png"
+      }
     },
     {
-      "@id": "https://en.wikipedia.org/wiki/Haiphong_University"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-hai-phong",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Hải Phòng (tiếng Anh: Haiphong University), được thành lập tại Hải Phòng năm 1959 với tên cũ là Phân hiệu Trường Đại học Tại chức Hải Phòng. Năm 2000, Trường Đại học Tại chức Hải Phòng sáp nhập với một số cơ sở đào tạo chuyên nghiệp khác của Hải Phòng thành Trường Đại học Sư phạm Hải Phòng. Ngày 9 tháng 4 năm 2004, Thủ tướng chính phủ đã ký quyết định số 60/2004/QĐ-TTg, đổi tên Trường Đại học Sư phạm Hải Phòng thành Trường Đại học Hải Phòng."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.dhhp.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/Haiphong_University"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_H%E1%BA%A3i_Ph%C3%B2ng"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "20.8398"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "106.688"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "dbr:Haiphong_University"
+        },
+        {
+          "@id": "https://ror.org/0227kwk61"
+        },
+        {
+          "@id": "wd:Q5638944"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75275955"
+        },
+        {
+          "@id": "wd:Q5638944"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Hai Phong University"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Hải Phòng"
+        }
+      ],
+      "schema:email": "info@dhhp.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-xuan-hai"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1959-07-22"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/c/c7/DHHP.png"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
+        }
+      ],
+      "schema:telephone": "+84 225 3876338",
+      "skos:altLabel": "Trường Đại học Tại Chức Hải Phòng, Trường Đại học Sư phạm Hải Phòng, THP",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Hải Phòng"
+      },
+      "vnedu:address": "171 Phan Đăng Lưu, phường Phù Liễn, Hải Phòng, Việt Nam",
+      "vnedu:campus": "28,78 ha",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1959"
+      },
+      "vnedu:hasAlumnus": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hai-viet-nguyen"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-xuan-hai"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Hải Phòng ngày nay là sự hợp thành từ nhiều trường trong hệ thống các đơn vị đào tạo, bồi dưỡng ở Hải Phòng mà đơn vị tiền thân đầu tiên là Trường Sư phạm trung cấp Hải Phòng được thành lập theo Nghị định số 359-NĐ, ngày 22 tháng 7 năm 1959 của Bộ trưởng Bộ Giáo dục về việc thành lập các trường sư phạm trung cấp ở các tỉnh, liên tỉnh. Trường Sư phạm trung cấp Hải Phòng có nhiệm vụ đào tạo giáo viên cấp 2 cho các tỉnh Hải Dương, Hải Phòng và Kiến An (nay là thành phố Hải Phòng), Hồng Quảng và Hải Ninh (nay là tỉnh Quảng Ninh).\n\nSau khi thành lập, nhà trường đã tập trung làm tốt công tác đào tạo, bồi dưỡng đội ngũ giáo viên phổ thông, góp phần tích cực cho quá trình phát triển sự nghiệp giáo dục ở các địa phương trong những năm đầu của công cuộc xây dựng Chủ nghĩa xã hội ở Miền Bắc và kháng chiến chống đế quốc Mỹ, giải phóng Miền Nam, thống nhất đất nước. Hệ thống các đơn vị đào tạo, bồi dưỡng giáo viên ở Hải Phòng đã hình thành từ các trường đào tạo và bồi dưỡng sư phạm theo các cấp học từ bậc sơ cấp, trung cấp, 10+1, 10+2, 10+3 tới cao đẳng. Năm 2000, Thủ tướng Chính phủ ra quyết định thành lập trường Đại học Sư phạm Hải Phòng trên cơ sở sáp nhập Trường Cao đẳng sư phạm Hải Phòng, Trường Đại học tại chức Hải Phòng, Trường Cán bộ quản lý giáo dục và Bồi dưỡng giáo viên Hải Phòng và Trung tâm Ngoại ngữ Hải Phòng. Ngày 09 tháng 4 năm 2004, Thủ tướng Chính phủ ra quyết định số 60/2004/QĐ-TTg đổi tên Trường Đại học Sư phạm Hải Phòng thành Trường Đại học Hải Phòng."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-xuan-hai"
+      },
+      "vnedu:website": {
+        "@id": "http://www.dhhp.edu.vn/"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "20.8398"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "106.688"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "dbr:Haiphong_University"
-    },
-    {
-      "@id": "wd:Q5638944"
-    },
-    {
-      "@id": "https://ror.org/0227kwk61"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q5638944"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75275955"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Hai Phong University"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Hải Phòng"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-xuan-hai"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Hải Phòng"
-  },
-  "vnedu:address": "171 Phan Đăng Lưu, phường Phù Liễn, Hải Phòng, Việt Nam",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1959"
-  },
-  "vnedu:hasAlumnus": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hai-viet-nguyen"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-xuan-hai"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-xuan-hai"
-  },
-  "vnedu:website": {
-    "@id": "http://www.dhhp.edu.vn/"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([20.8398,106.688],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([20.8398,106.688],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -158,7 +193,9 @@
   <a href="truong-dai-hoc-hai-phong.ttl">Turtle</a> · <a href="truong-dai-hoc-hai-phong.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-hai-phong">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 18 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Hải Phòng (tiếng Anh: Haiphong University), được thành lập tại Hải Phòng năm 1959 với tên cũ là Phân hiệu Trường Đại học Tại chức Hải Phòng. Năm 2000, Trường Đại học Tại chức Hải Phòng sáp nhập với một số cơ sở đào tạo chuyên nghiệp khác của Hải Phòng thành Trường Đại học Sư phạm Hải Phòng. Ngày 9 tháng 4 năm 2004, Thủ tướng chính phủ đã ký quyết định số 60/2004/QĐ-TTg, đổi tên Trường Đại học Sư phạm Hải Phòng thành Trường Đại học Hải Phòng.</p><h2>Lịch sử</h2><p>Trường Đại học Hải Phòng ngày nay là sự hợp thành từ nhiều trường trong hệ thống các đơn vị đào tạo, bồi dưỡng ở Hải Phòng mà đơn vị tiền thân đầu tiên là Trường Sư phạm trung cấp Hải Phòng được thành lập theo Nghị định số 359-NĐ, ngày 22 tháng 7 năm 1959 của Bộ trưởng Bộ Giáo dục về việc thành lập các trường sư phạm trung cấp ở các tỉnh, liên tỉnh. Trường Sư phạm trung cấp Hải Phòng có nhiệm vụ đào tạo giáo viên cấp 2 cho các tỉnh Hải Dương, Hải Phòng và Kiến An (nay là thành phố Hải Phòng), Hồng Quảng và Hải Ninh (nay là tỉnh Quảng Ninh).</p><p>Sau khi thành lập, nhà trường đã tập trung làm tốt công tác đào tạo, bồi dưỡng đội ngũ giáo viên phổ thông, góp phần tích cực cho quá trình phát triển sự nghiệp giáo dục ở các địa phương trong những năm đầu của công cuộc xây dựng Chủ nghĩa xã hội ở Miền Bắc và kháng chiến chống đế quốc Mỹ, giải phóng Miền Nam, thống nhất đất nước. Hệ thống các đơn vị đào tạo, bồi dưỡng giáo viên ở Hải Phòng đã hình thành từ các trường đào tạo và bồi dưỡng sư phạm theo các cấp học từ bậc sơ cấp, trung cấp, 10+1, 10+2, 10+3 tới cao đẳng. Năm 2000, Thủ tướng Chính phủ ra quyết định thành lập trường Đại học Sư phạm Hải Phòng trên cơ sở sáp nhập Trường Cao đẳng sư phạm Hải Phòng, Trường Đại học tại chức Hải Phòng, Trường Cán bộ quản lý giáo dục và Bồi dưỡng giáo viên Hải Phòng và Trung tâm Ngoại ngữ Hải Phòng. Ngày 09 tháng 4 năm 2004, Thủ tướng Chính phủ ra quyết định số 60/2004/QĐ-TTg đổi tên Trường Đại học Sư phạm Hải Phòng thành Trường Đại học Hải Phòng.</p><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75275955">«Trường Đại học Hải Phòng»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75275955), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Hải Phòng</div><table><tr><th>Tên khác</th><td>Trường Đại học Tại Chức Hải Phòng, Trường Đại học Sư phạm Hải Phòng, THP</td></tr><tr><th>Tên tiếng Anh</th><td>Hai Phong University</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>22 tháng 7 năm 1959</td></tr><tr><th>Hiệu trưởng</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-xuan-hai">Bùi Xuân Hải</a></td></tr><tr><th>Địa chỉ</th><td>171 Phan Đăng Lưu, phường Phù Liễn, Hải Phòng, Việt Nam</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong">Hải Phòng</a></td></tr><tr><th>Khuôn viên</th><td>28,78 ha</td></tr><tr><th>Điện thoại</th><td>+84 225 3876338</td></tr><tr><th>Email</th><td><a href="mailto:info@dhhp.edu.vn">info@dhhp.edu.vn</a></td></tr><tr><th>Website</th><td><a href="http://www.dhhp.edu.vn/">dhhp.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:DHHP.png" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/c/c7/DHHP.png/330px-DHHP.png" alt="Ảnh Trường Đại học Hải Phòng" loading="lazy"></a><figcaption>KTD · Đại học Hải Phòng</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -185,14 +222,32 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q5638944">wd:Q5638944</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75275955">&lt;https://vi.wikipedia.org/w/index.php?oldid=75275955&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>info@dhhp.edu.vn</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-xuan-hai">Bùi Xuân Hải</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1959-07-22 <span class="lang">xsd:date</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/c/c7/DHHP.png">&lt;https://upload.wikimedia.org/wikipedia/vi/c/c7/DHHP.png&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/hai-phong">Hải Phòng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84 225 3876338</div>
+</td></tr>
+<tr><td class="p">tên khác<small>skos:altLabel</small></td><td>
+<div>Trường Đại học Tại Chức Hải Phòng, Trường Đại học Sư phạm Hải Phòng, THP</div>
+</td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>171 Phan Đăng Lưu, phường Phù Liễn, Hải Phòng, Việt Nam</div>
+</td></tr>
+<tr><td class="p">khuôn viên<small>vnedu:campus</small></td><td>
+<div>28,78 ha</div>
 </td></tr>
 <tr><td class="p">năm thành lập<small>vnedu:foundingYear</small></td><td>
 <div>1959 <span class="lang">xsd:gYear</span></div>
@@ -220,14 +275,14 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-xuan-hai">Bùi Xuân Hải</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hai-viet-nguyen">Hai Viet Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hai-viet-nguyen">Hai Viet Nguyen</a></div>
 </td></tr>
-<tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/hai-viet-nguyen">Hai Viet Nguyen</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+<tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/bui-xuan-hai">Bùi Xuân Hải</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

@@ -30,118 +30,152 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-tai-chinh",
-  "@type": [
-    "vnedu:Academy",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "http://hvtc.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_T%C3%A0i_ch%C3%ADnh_%28Vi%E1%BB%87t_Nam%29"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.075248"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.773553"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q10771904"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75506912"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/a/ae/H%E1%BB%8Dc_vi%E1%BB%87n_t%C3%A0i_ch%C3%ADnh.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Học viện Tài Chính ( Việt Nam)",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:H%E1%BB%8Dc_vi%E1%BB%87n_t%C3%A0i_ch%C3%ADnh.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/a/ae/H%E1%BB%8Dc_vi%E1%BB%87n_t%C3%A0i_ch%C3%ADnh.jpg"
+      }
     },
     {
-      "@id": "wd:Q10771904"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-tai-chinh",
+      "@type": [
+        "vnedu:EducationalOrganization",
+        "schema:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:Academy"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Tài chính (tiếng Anh: Academy of Finance, viết tắt AOF) được thành lập ngày 17 tháng 8 năm 2001 theo Quyết định số 120/2001/QĐ-TTg của Thủ tướng Chính phủ. Học viện trực thuộc Bộ Tài chính và chịu sự quản lý nhà nước của Bộ Giáo dục và Đào tạo, là một trong những trường đại học công lập thuộc khối kinh tế tại Việt Nam."
+      },
+      "foaf:homepage": {
+        "@id": "http://hvtc.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_T%C3%A0i_ch%C3%ADnh_%28Vi%E1%BB%87t_Nam%29"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.075248"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.773553"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q10771904"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10771904"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75506912"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Học viện Tài chính"
+        },
+        {
+          "@language": "en",
+          "@value": "Academy of Finance"
+        }
+      ],
+      "schema:email": "vanphong@hvtc.edu.vn",
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "2001-08-17"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/a/ae/H%E1%BB%8Dc_vi%E1%BB%87n_t%C3%A0i_ch%C3%ADnh.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:telephone": "0243 9331 853",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Tài chính"
+      },
+      "vnedu:address": "58 phố Lê Văn Hiến, phường Đông Ngạc",
+      "vnedu:campus": "5 ha",
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Trường Đại học Tài chính - Kế toán Hà Nội"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1963"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-chinh"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-the-manh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ta-anh-tuan"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-anh-tuan"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-la-thang"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-duc-phoc"
+        }
+      ],
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Tiền thân của trường là Trường cán bộ Tài chính – Kế toán Trung ương được thành lập Ngày 31 tháng 07 năm 1963 theo Quyết định 117/CP của Hội đồng Chính phủ. Địa điểm chính của trường đặt tại số 58 phố Lê Văn Hiến, phường Đức Thắng, quận Bắc Từ Liêm, thành phố Hà Nội. Ngoài ra, trường còn cơ sở mới tại 69 Đức Thắng, Bắc Từ Liêm, Hà Nội và tại 19C ngõ Hàng Cháo, phường Cát Linh, quận Đống Đa, Hà Nội.\n\nSau khi thành lập, do yêu cầu của nền kinh tế cần phải có một đội ngũ cán bộ quản lý và kinh doanh tiền tệ có trình độ đại học thuộc hệ thống ngân hàng, nên đến năm 1964 trường đã đổi tên thành trường Cán bộ Tài chính kế toán Ngân hàng Trung ương.\n\nCông cuộc xây dựng và phát triển kinh tế ngày càng được mở rộng trên phạm vi cả nước đòi hỏi đội ngũ cán bộ quản lý kinh tế phải được tăng cường cả về số lượng và chất lượng, ngày 27 tháng 10 năm 1976 Hội đồng Chính phủ đã ra Quyết định 226/CP đổi tên trường từ trường Cán bộ Tài chính Kế toán Ngân hàng Trung ương, thành trường Đại học Tài chính – Kế toán trực thuộc Bộ Tài chính.\n\nQua quá trình hoàn thiện và phát triển trường, đến năm 2001, để thực hiện chiến lược phát triển giáo dục 2001-2010 đề ra, sau khi kết thúc năm học 2000-2002, ngày 17/8/2001, Thủ tướng Chính phủ ra Quyết định số 120/2001/QĐ-TTg về việc thành lập Học viện Tài chính trên cơ sở sáp nhập 3 đơn vị là Trường Đại học Tài chính – Kế toán Hà Nội, Viện nghiên cứu Tài chính và Trung tâm Bồi dưỡng Cán bộ Tài chính. Và Học viện Tài chính đã trở thành tên của trường từ đó đến nay.\n\nHiện tại, Học viện hiện có 750 cán bộ, viên chức trong đó có 453 giảng viên, 54 nghiên cứu viên, 56 giáo sư và phó giáo sư, hơn 170 tiến sĩ, 221 thạc sĩ, 28 nhà giáo nhân dân và nhà giáo ưu tú, từng đào tạo hơn 20.000 sinh viên, học viên, nghiên cứu sinh."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "\"Sinh viên Học viện Tài chính phát huy truyền thống, thi đua học tập, sáng tạo, tình nguyện và hội nhập\""
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:website": {
+        "@id": "http://hvtc.edu.vn"
+      }
     }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Học viện Tài chính"
-    },
-    {
-      "@language": "en",
-      "@value": "Academy of Finance"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Tài chính"
-  },
-  "vnedu:address": "58 phố Lê Văn Hiến, phường Đông Ngạc",
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Trường Đại học Tài chính - Kế toán Hà Nội"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1963"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-chinh"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-anh-tuan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-la-thang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-duc-phoc"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-the-manh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ta-anh-tuan"
-    }
-  ],
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "\"Sinh viên Học viện Tài chính phát huy truyền thống, thi đua học tập, sáng tạo, tình nguyện và hội nhập\""
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:website": {
-    "@id": "http://hvtc.edu.vn"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([21.075248,105.773553],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([21.075248,105.773553],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -160,7 +194,9 @@
   <a href="hoc-vien-tai-chinh.ttl">Turtle</a> · <a href="hoc-vien-tai-chinh.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-tai-chinh">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 19 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Học viện Tài chính (tiếng Anh: Academy of Finance, viết tắt AOF) được thành lập ngày 17 tháng 8 năm 2001 theo Quyết định số 120/2001/QĐ-TTg của Thủ tướng Chính phủ. Học viện trực thuộc Bộ Tài chính và chịu sự quản lý nhà nước của Bộ Giáo dục và Đào tạo, là một trong những trường đại học công lập thuộc khối kinh tế tại Việt Nam.</p><h2>Lịch sử</h2><p>Tiền thân của trường là Trường cán bộ Tài chính – Kế toán Trung ương được thành lập Ngày 31 tháng 07 năm 1963 theo Quyết định 117/CP của Hội đồng Chính phủ. Địa điểm chính của trường đặt tại số 58 phố Lê Văn Hiến, phường Đức Thắng, quận Bắc Từ Liêm, thành phố Hà Nội. Ngoài ra, trường còn cơ sở mới tại 69 Đức Thắng, Bắc Từ Liêm, Hà Nội và tại 19C ngõ Hàng Cháo, phường Cát Linh, quận Đống Đa, Hà Nội.</p><p>Sau khi thành lập, do yêu cầu của nền kinh tế cần phải có một đội ngũ cán bộ quản lý và kinh doanh tiền tệ có trình độ đại học thuộc hệ thống ngân hàng, nên đến năm 1964 trường đã đổi tên thành trường Cán bộ Tài chính kế toán Ngân hàng Trung ương.</p><details><summary>Đọc tiếp (3 đoạn)</summary><p>Công cuộc xây dựng và phát triển kinh tế ngày càng được mở rộng trên phạm vi cả nước đòi hỏi đội ngũ cán bộ quản lý kinh tế phải được tăng cường cả về số lượng và chất lượng, ngày 27 tháng 10 năm 1976 Hội đồng Chính phủ đã ra Quyết định 226/CP đổi tên trường từ trường Cán bộ Tài chính Kế toán Ngân hàng Trung ương, thành trường Đại học Tài chính – Kế toán trực thuộc Bộ Tài chính.</p><p>Qua quá trình hoàn thiện và phát triển trường, đến năm 2001, để thực hiện chiến lược phát triển giáo dục 2001-2010 đề ra, sau khi kết thúc năm học 2000-2002, ngày 17/8/2001, Thủ tướng Chính phủ ra Quyết định số 120/2001/QĐ-TTg về việc thành lập Học viện Tài chính trên cơ sở sáp nhập 3 đơn vị là Trường Đại học Tài chính – Kế toán Hà Nội, Viện nghiên cứu Tài chính và Trung tâm Bồi dưỡng Cán bộ Tài chính. Và Học viện Tài chính đã trở thành tên của trường từ đó đến nay.</p><p>Hiện tại, Học viện hiện có 750 cán bộ, viên chức trong đó có 453 giảng viên, 54 nghiên cứu viên, 56 giáo sư và phó giáo sư, hơn 170 tiến sĩ, 221 thạc sĩ, 28 nhà giáo nhân dân và nhà giáo ưu tú, từng đào tạo hơn 20.000 sinh viên, học viên, nghiên cứu sinh.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75506912">«Học viện Tài chính (Việt Nam)»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75506912), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Học viện Tài chính</div><table><tr><th>Tên tiếng Anh</th><td>Academy of Finance</td></tr><tr><th>Tên cũ</th><td>Trường Đại học Tài chính - Kế toán Hà Nội</td></tr><tr><th>Loại hình</th><td>Học viện · Công lập</td></tr><tr><th>Thành lập</th><td>17 tháng 8 năm 2001 <span class="lang">(mốc sớm nhất giữa các nguồn: 1963)</span></td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-chinh">Bộ Tài chính</a></td></tr><tr><th>Địa chỉ</th><td>58 phố Lê Văn Hiến, phường Đông Ngạc</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Khuôn viên</th><td>5 ha</td></tr><tr><th>Khẩu hiệu</th><td><i>&quot;Sinh viên Học viện Tài chính phát huy truyền thống, thi đua học tập, sáng tạo, tình nguyện và hội nhập&quot;</i></td></tr><tr><th>Điện thoại</th><td>0243 9331 853</td></tr><tr><th>Email</th><td><a href="mailto:vanphong@hvtc.edu.vn">vanphong@hvtc.edu.vn</a></td></tr><tr><th>Website</th><td><a href="http://hvtc.edu.vn">hvtc.edu.vn</a></td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:H%E1%BB%8Dc_vi%E1%BB%87n_t%C3%A0i_ch%C3%ADnh.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/H%E1%BB%8Dc_vi%E1%BB%87n_t%C3%A0i_ch%C3%ADnh.jpg" alt="Ảnh Học viện Tài chính" loading="lazy"></a><figcaption>CC BY-SA 4.0 · Học viện Tài Chính ( Việt Nam)</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -187,11 +223,26 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q10771904">wd:Q10771904</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75506912">&lt;https://vi.wikipedia.org/w/index.php?oldid=75506912&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>vanphong@hvtc.edu.vn</div>
+</td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>2001-08-17 <span class="lang">xsd:date</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/a/ae/H%E1%BB%8Dc_vi%E1%BB%87n_t%C3%A0i_ch%C3%ADnh.jpg">&lt;https://upload.wikimedia.org/wikipedia/commons/a/ae/H%E1%BB%8Dc_vi%E1%BB%87n_t%C3%A0i_ch%C3%ADnh.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>0243 9331 853</div>
+</td></tr>
 <tr><td class="p">địa chỉ<small>vnedu:address</small></td><td>
 <div>58 phố Lê Văn Hiến, phường Đông Ngạc</div>
+</td></tr>
+<tr><td class="p">khuôn viên<small>vnedu:campus</small></td><td>
+<div>5 ha</div>
 </td></tr>
 <tr><td class="p">tên cũ<small>vnedu:formerName</small></td><td>
 <div>Trường Đại học Tài chính - Kế toán Hà Nội <span class="lang">@vi</span></div>
@@ -222,11 +273,11 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-la-thang">Đinh La Thăng</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-duc-phoc">Hồ Đức Phớc</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-the-manh">Nguyễn Thế Mạnh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-anh-tuan">Phạm Anh Tuấn</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ta-anh-tuan">Tạ Anh Tuấn</a></div>
-</td></tr>
 <tr><td class="p">schema:alumniOf<small>schema:alumniOf</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-la-thang">Đinh La Thăng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-duc-phoc">Hồ Đức Phớc</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-the-manh">Nguyễn Thế Mạnh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-anh-tuan">Phạm Anh Tuấn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ta-anh-tuan">Tạ Anh Tuấn</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">cựu sinh viên của<small>vnedu:alumnusOf</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-la-thang">Đinh La Thăng</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ho-duc-phoc">Hồ Đức Phớc</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-the-manh">Nguyễn Thế Mạnh</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-anh-tuan">Phạm Anh Tuấn</a></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/ta-anh-tuan">Tạ Anh Tuấn</a></div>
 </td></tr>
 <tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-tai-chinh">Bộ Tài chính</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>

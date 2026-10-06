@@ -19,9 +19,9 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-tinh",
   "@type": [
-    "vnedu:AdministrativeUnit",
+    "vnedu:Province",
     "schema:AdministrativeArea",
-    "vnedu:Province"
+    "vnedu:AdministrativeUnit"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -41,10 +41,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "dbr:Hà_Tĩnh_province"
+      "@id": "https://sws.geonames.org/1580700/"
     },
     {
-      "@id": "https://sws.geonames.org/1580700/"
+      "@id": "dbr:Hà_Tĩnh_province"
     },
     {
       "@id": "wd:Q33351"
@@ -55,11 +55,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Hà Tĩnh"
     },
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Hà Tĩnh"
     }
   ],
@@ -69,10 +69,10 @@
   },
   "vnedu:partOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "vnedu:population": {

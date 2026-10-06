@@ -19,9 +19,9 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ca-mau",
   "@type": [
-    "schema:AdministrativeArea",
+    "vnedu:AdministrativeUnit",
     "vnedu:Province",
-    "vnedu:AdministrativeUnit"
+    "schema:AdministrativeArea"
   ],
   "foaf:isPrimaryTopicOf": [
     {
@@ -41,13 +41,13 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q33354"
-    },
-    {
       "@id": "dbr:Cà_Mau_province"
     },
     {
       "@id": "https://sws.geonames.org/1905678/"
+    },
+    {
+      "@id": "wd:Q33354"
     }
   ],
   "prov:wasDerivedFrom": {

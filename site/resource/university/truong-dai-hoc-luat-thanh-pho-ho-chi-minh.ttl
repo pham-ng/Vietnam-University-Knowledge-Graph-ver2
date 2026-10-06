@@ -29,6 +29,7 @@ university:truong-dai-hoc-luat-thanh-pho-ho-chi-minh a dbo:University,
         schema:Organization ;
     rdfs:label "Ho Chi Minh City University of Law"@en,
         "Trường Đại học Luật Thành phố Hồ Chí Minh"@vi ;
+    dbo:abstract "Trường Đại học Luật Thành phố Hồ Chí Minh (, ULaw) là trường đại học công lập đào tạo luật pháp của Việt Nam, trực thuộc Bộ Giáo dục và Đào tạo và có trụ sở tại Thành phố Hồ Chí Minh. Trường là một trong hai cơ sở giáo dục trọng điểm đào tạo cán bộ về pháp luật tại Việt Nam theo định hướng của Thủ tướng Chính phủ."@vi ;
     owl:sameAs dbr:Ho_Chi_Minh_City_University_of_Law,
         wd:Q5874003,
         <https://ror.org/033dq6x61> ;
@@ -57,7 +58,15 @@ university:truong-dai-hoc-luat-thanh-pho-ho-chi-minh a dbo:University,
     vnedu:rector person:le-truong-son ;
     vnedu:website <http://www.hcmulaw.edu.vn/> ;
     schema:employee person:le-truong-son ;
+    schema:foundingDate "1996-03-30"^^xsd:date ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/1/12/Logo_ULaw.png> ;
+    schema:telephone "+8428) 9400989" .
+
+<https://upload.wikimedia.org/wikipedia/vi/1/12/Logo_ULaw.png> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_ULaw.png> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/vi/1/12/Logo_ULaw.png> .
 

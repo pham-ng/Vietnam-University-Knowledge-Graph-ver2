@@ -27,6 +27,7 @@ university:truong-dai-hoc-hoa-lu a dbo:University,
         schema:EducationalOrganization,
         schema:Organization ;
     rdfs:label "Trường Đại học Hoa Lư"@vi ;
+    dbo:abstract "Trường Đại học Hoa Lư là cơ sở đào tạo đại học và nghiên cứu khoa học thuộc hệ thống giáo dục quốc dân. Trường trực thuộc Ủy ban nhân dân tỉnh Ninh Bình và chịu sự quản lý nhà nước về giáo dục của Bộ Giáo dục và Đào tạo. Đây là một trường đại học vùng, tuyển sinh trong cả nước."@vi ;
     owl:sameAs wd:Q10829047,
         <https://ror.org/04atxgf14> ;
     geo:lat 20.267428 ;
@@ -47,7 +48,14 @@ university:truong-dai-hoc-hoa-lu a dbo:University,
     vnedu:rector person:vu-van-truong ;
     vnedu:website <http://hluv.edu.vn/> ;
     schema:employee person:vu-van-truong ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/b/bc/Daihochoalu.jpg> ;
     schema:location country:viet-nam,
         province:ninh-binh,
         region:bac-bo .
+
+<https://upload.wikimedia.org/wikipedia/commons/b/bc/Daihochoalu.jpg> a schema:ImageObject ;
+    schema:creditText "nguoicodo (thảo luận)" ;
+    schema:license "Public domain" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Daihochoalu.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Daihochoalu.jpg/330px-Daihochoalu.jpg> .
 

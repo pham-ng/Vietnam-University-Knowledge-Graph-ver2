@@ -17,174 +17,216 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ha-noi",
-  "@type": [
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.hanu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Hanoi_University"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Hanu_logo.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "HITC2289",
+      "schema:license": "CC BY-SA 3.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Hanu_logo.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Hanu_logo.jpg"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0_N%E1%BB%99i"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-ha-noi",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "vnedu:EducationalOrganization",
+        "schema:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Hà Nội (tiếng Anh: Hanoi University, tên viết tắt: HANU) là một cơ sở đào tạo và nghiên cứu ngoại ngữ ở trình độ đại học và sau đại học."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.hanu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_H%C3%A0_N%E1%BB%99i"
+        },
+        {
+          "@id": "https://en.wikipedia.org/wiki/Hanoi_University"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "20.9897"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.7952"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/01mxx0e62"
+        },
+        {
+          "@id": "dbr:Hanoi_University"
+        },
+        {
+          "@id": "wd:Q10829049"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75537962"
+        },
+        {
+          "@id": "wd:Q10829049"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Hanoi University"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Hà Nội"
+        }
+      ],
+      "schema:employee": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-ngoc-thach-2"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-trao"
+        }
+      ],
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Hanu_logo.jpg"
+      },
+      "schema:telephone": "84-4)38544338",
+      "skos:altLabel": "Trường Đại học Ngoại ngữ Thanh Xuân",
+      "skos:notation": "NHF",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Hà Nội"
+      },
+      "vnedu:address": "Km 9, đường Nguyễn Trãi, phường Đại Mỗ",
+      "vnedu:admissionCode": "NHF",
+      "vnedu:councilChair": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-ngoc-thach-2"
+      },
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Trường Đại học Ngoại ngữ Hà Nội"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1959"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quoc-khanh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/long-vu"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-trung-chu"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-thi-thu-hang"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ha-duc-chu"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-trong-trinh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quang-thai-pham"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-cong-pho"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tilak-c-nath"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-minh-chinh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-ngoc-chan"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-hong-giang"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-cong-tung"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoa-nguyen"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-t-ha"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-thang"
+        }
+      ],
+      "vnedu:hasLeader": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-trao"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-ngoc-thach-2"
+        }
+      ],
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường được thành lập ngày 16/7/1959 theo quyết định số 376/NĐ-BGD với tên gọi Trường Ngoại ngữ. Trải qua hơn 60 năm hình thành và phát triển, Nhà trường đã có một số lần được đổi tên theo từng thời kỳ như: Trường Ngoại ngữ (1959-1960), Trường Bổ túc Ngoại ngữ (1960-1967), Trường Đại học Ngoại ngữ (1967-1978), Trường Cao đẳng Bổ túc Ngoại ngữ (1978-1984), Trường Đại học Ngoại ngữ (1984-2006) và từ ngày 15 tháng 9 năm 2006, theo quyết định số 190/2006/QĐ-TTg của Thủ tướng chính phủ, trường chính thức mang tên mới là Trường Đại học Hà Nội (tên giao dịch tiếng Anh là Hanoi University - HANU).\n\nTrường Đại học Hà Nội đã trải qua 04 giai đoạn chính:\n\nNgày 01/11/1959, tại cơ sở của Tổng cục Hậu cần Bộ Quốc phòng dựng tạm bằng tre nứa ở xã Ngọc Thụy - huyện Gia Lâm - Hà Nội, khoá chuyên tu tiếng Nga và tiếng Trung Quốc đầu tiên được khai giảng, Trường Ngoại ngữ (ngày nay là Trường Đại học Hà Nội) được thành lập.\n\nTrong khoảng thời gian 07 năm đầu thành lập (1959-1966), Trường đã đổi tên 2 lần, từ Trường Ngoại ngữ thành Trường Bổ túc Ngoại ngữ (cho cán bộ viên chức Nhà nước). Đây là giai đoạn có biến động mạnh về số lượng cán bộ, giảng viên cũng như đối tượng và số lượng sinh viên cần đào tạo và bồi dưỡng.\n\nCác mốc lịch sử của Nhà trường giai đoạn này:\n\n- Năm 1967, Từ Trường Bổ túc ngoại ngữ, Nhà trường được Thủ tướng Chính phủ Phạm Văn Đồng ký Quyết định số 126/CP thành lập Trường Đại học Ngoại ngữ. Từ thời điểm này, Nhà trường chính thức trở thành cơ sở giáo dục bậc đại học;\n\n- Năm 1977, trước những khó khăn của đất nước trong hoàn cảnh bắt đầu công cuộc tái thiết sau chiến tranh và tình hình đào tạo của Nhà trường, Bộ Đại học và Trung học chuyên nghiệp đã quyết định chuyển nhiệm vụ đào tạo cán bộ chuyên ngành ngoại ngữ (phiên dịch và giáo viên) mà Nhà trường đang thực hiện sang một cơ sở giáo dục đại học khác và đổi tên Trường Đại học Ngoại ngữ thành Trường Cao đẳng Bổ túc ngoại ngữ;\n\n- Năm 1984, đánh dấu 25 năm xây dựng và phát triển, Nhà trường được Nhà nước tặng thưởng Huân chương Lao động hạng Ba lần thứ hai và đổi tên Trường Cao đẳng Bổ túc Ngoại ngữ thành Trường Đại học Ngoại ngữ;\n\n- Năm 1989 và năm 1994, Nhà trường được Nhà nước tặng thưởng Huân chương Lao động Hạng Nhất nhân dịp kỷ niệm 30 năm thành lập Trường (1959-1989) và 35 năm thành lập Trường (1959 – 1994).\n\nNăm 2006, Thủ tướng Chính phủ đã phê duyệt Quyết định số 190/2006/QĐ-TTg ngày 17/8/2006 việc đổi tên Trường Đại học Ngoại ngữ thành Trường Đại học Hà Nội."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "HANU brings you to the world"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-trao"
+      },
+      "vnedu:website": {
+        "@id": "http://www.hanu.vn/"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "20.9897"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.7952"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "https://ror.org/01mxx0e62"
-    },
-    {
-      "@id": "wd:Q10829049"
-    },
-    {
-      "@id": "dbr:Hanoi_University"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q10829049"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75537962"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Hà Nội"
-    },
-    {
-      "@language": "en",
-      "@value": "Hanoi University"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-trao"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "skos:notation": "NHF",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Hà Nội"
-  },
-  "vnedu:address": "Km 9, đường Nguyễn Trãi, phường Đại Mỗ",
-  "vnedu:admissionCode": "NHF",
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Trường Đại học Ngoại ngữ Hà Nội"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1959"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quang-thai-pham"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-cong-pho"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tilak-c-nath"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-thi-thu-hang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-t-ha"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/ha-duc-chu"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoa-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-cong-tung"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-trong-trinh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/long-vu"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-thang"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/pham-minh-chinh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-ngoc-chan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-trung-chu"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/van-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/quoc-khanh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-hong-giang"
-    }
-  ],
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-trao"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "HANU brings you to the world"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-trao"
-  },
-  "vnedu:website": {
-    "@id": "http://www.hanu.vn/"
-  }
+  ]
 }

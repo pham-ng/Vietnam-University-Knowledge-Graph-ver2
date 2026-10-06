@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quoc-gia-viet-nam",
   "@type": [
-    "vnedu:HigherEducationInstitution",
     "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:DefunctInstitution",
     "foaf:Organization",
-    "vnedu:UniversitySchool"
+    "schema:Organization",
+    "vnedu:Organization",
+    "vnedu:UniversitySchool",
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "vnedu:DefunctInstitution",
+    "schema:CollegeOrUniversity",
+    "vnedu:HigherEducationInstitution"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Quốc gia Việt Nam (hay còn được gọi là Đại học Việt Nam) là một trường đại học đa ngành, đa lĩnh vực tồn tại từ năm 1945 đến năm 1954 tại Hà Nội, được thành lập trên cơ sở tiếp quản Viện Đại học Đông Dương (cùng các trường thành viên trực thuộc) trong thời kỳ Pháp thuộc. Cơ sở này hoạt động như một hệ thống đại học quốc gia đa lĩnh vực, tập hợp nhiều ban nhằm tổ chức đào tạo, nghiên cứu và phục hồi hoạt động đại học sau Cách mạng Tháng Tám. Từ giai đoạn 1954-1956, trường được chia tách thành các đơn vị độc lập, trong đó trong đó Trường Đại học Tổng hợp Hà Nội kế thừa trực tiếp toàn bộ truyền thống, hoạt động và các ban của Đại học Quốc gia Việt Nam, bao gồm các ngành khoa học cơ bản, văn khoa và chính trị xã hội. Các thành viên khác, như Trường Đại học Y Dược Hà Nội kế thừa ban Y Dược - Trường Đại học Quốc gia Việt Nam tách ra hoạt động độc lập."
+  },
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Vi%E1%BB%87t_Nam"
   },
@@ -50,13 +54,13 @@
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
   "skos:prefLabel": {
@@ -70,6 +74,10 @@
   "vnedu:foundingYear": {
     "@type": "xsd:gYear",
     "@value": "1945"
+  },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Sau Cách mạng tháng Tám năm 1945, Chính phủ Việt Nam Dân chủ Cộng hòa chủ trương khôi phục hoạt động của cơ sở giáo dục đại học vốn tồn tại từ thời thuộc địa. Trong các phiên họp ngày 22 tháng 9, 4 tháng 10, 8 tháng 10 và 8 tháng 11 năm 1945 Hội đồng Chính phủ đã thảo luận kỹ chủ trương, kế hoạch mở cửa trở lại các trường đại học cũ đồng thời thành lập thêm các trường đại học mới. Trong đó, biên bản phiên họp ngày 4 tháng 10 năm 1945 của Hội đồng Chính phủ ghi rõ: \"Cụ Hồ nói: nên thông cáo rằng chính Chính phủ sắp mở cửa lại Trường Đại học\" Sau đó Hội đồng Chính phủ đã quyết nghị: \"đến 15-11-1945, Trường Đại học sẽ mở cửa\". Từ đây, cơ sở của Đại học Đông Dương được khôi phục và mở cửa hoạt động trở lại, lấy tên là Đại học Quốc gia Việt Nam.\n\nTrong hệ thống đại học của thực dân Pháp lúc bấy giờ không lập Trường Đại học Văn khoa, nhận thấy việc đào tạo giáo sư văn khoa là rất cần thiết, vậy nên Chủ tịch Hồ Chí Minh, ngày 10/10/1945 đã ký Sắc lệnh số 45/SL thành lập bổ sung Ban Đại học Văn khoa mà ngày nay trường Đại học Khoa học Xã hội và Nhân văn thuộc ĐHQGHN đang kế nhiệm. Tuy nhiên, Nghị định của Bộ trưởng Bộ Quốc gia Giáo dục ký ngày 03 tháng 11 năm 1945 tiếp nối Sắc lệnh số 45/SL đã thay đổi danh xưng và xác định lại tên đơn vị là Trường Đại học Văn khoa.\n\nSau một thời gian chuẩn bị, Đại học Quốc gia Việt Nam được thành lập, khai giảng khoá đầu tiên vào ngày 15 tháng 11 năm 1945 dưới sự chủ tọa của Chủ tịch Hồ Chí Minh tại toà nhà chính của Đại học Đông Dương (nay là nhà số 19 phố Lê Thánh Tông, Hà Nội). Đây là trường đại học đa ngành, đa lĩnh vực đầu tiên được thành lập dưới chính thể Việt Nam Dân chủ Cộng hoà. Tại buổi lễ, Hồ Chủ tịch đã trao bằng tốt nghiệp cho các sinh viên Trường Y Dược - những người hoàn tất chương trình bị gián đoạn bởi sự kiện đảo chính Nhật - Pháp tháng 3 năm 1945. Mô hình tổ chức của Đại học Quốc gia Việt Nam lúc này tiếp nối trực tiếp mô hình của Đại học Đông Dương, với năm ban: Y khoa, Khoa học, Văn khoa, Chính trị - Xã hội và Mỹ thuật. Toàn bộ cơ sở vật chất của trường cũ, bao gồm tòa nhà số 19 Lê Thánh Tông, hệ thống phòng thí nghiệm, thư viện và khu học xá, vẫn được duy trì và đưa vào sử dụng. Đội ngũ trí thức và viên chức người Việt từng công tác tại Đại học Đông Dương cũng tiếp tục tham gia giảng dạy và quản lý tại Đại học Quốc gia Việt Nam."
   },
   "vnedu:locatedIn": [
     {

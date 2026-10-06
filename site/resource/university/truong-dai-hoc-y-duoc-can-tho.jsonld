@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-y-duoc-can-tho",
   "@type": [
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
     "vnedu:UniversitySchool",
-    "foaf:Organization"
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
+    "dbo:University",
+    "foaf:Organization",
+    "schema:Organization",
+    "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Y Dược Cần Thơ là trường đại học Khoa học Sức khỏe hệ công lập trực thuộc Bộ Y tế duy nhất tại Đồng bằng sông Cửu Long, Việt Nam. Trường Đại học Y Dược Cần Thơ cũng là một trong những trường đào tạo Y – Dược tốt nhất Việt Nam nói chung và khu vực Đồng bằng Sông Cửu Long nói riêng. Có sứ mạng đào tạo bác sĩ, dược sĩ có trình độ đại học, sau đại học, nghiên cứu khoa học và chuyển giao công nghệ y dược, hỗ trợ phát triển hệ thống y tế nhằm đáp ứng nhu cầu chăm sóc sức khỏe cho nhân dân khu vực vùng Đồng bằng sông Cửu Long. Được xếp vào nhóm trường đại học trọng điểm quốc gia Việt Nam, trực thuộc Bộ Y tế. Kể từ năm 2017, trường đã ứng dụng nhiều nhiều tiến bộ khoa học kỹ thuật vào trong chương trình đào tạo của mình."
+  },
   "foaf:homepage": {
     "@id": "http://ctump.edu.vn/"
   },
@@ -46,44 +50,46 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/04rq4jq39"
+      "@id": "wd:Q20026263"
     },
     {
-      "@id": "wd:Q20026263"
+      "@id": "https://ror.org/04rq4jq39"
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@id": "wd:Q20026263"
+      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75510737"
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75510737"
+      "@id": "wd:Q20026263"
     }
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Can Tho University of Medicine and Pharmacy"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Y Dược Cần Thơ"
+    },
+    {
+      "@language": "en",
+      "@value": "Can Tho University of Medicine and Pharmacy"
     }
   ],
+  "schema:email": "ctump@ctump.edu.vn",
   "schema:employee": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-phuong"
   },
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     }
   ],
+  "schema:telephone": "84-0292) 3 739 730",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Y Dược Cần Thơ"
@@ -111,15 +117,19 @@
   "vnedu:hasLeader": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-phuong"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Tiền thân của Trường là Khoa Y – Nha – Dược, Trường Đại học Cần Thơ. Có thể kể đến lịch sử hình thành như sau: Tháng 07 năm 1979, thành lập khoa Y – Nha – Dược thuộc Trường Đại học Cần Thơ. Ngày 25 tháng 12 năm 2002, Khoa Y – Nha – Dược được tách ra để thành lập Trường Đại học Y Dược Cần Thơ trực thuộc Bộ Y tế. Năm 2011, Bộ trưởng Bộ Y tế ký quyết định thành lập Bệnh viện Trường Đại học Y Dược Cần Thơ. Năm 2017, Thủ tướng Chính phủ đồng ý cho Trường Đại học Y dược Cần Thơ thực hiện đề án tự chủ đại học, là Trường đại học Khoa học sức khỏe đầu tiên ở Việt Nam thực hiện tự chủ."
+  },
   "vnedu:locatedIn": [
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/can-tho"
     }
   ],
   "vnedu:motto": {

@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghiep-viet-tri",
   "@type": [
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
     "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
     "schema:CollegeOrUniversity",
-    "schema:Organization",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
+    "dbo:University",
     "foaf:Organization",
-    "vnedu:UniversitySchool"
+    "schema:Organization",
+    "vnedu:Organization",
+    "vnedu:UniversitySchool",
+    "vnedu:EducationalOrganization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Công nghiệp Việt Trì (Tên tiếng anh: Viet Tri University Of Industry, VUI) là một trong những trường đại học có thương hiệu lâu đời về đào tạo và nghiên cứu nhóm ngành kinh tế công nghiệp và kỹ thuật công nghiệp tại vùng Trung du và miền núi phía Bắc. Trường trực thuộc Bộ Công Thương và được giám sát về đào tạo bởi Bộ Giáo dục và Đào tạo."
+  },
   "foaf:homepage": {
     "@id": "http://vui.edu.vn"
   },
@@ -59,12 +63,13 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
+  "schema:telephone": "+84-(0)210 3829 247",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Công nghiệp Việt Trì"
@@ -80,12 +85,16 @@
   "vnedu:hasLeader": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vu-duc-binh"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Năm 1954, miền Bắc nước ta hoàn toàn giải phóng, chấm dứt sự đô hộ gần một thế kỷ của Chủ nghĩa thực dân, bắt đầu vào thời kỳ khôi phục lại nền kinh tế và xây dựng chủ nghĩa xã hội trên nửa phần đất nước. Trước đòi hỏi cấp bách về đội ngũ cán bộ kỹ thuật phục vụ cho công cuộc xây dựng chủ nghĩa xã hội, ngày 25 tháng 6 năm 1956, Bộ trưởng Lê Thanh Nghị đã ký Quyết định số 184/BCN thành lập trường Kỹ thuật trung cấp II và đặt địa điểm của Trường tại khu Thượng Đình, Hà Nội. Ngay từ những năm đầu thành lập, được sự giúp đỡ của các chuyên gia Liên Xô, Trung Quốc, nhà trường đã biên dịch, soạn thảo được nhiều tài liệu và xây dựng được đội ngũ giáo viên cho các ngành học: Hoá Vô cơ, công nghiệp Thực phẩm, Hoá nhuộm, Khai khoáng, Địa chất, Giấy và đồ hộp.\n\nNgày 29 tháng 01 năm 1962, nhà trường đã được đổi tên thành trường Trung cấp Hoá chất.\n\nSau khi miền Nam hoàn toàn giải phóng và thống nhất đất nước, thì ngành Công nghiệp Hoá chất đã phát triển mạnh mẽ và đòi hỏi đội ngũ cán bộ kỹ thuật trong ngành phải có trình độ chuyên môn cao hơn. Tổng cục Hoá chất đã giao cho trường đào tạo thí điểm đội ngũ kỹ thuật viên cấp cao. Với sự giúp đỡ tận tình của trường Đại học Bách khoa Hà Nội trong việc đào tạo, bồi dưỡng đội ngũ cán bộ giảng dạy và xây dựng chương trình đào tạo, năm 1980 nhà trường đã đào tạo thí điểm khoá kỹ thuật viên cấp cao đầu tiên cho ngành Hoá Vô cơ và Cơ khí Hoá chất và sau đó là ngành Hoá Phân tích và Hoá Hữu cơ. Qua hơn 10 năm đào tạo, đội ngũ kỹ thuật viên cấp cao, những sinh viên tốt nghiệp ra trường đã được các doanh nghiệp trong và ngoài ngành đánh giá cao về năng lực chuyên môn đặc biệt là kỹ năng thực hành. Cũng từ thực tế đó, tháng 9 năm 1995, Bộ Giáo dục- Đào tạo đã Quyết định cho trường được đào tạo trình độ Cao đẳng với 4 ngành đó là Kỹ thuật Hoá Vô cơ; Kỹ thuật Hoá Hữu cơ; Hoá Phân tích và Cơ khí Hoá chất.\n\nXuất phát từ thực tế sản xuất và trình độ người lao động trong các nhà máy phải được nâng cao, thì nhà trường đã sớm xây dựng chiến lược phát triển ở giai đoạn mới. Được sự giúp đỡ của khoa Hoá của trường Đại học Tổng hợp (nay là khoa Hoá thuộc trường Đại học Khoa học tự nhiên của Đại học Quốc gia Hà Nội) đã mở 2 lớp cao học cho cán bộ và giáo viên của trường cùng với sự đầu tư về cơ sở vật chất để đáp ứng yêu cầu đào tạo ở trình độ cao hơn. Ngày 24 tháng 1 năm 1997, Thủ tướng Chính phủ đã ra Quyết định số 47/QĐ-TTg thành lập trường Cao đẳng Hoá chất trên cơ sở nâng cấp trường Trung học Hoá chất."
+  },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/phu-tho"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"

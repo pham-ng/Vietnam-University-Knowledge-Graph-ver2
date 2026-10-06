@@ -17,85 +17,115 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-hau-can",
-  "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "vnedu:MilitaryInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:Academy",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
-  ],
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_H%E1%BA%ADu_c%E1%BA%A7n_%28Vi%E1%BB%87t_Nam%29"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.066199"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.875809"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "wd:Q10771887"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-hau-can",
+      "@type": [
+        "vnedu:MilitaryInstitution",
+        "vnedu:Academy",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Hậu cần (tiếng Anh là: Military Academy of Logistics) là học viện quân sự trực thuộc Bộ Quốc phòng Việt Nam, có nhiệm vụ đào tạo sĩ quan và nhân viên ngành hậu cần cho Quân đội nhân dân Việt Nam.Ngày 7 tháng 2 năm 1993, Bộ Giáo dục và Đào tạo ra quyết định công nhận trình độ đào tạo đại học quân sự cho Học viện Hậu cần. Trụ sở chính: phường Bồ Đề, Thành phố Hà Nội Cơ sở 2: xã Đoài Phương, Thành phố Hà Nội 2 cơ sở này chủ yếu: đào tạo sĩ quan hậu cần trình độ cao đẳng, đại học và sau đại học với các chuyên ngành: chỉ huy tham mưu hậu cần, quân nhu, vận tải, xăng dầu, doanh trại, tài chính. Đào tạo hệ cao đẳng, đại học và sau đại học dân sự với chuyên ngành Tài chính – ngân hàng, Kế toán doanh nghiệp và Kỹ thuật Xây dựng."
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_H%E1%BA%ADu_c%E1%BA%A7n_%28Vi%E1%BB%87t_Nam%29"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.066199"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.875809"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10771887"
+        },
+        {
+          "@id": "https://ror.org/0015erq74"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75343887"
+        },
+        {
+          "@id": "wd:Q10771887"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "vi",
+        "@value": "Học viện Hậu cần"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1951-06-15"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/9/93/Phu_hieu_Hoc_vien_Hau_can.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Hậu cần"
+      },
+      "vnedu:address": "Ngọc Thụy, Long Biên, Hà Nội",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1951"
+      },
+      "vnedu:governedBy": {
+        "@id": "vnedu:MinistryOfNationalDefence"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trước yêu cầu của cách mạng và nhiệm vụ quân đội trong cuộc kháng chiến chống thực dân Pháp, đầu năm 1951, Tổng cục Cung cấp mở: Lớp huấn luyện cán bộ cung cấp đầu tiên do đồng chí Trần Đăng Ninh, Ủy viên Trung ương Đảng, Chủ nhiệm Tổng cục Cung cấp trực tiếp chỉ đạo. Ngày khai giảng lớp học, Bác Hồ đã gửi thư cho cán bộ, học viên, trong thư Người viết: “Công việc cung cấp cũng quan trọng như việc trực tiếp đánh giặc trước mặt trận, cung cấp đủ súng, đạn, đủ cơm áo thì bộ đội mới đánh thắng trận”; đồng thời Người chỉ rõ: “cán bộ cung cấp càng phải làm kiểu mẫu cần, kiệm, liêm, chính”. Tiếp sau đó là: Các lớp huấn luyện cán bộ cung cấp (1951 - 1953) Trường Cán bộ Cung cấp (1953 - 1955) Trường Cán bộ Hậu cần (1955 - 1958) Trường Sĩ quan Hậu cần (1958 - 1974) Học viện Hậu cần - được thành lập trên cơ sở nâng cấp từ Trường Sĩ quan Hậu cần (Quyết định 188/QĐ-QP - Ngày 23 tháng 7 năm 1974) Tháng 8 năm 1980, một bộ phận của Học viện Hậu cần được tách ra để thành lập Trường sĩ quan Hậu cần. Tháng 3 năm 1996, sáp nhập Trường sĩ quan Hậu cần về Học viện Hậu cần (Quyết định số 257/QĐ–QP) Năm 2021, Học viện Hậu cần bàn giao nội dung đào tạo Trung cấp cho Cao đẳng Hậu cần/Tổng cục Hậu cần, Học viện chỉ đào tạo từ Cử nhân đến Tiến sĩ hậu cần, tài chính. Ngày 15 tháng 6 năm 1951 là Ngày truyền thống của Học viện Hậu cần - Ngày Chủ tịch Hồ Chí Minh gửi thư cho lớp cán bộ cung cấp đầu tiên của Tổng cục Cung cấp."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      }
     },
     {
-      "@id": "https://ror.org/0015erq74"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/9/93/Phu_hieu_Hoc_vien_Hau_can.jpg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Phu_hieu_Hoc_vien_Hau_can.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/9/93/Phu_hieu_Hoc_vien_Hau_can.jpg"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q10771887"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75343887"
-    }
-  ],
-  "rdfs:label": {
-    "@language": "vi",
-    "@value": "Học viện Hậu cần"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Hậu cần"
-  },
-  "vnedu:address": "Ngọc Thụy, Long Biên, Hà Nội",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1951"
-  },
-  "vnedu:governedBy": {
-    "@id": "vnedu:MinistryOfNationalDefence"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  }
+  ]
 }

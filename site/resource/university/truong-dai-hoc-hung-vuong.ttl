@@ -28,6 +28,7 @@ university:truong-dai-hoc-hung-vuong a dbo:University,
         schema:Organization ;
     rdfs:label "Hung Vuong University"@en,
         "Trường Đại học Hùng Vương"@vi ;
+    dbo:abstract "Trường Đại học Hùng Vương (Tiếng Anh: Hung Vuong University, HVU) là trường đại học công lập tại tỉnh Phú Thọ được thành lập vào ngày 29 tháng 4 năm 2003, trên cơ sở của Trường Cao đẳng Sư phạm Phú Thọ với bề dày truyền thống hơn 50 năm."@vi ;
     owl:sameAs dbr:Hung_Vuong_University,
         wd:Q10829053,
         <https://ror.org/036xsg644> ;
@@ -42,6 +43,7 @@ university:truong-dai-hoc-hung-vuong a dbo:University,
     vnedu:address "Phường Nông Trang, Phú Thọ" ;
     vnedu:foundingYear "2003"^^xsd:gYear ;
     vnedu:hasLeader person:do-khac-thanh ;
+    vnedu:history "Trường Đại học Hùng Vương được thành lập vào ngày 29 tháng 04 năm 2003 theo Quyết định số 81/2003/QĐ-TTg của Thủ tướng Chính phủ, trên cơ sở Trường Cao đẳng Sư phạm Phú Thọ và có bề dày truyền thống hơn 46 năm."@vi ;
     vnedu:locatedIn country:viet-nam,
         province:phu-tho,
         region:bac-bo ;
@@ -51,5 +53,6 @@ university:truong-dai-hoc-hung-vuong a dbo:University,
     schema:employee person:do-khac-thanh ;
     schema:location country:viet-nam,
         province:phu-tho,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:telephone "+84 2103 993369" .
 

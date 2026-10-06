@@ -19,10 +19,10 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-anh-dung",
   "@type": [
-    "schema:Person",
     "vnedu:Person",
-    "foaf:Person",
-    "vnedu:Alumnus"
+    "schema:Person",
+    "vnedu:Alumnus",
+    "foaf:Person"
   ],
   "foaf:isPrimaryTopicOf": {
     "@id": "https://vi.wikipedia.org/wiki/%C4%90inh_Anh_D%C5%A9ng"
@@ -52,13 +52,13 @@
   },
   "schema:hasOccupation": [
     {
+      "@id": "wd:Q3455803"
+    },
+    {
       "@id": "wd:Q222344"
     },
     {
       "@id": "wd:Q2340668"
-    },
-    {
-      "@id": "wd:Q3455803"
     }
   ],
   "vnedu:alumnusOf": {

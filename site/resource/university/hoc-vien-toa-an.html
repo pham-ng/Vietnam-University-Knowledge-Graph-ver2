@@ -30,113 +30,141 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-toa-an",
-  "@type": [
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "vnedu:Academy",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization"
-  ],
-  "foaf:homepage": {
-    "@id": "https://hvta.toaan.gov.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_T%C3%B2a_%C3%A1n"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "wd:Q24956933"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/a/a5/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_T%C3%B2a_%C3%A1n_VN.jpg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_H%E1%BB%8Dc_vi%E1%BB%87n_T%C3%B2a_%C3%A1n_VN.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/a/a5/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_T%C3%B2a_%C3%A1n_VN.jpg"
+      }
     },
     {
-      "@id": "https://ror.org/023p8bj02"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-toa-an",
+      "@type": [
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:Academy",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "vnedu:HigherEducationInstitution"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Tòa án (tiếng Anh là: Vietnam Court Academy - VCA) (tiền thân là: Trường Tư pháp Trung ương) là cơ sở giáo dục hàm Học viện hệ công lập thuộc hệ thống giáo dục quốc dân trực thuộc Tòa án Nhân dân Tối cao, Nhà trường hoạt động theo Luật Tổ chức Tòa án nhân dân, Luật Giáo dục đại học, Luật Giáo dục nghề nghiệp và Điều lệ trường đại học. Học viện Tòa án có tư cách pháp nhân, có con dấu và tài khoản riêng theo quy định của pháp luật."
+      },
+      "foaf:homepage": {
+        "@id": "https://hvta.toaan.gov.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_T%C3%B2a_%C3%A1n"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q24956933"
+        },
+        {
+          "@id": "https://ror.org/023p8bj02"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q24956933"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75240445"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Học viện Tòa án"
+        },
+        {
+          "@language": "en",
+          "@value": "Vietnam Court Academy - VCA"
+        }
+      ],
+      "schema:email": "hvta@toaan.gov.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-hanh"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/a/a5/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_T%C3%B2a_%C3%A1n_VN.jpg"
+      },
+      "schema:telephone": "0432.693.693",
+      "skos:notation": "HTA",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Tòa án"
+      },
+      "vnedu:address": "đường Dương Đức Hiền, xã Thuận An, thành phố Hà Nội, Việt Nam",
+      "vnedu:admissionCode": "HTA",
+      "vnedu:director": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-hanh"
+      },
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Trường Tư pháp Trung ương"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1960"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/toa-an-nhan-dan-toi-cao"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-hanh"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Sơ lược sự hình thành và phát triển của Học viện Tòa án\n\nNgay từ những ngày đầu giành chính quyền, sau khi các Toà án được thiết lập theo Sắc lệnh số 13/SL ngày 13/9/1945, cùng với hoạt động của Toà án, công tác đào tạo, bồi dưỡng cho các cán bộ Toà án cũng được hình thành và phát triển. Ban đầu việc đào tạo, bồi dưỡng thực hiện thông qua các hội nghị học tập hoặc các lớp huấn luyện ngắn hạn từ 3 đến 4 tháng được tổ chức trong cả nước.\n\nNăm 1960, Trường Tư pháp Trung ương được thành lập trực thuộc Tòa án nhân dân tối cao (sau đổi tên thành Trường Cán bộ Tòa án, rồi Trường Cao đẳng Tòa án, có trụ sở tại Hà Nội, nay là trụ sở Trường Đại học Luật Hà Nội). Sau khi giải phóng Miền Nam thống nhất đất nước, Trường Cán bộ Tòa án cơ sở 2 được thành lập tại Thành phố Hồ Chí Minh. Hai cơ sở này chủ yếu mở các lớp đào tạo, bồi dưỡng có trình độ sơ cấp 6 tháng và trung cấp 12 tháng đồng thời, Trường mời các nhà chính trị, các chuyên gia pháp luật, chuyên gia về khoa học xã hội, chuyên gia các nước Liên Xô, Trung Quốc sang giảng bài cho một số khóa đào tạo.\n\nTừ năm 1972 đến năm 1979, thời gian đầu Trường mở hệ đào tạo trung cấp 14 tháng và những năm tiếp theo là 24 tháng.\n\nNăm 1979, Trường được nâng lên thành Trường Cao đẳng Tòa án và mở hệ đào tạo cao đẳng 36 tháng với nhiệm vụ đào tạo đội ngũ cán bộ xét xử chuyên ngành Tòa án làm nguồn bổ sung thẩm phán cho Toà án nhân dân các cấp.\n\nNhững thế hệ cán bộ được đào tạo đã phát huy được năng lực công tác, sau khi được bổ nhiệm Thẩm phán đã thực hiện tốt công tác hòa giải, xét xử, đảm bảo đúng đường lối, quan điểm chỉ đạo của Đảng và pháp luật quy định theo từng giai đoạn lịch sử và yêu cầu của cách mạng Việt Nam. Có thể khẳng định, hầu hết các chức danh tư pháp trong ngành Tòa án đều do các Trường Cán bộ Tòa án đào tạo, bồi dưỡng và thể hiện được phẩm chất chuyên môn, năng lực công tác; và rất nhiều các đồng chí lãnh đạo Tòa án các cấp và nhiều cơ quan tư pháp khác hiện nay, đều được đào tạo và trưởng thành từ những mái trường này.\n\nNăm 1982, do yêu cầu nhiệm vụ chung, Tòa án Nhân dân Tối cao đã chuyển giao công tác quản lý các Tòa án địa phương về tổ chức sang Bộ Tư pháp nên Trường Cao đẳng Tòa án cũng được sáp nhập với Trường Đại học Pháp lý Hà Nội (nay là Trường Đại học Luật Hà Nội) trực thuộc Bộ Tư pháp."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Kỷ cương – Đoàn kết – Năng động – Sáng tạo – Tự tin – Tự trọng – Ra sức thi đua dạy tốt, học tốt – hoàn thành xuất sắc nhiệm vụ được giao"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:shortName": [
+        "HVTA",
+        "VCA"
+      ],
+      "vnedu:website": {
+        "@id": "https://hvta.toaan.gov.vn/"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q24956933"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75240445"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Vietnam Court Academy - VCA"
-    },
-    {
-      "@language": "vi",
-      "@value": "Học viện Tòa án"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-hanh"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:notation": "HTA",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Tòa án"
-  },
-  "vnedu:address": "đường Dương Đức Hiền, xã Thuận An, thành phố Hà Nội, Việt Nam",
-  "vnedu:admissionCode": "HTA",
-  "vnedu:director": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-hanh"
-  },
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Trường Tư pháp Trung ương"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1960"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/toa-an-nhan-dan-toi-cao"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-hanh"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Kỷ cương – Đoàn kết – Năng động – Sáng tạo – Tự tin – Tự trọng – Ra sức thi đua dạy tốt, học tốt – hoàn thành xuất sắc nhiệm vụ được giao"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:shortName": [
-    "HVTA",
-    "VCA"
-  ],
-  "vnedu:website": {
-    "@id": "https://hvta.toaan.gov.vn/"
-  }
+  ]
 }</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -155,6 +183,8 @@
   <a href="hoc-vien-toa-an.ttl">Turtle</a> · <a href="hoc-vien-toa-an.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-toa-an">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 17 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Học viện Tòa án (tiếng Anh là: Vietnam Court Academy - VCA) (tiền thân là: Trường Tư pháp Trung ương) là cơ sở giáo dục hàm Học viện hệ công lập thuộc hệ thống giáo dục quốc dân trực thuộc Tòa án Nhân dân Tối cao, Nhà trường hoạt động theo Luật Tổ chức Tòa án nhân dân, Luật Giáo dục đại học, Luật Giáo dục nghề nghiệp và Điều lệ trường đại học. Học viện Tòa án có tư cách pháp nhân, có con dấu và tài khoản riêng theo quy định của pháp luật.</p><h2>Lịch sử</h2><p>Sơ lược sự hình thành và phát triển của Học viện Tòa án</p><p>Ngay từ những ngày đầu giành chính quyền, sau khi các Toà án được thiết lập theo Sắc lệnh số 13/SL ngày 13/9/1945, cùng với hoạt động của Toà án, công tác đào tạo, bồi dưỡng cho các cán bộ Toà án cũng được hình thành và phát triển. Ban đầu việc đào tạo, bồi dưỡng thực hiện thông qua các hội nghị học tập hoặc các lớp huấn luyện ngắn hạn từ 3 đến 4 tháng được tổ chức trong cả nước.</p><details><summary>Đọc tiếp (5 đoạn)</summary><p>Năm 1960, Trường Tư pháp Trung ương được thành lập trực thuộc Tòa án nhân dân tối cao (sau đổi tên thành Trường Cán bộ Tòa án, rồi Trường Cao đẳng Tòa án, có trụ sở tại Hà Nội, nay là trụ sở Trường Đại học Luật Hà Nội). Sau khi giải phóng Miền Nam thống nhất đất nước, Trường Cán bộ Tòa án cơ sở 2 được thành lập tại Thành phố Hồ Chí Minh. Hai cơ sở này chủ yếu mở các lớp đào tạo, bồi dưỡng có trình độ sơ cấp 6 tháng và trung cấp 12 tháng đồng thời, Trường mời các nhà chính trị, các chuyên gia pháp luật, chuyên gia về khoa học xã hội, chuyên gia các nước Liên Xô, Trung Quốc sang giảng bài cho một số khóa đào tạo.</p><p>Từ năm 1972 đến năm 1979, thời gian đầu Trường mở hệ đào tạo trung cấp 14 tháng và những năm tiếp theo là 24 tháng.</p><p>Năm 1979, Trường được nâng lên thành Trường Cao đẳng Tòa án và mở hệ đào tạo cao đẳng 36 tháng với nhiệm vụ đào tạo đội ngũ cán bộ xét xử chuyên ngành Tòa án làm nguồn bổ sung thẩm phán cho Toà án nhân dân các cấp.</p><p>Những thế hệ cán bộ được đào tạo đã phát huy được năng lực công tác, sau khi được bổ nhiệm Thẩm phán đã thực hiện tốt công tác hòa giải, xét xử, đảm bảo đúng đường lối, quan điểm chỉ đạo của Đảng và pháp luật quy định theo từng giai đoạn lịch sử và yêu cầu của cách mạng Việt Nam. Có thể khẳng định, hầu hết các chức danh tư pháp trong ngành Tòa án đều do các Trường Cán bộ Tòa án đào tạo, bồi dưỡng và thể hiện được phẩm chất chuyên môn, năng lực công tác; và rất nhiều các đồng chí lãnh đạo Tòa án các cấp và nhiều cơ quan tư pháp khác hiện nay, đều được đào tạo và trưởng thành từ những mái trường này.</p><p>Năm 1982, do yêu cầu nhiệm vụ chung, Tòa án Nhân dân Tối cao đã chuyển giao công tác quản lý các Tòa án địa phương về tổ chức sang Bộ Tư pháp nên Trường Cao đẳng Tòa án cũng được sáp nhập với Trường Đại học Pháp lý Hà Nội (nay là Trường Đại học Luật Hà Nội) trực thuộc Bộ Tư pháp.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75240445">«Học viện Tòa án»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75240445), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Học viện Tòa án</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_H%E1%BB%8Dc_vi%E1%BB%87n_T%C3%B2a_%C3%A1n_VN.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://upload.wikimedia.org/wikipedia/vi/a/a5/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_T%C3%B2a_%C3%A1n_VN.jpg" alt="Biểu trưng Học viện Tòa án" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>Vietnam Court Academy - VCA</td></tr><tr><th>Viết tắt</th><td>HVTA, VCA</td></tr><tr><th>Mã trường</th><td>HTA</td></tr><tr><th>Tên cũ</th><td>Trường Tư pháp Trung ương</td></tr><tr><th>Loại hình</th><td>Học viện · Công lập</td></tr><tr><th>Thành lập</th><td>1960</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/toa-an-nhan-dan-toi-cao">Tòa án nhân dân tối cao</a></td></tr><tr><th>Giám đốc</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-hanh">Nguyễn Đức Hạnh</a></td></tr><tr><th>Địa chỉ</th><td>đường Dương Đức Hiền, xã Thuận An, thành phố Hà Nội, Việt Nam</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a></td></tr><tr><th>Khẩu hiệu</th><td><i>Kỷ cương – Đoàn kết – Năng động – Sáng tạo – Tự tin – Tự trọng – Ra sức thi đua dạy tốt, học tốt – hoàn thành xuất sắc nhiệm vụ được giao</i></td></tr><tr><th>Điện thoại</th><td>0432.693.693</td></tr><tr><th>Email</th><td><a href="mailto:hvta@toaan.gov.vn">hvta@toaan.gov.vn</a></td></tr><tr><th>Website</th><td><a href="https://hvta.toaan.gov.vn/">hvta.toaan.gov.vn</a></td></tr></table></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
 
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
@@ -176,11 +206,20 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q24956933">wd:Q24956933</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75240445">&lt;https://vi.wikipedia.org/w/index.php?oldid=75240445&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>hvta@toaan.gov.vn</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-hanh">Nguyễn Đức Hạnh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi">Hà Nội</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo">Bắc Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/a/a5/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_T%C3%B2a_%C3%A1n_VN.jpg">&lt;https://upload.wikimedia.org/wikipedia/vi/a/a5/Logo_H%E1%BB%8Dc_vi%E1%BB%87n_T%C3%B2a_%C3%A1n_VN.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>0432.693.693</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>HTA <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -226,11 +265,11 @@
 </td></tr>
 </table></div>
 <h2>Được tham chiếu bởi</h2><div class="card table-wrap"><table>
-<tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
-<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/toa-an-nhan-dan-toi-cao">Tòa án nhân dân tối cao</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
-</td></tr>
 <tr><td class="p">đứng đầu<small>vnedu:leads</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-duc-hanh">Nguyễn Đức Hạnh</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">là cơ quan chủ quản của<small>vnedu:governs</small></td><td>
+<div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/toa-an-nhan-dan-toi-cao">Tòa án nhân dân tối cao</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
 </table></div></main>
 <footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="/Vietnam-University-Knowledge-Graph-ver2/dataset">VoID/DCAT</a> ·

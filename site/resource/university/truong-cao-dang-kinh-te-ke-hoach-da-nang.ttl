@@ -1,4 +1,5 @@
 @prefix country: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -20,6 +21,7 @@ university:truong-cao-dang-kinh-te-ke-hoach-da-nang a foaf:Organization,
         schema:EducationalOrganization,
         schema:Organization ;
     rdfs:label "Trường Cao đẳng Kinh tế – Kế hoạch Đà Nẵng"@vi ;
+    dbo:abstract "Trường Cao đẳng Kinh tế – Kế hoạch Đà Nẵng là một trường cao đẳng tại Đà Nẵng (2001), tiền thân là Trường Nghiệp vụ Kế hoạch II thành lập ngày 03 tháng 07 năm 1976."@vi ;
     owl:sameAs wd:Q61128899 ;
     skos:prefLabel "Trường Cao đẳng Kinh tế – Kế hoạch Đà Nẵng"@vi ;
     prov:wasDerivedFrom wd:Q61128899,
@@ -27,14 +29,24 @@ university:truong-cao-dang-kinh-te-ke-hoach-da-nang a foaf:Organization,
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_Cao_%C4%91%E1%BA%B3ng_Kinh_t%E1%BA%BF_%E2%80%93_K%E1%BA%BF_ho%E1%BA%A1ch_%C4%90%C3%A0_N%E1%BA%B5ng> ;
     vnedu:academicStaff "133"^^xsd:nonNegativeInteger ;
     vnedu:address "143 Nguyễn Lương Bằng, Quận Liên Chiểu, TP Đà Nẵng" ;
+    vnedu:campus "4,0 ha" ;
     vnedu:foundingYear "1976"^^xsd:gYear ;
+    vnedu:history """Trường Nghiệp vụ Kế hoạch II được thành lập theo Quyết định số 251/QĐ-UBKHH ngày 03 tháng 07 năm 1976 của Ủy ban Kế hoạch Nhà nước (sau này là Bộ Kế hoạch và Đầu tư) tại trụ sở 143 đường Nguyễn Lương Bằng, phường Liên Chiểu (trước đây là phường Hòa Khánh Bắc, quận Liên Chiểu), thành phố Đà Nẵng, để đào tạo cán bộ làm công tác kế hoạch hóa các tỉnh miền trung và Tây Nguyên.
+
+Năm 1992, trường được đổi tên thành Trường Trung học Kế hoạch - Kinh doanh II.
+
+Ngày 28 tháng 6 năm 2001, Trường Cao đẳng Kinh tế – Kế hoạch Đà Nẵng được thành lập trên cơ sở Trường Trung học Kế hoạch - Kinh doanh II theo Quyết định số 3858/QĐ-BGDĐT-TCCB của Bộ trưởng Bộ Giáo dục và Đào tạo; Trường đào tạo cán bộ kinh tế - kế hoạch đa ngành, đa lĩnh vực phục vụ phát triển kinh tế - xã hội khu vực miền Trung - Tây Nguyên và cả nước từ trung cấp đến thạc sĩ.
+
+Sau sắp xếp tinh gọn, bộ máy chính phủ mới nhiệm kỳ của Quốc Hội khóa XV với sự hợp nhất của Bộ Kế hoạch và Đầu tư với Bộ Tài chính thành Bộ Tài chính, từ ngày 1 tháng 3 năm 2025, Trường Cao đẳng Kinh tế Kế hoạch Đà Nẵng là trường công lập thuộc Bộ Tài chính."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:da-nang,
         region:trung-bo ;
     vnedu:numberOfStudents "4000"^^xsd:nonNegativeInteger ;
     vnedu:numberOfUndergraduates "450"^^xsd:nonNegativeInteger ;
     vnedu:ownership vnedu:PublicOwnership ;
+    schema:email "quanlydaotao@apd.edu.vn" ;
     schema:location country:viet-nam,
         province:da-nang,
-        region:trung-bo .
+        region:trung-bo ;
+    schema:telephone "02363.734.866" .
 

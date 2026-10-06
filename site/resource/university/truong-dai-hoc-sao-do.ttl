@@ -26,7 +26,9 @@ university:truong-dai-hoc-sao-do a dbo:University,
         schema:EducationalOrganization,
         schema:Organization ;
     rdfs:label "Trường Đại học Sao Đỏ"@vi ;
+    dbo:abstract "Trường Đại học Sao Đỏ (tên tiếng Anh: Red Star University) là trường Đại học công lập được thành lập năm 2010 trên cơ sở nâng cấp Trường Cao đẳng Công nghiệp Sao Đỏ, có trụ sở chính tại Số 76, Đường Nguyễn Thị Duệ, Tổ dân phố Thái Học 2, Phường Chu Văn An, TP. Hải Phòng. Trường là đơn vị sự nghiệp công lập về giáo dục trực thuộc Bộ Công thương, Trường có chức năng đào tạo, bồi dưỡng nguồn nhân lực có trình độ đại học, sau đại học và các trình độ thấp hơn theo quy định của pháp luật; đồng thời là trung tâm nghiên cứu, ứng dụng, chuyển giao khoa học - công nghệ đa ngành, đa lĩnh vực, chất lượng cao, đạt trình độ tiên tiến trong hệ thống giáo dục quốc dân, đáp ứng nhu cầu phát triển kinh tế, xã hội của đất nước. Hiện nay, trường đào tạo các hệ Đại học, Đại học liên thông, Cao đẳng, Cao đẳng liên thông, Trung cấp chuyên nghiệp, Cao đẳng nghề, Trung cấp nghề,... trong nhiều lĩnh vực, chủ yếu là kinh tế, kỹ thuật công nghiệp."@vi ;
     owl:sameAs wd:Q10829121 ;
+    skos:altLabel "SDU, Đại học Sao Đỏ, Trường Cơ điện" ;
     skos:prefLabel "Trường Đại học Sao Đỏ"@vi ;
     prov:wasDerivedFrom wd:Q10829121,
         <https://vi.wikipedia.org/w/index.php?oldid=75525960> ;
@@ -37,6 +39,15 @@ university:truong-dai-hoc-sao-do a dbo:University,
     vnedu:foundingYear "2010"^^xsd:gYear ;
     vnedu:governedBy organization:bo-cong-thuong ;
     vnedu:hasLeader person:dinh-van-nhuong ;
+    vnedu:history """Tiền thân của Trường là Trường Công nhân Cơ điện Mỏ, thành lập ngày 15 tháng 5 năm 1969, và Trường Công nhân Cơ khí Chí Linh thành lập ngày 8 tháng 4 năm 1975 thuộc Cục Đào tạo – Bộ Điện than. Năm 1979 chuyển về trực thuộc Công ty Than Uông Bí.
+
+Năm 1991, Bộ Năng lượng (nay là Bộ Công thương) quyết định sáp nhập 2 trường thành Trường Công nhân Cơ điện Chí Linh trực thuộc Công ty Cơ khí Mỏ. Năm 1995, Trường chuyển về trực thuộc Công ty Than Cẩm Phả. Năm 1997 trực thuộc Tổng Công ty Than Việt Nam. Từ năm 1999, Trường chuyển về trực thuộc Bộ Công nghiệp (nay là Bộ Công thương)
+
+Ngày 13 tháng 3 năm 2001, Bộ trưởng Bộ Công nghiệp đã ký Quyết định số 13/2001/QĐ-BCN về việc thành lập Trường Trung học Công nghiệp Cơ điện trên cơ sở nâng cấp Trường Đào tạo nghề Cơ điện.
+
+Ngày 4 tháng 10 năm 2004, Bộ trưởng Bộ Giáo dục và Đào tạo đã ký Quyết định số 5738/QĐ-BGD&ĐT-TCCB về việc thành lập Trường Cao đẳng Công nghiệp Sao Đỏ trên cơ sở nâng cấp Trường Trung học Công nghiệp Cơ điện.
+
+Đến ngày 24 tháng 3 năm 2010, Thủ tướng chính phủ đã ký Quyết định số 376/2010/QĐ-TTg về việc thành lập Trường Đại học Sao Đỏ trên cơ sở nâng cấp Trường Cao đẳng Công nghiệp Sao Đỏ."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:hai-phong,
         region:bac-bo ;
@@ -48,5 +59,12 @@ university:truong-dai-hoc-sao-do a dbo:University,
     schema:employee person:dinh-van-nhuong ;
     schema:location country:viet-nam,
         province:hai-phong,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/4/49/Logo_dhsaodo_moi.PNG> ;
+    schema:telephone "+84 0320 3882 269" .
+
+<https://upload.wikimedia.org/wikipedia/vi/4/49/Logo_dhsaodo_moi.PNG> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_dhsaodo_moi.PNG> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/4/49/Logo_dhsaodo_moi.PNG/330px-Logo_dhsaodo_moi.PNG> .
 

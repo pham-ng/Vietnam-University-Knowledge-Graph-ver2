@@ -46,43 +46,43 @@
   ],
   "dct:title": [
     {
-      "@language": "vi",
-      "@value": "Dữ liệu liên kết mở Giáo dục đại học Việt Nam"
-    },
-    {
       "@language": "en",
       "@value": "VN-Edu Linked Open Data"
+    },
+    {
+      "@language": "vi",
+      "@value": "Dữ liệu liên kết mở Giáo dục đại học Việt Nam"
     }
   ],
   "http://www.w3.org/ns/dcat#distribution": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-links.ttl"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-data.ttl"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-data.ttl"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-links.ttl"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl"
     }
   ],
   "http://www.w3.org/ns/dcat#keyword": [
-    "higher education",
-    "giáo dục đại học",
     "linked open data",
+    "giáo dục đại học",
+    "higher education",
     "Vietnam"
   ],
   "void:dataDump": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-links.ttl"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-data.ttl"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-links.ttl"
     }
   ],
-  "void:entities": 2213,
+  "void:entities": 2484,
   "void:exampleResource": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi"
   },
@@ -91,41 +91,41 @@
   },
   "void:subset": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikipedia-isPrimaryTopicOf"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-geonames-sameAs"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-sameAs"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-closeMatch"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-ror-sameAs"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-dbpedia-closeMatch"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-dbpedia-sameAs"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-closeMatch"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikipedia-isPrimaryTopicOf"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-ror-sameAs"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-sameAs"
     }
   ],
-  "void:triples": 21610,
+  "void:triples": 24120,
   "void:uriSpace": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/",
   "void:vocabulary": [
-    {
-      "@id": "schema:"
-    },
     {
       "@id": "prov:"
     },
     {
-      "@id": "skos:"
+      "@id": "dbo:"
     },
     {
-      "@id": "foaf:"
+      "@id": "schema:"
+    },
+    {
+      "@id": "skos:"
     },
     {
       "@id": "geo:"
@@ -134,7 +134,7 @@
       "@id": "vnedu:"
     },
     {
-      "@id": "dbo:"
+      "@id": "foaf:"
     }
   ]
 }

@@ -17,76 +17,106 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-si-quan-chinh-tri-dai-hoc-chinh-tri",
-  "@type": [
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:OfficerSchool",
-    "vnedu:HigherEducationInstitution",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "vnedu:MilitaryInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_S%C4%A9_quan_Ch%C3%ADnh_tr%E1%BB%8B_%E2%80%93_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ch%C3%ADnh_tr%E1%BB%8B"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q16480483"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75569551"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-si-quan-chinh-tri-dai-hoc-chinh-tri",
+      "@type": [
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "vnedu:HigherEducationInstitution",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:MilitaryInstitution",
+        "vnedu:OfficerSchool"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Sĩ quan Chính trị (LCH) còn có tên gọi khác là Trường Đại học Chính trị trực thuộc Bộ Quốc phòng, là cơ sở đào tạo đại học, sau đại học, nghiên cứu khoa học xã hội và nhân văn quân sự; cung cấp đội ngũ cán bộ chính trị, giáo viên khoa học xã hội và nhân văn, góp phần xây dựng quân đội, xây dựng nền quốc phòng toàn dân, an ninh nhân dân vững mạnh, bảo vệ vững chắc Tổ quốc Việt Nam xã hội chủ nghĩa; tham gia đào tạo nguồn nhân lực cho sự nghiệp công nghiệp hóa, hiện đại hóa đất nước và hợp tác quốc tế. Sứ mạng Nhà trường có sứ mạng \"đào tạo đại học, sau đại học, hợp tác đào tạo quốc tế, cung cấp đội ngũ cán bộ chính trị cấp phân đội, giáo viên khoa học xã hội và nhân văn, cán bộ khoa học trình độ đại học, sau đại học và nghiên cứu khoa học xã hội và nhân văn, góp phần xây dựng Quân đội, xây dựng nền quốc phòng toàn dân, bảo vệ vững chắc Tổ quốc Việt Nam xã hội chủ nghĩa\""
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_S%C4%A9_quan_Ch%C3%ADnh_tr%E1%BB%8B_%E2%80%93_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ch%C3%ADnh_tr%E1%BB%8B"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q16480483"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75569551"
+        },
+        {
+          "@id": "wd:Q16480483"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "vi",
+        "@value": "Trường Sĩ quan Chính trị – Đại học Chính trị"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1976-01-14"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/4/44/Dai_hoc_chinh_tri.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/bac-ninh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Sĩ quan Chính trị – Đại học Chính trị"
+      },
+      "vnedu:address": "Bắc Ninh, Việt Nam (cơ sở 2)",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1976"
+      },
+      "vnedu:governedBy": {
+        "@id": "vnedu:MinistryOfNationalDefence"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Ngày 14 tháng 1 năm 1976, Bộ trưởng Bộ Quốc phòng ban hành Quyết định số 18/QĐ-QP thành lập Trường Sĩ quan Chính trị có nhiệm vụ bồi dưỡng, đào tạo đội ngũ chính trị viên đại đội cho toàn quân. Sau 5 tháng làm công tác chuẩn bị, tháng 6 năm 1976, Trường Sĩ quan Chính trị chính thức đi vào hoạt động độc lập - với tư cách là một đơn vị trực thuộc Bộ Quốc phòng. Ngày 03 tháng 10 năm 1978, Ban Bí thư Trung ương Đảng (khoá IV) đã ban hành Quyết định số 28/QĐ-TW xác định Trường Sĩ quan Chính trị là trường Đảng tập trung trong quân đội nằm trong hệ thống đại học Mác - Lênin của quốc gia; có nhiệm vụ đào tạo cán bộ công tác đảng, công tác chính trị (CTĐ, CTCT) cấp đại đội, bồi dưỡng giáo viên chính trị cho các nhà trường quân đội, giúp các nước bạn Lào và Campuchia đào tạo, bồi dưỡng cán bộ chính trị cơ sở. Ngày 16 tháng 12 năm 1981, Bộ Quốc phòng ban hành Quyết định số 418/QĐ-QP đổi tên Trường Sĩ quan Chính trị thành Trường Sĩ quan Chính trị - quân sự. Ngày 30 tháng 4 năm 1992, Bộ Giáo dục và Đào tạo quyết định cấp bằng tốt nghiệp Cử nhân Cao đẳng ngành chính trị học cho học viên tốt nghiệp của Trường Sĩ quan Chính trị - quân sự. Đây là sự kiện đánh dấu sự hòa nhập của Nhà trường vào hệ thống các trường đại học và cao đẳng trong cả nước. Ngày 08 tháng 8 năm 1995, Bộ trưởng Bộ Quốc phòng ban hành Quyết định số 687/QĐ-QP, sáp nhập Trường Sĩ quan Chính trị - quân sự vào Học viện Chính trị quân sự (trở thành cơ sở II của Học viện Chính trị quân sự). Ngày 22 tháng 5 năm 2008, Bộ trưởng Bộ Quốc phòng ký Quyết định số 69/2008/QĐ-BQP, \"về việc thành lập Trường Sĩ quan Chính trị trực thuộc Bộ Quốc phòng\". Theo Quyết định của Bộ trưởng Bộ Quốc phòng, Trường Sĩ quan Chính trị có chức năng đào tạo, bồi dưỡng cán bộ chính trị cấp phân đội và nghiên cứu khoa học xã hội nhân văn quân sự. Nhà trường có nhiệm vụ đào tạo, bồi dưỡng cán bộ chính trị cấp phân đội có trình độ đại học; đào tạo chuyển loại cán bộ chính trị cấp phân đội; đào tạo giáo viên khoa học xã hội nhân văn cấp phân đội trình độ đại học; đào tạo sĩ quan và cán bộ chính trị cho quân đội nước ngoài khi được giao nhiệm vụ; đào tạo sĩ quan dự bị và sẵn sàng nhận, hoàn thành các nhiệm vụ khác khi được giao [1]. Sau 5 tháng khẩn trương xúc tiến mọi công tác chuẩn bị, từ ngày 01 tháng 11 năm 2008, Trường Sĩ quan Chính trị chính thức hoạt động độc lập và trở thành một đơn vị đầu mối trực thuộc Quân ủy Trung ương, Bộ Quốc phòng."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/bac-ninh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "\"Trung thành, sáng tạo, đoàn kết, vượt khó, dạy tốt, học tốt\". \"Sách bên hoa, đàn bên súng Nghiệp trăm năm theo bước Bác Hồ\"."
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      }
     },
     {
-      "@id": "wd:Q16480483"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/4/44/Dai_hoc_chinh_tri.jpg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Dai_hoc_chinh_tri.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/4/44/Dai_hoc_chinh_tri.jpg"
+      }
     }
-  ],
-  "rdfs:label": {
-    "@language": "vi",
-    "@value": "Trường Sĩ quan Chính trị – Đại học Chính trị"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/bac-ninh"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Sĩ quan Chính trị – Đại học Chính trị"
-  },
-  "vnedu:address": "Bắc Ninh, Việt Nam (cơ sở 2)",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1976"
-  },
-  "vnedu:governedBy": {
-    "@id": "vnedu:MinistryOfNationalDefence"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/bac-ninh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "\"Trung thành, sáng tạo, đoàn kết, vượt khó, dạy tốt, học tốt\". \"Sách bên hoa, đàn bên súng Nghiệp trăm năm theo bước Bác Hồ\"."
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  }
+  ]
 }

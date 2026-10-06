@@ -28,6 +28,7 @@ university:truong-dai-hoc-cong-nghe-sai-gon a dbo:University,
         schema:Organization ;
     rdfs:label "Saigon Technology University"@en,
         "Trường Đại học Công nghệ Sài Gòn"@vi ;
+    dbo:abstract "Trường Đại học Công nghệ Sài Gòn (tiếng Anh: Saigon Technology University) là một đại học tư thục tại Việt Nam được thành lập theo quyết định số 798/QĐ-TTg ngày 24/09/1997 của Thủ tướng Chính phủ."@vi ;
     owl:sameAs dbr:Saigon_Technology_University,
         wd:Q7400087,
         <https://ror.org/044r99091> ;
@@ -43,6 +44,9 @@ university:truong-dai-hoc-cong-nghe-sai-gon a dbo:University,
     vnedu:foundingYear "1997"^^xsd:gYear ;
     vnedu:hasAlumnus person:quang-hieu-tran ;
     vnedu:hasLeader person:cao-hao-thi ;
+    vnedu:history """Tiền thân của Trường Đại học Công nghệ Sài Gòn là Trường Cao đẳng Kỹ nghệ DL. Tp. Hồ Chí Minh (SEC). SEC được thành lập theo Quyết định số 798/QĐ-TTg ngày 24/09/1997 của Thủ tướng Chính phủ. Tháng 4/2004, Chính phủ ra Quyết định số 57/2004/QĐ-Ttg nâng cấp SEC lên đào tạo bậc đại học và lấy tên là Trường Đại học DL. Kỹ nghệ TP. HCM (SEU).
+
+Đến tháng 3/2005, theo Quyết định số 52/2005/QĐ-TTg, trường được đổi tên thành Trường Đại học Dân lập Công nghệ Sài gòn (gọi tắt là Trường Đại học Công nghệ Sài Gòn), tên tiếng Anh là Saigon Technology University (STU)."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:thanh-pho-ho-chi-minh,
         region:nam-bo ;
@@ -51,8 +55,25 @@ university:truong-dai-hoc-cong-nghe-sai-gon a dbo:University,
     vnedu:rector person:cao-hao-thi ;
     vnedu:shortName "STU" ;
     vnedu:website <http://www.stu.edu.vn> ;
+    schema:email "info@stu.edu.vn" ;
     schema:employee person:cao-hao-thi ;
+    schema:foundingDate "1997-09-24"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/0/0b/Outside_of_STU.jpg> ;
     schema:location country:viet-nam,
         province:thanh-pho-ho-chi-minh,
-        region:nam-bo .
+        region:nam-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/a/ae/Logo_STU.png> ;
+    schema:telephone "+84-8-38.508.269" .
+
+<https://upload.wikimedia.org/wikipedia/commons/0/0b/Outside_of_STU.jpg> a schema:ImageObject ;
+    schema:creditText "Lê Uy Lân" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Outside_of_STU.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Outside_of_STU.jpg/330px-Outside_of_STU.jpg> .
+
+<https://upload.wikimedia.org/wikipedia/commons/a/ae/Logo_STU.png> a schema:ImageObject ;
+    schema:creditText "Sở hữu bởi trường Đại học Công nghệ Sài Gòn [STU]" ;
+    schema:license "Public domain" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:Logo_STU.png> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Logo_STU.png/330px-Logo_STU.png> .
 

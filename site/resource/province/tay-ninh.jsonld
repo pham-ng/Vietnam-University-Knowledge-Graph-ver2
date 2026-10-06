@@ -19,16 +19,16 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/tay-ninh",
   "@type": [
-    "schema:AdministrativeArea",
+    "vnedu:AdministrativeUnit",
     "vnedu:Province",
-    "vnedu:AdministrativeUnit"
+    "schema:AdministrativeArea"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/T%C3%A2y_Ninh_province"
+      "@id": "https://vi.wikipedia.org/wiki/T%C3%A2y_Ninh"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/T%C3%A2y_Ninh"
+      "@id": "https://en.wikipedia.org/wiki/T%C3%A2y_Ninh_province"
     }
   ],
   "geo:lat": {
@@ -44,10 +44,10 @@
       "@id": "https://sws.geonames.org/1566557/"
     },
     {
-      "@id": "wd:Q36608"
+      "@id": "dbr:Tây_Ninh_province"
     },
     {
-      "@id": "dbr:Tây_Ninh_province"
+      "@id": "wd:Q36608"
     }
   ],
   "prov:wasDerivedFrom": {
@@ -72,10 +72,10 @@
   },
   "vnedu:partOf": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     }
   ],
   "vnedu:population": {

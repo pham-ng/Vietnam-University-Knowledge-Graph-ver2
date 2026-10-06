@@ -20,7 +20,10 @@ FIELDS = [("founding_year", "năm thành lập"), ("province", "tỉnh/thành"),
           ("website", "website"), ("leaders", "lãnh đạo"), ("governed_by", "cơ quan chủ quản"),
           ("name_en", "tên tiếng Anh"), ("short_names", "tên viết tắt"), ("motto_vi", "khẩu hiệu"),
           ("lat", "toạ độ"), ("admission_codes", "mã trường"), ("ror", "mã ROR"),
-          ("students", "số sinh viên"), ("academic_staff", "số giảng viên")]
+          ("students", "số sinh viên"), ("academic_staff", "số giảng viên"),
+          ("abstract", "giới thiệu chung"), ("history", "lịch sử"), ("logo", "biểu trưng"), ("image", "ảnh"),
+          ("founding_date", "ngày thành lập đầy đủ"), ("alt_names", "tên khác"), ("telephone", "điện thoại"),
+          ("email", "email"), ("campus", "khuôn viên")]
 
 
 def read(name):

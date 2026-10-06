@@ -17,95 +17,123 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghiep-quang-ninh",
-  "@type": [
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.qui.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_nghi%E1%BB%87p_Qu%E1%BA%A3ng_Ninh"
-  },
-  "owl:sameAs": {
-    "@id": "wd:Q10829025"
-  },
-  "prov:wasDerivedFrom": [
+  "@graph": [
     {
-      "@id": "wd:Q10829025"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/f/f5/Dai_hoc_Cong_nghiep_QuangNinh.jpg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Dai_hoc_Cong_nghiep_QuangNinh.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/f/f5/Dai_hoc_Cong_nghiep_QuangNinh.jpg"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75348038"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghiep-quang-ninh",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghiệp Quảng Ninh (tên tiếng Anh: Quang Ninh University of Industry) là trường Đại học công lập trực thuộc Bộ Công thương, trụ sở của Trường được đặt tại phường Yên Thọ, thành phố Đông Triều, tỉnh Quảng Ninh. Nhiệm vụ chính của Trường là đào tạo nguồn nhân lực Đại học và sau đại học, cao đẳng... với các chuyên ngành như: Công nghệ thông tin, Kỹ thuật điện - điện tử, Công nghệ kỹ thuật điều khiển và tự động hoá, Cơ khí ôtô, Kế toán, Tài chính ngân hàng, Quản trị kinh doanh, Du lịch - Lữ hành, Công nghệ khai thác khoáng sản rắn, Kỹ thuật môi trường, Điện tử, Trắc địa mỏ và công trình, Cơ khí... phục vụ nhu cầu phát triển kinh tế - xã hội của Quảng Ninh và cả nước. Cơ sở đào tạo thi cấp chứng chỉ HSK, HSKK duy nhất ở Quảng Ninh Thi chứng chỉ ứng dụng công nghệ thông tin cơ bản tại Quảng Ninh."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.qui.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_nghi%E1%BB%87p_Qu%E1%BA%A3ng_Ninh"
+      },
+      "owl:sameAs": {
+        "@id": "wd:Q10829025"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75348038"
+        },
+        {
+          "@id": "wd:Q10829025"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Công nghiệp Quảng Ninh"
+        },
+        {
+          "@language": "en",
+          "@value": "Quang Ninh University of Industry"
+        }
+      ],
+      "schema:email": "dhcnqn@qui.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-hung-thang"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/f/f5/Dai_hoc_Cong_nghiep_QuangNinh.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-ninh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:telephone": "+84-(0)33. 871 292",
+      "skos:notation": "DDM",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghiệp Quảng Ninh"
+      },
+      "vnedu:address": "phường Yên Thọ, thành phố Đông Triều, tỉnh Quảng Ninh, Việt Nam",
+      "vnedu:admissionCode": "DDM",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1958"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-cong-thuong"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-hung-thang"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghiệp Quảng Ninh (tên tiếng Anh Quang Ninh University of Industry), tiền thân của trường là trường Kỹ thuật Trung cấp Mỏ, được thành lập ngày 25/11/1958 theo Quyết định số 1630 / BCN của Bộ Công nghiệp, địa điểm tại thị xã Hồng Gai (nay là thành phố Hạ Long, tỉnh Quảng Ninh). Năm học 1990 – 1991, Trường được Bộ Giáo dục và Đào tạo giao cho nhiệm vụ đào tạo thí điểm Kỹ thuật viên cấp cao, tiếp sau Bộ Năng lượng (khi đó) giao nhiệm vụ đào tạo kỹ sư ngắn hạn hai chuyên ngành Khai thác mỏ và Cơ điện mỏ. Nhiều sinh viên tốt nghiệp các lớp Đại học này đang là những cán bộ lãnh đạo, quản lý chủ chốt của các doanh nghiệp của Tập đoàn công nghiệp Than- Khoáng sản Việt Nam. Sau chặng đường dài kiên trì phấn đấu, ngày 24/7/1996, tại Quyết định số 479/ TTg, Thủ tướng Chính phủ đã quyết định nâng cấp Trường thành Trường Cao đẳng Kỹ thuật Mỏ, đào tạo các ngành kỹ thuật- công nghệ từ bậc Cao đẳng trở xuống, và đặc biệt vinh dự cho CB, GV, NV của Nhà trường ngày 25/12/2007 được Thủ tướng chính phủ ký Quyết định số: 1730/Qđ-TTg nâng cấp trường Cao đẳng Kỹ thuật Mỏ thành trường Đại học công nghiệp Quảng Ninh. Hiện nay trường có 266 cán bộ, giảng viên, công nhân viên chức, trong đó số giảng viên cơ hữu là 198 người với trình độ như sau: Sau Đại học: 132 người (gồm GS, PGS, TS, TSKH, NCS, thạc sĩ, cao học) chiếm tỷ lệ 66,6% trên tổng số giảng viên, trong đó tiến sĩ 28 người. Kỹ sư, cử nhân khoa học: 68 người chiếm 33,4%). Có 66 giảng viên đã tốt nghiệp tiến sĩ Đức, Nga, Ba Lan, Hàn Quốc, Pháp, Nhật Bản, Trung Quốc."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-ninh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-hung-thang"
+      },
+      "vnedu:website": {
+        "@id": "http://www.qui.edu.vn"
+      }
     }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Quang Ninh University of Industry"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Công nghiệp Quảng Ninh"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-hung-thang"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-ninh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:notation": "DDM",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Công nghiệp Quảng Ninh"
-  },
-  "vnedu:address": "phường Yên Thọ, thành phố Đông Triều, tỉnh Quảng Ninh, Việt Nam",
-  "vnedu:admissionCode": "DDM",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1958"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-cong-thuong"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-hung-thang"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/quang-ninh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-hung-thang"
-  },
-  "vnedu:website": {
-    "@id": "http://www.qui.edu.vn"
-  }
+  ]
 }

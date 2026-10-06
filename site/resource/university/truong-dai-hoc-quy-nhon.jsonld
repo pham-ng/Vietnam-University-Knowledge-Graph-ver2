@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quy-nhon",
   "@type": [
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
     "foaf:Organization",
-    "vnedu:UniversitySchool"
+    "schema:Organization",
+    "vnedu:Organization",
+    "vnedu:UniversitySchool",
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
+    "dbo:University"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Quy Nhơn () là một trong ba trường đại học đa ngành đứng đầu về đào tạo tại Trung Bộ, là một trụ cột trong hệ thống giáo dục bậc cao của Việt Nam, đang phấn đấu vào nhóm trường đại học trọng điểm quốc gia Việt Nam. Ngoài đào tạo, trường đồng thời còn là một trung tâm nghiên cứu khoa học và chính sách quản lý lớn của miền Trung Việt Nam."
+  },
   "foaf:homepage": {
     "@id": "http://www.qnu.edu.vn/"
   },
@@ -46,10 +50,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "https://ror.org/04h4y6q56"
+      "@id": "wd:Q10829116"
     },
     {
-      "@id": "wd:Q10829116"
+      "@id": "https://ror.org/04h4y6q56"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -62,18 +66,21 @@
   ],
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Quy Nhon University"
-    },
-    {
       "@language": "vi",
       "@value": "Trường Đại học Quy Nhơn"
+    },
+    {
+      "@language": "en",
+      "@value": "Quy Nhon University"
     }
   ],
   "schema:employee": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/doan-duc-tung"
   },
   "schema:location": [
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+    },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/binh-dinh"
     },
@@ -82,11 +89,9 @@
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/gia-lai"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     }
   ],
+  "schema:telephone": "84-056-846156",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Quy Nhơn"
@@ -101,42 +106,46 @@
   },
   "vnedu:hasAlumnus": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-t-trung"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-mong-diep-nguyen"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-vuong"
-    },
-    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/tran-tin-nghi"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dao-huy-manh"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vinh-x-ho"
     },
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/thi-mong-diep-nguyen"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-t-trung"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-hoai-bac"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dao-huy-manh"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-minh-vuong"
     }
   ],
   "vnedu:hasLeader": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/doan-duc-tung"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Tiền thân của trường Đại học Quy Nhơn là trường Đại học Sư phạm Quy Nhơn được thành lập ngày 21 tháng 12 năm 1977 với cơ sở vật chất tiếp quản từ trường Sư phạm Quy Nhơn của chính quyền cũ trước đó. Ngày 30 tháng 10 năm 2003, trường Đại học Sư phạm Quy Nhơn được đổi tên thành trường Đại học Quy Nhơn."
+  },
   "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/gia-lai"
-    },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/binh-dinh"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+    },
+    {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/gia-lai"
     }
   ],
   "vnedu:motto": {

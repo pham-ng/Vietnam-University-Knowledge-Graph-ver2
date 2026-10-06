@@ -367,6 +367,11 @@ vnedu:director a owl:ObjectProperty ;
     rdfs:label "director / president"@en , "giám đốc"@vi ;
     rdfs:subPropertyOf vnedu:hasLeader .
 
+vnedu:councilChair a owl:ObjectProperty ;
+    rdfs:label "chair of the university council"@en , "chủ tịch hội đồng trường"@vi ;
+    rdfs:comment "Chủ tịch hội đồng trường (Luật GDĐH 2018, Điều 16) — vai trò quản trị, tách khỏi hiệu trưởng/giám đốc."@vi ;
+    rdfs:subPropertyOf vnedu:hasLeader .
+
 vnedu:alumnusOf a owl:ObjectProperty ;
     rdfs:label "alumnus of"@en , "cựu sinh viên của"@vi ;
     rdfs:domain vnedu:Person ;
@@ -443,6 +448,24 @@ vnedu:motto a owl:DatatypeProperty ;
     rdfs:domain vnedu:EducationalOrganization ;
     rdfs:range rdf:langString .
 
+vnedu:history a owl:DatatypeProperty ;
+    rdfs:label "history"@en , "lịch sử hình thành"@vi ;
+    rdfs:comment "Tóm tắt mục Lịch sử của bài Wikipedia tiếng Việt (CC BY-SA 4.0); bản sửa đổi gốc ghi ở prov:wasDerivedFrom."@vi ;
+    rdfs:domain vnedu:EducationalOrganization ;
+    rdfs:range rdf:langString .
+
+vnedu:campus a owl:DatatypeProperty ;
+    rdfs:label "campus"@en , "khuôn viên"@vi ;
+    rdfs:comment "Diện tích / mô tả khuôn viên đúng như ghi ở nguồn (đơn vị không thống nhất nên giữ dạng văn bản)."@vi ;
+    rdfs:domain vnedu:EducationalOrganization ;
+    rdfs:range xsd:string .
+
+vnedu:funding a owl:DatatypeProperty ;
+    rdfs:label "funding / endowment"@en , "tài trợ, ngân sách, vốn đầu tư"@vi ;
+    rdfs:comment "Giá trị đúng như ghi ở nguồn (kèm đơn vị tiền tệ, có thể kèm năm)."@vi ;
+    rdfs:domain vnedu:EducationalOrganization ;
+    rdfs:range xsd:string .
+
 vnedu:address a owl:DatatypeProperty ;
     rdfs:label "address"@en , "địa chỉ"@vi ;
     rdfs:range xsd:string .
@@ -513,3 +536,30 @@ schema:hasOccupation a owl:ObjectProperty ;
 schema:gender a owl:ObjectProperty ;
     rdfs:label "gender"@en , "giới tính"@vi ;
     rdfs:comment "Tái sử dụng từ schema.org; giá trị là item Wikidata (Q6581097 nam, Q6581072 nữ)."@vi .
+
+# --- Thông tin giới thiệu, ảnh, liên hệ: dùng thẳng từ vựng DBpedia / SKOS / schema.org --------
+dbo:abstract a owl:DatatypeProperty ;
+    rdfs:label "abstract"@en , "giới thiệu chung"@vi ;
+    rdfs:comment "Đoạn mở đầu bài Wikipedia tiếng Việt (CC BY-SA 4.0) — cùng thuộc tính DBpedia dùng cho tóm tắt."@vi .
+
+dbo:affiliation a owl:ObjectProperty ;
+    rdfs:label "affiliation"@en , "liên kết, đối tác"@vi ;
+    rdfs:comment "Đối tác / liên kết học thuật. Đích là URI Wikidata của tổ chức đối tác (tái sử dụng, không tạo URI mới)."@vi .
+
+skos:altLabel a owl:AnnotationProperty ;
+    rdfs:label "alternative label"@en , "tên khác"@vi .
+
+schema:foundingDate a owl:DatatypeProperty ;
+    rdfs:label "founding date"@en , "ngày thành lập"@vi ;
+    rdfs:comment "Ngày thành lập ghi trong infobox. vnedu:foundingYear là năm sớm nhất giữa các nguồn (có thể tính từ tiền thân hoặc ngày phê duyệt chủ trương) nên có thể sớm hơn."@vi .
+
+schema:telephone a owl:DatatypeProperty ; rdfs:label "telephone"@en , "điện thoại"@vi .
+schema:email a owl:DatatypeProperty ; rdfs:label "email"@en , "thư điện tử"@vi .
+
+schema:logo a owl:ObjectProperty ; rdfs:label "logo"@en , "biểu trưng"@vi .
+schema:image a owl:ObjectProperty ; rdfs:label "image"@en , "hình ảnh"@vi .
+schema:ImageObject a owl:Class ; rdfs:label "image object"@en , "tệp ảnh"@vi .
+schema:thumbnailUrl a owl:ObjectProperty ; rdfs:label "thumbnail"@en , "ảnh thu nhỏ"@vi .
+schema:mainEntityOfPage a owl:ObjectProperty ; rdfs:label "description page"@en , "trang mô tả tệp"@vi .
+schema:license a owl:DatatypeProperty ; rdfs:label "license"@en , "giấy phép"@vi .
+schema:creditText a owl:DatatypeProperty ; rdfs:label "credit"@en , "tác giả / ghi công"@vi .

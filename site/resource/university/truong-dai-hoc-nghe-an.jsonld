@@ -19,17 +19,21 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-nghe-an",
   "@type": [
-    "dbo:University",
+    "vnedu:UniversitySchool",
     "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
     "schema:EducationalOrganization",
     "schema:CollegeOrUniversity",
-    "schema:Organization",
+    "vnedu:HigherEducationInstitution",
+    "vnedu:PublicInstitution",
+    "dbo:University",
     "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution"
+    "schema:Organization",
+    "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Trường Đại học Nghệ An (tiếng Anh: Nghe An University, viết tắt: NAU) là một trường đại học công lập đa ngành trực thuộc Ủy ban nhân dân tỉnh Nghệ An, chịu sự quản lý Nhà nước của Bộ Giáo dục và Đào tạo. Trường Đại học Nghệ An có trụ sở chính đặt tại số 51, đường Lý Tự Trọng, phường Vinh Phú, tỉnh Nghệ An. Bên cạnh đó, nhà trường hiện có 4 cơ sở đào tạo và làm việc được phân bố hợp lý. Hệ thống cơ sở của trường được đầu tư đồng bộ, thuận tiện cho sinh viên học tập, sinh hoạt và tham gia các hoạt động học thuật – ngoại khóa, bao gồm: Cơ sở 1: Số 51 đường Lý Tự Trọng, phường Vinh Phú, tỉnh Nghệ An. Cơ sở 2: Số 389 đường Lê Viết Thuật, phường Vinh Lộc, tỉnh Nghệ An. Cơ sở 3: Số 68 đường Nguyễn Trường Tộ, phường Vinh Hưng, tỉnh Nghệ An. Cơ sở 4: Số 32 đường Hồ Sỹ Dương, phường Thành Vinh, tỉnh Nghệ An. Điện thoại: 0975 313 755; Email: nau@nau.edu.vn Website: https://nau.edu.vn/ Hiệu trưởng: TS. Nguyễn Ngọc Hiếu"
+  },
   "foaf:homepage": {
     "@id": "https://nau.edu.vn/"
   },
@@ -64,10 +68,10 @@
   ],
   "schema:location": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
@@ -80,12 +84,16 @@
   "vnedu:governedBy": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/uy-ban-nhan-dan-tinh-nghe-an"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Trường Đại học Nghệ An (Nghe An University – NAU) là cơ sở giáo dục đại học công lập trực thuộc UBND tỉnh Nghệ An, với quá trình hình thành và phát triển trải dài hơn 65 năm. Ngày 26/12/2024, Chính phủ đã chính thức ban hành quyết định quan trọng về việc sáp nhập Trường Cao đẳng Sư phạm Nghệ An vào Trường Đại học Kinh tế Nghệ An, đồng thời đổi tên Trường Đại học Kinh tế Nghệ An thành Trường Đại học Nghệ An, đánh dấu bước phát triển mới của Nhà trường."
+  },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/nghe-an"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"

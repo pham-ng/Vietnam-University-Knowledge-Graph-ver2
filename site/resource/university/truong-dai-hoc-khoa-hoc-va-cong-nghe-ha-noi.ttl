@@ -28,11 +28,13 @@ university:truong-dai-hoc-khoa-hoc-va-cong-nghe-ha-noi a dbo:University,
         schema:Organization ;
     rdfs:label "University of Science and Technology of Hanoi"@en,
         "Trường Đại học Khoa học và Công nghệ Hà Nội"@vi ;
+    dbo:abstract "Trường Đại học Khoa học và Công nghệ Hà Nội (tiếng Anh: University of Science and Technology of Hanoi, viết tắt là USTH), còn được gọi là Đại học Việt Pháp (Vietnam France University) là trường đại học công lập đạt chuẩn quốc tế được thành lập năm 2009 trong khuôn khổ Thỏa thuận hợp tác giữa Chính phủ hai nước Việt Nam và Pháp ký ngày 12/11/2009 và Quyết định số 2067/QĐ-TTg ngày 09/12/2009 của Thủ tướng Chính phủ."@vi ;
     owl:sameAs dbr:University_of_Science_and_Technology_of_Hanoi,
         wd:Q15260958,
         <https://ror.org/02wdwrr89> ;
     geo:lat 21.048157 ;
     geo:long 105.801289 ;
+    skos:altLabel "USTH, Đại học Việt Pháp" ;
     skos:prefLabel "Trường Đại học Khoa học và Công nghệ Hà Nội"@vi ;
     prov:wasDerivedFrom wd:Q15260958,
         <https://vi.wikipedia.org/w/index.php?oldid=74327343> ;
@@ -48,7 +50,9 @@ university:truong-dai-hoc-khoa-hoc-va-cong-nghe-ha-noi a dbo:University,
     vnedu:ownership vnedu:PublicOwnership ;
     vnedu:shortName "USTH" ;
     vnedu:website <http://www.usth.edu.vn> ;
+    schema:email "officeusth@usth.edu.vn" ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:telephone "+84 04) 37 91 69 60" .
 

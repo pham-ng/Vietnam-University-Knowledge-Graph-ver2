@@ -20,16 +20,16 @@
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/anderson-cooper",
   "@type": [
     "vnedu:Person",
-    "foaf:Person",
+    "schema:Person",
     "vnedu:Alumnus",
-    "schema:Person"
+    "foaf:Person"
   ],
   "foaf:isPrimaryTopicOf": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Anderson_Cooper"
+      "@id": "https://vi.wikipedia.org/wiki/Anderson_Cooper"
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/Anderson_Cooper"
+      "@id": "https://en.wikipedia.org/wiki/Anderson_Cooper"
     }
   ],
   "foaf:name": "Anderson Cooper",
@@ -46,11 +46,11 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
+      "@language": "vi",
       "@value": "Anderson Cooper"
     },
     {
-      "@language": "vi",
+      "@language": "en",
       "@value": "Anderson Cooper"
     }
   ],
@@ -65,13 +65,13 @@
       "@id": "wd:Q36180"
     },
     {
-      "@id": "wd:Q4610556"
+      "@id": "wd:Q1930187"
     },
     {
       "@id": "wd:Q947873"
     },
     {
-      "@id": "wd:Q1930187"
+      "@id": "wd:Q4610556"
     }
   ],
   "vnedu:alumnusOf": {

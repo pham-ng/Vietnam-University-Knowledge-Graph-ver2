@@ -19,16 +19,20 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-khoa-hoc-va-cong-nghe",
   "@type": [
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "schema:CollegeOrUniversity",
     "vnedu:Academy",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution",
+    "schema:EducationalOrganization",
     "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
+    "vnedu:PublicInstitution",
+    "vnedu:HigherEducationInstitution",
+    "foaf:Organization",
+    "schema:Organization",
     "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Học viện Khoa học và Công nghệ (tiếng Anh: Graduate University of Sciences and Technology hay viết tắt là GUST) là một học viện công lập trực thuộc Viện Hàn lâm Khoa học và Công nghệ Việt Nam, nằm trong hệ thống giáo dục quốc dân Việt Nam."
+  },
   "foaf:homepage": {
     "@id": "https://gust.edu.vn/"
   },
@@ -37,10 +41,10 @@
   },
   "owl:sameAs": [
     {
-      "@id": "wd:Q61128190"
+      "@id": "https://ror.org/03t0zs859"
     },
     {
-      "@id": "https://ror.org/03t0zs859"
+      "@id": "wd:Q61128190"
     }
   ],
   "prov:wasDerivedFrom": [
@@ -66,10 +70,10 @@
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     }
   ],
   "skos:prefLabel": {
@@ -83,12 +87,16 @@
   "vnedu:governedBy": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/vien-han-lam-khoa-hoc-va-cong-nghe-viet-nam"
   },
+  "vnedu:history": {
+    "@language": "vi",
+    "@value": "Ngày 22 tháng 9 năm 2014, Thủ tướng Chính phủ ra Quyết định số 1691/QĐ-TTg về việc thành lập Học viện Khoa học và Công nghệ.\n\nHọc viện Khoa học và Công nghệ là cơ sở giáo dục, đơn vị sự nghiệp trực thuộc Viện Hàn lâm Khoa học và Công nghệ Việt Nam có tư cách pháp nhân, con dấu và tài khoản riêng, có chức năng và nhiệm vụ chính."
+  },
   "vnedu:locatedIn": [
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
     },
     {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"

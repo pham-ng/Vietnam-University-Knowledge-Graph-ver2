@@ -19,16 +19,20 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-dong-nai",
   "@type": [
+    "vnedu:UniversitySchool",
+    "schema:EducationalOrganization",
+    "vnedu:EducationalOrganization",
+    "schema:CollegeOrUniversity",
     "vnedu:HigherEducationInstitution",
     "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
+    "foaf:Organization",
     "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization"
+    "vnedu:Organization"
   ],
+  "dbo:abstract": {
+    "@language": "vi",
+    "@value": "Đại học Công nghệ Đồng Nai (tiếng Anh: Dong Nai Technology University) là một trường đại học tại Đồng Nai do TS. Phan Ngọc Sơn đứng tên thành lập theo quyết định số 929/QĐ-TTg ngày 16 tháng 6 năm 2011 của thủ tướng chính phủ."
+  },
   "foaf:homepage": {
     "@id": "https://dntu.edu.vn/"
   },
@@ -69,20 +73,23 @@
       "@value": "Dong Nai Technology University"
     }
   ],
+  "schema:email": "truongdaihoccongnghedongnai@dntu.edu.vn",
   "schema:employee": {
     "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-ngoc-son"
   },
   "schema:location": [
     {
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-nai"
+    },
+    {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
     },
     {
       "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/dong-nai"
     }
   ],
+  "schema:telephone": "02513 996 473",
+  "skos:altLabel": "Dong Nai Technology University - DNTU",
   "skos:prefLabel": {
     "@language": "vi",
     "@value": "Trường Đại học Công nghệ Đồng Nai"

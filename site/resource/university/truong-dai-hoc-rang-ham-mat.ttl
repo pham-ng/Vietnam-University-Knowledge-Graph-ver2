@@ -27,6 +27,7 @@ university:truong-dai-hoc-rang-ham-mat a dbo:University,
         schema:Organization ;
     rdfs:label "jaw"@en,
         "Trường Đại học Răng Hàm Mặt"@vi ;
+    dbo:abstract "Trường Đại học Răng Hàm Mặt được thành lập ngày 15 tháng 10 năm 2002, trụ sở của Trường được đặt tại số 40A phố Tràng Thi, phường Hàng Bông, quận Hoàn Kiếm, thành phố Hà Nội. Trường này là đại học đào tạo chuyên về Răng - Hàm - Mặt đầu tiên của Việt Nam. Trường đã giải thể vào năm 2009 do hoạt động chồng chéo, không hiệu quả."@vi ;
     owl:sameAs wd:Q10829120 ;
     skos:prefLabel "Trường Đại học Răng Hàm Mặt"@vi ;
     prov:wasDerivedFrom wd:Q10829120,
@@ -37,6 +38,13 @@ university:truong-dai-hoc-rang-ham-mat a dbo:University,
     vnedu:dissolutionYear "2009"^^xsd:gYear ;
     vnedu:foundingYear "2002"^^xsd:gYear ;
     vnedu:hasLeader person:truong-manh-dung ;
+    vnedu:history """Trường Đại học Răng Hàm Mặt tiền thân là ban Nha khoa - Bệnh viện Phủ Doãn Hà Nội (nay là Bệnh viện Hữu nghị Việt - Đức) được thành lập ngày 01/10/1939, với chức năng ban đầu là đào tạo cán bộ nha khoa ở Đông Dương.
+
+Năm 1990, Khoa Răng Hàm Mặt - Bệnh viện Hữu nghị Việt Đức trở thành phân viện Răng Hàm Mặt. Năm 1997, khoa đào tạo của Viện Răng Hàm Mặt và bộ môn Răng Hàm Mặt - Trường Đại học Y Hà Nội hợp thành khoa Răng Hàm Mặt.
+
+Ngày 15/10/2002, Thủ tướng Chính phủ đã ký quyết định số 138/2002/QĐ-TTg nâng cấp hai Khoa trên thành trường Đại học Răng Hàm Mặt.
+
+Hiện tại Trường đã giải thể do hoạt động chồng chéo, không hiệu quả, trở thành một đơn vị trực thuộc Trường ĐHY Hà Nội."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -45,7 +53,15 @@ university:truong-dai-hoc-rang-ham-mat a dbo:University,
     vnedu:rector person:truong-manh-dung ;
     vnedu:website <http://www.dhrhm.edu.vn> ;
     schema:employee person:truong-manh-dung ;
+    schema:foundingDate "2002-10-15"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/vi/8/8c/Dai_hoc_RangHamMat.PNG> ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:telephone "+84-(04) 928 7190" .
+
+<https://upload.wikimedia.org/wikipedia/vi/8/8c/Dai_hoc_RangHamMat.PNG> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Dai_hoc_RangHamMat.PNG> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/vi/8/8c/Dai_hoc_RangHamMat.PNG> .
 

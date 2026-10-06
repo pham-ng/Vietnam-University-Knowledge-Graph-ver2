@@ -17,103 +17,136 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-dong-do",
-  "@type": [
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:UniversitySchool",
-    "foaf:Organization",
-    "vnedu:PrivateInstitution",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization"
-  ],
-  "foaf:homepage": {
-    "@id": "https://hdiu.edu.vn/"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%B4ng_%C4%90%C3%B4"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "https://ror.org/00450b889"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Dong_Do.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Kuin29",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Logo_Dong_Do.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Logo_Dong_Do.png/330px-Logo_Dong_Do.png"
+      }
     },
     {
-      "@id": "wd:Q10829181"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-dong-do",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "vnedu:EducationalOrganization",
+        "schema:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PrivateInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Đông Đô (tiếng Anh: Dong Do University, viết tắt HDIU), tên giao dịch quốc tế là Hanoi Dong Do International University, là một đại học tư thục thành lập năm 1994 tại Hà Nội, Việt Nam. Trường có trụ sở chính đặt tại xã Phú Nghĩa, thành phố Hà Nội và Tòa nhà Đại học Đông Đô tại phường Thanh Xuân, thành phố Hà Nội. Tính đến năm 2026, trường là một trong những cơ sở giáo dục đại học tư thục lâu đời nhất tại Việt Nam, đào tạo đa ngành, đa lĩnh vực với 24 ngành đại học, 7 ngành thạc sĩ và 1 ngành tiến sĩ."
+      },
+      "foaf:homepage": {
+        "@id": "https://hdiu.edu.vn/"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%B4ng_%C4%90%C3%B4"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q10829181"
+        },
+        {
+          "@id": "https://ror.org/00450b889"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q10829181"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75516743"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Đông Đô"
+        },
+        {
+          "@language": "en",
+          "@value": "Dong Do University"
+        }
+      ],
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-anh-tuan"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1994-10-03"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Dong_Do.png"
+      },
+      "schema:telephone": "+84-0243 771 9960",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Đông Đô"
+      },
+      "vnedu:academicStaff": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "250"
+      },
+      "vnedu:address": "Tòa nhà Đại học Đông Đô, 60B Nguyễn Huy Tưởng, phường Thanh Xuân",
+      "vnedu:campus": "3,4 ha (cơ sở Phú Nghĩa)",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1994"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-anh-tuan"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Trường Đại học Đông Đô được thành lập theo Quyết định số 534/TTg ngày 3 tháng 10 năm 1994 của Thủ tướng Chính phủ với tên gọi ban đầu là Trường Đại học Dân lập Đông Đô. Đây là một trong những trường đại học dân lập đầu tiên được thành lập tại Việt Nam sau thời kỳ Đổi mới. Ngày 3 tháng 10 hằng năm được lấy làm ngày truyền thống của trường.\n\nThuở ban đầu, trường chỉ có 7 ngành đào tạo gồm: Ngôn ngữ Anh, Ngôn ngữ Trung Quốc, Ngôn ngữ Pháp, Quan hệ quốc tế, Quản trị kinh doanh, Công nghệ thông tin và Công nghệ kỹ thuật môi trường.\n\nNgày 27 tháng 2 năm 2017, Phó Thủ tướng Chính phủ Phạm Gia Khiêm đã ký Quyết định số 235/QĐ-TTg, cho phép Trường Đại học Đông Đô chuyển sang loại hình trường đại học tư thục và hoạt động theo quy chế trường đại học tư thục.\n\nGiai đoạn 2020–2025, trường dưới sự lãnh đạo của Hiệu trưởng TS. Đào Hải và sau đó là TS. Nguyễn Thái Sơn, đã mở rộng quy mô đào tạo, tăng số lượng ngành học và đầu tư cơ sở vật chất. Ngày 22 tháng 12 năm 2025, TS. Nguyễn Anh Tuấn được bổ nhiệm làm Hiệu trưởng nhiệm kỳ 2025–2030. Tính đến năm 2026, trường đã đào tạo khoảng 60.000 cử nhân, kỹ sư, kiến trúc sư tốt nghiệp."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Be International"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PrivateOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-anh-tuan"
+      },
+      "vnedu:website": {
+        "@id": "https://hdiu.edu.vn/"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75516743"
-    },
-    {
-      "@id": "wd:Q10829181"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Dong Do University"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Đông Đô"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-anh-tuan"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Đông Đô"
-  },
-  "vnedu:academicStaff": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "250"
-  },
-  "vnedu:address": "Tòa nhà Đại học Đông Đô, 60B Nguyễn Huy Tưởng, phường Thanh Xuân",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1994"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-anh-tuan"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Be International"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PrivateOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-anh-tuan"
-  },
-  "vnedu:website": {
-    "@id": "https://hdiu.edu.vn/"
-  }
+  ]
 }

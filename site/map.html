@@ -92,7 +92,7 @@
     });
   }
   function popup(i) {
-    return `<b>${VN.esc(i.name)}</b><br>${VN.esc(i.kindVi)}${i.own ? " · " + OWN[i.own] : ""}${i.year ? " · thành lập " + i.year : ""}${i.end ? "–" + i.end : ""}
+    return `${i.logo ? `<img src="${VN.esc(i.logo)}" alt="" style="float:right;max-width:56px;max-height:56px;margin:0 0 4px 8px;background:#fff;border-radius:4px">` : ""}<b>${VN.esc(i.name)}</b><br>${VN.esc(i.kindVi)}${i.own ? " · " + OWN[i.own] : ""}${i.year ? " · thành lập " + i.year : ""}${i.end ? "–" + i.end : ""}
       <br>${VN.esc(i.prov || "")}${i.provOld ? ` <span class="lang">(ghi ở tỉnh cũ ${VN.esc(i.provOld)})</span>` : ""}
       ${i.codes.length ? "<br>Mã tuyển sinh: <b>" + i.codes.join(", ") + "</b>" : ""}
       ${i.gov.length ? "<br>Chủ quản: " + VN.esc(i.gov.join(", ")) : ""}

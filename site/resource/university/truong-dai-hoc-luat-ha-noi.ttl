@@ -29,6 +29,7 @@ university:truong-dai-hoc-luat-ha-noi a dbo:University,
         schema:Organization ;
     rdfs:label "Hanoi Law University"@en,
         "Trường Đại học Luật Hà Nội"@vi ;
+    dbo:abstract "Trường Đại học Luật Hà Nội là trường đại học công lập đào tạo luật pháp của Việt Nam, trực thuộc Bộ Tư pháp và chịu sự quản lý nhà nước về giáo dục của Bộ Giáo dục và Đào tạo. Trường đang tổ chức đào tạo các bậc đại học, cao học, và nghiên cứu sinh. Trường có trụ sở chính tại số 87, đường Nguyễn Chí Thanh, phường Giảng Võ, thành phố Hà Nội, cơ sở 2 tại đường Hoàng Quốc Việt, phường Đồng Nguyên, thành phố Bắc Ninh và Phân hiệu tại tỉnh Đắk Lắk (thành lập tháng 3 năm 2019 trên cơ sở giải thể Trường Trung cấp Luật Buôn Ma Thuột)."@vi ;
     owl:sameAs wd:Q10829088,
         wd:Q30257165,
         wd:Q99298383 ;
@@ -60,6 +61,19 @@ university:truong-dai-hoc-luat-ha-noi a dbo:University,
         person:nguyen-thi-kim-anh,
         person:pham-duc-an,
         person:trinh-xuan-an ;
+    vnedu:history """Trường Đại học Pháp lý Hà Nội được thành lập ngày 10 tháng 11 năm 1979 theo Quyết định số 405/CP của Hội đồng Chính phủ (nay là Chính phủ), trên cơ sở hợp nhất Trường Cao đẳng Pháp lý và Khoa Pháp lý của Trường Đại học Tổng hợp Hà Nội (cũ) (nay là tiền thân Trường Đại học Luật, Đại học Quốc gia Hà Nội), trực thuộc sự quản lý của Ủy ban Pháp chế (Bộ Tư pháp) của Chính phủ. Trước đó, Khoa Pháp lý đã tuyển sinh và đang đào tạo 3 khoá sinh viên. Sau khi thành lập, Trường Đại học Pháp lý Hà Nội tiếp tục đào tạo các sinh viên này và bắt đầu tuyển sinh từ khoá thứ 4.
+
+Khi mới thành lập, trường có bốn khoa đào tạo chuyên ngành là: Khoa Hành chính - Nhà nước, Khoa Tư pháp, Khoa Luật Kinh tế và Khoa Luật Quốc tế. Trường đóng tại xã Duyên Thái, huyện Thường Tín, tỉnh Hà Tây (cũ).
+
+Trong ngày khai giảng năm học đầu tiên của Trường, Thủ tướng Phạm Văn Đồng đã đến tham dự và đặt ra mục tiêu cho trường trở thành "trung tâm đào tạo cán bộ pháp lý, trung tâm nghiên cứu khoa học pháp lý và trung tâm truyền bá pháp lý" của Việt Nam.
+
+Đến tháng 10 năm 1982, Trường Cao đẳng Toà án được sáp nhập vào Trường Đại học Pháp lý Hà Nội.
+
+Ngày 6 tháng 7 năm 1993, Bộ Tư pháp đã quyết định đổi tên trường thành Trường Đại học Luật Hà Nội.
+
+Khoảng năm 1993, trường được chuyển về địa điểm như hiện nay: Số 87, đường Nguyễn Chí Thanh, quận Đống Đa, Hà Nội. Đến năm 2003, Hiệu trưởng Trường Đại học Luật Hà Nội đã quyết định tách Khoa Tư pháp thành hai khoa chuyên ngành là Khoa Luật Dân sự và Khoa Luật Hình sự.
+
+Ngày 12 tháng 2 năm 2019, Bộ Giáo dục và Đào tạo ra Quyết định số 310/QĐ-BGDĐT về việc thành lập Phân hiệu Trường Đại học Luật Hà Nội tại tỉnh Đắk Lắk."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
@@ -69,7 +83,14 @@ university:truong-dai-hoc-luat-ha-noi a dbo:University,
     vnedu:shortName "HLU" ;
     vnedu:trainsMajor major:7380101 ;
     vnedu:website <https://hlu.edu.vn/> ;
+    schema:image <https://upload.wikimedia.org/wikipedia/vi/d/d7/DH_Luat_Ha_Noi.jpg> ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:telephone "+84-24-38352630" .
+
+<https://upload.wikimedia.org/wikipedia/vi/d/d7/DH_Luat_Ha_Noi.jpg> a schema:ImageObject ;
+    schema:license "KTD" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:DH_Luat_Ha_Noi.jpg> ;
+    schema:thumbnailUrl <https://upload.wikimedia.org/wikipedia/vi/d/d7/DH_Luat_Ha_Noi.jpg> .
 

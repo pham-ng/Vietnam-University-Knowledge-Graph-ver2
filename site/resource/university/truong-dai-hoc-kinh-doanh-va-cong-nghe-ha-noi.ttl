@@ -26,6 +26,7 @@ university:truong-dai-hoc-kinh-doanh-va-cong-nghe-ha-noi a dbo:University,
         schema:Organization ;
     rdfs:label "Hanoi University of Business and Technology"@en,
         "Trường Đại học Kinh doanh và Công nghệ Hà Nội"@vi ;
+    dbo:abstract "Trường Đại học Kinh doanh và Công nghệ Hà Nội (tiếng Anh: Hanoi University of Business and Technology, viết tắt HUBT) là một cơ sở đào tạo giáo dục tư thục tại Việt Nam, được thành lập theo Quyết định số 405/TTg ngày 14 tháng 6 năm 1996 của Thủ tướng Chính phủ tại Hà Nội."@vi ;
     owl:sameAs wd:Q10829067 ;
     skos:notation "DQK" ;
     skos:prefLabel "Trường Đại học Kinh doanh và Công nghệ Hà Nội"@vi ;
@@ -38,12 +39,31 @@ university:truong-dai-hoc-kinh-doanh-va-cong-nghe-ha-noi a dbo:University,
     vnedu:foundingYear "1996"^^xsd:gYear ;
     vnedu:hasAlumnus person:do-minh-tuan,
         person:nguyen-xinh-xo ;
+    vnedu:history """Khi mới thành lập vào tháng 6 năm 1996, trường có tên là Trường Đại học dân lập Quản lý và Kinh doanh Hà Nội và do Giáo sư Trần Phương (Chủ tịch Hội Khoa học kinh tế Việt Nam, nguyên Phó Chủ tịch Hội đồng Bộ trưởng) làm hiệu trưởng. Do mở rộng mục tiêu đào tạo sang lĩnh vực kỹ thuật - công nghệ, trường được đổi tên thành Trường Đại học Kinh doanh và Công nghệ Hà Nội kể từ tháng 5 năm 2006, sau đó trường bỏ tên dân lập. Trường nằm trong hệ thống giáo dục quốc dân.
+
+Nhưng đến ngày 3/6/2019, Thủ tướng Chính phủ đã có Quyết định về việc chuyển đổi Trường Đại học Kinh doanh và Công nghệ Hà Nội sang loại hình trường đại học tư thục. Theo quyết định, HUBT phải tiến hành các bước chuyển đổi từ mô hình dân lập sang tư thục. Để thực hiện việc này, trường bắt buộc phải thành lập Hội đồng trường (HĐT). Nhưng trong suốt hơn 7 năm qua đến nay năm 2026, dù Bộ Giáo dục và Đào tạo , cơ quan quản lý nhiều lần có văn bản đôn đốc, trường HUBT vẫn chưa thể thành lập Hội đồng trường ."""@vi ;
     vnedu:locatedIn country:viet-nam,
         province:ha-noi,
         region:bac-bo ;
     vnedu:ownership vnedu:PrivateOwnership ;
     vnedu:website <http://hubt.edu.vn/> ;
+    schema:email "tttt@hubt.edu.vn" ;
+    schema:foundingDate "1996-06-14"^^xsd:date ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/1/19/HUBT_2023.jpg> ;
     schema:location country:viet-nam,
         province:ha-noi,
-        region:bac-bo .
+        region:bac-bo ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/vi/6/65/Logo_HUBT.jpg> ;
+    schema:telephone "84 2436336507" .
+
+<https://upload.wikimedia.org/wikipedia/commons/1/19/HUBT_2023.jpg> a schema:ImageObject ;
+    schema:creditText "AxitTDTbenzoic" ;
+    schema:license "CC BY-SA 4.0" ;
+    schema:mainEntityOfPage <https://commons.wikimedia.org/wiki/File:HUBT_2023.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/HUBT_2023.jpg/330px-HUBT_2023.jpg> .
+
+<https://upload.wikimedia.org/wikipedia/vi/6/65/Logo_HUBT.jpg> a schema:ImageObject ;
+    schema:license "Sử dụng hợp lý" ;
+    schema:mainEntityOfPage <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_HUBT.jpg> ;
+    schema:thumbnailUrl <https://thumb.wikimedia.org/wikipedia/vi/thumb/6/65/Logo_HUBT.jpg/330px-Logo_HUBT.jpg> .
 

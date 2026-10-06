@@ -17,132 +17,177 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ky-thuat-quan-su",
-  "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "schema:EducationalOrganization",
-    "vnedu:PublicInstitution",
-    "vnedu:MilitaryInstitution",
-    "schema:CollegeOrUniversity",
-    "schema:Organization",
-    "vnedu:Academy",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
-  ],
-  "foaf:homepage": {
-    "@id": "http://www.lqdtu.edu.vn"
-  },
-  "foaf:isPrimaryTopicOf": [
+  "@graph": [
     {
-      "@id": "https://en.wikipedia.org/wiki/Le_Quy_Don_Technical_University"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Le_Quy_Don_Technical_University_Logo.gif",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Namtx",
+      "schema:license": "CC0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Le_Quy_Don_Technical_University_Logo.gif"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Le_Quy_Don_Technical_University_Logo.gif/330px-Le_Quy_Don_Technical_University_Logo.gif"
+      }
     },
     {
-      "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_K%E1%BB%B9_thu%E1%BA%ADt_Qu%C3%A2n_s%E1%BB%B1"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-ky-thuat-quan-su",
+      "@type": [
+        "vnedu:PublicInstitution",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization",
+        "vnedu:MilitaryInstitution",
+        "vnedu:Academy",
+        "schema:EducationalOrganization",
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Kỹ thuật quân sự ( – MTA, tên dân sự: Trường Đại học Kỹ thuật Lê Quý Đôn) là trường đại học đào tạo kỹ thuật, công nghiệp quốc phòng, công nghệ quân sự trực thuộc Bộ Quốc phòng và chịu sự chỉ đạo nghiệp vụ của Bộ giáo dục và Đào tạo. Học viện có nhiệm vụ đào tạo cán bộ kỹ thuật, công nghệ quân sự, chỉ huy tham mưu kỹ thuật có trình độ đại học, thạc sĩ, tiến sĩ cho quân đội. Đồng thời, Học viện có nhiệm vụ nghiên cứu khoa học công nghệ quân sự, kết hợp nghiên cứu với triển khai ứng dụng, chuyển giao công nghệ với sản xuất và thực hiện nhiệm vụ sẵn sàng chiến đấu và chiến đấu của quân đội."
+      },
+      "foaf:homepage": {
+        "@id": "http://www.lqdtu.edu.vn"
+      },
+      "foaf:isPrimaryTopicOf": [
+        {
+          "@id": "https://en.wikipedia.org/wiki/Le_Quy_Don_Technical_University"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_K%E1%BB%B9_thu%E1%BA%ADt_Qu%C3%A2n_s%E1%BB%B1"
+        }
+      ],
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "21.0483"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.786"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "wd:Q4130078"
+        },
+        {
+          "@id": "dbr:Le_Quy_Don_Technical_University"
+        },
+        {
+          "@id": "https://ror.org/04wgyjv21"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "wd:Q4130078"
+        },
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75614833"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Le Quy Don Technical University"
+        },
+        {
+          "@language": "vi",
+          "@value": "Học viện Kỹ thuật Quân sự"
+        }
+      ],
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1966-10-28"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Le_Quy_Don_Technical_University_Logo.gif"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/0/0e/Logo_MTA_new.png"
+      },
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Kỹ thuật Quân sự"
+      },
+      "vnedu:address": "số 236, đường Hoàng Quốc Việt, phường Nghĩa Đô, thành phố Hà Nội",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1966"
+      },
+      "vnedu:governedBy": {
+        "@id": "vnedu:MinistryOfNationalDefence"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-thai"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phung-van-minh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-manh-hung-2"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-c-duong"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vo-minh-pho"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-manh-ha"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-van-hung"
+        }
+      ],
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Ngày 08/08/1966 Hội đồng Chính phủ ra Quyết định số 146-CP thành lập Phân hiệu II Đại học Bách Khoa.\n\nNgày 28/10/1966, Bộ Đại học và Trung học chuyên nghiệp, Bộ Quốc phòng tổ chức Lễ công bố quyết định thành lập Phân Hiệu II Đại học Bách Khoa đồng thời khai giảng khóa đào tạo 1 tại Thủ đô Hà Nội. Từ đó tới nay, ngày 28/10 hàng năm trở thành ngày truyền thống của Nhà trường.\n\nNgày 18/6/1968, Thủ tướng Chính phủ ra quyết định số 88-CP chuyển \"Phân hiệu II Đại học Bách khoa\" thuộc Bộ Đại học và trung học chuyên nghiệp thành \"Trường Đại học Kỹ thuật Quân sự\" thuộc Bộ Quốc phòng.\n\nNgày 15/12/1981, Bộ Quốc phòng quyết định thành lập Học viện Kỹ thuật quân sự trên cơ sở trường Đại học Kỹ thuật quân sự.\n\nNgày 06/5/1991: Thủ tướng Chính phủ quyết định cho Học viện Kỹ thuật quân sự được sử dụng tên dân sự Trường Đại học Kỹ thuật Lê Quý Đôn với 2 nhiệm vụ đào tạo quân sự và dân sự.\n\nNgày 31/1/2008, Học viện Kỹ thuật quân sự được Chính phủ quyết định đưa vào danh sách 15 trường đại học trọng điểm quốc gia Việt Nam.\n\nNgày 14/1/2014, Học viện Kỹ thuật quân sự được lựa chọn vào danh sách 07 cơ sở đào tạo trọng điểm về an toàn thông tin."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Trí tuệ tỏa sáng"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:website": {
+        "@id": "http://www.lqdtu.edu.vn"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/0/0e/Logo_MTA_new.png",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_MTA_new.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/0/0e/Logo_MTA_new.png/330px-Logo_MTA_new.png"
+      }
     }
-  ],
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "21.0483"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.786"
-  },
-  "owl:sameAs": [
-    {
-      "@id": "wd:Q4130078"
-    },
-    {
-      "@id": "dbr:Le_Quy_Don_Technical_University"
-    },
-    {
-      "@id": "https://ror.org/04wgyjv21"
-    }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q4130078"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75614833"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Le Quy Don Technical University"
-    },
-    {
-      "@language": "vi",
-      "@value": "Học viện Kỹ thuật Quân sự"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Kỹ thuật Quân sự"
-  },
-  "vnedu:address": "số 236, đường Hoàng Quốc Việt, phường Nghĩa Đô, thành phố Hà Nội",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1966"
-  },
-  "vnedu:governedBy": {
-    "@id": "vnedu:MinistryOfNationalDefence"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-manh-hung-2"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phung-van-minh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vo-minh-pho"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/phan-van-hung"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hung-c-duong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-thai"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/le-manh-ha"
-    }
-  ],
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/ha-noi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/bac-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Trí tuệ tỏa sáng"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:website": {
-    "@id": "http://www.lqdtu.edu.vn"
-  }
+  ]
 }

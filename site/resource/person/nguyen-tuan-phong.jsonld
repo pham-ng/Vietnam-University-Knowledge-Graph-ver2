@@ -19,9 +19,9 @@
   },
   "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tuan-phong",
   "@type": [
-    "foaf:Person",
-    "vnedu:Alumnus",
     "schema:Person",
+    "vnedu:Alumnus",
+    "foaf:Person",
     "vnedu:Person"
   ],
   "foaf:name": "Nguyễn Tuấn Phong",
@@ -33,12 +33,12 @@
   },
   "rdfs:label": [
     {
-      "@language": "en",
-      "@value": "Tuan-Phong Nguyen"
-    },
-    {
       "@language": "vi",
       "@value": "Nguyễn Tuấn Phong"
+    },
+    {
+      "@language": "en",
+      "@value": "Tuan-Phong Nguyen"
     }
   ],
   "schema:alumniOf": {

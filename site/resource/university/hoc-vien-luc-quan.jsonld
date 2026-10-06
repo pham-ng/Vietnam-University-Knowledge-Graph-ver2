@@ -17,106 +17,138 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-luc-quan",
-  "@type": [
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "vnedu:MilitaryInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity",
-    "vnedu:Academy",
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:HigherEducationInstitution"
-  ],
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_L%E1%BB%A5c_qu%C3%A2n_%28Vi%E1%BB%87t_Nam%29"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "https://ror.org/03xsz0z97"
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Ph%C3%B9_hi%E1%BB%87u_H%E1%BB%8Dc_Vi%E1%BB%87n_L%E1%BB%A5c_Qu%C3%A2n.png",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "Hoangbinh1810",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Ph%C3%B9_hi%E1%BB%87u_H%E1%BB%8Dc_Vi%E1%BB%87n_L%E1%BB%A5c_Qu%C3%A2n.png"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Ph%C3%B9_hi%E1%BB%87u_H%E1%BB%8Dc_Vi%E1%BB%87n_L%E1%BB%A5c_Qu%C3%A2n.png/330px-Ph%C3%B9_hi%E1%BB%87u_H%E1%BB%8Dc_Vi%E1%BB%87n_L%E1%BB%A5c_Qu%C3%A2n.png"
+      }
     },
     {
-      "@id": "wd:Q16480294"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/hoc-vien-luc-quan",
+      "@type": [
+        "vnedu:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:PublicInstitution",
+        "vnedu:HigherEducationInstitution",
+        "schema:Organization",
+        "foaf:Organization",
+        "vnedu:Organization",
+        "vnedu:MilitaryInstitution",
+        "vnedu:Academy",
+        "schema:EducationalOrganization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Học viện Lục quân (tên tiếng Anh: The Army Academy - TAA) trực thuộc Bộ Quốc phòng Việt Nam là nơi chuyên đào tạo sĩ quan chỉ huy tham mưu cấp trung đoàn, sư đoàn lục quân và chiến dịch quân sự cho các binh chủng như Tăng – Thiết giáp, Pháo binh, Công binh, Thông tin Liên lạc, Hóa học, Trinh sát, Phòng không Lục quân, cơ quan và đơn vị thuộc Binh chủng hợp thành. Học viện được thành lập ngày 7 tháng 7 năm 1946. Trụ sở chính của Học viện đóng quân tại Lâm Viên - Lâm Đồng."
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_L%E1%BB%A5c_qu%C3%A2n_%28Vi%E1%BB%87t_Nam%29"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/03xsz0z97"
+        },
+        {
+          "@id": "wd:Q16480294"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75614841"
+        },
+        {
+          "@id": "wd:Q16480294"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "The Army Academy"
+        },
+        {
+          "@language": "vi",
+          "@value": "Học viện Lục quân"
+        }
+      ],
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1946-07-07"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Ph%C3%B9_hi%E1%BB%87u_H%E1%BB%8Dc_Vi%E1%BB%87n_L%E1%BB%A5c_Qu%C3%A2n.png"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/lam-dong"
+        }
+      ],
+      "skos:altLabel": "Học viện Lục quân Đà Lạt",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Học viện Lục quân"
+      },
+      "vnedu:address": "2B Lữ Gia, phường Lâm Viên, Lâm Đồng, Việt Nam",
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1946"
+      },
+      "vnedu:governedBy": {
+        "@id": "vnedu:MinistryOfNationalDefence"
+      },
+      "vnedu:hasAlumnus": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-van-the"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nong-ngoc-toan"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tam-hung"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-van-binh"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vo-van-hoi"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-khiem"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-van-lam"
+        }
+      ],
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Học viện Lục quân là một trong những Học viện lớn của Quân đội nhân dân Việt Nam, ra đời ngày 7 tháng 7 năm 1946 tại Tông, thị xã Sơn Tây, Hà Tây với tên gọi Lớp Bổ túc Cán bộ Quân sự trung cấp. Từ ngày thành lập và khi vào tiếp quản Trường Võ bị Đà Lạt đến nay, Học viện đã 8 lần thay đổi tên gọi và 9 lần thay đổi địa điểm đóng quân khác nhau. Ngày 15 tháng 3 năm 1948 đổi tên thành Trường Bổ túc Quân chính trung cấp. Tháng 5 năm 1955 mang tên mới là Trường Bổ túc Quân sự trung cao cấp. Từ ngày 3 tháng 3 năm 1961 đến ngày 21 tháng 5 năm 1965 nhập với Trường Chính trị trung cao cấp thành Học viện Quân chính. Năm 1965 Học viện Quân chính lại tách thành Học viện Quân sự và Học viện Chính trị. Cuối năm 1975, Học viện Quân sự được chuyển từ Hà Nội vào Đà Lạt, bên hồ Chiến Thắng và hồ Sương Mai (trước đây là trụ sở Trường Võ bị Quốc gia Đà Lạt của Quân lực Việt Nam Cộng hòa). Từ ngày 16 tháng 12 năm 1981 có tên mới là Học viện Lục quân Đà Lạt. Từ năm 2000, Học viện Lục quân lại được bổ sung thêm nhiệm vụ đào tạo Sĩ quan chỉ huy - Tham mưu cao cấp binh chủng hợp thành cấp Sư đoàn, tỉnh (thành) có trình độ đại học, đào tạo các nhà nghiên cứu khoa học quân sự có trình độ thạc sĩ, tiến sĩ cho toàn quân."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/lam-dong"
+        }
+      ],
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75614841"
-    },
-    {
-      "@id": "wd:Q16480294"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "vi",
-      "@value": "Học viện Lục quân"
-    },
-    {
-      "@language": "en",
-      "@value": "The Army Academy"
-    }
-  ],
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/lam-dong"
-    }
-  ],
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Học viện Lục quân"
-  },
-  "vnedu:address": "2B Lữ Gia, phường Lâm Viên, Lâm Đồng, Việt Nam",
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1946"
-  },
-  "vnedu:governedBy": {
-    "@id": "vnedu:MinistryOfNationalDefence"
-  },
-  "vnedu:hasAlumnus": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/vo-van-hoi"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-van-khiem"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dang-van-lam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-tam-hung"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nong-ngoc-toan"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/hoang-van-binh"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/dinh-van-the"
-    }
-  ],
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/lam-dong"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/trung-bo"
-    }
-  ],
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  }
+  ]
 }

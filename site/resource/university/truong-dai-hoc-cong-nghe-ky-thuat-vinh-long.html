@@ -30,123 +30,171 @@
     "wd": "http://www.wikidata.org/entity/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-ky-thuat-vinh-long",
-  "@type": [
-    "schema:Organization",
-    "foaf:Organization",
-    "vnedu:UniversitySchool",
-    "vnedu:HigherEducationInstitution",
-    "dbo:University",
-    "vnedu:EducationalOrganization",
-    "vnedu:Organization",
-    "vnedu:PublicInstitution",
-    "schema:EducationalOrganization",
-    "schema:CollegeOrUniversity"
-  ],
-  "foaf:homepage": {
-    "@id": "http://vlute.edu.vn/vi"
-  },
-  "foaf:isPrimaryTopicOf": {
-    "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long"
-  },
-  "geo:lat": {
-    "@type": "xsd:decimal",
-    "@value": "10.25007"
-  },
-  "geo:long": {
-    "@type": "xsd:decimal",
-    "@value": "105.96217"
-  },
-  "owl:sameAs": [
+  "@graph": [
     {
-      "@id": "wd:Q108737605"
+      "@id": "https://upload.wikimedia.org/wikipedia/vi/d/d0/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long.svg",
+      "@type": "schema:ImageObject",
+      "schema:license": "Sử dụng hợp lý",
+      "schema:mainEntityOfPage": {
+        "@id": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long.svg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/vi/thumb/d/d0/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long.svg.png"
+      }
     },
     {
-      "@id": "https://ror.org/00c72nj97"
+      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-ky-thuat-vinh-long",
+      "@type": [
+        "vnedu:UniversitySchool",
+        "vnedu:EducationalOrganization",
+        "schema:EducationalOrganization",
+        "schema:CollegeOrUniversity",
+        "vnedu:HigherEducationInstitution",
+        "vnedu:PublicInstitution",
+        "dbo:University",
+        "foaf:Organization",
+        "schema:Organization",
+        "vnedu:Organization"
+      ],
+      "dbo:abstract": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ Kỹ thuật Vĩnh Long (tiếng Anh: Vinh Long University of Technology and Engineering ) là một trong nhóm sáu trường Đại học Sư phạm kỹ thuật của cả nước – đào tạo kỹ thuật dạy nghề là trung tâm giảng dạy. Trường trực thuộc Bộ Giáo dục và Đào tạo và được giám sát về đào tạo bởi Bộ Giáo dục và Đào tạo."
+      },
+      "foaf:homepage": {
+        "@id": "http://vlute.edu.vn/vi"
+      },
+      "foaf:isPrimaryTopicOf": {
+        "@id": "https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long"
+      },
+      "geo:lat": {
+        "@type": "xsd:decimal",
+        "@value": "10.25007"
+      },
+      "geo:long": {
+        "@type": "xsd:decimal",
+        "@value": "105.96217"
+      },
+      "owl:sameAs": [
+        {
+          "@id": "https://ror.org/00c72nj97"
+        },
+        {
+          "@id": "wd:Q108737605"
+        }
+      ],
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://vi.wikipedia.org/w/index.php?oldid=75540456"
+        },
+        {
+          "@id": "wd:Q108737605"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Vinh Long University of"
+        },
+        {
+          "@language": "vi",
+          "@value": "Trường Đại học Công nghệ Kỹ thuật Vĩnh Long"
+        }
+      ],
+      "schema:email": "spktvl@vlute.edu.vn",
+      "schema:employee": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-tung-2"
+      },
+      "schema:foundingDate": {
+        "@type": "xsd:date",
+        "@value": "1960-02-01"
+      },
+      "schema:image": {
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/9/94/Spktvl1.jpg"
+      },
+      "schema:location": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-long"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "schema:logo": {
+        "@id": "https://upload.wikimedia.org/wikipedia/vi/d/d0/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long.svg"
+      },
+      "schema:telephone": "+84 027) 03 822 141",
+      "skos:notation": "VLU",
+      "skos:prefLabel": {
+        "@language": "vi",
+        "@value": "Trường Đại học Công nghệ Kỹ thuật Vĩnh Long"
+      },
+      "vnedu:address": "Số 73, Nguyễn Huệ, phường Long Châu",
+      "vnedu:admissionCode": "VLU",
+      "vnedu:campus": "41.187,9 m²",
+      "vnedu:formerName": {
+        "@language": "vi",
+        "@value": "Truờng Đại Học Sư phạm Kỹ thuật Vĩnh Long"
+      },
+      "vnedu:foundingYear": {
+        "@type": "xsd:gYear",
+        "@value": "1960"
+      },
+      "vnedu:governedBy": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
+      },
+      "vnedu:hasLeader": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-tung-2"
+      },
+      "vnedu:history": {
+        "@language": "vi",
+        "@value": "Tiền thân là Trường Trung học Kỹ thuật Vĩnh Long, được thành lập vào ngày 1 tháng 2 năm 1960. Là một trong những trường kỹ thuật đầu tiên của khu vực Đồng bằng sông Cửu Long, cũng là một trong hai trường nổi bật tại khu vực Đông Nam Á lúc bấy giờ.\n\nSau thống nhất đất nước, Trường Trung học Kỹ thuật Vĩnh Long được chuyển về Tổng cục Đào tạo công nhân kỹ thuật thuộc Bộ Lao động quản lý. Ngày 31 tháng 5 năm 1976, Bộ trưởng Bộ Lao động ký Quyết định số 144/QĐ-LĐ thành lập Trường Giáo viên dạy nghề Cửu Long, trên cơ sở Trường Trung học Kỹ thuật Vĩnh Long.\n\nNgày 21 tháng 8 năm 1978, Tổng cục trưởng Tổng cục Dạy nghề ký Quyết định số 189/QĐ-DN về việc đổi tên Trường Giáo viên dạy nghề Cửu Long, trực thuộc Tổng cục Đào tạo công nhân kỹ thuật – Bộ Lao động quản lý thành Trường Sư phạm Kỹ thuật IV, trực thuộc Tổng cục dạy nghề (cơ quan trực thuộc Hội đồng Chính phủ).\n\nNgày 24 tháng 9 năm 1997, Thủ tướng Chính phủ ký Quyết định số 793/TTg nâng cấp Trường Sư phạm Kỹ thuật IV thành Trường Cao đẳng Sư phạm Kỹ thuật IV, trực thuộc Bộ Giáo dục và Đào tạo. Trường được giao nhiệm vụ tổ chức đào tạo nguồn giáo viên dạy nghề có trình độ cao đẳng cho khu vực Đồng bằng Sông Cửu Long.\n\nNgày 3 tháng 7 năm 1998, Bộ trưởng Bộ Lao động – Thương binh và Xã hội ký quyết định số 650/1998/QĐ-LĐTBXH đổi tên Trường Cao đẳng Sư phạm Kỹ thuật IV, trực thuộc Bộ Giáo dục và Đào tạo thành Trường Cao đẳng Sư phạm Kỹ thuật Vĩnh Long, do Tổng cục Dạy nghề – Bộ Lao động – Thương binh và Xã hội quản lý trực tiếp. Đến ngày 30 tháng 12 năm 2011 trường chuyển từ Tổng cục Dạy nghề về Bộ Lao động – Thương binh và Xã hội quản lý Nhà nước theo quyết định số 1757/QĐ-LĐTBXH.\n\nNgày 11 tháng 11 năm 2013, Thủ tướng Chính phủ ký quyết định số 2152/QĐ-TTg thành lập Trường Đại học Sư phạm Kỹ thuật Vĩnh Long trên cơ sở nâng cấp từ Trường Cao đẳng Sư phạm Kỹ thuật Vĩnh Long.\n\nNgày 07 tháng 9 năm 2026, Bộ trưởng Bộ giáo dục và Đào tạo ký quyết định số 2636/QĐ-BGDĐT đổi tên Trường Đại học Sư phạm Kỹ thuật Vĩnh Long thành Trường Đại học Công nghệ Kỹ thuật Vĩnh Long."
+      },
+      "vnedu:locatedIn": [
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-long"
+        },
+        {
+          "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
+        }
+      ],
+      "vnedu:motto": {
+        "@language": "vi",
+        "@value": "Nơi không có ranh giới giữa nhà trường và thực tế. (Tri thức - Sáng tạo - Hội nhập - Phát triển)"
+      },
+      "vnedu:numberOfStudents": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "13000"
+      },
+      "vnedu:ownership": {
+        "@id": "vnedu:PublicOwnership"
+      },
+      "vnedu:rector": {
+        "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-tung-2"
+      },
+      "vnedu:shortName": "VLUTE",
+      "vnedu:website": {
+        "@id": "http://vlute.edu.vn/vi"
+      }
+    },
+    {
+      "@id": "https://upload.wikimedia.org/wikipedia/commons/9/94/Spktvl1.jpg",
+      "@type": "schema:ImageObject",
+      "schema:creditText": "vlute news",
+      "schema:license": "CC BY-SA 4.0",
+      "schema:mainEntityOfPage": {
+        "@id": "https://commons.wikimedia.org/wiki/File:Spktvl1.jpg"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Spktvl1.jpg/330px-Spktvl1.jpg"
+      }
     }
-  ],
-  "prov:wasDerivedFrom": [
-    {
-      "@id": "wd:Q108737605"
-    },
-    {
-      "@id": "https://vi.wikipedia.org/w/index.php?oldid=75540456"
-    }
-  ],
-  "rdfs:label": [
-    {
-      "@language": "en",
-      "@value": "Vinh Long University of"
-    },
-    {
-      "@language": "vi",
-      "@value": "Trường Đại học Công nghệ Kỹ thuật Vĩnh Long"
-    }
-  ],
-  "schema:employee": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-tung-2"
-  },
-  "schema:location": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-long"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "skos:notation": "VLU",
-  "skos:prefLabel": {
-    "@language": "vi",
-    "@value": "Trường Đại học Công nghệ Kỹ thuật Vĩnh Long"
-  },
-  "vnedu:address": "Số 73, Nguyễn Huệ, phường Long Châu",
-  "vnedu:admissionCode": "VLU",
-  "vnedu:formerName": {
-    "@language": "vi",
-    "@value": "Truờng Đại Học Sư phạm Kỹ thuật Vĩnh Long"
-  },
-  "vnedu:foundingYear": {
-    "@type": "xsd:gYear",
-    "@value": "1960"
-  },
-  "vnedu:governedBy": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao"
-  },
-  "vnedu:hasLeader": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-tung-2"
-  },
-  "vnedu:locatedIn": [
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-long"
-    },
-    {
-      "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo"
-    }
-  ],
-  "vnedu:motto": {
-    "@language": "vi",
-    "@value": "Nơi không có ranh giới giữa nhà trường và thực tế. (Tri thức - Sáng tạo - Hội nhập - Phát triển)"
-  },
-  "vnedu:numberOfStudents": {
-    "@type": "xsd:nonNegativeInteger",
-    "@value": "13000"
-  },
-  "vnedu:ownership": {
-    "@id": "vnedu:PublicOwnership"
-  },
-  "vnedu:rector": {
-    "@id": "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-tung-2"
-  },
-  "vnedu:shortName": "VLUTE",
-  "vnedu:website": {
-    "@id": "http://vlute.edu.vn/vi"
-  }
+  ]
 }</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script>addEventListener("DOMContentLoaded",()=>{const m=L.map("minimap",{scrollWheelZoom:false}).setView([10.25007,105.96217],15);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap"}).addTo(m);L.circleMarker([10.25007,105.96217],{radius:8,color:"#0f6e64"}).addTo(m)})</script>
 <script src="/Vietnam-University-Knowledge-Graph-ver2/assets/common.js"></script>
 </head>
@@ -165,7 +213,9 @@
   <a href="truong-dai-hoc-cong-nghe-ky-thuat-vinh-long.ttl">Turtle</a> · <a href="truong-dai-hoc-cong-nghe-ky-thuat-vinh-long.jsonld">JSON-LD</a> ·
   <a href="/Vietnam-University-Knowledge-Graph-ver2/sparql?describe=https%3A//pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-cong-nghe-ky-thuat-vinh-long">Truy vấn SPARQL</a>
    · <span class="pill inf">suy luận</span> = 18 giá trị do bộ suy luận OWL 2 RL sinh ra</p>
-<div id="minimap" style="height:220px;border-radius:12px;border:1px solid var(--line);margin:0 0 16px"></div>
+<div class="res-grid"><div class="res-main"><h2>Giới thiệu chung</h2><p>Trường Đại học Công nghệ Kỹ thuật Vĩnh Long (tiếng Anh: Vinh Long University of Technology and Engineering ) là một trong nhóm sáu trường Đại học Sư phạm kỹ thuật của cả nước – đào tạo kỹ thuật dạy nghề là trung tâm giảng dạy. Trường trực thuộc Bộ Giáo dục và Đào tạo và được giám sát về đào tạo bởi Bộ Giáo dục và Đào tạo.</p><h2>Lịch sử</h2><p>Tiền thân là Trường Trung học Kỹ thuật Vĩnh Long, được thành lập vào ngày 1 tháng 2 năm 1960. Là một trong những trường kỹ thuật đầu tiên của khu vực Đồng bằng sông Cửu Long, cũng là một trong hai trường nổi bật tại khu vực Đông Nam Á lúc bấy giờ.</p><p>Sau thống nhất đất nước, Trường Trung học Kỹ thuật Vĩnh Long được chuyển về Tổng cục Đào tạo công nhân kỹ thuật thuộc Bộ Lao động quản lý. Ngày 31 tháng 5 năm 1976, Bộ trưởng Bộ Lao động ký Quyết định số 144/QĐ-LĐ thành lập Trường Giáo viên dạy nghề Cửu Long, trên cơ sở Trường Trung học Kỹ thuật Vĩnh Long.</p><details><summary>Đọc tiếp (5 đoạn)</summary><p>Ngày 21 tháng 8 năm 1978, Tổng cục trưởng Tổng cục Dạy nghề ký Quyết định số 189/QĐ-DN về việc đổi tên Trường Giáo viên dạy nghề Cửu Long, trực thuộc Tổng cục Đào tạo công nhân kỹ thuật – Bộ Lao động quản lý thành Trường Sư phạm Kỹ thuật IV, trực thuộc Tổng cục dạy nghề (cơ quan trực thuộc Hội đồng Chính phủ).</p><p>Ngày 24 tháng 9 năm 1997, Thủ tướng Chính phủ ký Quyết định số 793/TTg nâng cấp Trường Sư phạm Kỹ thuật IV thành Trường Cao đẳng Sư phạm Kỹ thuật IV, trực thuộc Bộ Giáo dục và Đào tạo. Trường được giao nhiệm vụ tổ chức đào tạo nguồn giáo viên dạy nghề có trình độ cao đẳng cho khu vực Đồng bằng Sông Cửu Long.</p><p>Ngày 3 tháng 7 năm 1998, Bộ trưởng Bộ Lao động – Thương binh và Xã hội ký quyết định số 650/1998/QĐ-LĐTBXH đổi tên Trường Cao đẳng Sư phạm Kỹ thuật IV, trực thuộc Bộ Giáo dục và Đào tạo thành Trường Cao đẳng Sư phạm Kỹ thuật Vĩnh Long, do Tổng cục Dạy nghề – Bộ Lao động – Thương binh và Xã hội quản lý trực tiếp. Đến ngày 30 tháng 12 năm 2011 trường chuyển từ Tổng cục Dạy nghề về Bộ Lao động – Thương binh và Xã hội quản lý Nhà nước theo quyết định số 1757/QĐ-LĐTBXH.</p><p>Ngày 11 tháng 11 năm 2013, Thủ tướng Chính phủ ký quyết định số 2152/QĐ-TTg thành lập Trường Đại học Sư phạm Kỹ thuật Vĩnh Long trên cơ sở nâng cấp từ Trường Cao đẳng Sư phạm Kỹ thuật Vĩnh Long.</p><p>Ngày 07 tháng 9 năm 2026, Bộ trưởng Bộ giáo dục và Đào tạo ký quyết định số 2636/QĐ-BGDĐT đổi tên Trường Đại học Sư phạm Kỹ thuật Vĩnh Long thành Trường Đại học Công nghệ Kỹ thuật Vĩnh Long.</p></details><p class="src">Văn bản trích từ bài <a href="https://vi.wikipedia.org/w/index.php?oldid=75540456">«Trường Đại học Công nghệ Kỹ thuật Vĩnh Long»</a> trên Wikipedia tiếng Việt (bản sửa đổi 75540456), giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.vi">CC BY-SA 4.0</a>. Trong RDF: <code>dbo:abstract</code>, <code>vnedu:history</code>.</p></div><aside class="ibox"><div class="ibox-title">Trường Đại học Công nghệ Kỹ thuật Vĩnh Long</div><figure class="ibox-logo"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long.svg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/vi/thumb/d/d0/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long.svg.png" alt="Biểu trưng Trường Đại học Công nghệ Kỹ thuật Vĩnh Long" loading="lazy"></a><figcaption>Sử dụng hợp lý</figcaption></figure><table><tr><th>Tên tiếng Anh</th><td>Vinh Long University of</td></tr><tr><th>Viết tắt</th><td>VLUTE</td></tr><tr><th>Mã trường</th><td>VLU</td></tr><tr><th>Tên cũ</th><td>Truờng Đại Học Sư phạm Kỹ thuật Vĩnh Long</td></tr><tr><th>Loại hình</th><td>Trường đại học · Công lập</td></tr><tr><th>Thành lập</th><td>1 tháng 2 năm 1960</td></tr><tr><th>Chủ quản</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/organization/bo-giao-duc-va-dao-tao">Bộ Giáo dục và Đào tạo</a></td></tr><tr><th>Hiệu trưởng</th><td><span class="lang">PGS TS</span> <a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-tung-2">Nguyễn Thanh Tùng</a></td></tr><tr><th>Địa chỉ</th><td>Số 73, Nguyễn Huệ, phường Long Châu</td></tr><tr><th>Tỉnh/thành</th><td><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-long">Vĩnh Long</a></td></tr><tr><th>Khuôn viên</th><td>41.187,9 m²</td></tr><tr><th>Sinh viên</th><td>13.000</td></tr><tr><th>Khẩu hiệu</th><td><i>Nơi không có ranh giới giữa nhà trường và thực tế. (Tri thức - Sáng tạo - Hội nhập - Phát triển)</i></td></tr><tr><th>Điện thoại</th><td>+84 027) 03 822 141</td></tr><tr><th>Email</th><td><a href="mailto:spktvl@vlute.edu.vn">spktvl@vlute.edu.vn</a></td></tr><tr><th>Website</th><td><a href="http://vlute.edu.vn/vi">vlute.edu.vn/vi</a></td></tr></table><figure class="ibox-photo"><a href="https://commons.wikimedia.org/wiki/File:Spktvl1.jpg" title="Trang mô tả tệp trên Wikimedia"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Spktvl1.jpg/330px-Spktvl1.jpg" alt="Ảnh Trường Đại học Công nghệ Kỹ thuật Vĩnh Long" loading="lazy"></a><figcaption>CC BY-SA 4.0 · vlute news</figcaption></figure><div id="minimap" class="ibox-map"></div></aside></div>
+<h2>Toàn bộ dữ kiện RDF</h2>
+
 <div class="card table-wrap"><table>
 <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
 <tr><td class="p">rdf:type<small>rdf:type</small></td><td>
@@ -192,11 +242,26 @@
 <tr><td class="p">prov:wasDerivedFrom<small>prov:wasDerivedFrom</small></td><td>
 <div><a href="http://www.wikidata.org/entity/Q108737605">wd:Q108737605</a> <span class="pill ext">ngoài</span></div><div><a href="https://vi.wikipedia.org/w/index.php?oldid=75540456">&lt;https://vi.wikipedia.org/w/index.php?oldid=75540456&gt;</a> <span class="pill ext">ngoài</span></div>
 </td></tr>
+<tr><td class="p">thư điện tử<small>schema:email</small></td><td>
+<div>spktvl@vlute.edu.vn</div>
+</td></tr>
 <tr><td class="p">schema:employee<small>schema:employee</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/person/nguyen-thanh-tung-2">Nguyễn Thanh Tùng</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
 </td></tr>
+<tr><td class="p">ngày thành lập<small>schema:foundingDate</small></td><td>
+<div>1960-02-01 <span class="lang">xsd:date</span></div>
+</td></tr>
+<tr><td class="p">hình ảnh<small>schema:image</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/commons/9/94/Spktvl1.jpg">&lt;https://upload.wikimedia.org/wikipedia/commons/9/94/Spktvl1.jpg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
 <tr><td class="p">schema:location<small>schema:location</small></td><td>
 <div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/country/viet-nam">Việt Nam</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/province/vinh-long">Vĩnh Long</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div><div><a href="/Vietnam-University-Knowledge-Graph-ver2/resource/region/nam-bo">Nam Bộ</a> <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
+</td></tr>
+<tr><td class="p">biểu trưng<small>schema:logo</small></td><td>
+<div><a href="https://upload.wikimedia.org/wikipedia/vi/d/d0/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long.svg">&lt;https://upload.wikimedia.org/wikipedia/vi/d/d0/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_V%C4%A9nh_Long.svg&gt;</a> <span class="pill ext">ngoài</span></div>
+</td></tr>
+<tr><td class="p">điện thoại<small>schema:telephone</small></td><td>
+<div>+84 027) 03 822 141</div>
 </td></tr>
 <tr><td class="p">skos:notation<small>skos:notation</small></td><td>
 <div>VLU <span class="pill inf" title="Sinh ra bởi bộ suy luận OWL 2 RL">suy luận</span></div>
@@ -206,6 +271,9 @@
 </td></tr>
 <tr><td class="p">mã trường (tuyển sinh)<small>vnedu:admissionCode</small></td><td>
 <div>VLU</div>
+</td></tr>
+<tr><td class="p">khuôn viên<small>vnedu:campus</small></td><td>
+<div>41.187,9 m²</div>
 </td></tr>
 <tr><td class="p">tên cũ<small>vnedu:formerName</small></td><td>
 <div>Truờng Đại Học Sư phạm Kỹ thuật Vĩnh Long <span class="lang">@vi</span></div>
