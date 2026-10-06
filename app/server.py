@@ -356,7 +356,7 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
     @app.errorhandler(404)
     def _not_found(_e):
         page = site_page("404", 404) if request.accept_mimetypes.accept_html else None
-        return page or Response("Không tìm thấy tài nguyên.", status=404, mimetype="text/plain; charset=utf-8")
+        return page or Response("Không tìm thấy tài nguyên.", status=404, content_type="text/plain; charset=utf-8")
 
     @app.errorhandler(Exception)
     def _internal(e):
@@ -364,7 +364,7 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
         if isinstance(e, HTTPException):
             return e
         log.exception("Lỗi không lường trước")
-        return Response("Lỗi máy chủ. Vui lòng thử lại sau.", status=500, mimetype="text/plain; charset=utf-8")
+        return Response("Lỗi máy chủ. Vui lòng thử lại sau.", status=500, content_type="text/plain; charset=utf-8")
 
     @app.route("/")
     def home():
@@ -394,10 +394,10 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
             check_query(q)
             resp = backend.protocol(q, request.headers.get("Accept", ""))
         except QueryRejected as e:
-            resp = Response(str(e), status=e.status, mimetype="text/plain; charset=utf-8")
+            resp = Response(str(e), status=e.status, content_type="text/plain; charset=utf-8")
         except Exception as e:  # noqa: BLE001 — lỗi cú pháp (pyparsing) của rdflib: thông báo có ích cho người dùng
             msg = str(e).splitlines()[0][:300] if str(e) else type(e).__name__
-            resp = Response(f"Truy vấn không hợp lệ: {msg}", status=400, mimetype="text/plain; charset=utf-8")
+            resp = Response(f"Truy vấn không hợp lệ: {msg}", status=400, content_type="text/plain; charset=utf-8")
         resp.headers["Access-Control-Allow-Origin"] = "*"
         return resp
 
@@ -521,6 +521,22 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
     return app
 
 
+def build_site_if_missing(site_dir: Path = SITE_DIR) -> None:
+    """Build giao diện (đường dẫn gốc /) nếu chưa có — để máy chủ luôn có giao diện đầy đủ kể cả khi nền tảng
+    triển khai không chạy bước build riêng. Chạy trong tiến trình con nên bộ nhớ (~170 MB) được trả lại trước khi phục vụ."""
+    if (site_dir / "index.html").exists():
+        return
+    import subprocess
+    log.info("Chưa có giao diện ở %s — đang build (≈20 giây) ...", site_dir)
+    env = dict(os.environ, VNEDU_SITE_DIR=site_dir.name, VNEDU_SITE_ROOT="/", PYTHONUTF8="1")
+    r = subprocess.run([sys.executable, str(ROOT / "scripts" / "step7_publish.py")], env=env, cwd=ROOT,
+                       capture_output=True, text=True, encoding="utf-8", errors="replace")
+    if r.returncode != 0:
+        log.error("Build giao diện thất bại, dùng giao diện dự phòng: %s", r.stdout[-2000:] + r.stderr[-2000:])
+    else:
+        log.info("Đã build giao diện: %s", r.stdout.strip().splitlines()[-2:])
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="VN-Edu LOD web server")
     ap.add_argument("--backend", choices=["auto", "local", "fuseki"], default="auto")
@@ -529,6 +545,8 @@ def main() -> None:
     ap.add_argument("--prod", action="store_true", help="chạy bằng máy chủ WSGI waitress thay cho máy chủ phát triển")
     args = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
+    if args.prod:
+        build_site_if_missing()
     use_fuseki = args.backend == "fuseki" or (args.backend == "auto" and fuseki_alive())
     app = create_app(FusekiBackend() if use_fuseki else LocalBackend())
     log.info("Backend: %s — mở http://%s:%d/", app.config["BACKEND"].name, args.host, args.port)
