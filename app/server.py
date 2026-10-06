@@ -382,7 +382,8 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
             ok = bool(backend.select("SELECT ?s WHERE { ?s ?p ?o } LIMIT 1"))
         except Exception:  # noqa: BLE001
             ok = False
-        return {"status": "ok" if ok else "degraded", "backend": backend.name}, (200 if ok else 503)
+        return {"status": "ok" if ok else "degraded", "backend": backend.name, "ui": "site" if site else "fallback",
+                "commit": (os.environ.get("RENDER_GIT_COMMIT") or "local")[:8]}, (200 if ok else 503)
 
     @app.route("/sparql", methods=["GET", "POST"])
     def sparql():

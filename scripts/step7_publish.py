@@ -538,7 +538,7 @@ def main() -> None:
     (SITE / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                       + "\n".join(f"<url><loc>{html.escape(u)}</loc></url>" for u in urls) + "\n</urlset>\n", encoding="utf-8")
     size = sum(f.stat().st_size for f in SITE.rglob("*") if f.is_file()) / 1e6
-    print(f"  -> site/ ({sum(1 for _ in SITE.rglob('*') if _.is_file())} tệp, {size:.1f} MB)")
+    print(f"  -> {SITE.name}/ ({sum(1 for _ in SITE.rglob('*') if _.is_file())} tệp, {size:.1f} MB)")
     print("Xong bước 7.")
 
 
