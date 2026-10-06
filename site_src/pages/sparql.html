@@ -19,10 +19,13 @@
   Bản có SPARQL endpoint HTTP (Apache Jena Fuseki) chạy cục bộ theo hướng dẫn trong <a href="https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2">repo</a>.</p>
 <div class="slay">
   <aside class="card ex"><h3>Truy vấn mẫu</h3><div id="ex"></div>
-    <p class="lang" style="margin:10px 0 0">Truy vấn <i>federated</i> (SERVICE tới Wikidata/DBpedia) cần chạy trên Fuseki; trong trình duyệt bị bỏ qua.</p></aside>
+    <p class="lang" style="margin:10px 0 0">Truy vấn <i>federated</i> (SERVICE tới Wikidata/DBpedia) tự chạy trên
+      <a href="{{SPARQL}}">SPARQL endpoint công khai</a> vì trình duyệt không gọi được endpoint ngoài.</p></aside>
   <div>
     <textarea id="q" spellcheck="false" aria-label="Truy vấn SPARQL"></textarea>
-    <div class="run"><button class="btn" id="go" disabled>Chạy (Ctrl+Enter)</button><span id="status">Đang tải dataset…</span></div>
+    <div class="run"><button class="btn" id="go" disabled>Chạy (Ctrl+Enter)</button>
+      <label class="lang" style="display:inline-flex;gap:6px;align-items:center"><input type="checkbox" id="remote"> chạy trên máy chủ</label>
+      <span id="status">Đang tải dataset…</span></div>
     <div class="card table-wrap" id="out"></div>
   </div>
 </div>
@@ -64,9 +67,40 @@ function cell(t) {
   if (t.termType === "Literal") return VN.esc(t.value) + (t.language ? ` <span class="lang">@${t.language}</span>` : "");
   return VN.esc(t.value);
 }
+const ENDPOINT = "{{SPARQL}}";
+function table(cols, rows, get) {
+  return `<table><tr>${cols.map(v => `<th>${VN.esc(v)}</th>`).join("")}</tr>${rows.slice(0, 2000).map(r =>
+    `<tr>${cols.map(v => `<td>${cell(get(r, v))}</td>`).join("")}</tr>`).join("")}</table>`;
+}
+async function runRemote(q) {
+  // SPARQL 1.1 Protocol tới máy chủ (app/server.py trên Render): hỗ trợ SERVICE sang Wikidata/DBpedia
+  const t = performance.now();
+  $("status").textContent = "Đang chạy trên máy chủ… (gói Free có thể mất ~1 phút để thức dậy lần đầu)";
+  $("out").innerHTML = "";
+  try {
+    const r = await fetch(ENDPOINT, { method: "POST", body: new URLSearchParams({ query: q }),
+                                      headers: { Accept: "application/sparql-results+json, text/turtle;q=0.9" } });
+    const ct = r.headers.get("content-type") || "";
+    if (!r.ok) throw new Error(await r.text());
+    if (ct.includes("json")) {
+      const j = await r.json();
+      if ("boolean" in j) { $("out").innerHTML = `<b>${j.boolean}</b>`; }
+      else {
+        const term = b => b && ({ termType: b.type === "uri" ? "NamedNode" : "Literal", value: b.value, language: b["xml:lang"] });
+        $("out").innerHTML = table(j.head.vars, j.results.bindings, (row, v) => term(row[v]));
+        $("status").textContent = `${j.results.bindings.length.toLocaleString("vi-VN")} kết quả · ${((performance.now() - t) / 1000).toFixed(1)} s · máy chủ`;
+        return;
+      }
+    } else { $("out").innerHTML = `<pre style="margin:0;white-space:pre-wrap">${VN.esc(await r.text())}</pre>`; }
+    $("status").textContent = `${((performance.now() - t) / 1000).toFixed(1)} s · máy chủ`;
+  } catch (e) {
+    $("out").innerHTML = `<p style="margin:0;color:var(--warn)">Lỗi: ${VN.esc(e.message || e)}</p>`;
+    $("status").textContent = "";
+  }
+}
 function run() {
   const q = $("q").value;
-  if (/\bSERVICE\b/i.test(q)) { $("out").innerHTML = `<p class="lang" style="margin:0">Truy vấn có SERVICE (federated) cần chạy trên Fuseki: <code>py query.py ${VN.esc(queries.find(x => x.text === q)?.file ? "queries/" + queries.find(x => x.text === q).file : "…")}</code></p>`; return; }
+  if ($("remote").checked || /\bSERVICE\b/i.test(q)) { $("remote").checked = true; return runRemote(q); }
   const t = performance.now();
   try {
     const res = store.query(q, { use_default_graph_as_union: true });

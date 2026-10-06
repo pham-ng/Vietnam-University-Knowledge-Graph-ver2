@@ -231,7 +231,7 @@ def build_void(data: Graph, links: Graph, counts) -> Graph:
     v.add((ds, DCTERMS.language, URIRef("http://id.loc.gov/vocabulary/iso639-1/vi")))
     for kw in ("giáo dục đại học", "higher education", "Vietnam", "linked open data"):
         v.add((ds, DCAT.keyword, Literal(kw)))
-    v.add((ds, VOID.sparqlEndpoint, URIRef(f"{config.FUSEKI_URL}/{config.FUSEKI_DATASET}/sparql")))
+    v.add((ds, VOID.sparqlEndpoint, URIRef(config.PUBLIC_SPARQL)))
     v.add((ds, VOID.uriSpace, Literal(config.RES_NS)))
     v.add((ds, VOID.vocabulary, URIRef(config.ONTO_NS)))
     for vocab in ("https://schema.org/", "http://xmlns.com/foaf/0.1/", "http://www.w3.org/2004/02/skos/core#",

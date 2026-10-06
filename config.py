@@ -34,6 +34,8 @@ ALL_TTL = RDF_DIR / "vnedu-all.ttl"  # ontology + data + links + void
 WIKIDATA_SPARQL = "https://query.wikidata.org/sparql"
 WIKIDATA_API = "https://www.wikidata.org/w/api.php"
 DBPEDIA_SPARQL = "https://dbpedia.org/sparql"
+# SPARQL endpoint HTTP công khai (Render, app/server.py) — ghi vào VoID và dùng trên trang SPARQL của site
+PUBLIC_SPARQL = "https://vnedu-lod.onrender.com/sparql"
 USER_AGENT = "VNEduLOD/2.0 (https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2; student Linked Data project) python-requests"
 
 # Fuseki

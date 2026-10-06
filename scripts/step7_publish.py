@@ -520,7 +520,7 @@ def main() -> None:
         head = ""
         if "<!--HEAD-->" in text:
             head, text = text.split("<!--HEAD-->", 1)[1].split("<!--/HEAD-->", 1)[0], text.split("<!--/HEAD-->", 1)[1]
-        text = text.replace("{{ROOT}}", ROOT_PATH).replace("{{BASE}}", BASE)
+        text = text.replace("{{ROOT}}", ROOT_PATH).replace("{{BASE}}", BASE).replace("{{SPARQL}}", config.PUBLIC_SPARQL)
         head = head.replace("{{ROOT}}", ROOT_PATH).replace("{{BASE}}", BASE)
         path = "" if name == "index" else name
         alts = [("text/turtle", "ontology.ttl"), ("application/ld+json", "ontology.jsonld")] if name == "ontology" else []

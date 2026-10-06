@@ -14,6 +14,7 @@ theo một ontology OWL, suy luận tự động, kiểm định chất lượng
   <a href="https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology">🌳 Cây ontology</a> ·
   <a href="https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/sparql">⚡ SPARQL</a> ·
   <a href="https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/demo">🎬 Kịch bản demo</a>
+  <br><a href="https://vnedu-lod.onrender.com/"><b>🛰️ SPARQL endpoint công khai</b></a> — <code>https://vnedu-lod.onrender.com/sparql</code>
 </p>
 
 > **Thử ngay:** mở trang [Trường Đại học VinUni](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-vinuni)
@@ -59,7 +60,27 @@ toạ độ, quy mô, điện thoại, email, website, **logo, ảnh, đoạn gi
 ## 2. Chạy thử trong 3 phút
 
 **Cách nhanh nhất:** không cần cài gì — mở [trang web](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/).
-Trang [SPARQL](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/sparql) chạy truy vấn ngay trong trình duyệt.
+Trang [SPARQL](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/sparql) chạy truy vấn ngay trong trình duyệt;
+truy vấn federated tự gửi lên máy chủ.
+
+**Máy chủ công khai** ([Render](render.yaml), chạy `app/server.py`): https://vnedu-lod.onrender.com
+
+| Đường dẫn | Dùng để |
+|---|---|
+| [`/sparql`](https://vnedu-lod.onrender.com/sparql) | SPARQL 1.1 Protocol (GET/POST), JSON/CSV/XML, hỗ trợ `SERVICE` sang Wikidata, DBpedia |
+| [`/query`](https://vnedu-lod.onrender.com/query) | giao diện YASGUI với 15 truy vấn mẫu |
+| [`/resource/…`](https://vnedu-lod.onrender.com/resource/university/truong-dai-hoc-vinuni) | tra cứu URI có **content negotiation** (HTML / Turtle / JSON-LD / N-Triples / RDF-XML theo header `Accept`) |
+| [`/healthz`](https://vnedu-lod.onrender.com/healthz) | kiểm tra sống |
+
+```bash
+curl https://vnedu-lod.onrender.com/sparql -H "Accept: text/csv" --data-urlencode "query=SELECT (COUNT(*) AS ?n) WHERE { ?s ?p ?o }"
+```
+
+```bash
+curl -H "Accept: text/turtle" https://vnedu-lod.onrender.com/resource/university/truong-dai-hoc-vinuni
+```
+
+Gói Free của Render tự ngủ sau ~15 phút không có truy cập; lần gọi đầu sau đó mất khoảng 1 phút.
 
 **Chạy trên máy** (cần Python 3.10+, Java 8+ cho Fuseki):
 
@@ -436,8 +457,9 @@ federated sang Wikidata/DBpedia…).
 - **Còn thiếu:** 12 cơ sở chưa rõ tỉnh, 22 chưa rõ năm thành lập, 24 chưa rõ công lập/tư thục; số sinh viên và mã tuyển sinh
   còn ít. Chưa có danh sách chính thức của Bộ GD&ĐT để đối chiếu độ phủ.
 - **Ngành và chương trình đào tạo** (37 ngành, 78 chương trình) là dữ liệu mẫu nhập tay.
-- **Trang web là hosting tĩnh:** không có SPARQL endpoint công khai và content negotiation; truy vấn federated cần chạy
-  Fuseki trên máy.
+- **URI chính** nằm trên GitHub Pages (hosting tĩnh) nên tra cứu ở đó dùng HTML + JSON-LD nhúng hoặc đuôi `.ttl`/`.jsonld`;
+  content negotiation theo header `Accept` có ở máy chủ [vnedu-lod.onrender.com](https://vnedu-lod.onrender.com). Máy chủ chạy gói Free
+  (tự ngủ khi rảnh, backend rdflib trong bộ nhớ — đủ cho quy mô ~40 nghìn triple, không dành cho tải lớn).
 - Logo nhiều trường là ảnh "sử dụng hợp lý" trên Wikipedia — trang web chỉ nhúng từ Wikimedia và ghi rõ giấy phép.
 
 ---

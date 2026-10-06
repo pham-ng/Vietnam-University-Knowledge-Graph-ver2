@@ -81,7 +81,8 @@ content negotiation phía máy chủ (GitHub Pages là hosting tĩnh).
 
 ## 7. Hạn chế còn lại
 
-1. Bản công khai không có SPARQL endpoint HTTP (dùng SPARQL trong trình duyệt; Fuseki chạy cục bộ) và không có content negotiation phía máy chủ.
+1. ~~Bản công khai không có SPARQL endpoint HTTP~~ → **đã có** SPARQL endpoint công khai https://vnedu-lod.onrender.com/sparql (Render; khai báo trong VoID
+   `void:sparqlEndpoint`) và content negotiation tại https://vnedu-lod.onrender.com/resource/… URI chính trên GitHub Pages vẫn không có content negotiation phía máy chủ.
 2. **Độ phủ**:
    - Chỉ dựa trên Wikidata và Wikipedia, chưa có danh sách chính thức của Bộ GD&ĐT nên không chứng minh được là đầy đủ.
    - Số trường tư thục nhận ra được (35) nhiều khả năng **thấp hơn thực tế** (theo thống kê của Bộ, khoảng 1/4 số cơ sở
