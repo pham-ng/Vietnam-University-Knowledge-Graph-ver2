@@ -29,6 +29,8 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
+      - name: Build giao diện cho máy chủ (đường dẫn gốc /) — để test máy chủ phục vụ đúng giao diện
+        run: VNEDU_SITE_DIR=site_server VNEDU_SITE_ROOT=/ python scripts/step7_publish.py
       - name: Kiểm thử (suy luận, trích xuất, hợp đồng dữ liệu, infobox, máy chủ web)
         run: python -m pytest tests -q
 

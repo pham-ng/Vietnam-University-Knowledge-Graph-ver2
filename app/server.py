@@ -9,6 +9,11 @@
   /download/<file>  tải dump RDF
   /healthz          kiểm tra sống (cho giám sát / load balancer)
 
+Giao diện: nếu đã build site cho máy chủ (VNEDU_SITE_DIR=site_server VNEDU_SITE_ROOT=/ python scripts/step7_publish.py)
+thì máy chủ phục vụ CHÍNH giao diện đầy đủ đó (giống GitHub Pages: infobox, bản đồ, tra cứu, cây ontology, demo) và
+bổ sung phần chỉ máy chủ làm được (content negotiation, SPARQL endpoint, federated). Chưa build thì dùng giao diện
+dự phòng đơn giản trong app/templates/.
+
 Backend:
   --backend local   rdflib nạp data/gold/vnedu-all.ttl vào bộ nhớ (không cần Fuseki)
   --backend fuseki  chuyển tiếp truy vấn tới Fuseki (config.FUSEKI_URL)
@@ -32,6 +37,7 @@ import argparse
 import concurrent.futures
 import json
 import logging
+import mimetypes
 import os
 import re
 import sys
@@ -49,6 +55,10 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import config  # noqa: E402
 
 log = logging.getLogger("vnedu.server")
+SITE_DIR = config.ROOT / os.environ.get("VNEDU_SERVE_SITE", "site_server")
+for _ext, _mime in ((".ttl", "text/turtle"), (".jsonld", "application/ld+json"), (".nt", "application/n-triples"),
+                    (".rq", "application/sparql-query"), (".svg", "image/svg+xml")):
+    mimetypes.add_type(_mime, _ext)
 
 QUERIES_DIR = config.ROOT / "queries"
 RDF_MIME = {"text/turtle": "turtle", "application/ld+json": "json-ld",
@@ -266,7 +276,7 @@ def rdf_response(graph, mime: str) -> Response:
 
 # ------------------------------------------------------------------ ứng dụng
 
-def create_app(backend=None, inferred: set | None = None) -> Flask:
+def create_app(backend=None, inferred: set | None = None, site_dir: Path | None = SITE_DIR) -> Flask:
     """Application factory (dùng cho waitress/gunicorn và cho test)."""
     if backend is None:
         backend = FusekiBackend() if fuseki_alive() else LocalBackend()
@@ -274,6 +284,21 @@ def create_app(backend=None, inferred: set | None = None) -> Flask:
     install_user_agent()
     app = Flask(__name__)
     app.config["BACKEND"] = backend
+    site = site_dir if site_dir and (site_dir / "index.html").exists() else None
+    app.config["SITE"] = site
+    if site:
+        log.info("Giao diện: %s", site)
+
+    def site_page(rel: str, status: int = 200):
+        """Trả trang HTML đã build (rel không đuôi, ví dụ 'resource/university/x'); None nếu không có."""
+        if site is None:
+            return None
+        f = site / (rel + ".html" if rel else "index.html")
+        if not f.is_file():
+            return None
+        resp = send_from_directory(site, f.relative_to(site).as_posix(), mimetype="text/html")
+        resp.status_code = status
+        return resp
     app.json.ensure_ascii = False
 
     @lru_cache(maxsize=1)
@@ -330,7 +355,8 @@ def create_app(backend=None, inferred: set | None = None) -> Flask:
 
     @app.errorhandler(404)
     def _not_found(_e):
-        return Response("Không tìm thấy tài nguyên.", status=404, mimetype="text/plain; charset=utf-8")
+        page = site_page("404", 404) if request.accept_mimetypes.accept_html else None
+        return page or Response("Không tìm thấy tài nguyên.", status=404, mimetype="text/plain; charset=utf-8")
 
     @app.errorhandler(Exception)
     def _internal(e):
@@ -342,6 +368,9 @@ def create_app(backend=None, inferred: set | None = None) -> Flask:
 
     @app.route("/")
     def home():
+        page = site_page("")
+        if page:
+            return page
         counts, links, total = home_stats()
         dumps = [f.name for f in sorted(config.RDF_DIR.glob("*.ttl"))]
         return render_template("home.html", counts=counts, links=links, total=total, inferred=len(inferred),
@@ -359,7 +388,7 @@ def create_app(backend=None, inferred: set | None = None) -> Flask:
     def sparql():
         q = request.values.get("query")
         if not q:
-            return render_template("query.html", queries=example_queries(), initial=None)
+            return site_page("sparql") or render_template("query.html", queries=example_queries(), initial=None)
         try:
             check_query(q)
             resp = backend.protocol(q, request.headers.get("Accept", ""))
@@ -384,6 +413,14 @@ def create_app(backend=None, inferred: set | None = None) -> Flask:
 
     @app.route("/resource/<path:rest>")
     def resource(rest):
+        m = re.fullmatch(r"(.+)\.(ttl|jsonld)", rest)
+        if m and RESOURCE_PATH.fullmatch(m.group(1)):          # .../x.ttl, .../x.jsonld giống GitHub Pages
+            fmt = {"ttl": "text/turtle", "jsonld": "application/ld+json"}[m.group(2)]
+            g = backend.construct(f"CONSTRUCT {{ <{config.RES_NS + m.group(1)}> ?p ?o }} "
+                                  f"WHERE {{ <{config.RES_NS + m.group(1)}> ?p ?o }}")
+            if not len(g):
+                abort(404)
+            return rdf_response(g, fmt)
         if not RESOURCE_PATH.fullmatch(rest):
             abort(404)
         uri = config.RES_NS + rest
@@ -395,6 +432,10 @@ def create_app(backend=None, inferred: set | None = None) -> Flask:
             resp = rdf_response(g, mime)
             resp.headers["Vary"] = "Accept"
             return resp
+        page = site_page("resource/" + rest)
+        if page:
+            page.headers["Vary"] = "Accept"
+            return page
         out, inc = describe(uri)
         if not out and not inc:
             abort(404)
@@ -415,6 +456,9 @@ def create_app(backend=None, inferred: set | None = None) -> Flask:
         mime = wants_rdf()
         if mime:
             return rdf_response(g, mime)
+        page = site_page("ontology")
+        if page:
+            return page
         from rdflib import OWL, RDF, RDFS, URIRef
 
         def label(t, lang):
@@ -439,12 +483,35 @@ def create_app(backend=None, inferred: set | None = None) -> Flask:
     @app.route("/dataset/<path:_rest>")
     def dataset(_rest=None):
         from rdflib import Graph
-        return rdf_response(Graph().parse(config.VOID_TTL), wants_rdf() or "text/turtle")
+        mime = wants_rdf()
+        if not mime and _rest is None and request.accept_mimetypes.accept_html:
+            page = site_page("dataset")
+            if page:
+                return page
+        if not mime and _rest and site_page("dataset/" + _rest):
+            return site_page("dataset/" + _rest)
+        return rdf_response(Graph().parse(config.VOID_TTL), mime or "text/turtle")
 
     @app.route("/download/<name>")
     def download(name):
-        mime = {".ttl": "text/turtle", ".nt": "application/n-triples"}.get(Path(name).suffix, "application/octet-stream")
-        return send_from_directory(config.RDF_DIR, name, mimetype=mime, as_attachment=True)
+        """Dump RDF (vnedu-all.ttl, .nt, .zip, shapes, schema): ưu tiên bản trong giao diện đã build, rồi data/gold."""
+        base = site / "download" if site and (site / "download" / name).is_file() else config.RDF_DIR
+        mime = mimetypes.guess_type(name)[0] or "application/octet-stream"
+        return send_from_directory(base, name, mimetype=mime, as_attachment=not name.endswith((".ttl", ".nt")))
+
+    @app.route("/<path:rel>")
+    def static_site(rel):
+        if site is None:
+            abort(404)
+        target = (site / rel).resolve()
+        if site.resolve() not in target.parents and target != site.resolve():
+            abort(404)
+        if target.is_file():
+            return send_from_directory(site, rel)
+        page = site_page(rel.rstrip("/"))
+        if page:
+            return page
+        abort(404)
 
     @app.template_filter("short")
     def short_filter(uri):

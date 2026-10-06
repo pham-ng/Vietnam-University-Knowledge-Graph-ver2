@@ -13,6 +13,7 @@ Kèm ứng dụng: thống kê, bản đồ, tra cứu, cây ontology, SPARQL ch
 """
 import html
 import json
+import os
 import re
 import shutil
 import sys
@@ -29,10 +30,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config  # noqa: E402
 from common import PREFIXES, bind_prefixes, load_ontology, vn_key  # noqa: E402
 
-SITE = config.ROOT / "site"
+# Cùng một mã nguồn build ra 2 nơi:
+#   GitHub Pages: site/, đường dẫn gốc /Vietnam-University-Knowledge-Graph-ver2/ (lấy từ BASE)
+#   Máy chủ Render: VNEDU_SITE_DIR=site_server VNEDU_SITE_ROOT=/  (app/server.py phục vụ thư mục này)
+SITE = config.ROOT / os.environ.get("VNEDU_SITE_DIR", "site")
 SRC = config.ROOT / "site_src"
 BASE = config.BASE
-ROOT_PATH = urlparse(BASE).path            # "/Vietnam-University-Knowledge-Graph-ver2/"
+ROOT_PATH = os.environ.get("VNEDU_SITE_ROOT") or urlparse(BASE).path   # "/Vietnam-University-Knowledge-Graph-ver2/"
 REPO = "https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2"
 INFERRED_TTL = config.GOLD_DIR / "vnedu-inferred.ttl"
 CONTEXT = {p: str(ns) for p, ns in PREFIXES.items()} | {"prov": "http://www.w3.org/ns/prov#"}
@@ -521,7 +525,7 @@ def main() -> None:
         if "<!--HEAD-->" in text:
             head, text = text.split("<!--HEAD-->", 1)[1].split("<!--/HEAD-->", 1)[0], text.split("<!--/HEAD-->", 1)[1]
         text = text.replace("{{ROOT}}", ROOT_PATH).replace("{{BASE}}", BASE).replace("{{SPARQL}}", config.PUBLIC_SPARQL)
-        head = head.replace("{{ROOT}}", ROOT_PATH).replace("{{BASE}}", BASE)
+        head = head.replace("{{ROOT}}", ROOT_PATH).replace("{{BASE}}", BASE).replace("{{SPARQL}}", config.PUBLIC_SPARQL)
         path = "" if name == "index" else name
         alts = [("text/turtle", "ontology.ttl"), ("application/ld+json", "ontology.jsonld")] if name == "ontology" else []
         page(path, meta.get("title", name), text, active=path, head=head, desc=meta.get("desc", ""),

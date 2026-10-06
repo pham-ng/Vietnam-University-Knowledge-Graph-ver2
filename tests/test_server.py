@@ -20,7 +20,18 @@ BKA = "resource/university/dai-hoc-bach-khoa-ha-noi"
 def client():
     if not config.ALL_TTL.exists():
         pytest.skip("chưa chạy pipeline")
-    app = create_app(LocalBackend())
+    app = create_app(LocalBackend(), site_dir=None)        # giao diện dự phòng (app/templates)
+    app.config["TESTING"] = True
+    return app.test_client()
+
+
+@pytest.fixture(scope="module")
+def site_client():
+    """Máy chủ phục vụ giao diện đầy đủ (site_server/, build bằng VNEDU_SITE_DIR=site_server VNEDU_SITE_ROOT=/)."""
+    site = ROOT / "site_server"
+    if not (site / "index.html").exists():
+        pytest.skip("chưa build site_server")
+    app = create_app(LocalBackend(), site_dir=site)
     app.config["TESTING"] = True
     return app.test_client()
 
@@ -143,3 +154,37 @@ def test_outbound_user_agent_overrides_rdflib_default(client):
         if hasattr(h, "https_request") and type(h).__name__ == "_ProjectUserAgent":
             req = h.https_request(req)
     assert req.get_header("User-agent") == config.USER_AGENT
+
+
+# ------------------------------------------------------------------ máy chủ phục vụ giao diện đầy đủ (giống GitHub Pages)
+
+@pytest.mark.parametrize("path", ["/", "/map", "/explore", "/ontology", "/sparql", "/dataset", "/about", "/demo"])
+def test_site_pages_are_served(site_client, path):
+    r = site_client.get(path, headers={"Accept": "text/html"})
+    assert r.status_code == 200 and "text/html" in r.content_type
+    assert 'href="/assets/style.css"' in r.get_data(as_text=True)      # build với đường dẫn gốc "/"
+
+
+def test_site_resource_page_has_infobox_and_conneg(site_client):
+    r = site_client.get("/resource/university/truong-dai-hoc-vinuni", headers={"Accept": "text/html"})
+    html = r.get_data(as_text=True)
+    assert r.status_code == 200 and "ibox" in html and "Tan Yap-Peng" in html and "Giới thiệu chung" in html
+    r = site_client.get("/resource/university/truong-dai-hoc-vinuni", headers={"Accept": "text/turtle"})
+    assert r.content_type.startswith("text/turtle") and "councilChair" in r.get_data(as_text=True)
+
+
+@pytest.mark.parametrize("path, mime", [("/resource/university/truong-dai-hoc-vinuni.ttl", "text/turtle"),
+                                        ("/resource/university/truong-dai-hoc-vinuni.jsonld", "application/ld+json"),
+                                        ("/data/app.json", "application/json"),
+                                        ("/download/vnedu-all.ttl", "text/turtle"),
+                                        ("/assets/common.js", "text/javascript")])
+def test_site_static_files(site_client, path, mime):
+    r = site_client.get(path)
+    assert r.status_code == 200 and r.content_type.split(";")[0] in (mime, "application/javascript")
+
+
+def test_site_404_and_traversal(site_client):
+    assert site_client.get("/khong-ton-tai", headers={"Accept": "text/html"}).status_code == 404
+    assert site_client.get("/resource/university/khong-ton-tai.ttl").status_code == 404
+    assert site_client.get("/..%2F..%2Fconfig.py").status_code == 404
+    assert site_client.get("/%2e%2e/%2e%2e/config.py").status_code == 404

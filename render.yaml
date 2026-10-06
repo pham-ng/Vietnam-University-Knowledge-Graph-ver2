@@ -8,7 +8,8 @@ services:
     plan: free
     region: singapore
     branch: main
-    buildCommand: pip install -r requirements.txt
+    # build cả giao diện (đường dẫn gốc /) để máy chủ phục vụ đúng giao diện như GitHub Pages
+    buildCommand: pip install -r requirements.txt && VNEDU_SITE_DIR=site_server VNEDU_SITE_ROOT=/ python scripts/step7_publish.py
     startCommand: python app/server.py --prod --backend local --host 0.0.0.0
     healthCheckPath: /healthz
     autoDeploy: true
