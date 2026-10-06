@@ -19,6 +19,24 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import config  # noqa: E402
 
 CACHE_DIR = config.CACHE_DIR
+# Bộ đệm được đưa lên git dưới dạng MỘT tệp nén (10 nghìn tệp nhỏ làm repo nặng); máy mới clone về sẽ tự giải nén
+# ở lần chạy đầu -> mọi bước đọc đúng dữ liệu đã tải, kết quả giống hệt, không cần Internet.
+# Đặt VNEDU_FRESH=1 (run_all --fresh) để bỏ qua và tải dữ liệu mới nhất. Đóng gói lại: python scripts/pack_cache.py
+CACHE_ZIP = CACHE_DIR.with_suffix(".zip")
+
+
+def restore_cache() -> None:
+    import os
+    import zipfile
+    if CACHE_DIR.exists() or os.environ.get("VNEDU_FRESH") or not CACHE_ZIP.exists():
+        return
+    print(f"  (lần đầu) giải nén bộ đệm HTTP {CACHE_ZIP.name} ...", flush=True)
+    with zipfile.ZipFile(CACHE_ZIP) as z:
+        z.extractall(CACHE_DIR.parent)
+
+
+restore_cache()
+
 MIN_INTERVAL = {"vi.wikipedia.org": 0.3, "www.wikidata.org": 0.5, "query.wikidata.org": 1.0, "dbpedia.org": 0.5,
                 "nominatim.openstreetmap.org": 1.1}   # chính sách Nominatim: tối đa 1 request/giây
 
