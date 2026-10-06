@@ -20,6 +20,7 @@
 \usepackage{enumitem}
 \usepackage[font=small,labelfont=bf,labelsep=period]{caption}
 \usepackage{subcaption}
+\usepackage{rotating}
 \usepackage{fvextra}
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows.meta,shapes.geometric,fit,backgrounds,calc}
@@ -43,6 +44,7 @@
   \renewcommand{\listtablename}{Danh mục bảng}\renewcommand{\refname}{Tài liệu tham khảo}%
   \renewcommand{\abstractname}{Tóm tắt}\renewcommand{\appendixname}{Phụ lục}}
 
+\input{figures/ontostyle.tex}
 \definecolor{acc}{HTML}{0F6E64}
 \definecolor{s1}{HTML}{2A78D6}
 \definecolor{s2}{HTML}{EB6834}
@@ -406,18 +408,49 @@ với HigherEducationInstitution.}
 
 \subsection{Đồ thị quan hệ giữa các lớp}
 Phân cấp lớp chỉ cho biết ``cái gì là loại gì''; giá trị của một đồ thị tri thức nằm ở các \emph{quan hệ} nối thực thể
-với nhau. \Cref{fig:ontograph} vẽ toàn bộ quan hệ giữa các lớp theo đúng miền và đích khai báo trong ontology: một cơ sở
-giáo dục được nối tới cơ quan chủ quản, chủ sở hữu, loại hình, tỉnh, cơ sở khác (thành viên, phân hiệu, tiền thân), người
-(lãnh đạo, cựu sinh viên), chương trình đào tạo và các bộ dữ liệu ngoài; một người được nối tới trường, tỉnh nơi sinh,
-quốc gia và các khái niệm của Wikidata. Cạnh nét đứt là quan hệ do suy luận sinh ra.
+với nhau. Để người đọc theo dõi được, ontology được vẽ thành ba hình theo mô-đun (\cref{fig:ontograph,fig:ontogeo,fig:ontoedu})
+với cùng một quy ước (chú giải ở góc trái mỗi hình):
+\begin{itemize}
+  \item \textbf{Lớp} là hình elip: \emph{đỏ} là lớp gốc (con trực tiếp của \texttt{owl:Thing}), \emph{xanh} là lớp con,
+        \emph{cam viền đứt} là lớp định nghĩa mà bộ suy luận tự điền cá thể.
+  \item \textbf{Quan hệ} là hộp vàng, nối theo chiều \emph{Miền} \tikz[baseline=-0.6ex]\draw[densely dashed](0,0)--(0.5,0);
+        \textsf{[quan hệ]} \tikz[baseline=-0.6ex]\draw[-{Stealth},densely dashed](0,0)--(0.5,0); \emph{Đích}, đúng như
+        \texttt{rdfs:domain}/\texttt{rdfs:range} khai báo; dòng chữ nhỏ trong hộp ghi đặc tính (nghịch đảo, hàm, bắc cầu,
+        chuỗi thuộc tính, quan hệ cha).
+  \item \textbf{subClassOf} là mũi tên liền có nhãn; \textbf{cá thể} là hộp xanh dương (nét chấm: ``là một'' hoặc điều kiện
+        của lớp định nghĩa); \textbf{URI ngoài} được tái sử dụng là hình trụ xám.
+\end{itemize}
 
-\begin{figure}[htbp]
+\begin{sidewaysfigure}
 \centering
-\resizebox{\textwidth}{!}{\input{figures/ontograph.tex}}
-\caption{Đồ thị quan hệ của ontology \vn{} 2.1: nút là lớp, cạnh là quan hệ (miền \(\rightarrow\) đích). Nét đứt: quan
-hệ suy luận; hình trụ: URI bên ngoài được tái sử dụng.}
+\resizebox{0.98\textheight}{!}{\input{figures/ont_org.tex}}
+\caption{Mô-đun \textbf{Tổ chức -- quản trị}. Một \textsf{EducationalOrganization} có cơ quan chủ quản (\textsf{governedBy}),
+cơ quan quản lý nhà nước (\textsf{stateManagedBy}, chỉ cho trường tư), chủ sở hữu (\textsf{ownedBy}), loại hình sở hữu
+(\textsf{ownership}), tiền thân (\textsf{predecessor}), và có thể là thành viên (\textsf{memberOf}) của một cơ sở GDĐH. Lớp
+định nghĩa: \textsf{PublicInstitution} \(\equiv\) EducationalOrganization \(\sqcap\) \(\exists\)ownership.\{PublicOwnership\};
+\textsf{MilitaryInstitution} \(\equiv\) EducationalOrganization \(\sqcap\) \(\exists\)governedBy.\{MinistryOfNationalDefence\}
+(tương tự \textsf{PrivateInstitution}, \textsf{PoliceInstitution}).}
 \label{fig:ontograph}
-\end{figure}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}
+\centering
+\resizebox{0.98\textheight}{!}{\input{figures/ont_geo.tex}}
+\caption{Mô-đun \textbf{Địa lý -- con người}. Tổ chức đặt tại (\textsf{locatedIn}) một đơn vị hành chính; đơn vị hành
+chính thuộc (\textsf{partOf}, bắc cầu) đơn vị lớn hơn; tỉnh cũ sáp nhập vào (\textsf{mergedInto}) tỉnh mới. Người là cựu
+sinh viên (\textsf{alumnusOf}) hoặc lãnh đạo của cơ sở, sinh ra tại (\textsf{bornIn}) một tỉnh và có quốc tịch
+(\textsf{nationality}). Nhờ các chuỗi thuộc tính, trường hoặc người ghi ở tỉnh cũ được suy ra thuộc tỉnh mới, miền và quốc gia.}
+\label{fig:ontogeo}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}
+\centering
+\resizebox{0.9\textheight}{!}{\input{figures/ont_edu.tex}}
+\caption{Mô-đun \textbf{Đào tạo và liên kết ra ngoài}. Cơ sở cung cấp chương trình (\textsf{offersProgram}), chương trình
+thuộc ngành (\textsf{ofMajor}), ngành thuộc lĩnh vực (\textsf{inField}); \textsf{trainsMajor} (viền cam) do bộ suy luận
+sinh ra từ chuỗi. \textsf{owl:sameAs} và \textsf{schema:memberOf} trỏ tới URI có sẵn của bộ dữ liệu khác.}
+\label{fig:ontoedu}
+\end{sidewaysfigure}
 
 \subsection{Các thuộc tính}
 \Cref{tab:props} liệt kê đầy đủ 53 thuộc tính của ontology theo năm nhóm, mỗi thuộc tính kèm miền \(\rightarrow\) đích,

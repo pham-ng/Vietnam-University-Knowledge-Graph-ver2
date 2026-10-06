@@ -1,0 +1,39 @@
+% Ngữ pháp hình vẽ ontology (học theo báo cáo vio): lớp = elip, quan hệ = hộp vàng,
+% Miền - - [quan hệ] - -> Đích (nét đứt), subClassOf = mũi tên liền có nhãn.
+\definecolor{clsTopF}{HTML}{F8CECC}\definecolor{clsTopD}{HTML}{B85450}
+\definecolor{clsSubF}{HTML}{D5E8D4}\definecolor{clsSubD}{HTML}{82B366}
+\definecolor{clsDefF}{HTML}{FFE6CC}\definecolor{clsDefD}{HTML}{D79B00}
+\definecolor{propF}{HTML}{FFF2CC}\definecolor{propD}{HTML}{D6B656}
+\definecolor{indF}{HTML}{DAE8FC}\definecolor{indD}{HTML}{6C8EBF}
+\tikzset{
+  clsTop/.style={ellipse, draw=clsTopD, fill=clsTopF, thick, font=\small\bfseries, align=center, inner sep=1.5pt, minimum height=0.95cm},
+  clsSub/.style={ellipse, draw=clsSubD, fill=clsSubF, thick, font=\small\bfseries, align=center, inner sep=1.5pt, minimum height=0.95cm},
+  clsDef/.style={ellipse, draw=clsDefD, fill=clsDefF, thick, dashed, font=\small\bfseries, align=center, inner sep=1.5pt, minimum height=0.95cm},
+  prop/.style={rectangle, rounded corners=3pt, draw=propD, fill=propF, font=\small\bfseries\itshape, align=center, inner sep=3pt, minimum height=0.7cm},
+  ind/.style={rectangle, draw=indD, fill=indF, font=\scriptsize, align=center, inner sep=2pt},
+  ext/.style={cylinder, shape border rotate=90, aspect=0.22, draw=black!45, fill=black!4, font=\scriptsize, align=center, minimum width=2cm, minimum height=0.9cm, inner sep=2pt},
+  sub/.style={-{Stealth[length=2.6mm]}, thick, draw=black!75},
+  subl/.style={font=\scriptsize, fill=white, inner sep=1pt, text=black!75},
+  dom/.style={densely dashed, semithick, draw=black!65},
+  rng/.style={-{Stealth[length=2.4mm]}, densely dashed, semithick, draw=black!65},
+  inst/.style={-{Stealth[length=2mm]}, dotted, thick, draw=indD},
+  note/.style={font=\scriptsize\mdseries\upshape, text=black!70},
+}
+% \rel{id}{x,y}{tên}{ghi chú}{miền}{đích}: hộp quan hệ + Miền - - hộp - -> Đích
+\newcommand{\rel}[6]{%
+  \node[prop] (#1) at (#2) {#3\ifx&#4&\else\\[-1pt]{\scriptsize\mdseries\upshape\color{black!70}#4}\fi};
+  \draw[dom] (#5) -- (#1);
+  \draw[rng] (#1) -- (#6);}
+% Chú giải dùng chung
+\newcommand{\ontolegend}[1]{%
+  \begin{scope}[shift={(#1)}]
+    \node[clsTop, minimum width=2.4cm] (lg1) at (0,0) {Lớp gốc};
+    \node[clsSub, minimum width=2.4cm, below=3mm of lg1] (lg2) {Lớp con};
+    \node[clsDef, minimum width=2.4cm, below=3mm of lg2] (lg3) {Lớp định nghĩa};
+    \node[prop, minimum width=2.4cm, below=3mm of lg3] (lg4) {Quan hệ};
+    \node[ind, below=3mm of lg4] (lg5a) {cá thể};
+    \node[ext, minimum width=1.6cm, minimum height=0.7cm, below=3mm of lg5a] (lg5) {URI ngoài};
+    \node[font=\scriptsize, align=left, anchor=north west] at ([xshift=-12mm, yshift=-3mm]lg5.south)
+      {\tikz\draw[dom](0,0)--(0.45,0);\,miền \hspace{2pt}\tikz\draw[rng](0,0)--(0.45,0);\,đích\\[2pt]
+       \tikz\draw[sub](0,0)--(0.6,0);\,subClassOf};
+  \end{scope}}

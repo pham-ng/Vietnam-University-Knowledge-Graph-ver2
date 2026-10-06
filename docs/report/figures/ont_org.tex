@@ -1,0 +1,52 @@
+% Mô-đun TỔ CHỨC – QUẢN TRỊ của ontology vnedu: (miền/đích đúng như khai báo trong ontology/vnedu.ttl)
+\begin{tikzpicture}
+\ontolegend{-15.2,10.6}
+% ---- lớp
+\node[clsTop, minimum width=3.2cm] (ORG) at (0,9) {Organization};
+\node[clsSub] (GB)  at (-7,9) {GoverningBody};
+\node[clsSub] (CO)  at (7,9)  {Company};
+\node[clsSub] (MIN) at (-11,6.6) {Ministry};
+\node[clsSub] (PPC) at (-11,11.4) {ProvincialPeoples-\\Committee};
+\node[clsSub, minimum width=4.6cm] (EO)  at (0,4.5) {EducationalOrganization};
+\node[clsSub, minimum width=4.4cm] (HEI) at (0,0) {HigherEducation-\\Institution};
+\node[clsSub] (BR)  at (-6.4,0) {Branch};
+\node[clsSub, font=\footnotesize\bfseries] (U)   at (-4.6,-3.4) {University};
+\node[clsSub, font=\footnotesize\bfseries] (US)  at (-1.3,-3.4) {UniversitySchool};
+\node[clsSub, font=\footnotesize\bfseries] (AC)  at (2.2,-3.4)  {Academy};
+\node[clsSub, font=\footnotesize\bfseries] (OS)  at (5.2,-3.4)  {OfficerSchool};
+\node[clsTop] (OT)  at (9.2,3.0) {OwnershipType};
+\node[ind] (PUB) at (7.6,1.0) {PublicOwnership};
+\node[ind] (PRI) at (11.4,1.0) {PrivateOwnership};
+\node[clsDef] (PI) at (7.4,-1.2) {PublicInstitution};
+\node[clsDef] (VI) at (11.6,-1.2) {PrivateInstitution};
+\node[ind] (MOND) at (-11,4.4) {MinistryOfNational-\\Defence};
+\node[clsDef] (MI) at (-10.2,1.6) {MilitaryInstitution};
+% ---- subClassOf
+\draw[sub] (GB) -- node[subl]{subClassOf} (ORG);
+\draw[sub] (CO) -- node[subl]{subClassOf} (ORG);
+\draw[sub] (EO) -- node[subl, pos=0.3]{subClassOf} (ORG);
+\draw[sub] (MIN) -- node[subl]{subClassOf} (GB);
+\draw[sub] (PPC) -- node[subl]{subClassOf} (GB);
+\draw[sub] (HEI) -- node[subl]{subClassOf} (EO);
+\draw[sub] (BR) -- node[subl]{subClassOf} (EO);
+\foreach \c in {U,US,AC,OS} \draw[sub] (\c) -- (HEI);
+\node[subl] at (0.5,-1.75) {subClassOf};
+% ---- cá thể và lớp định nghĩa
+\draw[inst] (PUB) -- node[subl]{a} (OT);
+\draw[inst] (PRI) -- node[subl]{a} (OT);
+\draw[inst] (MOND) -- node[subl]{a} (MIN);
+\draw[inst] (PUB) -- node[subl, align=center]{\(\exists\)ownership} (PI);
+\draw[inst] (PRI) -- node[subl, align=center]{\(\exists\)ownership} (VI);
+\draw[inst] (MOND) -- node[subl, align=center]{\(\exists\)governedBy} (MI);
+% ---- quan hệ: Miền - - [quan hệ] - -> Đích
+\rel{gov}{-4.4,7.4}{governedBy}{nghịch đảo: governs}{EO}{GB}
+\rel{smb}{-4.4,5.0}{stateManagedBy}{chỉ cho trường tư thục}{EO}{GB}
+\node[prop] (sub2) at (-7,11.5) {subordinateTo\\[-1pt]{\scriptsize\mdseries\upshape\color{black!70}bắc cầu}};
+\draw[dom] (GB.north west) to[out=110, in=180] (sub2.west);
+\draw[rng] (sub2.east) to[out=0, in=70] (GB.north east);
+\rel{own}{4.7,7.6}{ownedBy}{}{EO}{CO}
+\rel{pre}{2.1,6.6}{predecessor}{nghịch đảo: successor}{EO}{ORG}
+\rel{osh}{4.8,4.5}{ownership}{hàm}{EO}{OT}
+\rel{mem}{3.1,1.9}{memberOf}{nghịch đảo: hasMember}{EO}{HEI}
+\rel{bro}{-3.3,-1.5}{branchOf}{nghịch đảo: hasBranch}{BR}{HEI}
+\end{tikzpicture}

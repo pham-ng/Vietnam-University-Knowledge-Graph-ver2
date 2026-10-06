@@ -1,0 +1,24 @@
+% Mô-đun ĐÀO TẠO + liên kết ra ngoài của ontology vnedu (miền/đích đúng như khai báo trong ontology/vnedu.ttl)
+\begin{tikzpicture}
+\ontolegend{-12.4,6.2}
+% ---- lớp
+\node[clsSub, minimum width=4.4cm] (EO) at (-4,3) {EducationalOrganization};
+\node[clsTop] (AP) at (3,3)  {AcademicProgram};
+\node[clsTop] (MJ) at (3,-1.6) {Major};
+\node[clsTop] (FS) at (9,-1.6) {FieldOfStudy};
+\node[ext] (SK) at (9,2.0) {skos:Concept};
+\node[ext, minimum width=3.4cm] (EX) at (-4,7.2) {Wikidata · DBpedia · ROR\\GeoNames · Wikipedia};
+\node[ext] (AS) at (2.6,7.2) {Wikidata\\(hiệp hội AUN, AUF…)};
+% ---- subClassOf (căn chỉnh)
+\draw[sub] (MJ) -- node[subl, pos=0.35]{subClassOf} (SK);
+\draw[sub] (FS) -- node[subl]{subClassOf} (SK);
+% ---- quan hệ
+\rel{off}{-0.5,4.2}{offersProgram}{nghịch đảo: offeredBy}{EO}{AP}
+\rel{ofm}{3,0.7}{ofMajor}{}{AP}{MJ}
+\rel{inf}{6,-1.6}{inField}{\(\sqsubseteq\) skos:broader}{MJ}{FS}
+\node[prop, draw=clsDefD, dashed] (trn) at (-1.0,-0.4) {trainsMajor\\[-1pt]{\scriptsize\mdseries\upshape\color{black!70}chuỗi: offersProgram\,\(\circ\)\,ofMajor (suy luận)}};
+\draw[dom, draw=clsDefD] (EO) -- (trn);
+\draw[rng, draw=clsDefD] (trn) -- (MJ);
+\rel{same}{-6.4,5.4}{owl:sameAs}{xác minh trước khi khẳng định}{EO}{EX}
+\rel{mbr}{-1.2,5.9}{schema:memberOf}{hiệp hội (Wikidata P463)}{EO}{AS}
+\end{tikzpicture}

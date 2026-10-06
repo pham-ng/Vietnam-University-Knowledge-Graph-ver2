@@ -1,0 +1,38 @@
+% Mô-đun ĐỊA LÝ – CON NGƯỜI của ontology vnedu (miền/đích đúng như khai báo trong ontology/vnedu.ttl)
+\begin{tikzpicture}
+\ontolegend{-15.2,10.6}
+% ---- lớp
+\node[clsTop] (PE)  at (-7,5) {Person};
+\node[clsDef] (AL)  at (-10.2,8.6) {Alumnus};
+\node[clsDef] (IL)  at (-5.4,8.9) {InstitutionLeader};
+\node[clsTop, minimum width=3.2cm] (ORG) at (-7,-3.6) {Organization};
+\node[clsSub, minimum width=4.4cm] (EO) at (-7,-0.3) {EducationalOrganization};
+\node[clsTop, minimum width=3.6cm] (AU) at (5,2.4) {AdministrativeUnit};
+\node[clsSub] (CT)  at (1.2,6.6) {Country};
+\node[clsSub] (RE)  at (4.4,7.6) {Region};
+\node[clsSub] (PR)  at (8.2,7.2) {Province};
+\node[clsSub] (CGC) at (8.2,10.2) {CentrallyGoverned-\\City};
+\node[clsSub] (FP)  at (11.2,4.4) {FormerProvince};
+\node[ext] (WD) at (2.6,10.4) {Wikidata\\(địa danh, quốc gia)};
+% ---- subClassOf
+\draw[sub] (AL) -- node[subl]{subClassOf} (PE);
+\draw[sub] (IL) -- node[subl]{subClassOf} (PE);
+\draw[sub] (EO) -- node[subl]{subClassOf} (ORG);
+\draw[sub] (CT) -- node[subl, pos=0.4]{subClassOf} (AU);
+\draw[sub] (RE) -- node[subl, pos=0.45]{subClassOf} (AU);
+\draw[sub] (PR) -- node[subl, pos=0.45]{subClassOf} (AU);
+\draw[sub] (FP) -- node[subl]{subClassOf} (AU);
+\draw[sub] (CGC) -- node[subl]{subClassOf} (PR);
+% ---- quan hệ con người
+\rel{alu}{-9.6,2.4}{alumnusOf}{nghịch đảo: hasAlumnus}{PE}{EO}
+\rel{led}{-4.3,2.4}{rector · director · councilChair}{\(\sqsubseteq\) hasLeader; nghịch đảo: leads}{EO}{PE}
+\rel{bor}{-1.2,4.0}{bornIn}{chuỗi: bornIn\,\(\circ\)\,mergedInto, bornIn\,\(\circ\)\,partOf}{PE}{AU}
+\rel{nat}{-2.6,6.9}{nationality}{}{PE}{CT}
+\rel{bpl}{-1.8,9.0}{birthPlace}{đích: IRI Wikidata}{PE}{WD}
+% ---- quan hệ địa lý
+\rel{loc}{-0.8,-1.2}{locatedIn}{chuỗi: locatedIn\,\(\circ\)\,partOf, locatedIn\,\(\circ\)\,mergedInto}{ORG}{AU}
+\node[prop] (pof) at (5,-1.0) {partOf\\[-1pt]{\scriptsize\mdseries\upshape\color{black!70}bắc cầu; nghịch đảo: hasPart}};
+\draw[dom] (AU.south west) to[out=-110, in=180] (pof.west);
+\draw[rng] (pof.east) to[out=0, in=-70] (AU.south east);
+\rel{mrg}{11.2,7.4}{mergedInto}{nghịch đảo: mergedFrom}{FP}{PR}
+\end{tikzpicture}
