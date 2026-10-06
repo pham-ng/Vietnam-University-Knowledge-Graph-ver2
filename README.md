@@ -82,28 +82,45 @@ curl -H "Accept: text/turtle" https://vnedu-lod.onrender.com/resource/university
 
 Gói Free của Render tự ngủ sau ~15 phút không có truy cập; lần gọi đầu sau đó mất khoảng 1 phút.
 
-**Chạy trên máy** (cần Python 3.10+, Java 8+ cho Fuseki):
+**Chạy trên máy (clone về là chạy)** — cần Python 3.12 (đã kiểm thử; 3.10+ chạy được), Java 8+ nếu dùng Fuseki.
+Repo đã có sẵn toàn bộ dữ liệu (bronze → gold) và **bộ đệm HTTP nén** `data/bronze/http_cache.zip`, nên không cần
+Internet và kết quả **giống hệt** bản công bố.
 
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2.git
 ```
 
-Bật SPARQL endpoint **Apache Jena Fuseki** (tự tải Fuseki lần đầu) → http://localhost:3030/vnedu/sparql
+```bash
+cd Vietnam-University-Knowledge-Graph-ver2
+```
+
+```bash
+python -m venv .venv
+```
+
+Kích hoạt môi trường ảo (Windows: `.venv\Scripts\activate`, macOS/Linux: `source .venv/bin/activate`), rồi chạy toàn bộ
+pipeline (cài thư viện đã ghim phiên bản → thu thập (đọc từ bộ đệm) → … → công bố site → 104 test, khoảng 5–10 phút):
+
+```bash
+python run_all.py
+```
+
+Bật ứng dụng web với đầy đủ giao diện (lần đầu tự build giao diện ~20 giây) → http://localhost:8000
+
+```bash
+python app/server.py --prod
+```
+
+Bật SPARQL endpoint **Apache Jena Fuseki** (tuỳ chọn; tự tải Fuseki lần đầu) → http://localhost:3030/vnedu/sparql
 
 ```bash
 powershell -ExecutionPolicy Bypass -File fuseki/run_fuseki.ps1
 ```
 
-Bật ứng dụng web → http://localhost:8000 (tự dùng Fuseki nếu đang chạy, hỗ trợ truy vấn federated sang Wikidata/DBpedia)
+Khi Fuseki đang chạy, `app/server.py` tự dùng Fuseki làm backend. Mở cho máy khác truy cập:
 
 ```bash
-py app/server.py
-```
-
-Khi triển khai thật, chạy bằng máy chủ WSGI **waitress** (đa luồng) thay cho máy chủ phát triển của Flask:
-
-```bash
-py app/server.py --prod --host 0.0.0.0 --port 8000
+python app/server.py --prod --host 0.0.0.0 --port 8000
 ```
 
 Endpoint `/sparql` mở cho công chúng nên máy chủ có các lớp bảo vệ: `SERVICE` chỉ được gọi tới Wikidata/DBpedia
@@ -113,15 +130,12 @@ gian chạy truy vấn, header bảo mật, `/healthz` cho giám sát, ghi log t
 Truy vấn từ terminal:
 
 ```bash
-py query.py queries/03_truong_quan_doi_cong_an.rq
+python query.py --local queries/03_truong_quan_doi_cong_an.rq
 ```
 
-**Chạy lại toàn bộ pipeline** (thu thập → … → công bố site → 104 test). Dữ liệu tải về được cache nên chạy lại cho kết
-quả giống hệt; thêm `-Fresh` để tải dữ liệu mới nhất.
-
-```bash
-powershell -ExecutionPolicy Bypass -File run_all.ps1
-```
+Muốn **tải dữ liệu mới nhất** từ Wikidata/Wikipedia (kết quả có thể khác bản công bố vì nguồn thay đổi hằng ngày):
+`python run_all.py --fresh`, sau đó `python scripts/pack_cache.py` để cập nhật bộ đệm đi kèm repo.
+Trên Windows cũng có thể dùng `powershell -ExecutionPolicy Bypass -File run_all.ps1` (gọi lại `run_all.py`).
 
 ---
 
