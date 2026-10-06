@@ -1,3 +1,7 @@
 * text=auto eol=lf
 *.zip binary
 *.png binary
+# Dữ liệu sinh ra bởi pipeline: không tính vào thống kê ngôn ngữ, thu gọn trong diff của GitHub
+data/** linguist-generated=true
+docs/ontology.md linguist-generated=true
+queries/*.rq linguist-generated=true

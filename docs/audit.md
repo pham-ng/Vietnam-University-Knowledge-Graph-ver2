@@ -100,3 +100,20 @@ content negotiation phía máy chủ (GitHub Pages là hosting tĩnh).
    phép đo độ chính xác trên toàn bộ dataset.
 8. **Phụ thuộc dịch vụ ngoài**: truy vấn federated phụ thuộc Wikidata/DBpedia còn hoạt động; thu thập lại phụ thuộc giới hạn
    tốc độ của Wikimedia (có cache để giảm rủi ro).
+
+## 8. Máy chủ web và quy trình kỹ thuật (rà soát lại)
+
+Rà soát `app/server.py` phát hiện các lỗi **đã tái hiện được** trên máy chủ đang chạy, và đã sửa:
+
+| Vấn đề | Tái hiện | Sửa | Test |
+|---|---|---|---|
+| **SSRF** — truy vấn `SERVICE <http://127.0.0.1:…>` khiến máy chủ gửi yêu cầu tới địa chỉ nội bộ | máy chủ nội bộ nhận được yêu cầu | `SERVICE` chỉ tới `query.wikidata.org`, `dbpedia.org`; cấm `SERVICE ?biến`, `FROM` | `test_ssrf_is_blocked` (6 ca) |
+| **Chèn SPARQL** — phần đường dẫn `/resource/...` được ghép thẳng vào truy vấn | `…/x%3E…` trả 500 thay vì 404 | kiểm tra theo mẫu URI của dataset (2.241/2.241 URI thật đều khớp) | `test_sparql_injection_…` (4 ca) |
+| Không giới hạn truy vấn (backend rdflib) | — | giới hạn 20.000 ký tự, 30 giây | `test_query_too_long` |
+| Chạy bằng máy chủ phát triển của Flask | — | `--prod`: waitress (đa luồng); application factory `create_app()` cho WSGI | thử 20 yêu cầu đồng thời |
+| Lỗi nội bộ trả về nguyên văn exception | — | 400 cho lỗi cú pháp, 500 chung chung + ghi log | `test_sparql_syntax_error_is_400_not_500` |
+| Máy chủ web **không có test nào** | — | 27 test (content negotiation 4 định dạng, SPARQL JSON/CSV, header bảo mật, path traversal) | `tests/test_server.py` |
+| **Thư mục build `site/` (6.788 tệp, 66 MB) bị commit** → GitHub hiển thị repo "99% HTML" dù mã viết tay là Python | — | bỏ `site/` khỏi git; GitHub Actions chạy 84 test → build site → đăng Pages | workflow `CI & Pages` |
+
+Quy mô mã viết tay: ≈5.100 dòng Python (thu thập, ETL, suy luận, công bố, máy chủ, test, audit), ≈1.260 dòng
+HTML/CSS/JS giao diện, ≈700 dòng Turtle (ontology + SHACL).

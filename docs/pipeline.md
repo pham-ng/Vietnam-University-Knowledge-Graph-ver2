@@ -163,7 +163,7 @@ dùng chung (QID, ROR) mới làm được.
   (dùng `--local` nếu không chạy Fuseki).
 * **Báo cáo chất lượng** [scripts/step6_report.py](../scripts/step6_report.py) → [data/reports/quality_report.md](../data/reports/quality_report.md):
   dòng dõi dữ liệu, độ đầy đủ theo trường, nguồn của giá trị, mâu thuẫn, kết quả các cổng kiểm định, checklist 5 sao.
-* **Kiểm thử**: `py -m pytest tests -q`, gồm **57 test** (thêm [test_infobox_media.py](../tests/test_infobox_media.py): 11 test infobox, ảnh, lịch sử):
+* **Kiểm thử**: `py -m pytest tests -q`, gồm **84 test** (thêm [test_server.py](../tests/test_server.py): 27 test máy chủ web — content negotiation, SSRF, chèn SPARQL) (thêm [test_infobox_media.py](../tests/test_infobox_media.py): 11 test infobox, ảnh, lịch sử):
   - [test_reasoning.py](../tests/test_reasoning.py): 8 test suy luận đúng, 5 test phát hiện dữ liệu sai, 1 test toàn bộ dữ liệu thật nhất quán;
   - [test_extraction.py](../tests/test_extraction.py): 29 test trích xuất dùng câu thật từ Wikipedia (gồm ca "chú thích ảnh năm 1920" và chuẩn hoá tên Bộ);
   - [test_data_contract.py](../tests/test_data_contract.py): 3 test chứng minh JSON Schema chặn được bản ghi sai.
