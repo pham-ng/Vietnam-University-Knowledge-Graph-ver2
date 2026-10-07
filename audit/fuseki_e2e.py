@@ -25,6 +25,7 @@ def main():
     ap.add_argument('--java', default='java')
     ap.add_argument('--jar', required=True, type=Path)
     ap.add_argument('--socket-temp', type=Path, help='Short writable directory for Windows JDK Unix-domain wakeup sockets')
+    ap.add_argument('--selector-provider', help='Optional Java NIO selector provider override for Windows')
     args = ap.parse_args()
     require_validated_release()
     expected = Graph().parse(config.ALL_TTL)
@@ -37,13 +38,18 @@ def main():
     base = f'http://127.0.0.1:{port}'
     flags = subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
     results = {'started_at_utc': datetime.now(timezone.utc).isoformat(),
+               'platform': sys.platform,
                'jar_sha256': hashlib.sha256(args.jar.read_bytes()).hexdigest(),
                'input_sha256': hashlib.sha256(config.ALL_TTL.read_bytes().replace(b'\r\n', b'\n')).hexdigest(),
                'java': subprocess.run([args.java, '-version'], capture_output=True, text=True).stderr.strip(),
+               'selector_provider': args.selector_provider,
+               'socket_temp': str(args.socket_temp) if args.socket_temp else None,
                'checks': {}, 'scope': 'disposable loopback TDB2; not production security certification'}
     def start(update):
         cmd = [args.java, '-Xmx2g', '-jar', str(args.jar.resolve()), '--localhost',
                f'--port={port}', '--tdb2', f'--loc={work / "db"}', '--timeout=5000']
+        if args.selector_provider:
+            cmd.insert(1, '-Djava.nio.channels.spi.SelectorProvider=' + args.selector_provider)
         if args.socket_temp:
             cmd.insert(1, '-Djdk.net.unixdomain.tmpdir=' + str(args.socket_temp.resolve()))
         if update:
@@ -122,7 +128,8 @@ def main():
         stop(proc, log)
     results['fuseki_startup'] = (work / 'update.log').read_text(encoding='utf-8').splitlines()[:5]
     results['status'] = 'passed'
-    (config.REPORTS_DIR / 'fuseki-e2e.json').write_text(json.dumps(results, indent=2), encoding='utf-8')
+    report_name = 'fuseki-e2e-windows.json' if os.name == 'nt' else 'fuseki-e2e.json'
+    (config.REPORTS_DIR / report_name).write_text(json.dumps(results, indent=2), encoding='utf-8')
     print(json.dumps(results, indent=2))
 
 

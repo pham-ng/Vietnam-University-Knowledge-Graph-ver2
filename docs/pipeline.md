@@ -128,8 +128,9 @@ Mô tả dataset theo **VoID + DCAT** ([data/gold/void.ttl](../data/gold/void.tt
 
 ### Vì sao liên kết theo định danh chứ không so khớp tên? ([data/reports/link_evaluation.md](../data/reports/link_evaluation.md))
 
-[scripts/eval_linking.py](../scripts/eval_linking.py) mô phỏng cách liên kết kiểu **Silk** (Jaccard trên token của tên, như
-dự án tham khảo `hust-semantic-web`). Thí nghiệm so khớp tên tiếng Anh của 87 trường với nhãn DBpedia, lấy liên kết theo
+[scripts/eval_linking.py](../scripts/eval_linking.py) là baseline Jaccard để so sánh phương pháp. Ngoài ra,
+[audit/silk_experiment.py](../audit/silk_experiment.py) chạy **Silk Framework 3.6.0 thật** trên một mẫu đóng đã cố định;
+đầu ra bị cách ly dưới dạng candidate và không tự nâng thành `owl:sameAs`. Thí nghiệm so khớp tên tiếng Anh của 87 trường với nhãn DBpedia, lấy liên kết theo
 định danh (QID) làm chuẩn đối chiếu:
 
 | θ | precision | recall | F1 |
@@ -153,6 +154,8 @@ dùng chung (QID, ROR) mới làm được.
   Không đưa `owl:sameAs` ra ngoài vào suy luận, vì làm vậy sẽ nhân bản mọi triple sang URI của Wikidata.
 * **Fuseki**: [fuseki/run_fuseki.ps1](../fuseki/run_fuseki.ps1) (hoặc `fuseki/start.cmd`, `fuseki/docker-compose.yml`
   cùng `scripts/step5_load_fuseki.py`).
+  Transformer vẫn là `step3_transform.py`; Fuseki là graph store/query server, không phải bộ biến đổi hay bộ cấp URI.
+  Có thể chạy toàn pipeline kèm Silk và nạp Fuseki có kiểm tra bằng `run_all.py --with-silk ... --load-fuseki URL`.
 * **Web** [app/server.py](../app/server.py):
   - `/sparql`: SPARQL 1.1 Protocol;
   - `/query`: YASGUI kèm 15 truy vấn mẫu;

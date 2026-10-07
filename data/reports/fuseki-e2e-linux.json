@@ -1,0 +1,22 @@
+{
+  "started_at_utc": "2026-10-07T01:50:49.691244+00:00",
+  "platform": "linux",
+  "fuseki": "6.2.0",
+  "java": "Temurin 21.0.12.1",
+  "jar_sha256": "2c92c598e65ab69d99820052e05f4277ed1d77980a8845f87545ad35b71a76ee",
+  "input_sha256": "7306e2ac87714b22144c15ab2bc4448ed1675331ed19104776d93aaa885d9aa1",
+  "checks": {
+    "load_triples": 73690,
+    "load_isomorphic": true,
+    "overwrite_refused": true,
+    "backup_verified": true,
+    "query_parity": {"count": 1, "classes": 68, "programs": 78, "dated_roles": 0},
+    "tdb2_restart_isomorphic": true,
+    "readonly_denied": {"update": 405, "put": 405},
+    "denied_writes_preserved_graph": true
+  },
+  "scope": "disposable loopback TDB2; not production security certification",
+  "status": "passed",
+  "ci_run": "https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/actions/runs/37559070543",
+  "tested_commit": "ab0033df5499856b67d011231d93bb1ed52f324e"
+}

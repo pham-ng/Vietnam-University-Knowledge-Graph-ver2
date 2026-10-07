@@ -1,8 +1,11 @@
 {
-  "started_at_utc": "2026-10-07T01:50:49.691244+00:00",
+  "started_at_utc": "2026-10-07T07:22:01.979050+00:00",
+  "platform": "win32",
   "jar_sha256": "2c92c598e65ab69d99820052e05f4277ed1d77980a8845f87545ad35b71a76ee",
   "input_sha256": "7306e2ac87714b22144c15ab2bc4448ed1675331ed19104776d93aaa885d9aa1",
-  "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)",
+  "java": "java version \"21.0.8\" 2025-07-15 LTS\nJava(TM) SE Runtime Environment (build 21.0.8+12-LTS-250)\nJava HotSpot(TM) 64-Bit Server VM (build 21.0.8+12-LTS-250, mixed mode, sharing)",
+  "selector_provider": "sun.nio.ch.WindowsSelectorProvider",
+  "socket_temp": "tmp/fuseki-socket-win",
   "checks": {
     "load": {
       "triples": 73690,
@@ -26,14 +29,11 @@
   },
   "scope": "disposable loopback TDB2; not production security certification",
   "fuseki_startup": [
-    "[2026-10-07 01:50:51] Fuseki     INFO  Apache Jena Fuseki 6.2.0",
-    "[2026-10-07 01:50:51] Config     INFO  Fuseki Base = /home/runner/work/Vietnam-University-Knowledge-Graph-ver2/Vietnam-University-Knowledge-Graph-ver2/tmp/fuseki-e2e-mi61vog8/run",
-    "[2026-10-07 01:50:51] Config     INFO  Database: /vnedu",
-    "[2026-10-07 01:50:51] Config     INFO  UI Base: fuseki-server.jar",
-    "[2026-10-07 01:50:51] Shiro      INFO  Shiro configuration: file:/home/runner/work/Vietnam-University-Knowledge-Graph-ver2/Vietnam-University-Knowledge-Graph-ver2/tmp/fuseki-e2e-mi61vog8/run/shiro.ini"
+    "[2026-10-07 14:22:03] Fuseki     INFO  Apache Jena Fuseki 6.2.0",
+    "[2026-10-07 14:22:04] Config     INFO  Fuseki Base = C:\\Users\\Administrator\\AppData\\Roaming\\Claude\\scratch-workspaces\\22a3c0d9-7a02-453b-9542-b8e7c3b733d3\\8c8b9564-fc1e-49a6-8ada-a9fd529b1ce8\\scratch-2026-10-05-4d14b4\\reviewed-vnedu\\tmp\\fuseki-e2e-eugid4ma\\run",
+    "[2026-10-07 14:22:04] Config     INFO  Database: /vnedu",
+    "[2026-10-07 14:22:04] Config     INFO  UI Base: fuseki-server.jar",
+    "[2026-10-07 14:22:04] Shiro      INFO  Shiro configuration: file:C:\\Users\\Administrator\\AppData\\Roaming\\Claude\\scratch-workspaces\\22a3c0d9-7a02-453b-9542-b8e7c3b733d3\\8c8b9564-fc1e-49a6-8ada-a9fd529b1ce8\\scratch-2026-10-05-4d14b4\\reviewed-vnedu\\tmp\\fuseki-e2e-eugid4ma\\run\\shiro.ini"
   ],
-  "status": "passed",
-  "ci_run": "https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/actions/runs/37559070543",
-  "tested_commit": "ab0033df5499856b67d011231d93bb1ed52f324e",
-  "windows_status": "Not passed in the local desktop execution environment: JDK Unix-domain loopback initialization failed; Linux CI is the verified environment."
+  "status": "passed"
 }

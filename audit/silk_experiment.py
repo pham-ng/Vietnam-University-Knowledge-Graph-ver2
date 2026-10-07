@@ -21,7 +21,14 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--java', default='java')
     ap.add_argument('--classpath', required=True)
+    ap.add_argument('--timeout', type=int, default=600, help='maximum seconds per Silk job')
+    ap.add_argument('--threads', type=int, default=8, help='Silk matching threads')
     args = ap.parse_args()
+    classpath_parts = []
+    for entry in args.classpath.split(os.pathsep):
+        path = Path(entry)
+        classpath_parts.append(str(path if path.is_absolute() else (ROOT / path).resolve()))
+    classpath = os.pathsep.join(classpath_parts)
     path = ROOT / 'data/reference/silk-reference.json'
     sample = json.loads(path.read_text(encoding='utf-8'))
     sources = sample['sources']
@@ -68,10 +75,15 @@ def main():
 </Silk>'''
         config = work / 'linkage.xml'
         config.write_text(xml, encoding='utf-8')
-        command = [args.java, '-Xmx1g', '-DconfigFile=' + str(config), '-Dthreads=2',
-                   '-Delds.home=' + str(work), '-cp', args.classpath, 'org.silkframework.Silk']
-        result = subprocess.run(command, cwd=work, capture_output=True, timeout=180,
-                                creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
+        command = [args.java, '-Xmx1g', '-DconfigFile=' + str(config), '-Dthreads=' + str(args.threads),
+                   '-Delds.home=' + str(work), '-cp', classpath, 'org.silkframework.Silk']
+        try:
+            result = subprocess.run(command, cwd=work, capture_output=True, timeout=args.timeout,
+                                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
+        except subprocess.TimeoutExpired as exc:
+            log_path = out / f'distance-{distance}.log'
+            log_path.write_bytes((exc.stdout or b'') + (exc.stderr or b''))
+            raise RuntimeError(f'Silk timed out after {args.timeout}s; inspect {log_path}') from exc
         (out / f'distance-{distance}.log').write_bytes(result.stdout + result.stderr)
         if result.returncode:
             raise RuntimeError('Silk failed; inspect ' + str(out / f'distance-{distance}.log'))

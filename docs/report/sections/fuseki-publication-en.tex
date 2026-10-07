@@ -29,7 +29,7 @@ requires promotion of the review branch.
 \begin{figure}[htbp]\centering
 \resizebox{\textwidth}{!}{\input{figures/deployment-en.tex}}
 \caption[URI publication and optional Fuseki execution]{Publication and storage paths. The optional Fuseki
-branch has a verified Linux acceptance run; Render still explicitly selects local RDFLib.
+branch has verified Linux and Windows acceptance runs; Render still explicitly selects local RDFLib.
 Storage does not replace the canonical identifiers.}\label{fig:deployment}
 \end{figure}
 
@@ -56,10 +56,14 @@ The optional legacy Docker recipe now requires an operator-selected image and pa
 and binds port 3030 only on loopback. That Docker configuration was not the tested runtime.
 
 \subsection{Executed end-to-end acceptance evidence}
-The actual test ran on Linux GitHub Actions with Fuseki 6.2.0 and Temurin Java 21.0.12.1,
-on 7 October 2026 at 01:50 UTC. The tested code revision is \term{ab0033d}.
+The primary reproducible test ran on Linux GitHub Actions with Fuseki 6.2.0 and Temurin Java 21.0.12.1,
+on 7 October 2026 at 01:50 UTC. A second run on the Windows desktop used the same Fuseki JAR,
+Java 21 and the Windows selector/socket workaround at 07:22 UTC; the launcher smoke test passed
+at 07:31 UTC. The tested code revision before these launcher edits was \term{ab0033d}; the current
+branch records the subsequent launcher fix.
 The input hash, JAR hash, runtime details and assertions are archived in
-\term{data/reports/fuseki-e2e.json}; the corresponding
+\term{data/reports/fuseki-e2e-linux.json} and the Windows run in
+\term{data/reports/fuseki-e2e-windows.json}; the corresponding Linux
 \href{https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/actions/runs/37559070543}{CI run}
 completed successfully.
 
@@ -81,10 +85,11 @@ The test uses a newly created disposable directory and ephemeral loopback port; 
 user dataset is overwritten. Zero dated-leadership rows is an honest reflection of missing
 date evidence, not a failed lookup to be filled with invented dates.
 
-The Windows desktop run did not pass startup: JDK socket initialization raised
-\term{Unable to establish loopback connection}. A shorter socket directory did not resolve
-it. This environment limitation is recorded separately; the successful Linux result must
-not be described as a successful Windows deployment.
+On Windows, the first attempt exposed a JDK 21 selector/socket initialization failure.
+The repaired launcher now sets the selector provider and short Unix-domain socket directory
+through inherited Java options (avoiding PowerShell 5.1 argument concatenation); the same
+disposable TDB2 acceptance test then passed all checks, and a direct query-only launcher
+smoke test returned HTTP 200. This proves local Windows operability, not production deployment.
 Configured timeout is not proof of cancellation under load. Authentication, SERVICE egress,
 concurrent writers, memory limits, disaster recovery and production TLS require separate
 acceptance tests. The verified read-only mode is access restriction, not a full security certification.

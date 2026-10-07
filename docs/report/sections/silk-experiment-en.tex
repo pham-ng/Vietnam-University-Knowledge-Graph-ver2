@@ -4,6 +4,10 @@ to the Python Jaccard baseline as Silk. The official single-machine entry point 
 compiled with Scala 2.12.10 against released workbench libraries and run on Java 8.
 Pinned checksums are in \term{audit/setup\_runtimes.ps1}; the runner, XML rules, input
 N-Triples, candidate outputs and result JSON are included in the repository.
+The reproducible execution is scheduled in \term{.github/workflows/silk-e2e.yml} on
+Ubuntu with Java 8. On the reviewed Windows desktop, Java 8.351 and 8.481 both
+timed out before producing candidates; this is recorded as an environment limitation,
+not converted into a success claim.
 
 The experiment freezes the 86-source/86-target sample from revision \term{58c65f0},
 giving 7,396 possible pairs. Both methods use the same lowercased English labels.

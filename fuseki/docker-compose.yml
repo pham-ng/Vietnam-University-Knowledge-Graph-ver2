@@ -1,6 +1,6 @@
 # Cách 2: chạy Fuseki bằng Docker (cần Docker Desktop đang chạy)
 #   docker compose -f fuseki/docker-compose.yml up -d
-#   py scripts/step5_load_fuseki.py --user admin --password vnedu-admin
+#   $env:FUSEKI_USER='admin'; $env:FUSEKI_PASSWORD='...'; py scripts/step5_load_fuseki.py --url http://127.0.0.1:3030
 services:
   fuseki:
     image: ${FUSEKI_IMAGE:?Set an operator-reviewed image@sha256 digest}

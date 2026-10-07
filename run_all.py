@@ -2,6 +2,8 @@
 
   python run_all.py              # dùng bộ đệm HTTP đi kèm repo -> kết quả GIỐNG HỆT bản công bố, không cần Internet
   python run_all.py --fresh      # bỏ bộ đệm, tải dữ liệu mới nhất từ Wikidata/Wikipedia (kết quả có thể khác)
+  python run_all.py --with-silk --silk-classpath <classpath>  # chạy thí nghiệm Silk đã ghim, candidate-only
+  python run_all.py --load-fuseki http://127.0.0.1:3030       # nạp gold vào Fuseki qua loader an toàn
   python run_all.py --no-tests   # bỏ qua bước kiểm thử
 """
 import argparse
@@ -37,7 +39,19 @@ def main() -> None:
     ap.add_argument("--fresh", action="store_true", help="tải lại dữ liệu mới nhất (bỏ bộ đệm HTTP)")
     ap.add_argument("--no-tests", action="store_true", help="không chạy kiểm thử")
     ap.add_argument("--no-install", action="store_true", help="không chạy pip install -r requirements.txt")
+    ap.add_argument("--with-silk", action="store_true", help="chạy Silk 3.6.0 trên mẫu tham chiếu đóng; không tự thêm owl:sameAs")
+    ap.add_argument("--silk-java", default=os.getenv("VNEDU_SILK_JAVA", "java"), help="Java dùng cho Silk")
+    ap.add_argument("--silk-classpath", default=os.getenv("VNEDU_SILK_CLASSPATH"), help="classpath Silk 3.6.0")
+    ap.add_argument("--load-fuseki", metavar="URL", help="nạp data/gold/vnedu-all.ttl vào Fuseki sau khi build")
+    ap.add_argument("--fuseki-dataset", default="vnedu", help="dataset Fuseki đích")
+    ap.add_argument("--fuseki-replace", action="store_true", help="cho phép thay graph không rỗng; cần --fuseki-backup")
+    ap.add_argument("--fuseki-backup", type=Path, help="tệp backup bắt buộc khi dùng --fuseki-replace")
     args = ap.parse_args()
+
+    if args.with_silk and not args.silk_classpath:
+        raise SystemExit("--with-silk cần --silk-classpath hoặc biến môi trường VNEDU_SILK_CLASSPATH; chạy audit/setup_runtimes.ps1 trước.")
+    if args.fuseki_replace and not args.fuseki_backup:
+        raise SystemExit("--fuseki-replace cần --fuseki-backup để không mất dữ liệu cũ.")
 
     env = dict(os.environ, PYTHONUTF8="1", PYTHONIOENCODING="utf-8")
     if not args.no_install:
@@ -53,6 +67,17 @@ def main() -> None:
     for title, script in STEPS:
         print(f"\n=== BƯỚC {title} ===", flush=True)
         run([sys.executable, script], env)
+    if args.with_silk:
+        print("\n=== Thí nghiệm Silk Framework 3.6.0 (candidate-only) ===", flush=True)
+        run([sys.executable, "audit/silk_experiment.py", "--java", args.silk_java,
+             "--classpath", args.silk_classpath], env)
+    if args.load_fuseki:
+        print("\n=== Nạp release vào Apache Jena Fuseki ===", flush=True)
+        command = [sys.executable, "scripts/step5_load_fuseki.py", "--url", args.load_fuseki,
+                   "--dataset", args.fuseki_dataset]
+        if args.fuseki_replace:
+            command += ["--replace", "--backup", str(args.fuseki_backup)]
+        run(command, env)
     if not args.no_tests:
         print("\n=== Kiểm thử ===", flush=True)
         run([sys.executable, "-m", "pytest", "tests", "-q"], env)

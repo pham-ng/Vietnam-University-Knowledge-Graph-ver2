@@ -62,23 +62,27 @@ and distinguishes implemented mechanisms from deployment evidence. It corrects t
 URI-strategy claim: publishing RDF statements about an external URI is valid and does not
 in itself lose provenance or change the external dataset.
 
-Additional design risks, **not silently fixed by this documentation follow-up**:
+The following design risks were fixed in the corrected branch:
 
-- `governedBy` propagates up `subordinateTo`, mixing direct and indirect governance.
-- `ownedBy` / `governedBy` imply `schema:parentOrganization`; investment or oversight alone
-  is insufficient evidence for that stronger organizational relationship.
-- `hasLeader` implies `schema:employee`, including council chairs whose employment is not established.
-- Disjoint legal-type classes lack temporal qualification; program identifiers and functional
-  provider/major properties exclude multiple variants or joint programs without a model change.
-- The Fuseki loader is optional and absent from `run_all.py`. It does not enforce the release
-  fingerprint gate, back up/confirm default-graph replacement, or verify graph equivalence after loading.
-- Docker uses an unpinned third-party `latest` image, a fixed demonstration password and a
-  non-loopback port binding. The launcher selects old versions and does not verify download digests.
-  These are not production-ready deployment defaults.
+- direct governance is separated from source-reported governance; transitive governance is no longer
+  asserted as a direct fact;
+- ownership/governance no longer force `schema:parentOrganization`, and leadership no longer forces
+  `schema:employee`;
+- legal classifications, program/provider relations and leadership/education facts are qualified by
+  evidence observations, dates and temporal status rather than over-strong global axioms;
+- the Fuseki loader is now a release-gated step with explicit dataset selection, safe replacement,
+  exclusive backup creation and post-load graph-isomorphism verification;
+- Docker requires an operator-reviewed image digest, a non-demo password and loopback binding by default;
+  the pinned Fuseki 6.2.0 launcher verifies the runtime recipe and has a Windows JDK selector workaround.
+
+The pipeline now exposes the optional operations explicitly: `run_all.py --with-silk ...` executes the
+real Silk 3.6.0 candidate experiment, while `run_all.py --load-fuseki URL` invokes the safe Fuseki loader.
+Neither option silently promotes uncertain links to `owl:sameAs` or claims a public production service.
 
 Read-only publication evidence: the sample HUST entity's HTML/Turtle/JSON-LD documents are
 accessible; canonical Accept negotiation remains HTML; the ontology version IRI returns 404;
-local Fuseki is unreachable; Render health timed out after 15 seconds. Details and timestamps:
+the corrected local Fuseki TDB2 acceptance passes on both Linux CI and Windows after the launcher fix;
+the historical Render health probe timed out after 15 seconds. Details and timestamps:
 `data/reports/publication-check.json`. These observations are not a full availability study.
 
 Verdict: basic five-star publication mechanisms are present, with limited public evidence;

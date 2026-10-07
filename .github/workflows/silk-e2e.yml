@@ -1,0 +1,50 @@
+name: Silk Framework experiment
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "audit/silk_experiment.py"
+      - "data/reference/silk-reference.json"
+      - ".github/workflows/silk-e2e.yml"
+
+jobs:
+  silk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "8"
+      - name: Install Python dependencies
+        run: python -m pip install -q -r requirements.txt
+      - name: Download and verify Silk runtime
+        shell: bash
+        run: |
+          mkdir -p tmp/runtimes
+          curl --fail --location --retry 2 https://github.com/silk-framework/silk/releases/download/v3.6.0/silk-workbench-v3.6.0.tgz -o tmp/runtimes/silk.tgz
+          echo 'e20776c906edfa838a572a64dd5e1ca81493c3708c8e3f837d21244fb01a5d64  tmp/runtimes/silk.tgz' | sha256sum --check
+          tar -xzf tmp/runtimes/silk.tgz -C tmp/runtimes
+          curl --fail --location --retry 2 https://repo.maven.apache.org/maven2/org/scala-lang/scala-compiler/2.12.10/scala-compiler-2.12.10.jar -o tmp/runtimes/scala-compiler.jar
+          echo 'cedc3b9c39d215a9a3ffc0cc75a1d784b51e9edc7f13051a1b4ad5ae22cfbc0c  tmp/runtimes/scala-compiler.jar' | sha256sum --check
+          curl --fail --location --retry 2 https://raw.githubusercontent.com/silk-framework/silk/v3.6.0/silk-tools/silk-singlemachine/src/main/scala/org/silkframework/Silk.scala -o tmp/runtimes/Silk.scala
+          echo 'f22928b657b29f2f3d2567c83490e35313e9581fa00e96cb9fb7e267d8c493ec  tmp/runtimes/Silk.scala' | sha256sum --check
+      - name: Compile official Silk single-machine entry point
+        run: |
+          mkdir -p tmp/runtimes/silk-cli
+          java -cp "tmp/runtimes/scala-compiler.jar:tmp/runtimes/silk-workbench-v3.6.0/lib/*" scala.tools.nsc.Main -usejavacp -d tmp/runtimes/silk-cli tmp/runtimes/Silk.scala
+      - name: Execute Silk candidate experiment
+        run: python audit/silk_experiment.py --java java --classpath 'tmp/runtimes/silk-cli:tmp/runtimes/silk-workbench-v3.6.0/lib/*' --timeout 600
+      - name: Upload Silk evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: silk-e2e-evidence
+          path: |
+            data/reports/silk/results.json
+            data/reports/silk/*.nt
+            data/reports/silk/*.xml
+            data/reports/silk/*.log

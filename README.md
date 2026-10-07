@@ -88,7 +88,7 @@ curl -H "Accept: text/turtle" https://vnedu-lod.onrender.com/resource/university
 
 Gói Free của Render tự ngủ sau ~15 phút không có truy cập; lần gọi đầu sau đó mất khoảng 1 phút.
 
-**Chạy trên máy (clone về là chạy)** — cần Python 3.12 (đã kiểm thử; 3.10+ chạy được), Java 8+ nếu dùng Fuseki.
+**Chạy trên máy (clone về là chạy)** — cần Python 3.12 (đã kiểm thử; 3.10+ chạy được). Fuseki 6.2.0 dùng Java 21; Java 8 chỉ dùng cho thí nghiệm Silk 3.6.0 theo recipe đã ghim.
 Repo đã có sẵn toàn bộ dữ liệu (bronze → gold) và **bộ đệm HTTP nén** `data/bronze/http_cache.zip`, nên không cần
 Internet cho các bước dữ liệu sau khi cài thư viện. Chế độ mặc định dừng khi thiếu cache; timestamp và cách tuần tự hoá RDF có thể khác.
 
@@ -120,7 +120,23 @@ python app/server.py --prod
 Bật SPARQL endpoint **Apache Jena Fuseki** (tuỳ chọn; tự tải Fuseki lần đầu) → http://localhost:3030/vnedu/sparql
 
 ```bash
+powershell -ExecutionPolicy Bypass -File audit/setup_runtimes.ps1
 powershell -ExecutionPolicy Bypass -File fuseki/run_fuseki.ps1
+```
+
+Muốn chạy Silk thật trên mẫu tham chiếu đóng (kết quả chỉ là candidate, không tự phát hành `owl:sameAs`):
+
+```bash
+powershell -ExecutionPolicy Bypass -File audit/setup_runtimes.ps1
+python run_all.py --no-install --with-silk --silk-java "C:\Program Files\Java\jre1.8.0_481\bin\java.exe" --silk-classpath "tmp\runtimes\silk-cli;tmp\runtimes\silk-workbench-v3.6.0\lib\*"
+```
+
+Bằng chứng Silk được xác nhận trong workflow Linux [`silk-e2e.yml`](.github/workflows/silk-e2e.yml); Java 8 trên Windows của môi trường review có thể timeout trước khi sinh candidate.
+
+Sau khi Fuseki đã chạy, có thể nạp release qua loader có kiểm tra fingerprint, backup và graph-isomorphism:
+
+```bash
+python run_all.py --no-install --load-fuseki http://127.0.0.1:3030
 ```
 
 Khi Fuseki đang chạy, `app/server.py` tự dùng Fuseki làm backend. Mở cho máy khác truy cập:

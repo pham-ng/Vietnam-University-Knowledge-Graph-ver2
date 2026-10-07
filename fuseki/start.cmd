@@ -1,4 +1,3 @@
 @echo off
-rem Run Fuseki (downloaded by run_fuseki.ps1) from its own folder so it finds its webapp.
-cd /d "%~dp0apache-jena-fuseki-3.17.0"
-java -Xmx2G -jar fuseki-server.jar --file="%~dp0..\data\gold\vnedu-all.ttl" /vnedu
+rem Canonical Windows launcher. It expects Fuseki 6.2.0 from audit\setup_runtimes.ps1.
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0run_fuseki.ps1" %*
