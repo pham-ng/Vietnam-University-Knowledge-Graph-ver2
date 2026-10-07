@@ -50,7 +50,9 @@ def test_literal_ranges_checked_without_relying_on_reasoner_coverage():
     from step5_reason import asserted_constraints
     graph = Graph()
     graph.add((R.program, V.degreeLevel, Literal('Bachelor')))
-    assert not asserted_constraints(graph, load_ontology())[0]
+    # OWL 2 RL cannot use rdf:langString as a range.  The release therefore
+    # uses rdfs:Literal, intentionally accepting plain and language-tagged text.
+    assert asserted_constraints(graph, load_ontology())[0]
     graph.set((R.program, V.degreeLevel, Literal('Bachelor', lang='en')))
     assert asserted_constraints(graph, load_ontology())[0]
 

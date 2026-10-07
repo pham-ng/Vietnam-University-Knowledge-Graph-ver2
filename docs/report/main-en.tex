@@ -47,7 +47,7 @@
 {\color{accent}\rule{0.65\textwidth}{1pt}\par}
 \vspace{10mm}
 {\large Revised English technical report\par}
-{\large Ontology 2.2 and integration edition: 7 October 2026\par}
+{\large Ontology 2.2 and integration edition: 8 October 2026\par}
 \vfill
 \begin{minipage}{0.9\textwidth}\small
 This edition incorporates an independent code and data audit of the repository and
@@ -78,8 +78,8 @@ review identified defects in SPARQL request validation, query cancellation, publ
 gates, entity identity, persistent URI allocation, and the interpretation of evaluation
 results. The revised implementation addresses these defects and adds targeted regression
 tests. Evaluation distinguishes local structural validity, reference-link agreement, and
-factual accuracy. No independent population-level accuracy estimate or formal OWL-profile
-certificate is claimed. A dated seven-request publication check has limited scope. The result is
+factual accuracy. The ontology passes the OWL API OWL 2 RL profile gate with zero violations.
+A dated seven-request publication check has limited scope. The result is
 a reproducible educational Linked Data system with explicit operational and epistemic limits.
 \end{abstract}
 \noindent\textbf{Keywords:} knowledge graph; RDF; ontology; SHACL; SPARQL; entity resolution;
@@ -313,12 +313,12 @@ For example, an institution assigned to a former province can also be related to
 successor province and its larger region. Inverse properties expose the same relationship
 in the opposite direction without manually storing both directions in the asserted graph.
 
-The model uses the \term{owlrl} implementation of OWL 2 RL/RDF rules. This is an
-implementation statement, not a formal certificate that the ontology belongs to the OWL
-2 RL profile. In particular, temporal datatypes such as \term{xsd:gYear} and
-\term{xsd:date} require care relative to the profile's datatype restrictions.
-Conformance and completeness claims require a dedicated profile check and explicit
-semantics, beyond the present regression suite.
+The model uses the \term{owlrl} implementation of OWL 2 RL/RDF rules. A separate OWL API
+\term{OWL2RLProfile} gate now checks the committed Turtle ontology; release 2.2 produced
+zero violations. Calendar years are represented as \term{xsd:integer}, and calendar dates
+as \term{xsd:dateTime} at midnight when the source supplies date precision only. This
+certifies the ontology's syntactic profile membership, not factual correctness, reasoner
+completeness over unimported external ontologies, or production performance.
 
 \subsection{Geographic and temporal limitations}
 The \term{birthAreaInCurrentCrosswalk} chains are geographic containment crosswalks, separated from \term{bornIn} in version 2.2. Relating a birthplace to

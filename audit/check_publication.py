@@ -50,7 +50,7 @@ def main():
         ("canonical_accept_turtle", SAMPLE, "text/turtle", "html"),
         ("sample_turtle_document", SAMPLE + ".ttl", "text/turtle", "turtle"),
         ("sample_jsonld_document", SAMPLE + ".jsonld", "application/ld+json", "json-ld"),
-        ("ontology_version", config.BASE + "ontology/2.1", "text/turtle", "html"),
+        ("ontology_version", config.BASE + "ontology/2.2", "text/turtle", "html"),
         ("public_health", config.PUBLIC_SPARQL.removesuffix("/sparql") + "/healthz",
          "application/json", "json"),
         ("local_fuseki_ping", config.FUSEKI_URL + "/$/ping", "text/plain", "text"),

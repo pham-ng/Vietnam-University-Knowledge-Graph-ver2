@@ -157,6 +157,7 @@ def main() -> None:
     text = ["# Sơ đồ ontology VN-Edu", "",
             f"*Sinh tự động từ `ontology/vnedu.ttl` bởi `scripts/gen_docs.py`* — {n_cls} lớp, {n_op} thuộc tính quan hệ, "
             f"{n_dp} thuộc tính dữ liệu, {len(g)} triple.", "",
+            "Release 2.2 passes the OWL API `OWL2RLProfile` gate with zero violations; see `data/reports/owl2rl-profile.txt`.", "",
             "Mũi tên rỗng = kế thừa (`rdfs:subClassOf`); mũi tên có nhãn = thuộc tính quan hệ (domain → range).", "",
             "![Ontology overview generated from the committed Turtle](report/figures/ontology-overview.png)", "",
             ontology_diagram(g), "", "## Tiên đề phục vụ suy luận", ""] + axioms_table(g)

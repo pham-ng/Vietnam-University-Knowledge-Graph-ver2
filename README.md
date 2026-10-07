@@ -133,6 +133,17 @@ python run_all.py --no-install --with-silk --silk-java "C:\Program Files\Java\jr
 
 Bằng chứng Silk được xác nhận trong workflow Linux [`silk-e2e.yml`](.github/workflows/silk-e2e.yml); Java 8 trên Windows của môi trường review có thể timeout trước khi sinh candidate.
 
+Kiểm tra hình thức OWL 2 RL bằng OWL API (cần Protégé 5.6.7 và Java 21 trên máy Windows review):
+
+```powershell
+powershell -ExecutionPolicy Bypass -File audit/owl_profile_check.ps1
+```
+
+Release 2.2 hiện trả `in_owl2_rl_profile=true` và `violation_count=0`; bằng chứng được lưu trong
+[`data/reports/owl2rl-profile.txt`](data/reports/owl2rl-profile.txt). Acceptance bảo mật và hiệu năng
+production-like chạy bằng `python audit/production_readiness.py`; kết quả được lưu tại
+[`data/reports/production-readiness.json`](data/reports/production-readiness.json).
+
 Sau khi Fuseki đã chạy, có thể nạp release qua loader có kiểm tra fingerprint, backup và graph-isomorphism:
 
 ```bash
@@ -272,9 +283,9 @@ person:tan-yap-peng  a vnedu:InstitutionLeader ;  vnedu:leads university:truong-
 
 ## 5. Cây ontology
 
-Ontology [`ontology/vnedu.ttl`](ontology/vnedu.ttl) trong bản audited hiện tại gồm **39 lớp, 38 thuộc tính quan hệ, 27 thuộc tính dữ liệu và 836 triple ontology**, theo
-được materialize bằng bộ luật `owlrl` theo mục tiêu OWL 2 RL; dự án **chưa tuyên bố chứng nhận
-profile OWL 2 RL hình thức**. Chỉ các lớp/thuộc tính có ánh xạ phù hợp mới được nối thận trọng
+Ontology [`ontology/vnedu.ttl`](ontology/vnedu.ttl) trong bản audited hiện tại gồm **39 lớp, 38 thuộc tính quan hệ, 27 thuộc tính dữ liệu và 862 triple ontology**, được
+materialize bằng bộ luật `owlrl` theo mục tiêu OWL 2 RL; bộ kiểm tra OWL API `OWL2RLProfile`
+đã chạy trên release 2.2 và trả **zero violations**. Chỉ các lớp/thuộc tính có ánh xạ phù hợp mới được nối thận trọng
 sang schema.org / FOAF / DBpedia, không phải mọi lớp đều tương đương với vocabulary bên ngoài.
 👉 Xem bản **tương tác** (bấm để mở/thu nhánh): [trang Ontology](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology).
 
@@ -345,7 +356,7 @@ Sơ đồ đầy đủ (sinh tự động từ tệp TTL, kèm bảng tiên đ�
 
 ## 6. Suy luận: máy tự biết thêm điều gì?
 
-Bộ máy `owlrl` giữ lại **21.018 triple suy luận**. Đây không phải chứng nhận ontology thuộc profile OWL 2 RL. Vài ví dụ:
+Bộ máy `owlrl` giữ lại **21.825 triple suy luận**. Chứng nhận profile hình thức của ontology được lưu tại `data/reports/owl2rl-profile.txt`; nó không phải chứng nhận độ đúng dữ kiện hay hiệu năng production. Vài ví dụ:
 
 | Dữ liệu gốc chỉ ghi | Quy tắc trong ontology | Máy tự suy ra |
 |---|---|---|

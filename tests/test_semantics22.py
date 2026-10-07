@@ -73,7 +73,7 @@ def test_date_qualified_observation():
     node = observe(g, R.u, V.rector, R.person, 'a' * 64,
                    valid_from='2020-01-01', valid_through='2022-12-31')
     assert (node, V.temporalStatus, Literal('qualified')) in g
-    assert (node, V.validFrom, Literal('2020-01-01', datatype=XSD.date)) in g
+    assert (node, V.validFrom, Literal('2020-01-01T00:00:00', datatype=XSD.dateTime)) in g
 
 
 def test_ambiguous_search_is_not_identity(monkeypatch):

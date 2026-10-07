@@ -63,7 +63,7 @@ Successor and containment chains produce \term{birthAreaInCurrentCrosswalk}, not
 A current province is not asserted to have existed at birth. \\
 Version publication &
 Archived 2.1 and 2.2 Turtle; generated HTML, Turtle and JSON-LD version documents and dynamic routes. &
-Local verification does not prove deployment at the canonical origin. \\
+The source and Pages workflow provide the route; stable public uptime still depends on deployment. \\
 \bottomrule
 \end{longtable}}
 
@@ -83,7 +83,7 @@ The design is suitable for a standards-based academic prototype, but it is not a
 \toprule Area & Evidence in this release & Honest qualification \\\midrule\endfirsthead
 \toprule Area & Evidence in this release & Honest qualification \\\midrule\endhead
 RDF and URI design & Stable HTTPS namespace, version IRI, Turtle/JSON-LD/N-Triples publication, content negotiation checks and licence metadata. & Deployment and long-term availability at the canonical origin remain operational responsibilities. \\
-OWL 2 modelling & The ontology parses as RDF, uses OWL vocabulary, inverse relations, chains, restrictions, equivalent classes and disjointness. & The project uses an \texttt{owlrl} rule implementation; no formal OWL 2 RL/DL profile certification is claimed. \\
+OWL 2 modelling & The ontology parses as RDF and passes the OWL API \texttt{OWL2RLProfile} gate with zero violations; inverse relations, chains, restrictions, equivalent classes and selected disjointness remain explicit. & This certifies profile membership of the local ontology, not complete imported-vocabulary semantics or factual correctness. \\
 Constraint validation & SHACL shapes validate required fields, datatypes, temporal intervals and observation structure; the current suite reports zero violations under its policy. & Warnings reflect incomplete source coverage; SHACL validation is not proof of factual truth. \\
 Provenance and time & PROV-O-style source links and reified evidence observations preserve snapshot context and optional temporal qualifiers. & The current Silver snapshot still lacks claim-level dates for many facts; an undated observation is not a current fact. \\
 Vocabulary reuse & Conservative links to Schema.org, FOAF, DBpedia, SKOS, PROV-O and external identifiers. & External ontologies are not fully imported and reasoned over; alignments must remain semantically narrow. \\
@@ -134,4 +134,6 @@ and authoritative historical classifications remains future work.
 \item An undated observation does not answer a date-valid question merely because it is in the latest export.
 \end{enumerate}
 Rule-engine execution, formal OWL profile membership, domain correctness and empirical
-coverage remain distinct claims. No formal OWL 2 RL/DL certification is asserted.
+coverage remain distinct claims. The formal OWL 2 RL gate is now asserted only for the
+committed release ontology, with its reproducible command and zero-violation evidence
+recorded in \term{data/reports/owl2rl-profile.txt}.

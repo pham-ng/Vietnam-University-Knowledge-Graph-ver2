@@ -43,7 +43,7 @@ Silver input & RDF output & Rule or caveat \\\midrule
 \term{key = Q3075696} & Subject \term{u:dai-hoc-bach-khoa-ha-noi} & Reuse the persistent registry; do not mint again on a label change. \\
 \term{kind = University} & \term{rdf:type vnedu:University} & Classification came from integration policy, not from Fuseki. \\
 \term{name\_vi} & \term{rdfs:label} and \term{skos:prefLabel}, tagged \term{@vi} & Keep language tags, not an untyped display string. \\
-\term{founding\_year = 1956} & \term{vnedu:foundingYear "1956"}\newline\term{\string^\string^xsd:gYear} & May refer to a predecessor's origin. \\
+\term{founding\_year = 1956} & \term{vnedu:foundingYear "1956"}\newline\term{\string^\string^xsd:integer} & May refer to a predecessor's origin; integer is used to remain inside OWL 2 RL. \\
 \term{province = Q1858} & \term{vnedu:locatedIn} the registered Hanoi URI & An object IRI, not a province-name literal. \\
 \term{ownership = public} & \term{vnedu:ownership vnedu:PublicOwnership} & Later classifies the subject as a public institution. \\
 \term{viwiki\_revid = 75604914} & \term{prov:wasDerivedFrom} a Wikipedia \term{oldid} URL & Revision-specific entity provenance; not per-triple attribution. \\

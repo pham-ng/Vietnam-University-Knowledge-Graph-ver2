@@ -149,8 +149,8 @@ def main() -> None:
             g.add((s, VNEDU.formerName, Literal(n, lang="vi")))
         for c in i["admission_codes"]:
             g.add((s, VNEDU.admissionCode, Literal(c)))
-        add(g, s, VNEDU.foundingYear, lit(str(i["founding_year"]) if i.get("founding_year") else None, XSD.gYear))
-        add(g, s, VNEDU.dissolutionYear, lit(str(i["dissolution_year"]) if i.get("dissolution_year") else None, XSD.gYear))
+        add(g, s, VNEDU.foundingYear, lit(str(i["founding_year"]) if i.get("founding_year") else None, XSD.integer))
+        add(g, s, VNEDU.dissolutionYear, lit(str(i["dissolution_year"]) if i.get("dissolution_year") else None, XSD.integer))
         if i.get("ownership"):
             g.add((s, VNEDU.ownership, VNEDU.PublicOwnership if i["ownership"] == "public" else VNEDU.PrivateOwnership))
         add(g, s, VNEDU.motto, lit(i["motto_vi"], lang="vi"))
@@ -167,7 +167,7 @@ def main() -> None:
         # Keep conflicting source dates without asserting two incompatible founding events.
         date_property = (VNEDU.reportedFoundingDate if date and i.get("founding_year")
                          and int(date[:4]) != i["founding_year"] else SCHEMA.foundingDate)
-        add(g, s, date_property, lit(date, XSD.date))
+        add(g, s, date_property, lit(f"{date}T00:00:00" if date else None, XSD.dateTime))
         add(g, s, SCHEMA.telephone, lit(i.get("telephone")))
         add(g, s, SCHEMA.email, lit(i.get("email")))
         add(g, s, VNEDU.campus, lit(i.get("campus")))
@@ -223,7 +223,7 @@ def main() -> None:
         add(g, s, FOAF.name, lit(p["name_vi"] or p["name_en"]))
         # Wikidata ghi ngày 01-01 khi chỉ biết năm -> không phát sinh ngày sinh giả
         if re.fullmatch(r"\d{4}-\d{2}-\d{2}", p.get("birth_date") or "") and not p["birth_date"].endswith("-01-01"):
-            g.add((s, VNEDU.birthDate, Literal(p["birth_date"], datatype=XSD.date)))
+            g.add((s, VNEDU.birthDate, Literal(f"{p['birth_date']}T00:00:00", datatype=XSD.dateTime)))
         # TÁI SỬ DỤNG URI có sẵn thay vì tạo mới: giá trị giới tính / nghề nghiệp là chính item Wikidata
         # (schema:gender, schema:hasOccupation) — ta không mô tả gì thêm về chúng ngoài nhãn để hiển thị.
         if p.get("gender"):

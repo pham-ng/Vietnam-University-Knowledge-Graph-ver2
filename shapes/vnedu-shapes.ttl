@@ -24,8 +24,8 @@ shapes:Institution a sh:NodeShape ;
         sh:qualifiedMinCount 1 ; sh:qualifiedMaxCount 1 ; sh:severity sh:Violation ;
         sh:message "Cơ sở phải có đúng một tên tiếng Việt."@vi ] ;
     sh:property [
-        sh:path vnedu:foundingYear ; sh:datatype xsd:gYear ; sh:maxCount 1 ;
-        sh:message "Năm thành lập phải là xsd:gYear và duy nhất."@vi ] ;
+        sh:path vnedu:foundingYear ; sh:datatype xsd:integer ; sh:maxCount 1 ;
+        sh:message "Năm thành lập phải là xsd:integer và duy nhất."@vi ] ;
     sh:property [
         sh:path vnedu:foundingYear ; sh:minCount 1 ; sh:severity sh:Warning ;
         sh:message "Thiếu năm thành lập."@vi ] ;
@@ -39,8 +39,8 @@ shapes:Institution a sh:NodeShape ;
         sh:path vnedu:website ; sh:nodeKind sh:IRI ; sh:pattern "^https?://" ;
         sh:message "Website phải là IRI http(s)."@vi ] ;
     sh:property [
-        sh:path schema:foundingDate ; sh:datatype xsd:date ; sh:maxCount 1 ;
-        sh:message "Ngày thành lập là một giá trị xsd:date."@vi ] ;
+        sh:path schema:foundingDate ; sh:datatype xsd:dateTime ; sh:maxCount 1 ;
+        sh:message "Ngày thành lập là xsd:dateTime với giờ 00:00:00 khi nguồn chỉ có ngày."@vi ] ;
     sh:property [
         sh:path schema:email ; sh:datatype xsd:string ; sh:pattern "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$" ;
         sh:message "Email không hợp lệ."@vi ] ;
@@ -116,8 +116,8 @@ shapes:FormerProvince a sh:NodeShape ;
 shapes:Person a sh:NodeShape ;
     sh:targetClass vnedu:Person ;
     sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:message "Người phải có tên."@vi ] ;
-    sh:property [ sh:path vnedu:birthDate ; sh:datatype xsd:date ; sh:maxCount 1 ;
-                  sh:message "Ngày sinh phải là xsd:date và duy nhất."@vi ] .
+    sh:property [ sh:path vnedu:birthDate ; sh:datatype xsd:dateTime ; sh:maxCount 1 ;
+                  sh:message "Ngày sinh phải là xsd:dateTime với giờ 00:00:00."@vi ] .
 
 shapes:Program a sh:NodeShape ;
     sh:targetClass vnedu:AcademicProgram ;
@@ -137,6 +137,6 @@ shapes:Observation a sh:NodeShape ;
     sh:property [ sh:path rdf:object ; sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:property [ sh:path vnedu:snapshotDigest ; sh:pattern "^[a-f0-9]{64}$" ; sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:property [ sh:path vnedu:temporalStatus ; sh:in ( "unknown" "qualified" ) ; sh:minCount 1 ; sh:maxCount 1 ] ;
-    sh:property [ sh:path vnedu:validFrom ; sh:datatype xsd:date ; sh:maxCount 1 ; sh:lessThanOrEquals vnedu:validThrough ] ;
-    sh:property [ sh:path vnedu:validThrough ; sh:datatype xsd:date ; sh:maxCount 1 ] ;
-    sh:property [ sh:path vnedu:referenceYear ; sh:datatype xsd:gYear ; sh:maxCount 1 ] .
+    sh:property [ sh:path vnedu:validFrom ; sh:datatype xsd:dateTime ; sh:maxCount 1 ; sh:lessThanOrEquals vnedu:validThrough ] ;
+    sh:property [ sh:path vnedu:validThrough ; sh:datatype xsd:dateTime ; sh:maxCount 1 ] ;
+    sh:property [ sh:path vnedu:referenceYear ; sh:datatype xsd:integer ; sh:maxCount 1 ] .

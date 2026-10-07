@@ -36,11 +36,12 @@ def observe(graph, subject, predicate, value, snapshot_digest, category=None,
     graph.add((node, VNEDU.temporalStatus, Literal(status)))
     for source in sources:
         graph.add((node, PROV.wasDerivedFrom, URIRef(source)))
-    for pred, val, dt in ((VNEDU.validFrom, valid_from, XSD.date),
-                          (VNEDU.validThrough, valid_through, XSD.date),
-                          (VNEDU.referenceYear, reference_year, XSD.gYear)):
+    for pred, val, dt in ((VNEDU.validFrom, valid_from, XSD.dateTime),
+                          (VNEDU.validThrough, valid_through, XSD.dateTime),
+                          (VNEDU.referenceYear, reference_year, XSD.integer)):
         if val is not None:
-            graph.add((node, pred, Literal(str(val), datatype=dt)))
+            lexical = f"{val}T00:00:00" if dt == XSD.dateTime and len(str(val)) == 10 else str(val)
+            graph.add((node, pred, Literal(lexical, datatype=dt)))
     if unit:
         graph.add((node, VNEDU.measurementUnit, Literal(unit)))
     return node

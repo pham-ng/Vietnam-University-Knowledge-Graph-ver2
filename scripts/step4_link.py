@@ -240,7 +240,7 @@ def build_void(data: Graph, links: Graph, counts) -> Graph:
     v.add((ds, DCTERMS.license, URIRef("https://creativecommons.org/licenses/by-sa/4.0/")))
     v.add((ds, DCTERMS.source, URIRef("https://www.wikidata.org/")))
     v.add((ds, DCTERMS.source, URIRef("https://vi.wikipedia.org/")))
-    v.add((ds, DCTERMS.modified, Literal(time.strftime("%Y-%m-%d"), datatype=XSD.date)))
+    v.add((ds, DCTERMS.modified, Literal(time.strftime("%Y-%m-%dT00:00:00"), datatype=XSD.dateTime)))
     v.add((ds, DCTERMS.language, URIRef("http://id.loc.gov/vocabulary/iso639-1/vi")))
     for kw in ("giáo dục đại học", "higher education", "Vietnam", "linked open data"):
         v.add((ds, DCAT.keyword, Literal(kw)))

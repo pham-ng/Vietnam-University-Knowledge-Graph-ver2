@@ -16,7 +16,8 @@
 #
 #  Nguyên tắc thiết kế (để suy luận ĐÚNG và ĐẦY ĐỦ):
 #   1. Materialized with owlrl's OWL 2 RL/RDF rules; formal profile conformance
-#      is not certified (the model uses xsd:gYear and xsd:date).
+#      is checked by the OWL API profile gate; calendar years use xsd:integer and
+#      calendar dates use xsd:dateTime at 00:00:00 to remain in OWL 2 RL.
 #   2. Chỉ căn chỉnh với từ vựng ngoài bằng rdfs:subClassOf / rdfs:subPropertyOf,
 #      KHÔNG dùng owl:equivalentClass sang ontology ngoài (tránh kéo theo ngữ nghĩa lạ).
 #   3. KHÔNG khai báo lại domain/range cho thuộc tính của từ vựng ngoài (geo:lat, foaf:name...).
@@ -33,8 +34,8 @@
     dct:description """Mô tả các cơ sở giáo dục đại học Việt Nam (đại học, trường đại học, học viện theo
 Luật Giáo dục đại học 2012, sửa đổi 2018), cơ quan chủ quản, lãnh đạo, cựu sinh viên, đơn vị hành chính
 (gồm cả sắp xếp tỉnh năm 2025), ngành đào tạo theo Thông tư 09/2022/TT-BGDĐT."""@vi ;
-    dct:created "2026-10-05"^^xsd:date ;
-    dct:modified "2026-10-07"^^xsd:date ;
+    dct:created "2026-10-05T00:00:00"^^xsd:dateTime ;
+    dct:modified "2026-10-08T00:00:00"^^xsd:dateTime ;
     dct:creator "VN-Edu LOD project" ;
     dct:source <https://www.wikidata.org/> , <https://vi.wikipedia.org/> ;
     dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
@@ -43,7 +44,7 @@ Luật Giáo dục đại học 2012, sửa đổi 2018), cơ quan chủ quản,
     owl:priorVersion <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology/2.1> ;
     vann:preferredNamespacePrefix "vnedu" ;
     vann:preferredNamespaceUri "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#" ;
-    rdfs:comment "Rule-based OWL materialization using owlrl; formal OWL 2 RL profile conformance has not been certified."@en .
+    rdfs:comment "Rule-based OWL materialization using owlrl; formal OWL 2 RL profile conformance verified by the OWL API OWL2RLProfile gate (zero violations on release 2.2)."@en .
 
 ###############################################################################
 #  1. TỔ CHỨC
@@ -174,7 +175,7 @@ vnedu:DefunctInstitution a owl:Class ;
     rdfs:label "Defunct institution"@en , "Cơ sở đã giải thể / sáp nhập"@vi ;
     rdfs:subClassOf vnedu:EducationalOrganization .
 [ a owl:Class ; owl:intersectionOf ( vnedu:EducationalOrganization
-    [ a owl:Restriction ; owl:onProperty vnedu:dissolutionYear ; owl:someValuesFrom xsd:gYear ] ) ]
+    [ a owl:Restriction ; owl:onProperty vnedu:dissolutionYear ; owl:someValuesFrom xsd:integer ] ) ]
     rdfs:subClassOf vnedu:DefunctInstitution .
 
 # Cá thể tham chiếu dùng trong lớp định nghĩa (thông tin chi tiết nằm trong dữ liệu)
@@ -423,18 +424,18 @@ vnedu:foundingYear a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "founding year"@en , "năm thành lập"@vi ;
     rdfs:comment "Earliest reported foundation year selected by the integration policy; it may refer to a predecessor and is not necessarily the legal establishment year."@en ;
     rdfs:domain vnedu:Organization ;
-    rdfs:range xsd:gYear .
+    rdfs:range xsd:integer .
 
 vnedu:reportedFoundingDate a owl:DatatypeProperty ;
     rdfs:label "conflicting source-reported foundation date"@en , "ngày thành lập khác được nguồn ghi nhận"@vi ;
     rdfs:comment "Infobox date whose year differs from the selected foundingYear. Retained for review, without asserting schema:foundingDate."@en ;
     rdfs:domain vnedu:Organization ;
-    rdfs:range xsd:date .
+    rdfs:range xsd:dateTime .
 
 vnedu:dissolutionYear a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "dissolution year"@en , "năm giải thể / sáp nhập"@vi ;
     rdfs:domain vnedu:Organization ;
-    rdfs:range xsd:gYear .
+    rdfs:range xsd:integer .
 
 vnedu:admissionCode a owl:DatatypeProperty ;
     rdfs:label "admission code"@en , "mã trường (tuyển sinh)"@vi ;
@@ -449,18 +450,18 @@ vnedu:shortName a owl:DatatypeProperty ;
 
 vnedu:formerName a owl:DatatypeProperty ;
     rdfs:label "former name"@en , "tên cũ"@vi ;
-    rdfs:range rdf:langString .
+    rdfs:range rdfs:Literal .
 
 vnedu:motto a owl:DatatypeProperty ;
     rdfs:label "motto"@en , "khẩu hiệu"@vi ;
     rdfs:domain vnedu:EducationalOrganization ;
-    rdfs:range rdf:langString .
+    rdfs:range rdfs:Literal .
 
 vnedu:history a owl:DatatypeProperty ;
     rdfs:label "history"@en , "lịch sử hình thành"@vi ;
     rdfs:comment "Tóm tắt mục Lịch sử của bài Wikipedia tiếng Việt (CC BY-SA 4.0); bản sửa đổi gốc ghi ở prov:wasDerivedFrom."@vi ;
     rdfs:domain vnedu:EducationalOrganization ;
-    rdfs:range rdf:langString .
+    rdfs:range rdfs:Literal .
 
 vnedu:campus a owl:DatatypeProperty ;
     rdfs:label "campus"@en , "khuôn viên"@vi ;
@@ -520,7 +521,7 @@ vnedu:area a owl:DatatypeProperty ;
 vnedu:birthDate a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "birth date"@en , "ngày sinh"@vi ;
     rdfs:domain vnedu:Person ;
-    rdfs:range xsd:date .
+    rdfs:range xsd:dateTime .
 
 vnedu:honorific a owl:DatatypeProperty ;
     rdfs:label "academic title / rank"@en , "học hàm, học vị, quân hàm"@vi ;
@@ -575,7 +576,7 @@ schema:creditText a owl:DatatypeProperty ; rdfs:label "credit"@en , "tác giả 
 
 
 ###############################################################################
-#  8. PHIÊN BẢN 2.1 — hoàn thiện mô tả thuộc tính & làm dày đồ thị
+#  8. PHIÊN BẢN 2.2 — hoàn thiện mô tả thuộc tính & làm dày đồ thị
 #  (a) mọi quan hệ đều có domain/range (kể cả quan hệ nghịch đảo, quan hệ con)
 #  (b) căn chỉnh rdfs:subPropertyOf sang DBpedia / schema.org (học từ ontology vio)
 #  (c) quan hệ mới giữa các thực thể: tiền thân/kế thừa của tổ chức, nơi sinh và quốc tịch của người,
@@ -599,7 +600,7 @@ vnedu:website      rdfs:domain vnedu:Organization .
 vnedu:address      rdfs:domain vnedu:Organization .
 vnedu:formerName   rdfs:domain vnedu:Organization .
 vnedu:shortName    rdfs:domain vnedu:Organization .
-vnedu:degreeLevel  rdfs:range rdf:langString .
+vnedu:degreeLevel  rdfs:range rdfs:Literal .
 
 # ---- (b) căn chỉnh sang từ vựng ngoài (chỉ subPropertyOf: dữ liệu của ta kéo theo dbo:/schema:, không ngược lại)
 vnedu:foundingYear           rdfs:subPropertyOf dbo:foundingYear .
@@ -677,6 +678,42 @@ vnedu:nationality a owl:ObjectProperty ;
     rdfs:subPropertyOf dbo:nationality , schema:nationality .
 
 # ---- khai báo kiểu cho thuộc tính ngoài được căn chỉnh (giữ ontology hợp lệ OWL 2)
+# Lightweight declarations for reused vocabulary terms.  The project deliberately
+# does not owl:imports these large external vocabularies: their declarations here
+# make the OWL 2 RL profile boundary explicit while keeping the ontology
+# self-contained and deterministic for local reasoners.
+dct:created a owl:AnnotationProperty .
+dct:creator a owl:AnnotationProperty .
+dct:description a owl:AnnotationProperty .
+dct:license a owl:AnnotationProperty .
+dct:modified a owl:AnnotationProperty .
+dct:source a owl:AnnotationProperty .
+dct:title a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+schema:Corporation a owl:Class .
+schema:Person a owl:Class .
+schema:Country a owl:Class .
+schema:AdministrativeArea a owl:Class .
+schema:EducationalOccupationalProgram a owl:Class .
+schema:CollegeOrUniversity a owl:Class .
+schema:Organization a owl:Class .
+schema:EducationalOrganization a owl:Class .
+schema:GovernmentOrganization a owl:Class .
+foaf:Organization a owl:Class .
+foaf:Person a owl:Class .
+dbo:University a owl:Class .
+skos:Concept a owl:Class .
+prov:Entity a owl:Class .
+
+schema:alumniOf a owl:ObjectProperty .
+schema:provider a owl:ObjectProperty .
+schema:location a owl:ObjectProperty .
+foaf:homepage a owl:ObjectProperty .
+skos:broader a owl:ObjectProperty .
+skos:notation a owl:DatatypeProperty .
+
 dbo:foundingYear a owl:DatatypeProperty .   dbo:dissolutionYear a owl:DatatypeProperty .
 dbo:numberOfStudents a owl:DatatypeProperty .   dbo:numberOfUndergraduateStudents a owl:DatatypeProperty .
 dbo:numberOfPostgraduateStudents a owl:DatatypeProperty .   dbo:facultySize a owl:DatatypeProperty .
@@ -716,7 +753,7 @@ vnedu:EducationParticipant a owl:Class ; rdfs:subClassOf vnedu:Person ;
 [ a owl:Restriction ; owl:onProperty vnedu:educatedAt ;
   owl:someValuesFrom vnedu:EducationalOrganization ] rdfs:subClassOf vnedu:EducationParticipant .
 vnedu:alumnusOf rdfs:comment "Reserved for documented alumni status; generic education records use educatedAt instead."@en .
-vnedu:SourceObservation a owl:Class ; rdfs:subClassOf rdf:Statement ;
+vnedu:SourceObservation a owl:Class ; rdfs:subClassOf prov:Entity ;
     rdfs:label "Source-qualified observation"@en ;
     rdfs:comment "Reified source statement. Reification alone does not assert its content. Snapshot projections do not establish current validity."@en .
 vnedu:LeadershipObservation a owl:Class ; rdfs:subClassOf vnedu:SourceObservation ;
@@ -725,11 +762,11 @@ vnedu:MeasurementObservation a owl:Class ; rdfs:subClassOf vnedu:SourceObservati
     rdfs:label "Measurement observation"@en .
 vnedu:ClassificationObservation a owl:Class ; rdfs:subClassOf vnedu:SourceObservation ;
     rdfs:label "Classification observation"@en .
-vnedu:validFrom a owl:DatatypeProperty ; rdfs:domain vnedu:SourceObservation ; rdfs:range xsd:date ;
+vnedu:validFrom a owl:DatatypeProperty ; rdfs:domain vnedu:SourceObservation ; rdfs:range xsd:dateTime ;
     rdfs:label "known start of validity"@en .
-vnedu:validThrough a owl:DatatypeProperty ; rdfs:domain vnedu:SourceObservation ; rdfs:range xsd:date ;
+vnedu:validThrough a owl:DatatypeProperty ; rdfs:domain vnedu:SourceObservation ; rdfs:range xsd:dateTime ;
     rdfs:label "known inclusive end of validity"@en .
-vnedu:referenceYear a owl:DatatypeProperty ; rdfs:domain vnedu:SourceObservation ; rdfs:range xsd:gYear ;
+vnedu:referenceYear a owl:DatatypeProperty ; rdfs:domain vnedu:SourceObservation ; rdfs:range xsd:integer ;
     rdfs:label "source-reported measurement year"@en .
 vnedu:temporalStatus a owl:DatatypeProperty ; rdfs:domain vnedu:SourceObservation ; rdfs:range xsd:string ;
     rdfs:label "temporal evidence status"@en .

@@ -92,9 +92,9 @@ def test_trains_major_chain(onto):
 
 
 def test_defunct_from_dissolution_year(onto):
-    """EduOrg ⊓ ∃dissolutionYear.xsd:gYear ⊑ DefunctInstitution (VD: Viện Đại học Vạn Hạnh 1964–1975)."""
+    """EduOrg ⊓ ∃dissolutionYear.xsd:integer ⊑ DefunctInstitution (VD: Viện Đại học Vạn Hạnh 1964–1975)."""
     c = closure_of(onto, [(R.vh, RDF.type, V.UniversitySchool),
-                          (R.vh, V.dissolutionYear, Literal("1975", datatype=XSD.gYear))])
+                          (R.vh, V.dissolutionYear, Literal("1975", datatype=XSD.integer))])
     assert (R.vh, RDF.type, V.DefunctInstitution) in c
     c2 = closure_of(onto, [(R.u, RDF.type, V.UniversitySchool)])
     assert (R.u, RDF.type, V.DefunctInstitution) not in c2
@@ -124,8 +124,8 @@ def test_detects_person_used_as_organization(onto):
 
 def test_detects_two_founding_years(onto):
     c = closure_of(onto, [(R.u, RDF.type, V.UniversitySchool),
-                          (R.u, V.foundingYear, Literal("1956", datatype=XSD.gYear)),
-                          (R.u, V.foundingYear, Literal("2022", datatype=XSD.gYear))])
+                          (R.u, V.foundingYear, Literal("1956", datatype=XSD.integer)),
+                          (R.u, V.foundingYear, Literal("2022", datatype=XSD.integer))])
     assert any(p[0] == "FunctionalProperty (dữ liệu)" for p in consistency(c))
 
 
