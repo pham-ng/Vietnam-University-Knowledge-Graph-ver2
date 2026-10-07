@@ -7,17 +7,9 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix person: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/person/> .
 @prefix province: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/> .
-@prefix region: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/region/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
-@prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
-
-vnedu:MinistryOfNationalDefence owl:sameAs dbr:Ministry_of_Defence_\(Vietnam\),
-        wd:Q6866771 .
-
-vnedu:MinistryOfPublicSecurity owl:sameAs dbr:Ministry_of_Public_Security_\(Vietnam\),
-        wd:Q6867472 .
 
 country:viet-nam owl:sameAs dbr:Vietnam,
         wd:Q881 .
@@ -63,18 +55,8 @@ field:772 skos:closeMatch dbr:Health,
 major:7140201 skos:closeMatch dbr:Early_childhood_education,
         wd:Q1472221 .
 
-major:7140202 skos:closeMatch wd:Q975085 .
-
 major:7140209 skos:closeMatch dbr:Mathematics_education,
         wd:Q853077 .
-
-major:7220201 skos:closeMatch wd:Q27968 .
-
-major:7310101 skos:closeMatch dbr:Economics,
-        wd:Q8134 .
-
-major:7310401 skos:closeMatch dbr:Psychology,
-        wd:Q9418 .
 
 major:7320101 skos:closeMatch wd:Q11030 .
 
@@ -87,9 +69,6 @@ major:7340115 skos:closeMatch dbr:Marketing,
 major:7340201 skos:closeMatch dbr:Finance,
         wd:Q43015 .
 
-major:7340301 skos:closeMatch dbr:Accounting,
-        wd:Q4116214 .
-
 major:7380101 skos:closeMatch wd:Q7748 .
 
 major:7420201 skos:closeMatch dbr:Biotechnology,
@@ -98,32 +77,10 @@ major:7420201 skos:closeMatch dbr:Biotechnology,
 major:7440102 skos:closeMatch dbr:Physics,
         wd:Q413 .
 
-major:7440112 skos:closeMatch dbr:Chemistry,
-        wd:Q2329 .
-
-major:7460101 skos:closeMatch wd:Q395 .
-
-major:7460108 skos:closeMatch dbr:Data_science,
-        wd:Q2374463 .
-
-major:7480101 skos:closeMatch wd:Q21198 .
-
-major:7480102 skos:closeMatch dbr:Computer_network,
-        wd:Q1301371 .
-
-major:7480103 skos:closeMatch dbr:Software_engineering,
-        wd:Q80993 .
-
 major:7480104 skos:closeMatch wd:Q64812807 .
-
-major:7480106 skos:closeMatch dbr:Computer_engineering,
-        wd:Q428691 .
 
 major:7480201 skos:closeMatch dbr:Information_technology,
         wd:Q11661 .
-
-major:7480202 skos:closeMatch dbr:Information_security,
-        wd:Q189900 .
 
 major:7510605 skos:closeMatch wd:Q492886 .
 
@@ -133,24 +90,16 @@ major:7520103 skos:closeMatch dbr:Mechanical_engineering,
 major:7520114 skos:closeMatch dbr:Mechatronics,
         wd:Q180165 .
 
-major:7520201 skos:closeMatch dbr:Electrical_engineering,
-        wd:Q43035 .
-
 major:7520207 skos:closeMatch dbr:Telecommunications_engineering,
         wd:Q1061219 .
 
 major:7520216 skos:closeMatch dbr:Control_engineering,
         wd:Q4917288 .
 
-major:7580201 skos:closeMatch wd:Q77590 .
-
 major:7620110 skos:closeMatch wd:Q173113 .
 
 major:7720101 skos:closeMatch dbr:Medicine,
         wd:Q11190 .
-
-major:7720201 skos:closeMatch dbr:Pharmacy,
-        wd:Q614304 .
 
 major:7720301 skos:closeMatch dbr:Nursing,
         wd:Q121176 .
@@ -164,86 +113,16 @@ major:7810103 skos:closeMatch dbr:Tourism,
 organization:ban-chap-hanh-trung-uong-dang-cong-san-viet-nam owl:sameAs dbr:Central_Committee_of_the_Communist_Party_of_Vietnam,
         wd:Q5060621 .
 
-organization:binh-chung-phao-binh owl:sameAs wd:Q10740137 .
-
-organization:bo-cong-thuong owl:sameAs dbr:Ministry_of_Industry_and_Trade_\(Vietnam\),
-        wd:Q6867197 .
-
-organization:bo-dan-toc-va-ton-giao owl:sameAs dbr:Committee_for_Ethnic_Minority_Affairs,
-        wd:Q10843005 .
-
 organization:bo-giao-duc-va-dao-tao owl:sameAs wd:Q2269756 .
-
-organization:bo-ke-hoach-va-dau-tu owl:sameAs dbr:Ministry_of_Planning_and_Investment_\(Vietnam\),
-        wd:Q6867449 .
-
-organization:bo-khoa-hoc-va-cong-nghe owl:sameAs dbr:Ministry_of_Science_and_Technology_\(Vietnam\),
-        wd:Q10743658 .
-
-organization:bo-ngoai-giao owl:sameAs dbr:Ministry_of_Foreign_Affairs_\(Vietnam\),
-        wd:Q6867039 .
-
-organization:bo-noi-vu owl:sameAs dbr:Ministry_of_Home_Affairs_\(Vietnam\),
-        wd:Q10743669 .
-
-organization:bo-nong-nghiep-va-moi-truong owl:sameAs wd:Q135267696 .
 
 organization:bo-tai-chinh owl:sameAs dbr:Ministry_of_Finance_\(Vietnam\),
         wd:Q6866962 .
 
-organization:bo-tai-nguyen-va-moi-truong owl:sameAs dbr:Ministry_of_Natural_Resources_and_Environment_\(Vietnam\),
-        wd:Q10743678 .
-
-organization:bo-tu-phap owl:sameAs dbr:Ministry_of_Justice_\(Vietnam\),
-        wd:Q10743682 .
-
-organization:bo-van-hoa-the-thao-va-du-lich owl:sameAs <http://dbpedia.org/resource/Ministry_of_Culture,_Sports_and_Tourism_(Vietnam)>,
-        wd:Q10743686 .
-
-organization:bo-xay-dung owl:sameAs dbr:Ministry_of_Construction_\(Vietnam\),
-        wd:Q10743687 .
-
-organization:bo-y-te owl:sameAs dbr:Ministry_of_Health_\(Vietnam\),
-        wd:Q6867111 .
-
-organization:doan-thanh-nien-cong-san-ho-chi-minh owl:sameAs dbr:Ho_Chi_Minh_Communist_Youth_Union,
-        wd:Q5874016 .
-
-organization:giao-hoi-phat-giao-viet-nam owl:sameAs dbr:Vietnam_Buddhist_Sangha,
-        wd:Q4098002 .
-
-organization:ngan-hang-nha-nuoc-viet-nam owl:sameAs dbr:State_Bank_of_Vietnam,
-        wd:Q2234553 .
-
-organization:quan-chung-hai-quan owl:sameAs <http://dbpedia.org/resource/Vietnam_People's_Navy>,
-        wd:Q1324290 .
-
 organization:quan-doi-nhan-dan-viet-nam owl:sameAs <http://dbpedia.org/resource/People's_Army_of_Vietnam>,
         wd:Q3936506 .
 
-organization:tap-doan-vingroup owl:sameAs dbr:Vingroup,
-        wd:Q10831597 .
-
-organization:thanh-uy-thanh-pho-ho-chi-minh owl:sameAs wd:Q10825624 .
-
-organization:toa-an-nhan-dan-toi-cao owl:sameAs <http://dbpedia.org/resource/Supreme_People's_Court_of_Vietnam>,
-        wd:Q4120183 .
-
-organization:tong-cuc-tinh-bao-bo-quoc-phong owl:sameAs dbr:General_Department_of_Defence_Intelligence,
-        wd:Q1515565 .
-
-organization:tong-lien-doan-lao-dong-viet-nam owl:sameAs dbr:Vietnam_General_Confederation_of_Labour,
-        wd:Q602682 .
-
-organization:uy-ban-nhan-dan-thanh-pho-ha-noi owl:sameAs wd:Q10843014 .
-
-organization:uy-ban-nhan-dan-thanh-pho-ho-chi-minh owl:sameAs wd:Q10843017 .
-
 organization:vien-han-lam-khoa-hoc-va-cong-nghe-viet-nam owl:sameAs dbr:Vietnam_Academy_of_Science_and_Technology,
         wd:Q7928484 .
-
-organization:vien-han-lam-khoa-hoc-xa-hoi-viet-nam owl:sameAs dbr:Vietnam_Academy_of_Social_Sciences,
-        wd:Q1960359 .
 
 person:aaron-toronto owl:sameAs wd:Q113970378 ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Aaron_Toronto> .
@@ -968,8 +847,7 @@ person:hai-viet-nguyen owl:sameAs wd:Q102655577 .
 
 person:hai-viet-nguyen-2 owl:sameAs wd:Q93179456 .
 
-person:hanbin owl:sameAs dbr:Ngô_Ngọc_Hưng,
-        wd:Q104434346 ;
+person:hanbin owl:sameAs wd:Q104434346 ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Hanbin_%28singer%29>,
         <https://vi.wikipedia.org/wiki/Hanbin_%28ca_s%C4%A9%29> .
 
@@ -1430,8 +1308,7 @@ person:le-binh owl:sameAs wd:Q130639776 ;
 
 person:le-chung-tran owl:sameAs wd:Q60975078 .
 
-person:le-cong-dinh owl:sameAs dbr:Le_Cong_Dinh,
-        wd:Q10787599 ;
+person:le-cong-dinh owl:sameAs wd:Q10787599 ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/L%C3%AA_C%C3%B4ng_%C4%90%E1%BB%8Bnh>,
         <https://vi.wikipedia.org/wiki/L%C3%AA_C%C3%B4ng_%C4%90%E1%BB%8Bnh> .
 
@@ -3793,8 +3670,7 @@ person:vo-manh-son owl:sameAs wd:Q117000832 ;
 
 person:vo-minh-pho owl:sameAs wd:Q102402574 .
 
-person:vo-nguyen-giap owl:sameAs dbr:Vo_Nguyen_Giap,
-        wd:Q179910 ;
+person:vo-nguyen-giap owl:sameAs wd:Q179910 ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/V%C3%B5_Nguy%C3%AAn_Gi%C3%A1p>,
         <https://vi.wikipedia.org/wiki/V%C3%B5_Nguy%C3%AAn_Gi%C3%A1p> .
 
@@ -3986,14 +3862,12 @@ province:bac-kan owl:sameAs dbr:Bắc_Kạn_province,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/B%E1%BA%AFc_K%E1%BA%A1n_province>,
         <https://vi.wikipedia.org/wiki/B%E1%BA%AFc_K%E1%BA%A1n_%28t%E1%BB%89nh%29> .
 
-province:bac-lieu owl:sameAs dbr:Bạc_Liêu_province,
-        wd:Q36658,
+province:bac-lieu owl:sameAs wd:Q36658,
         <https://sws.geonames.org/1905675/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/B%E1%BA%A1c_Li%C3%AAu_province>,
         <https://vi.wikipedia.org/wiki/B%E1%BA%A1c_Li%C3%AAu_%28t%E1%BB%89nh%29> .
 
-province:bac-ninh owl:sameAs dbr:Bắc_Ninh_province,
-        wd:Q33408,
+province:bac-ninh owl:sameAs wd:Q33408,
         <https://sws.geonames.org/1905412/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/B%E1%BA%AFc_Ninh>,
         <https://vi.wikipedia.org/wiki/B%E1%BA%AFc_Ninh> .
@@ -4028,14 +3902,12 @@ province:binh-thuan owl:sameAs dbr:Bình_Thuận_province,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/B%C3%ACnh_Thu%E1%BA%ADn_province>,
         <https://vi.wikipedia.org/wiki/B%C3%ACnh_Thu%E1%BA%ADn_%28t%E1%BB%89nh%29> .
 
-province:ca-mau owl:sameAs dbr:Cà_Mau_province,
-        wd:Q33354,
+province:ca-mau owl:sameAs wd:Q33354,
         <https://sws.geonames.org/1905678/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/C%C3%A0_Mau_province>,
         <https://vi.wikipedia.org/wiki/C%C3%A0_Mau> .
 
-province:can-tho owl:sameAs dbr:Cần_Thơ,
-        wd:Q216075,
+province:can-tho owl:sameAs wd:Q216075,
         <https://sws.geonames.org/1581188/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/C%E1%BA%A7n_Th%C6%A1>,
         <https://vi.wikipedia.org/wiki/C%E1%BA%A7n_Th%C6%A1> .
@@ -4046,8 +3918,7 @@ province:cao-bang owl:sameAs dbr:Cao_Bằng_province,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Cao_B%E1%BA%B1ng_province>,
         <https://vi.wikipedia.org/wiki/Cao_B%E1%BA%B1ng> .
 
-province:da-nang owl:sameAs dbr:Da_Nang,
-        wd:Q25282,
+province:da-nang owl:sameAs wd:Q25282,
         <https://sws.geonames.org/1905468/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Da_Nang>,
         <https://vi.wikipedia.org/wiki/%C4%90%C3%A0_N%E1%BA%B5ng> .
@@ -4058,20 +3929,17 @@ province:dak-lak owl:sameAs dbr:Đắk_Lắk_province,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/%C4%90%E1%BA%AFk_L%E1%BA%AFk_province>,
         <https://vi.wikipedia.org/wiki/%C4%90%E1%BA%AFk_L%E1%BA%AFk> .
 
-province:dak-nong owl:sameAs dbr:Đăk_Nông_province,
-        wd:Q36723,
+province:dak-nong owl:sameAs wd:Q36723,
         <https://sws.geonames.org/1904987/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/%C4%90%E1%BA%AFk_N%C3%B4ng_province>,
         <https://vi.wikipedia.org/wiki/%C4%90%E1%BA%AFk_N%C3%B4ng_%28t%E1%BB%89nh%29> .
 
-province:dien-bien owl:sameAs dbr:Điện_Biên_province,
-        wd:Q36955,
+province:dien-bien owl:sameAs wd:Q36955,
         <https://sws.geonames.org/1905099/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/%C4%90i%E1%BB%87n_Bi%C3%AAn_province>,
         <https://vi.wikipedia.org/wiki/%C4%90i%E1%BB%87n_Bi%C3%AAn> .
 
-province:dong-nai owl:sameAs dbr:Đồng_Nai_province,
-        wd:Q33271,
+province:dong-nai owl:sameAs wd:Q33271,
         <https://sws.geonames.org/1582720/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/%C4%90%E1%BB%93ng_Nai>,
         <https://vi.wikipedia.org/wiki/%C4%90%E1%BB%93ng_Nai> .
@@ -4087,8 +3955,7 @@ province:gia-lai owl:sameAs wd:Q36662,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Gia_Lai_province>,
         <https://vi.wikipedia.org/wiki/Gia_Lai> .
 
-province:ha-giang owl:sameAs dbr:Hà_Giang_province,
-        wd:Q36685,
+province:ha-giang owl:sameAs wd:Q36685,
         <https://sws.geonames.org/1581030/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/H%C3%A0_Giang_province>,
         <https://vi.wikipedia.org/wiki/H%C3%A0_Giang> .
@@ -4117,8 +3984,7 @@ province:hai-duong owl:sameAs dbr:Hải_Dương_province,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/H%E1%BA%A3i_D%C6%B0%C6%A1ng_province>,
         <https://vi.wikipedia.org/wiki/H%E1%BA%A3i_D%C6%B0%C6%A1ng_%28t%E1%BB%89nh%29> .
 
-province:hai-phong owl:sameAs dbr:Haiphong,
-        wd:Q72818,
+province:hai-phong owl:sameAs wd:Q72818,
         <https://sws.geonames.org/1581297/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Haiphong>,
         <https://vi.wikipedia.org/wiki/H%E1%BA%A3i_Ph%C3%B2ng> .
@@ -4135,8 +4001,7 @@ province:hoa-binh owl:sameAs dbr:Hòa_Bình_province,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/H%C3%B2a_B%C3%ACnh_province>,
         <https://vi.wikipedia.org/wiki/H%C3%B2a_B%C3%ACnh_%28t%E1%BB%89nh%29> .
 
-province:hue owl:sameAs dbr:Thừa_Thiên_Huế_province,
-        wd:Q36399,
+province:hue owl:sameAs wd:Q36399,
         <https://sws.geonames.org/1565033/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Hu%E1%BA%BF>,
         <https://vi.wikipedia.org/wiki/Hu%E1%BA%BF> .
@@ -4213,8 +4078,7 @@ province:ninh-binh owl:sameAs dbr:Ninh_Bình_province,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ninh_B%C3%ACnh_province>,
         <https://vi.wikipedia.org/wiki/Ninh_B%C3%ACnh> .
 
-province:ninh-thuan owl:sameAs dbr:Ninh_Thuận_Province,
-        wd:Q36903,
+province:ninh-thuan owl:sameAs wd:Q36903,
         <https://sws.geonames.org/1559971/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ninh_Thu%E1%BA%ADn_province>,
         <https://vi.wikipedia.org/wiki/Ninh_Thu%E1%BA%ADn> .
@@ -4225,8 +4089,7 @@ province:phu-tho owl:sameAs dbr:Phú_Thọ_province,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ph%C3%BA_Th%E1%BB%8D_province>,
         <https://vi.wikipedia.org/wiki/Ph%C3%BA_Th%E1%BB%8D> .
 
-province:phu-yen owl:sameAs dbr:Phú_Yên_province,
-        wd:Q36725,
+province:phu-yen owl:sameAs wd:Q36725,
         <https://sws.geonames.org/1569805/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ph%C3%BA_Y%C3%AAn_province>,
         <https://vi.wikipedia.org/wiki/Ph%C3%BA_Y%C3%AAn_%28t%E1%BB%89nh%29> .
@@ -4249,8 +4112,7 @@ province:quang-ngai owl:sameAs dbr:Quảng_Ngãi_province,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Qu%E1%BA%A3ng_Ng%C3%A3i_province>,
         <https://vi.wikipedia.org/wiki/Qu%E1%BA%A3ng_Ng%C3%A3i> .
 
-province:quang-ninh owl:sameAs dbr:Quảng_Ninh_province,
-        wd:Q33396,
+province:quang-ninh owl:sameAs wd:Q33396,
         <https://sws.geonames.org/1568758/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Qu%E1%BA%A3ng_Ninh>,
         <https://vi.wikipedia.org/wiki/Qu%E1%BA%A3ng_Ninh> .
@@ -4296,8 +4158,7 @@ province:thanh-hoa owl:sameAs dbr:Thanh_Hóa_province,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Thanh_H%C3%B3a_province>,
         <https://vi.wikipedia.org/wiki/Thanh_H%C3%B3a> .
 
-province:thanh-pho-ho-chi-minh owl:sameAs dbr:Ho_Chi_Minh_City,
-        wd:Q1854,
+province:thanh-pho-ho-chi-minh owl:sameAs wd:Q1854,
         <https://sws.geonames.org/1566083/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ho_Chi_Minh_City>,
         <https://vi.wikipedia.org/wiki/Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> .
@@ -4308,8 +4169,7 @@ province:tien-giang owl:sameAs dbr:Tiền_Giang_province,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ti%E1%BB%81n_Giang_province>,
         <https://vi.wikipedia.org/wiki/Ti%E1%BB%81n_Giang> .
 
-province:tra-vinh owl:sameAs dbr:Trà_Vinh_province,
-        wd:Q36615,
+province:tra-vinh owl:sameAs wd:Q36615,
         <https://sws.geonames.org/1559975/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Tr%C3%A0_Vinh_province>,
         <https://vi.wikipedia.org/wiki/Tr%C3%A0_Vinh_%28t%E1%BB%89nh%29> .
@@ -4337,14 +4197,6 @@ province:yen-bai owl:sameAs dbr:Yên_Bái_province,
         <https://sws.geonames.org/1559978/> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Y%C3%AAn_B%C3%A1i_province>,
         <https://vi.wikipedia.org/wiki/Y%C3%AAn_B%C3%A1i_%28t%E1%BB%89nh%29> .
-
-region:bac-bo owl:sameAs dbr:Northern_Vietnam,
-        wd:Q2428694 .
-
-region:nam-bo owl:sameAs wd:Q2289221 .
-
-region:trung-bo owl:sameAs dbr:Central_Vietnam,
-        wd:Q1863140 .
 
 university:dai-chung-vien-sao-bien owl:sameAs wd:Q10841198 .
 
@@ -4501,8 +4353,7 @@ university:hoc-vien-hang-khong-viet-nam owl:sameAs dbr:Vietnam_Aviation_Academy,
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Vietnam_Aviation_Academy>,
         <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0ng_kh%C3%B4ng_Vi%E1%BB%87t_Nam> .
 
-university:hoc-vien-hanh-chinh-va-quan-tri-cong owl:sameAs dbr:National_Academy_of_Public_Administration_\(Vietnam\),
-        wd:Q10771885,
+university:hoc-vien-hanh-chinh-va-quan-tri-cong owl:sameAs wd:Q10771885,
         <https://ror.org/02dg2kf02> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Academy_of_Public_Administration_and_Governance>,
         <https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_vi%E1%BB%87n_H%C3%A0nh_ch%C3%ADnh_v%C3%A0_Qu%E1%BA%A3n_tr%E1%BB%8B_c%C3%B4ng> .
@@ -4678,8 +4529,7 @@ university:truong-dai-hoc-bac-lieu owl:sameAs wd:Q10829021,
         <https://ror.org/0447bxp64> ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_B%E1%BA%A1c_Li%C3%AAu> .
 
-university:truong-dai-hoc-bach-khoa-dai-hoc-da-nang owl:sameAs dbr:Da_Nang_University_of_Technology,
-        wd:Q5207276,
+university:truong-dai-hoc-bach-khoa-dai-hoc-da-nang owl:sameAs wd:Q5207276,
         <https://ror.org/001ydh096> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Da_Nang_University_of_Science_and_Technology>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_B%C3%A1ch_khoa%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng> .
@@ -4697,8 +4547,7 @@ university:truong-dai-hoc-cong-doan owl:sameAs wd:Q16480704,
         <https://ror.org/05g81h903> ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_%C4%91o%C3%A0n> .
 
-university:truong-dai-hoc-cong-nghe-dai-hoc-quoc-gia-ha-noi owl:sameAs dbr:Hanoi_University_of_Engineering_and_Technology,
-        wd:Q10829028,
+university:truong-dai-hoc-cong-nghe-dai-hoc-quoc-gia-ha-noi owl:sameAs wd:Q10829028,
         <https://ror.org/019sx5d52> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/VNU_University_of_Engineering_and_Technology>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i> .
@@ -4744,8 +4593,7 @@ university:truong-dai-hoc-cong-nghe-thanh-pho-ho-chi-minh owl:sameAs wd:Q1082902
         <https://ror.org/05xpj2n48> ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> .
 
-university:truong-dai-hoc-cong-nghe-thong-tin-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh owl:sameAs dbr:Ho_Chi_Minh_City_University_of_Information_Technology,
-        wd:Q5873994,
+university:truong-dai-hoc-cong-nghe-thong-tin-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh owl:sameAs wd:Q5873994,
         <https://ror.org/05kdc4973> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/University_of_Information_Technology>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%B4ng_tin%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> .
@@ -4816,8 +4664,7 @@ university:truong-dai-hoc-dong-do owl:sameAs wd:Q10829181,
         <https://ror.org/00450b889> ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%B4ng_%C4%90%C3%B4> .
 
-university:truong-dai-hoc-dong-nai owl:sameAs dbr:Dong_Nai_University,
-        wd:Q24884974,
+university:truong-dai-hoc-dong-nai owl:sameAs wd:Q24884974,
         <https://ror.org/00c772q29> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Dong_Nai_University>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%E1%BB%93ng_Nai> .
@@ -4971,8 +4818,7 @@ university:truong-dai-hoc-kien-truc-ha-noi owl:sameAs dbr:Hanoi_Architectural_Un
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Hanoi_Architectural_University>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ki%E1%BA%BFn_tr%C3%BAc_H%C3%A0_N%E1%BB%99i> .
 
-university:truong-dai-hoc-kien-truc-thanh-pho-ho-chi-minh owl:sameAs dbr:Ho_Chi_Minh_City_University_of_Architecture,
-        wd:Q3037890,
+university:truong-dai-hoc-kien-truc-thanh-pho-ho-chi-minh owl:sameAs wd:Q3037890,
         <https://ror.org/02tyvzz27> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/University_of_Architecture_Ho_Chi_Minh_City>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ki%E1%BA%BFn_tr%C3%BAc_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> .
@@ -4993,8 +4839,7 @@ university:truong-dai-hoc-kinh-te-dai-hoc-da-nang owl:sameAs dbr:Da_Nang_Univers
 university:truong-dai-hoc-kinh-te-dai-hoc-hue owl:sameAs wd:Q61128606 ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF> .
 
-university:truong-dai-hoc-kinh-te-dai-hoc-quoc-gia-ha-noi owl:sameAs <http://dbpedia.org/resource/College_of_Economics,_Vietnam_National_University>,
-        wd:Q5146680,
+university:truong-dai-hoc-kinh-te-dai-hoc-quoc-gia-ha-noi owl:sameAs wd:Q5146680,
         <https://ror.org/00wdqh079> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/VNU_University_of_Economics_and_Business>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i> .
@@ -5101,8 +4946,7 @@ university:truong-dai-hoc-my-thuat-viet-nam owl:sameAs dbr:Vietnam_University_of
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Vietnam_University_of_Fine_Arts>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%B9_thu%E1%BA%ADt_Vi%E1%BB%87t_Nam> .
 
-university:truong-dai-hoc-ngan-hang-thanh-pho-ho-chi-minh owl:sameAs dbr:Banking_University_of_Ho_Chi_Minh_City,
-        wd:Q4856328,
+university:truong-dai-hoc-ngan-hang-thanh-pho-ho-chi-minh owl:sameAs wd:Q4856328,
         <https://ror.org/03fsckq75> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ho_Chi_Minh_University_of_Banking>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ng%C3%A2n_h%C3%A0ng_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> .
@@ -5223,14 +5067,12 @@ university:truong-dai-hoc-quoc-te-hong-bang owl:sameAs dbr:Hong_Bang_Internation
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Hong_Bang_International_University>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_t%E1%BA%BF_H%E1%BB%93ng_B%C3%A0ng> .
 
-university:truong-dai-hoc-quoc-te-rmit-viet-nam owl:sameAs dbr:RMIT_University_Vietnam,
-        wd:Q7277005,
+university:truong-dai-hoc-quoc-te-rmit-viet-nam owl:sameAs wd:Q7277005,
         <https://ror.org/004axh929> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Royal_Melbourne_Institute_of_Technology_Vietnam>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_t%E1%BA%BF_RMIT_Vi%E1%BB%87t_Nam> .
 
-university:truong-dai-hoc-quoc-te-sai-gon owl:sameAs dbr:The_Saigon_International_University,
-        wd:Q10829119,
+university:truong-dai-hoc-quoc-te-sai-gon owl:sameAs wd:Q10829119,
         <https://ror.org/03x8feb02> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Saigon_International_University> .
 
@@ -5251,8 +5093,7 @@ university:truong-dai-hoc-san-khau-dien-anh-ha-noi owl:sameAs wd:Q10829124,
         <https://ror.org/02gswea15> ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C3%A2n_kh%E1%BA%A5u_%E2%80%93_%C4%90i%E1%BB%87n_%E1%BA%A3nh_H%C3%A0_N%E1%BB%99i> .
 
-university:truong-dai-hoc-san-khau-dien-anh-thanh-pho-ho-chi-minh owl:sameAs dbr:Ho_Chi_Minh_City_College_of_Stage_Performance_and_Cinematics,
-        wd:Q5873944 ;
+university:truong-dai-hoc-san-khau-dien-anh-thanh-pho-ho-chi-minh owl:sameAs wd:Q5873944 ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/University_of_Theatre_and_Cinema_Ho_Chi_Minh_City>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C3%A2n_kh%E1%BA%A5u_%E2%80%93_%C4%90i%E1%BB%87n_%E1%BA%A3nh_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> .
 
@@ -5291,8 +5132,7 @@ university:truong-dai-hoc-su-pham-nghe-thuat-trung-uong owl:sameAs wd:Q10829133,
         <https://ror.org/050m8c894> ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Ngh%E1%BB%87_thu%E1%BA%ADt_Trung_%C6%B0%C6%A1ng> .
 
-university:truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh owl:sameAs dbr:Ho_Chi_Minh_City_Pedagogical_University,
-        wd:Q10489198,
+university:truong-dai-hoc-su-pham-thanh-pho-ho-chi-minh owl:sameAs wd:Q10489198,
         <https://ror.org/01cs0jg44> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Education>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> .
@@ -5481,8 +5321,7 @@ university:truong-dai-hoc-y-duoc-can-tho owl:sameAs wd:Q20026263,
         <https://ror.org/04rq4jq39> ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c_C%E1%BA%A7n_Th%C6%A1> .
 
-university:truong-dai-hoc-y-duoc-dai-hoc-hue owl:sameAs dbr:Hue_University_of_Medicine_and_Pharmacy,
-        wd:Q10829171,
+university:truong-dai-hoc-y-duoc-dai-hoc-hue owl:sameAs wd:Q10829171,
         <https://ror.org/0391j1294> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Hu%E1%BA%BF_University_of_Medicine_and_Pharmacy>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Hu%E1%BA%BF> .
@@ -5505,8 +5344,7 @@ university:truong-dai-hoc-y-duoc-thai-binh owl:sameAs wd:Q10829173,
         <https://ror.org/04wtn5j93> ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c_Th%C3%A1i_B%C3%ACnh> .
 
-university:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh owl:sameAs dbr:Ho_Chi_Minh_City_Medicine_and_Pharmacy_University,
-        wd:Q986462,
+university:truong-dai-hoc-y-duoc-thanh-pho-ho-chi-minh owl:sameAs wd:Q986462,
         <https://ror.org/025kb2624> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Medicine_and_Pharmacy>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh> .
@@ -5532,8 +5370,7 @@ university:truong-dai-hoc-y-khoa-vinh owl:sameAs dbr:Vinh_Medical_University,
 university:truong-dai-hoc-y-te-cong-cong owl:sameAs wd:Q10829176 ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_t%E1%BA%BF_C%C3%B4ng_c%E1%BB%99ng> .
 
-university:truong-dai-hoc-y-te-cong-cong-2 owl:sameAs dbr:Hanoi_School_of_Public_Health,
-        wd:Q5649327,
+university:truong-dai-hoc-y-te-cong-cong-2 owl:sameAs wd:Q5649327,
         <https://ror.org/044r51149> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Hanoi_University_of_Public_Health> .
 
@@ -5551,8 +5388,7 @@ university:truong-quoc-gia-am-nhac-hue owl:sameAs wd:Q16480497 ;
 university:truong-quoc-gia-am-nhac-va-kich-nghe owl:sameAs wd:Q10828875 ;
     foaf:isPrimaryTopicOf <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_Qu%E1%BB%91c_gia_%C3%82m_nh%E1%BA%A1c_v%C3%A0_K%E1%BB%8Bch_ngh%E1%BB%87> .
 
-university:truong-quoc-te-dai-hoc-quoc-gia-ha-noi owl:sameAs <http://dbpedia.org/resource/Vietnam_National_University,_Hanoi_–_International_School>,
-        wd:Q24902367,
+university:truong-quoc-te-dai-hoc-quoc-gia-ha-noi owl:sameAs wd:Q24902367,
         <https://ror.org/05n473c60> ;
     foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/International_School%2C_Vietnam_National_University%2C_Hanoi>,
         <https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_Qu%E1%BB%91c_t%E1%BA%BF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_H%C3%A0_N%E1%BB%99i> .

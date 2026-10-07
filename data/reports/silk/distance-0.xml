@@ -1,0 +1,16 @@
+<Silk>
+  <Prefixes><Prefix id="rdf" namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/><Prefix id="rdfs" namespace="http://www.w3.org/2000/01/rdf-schema#"/></Prefixes>
+  <DataSources>
+    <Dataset id="source" type="file"><Param name="file" value="source.nt"/><Param name="format" value="N-Triples"/></Dataset>
+    <Dataset id="target" type="file"><Param name="file" value="target.nt"/><Param name="format" value="N-Triples"/></Dataset>
+  </DataSources>
+  <Interlinks><Interlink id="institutions">
+    <SourceDataset dataSource="source" var="a"><RestrictTo>?a a &lt;urn:vnedu:experiment:Institution&gt;</RestrictTo></SourceDataset>
+    <TargetDataset dataSource="target" var="b"><RestrictTo>?b a &lt;urn:vnedu:experiment:Institution&gt;</RestrictTo></TargetDataset>
+    <LinkageRule linkType="&lt;urn:vnedu:experiment:candidateMatch&gt;"><Compare metric="levenshteinDistance" threshold="0">
+      <Input path="?a/&lt;http://www.w3.org/2000/01/rdf-schema#label&gt;"/><Input path="?b/&lt;http://www.w3.org/2000/01/rdf-schema#label&gt;"/>
+    </Compare><Filter limit="1"/></LinkageRule>
+    <Outputs><Output id="candidates"/></Outputs>
+  </Interlink></Interlinks>
+  <Outputs><Dataset id="candidates" type="file"><Param name="file" value="candidates.nt"/><Param name="format" value="N-Triples"/></Dataset></Outputs>
+</Silk>

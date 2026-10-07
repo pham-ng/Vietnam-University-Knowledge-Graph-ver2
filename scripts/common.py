@@ -117,7 +117,8 @@ def release_hashes() -> dict[str, str]:
     import hashlib
     paths = [config.ONTOLOGY_FILE, config.ROOT / "shapes" / "vnedu-shapes.ttl", config.DATA_TTL,
              config.LINKS_TTL, config.VOID_TTL, config.RDF_DIR / "vnedu-inferred.ttl", config.ALL_TTL,
-             *sorted(config.SILVER_DIR.glob("*.json"))]
+             *sorted(config.SILVER_DIR.glob("*.json")),
+             *sorted((config.ROOT / "ontology" / "versions").glob("*.ttl"))]
     return {p.relative_to(config.ROOT).as_posix(): hashlib.sha256(p.read_bytes().replace(b"\r\n", b"\n")).hexdigest() for p in paths}
 
 

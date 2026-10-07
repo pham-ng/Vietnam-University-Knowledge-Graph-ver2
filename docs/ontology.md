@@ -1,6 +1,6 @@
 # Sơ đồ ontology VN-Edu
 
-*Sinh tự động từ `ontology/vnedu.ttl` bởi `scripts/gen_docs.py`* — 34 lớp, 33 thuộc tính quan hệ, 21 thuộc tính dữ liệu, 777 triple.
+*Sinh tự động từ `ontology/vnedu.ttl` bởi `scripts/gen_docs.py`* — 39 lớp, 38 thuộc tính quan hệ, 27 thuộc tính dữ liệu, 836 triple.
 
 Mũi tên rỗng = kế thừa (`rdfs:subClassOf`); mũi tên có nhãn = thuộc tính quan hệ (domain → range).
 
@@ -13,16 +13,20 @@ classDiagram
   class Alumnus["Alumnus<br/>Cựu sinh viên"]
   class Branch["Branch<br/>Phân hiệu"]
   class CentrallyGovernedCity["CentrallyGovernedCity<br/>Thành phố trực thuộc trung ương"]
+  class ClassificationObservation["ClassificationObservation<br/>ClassificationObservation"]
   class Company["Company<br/>Doanh nghiệp / tập đoàn giáo dục"]
   class Country["Country<br/>Quốc gia"]
   class DefunctInstitution["DefunctInstitution<br/>Cơ sở đã giải thể / sáp nhập"]
+  class EducationParticipant["EducationParticipant<br/>EducationParticipant"]
   class EducationalOrganization["EducationalOrganization<br/>Cơ sở giáo dục"]
   class FieldOfStudy["FieldOfStudy<br/>Lĩnh vực đào tạo"]
   class FormerProvince["FormerProvince<br/>Tỉnh cũ (trước 01/07/2025)"]
   class GoverningBody["GoverningBody<br/>Cơ quan chủ quản"]
   class HigherEducationInstitution["HigherEducationInstitution<br/>Cơ sở giáo dục đại học"]
   class InstitutionLeader["InstitutionLeader<br/>Người đứng đầu cơ sở giáo dục"]
+  class LeadershipObservation["LeadershipObservation<br/>LeadershipObservation"]
   class Major["Major<br/>Ngành đào tạo"]
+  class MeasurementObservation["MeasurementObservation<br/>MeasurementObservation"]
   class MemberInstitution["MemberInstitution<br/>Trường/đơn vị thành viên"]
   class MilitaryInstitution["MilitaryInstitution<br/>Cơ sở đào tạo quân đội"]
   class Ministry["Ministry<br/>Bộ / cơ quan ngang bộ"]
@@ -38,6 +42,7 @@ classDiagram
   class PublicInstitution["PublicInstitution<br/>Cơ sở công lập"]
   class Region["Region<br/>Miền"]
   class RegionalUniversity["RegionalUniversity<br/>Đại học vùng"]
+  class SourceObservation["SourceObservation<br/>SourceObservation"]
   class University["University<br/>Đại học"]
   class UniversitySchool["UniversitySchool<br/>Trường đại học"]
   class VocationalCollege["VocationalCollege<br/>Trường cao đẳng"]
@@ -45,14 +50,18 @@ classDiagram
   Person <|-- Alumnus
   EducationalOrganization <|-- Branch
   Province <|-- CentrallyGovernedCity
+  SourceObservation <|-- ClassificationObservation
   Organization <|-- Company
   AdministrativeUnit <|-- Country
   EducationalOrganization <|-- DefunctInstitution
+  Person <|-- EducationParticipant
   Organization <|-- EducationalOrganization
   AdministrativeUnit <|-- FormerProvince
   Organization <|-- GoverningBody
   EducationalOrganization <|-- HigherEducationInstitution
   Person <|-- InstitutionLeader
+  SourceObservation <|-- LeadershipObservation
+  SourceObservation <|-- MeasurementObservation
   EducationalOrganization <|-- MemberInstitution
   GoverningBody <|-- Ministry
   University <|-- NationalUniversity
@@ -65,14 +74,18 @@ classDiagram
   HigherEducationInstitution <|-- UniversitySchool
   EducationalOrganization <|-- VocationalCollege
   Person --> EducationalOrganization : alumnusOf
+  Person --> AdministrativeUnit : birthAreaInCurrentCrosswalk
   Person --> AdministrativeUnit : bornIn
   Branch --> HigherEducationInstitution : branchOf
   EducationalOrganization --> Person : councilChair
+  EducationalOrganization --> GoverningBody : directlyGovernedBy
   EducationalOrganization --> Person : director
+  Person --> EducationalOrganization : educatedAt
   EducationalOrganization --> GoverningBody : governedBy
   GoverningBody --> EducationalOrganization : governs
   EducationalOrganization --> Person : hasAlumnus
   HigherEducationInstitution --> Branch : hasBranch
+  EducationalOrganization --> Person : hasEducationParticipant
   Organization --> Person : hasLeader
   HigherEducationInstitution --> EducationalOrganization : hasMember
   AdministrativeUnit --> AdministrativeUnit : hasPart
@@ -91,6 +104,7 @@ classDiagram
   AdministrativeUnit --> AdministrativeUnit : partOf
   EducationalOrganization --> Organization : predecessor
   EducationalOrganization --> Person : rector
+  EducationalOrganization --> GoverningBody : reportedGovernedBy
   EducationalOrganization --> GoverningBody : stateManagedBy
   GoverningBody --> GoverningBody : subordinateTo
   Organization --> Organization : successor
@@ -109,8 +123,9 @@ classDiagram
 | Phân loại (⊑) | EducationalOrganization ⊓ ∃dissolutionYear.gYear ⊑ **DefunctInstitution** |
 | Phân loại (⊑) | Person ⊓ ∃alumnusOf.EducationalOrganization ⊑ **Alumnus** |
 | Phân loại (⊑) | Person ⊓ ∃leads.EducationalOrganization ⊑ **InstitutionLeader** |
-| Chuỗi thuộc tính | bornIn ∘ mergedInto ⊑ **bornIn** |
-| Chuỗi thuộc tính | bornIn ∘ partOf ⊑ **bornIn** |
+| Chuỗi thuộc tính | bornIn ∘ mergedInto ⊑ **birthAreaInCurrentCrosswalk** |
+| Chuỗi thuộc tính | bornIn ∘ partOf ⊑ **birthAreaInCurrentCrosswalk** |
+| Chuỗi thuộc tính | birthAreaInCurrentCrosswalk ∘ partOf ⊑ **birthAreaInCurrentCrosswalk** |
 | Chuỗi thuộc tính | governedBy ∘ subordinateTo ⊑ **governedBy** |
 | Chuỗi thuộc tính | locatedIn ∘ partOf ⊑ **locatedIn** |
 | Chuỗi thuộc tính | locatedIn ∘ mergedInto ⊑ **locatedIn** |
@@ -122,11 +137,10 @@ classDiagram
 | Hàm (tối đa 1 giá trị) | **dissolutionYear** |
 | Hàm (tối đa 1 giá trị) | **foundingYear** |
 | Hàm (tối đa 1 giá trị) | **mergedInto** |
-| Hàm (tối đa 1 giá trị) | **ofMajor** |
-| Hàm (tối đa 1 giá trị) | **offeredBy** |
 | Hàm (tối đa 1 giá trị) | **ownership** |
 | Nghịch đảo | **alumnusOf** ⇄ **hasAlumnus** |
 | Nghịch đảo | **branchOf** ⇄ **hasBranch** |
+| Nghịch đảo | **educatedAt** ⇄ **hasEducationParticipant** |
 | Nghịch đảo | **governedBy** ⇄ **governs** |
 | Nghịch đảo | **leads** ⇄ **hasLeader** |
 | Nghịch đảo | **memberOf** ⇄ **hasMember** |
@@ -134,7 +148,6 @@ classDiagram
 | Nghịch đảo | **offersProgram** ⇄ **offeredBy** |
 | Nghịch đảo | **partOf** ⇄ **hasPart** |
 | Nghịch đảo | **predecessor** ⇄ **successor** |
-| Rời nhau | University ⊥ UniversitySchool ⊥ Academy ⊥ OfficerSchool |
 | Rời nhau | HigherEducationInstitution ⊥ Branch ⊥ VocationalCollege |
 | Rời nhau | EducationalOrganization ⊥ GoverningBody ⊥ Company |
 | Rời nhau | Country ⊥ Region ⊥ Province ⊥ FormerProvince |

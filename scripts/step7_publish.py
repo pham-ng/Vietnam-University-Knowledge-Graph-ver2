@@ -199,6 +199,9 @@ def institution_panels() -> dict[str, dict]:
     def figure(m, alt, cls):
         if not m:
             return ""
+        license_name = (m.get("license") or "").strip().lower()
+        if not re.fullmatch(r"(cc0|public domain|cc by(?:-sa)? [1-4]\.0)", license_name):
+            return f'<p class="media-license">Ảnh: <a href="{esc(m.get("page") or m["url"])}">xem tại nguồn</a> — giấy phép riêng, không tái công bố.</p>'
         cap = " · ".join(x for x in (esc(m.get("license") or ""), esc((m.get("artist") or "")[:80])) if x)
         return (f'<figure class="{cls}"><a href="{esc(m.get("page") or m["url"])}" title="Trang mô tả tệp trên Wikimedia">'
                 f'<img src="{esc(m.get("thumb") or m["url"])}" alt="{esc(alt)}" loading="lazy"></a>'
@@ -219,6 +222,7 @@ def institution_panels() -> dict[str, dict]:
         row("Mã trường", esc(", ".join(i["admission_codes"])))
         row("Tên cũ", "<br>".join(esc(x) for x in i["former_names"][:6]))
         own = {"public": "Công lập", "private": "Tư thục"}.get(i.get("ownership"), "")
+        row("Thời gian dữ liệu", "Ảnh chụp nguồn; chức vụ và số liệu chưa xác định thời hạn hiệu lực.")
         row("Loại hình", esc(" · ".join(x for x in (KIND_VI.get(i["kind"], ""), own) if x)))
         fy, fd = i.get("founding_year"), i.get("founding_date")
         if fd:
@@ -524,6 +528,14 @@ def main() -> None:
     bind_prefixes(o)
     (SITE / "ontology.ttl").write_text(o.serialize(format="turtle"), encoding="utf-8")
     (SITE / "ontology.jsonld").write_text(o.serialize(format="json-ld", context=CONTEXT, indent=1), encoding="utf-8")
+    version_dir = SITE / "ontology"
+    version_dir.mkdir(exist_ok=True)
+    for source in sorted((config.ROOT / "ontology" / "versions").glob("*.ttl")):
+        version_graph = Graph().parse(source)
+        version_graph.serialize(version_dir / source.name, format="turtle", encoding="utf-8")
+        version_graph.serialize(version_dir / (source.stem + ".jsonld"), format="json-ld", encoding="utf-8")
+        page("ontology/" + source.stem, "Ontology " + source.stem,
+             f'<h1>Ontology {source.stem}</h1><p>Immutable release. <a href="{source.stem}.ttl">Turtle</a> · <a href="{source.stem}.jsonld">JSON-LD</a></p>')
     (SITE / "dataset.ttl").write_text(void.serialize(format="turtle"), encoding="utf-8")
 
     print("Trang tài nguyên (dereference URI) ...", flush=True)

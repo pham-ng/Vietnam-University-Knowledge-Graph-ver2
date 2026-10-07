@@ -10,7 +10,7 @@
                         ("vnedu:MilitaryInstitution","Trường quân đội",1),("vnedu:PoliceInstitution","Trường công an",1),
                         ("vnedu:Province","Tỉnh/thành (2025)",0),("vnedu:FormerProvince","Tỉnh cũ đã sáp nhập",0),
                         ("vnedu:GoverningBody","Cơ quan chủ quản",0),("vnedu:InstitutionLeader","Lãnh đạo",1),
-                        ("vnedu:Alumnus","Cựu sinh viên",1),("vnedu:Major","Ngành đào tạo",0)] %}
+                        ("vnedu:EducationParticipant","Người từng học",1),("vnedu:Major","Ngành đào tạo",0)] %}
   <div class="card stat"><b>{{ counts.get(key, 0) }}</b><span>{{ label }}{% if inf %} <span class="pill">suy luận</span>{% endif %}</span></div>
   {% endfor %}
 </div>

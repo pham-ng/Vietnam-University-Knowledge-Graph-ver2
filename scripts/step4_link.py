@@ -30,6 +30,8 @@ from httpcache import get_json, sparql  # noqa: E402
 
 CLEAN = config.SILVER_DIR
 LINKS_DIR = config.REPORTS_DIR / "links"
+LOOKUP_CANDIDATES = set()  # Includes rejected candidates solely for reproducible cache lookups.
+LOOKUP_DBPEDIA = {}  # Historical request universe only; never used to accept ambiguous links.
 BAD_DESC = re.compile(r"family name|given name|journal|genre|album|film|song|book|magazine|periodical|"
                       r"disambiguation|scientific article|band|company|television|constituency|Wikimedia", re.I)
 
@@ -56,6 +58,8 @@ def search_wikidata(label: str, lang: str, must_desc: bool = True, country: str 
               f"SELECT ?c WHERE {{ VALUES ?c {{ {' '.join('wd:' + c['id'] for c in cands)} }} ?c wdt:P17 wd:{country} }}")}
         cands = [c for c in cands if c["id"] in ok]
     if cands:
+        LOOKUP_CANDIDATES.add(cands[0]["id"])
+    if len({c["id"] for c in cands}) == 1:
         c = cands[0]
         return c["id"], c.get("label", ""), c.get("description", "")
     return "", "", ""
@@ -67,8 +71,9 @@ def dbpedia_for(qids: list[str]) -> dict[str, URIRef]:
         values = " ".join(f"<{WD[q]}>" for q in qids[i:i + 80])
         for r in sparql(config.DBPEDIA_SPARQL, f"SELECT ?d ?w WHERE {{ VALUES ?w {{ {values} }} ?d owl:sameAs ?w . "
                                                 f'FILTER(STRSTARTS(STR(?d), "http://dbpedia.org/resource/")) }}'):
-            found[r["w"].rsplit("/", 1)[1]] = URIRef(r["d"])
-    return found
+            found.setdefault(r["w"].rsplit("/", 1)[1], set()).add(URIRef(r["d"]))
+            LOOKUP_DBPEDIA[r["w"]] = r["d"]
+    return {q: next(iter(targets)) for q, targets in found.items() if len(targets) == 1}
 
 
 def write_csv(name, rows):
@@ -88,6 +93,7 @@ def main() -> None:
     bind_prefixes(links)
     counts: dict[tuple, int] = {}
     qid_of: dict[str, URIRef] = {}          # QID -> URI cục bộ (để tra DBpedia)
+    candidate_qids = set()  # Lookup candidates are not accepted identity assertions.
 
     def link(s, p, o, target):
         triple = (URIRef(s), p, URIRef(o))
@@ -138,14 +144,18 @@ def main() -> None:
                 if q:
                     break
             how = "tìm kiếm" if q else "không tìm thấy"
-        if q:
+        if q and how == "nguồn":
             same_wd(umap["body"][k], q)
+        elif q:
+            how = "candidate only; manual identity review required"
+            candidate_qids.add(q)
         rows.append({"entity": b["name_vi"], "wikidata": q, "label": lab, "description": desc, "method": how})
     for name, en in (("Bắc Bộ", "Northern Vietnam"), ("Trung Bộ", "Central Vietnam"), ("Nam Bộ", "Southern Vietnam")):
         q, lab, desc = search_wikidata(en, "en", country="Q881")
+        # Name-only regional matches remain candidates, not identity assertions.
         if q:
-            same_wd(umap["region"][name], q)
-        rows.append({"entity": name, "wikidata": q, "label": lab, "description": desc, "method": "tìm kiếm" if q else "không tìm thấy"})
+            candidate_qids.add(q)
+        rows.append({"entity": name, "wikidata": q, "label": lab, "description": desc, "method": "candidate only; manual identity review required" if q else "không tìm thấy"})
     write_csv("entity_links.csv", rows)
     print(f"    {sum(1 for r in rows if r['wikidata'])}/{len(rows)} cơ quan & miền có QID")
 
@@ -168,14 +178,14 @@ def main() -> None:
     write_csv("major_links.csv", concept_rows)
 
     print("[4/5] DBpedia ...")
-    dbp = dbpedia_for(sorted(set(qid_of) | set(concept_uri), key=lambda q: int(q[1:])))
+    dbp = dbpedia_for(sorted(set(qid_of) | set(concept_uri) | candidate_qids | LOOKUP_CANDIDATES, key=lambda q: int(q[1:])))
     # Xác minh chéo: URI DBpedia phải ứng với đúng bài Wikipedia tiếng Anh mà Wikidata trỏ tới
     # (DBpedia đôi khi khai owl:sameAs sai — VD: ĐHBK TP.HCM bị gắn vào ĐH Sư phạm Kỹ thuật TP.HCM).
     enwiki = {i["qid"]: i["enwiki"] for i in insts.values() if i["qid"] and i["enwiki"]}
     enwiki.update({q: p["enwiki"] for q, p in provs.items() if p["enwiki"]})
     enwiki.update({p["qid"]: p["enwiki"] for p in people.values() if p["qid"] and p["enwiki"]})
     # Mỗi tài nguyên DBpedia ứng viên trỏ tới bao nhiêu item Wikidata (trên toàn DBpedia, không chỉ trong dataset)?
-    targets = sorted({str(d) for d in dbp.values()})
+    targets = sorted(set(LOOKUP_DBPEDIA.values()))
     wd_of: dict[str, set[str]] = {}
     for i in range(0, len(targets), 60):
         vals = " ".join(f"<{t}>" for t in targets[i:i + 60])
@@ -185,7 +195,7 @@ def main() -> None:
     rejected = []
     for q, d in list(dbp.items()):
         expected = "http://dbpedia.org/resource/" + enwiki[q].replace(" ", "_") if q in enwiki else None
-        if len(wd_of.get(str(d), set())) > 1 and str(d) != expected:
+        if len(wd_of.get(str(d), set())) != 1 or (expected and str(d) != expected):
             rejected.append({"wikidata": q, "dbpedia": str(d), "expected_from_enwiki": expected or "",
                              "reason": f"tài nguyên DBpedia trỏ tới {len(wd_of[str(d)])} item Wikidata khác nhau: "
                                        + ", ".join(sorted(wd_of[str(d)]))})

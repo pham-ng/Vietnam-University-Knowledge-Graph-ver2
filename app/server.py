@@ -361,7 +361,7 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
             SELECT ?c (COUNT(DISTINCT ?s) AS ?n) WHERE {
               VALUES ?c { vnedu:HigherEducationInstitution vnedu:PublicInstitution vnedu:PrivateInstitution
                           vnedu:MemberInstitution vnedu:MilitaryInstitution vnedu:PoliceInstitution vnedu:Province
-                          vnedu:FormerProvince vnedu:GoverningBody vnedu:InstitutionLeader vnedu:Alumnus vnedu:Major }
+                          vnedu:FormerProvince vnedu:GoverningBody vnedu:InstitutionLeader vnedu:EducationParticipant vnedu:Major }
               ?s a ?c .
             } GROUP BY ?c""" % config.ONTO_NS)
         links = backend.select("""
@@ -502,6 +502,22 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
             n_inferred=sum(v["inferred"] for g in props for v in g["values"])))
         resp.headers["Vary"] = "Accept"
         return resp
+
+    @app.route("/ontology/<version>")
+    def ontology_version(version):
+        from rdflib import Graph
+        fmt = "text/turtle" if version.endswith(".ttl") else "application/ld+json" if version.endswith(".jsonld") else wants_rdf()
+        key = version.removesuffix(".ttl").removesuffix(".jsonld")
+        if not re.fullmatch(r"[0-9]+\.[0-9]+", key):
+            abort(404)
+        source = config.ROOT / "ontology" / "versions" / (key + ".ttl")
+        if not source.is_file():
+            abort(404)
+        if fmt:
+            return rdf_response(Graph().parse(source), fmt)
+        response = make_response(f'<h1>Ontology {key}</h1><a href="{key}.ttl">Turtle</a> · <a href="{key}.jsonld">JSON-LD</a>')
+        response.headers["Vary"] = "Accept"
+        return response
 
     @app.route("/ontology")
     def ontology():

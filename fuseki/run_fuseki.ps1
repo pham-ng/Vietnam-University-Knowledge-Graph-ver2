@@ -1,31 +1,15 @@
-﻿# Tải (lần đầu) và chạy Apache Jena Fuseki với dataset /vnedu.
-#   powershell -ExecutionPolicy Bypass -File fuseki\run_fuseki.ps1
-# Fuseki 3.17.0 là bản cuối chạy được trên Java 8; Java 11+ sẽ dùng Fuseki 4.10.0.
-# Endpoint sau khi chạy: http://localhost:3030/vnedu/sparql  (giao diện: http://localhost:3030)
-
+# Query-only, loopback Fuseki 6.2.0. Run audit/setup_runtimes.ps1 first.
+param([string]$Java = "java", [string]$Python = "python", [int]$Port = 3030)
 $ErrorActionPreference = "Stop"
-$here = Split-Path -Parent $MyInvocation.MyCommand.Path
-$root = Split-Path -Parent $here
-$data = Join-Path $root "data\gold\vnedu-all.ttl"
-if (-not (Test-Path $data)) { throw "Chưa có $data — hãy chạy các bước 2-4 trước (run_all.ps1)." }
-
-# Phát hiện phiên bản Java
-$javaVer = (& java -version 2>&1 | Select-Object -First 1).ToString()
-if ($javaVer -match '"1\.8') { $ver = "3.17.0" } else { $ver = "4.10.0" }
-Write-Host "Java: $javaVer  ->  Fuseki $ver"
-
-$dir = Join-Path $here "apache-jena-fuseki-$ver"
-if (-not (Test-Path $dir)) {
-    $zip = Join-Path $here "apache-jena-fuseki-$ver.zip"
-    $url = "https://archive.apache.org/dist/jena/binaries/apache-jena-fuseki-$ver.zip"
-    Write-Host "Tải $url ..."
-    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-    Invoke-WebRequest -Uri $url -OutFile $zip
-    Expand-Archive -Path $zip -DestinationPath $here
-    Remove-Item $zip
-}
-
-# --file: nạp file TTL vào dataset trong bộ nhớ (đọc-chỉ, khởi động lại là nạp lại).
-# Muốn lưu bền (TDB2) và cho phép cập nhật: dùng  --update --tdb2 --loc=<thư mục> /vnedu  rồi chạy scripts\step5_load_fuseki.py
-Set-Location $dir
-& java -Xmx2G -jar "fuseki-server.jar" --file="$data" /vnedu
+$repoRoot = Split-Path -Parent $PSScriptRoot
+$jar = Join-Path $repoRoot "tmp\runtimes\apache-jena-fuseki-6.2.0\fuseki-server.jar"
+if (-not (Test-Path -LiteralPath $jar)) { throw "Run audit/setup_runtimes.ps1 first." }
+$javaVersion = (& $Java -version 2>&1 | Out-String)
+if ($javaVersion -notmatch 'version "21[.]') { throw "Use Java 21 for this pinned Fuseki release." }
+Push-Location $repoRoot
+try {
+    & $Python -c "import sys; sys.path.insert(0, 'scripts'); from common import require_validated_release; require_validated_release()"
+    if ($LASTEXITCODE -ne 0) { throw "Release validation missing or stale." }
+    $dataFile = Join-Path $repoRoot "data\gold\vnedu-all.ttl"
+    & $Java -Xmx2G -jar $jar --localhost "--port=$Port" --timeout=5000 "--file=$dataFile" /vnedu
+} finally { Pop-Location }

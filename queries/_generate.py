@@ -92,7 +92,7 @@ Q["07_ho_so_truong"] = """# Hồ sơ đầy đủ của Đại học Bách khoa 
 SELECT ?thuoc_tinh (GROUP_CONCAT(DISTINCT ?v; separator=" | ") AS ?gia_tri)
 WHERE {{
   ?u vnedu:admissionCode "BKA" ; ?p ?o .
-  FILTER(?p NOT IN (vnedu:hasAlumnus, <https://schema.org/alumni>))
+  FILTER(?p NOT IN (vnedu:hasEducationParticipant, <https://schema.org/alumni>))
   OPTIONAL {{ ?o rdfs:label ?ol FILTER(LANG(?ol) = "vi") }}
   BIND(COALESCE(?ol, STR(?o)) AS ?v)
   BIND(REPLACE(STR(?p), "^.*[#/]", "") AS ?thuoc_tinh)
@@ -112,11 +112,11 @@ WHERE {{
 ORDER BY ?mien ?truong
 """
 
-Q["09_cuu_sinh_vien"] = """# [Suy luận] Trường có nhiều cựu sinh viên nổi tiếng nhất (lớp Alumnus suy ra từ alumnusOf)
+Q["09_cuu_sinh_vien"] = """# [Suy luận] Trường có nhiều người có quan hệ học tập được nguồn ghi nhận nhất (lớp Alumnus suy ra từ alumnusOf)
 {P}
 SELECT ?truong (COUNT(DISTINCT ?p) AS ?so_cuu_sv) (COUNT(DISTINCT ?ck) AS ?chinh_khach)
 WHERE {{
-  ?p a vnedu:Alumnus ; vnedu:alumnusOf ?u .
+  ?p a vnedu:EducationParticipant ; vnedu:educatedAt ?u .
   ?u rdfs:label ?truong FILTER(LANG(?truong) = "vi")
   OPTIONAL {{ ?p <https://schema.org/hasOccupation> <http://www.wikidata.org/entity/Q82955> BIND(?p AS ?ck) }}
 }}

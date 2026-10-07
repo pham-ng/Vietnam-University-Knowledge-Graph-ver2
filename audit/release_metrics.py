@@ -31,6 +31,8 @@ def main():
         'People': len(set(full.subjects(RDF.type, V.Person))),
         'Leaders': len(set(full.subjects(RDF.type, V.InstitutionLeader))),
         'Alumni': len(set(full.subjects(RDF.type, V.Alumnus))),
+        'EducationParticipants': len(set(full.subjects(RDF.type, V.EducationParticipant))),
+        'Observations': len(set(full.subjects(RDF.type, V.SourceObservation))),
         'Programs': len(set(full.subjects(RDF.type, V.AcademicProgram))),
         'Majors': len(set(full.subjects(RDF.type, V.Major))),
         'CurrentProvinces': len(set(full.subjects(RDF.type, V.Province))),

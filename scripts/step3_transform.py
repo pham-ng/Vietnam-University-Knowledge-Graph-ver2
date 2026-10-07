@@ -18,6 +18,7 @@ from rdflib.namespace import FOAF, RDF, RDFS, SKOS, XSD
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config  # noqa: E402
+from observations import qualify_snapshot
 from common import DBO, GEO, SCHEMA, VNEDU, Minter, bind_prefixes, field_uri, major_uri, read_csv, record_manifest, vn_key  # noqa: E402
 
 PROV = Namespace("http://www.w3.org/ns/prov#")
@@ -192,7 +193,7 @@ def main() -> None:
         for m in i["branch_of"]:
             g.add((s, VNEDU.branchOf, u_inst[m]))
         for b in i["governed_by"]:
-            g.add((s, VNEDU.governedBy, u_body[b]))
+            g.add((s, VNEDU.reportedGovernedBy, u_body[b]))
         for b in i["owned_by"]:
             g.add((s, VNEDU.ownedBy, u_body[b]))
         for b in i.get("state_managed_by", []):
@@ -231,7 +232,7 @@ def main() -> None:
         for o in p["occupations"]:
             add_reused(g, s, SCHEMA.hasOccupation, o)
         for sch in p["alumnus_of"]:
-            g.add((s, VNEDU.alumnusOf, u_inst[sch]))
+            g.add((s, VNEDU.educatedAt, u_inst[sch]))
         # Nơi sinh: URI Wikidata của địa danh (tái sử dụng) + tỉnh của dataset chứa nơi đó (cạnh trong đồ thị)
         if p.get("birth_place"):
             add_reused(g, s, VNEDU.birthPlace, p["birth_place"])
@@ -294,6 +295,9 @@ def main() -> None:
               "region": m_reg.registry, "country": str(country)}
     (CLEAN / "uri_map.json").write_text(json.dumps(keymap, ensure_ascii=False, indent=1), encoding="utf-8")
 
+    evidence = qualify_snapshot(g, CLEAN)
+    config.REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    (config.REPORTS_DIR / "observation-provenance.json").write_text(json.dumps(evidence, indent=2, sort_keys=True), encoding="utf-8")
     config.RDF_DIR.mkdir(parents=True, exist_ok=True)
     g.serialize(config.DATA_TTL, format="turtle", encoding="utf-8")
     record_manifest("gold", config.DATA_TTL, len(g), "triples", derived_from="data/silver/*.json")

@@ -18,11 +18,11 @@
 | silver | `data/silver/institutions.json` | 300 records | `9c1af515ea54` | 2026-10-06T23:40:01 |
 | silver | `data/silver/people.json` | 1,702 records | `e6645803dc51` | 2026-10-06T23:40:01 |
 | silver | `data/silver/provinces.json` | 63 records | `a3275bbe296d` | 2026-10-06T23:40:01 |
-| gold | `data/gold/vnedu-all.ttl` | 48,492 triples | `1048787fda42` | 2026-10-06T23:41:00 |
-| gold | `data/gold/vnedu-data.ttl` | 22,931 triples | `73763665c996` | 2026-10-06T23:40:03 |
-| gold | `data/gold/vnedu-inferred.ttl` | 21,018 triples | `bd8be6a056b8` | 2026-10-06T23:40:58 |
-| gold | `data/gold/vnedu-links.ttl` | 3,674 triples | `9058bbfe77eb` | 2026-10-06T23:40:04 |
-| gold | `data/gold/void.ttl` | 96 triples | `d14874fdab5f` | 2026-10-06T23:40:05 |
+| gold | `data/gold/vnedu-all.ttl` | 73,690 triples | `7306e2ac8771` | 2026-10-07T08:37:11 |
+| gold | `data/gold/vnedu-data.ttl` | 47,291 triples | `fa2dbb0a398c` | 2026-10-07T08:32:32 |
+| gold | `data/gold/vnedu-inferred.ttl` | 21,913 triples | `8b103bda0b0d` | 2026-10-07T08:37:07 |
+| gold | `data/gold/vnedu-links.ttl` | 3,558 triples | `53197c8a1276` | 2026-10-07T08:34:23 |
+| gold | `data/gold/void.ttl` | 96 triples | `29f5ec9b069e` | 2026-10-07T08:34:25 |
 
 ## 2. Độ đầy đủ — 271 cơ sở giáo dục đại học (tầng silver)
 
@@ -107,13 +107,13 @@ Giá trị chưa phân giải được, cần rà soát tay (`unresolved.csv`): 
 
 | Đích | Thuộc tính | Số liên kết |
 |---|---|---|
-| wikidata | `owl:sameAs` | 1880 |
+| wikidata | `owl:sameAs` | 1850 |
 | wikipedia | `foaf:isPrimaryTopicOf` | 1188 |
-| dbpedia | `owl:sameAs` | 260 |
+| dbpedia | `owl:sameAs` | 201 |
 | ror | `owl:sameAs` | 195 |
 | geonames | `owl:sameAs` | 63 |
-| wikidata | `skos:closeMatch` | 51 |
-| dbpedia | `skos:closeMatch` | 37 |
+| wikidata | `skos:closeMatch` | 35 |
+| dbpedia | `skos:closeMatch` | 26 |
 
 Đánh giá phương pháp liên kết: xem [link_evaluation.md](link_evaluation.md) — so khớp chuỗi kiểu Silk so với liên kết theo định danh.
 
@@ -124,5 +124,5 @@ Giá trị chưa phân giải được, cần rà soát tay (`unresolved.csv`): 
 | ★ | Công khai, giấy phép mở | `dct:license` CC BY-SA 4.0 trong VoID/DCAT; giấy phép từng nguồn trong `*.meta.json` |
 | ★★ | Có cấu trúc, máy đọc được | JSON (bronze/silver), RDF (gold) |
 | ★★★ | Định dạng mở | JSON, CSV, Turtle |
-| ★★★★ | Chuẩn W3C, URI dereference được | RDF/OWL 2 RL/SHACL/SPARQL 1.1/PROV-O; 48,492 triple (trong đó 21,018 suy luận); HTTP URI + content negotiation (`app/server.py`) |
-| ★★★★★ | Liên kết tới dataset khác | 3,674 liên kết tới Wikidata, DBpedia, ROR, GeoNames, Wikipedia; `void:Linkset` |
+| ★★★★ | Chuẩn W3C, URI dereference được | RDF/OWL 2 RL/SHACL/SPARQL 1.1/PROV-O; 73,690 triple (trong đó 21,913 suy luận); HTTP URI + content negotiation (`app/server.py`) |
+| ★★★★★ | Liên kết tới dataset khác | 3,558 liên kết tới Wikidata, DBpedia, ROR, GeoNames, Wikipedia; `void:Linkset` |

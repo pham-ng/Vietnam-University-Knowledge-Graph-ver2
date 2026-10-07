@@ -121,10 +121,22 @@ shapes:Person a sh:NodeShape ;
 
 shapes:Program a sh:NodeShape ;
     sh:targetClass vnedu:AcademicProgram ;
-    sh:property [ sh:path vnedu:ofMajor ; sh:class vnedu:Major ; sh:minCount 1 ; sh:maxCount 1 ;
-                  sh:message "Chương trình phải thuộc đúng một ngành."@vi ] ;
-    sh:property [ sh:path vnedu:offeredBy ; sh:minCount 1 ; sh:maxCount 1 ;
-                  sh:message "Chương trình phải do đúng một cơ sở đào tạo."@vi ] .
+    sh:property [ sh:path vnedu:ofMajor ; sh:class vnedu:Major ; sh:minCount 1 ;
+                  sh:message "Chương trình phải thuộc ít nhất một ngành."@vi ] ;
+    sh:property [ sh:path vnedu:offeredBy ; sh:minCount 1 ;
+                  sh:message "Chương trình phải do ít nhất một cơ sở đào tạo."@vi ] .
 
 vnedu: sh:declare [ sh:prefix "vnedu" ; sh:namespace "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#"^^xsd:anyURI ] ,
                   [ sh:prefix "xsd" ; sh:namespace "http://www.w3.org/2001/XMLSchema#"^^xsd:anyURI ] .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+shapes:Observation a sh:NodeShape ;
+    sh:targetClass vnedu:SourceObservation ;
+    sh:property [ sh:path rdf:subject ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path rdf:predicate ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path rdf:object ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path vnedu:snapshotDigest ; sh:pattern "^[a-f0-9]{64}$" ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path vnedu:temporalStatus ; sh:in ( "unknown" "qualified" ) ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path vnedu:validFrom ; sh:datatype xsd:date ; sh:maxCount 1 ; sh:lessThanOrEquals vnedu:validThrough ] ;
+    sh:property [ sh:path vnedu:validThrough ; sh:datatype xsd:date ; sh:maxCount 1 ] ;
+    sh:property [ sh:path vnedu:referenceYear ; sh:datatype xsd:gYear ; sh:maxCount 1 ] .

@@ -19,13 +19,13 @@
     void:linkPredicate skos:closeMatch ;
     void:objectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/dbpedia> ;
     void:subjectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset> ;
-    void:triples 37 .
+    void:triples 26 .
 
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-dbpedia-sameAs> a void:Linkset ;
     void:linkPredicate owl:sameAs ;
     void:objectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/dbpedia> ;
     void:subjectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset> ;
-    void:triples 260 .
+    void:triples 201 .
 
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-geonames-sameAs> a void:Linkset ;
     void:linkPredicate owl:sameAs ;
@@ -43,13 +43,13 @@
     void:linkPredicate skos:closeMatch ;
     void:objectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/wikidata> ;
     void:subjectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset> ;
-    void:triples 51 .
+    void:triples 35 .
 
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-sameAs> a void:Linkset ;
     void:linkPredicate owl:sameAs ;
     void:objectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/wikidata> ;
     void:subjectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset> ;
-    void:triples 1880 .
+    void:triples 1850 .
 
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikipedia-isPrimaryTopicOf> a void:Linkset ;
     void:linkPredicate foaf:isPrimaryTopicOf ;
@@ -89,7 +89,7 @@
     dct:description "Cơ sở giáo dục đại học Việt Nam, cơ quan chủ quản, lãnh đạo, cựu sinh viên, đơn vị hành chính (gồm sắp xếp tỉnh 2025), ngành đào tạo — tích hợp và đối chiếu từ Wikidata và Wikipedia tiếng Việt."@vi ;
     dct:language <http://id.loc.gov/vocabulary/iso639-1/vi> ;
     dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
-    dct:modified "2026-10-06"^^xsd:date ;
+    dct:modified "2026-10-07"^^xsd:date ;
     dct:source <https://vi.wikipedia.org/>,
         <https://www.wikidata.org/> ;
     dct:title "VN-Edu Linked Open Data"@en,
@@ -97,7 +97,7 @@
     void:dataDump <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-data.ttl>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-links.ttl> ;
-    void:entities 2491 ;
+    void:entities 5644 ;
     void:exampleResource university:dai-hoc-bach-khoa-ha-noi ;
     void:sparqlEndpoint <https://vnedu-lod.onrender.com/sparql> ;
     void:subset <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-dbpedia-closeMatch>,
@@ -107,7 +107,7 @@
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-closeMatch>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-sameAs>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikipedia-isPrimaryTopicOf> ;
-    void:triples 26605 ;
+    void:triples 50849 ;
     void:uriSpace "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/" ;
     void:vocabulary dbo:,
         geo:,

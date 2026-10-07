@@ -34,13 +34,13 @@
 Luật Giáo dục đại học 2012, sửa đổi 2018), cơ quan chủ quản, lãnh đạo, cựu sinh viên, đơn vị hành chính
 (gồm cả sắp xếp tỉnh năm 2025), ngành đào tạo theo Thông tư 09/2022/TT-BGDĐT."""@vi ;
     dct:created "2026-10-05"^^xsd:date ;
-    dct:modified "2026-10-07"^^xsd:date ;
+    dct:modified "2026-10-06"^^xsd:date ;
     dct:creator "VN-Edu LOD project" ;
     dct:source <https://www.wikidata.org/> , <https://vi.wikipedia.org/> ;
     dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
-    owl:versionInfo "2.2 - evidence-qualified temporal observations and conservative alignments" ;
-    owl:versionIRI <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology/2.2> ;
-    owl:priorVersion <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology/2.1> ;
+    owl:versionInfo "2.1 — đủ domain/range, căn chỉnh DBpedia/schema.org, quan hệ lịch sử tổ chức và nơi sinh/quốc tịch" ;
+    owl:versionIRI <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology/2.1> ;
+    owl:priorVersion <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology/2.0> ;
     vann:preferredNamespacePrefix "vnedu" ;
     vann:preferredNamespaceUri "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#" ;
     rdfs:comment "Rule-based OWL materialization using owlrl; formal OWL 2 RL profile conformance has not been certified."@en .
@@ -82,7 +82,8 @@ vnedu:OfficerSchool a owl:Class ;
     rdfs:label "Officer school"@en , "Trường sĩ quan"@vi ;
     rdfs:subClassOf vnedu:HigherEducationInstitution .
 
-
+[] a owl:AllDisjointClasses ;
+   owl:members ( vnedu:University vnedu:UniversitySchool vnedu:Academy vnedu:OfficerSchool ) .
 
 vnedu:NationalUniversity a owl:Class ;
     rdfs:label "National university"@en , "Đại học quốc gia"@vi ;
@@ -338,7 +339,8 @@ vnedu:governedBy owl:propertyChainAxiom ( vnedu:governedBy vnedu:subordinateTo )
 vnedu:ownedBy a owl:ObjectProperty ;
     rdfs:label "owned by"@en , "thuộc sở hữu / đầu tư của"@vi ;
     rdfs:domain vnedu:EducationalOrganization ;
-    rdfs:range vnedu:Company .
+    rdfs:range vnedu:Company ;
+    rdfs:subPropertyOf schema:parentOrganization .
 
 vnedu:ownership a owl:ObjectProperty , owl:FunctionalProperty ;
     rdfs:label "ownership"@en , "loại hình sở hữu"@vi ;
@@ -358,7 +360,8 @@ vnedu:leads a owl:ObjectProperty ;
     owl:inverseOf vnedu:hasLeader .
 
 vnedu:hasLeader a owl:ObjectProperty ;
-    rdfs:label "has reported leader"@en , "có lãnh đạo được nguồn ghi nhận"@vi .
+    rdfs:label "has leader"@en , "có người đứng đầu"@vi ;
+    rdfs:subPropertyOf schema:employee .
 
 vnedu:rector a owl:ObjectProperty ;
     rdfs:label "rector"@en , "hiệu trưởng"@vi ;
@@ -391,11 +394,11 @@ vnedu:offersProgram a owl:ObjectProperty ;
     rdfs:range vnedu:AcademicProgram ;
     owl:inverseOf vnedu:offeredBy .
 
-vnedu:offeredBy a owl:ObjectProperty ;
+vnedu:offeredBy a owl:ObjectProperty , owl:FunctionalProperty ;
     rdfs:label "offered by"@en , "do ... đào tạo"@vi ;
     rdfs:subPropertyOf schema:provider .
 
-vnedu:ofMajor a owl:ObjectProperty ;
+vnedu:ofMajor a owl:ObjectProperty , owl:FunctionalProperty ;
     rdfs:label "of major"@en , "thuộc ngành"@vi ;
     rdfs:domain vnedu:AcademicProgram ;
     rdfs:range vnedu:Major .
@@ -616,10 +619,10 @@ vnedu:population             rdfs:subPropertyOf dbo:populationTotal .
 vnedu:honorific              rdfs:subPropertyOf schema:honorificPrefix .
 vnedu:rector                 rdfs:subPropertyOf dbo:rector .
 vnedu:councilChair           rdfs:subPropertyOf dbo:chairman .
-
-
-
-
+vnedu:leads                  rdfs:subPropertyOf schema:worksFor .
+vnedu:governedBy             rdfs:subPropertyOf schema:parentOrganization .
+vnedu:governs                rdfs:subPropertyOf schema:subOrganization .
+vnedu:subordinateTo          rdfs:subPropertyOf schema:parentOrganization .
 vnedu:branchOf               rdfs:subPropertyOf schema:parentOrganization .
 vnedu:hasBranch              rdfs:subPropertyOf schema:subOrganization .
 vnedu:partOf                 rdfs:subPropertyOf schema:containedInPlace .
@@ -656,17 +659,12 @@ vnedu:birthPlace a owl:ObjectProperty ;
 
 vnedu:bornIn a owl:ObjectProperty ;
     rdfs:label "born in (administrative unit)"@en , "sinh ra tại (đơn vị hành chính)"@vi ;
-    rdfs:comment "Tỉnh/thành nguồn ghi nhận cho nơi sinh; bản quy chiếu địa lý hiện hành dùng birthAreaInCurrentCrosswalk, không suy ra nơi sinh lịch sử."@vi ;
+    rdfs:comment "Tỉnh/thành của dataset chứa nơi sinh (qua Wikidata P131*). Nhờ chuỗi thuộc tính, người sinh ở tỉnh cũ được quy về tỉnh mới, miền và quốc gia."@vi ;
     rdfs:domain vnedu:Person ;
     rdfs:comment "Geographical containment crosswalk, including the 2025 successor boundaries; inferred values do not assert the administrative unit existed at the time of birth."@en ;
     rdfs:range vnedu:AdministrativeUnit .
-vnedu:birthAreaInCurrentCrosswalk a owl:ObjectProperty ;
-    rdfs:label "birth area in current administrative crosswalk"@en ;
-    rdfs:domain vnedu:Person ; rdfs:range vnedu:AdministrativeUnit ;
-    owl:propertyChainAxiom ( vnedu:bornIn vnedu:mergedInto ) ,
-                           ( vnedu:bornIn vnedu:partOf ) ,
-                           ( vnedu:birthAreaInCurrentCrosswalk vnedu:partOf ) .
-
+vnedu:bornIn owl:propertyChainAxiom ( vnedu:bornIn vnedu:mergedInto ) .
+vnedu:bornIn owl:propertyChainAxiom ( vnedu:bornIn vnedu:partOf ) .
 
 vnedu:nationality a owl:ObjectProperty ;
     rdfs:label "nationality"@en , "quốc tịch"@vi ;
@@ -691,49 +689,3 @@ schema:containsPlace a owl:ObjectProperty .   schema:birthPlace a owl:ObjectProp
 schema:memberOf a owl:ObjectProperty ;
     rdfs:label "member of (association)"@en , "thành viên của (hiệp hội, mạng lưới)"@vi ;
     rdfs:comment "Tái sử dụng schema.org; đích là URI Wikidata của hiệp hội (Wikidata P463). Khác vnedu:memberOf (trường thành viên của một đại học)."@vi .
-
-# 2.2 migration: retain old term IRIs, but narrow their documented snapshot semantics.
-vnedu:governedBy rdfs:comment "Broad source-reported governance, including inferred superior bodies; not necessarily direct or current."@en .
-vnedu:directlyGovernedBy a owl:ObjectProperty ;
-    rdfs:label "directly governed by"@en ;
-    rdfs:domain vnedu:EducationalOrganization ; rdfs:range vnedu:GoverningBody ;
-    rdfs:subPropertyOf vnedu:governedBy ;
-    rdfs:comment "Use only when direct governance is explicitly evidenced; never inferred backwards from governedBy."@en .
-vnedu:reportedGovernedBy a owl:ObjectProperty ;
-    rdfs:label "source-reported governance"@en ;
-    rdfs:domain vnedu:EducationalOrganization ; rdfs:range vnedu:GoverningBody ;
-    rdfs:subPropertyOf vnedu:governedBy .
-vnedu:educatedAt a owl:ObjectProperty ;
-    rdfs:label "recorded education at"@en , "được ghi nhận học tại"@vi ;
-    rdfs:domain vnedu:Person ; rdfs:range vnedu:EducationalOrganization ;
-    owl:inverseOf vnedu:hasEducationParticipant .
-vnedu:hasEducationParticipant a owl:ObjectProperty ;
-    rdfs:label "has recorded education participant"@en ;
-    rdfs:domain vnedu:EducationalOrganization ; rdfs:range vnedu:Person .
-vnedu:EducationParticipant a owl:Class ; rdfs:subClassOf vnedu:Person ;
-    rdfs:label "Recorded education participant"@en .
-[ a owl:Restriction ; owl:onProperty vnedu:educatedAt ;
-  owl:someValuesFrom vnedu:EducationalOrganization ] rdfs:subClassOf vnedu:EducationParticipant .
-vnedu:alumnusOf rdfs:comment "Reserved for documented alumni status; generic education records use educatedAt instead."@en .
-vnedu:SourceObservation a owl:Class ; rdfs:subClassOf rdf:Statement ;
-    rdfs:label "Source-qualified observation"@en ;
-    rdfs:comment "Reified source statement. Reification alone does not assert its content. Snapshot projections do not establish current validity."@en .
-vnedu:LeadershipObservation a owl:Class ; rdfs:subClassOf vnedu:SourceObservation ;
-    rdfs:label "Leadership observation"@en .
-vnedu:MeasurementObservation a owl:Class ; rdfs:subClassOf vnedu:SourceObservation ;
-    rdfs:label "Measurement observation"@en .
-vnedu:ClassificationObservation a owl:Class ; rdfs:subClassOf vnedu:SourceObservation ;
-    rdfs:label "Classification observation"@en .
-vnedu:validFrom a owl:DatatypeProperty ; rdfs:domain vnedu:SourceObservation ; rdfs:range xsd:date ;
-    rdfs:label "known start of validity"@en .
-vnedu:validThrough a owl:DatatypeProperty ; rdfs:domain vnedu:SourceObservation ; rdfs:range xsd:date ;
-    rdfs:label "known inclusive end of validity"@en .
-vnedu:referenceYear a owl:DatatypeProperty ; rdfs:domain vnedu:SourceObservation ; rdfs:range xsd:gYear ;
-    rdfs:label "source-reported measurement year"@en .
-vnedu:temporalStatus a owl:DatatypeProperty ; rdfs:domain vnedu:SourceObservation ; rdfs:range xsd:string ;
-    rdfs:label "temporal evidence status"@en .
-vnedu:snapshotDigest a owl:DatatypeProperty ; rdfs:domain vnedu:SourceObservation ; rdfs:range xsd:string ;
-    rdfs:label "digest of the supporting Silver snapshot"@en .
-vnedu:measurementUnit a owl:DatatypeProperty ; rdfs:domain vnedu:MeasurementObservation ; rdfs:range xsd:string ;
-    rdfs:label "measurement unit"@en .
-vnedu:University rdfs:comment "Source-reported snapshot classification; historical classifications need qualified observations and are not globally disjoint."@en .

@@ -110,10 +110,10 @@ def test_detects_conflicting_ownership(onto):
     assert kinds & {"AllDifferent bị gộp (sameAs)", "disjointWith"}
 
 
-def test_detects_two_legal_types(onto):
+def test_historical_legal_types_are_not_globally_disjoint(onto):
     """Một cơ sở không thể vừa là Học viện vừa là Trường đại học (AllDisjointClasses)."""
     c = closure_of(onto, [(R.u, RDF.type, V.Academy), (R.u, RDF.type, V.UniversitySchool)])
-    assert any(p[0] == "AllDisjointClasses" for p in consistency(c))
+    assert consistency(c) == []
 
 
 def test_detects_person_used_as_organization(onto):
@@ -154,7 +154,8 @@ def test_birthplace_chain_through_2025_merger(onto):
         (bd, RDF.type, V.FormerProvince), (bd, V.mergedInto, hcm),
         (hcm, RDF.type, V.Province), (hcm, V.partOf, nb), (nb, RDF.type, V.Region), (nb, V.partOf, vn)])
     for place in (hcm, nb, vn):
-        assert (p, V.bornIn, place) in c
+        assert (p, V.birthAreaInCurrentCrosswalk, place) in c
+        assert (p, V.bornIn, place) not in c
 
 
 def test_predecessor_successor_inverse_and_alignment(onto):

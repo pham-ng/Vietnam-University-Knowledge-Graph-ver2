@@ -1,0 +1,81 @@
+{
+  "engine": "Silk 3.6.0; official singlemachine entry point compiled against release libraries",
+  "sample_sha256": "51fc975238a2baad55590be380b2705ae629f4a1402533eaa0173a11e5987b09",
+  "sources": 86,
+  "targets": 86,
+  "candidate_pairs": 7396,
+  "scope": "historical identifier-derived closed-candidate reference; NOT independent gold",
+  "normalization": "Unicode lowercase; same labels for both engines",
+  "java": "java version \"1.8.0_481\"\nJava(TM) SE Runtime Environment (build 1.8.0_481-b10)\nJava HotSpot(TM) 64-Bit Server VM (build 25.481-b10, mixed mode)",
+  "results": [
+    {
+      "method": "Silk Levenshtein",
+      "maximum_edit_distance": 0,
+      "predicted": 57,
+      "reference_matches": 57,
+      "disagreements": 0,
+      "reference_precision": 1.0,
+      "reference_recall": 0.6627906976744186,
+      "reference_f1": 0.7972027972027972
+    },
+    {
+      "method": "Silk Levenshtein",
+      "maximum_edit_distance": 3,
+      "predicted": 64,
+      "reference_matches": 63,
+      "disagreements": 1,
+      "reference_precision": 0.984375,
+      "reference_recall": 0.7325581395348837,
+      "reference_f1": 0.8400000000000001
+    },
+    {
+      "method": "Silk Levenshtein",
+      "maximum_edit_distance": 8,
+      "predicted": 75,
+      "reference_matches": 70,
+      "disagreements": 5,
+      "reference_precision": 0.9333333333333333,
+      "reference_recall": 0.813953488372093,
+      "reference_f1": 0.8695652173913044
+    },
+    {
+      "method": "Python token Jaccard",
+      "minimum_similarity": 0.4,
+      "predicted": 80,
+      "reference_matches": 72,
+      "disagreements": 8,
+      "reference_precision": 0.9,
+      "reference_recall": 0.8372093023255814,
+      "reference_f1": 0.8674698795180723
+    },
+    {
+      "method": "Python token Jaccard",
+      "minimum_similarity": 0.6,
+      "predicted": 76,
+      "reference_matches": 70,
+      "disagreements": 6,
+      "reference_precision": 0.9210526315789473,
+      "reference_recall": 0.813953488372093,
+      "reference_f1": 0.8641975308641974
+    },
+    {
+      "method": "Python token Jaccard",
+      "minimum_similarity": 0.8,
+      "predicted": 68,
+      "reference_matches": 64,
+      "disagreements": 4,
+      "reference_precision": 0.9411764705882353,
+      "reference_recall": 0.7441860465116279,
+      "reference_f1": 0.8311688311688312
+    }
+  ],
+  "promoted_to_sameAs": 0,
+  "limitations": [
+    "Not independent gold; some reference identities were rejected in ontology 2.2 release.",
+    "Silk emits experiment-only candidates, never merged into the release.",
+    "Closed candidates exclude unlinked institutions and open-world negatives.",
+    "Metrics differ: edit count and token similarity thresholds are not equivalent.",
+    "Silk top-1 tie resolution is engine-defined; Python baseline uses descending target URI.",
+    "No holdout tuning or claim of national-level accuracy."
+  ]
+}

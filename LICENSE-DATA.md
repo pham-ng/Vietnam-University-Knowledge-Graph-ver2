@@ -21,3 +21,11 @@ Dữ liệu được dẫn xuất từ:
 
 Giấy phép của từng ảnh chụp nguồn được ghi trong `data/bronze/*.meta.json`; mỗi thực thể có `prov:wasDerivedFrom`
 trỏ tới nguồn gốc cụ thể. Mã nguồn (`scripts/`, `app/`, `site_src/`, `tests/`…) dùng giấy phép MIT — xem `LICENSE`.
+## Media and source-specific rights
+
+The dataset license does not relicense remotely linked photographs, logos, trademarks,
+or other third-party media. Their individual source-page terms remain applicable.
+Unknown, fair-use and unrecognized media licenses are link-only in the generated site;
+only the explicitly recognized public-domain/CC0/CC BY/CC BY-SA labels are embedded.
+This conservative display policy is not a legal determination or a guarantee of source metadata.
+Retain source links, attribution and license metadata when reusing individual assets.
