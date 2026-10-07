@@ -13,6 +13,32 @@ OWL classes and their asserted subclass relations.}
 \end{figure}
 
 \begin{figure}[htbp]\centering
+\IfFileExists{docs/report/figures/ontology-graphdb-hierarchy.png}{%
+  \includegraphics[width=\textwidth]{docs/report/figures/ontology-graphdb-hierarchy.png}%
+}{%
+  \includegraphics[width=\textwidth]{figures/ontology-graphdb-hierarchy.png}%
+}
+\caption[GraphDB class-hierarchy view]{Direct screenshot of GraphDB Workbench 11.1.0 after
+loading the committed ontology into the local repository \texttt{vnedu-ontology-d}. The
+class-hierarchy view reports 57 classes and displays the hierarchy and reused vocabulary
+classes. This is a repository-backed visualization, not a diagram generated outside the
+triple store.}\label{fig:ontology-graphdb-hierarchy}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\IfFileExists{docs/report/figures/ontology-graphdb-visual.png}{%
+  \includegraphics[width=\textwidth]{docs/report/figures/ontology-graphdb-visual.png}%
+}{%
+  \includegraphics[width=\textwidth]{figures/ontology-graphdb-visual.png}%
+}
+\caption[GraphDB visual graph for University]{Direct screenshot of GraphDB Workbench's
+Visual graph for \texttt{vnedu:University}. It shows the asserted \texttt{rdfs:subClassOf}
+links to higher-education and organization concepts, the external class alignment to
+\texttt{dbo:University}, and the class typing edge. Labels are rendered from the RDF
+labels stored in the project ontology.}\label{fig:ontology-graphdb-visual}
+\end{figure}
+
+\begin{figure}[htbp]\centering
 \input{figures/taxonomy-en.tex}
 \caption[Organizational class hierarchy]{Selected organizational hierarchy. Arrows point from subclass to superclass.
 The four legal-type classes are no longer globally disjoint: an enduring institution can change type.

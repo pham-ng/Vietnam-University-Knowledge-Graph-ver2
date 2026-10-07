@@ -8,6 +8,16 @@ Mũi tên rỗng = kế thừa (`rdfs:subClassOf`); mũi tên có nhãn = thuộ
 
 ![Protégé OntoGraf screenshot of the committed ontology](report/figures/ontology-protege-screenshot.png)
 
+The same committed `ontology/vnedu.ttl` was also loaded into GraphDB Workbench 11.1.0
+(`vnedu-ontology-d`) for a repository-backed view. The class-hierarchy view reports 57
+classes, while the visual graph below focuses on `vnedu:University` and its asserted
+superclass/alignment links. These are direct screenshots of GraphDB, not generated
+illustrations.
+
+![GraphDB class hierarchy of the committed ontology](report/figures/ontology-graphdb-hierarchy.png)
+
+![GraphDB visual graph for vnedu:University](report/figures/ontology-graphdb-visual.png)
+
 ```mermaid
 classDiagram
   direction LR

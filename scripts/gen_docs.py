@@ -160,6 +160,9 @@ def main() -> None:
             "Release 2.2 passes the OWL API `OWL2RLProfile` gate with zero violations; see `data/reports/owl2rl-profile.txt`.", "",
             "Mũi tên rỗng = kế thừa (`rdfs:subClassOf`); mũi tên có nhãn = thuộc tính quan hệ (domain → range).", "",
             "![Protégé OntoGraf screenshot of the committed ontology](report/figures/ontology-protege-screenshot.png)", "",
+            "GraphDB Workbench 11.1.0 was also connected to the local `vnedu-ontology-d` repository after loading the committed Turtle. The following are direct repository-backed screenshots; the hierarchy view reports 57 classes and the visual graph focuses on `vnedu:University`.", "",
+            "![GraphDB class hierarchy of the committed ontology](report/figures/ontology-graphdb-hierarchy.png)", "",
+            "![GraphDB visual graph for vnedu:University](report/figures/ontology-graphdb-visual.png)", "",
             ontology_diagram(g), "", "## Tiên đề phục vụ suy luận", ""] + axioms_table(g)
     (DOCS / "ontology.md").write_text("\n".join(text) + "\n", encoding="utf-8")
     (DOCS / "architecture.md").write_text(ARCH, encoding="utf-8")
