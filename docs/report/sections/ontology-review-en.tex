@@ -1,81 +1,100 @@
-\subsection{Visual specification of the implemented model}
+\subsection{Visual specification of ontology 2.2}
 \begin{figure}[htbp]\centering
 \input{figures/taxonomy-en.tex}
-\caption[Organizational class hierarchy]{Selected organizational class hierarchy. Arrows point from subclass to superclass.
-The four bottom classes are declared pairwise disjoint; that choice requires time-aware
-interpretation when an institution changes type. This is a selected view, not all 34 classes.}
-\label{fig:taxonomy}
+\caption[Organizational class hierarchy]{Selected organizational hierarchy. Arrows point from subclass to superclass.
+The four legal-type classes are no longer globally disjoint: an enduring institution can change type.
+This is a selected view of \metricClasses{} classes.}\label{fig:taxonomy}
 \end{figure}
-
 \begin{figure}[htbp]\centering
 \input{figures/relations-en.tex}
-\caption[Property signatures across ontology modules]{Selected property signatures. Boxes are classes; arrows summarize domain--property--range,
-not assertions between classes and not mandatory database foreign keys. Inverses are named
-below each lane. F denotes a functional property; it is an OWL equality constraint, not
-the same mechanism as SHACL maximum cardinality.}\label{fig:relations}
+\caption[Property signatures across ontology modules]{Selected domain--property--range signatures.
+These arrows are not mandatory foreign keys. Program providers and majors are no longer functional:
+multiple values must not force different institutions or subjects to become identical.}\label{fig:relations}
 \end{figure}
-
 \begin{figure}[htbp]\centering
 \input{figures/geography-en.tex}
-\caption[Geographic property-chain inference]{Schematic individual-level geographic inference. Solid edges are premise assertions;
-dashed edges are consequences of the implemented chains. Symbols denote an organization
-and administrative units, not a new historical claim about a real institution. The chain
-does not carry a validity interval.}\label{fig:geo-chain}
+\caption[Geographic property-chain inference]{Institution-location inference under the selected administrative
+crosswalk. It does not establish historical validity. Birth-area mapping now uses a separate
+\term{birthAreaInCurrentCrosswalk} predicate instead of adding historical \term{bornIn} statements.}\label{fig:geo-chain}
 \end{figure}
 
-\subsection{Assessment: standards-based, but not semantically complete}
-The design is credible for an educational knowledge-graph prototype. It separates people,
-organizations and geography; distinguishes membership, branch affiliation, ownership and
-state oversight; reuses external vocabularies; and combines inference with explicit SHACL
-validation. The two-layer validation design is appropriate because open-world entailment
-does not implement closed-world data entry rules. Avoiding an area-property alignment with
-incompatible units is also a good design decision.
-
-However, valid Turtle and passing tests do not certify the domain model. Table~\ref{tab:design-review}
-identifies semantic decisions still requiring revision or evidence. These findings concern
-what axioms entail, even when the current snapshot produces no contradiction. They are
-not silently presented as already repaired.
-
+\subsection{Implemented corrections and evidence limits}
+The design is standards-based and suitable for an educational knowledge-graph prototype,
+but consistency is not a certificate of factual accuracy. Version 2.2 makes the following
+changes without reminting existing entity identifiers.
 {\small
-\begin{longtable}{P{4cm}P{5.2cm}P{5.4cm}}
-\caption{Remaining ontology-design risks and recommended changes.}\label{tab:design-review}\\
-\toprule Decision & Consequence & Recommended treatment \\\midrule\endfirsthead
-\toprule Decision & Consequence & Recommended treatment \\\midrule\endhead
-\term{governedBy} chain through \term{subordinateTo} & A direct supervising body and its superior are returned through the same predicate. A query cannot read every resulting edge as direct management. & Separate \term{directlyGovernedBy} from a broader governance relation; preserve asserted versus derived context. \\
-\term{ownedBy} and \term{governedBy} aligned to \term{schema:}\allowbreak\term{parentOrganization} & Ownership/investment and administrative supervision do not always establish organizational inclusion. Schema.org's parent relation is stronger than mere association~\cite{parentorg}. & Remove or narrow these alignments unless source evidence establishes a true parent--suborganization relation. \\
-\term{hasLeader} aligned to \term{schema:employee} & Every council chair reached through a role subproperty also becomes an employee. External or non-employee governance roles are not distinguished. & Represent a dated appointment with a role, organization and person; assert employment only with evidence. \\
-Disjoint legal-type classes & Asserting both historical and current types on one enduring organization can create a contradiction after a type change. Name-based classification is weaker evidence than the axiom assumes. & Define the snapshot scope; use dated legal-status records for historical queries and verify classifications against dated sources. \\
-\term{alumnusOf} from recorded education & The source may establish attendance, not graduation. The current class label can be read more strongly than the evidence. & Use a neutral education/attendance relation; add degree completion only when documented. \\
-\term{offeredBy} and \term{ofMajor} functional & Joint providers or interdisciplinary programs can imply unwanted identity equalities; the generated identifier also collapses variants of one institution--major pair. & Define a program offering and curriculum version; decide which multiplicities are actually exclusive. \\
-\term{mergedInto} functional & Models one successor per former province; it cannot describe a split or transfer to multiple units. & Keep the restricted merger-snapshot scope explicit; use dated administrative-change events for general history. \\
-Counts and leadership without time & Student populations from different years and successive leaders can appear simultaneously current. & Add measurement date/unit/source and appointment intervals; do not invent missing values. \\
-\term{owl:versionIRI} & The declared version URL has no generated version page in the current publisher, and the public sample returns 404. & Publish immutable versioned ontology artifacts before advertising dereferenceable version identifiers. \\
+\begin{longtable}{P{3.7cm}P{6.1cm}P{4.8cm}}
+\caption{Ontology 2.2 corrections and their limits.}\label{tab:design-review}\\
+\toprule Concern & Implemented correction & Evidence boundary \\\midrule\endfirsthead
+\toprule Concern & Implemented correction & Evidence boundary \\\midrule\endhead
+Supervision versus inclusion &
+Removed parent-organization alignments from governance, subordination and ownership. Membership and branch alignments remain. &
+Supervision or investment does not automatically establish organizational parenthood. \\
+Direct versus indirect governance &
+Added \term{directlyGovernedBy} and \term{reportedGovernedBy} under the broad \term{governedBy}; only the broad relation propagates through superiors. &
+Legacy source relations migrate to reported, not unsupported direct, governance. \\
+Leadership versus employment &
+Removed leader-to-employee and leader-to-\term{worksFor} alignments; added role observations. &
+A council chair need not be an employee. \\
+Institutional type changes &
+Removed global disjointness between the four legal-type classes; added classification observations. &
+The class projection is not a dated authoritative legal register. \\
+Education versus alumni &
+Recorded education becomes \term{educatedAt}, with the neutral inferred class \term{EducationParticipant}. &
+Attendance does not entail graduation. Alumni terms remain for explicit evidence. \\
+Joint programs &
+Removed functionality from \term{offeredBy} and \term{ofMajor}; SHACL requires at least one provider and major. &
+Curated program identifiers still do not distinguish all curriculum variants. \\
+Birth geography &
+Successor and containment chains produce \term{birthAreaInCurrentCrosswalk}, not additional \term{bornIn} facts. &
+A current province is not asserted to have existed at birth. \\
+Version publication &
+Archived 2.1 and 2.2 Turtle; generated HTML, Turtle and JSON-LD version documents and dynamic routes. &
+Local verification does not prove deployment at the canonical origin. \\
 \bottomrule
 \end{longtable}}
 
-These issues have different severities. Over-strong vocabulary alignments can assert facts
-not supported by their source relation, whereas missing temporal qualifiers mainly limit
-which questions are answerable. A migration should preserve old URIs, update affected
-queries and shapes, regenerate the graph, and add negative competency tests. Merely editing
-a diagram or replacing labels would not correct the underlying semantics.
+\subsection{Qualified observations and temporal interpretation}
+The transformer creates \metricObservations{} \term{SourceObservation} records, including
+leadership, measurement and classification specializations. Each reifies a triple through
+\term{rdf:subject}, \term{rdf:predicate} and \term{rdf:object}. Its SHA-256-derived URI includes
+the assertion, snapshot digest, source context and qualifiers. Identical evidence preserves
+the observation URI; changed evidence creates a different record. Entity URIs remain stable.
 
-\Needspace{8\baselineskip}
-\subsection{Competency questions as a design contract}
-Useful design tests should cover both answers and prohibited conclusions:
+\begin{figure}[htbp]\centering
+\input{figures/observation-en.tex}
+\caption[Evidence-qualified temporal observations]{Observation model. Dashed fields are optional and must come
+from evidence. Missing dates mean unknown temporal validity. The diagram is schematic;
+no dates are fabricated for real officeholders.}\label{fig:observations}
+\end{figure}
+
+The implementation supports \term{validFrom}, \term{validThrough}, \term{referenceYear}
+and measurement units, validates calendar dates and interval order, and retains normalized
+SHA-256 digests of Silver inputs in \term{data/reports/observation-provenance.json}.
+Copied source references provide \emph{entity-level context}, not proof that every assertion
+occurs in every referenced source. The snapshot digest is not an upstream publication date.
+
+The present Silver snapshot does not retain sufficient temporal qualifiers for these
+measurements and appointments. Generated observations explicitly have unknown temporal
+validity. The system does not infer today's leadership or a current enrollment total;
+the institution infobox displays this limitation. Flat triples remain a source-snapshot
+projection. Historical queries must require relevant date bounds on observations;
+absence of an end date does not prove an appointment continues.
+
+SHACL checks observation structure, allowed status, digest syntax, date datatypes and
+interval ordering. Regression tests also verify that reification alone does not assert
+the reified triple. This is a conservative migration, not a complete longitudinal
+collection system. Acquiring actual dates, claim-level provenance, foundation events
+and authoritative historical classifications remains future work.
+
+\subsection{Competency questions and prohibited conclusions}
 \begin{enumerate}
-\item Which institutions are members of a university, and which are branches? Check that
-the two relations remain distinct after materialization.
-\item Which body directly governs a school, and which ministry is an indirect superior?
-The current \term{governedBy} closure does not preserve this distinction in the predicate.
-\item Which organization offers a program, and which major does that offering concern?
-The current chain answers this for the illustrative single-provider program model.
-\item Where is an institution under the chosen administrative crosswalk, and where was
-it located at a historical date? Only the first question is supported reliably by the model.
-\item Who held a leadership role on a specified date, and how many students were enrolled
-in a specified year? The current unqualified edges and counts cannot establish these answers.
+\item A direct body followed by its superior entails broad governance, not a second direct edge.
+\item A council chair does not entail employment; an owner does not entail parenthood.
+\item Joint providers or majors do not become identical through a program.
+\item Recorded education does not entail the alumni class.
+\item A current geographic crosswalk does not create a historical birthplace assertion.
+\item An undated observation does not answer a date-valid question merely because it is in the latest export.
 \end{enumerate}
-
-Thus the verdict is \emph{standards-based and useful, with significant semantic and temporal
-limitations}, not ``fully standardized'' or ``formally certified OWL 2 RL.'' The evaluation
-does not claim a formal OWL 2 DL profile check either. Rule-engine execution, syntax parsing,
-profile membership and domain correctness are separate questions.
+Rule-engine execution, formal OWL profile membership, domain correctness and empirical
+coverage remain distinct claims. No formal OWL 2 RL/DL certification is asserted.

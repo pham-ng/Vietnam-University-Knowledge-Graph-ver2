@@ -76,5 +76,5 @@ default-union query policy would be a future design change, not an existing feat
 This is a staged batch workflow, not a transaction spanning every artifact. Failed validation
 preserves the previous inferred and serving files, while preceding stages may already have
 rewritten candidate assertions and links. Hash checks protect the static publisher; the
-legacy Fuseki loader does not yet enforce that same release gate. An immutable staging
+revised Fuseki loader enforces that same release gate. An immutable staging
 directory followed by an atomic release-pointer switch would make this boundary stronger.

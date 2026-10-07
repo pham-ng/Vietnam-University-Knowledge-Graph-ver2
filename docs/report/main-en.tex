@@ -47,7 +47,7 @@
 {\color{accent}\rule{0.65\textwidth}{1pt}\par}
 \vspace{10mm}
 {\large Revised English technical report\par}
-{\large Expanded edition: 7 October 2026\par}
+{\large Ontology 2.2 and integration edition: 7 October 2026\par}
 \vfill
 \begin{minipage}{0.9\textwidth}\small
 This edition incorporates an independent code and data audit of repository revision
@@ -321,14 +321,14 @@ Conformance and completeness claims require a dedicated profile check and explic
 semantics, beyond the present regression suite.
 
 \subsection{Geographic and temporal limitations}
-The \term{bornIn} chains are geographic containment crosswalks. Relating a birthplace to
+The \term{birthAreaInCurrentCrosswalk} chains are geographic containment crosswalks, separated from \term{bornIn} in version 2.2. Relating a birthplace to
 a province created in 2025 does not mean that province existed when the person was born.
 Similarly, historical institutions should not automatically be counted as currently
 operating just because their location can be mapped to a current province. Queries for
 current institutions should explicitly consider dissolution evidence and its incompleteness.
 
-The pipeline lacks a general temporal model for leadership terms, student counts, legal
-type changes, and geographic versions. Absence of an end date is not proof of a current
+Version 2.2 adds qualified observations for roles, measurements and classifications, but
+the available source snapshot still lacks sufficient temporal qualifiers and historical geographic versions. Absence of an end date is not proof of a current
 appointment. Birth-date collection currently loses source precision, and suppressing
 January 1 dates is only a heuristic: it can suppress real birthdays and cannot establish
 the precision of all other dates. These source-quality limitations remain documented
@@ -393,8 +393,8 @@ in-memory latency measurements do not describe this implementation.
 
 The Fuseki proxy supplies an execution timeout parameter and does not follow proxy
 redirects. Actual query cancellation and remote SERVICE egress remain responsibilities
-of the configured Fuseki instance. They were not tested against a live Fuseki deployment
-in this audit. Raw POST requests with \term{application/sparql-query} are now accepted,
+of the configured Fuseki instance. The separate Linux acceptance run verifies load/query/persistence/read-only behavior;
+it does not verify production federation controls. Raw POST requests with \term{application/sparql-query} are now accepted,
 alongside form-encoded query requests.
 
 \section{Evaluation and results}
@@ -410,7 +410,7 @@ Educational-organization records & \metricInstitutions{} \\
 Classified higher-education institutions & \metricHEIs{} \\
 Person records & \metricPeople{} \\
 Institution-leader records & \metricLeaders{} \\
-People with recorded education relations & \metricAlumni{} \\
+People with recorded education relations & \metricEducationParticipants{} \\
 Current / former province-level units & \metricCurrentProvinces{} / \metricFormerProvinces{} \\
 Illustrative programs / majors & \metricPrograms{} / \metricMajors{} \\
 Asserted data triples & \metricAssertedTriples{} \\
@@ -440,7 +440,8 @@ different denominators and should not be interchanged.
 The available experiment uses 86 institutions with English labels and identifier-derived
 DBpedia reference targets. A local token-Jaccard matcher selects the highest-scoring target
 from that closed reference candidate set. Table~\ref{tab:agreement} reports agreement with
-the reference. It is not a run of the Silk software.
+the reference frozen from revision \term{58c65f0}. This baseline is not Silk;
+the separate actual Silk execution is reported below.
 \begin{table}[htbp]\centering\small
 \caption{Token-Jaccard agreement with the identifier-derived reference.}\label{tab:agreement}
 \begin{tabular}{rrrrrr}\toprule
@@ -464,6 +465,8 @@ These restrictions affect task difficulty and coverage. The threshold with the h
 on this sample is a descriptive observation, not a validated threshold chosen on a separate
 development set. A defensible accuracy study needs independently annotated links and
 non-links, dated evidence, an adjudication procedure, and a held-out test set.
+
+\input{sections/silk-experiment-en.tex}
 
 \subsection{Regression evidence}
 The audit adds counterexamples for compact SPARQL syntax, exact service endpoint policy,
@@ -516,9 +519,8 @@ rate controls remain deployment concerns. Snapshot timestamps record reconstruct
 collection events as implemented; they must not automatically be interpreted as the dates
 on which the underlying facts became true.
 
-The next substantive data-model improvements are dated leadership appointments,
-source-qualified measurements, event-specific foundation histories, and assertion-level
-provenance. A subsequent research evaluation should use a preregistered sampling method,
+The next substantive data work is acquiring real temporal qualifiers for the new observations,
+event-specific foundation histories, and independently verified assertion-level provenance. A subsequent research evaluation should use a preregistered sampling method,
 an independently reviewed reference set, and a clear distinction between discovery
 coverage, linking coverage, and correctness. Those additions require evidence not present
 in the current repository and are not supplied by inventing dates, labels, or outcomes.
@@ -594,6 +596,7 @@ the underlying evidence.
 \bibitem{prov} T. Lebo, S. Sahoo, and D. McGuinness, eds. \emph{PROV-O: The PROV Ontology}. W3C Recommendation, 2013. \url{https://www.w3.org/TR/prov-o/}.
 \bibitem{uris} L. Sauermann and R. Cyganiak, eds. \emph{Cool URIs for the Semantic Web}. W3C Interest Group Note, 2008. \url{https://www.w3.org/TR/cooluris/}.
 \bibitem{five} T. Berners-Lee. \emph{Linked Data}, including the five-star scheme. Design Issues, 2006, scheme added 2010. \url{https://www.w3.org/DesignIssues/LinkedData.html}.
+\bibitem{silk} Silk Framework contributors. \emph{Silk Framework 3.6.0: Link Specification Language and implementation}. \url{https://github.com/silk-framework/silk/tree/v3.6.0}. Accessed 7 October 2026.
 \bibitem{fuseki} Apache Jena. \emph{Apache Jena Fuseki}. Project documentation, accessed 7 October 2026. \url{https://jena.apache.org/documentation/fuseki2/}.
 \bibitem{fadmin} Apache Jena. \emph{Fuseki HTTP Administration Protocol}. \url{https://jena.apache.org/documentation/fuseki2/fuseki-server-protocol.html}.
 \bibitem{gsp} C. Ogbuji, ed. \emph{SPARQL 1.1 Graph Store HTTP Protocol}. W3C Recommendation, 2013. \url{https://www.w3.org/TR/sparql11-http-rdf-update/}.

@@ -10,11 +10,11 @@
 \node[auditbox,text width=4cm] (e3) at (0,-3.8) {EducationalOrganization};
 \node[auditbox,text width=3.6cm] (prog) at (9,-3.8) {AcademicProgram};
 \draw[auditarr] (e3)--node[auditlabel,above]{offersProgram}(prog);
-\node[font=\scriptsize] at (4.5,-4.45) {inverse: offeredBy (F)};
+\node[font=\scriptsize] at (4.5,-4.45) {inverse: offeredBy; joint providers permitted};
 \node[auditbox,text width=2.7cm] (pr2) at (0,-5.8) {AcademicProgram};
 \node[auditbox,text width=2.6cm] (major) at (4.5,-5.8) {Major};
 \node[auditbox,text width=2.7cm] (field) at (9,-5.8) {FieldOfStudy};
-\draw[auditarr] (pr2)--node[auditlabel,above]{ofMajor (F)}(major);
+\draw[auditarr] (pr2)--node[auditlabel,above]{ofMajor}(major);
 \draw[auditarr] (major)--node[auditlabel,above]{inField}(field);
 \node[font=\scriptsize,align=center] at (4.5,-6.65) {offersProgram followed by ofMajor entails trainsMajor;\\inField is aligned to skos:broader.};
 \end{tikzpicture}

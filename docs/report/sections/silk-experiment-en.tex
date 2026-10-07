@@ -1,0 +1,42 @@
+\subsection{Executed Silk Framework experiment}
+A separate experiment now executes actual Silk Framework 3.6.0, rather than referring
+to the Python Jaccard baseline as Silk. The official single-machine entry point was
+compiled with Scala 2.12.10 against released workbench libraries and run on Java 8.
+Pinned checksums are in \term{audit/setup\_runtimes.ps1}; the runner, XML rules, input
+N-Triples, candidate outputs and result JSON are included in the repository.
+
+The experiment freezes the 86-source/86-target sample from revision \term{58c65f0},
+giving 7,396 possible pairs. Both methods use the same lowercased English labels.
+Silk uses edit-distance thresholds of 0, 3 and 8 with a top-one filter, while the
+Python baseline uses token-Jaccard similarity. Their threshold values are not
+numerically comparable. The XML filter is inside \term{LinkageRule}, as required by
+the 3.6.0 parser; assertions verify at most one prediction per source and the
+experiment-only predicate. Older example configurations are not assumed equivalent.
+
+\begin{table}[htbp]\centering\small
+\caption{Actual Silk versus the fixed-sample Python baseline: reference agreement only.}
+\label{tab:silk-real}
+\begin{tabular}{lrrrrr}\toprule
+Rule & Predicted & Matches & Ref. precision & Ref. recall & Ref. F1 \\\midrule
+Silk: distance 0 & 57 & 57 & 100.0\% & 66.3\% & 0.797 \\
+Silk: distance 3 & 64 & 63 & 98.4\% & 73.3\% & 0.840 \\
+Silk: distance 8 & 75 & 70 & 93.3\% & 81.4\% & 0.870 \\
+Jaccard: similarity 0.4 & 80 & 72 & 90.0\% & 83.7\% & 0.867 \\
+Jaccard: similarity 0.6 & 76 & 70 & 92.1\% & 81.4\% & 0.864 \\
+Jaccard: similarity 0.8 & 68 & 64 & 94.1\% & 74.4\% & 0.831 \\
+\bottomrule\end{tabular}
+\end{table}
+
+These results do not estimate independent identity accuracy. Some historical
+reference identities are rejected by the current stricter linker; they remain
+in the frozen experimental reference, not in accepted release identities.
+The sample excludes open-world negatives, lacks independent adjudication and
+has no held-out tuning set. Silk's tie handling is engine-defined; Python uses
+descending target URI for ties. Small differences do not establish general superiority.
+
+No prediction is promoted to \term{owl:sameAs}. Silk emits a candidate-only URN
+predicate and its files are outside the serving pipeline. It is a research extension,
+not a normal publication dependency. Neo4j is not added: a second graph model and
+synchronization path would supply neither missing time evidence nor another
+five-star requirement. The implementation follows the official Silk source and
+link-specification documentation~\cite{silk}.

@@ -1,92 +1,93 @@
-\section{URI publication and the Apache Jena Fuseki integration}
+\section{URI publication and Apache Jena Fuseki}
 \label{sec:fuseki}
-Apache Jena Fuseki is a SPARQL server, with query, update and graph-store capabilities
-depending on configuration~\cite{fuseki}. It is not the component that assigns this
-project's resource identifiers. The same university IRI remains in the triples whether
-the graph is queried using RDFLib, browser-side Oxigraph or Fuseki.
+Fuseki is a SPARQL server, not a URI minting service~\cite{fuseki}.
+The transformer assigns canonical identifiers before data enters any store.
+The same university IRI remains in RDF whether queried by RDFLib, Oxigraph or Fuseki.
 
-\Needspace{18\baselineskip}
-\subsection{Resource identifiers are not endpoint URLs}
-Three addresses serve different purposes:
+\Needspace{15\baselineskip}
+\subsection{Identity, representation and storage}
 \begin{code}
-# Identity of a university, stored as the RDF subject:
+# RDF subject identifying a university:
 https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/dai-hoc-bach-khoa-ha-noi
-
-# Query endpoint of the optional local Fuseki dataset:
+# Local query endpoint:
 http://localhost:3030/vnedu/sparql
-
-# Graph Store Protocol target for its default graph:
+# Graph Store Protocol target:
 http://localhost:3030/vnedu/data?default
 \end{code}
-Moving storage to Fuseki does not require rewriting the first address as a localhost
-address. Nor does uploading triples automatically make that resource IRI dereferenceable:
-the canonical HTTP origin must publish a representation separately. The project uses
-\term{ontology\#ClassName} hash identifiers for terms and slash identifiers under
-\term{resource/} for entities. The static publisher creates related \term{.ttl} and
-\term{.jsonld} documents and HTML with embedded JSON-LD.
+Uploading RDF does not make its canonical IRIs dereferenceable automatically.
+The publisher independently creates HTML, Turtle and JSON-LD descriptions. Ontology terms
+retain hash IRIs; entity and observation identifiers use slash paths.
+Immutable 2.1 and 2.2 version artifacts are now generated under \term{ontology/}.
+Dynamic version routes support RDF content negotiation and return 404 for unknown versions.
 
-The canonical GitHub Pages origin is different from the Flask service. The latter's
-content negotiation cannot change GitHub Pages responses. The implementation does not
-provide the classic entity-to-document HTTP 303 pattern at the canonical entity URI;
-this is an architectural limitation relative to the distinction explained in
-\emph{Cool URIs}~\cite{uris}, not evidence that no machine-readable RDF exists.
+GitHub Pages remains a separate HTTP origin from Flask. Its static representation links
+and embedded JSON-LD do not implement Flask's negotiation, nor the entity-to-document
+303 pattern discussed in \emph{Cool URIs}~\cite{uris}. Adding Fuseki cannot fix those origin-level
+behaviors. Version artifacts are implemented and tested locally; their production deployment
+requires promotion of the review branch.
 
 \begin{figure}[htbp]\centering
 \resizebox{\textwidth}{!}{\input{figures/deployment-en.tex}}
-\caption[URI publication and optional Fuseki execution]{Publication and execution paths in the repository. Solid arrows show implemented
-data/request paths; the dashed Fuseki branch is optional. Render explicitly starts the
-local RDFLib backend. Storage and query endpoints do not replace the canonical RDF identifiers.}
-\label{fig:deployment}
+\caption[URI publication and optional Fuseki execution]{Publication and storage paths. The optional Fuseki
+branch has a verified Linux acceptance run; Render still explicitly selects local RDFLib.
+Storage does not replace the canonical identifiers.}\label{fig:deployment}
 \end{figure}
 
-\subsection{What the repository actually implements}
+\subsection{Safe loading and reproducible runtime}
+The revised loader requires a successfully validated release before network writes.
+It targets an existing explicitly named dataset rather than creating one implicitly.
+An empty graph can be loaded directly. Replacement of a nonempty default graph requires
+both \term{--replace} and a new \term{--backup} path; the backup is created exclusively,
+so an older backup cannot be silently overwritten. HTTP redirects and error responses are
+rejected. After PUT, the loader retrieves the entire default graph and checks RDF graph
+isomorphism, including blank nodes, rather than relying on a triple count.
+
+Graph Store PUT replaces the selected graph~\cite{gsp}; named graphs are untouched by
+this loader. Credentials are read from environment variables, not command-line passwords.
+A failed comparison preserves the backup for operator recovery; it is not a distributed
+transaction or automatic rollback. Operators must stop concurrent writers during a release:
+a backup followed by PUT does not provide compare-and-swap concurrency control.
+
+The runtime setup pins Apache Jena Fuseki 6.2.0 and verifies its published SHA-512 digest.
+The local launcher requires Java 21, validates the release, binds to loopback, and enables
+only query access with a configured timeout. Its file mode reloads the graph at startup;
+the separate acceptance harness explicitly tests persistent TDB2.
+The optional legacy Docker recipe now requires an operator-selected image and password,
+and binds port 3030 only on loopback. That Docker configuration was not the tested runtime.
+
+\subsection{Executed end-to-end acceptance evidence}
+The actual test ran on Linux GitHub Actions with Fuseki 6.2.0 and Temurin Java 21.0.12.1,
+on 7 October 2026 at 01:50 UTC. The tested code revision is \term{ab0033d}.
+The input hash, JAR hash, runtime details and assertions are archived in
+\term{data/reports/fuseki-e2e.json}; the corresponding
+\href{https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/actions/runs/37559070543}{CI run}
+completed successfully.
+
 \begin{table}[htbp]\centering\small
-\caption{Implementation evidence and verification status for Fuseki.}\label{tab:fuseki-status}
-\begin{tabularx}{\textwidth}{p{3.9cm}XX}\toprule
-Component & Implemented behavior & Evidence boundary \\\midrule
-\term{fuseki/run\_fuseki.ps1} & Selects an archived Fuseki distribution and starts \term{--file} on \term{/vnedu}. & Read-only in-memory file load; no persistent TDB2 storage in this mode. Not executed in this audit. \\
-\term{fuseki/docker-compose.yml} & Third-party \term{stain/jena-fuseki:latest}, persistent volume, TDB2 setting, dataset name and port 3030. & Configuration exists; image behavior and persistence were not integration-tested. \\
-\term{step5\_load\_fuseki.py} & Ping, dataset lookup/creation, HTTP PUT of \term{vnedu-all.ttl}, then triple-count query. & Optional loader, absent from \term{run\_all.py}; not called against a live store. \\
-\term{app/server.py} & \term{FusekiBackend} proxies SPARQL; \term{auto} selects it after a ping succeeds. & Ping is not a dataset-version check. HTTP behavior has regression coverage, not a live Fuseki certification. \\
-\term{render.yaml} & Starts \term{--backend local}. & The declared public deployment is RDFLib-backed, not Fuseki-backed. \\
+\caption{Measured Fuseki/TDB2 acceptance results.}\label{tab:fuseki-status}
+\begin{tabularx}{\textwidth}{P{6.5cm}X}\toprule
+Check & Observed result \\\midrule
+Load complete validated serving graph & 73,690 triples; graph-isomorphic to local RDF. \\
+Attempt unapproved replacement & Refused before PUT. \\
+Approved replacement with backup & Backup graph-isomorphic to previous contents. \\
+Query parity with RDFLib & Count: 1 row; class totals: 68 rows; programs: 78 rows; explicitly dated leadership: 0 rows. \\
+Stop and restart with the same TDB2 directory & Entire default graph remains isomorphic. \\
+Restart without update permission & SPARQL Update and Graph Store PUT both return HTTP 405. \\
+Read after rejected writes & Graph unchanged and isomorphic. \\
 \bottomrule\end{tabularx}
 \end{table}
 
-The launcher chooses version 3.17.0 for detected Java 8 and 4.10.0 otherwise. It therefore
-does not implement a current-release policy or a complete Java compatibility check. Apache
-recommends current official releases where possible~\cite{fuseki}. The launcher also
-downloads without checking an expected digest. These facts must not be described as a
-hardened, reproducible production installation.
+The test uses a newly created disposable directory and ephemeral loopback port; no existing
+user dataset is overwritten. Zero dated-leadership rows is an honest reflection of missing
+date evidence, not a failed lookup to be filled with invented dates.
 
-\subsection{Load/query sequence and safety gaps}
-For an already running, update-enabled local store, the loader first checks
-\term{/\$/ping}, inspects \term{/\$/datasets/vnedu}, and requests dataset creation if
-the response is 404. Fuseki's administration API supports a dataset name and a TDB2
-type~\cite{fadmin}. The loader then sends the union as Turtle using Graph Store HTTP PUT.
-For the selected default graph, PUT is replacement rather than incremental addition~\cite{gsp}.
-This can erase existing statements in that graph. Named graphs are not loaded by this
-particular request. The final count query alone does not prove graph equivalence.
-
-The legacy loader has no pre-upload \term{require\_validated\_release} call, explicit
-replacement confirmation, backup, or semantic post-upload comparison. Non-404 errors
-from the dataset lookup are not rejected immediately, and the final query response is
-decoded without a preceding \term{raise\_for\_status}. These are remaining implementation
-gaps, not features supplied by Fuseki automatically. No real dataset was overwritten as
-part of this follow-up review.
-
-The Docker example publishes \term{3030:3030}, which is not limited to loopback, and
-contains a fixed demonstration administrator password. Authentication on administration
-routes does not automatically protect query or update routes; access rules must be
-configured explicitly~\cite{fsecurity}. Use a private bind/network, a reviewed and pinned
-image, externally supplied credentials, update restrictions, backups, and backend-level
-query/egress controls before production exposure. The current Flask proxy does not provide
-credentials for a query endpoint requiring authentication.
-
-An end-to-end acceptance run should use a disposable dataset: validate the release; load
-it; compare triple counts and representative query results with the local graph; restart
-the TDB2 service and check persistence; then exercise authorized query access and denied
-updates. Expensive-query cancellation, memory bounds and remote SERVICE policy need
-separate checks. This report does not replace these tests with a successful local RDFLib run.
+The Windows desktop run did not pass startup: JDK socket initialization raised
+\term{Unable to establish loopback connection}. A shorter socket directory did not resolve
+it. This environment limitation is recorded separately; the successful Linux result must
+not be described as a successful Windows deployment.
+Configured timeout is not proof of cancellation under load. Authentication, SERVICE egress,
+concurrent writers, memory limits, disaster recovery and production TLS require separate
+acceptance tests. The verified read-only mode is access restriction, not a full security certification.
 
 \section{Five-star Linked Open Data assessment}
 \label{sec:five-star}
@@ -103,21 +104,21 @@ Level & Criterion, summarized & Project evidence and qualification \\\midrule
 1 & Publicly accessible, openly licensed & Public sample accessible; dataset metadata declares CC BY-SA 4.0. Upstream media retain their own licenses. \\
 2 & Structured, machine-readable & JSON records and parsed RDF graphs, not only screen images or PDFs. \\
 3 & Non-proprietary format & JSON, Turtle and JSON-LD artifacts. \\
-4 & Web identifiers and open Semantic Web standards & Stable-registry HTTP IRIs, RDF descriptions and query interfaces; sampled entity documents parse. Canonical negotiation and version-URI gaps remain. \\
-5 & Connections to other datasets & Corrected local link graph contains 2,398 \term{owl:sameAs}, 88 \term{skos:closeMatch} and 1,188 document-topic links. Existence is measured; every identity assertion is not independently verified. \\
+4 & Web identifiers and open Semantic Web standards & Stable-registry HTTP IRIs, RDF descriptions and query interfaces; sampled entity documents parse. Canonical negotiation remains static; version artifacts are now implemented on the review branch. \\
+5 & Connections to other datasets & Corrected local link graph contains 2,309 \term{owl:sameAs}, 61 \term{skos:closeMatch} and 1,188 document-topic links. Existence is measured; every identity assertion is not independently verified. \\
 \bottomrule\end{tabularx}
 \end{table}
 
 \textbf{Verdict.} The implementation and sampled public RDF support the basic five-star
 publication pattern, subject to the declared licensing scope. This is not an independent
 certification, proof of factual accuracy, or proof that the corrected branch is deployed.
-The URI-version, semantics and operations gaps should be reported alongside the claim,
+Deployment, temporal-evidence and operations limits should be reported alongside the claim,
 not hidden by a five-star badge. Failing a single endpoint probe does not automatically
 reduce an otherwise accessible RDF dataset to a lower star level.
 
 \subsection{Dated HTTP evidence}
 \term{audit/check\_publication.py} performs seven read-only requests with bounded timeouts;
-the result is saved in \term{data/reports/publication-check.json}. The sample was recorded
+the result is saved in \term{data/reports/publication-check.json}. This historical, pre-migration sample was recorded
 on 7 October 2026 at 00:10 ICT (UTC+7). The institution tested was
 \term{resource/university/dai-hoc-bach-khoa-ha-noi}; this is not a random or exhaustive sample.
 
@@ -137,10 +138,10 @@ Local Fuseki \term{/\$/ping} & Connection refused on port 3030; no reachable ser
 
 A Render timeout can reflect a cold start or a network/service problem; it is not proof of
 permanent downtime. The probe did not test SPARQL federation, persistence, admin credentials,
-or all 2,248 local resource identifiers. The existing public deployment remains distinct
+or the full set of resource identifiers. The existing public deployment remains distinct
 from the audited branch, whose Linux CI and local tests validate a different scope.
 
 The media distinction also matters. For example, the shipped HUST logo metadata records
 ``fair use'' while its campus photograph records CC0. Describing or linking such an image
-does not relicense the image under the dataset license. A data publication claim must not
+does not relicense the image under the dataset license. The revised publisher shows a source link, not an embedded image, for unknown, fair-use or unrecognized licenses. A data publication claim must not
 be expanded into a blanket claim that every remotely displayed asset is openly licensed.

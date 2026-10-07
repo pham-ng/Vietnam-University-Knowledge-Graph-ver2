@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+\node[auditbox,text width=4.2cm] (o) at (0,0) {SourceObservation\\Leadership / Measurement / Classification};
+\node[auditbox,text width=3.1cm] (s) at (-4.8,-2.1) {Entity\\institution or person};
+\node[auditbox,text width=3.1cm] (p) at (0,-2.1) {Predicate\\role, count or type};
+\node[auditbox,text width=3.1cm] (v) at (4.8,-2.1) {Value\\person, literal or class};
+\draw[auditarr] (o)--node[auditlabel,above left]{rdf:subject}(s);
+\draw[auditarr] (o)--node[auditlabel,right]{rdf:predicate}(p);
+\draw[auditarr] (o)--node[auditlabel,above right]{rdf:object}(v);
+\node[auditbox,text width=4cm] (e) at (-3,-4.4) {Snapshot digest\\entity-level source context};
+\node[auditbox,text width=4cm,dashed] (t) at (3,-4.4) {validFrom / validThrough\\referenceYear / unit};
+\draw[auditarr] (o.west) to[out=180,in=120] (e.north west);
+\draw[auditarr,dashed] (o.east) to[out=0,in=60] (t.north east);
+\node[font=\small,align=center] at (0,-5.6) {No supplied dates $\Rightarrow$ unknown validity, not current validity.};
+\end{tikzpicture}

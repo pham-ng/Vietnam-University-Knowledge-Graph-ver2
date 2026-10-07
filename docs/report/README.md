@@ -5,8 +5,9 @@ The current technical report is **[main-en.pdf](main-en.pdf)**, with editable so
 complete provenance, certified OWL 2 RL conformance, byte-identical reproduction and comprehensive security.
 It documents the implementation, measured release, audit findings and unresolved limitations.
 
-The expanded edition (7 October 2026) includes six vector diagrams, a concrete Silver-to-RDF
-mapping, a critical ontology-design assessment, a URI/Fuseki implementation walkthrough,
+The expanded edition (7 October 2026, 26 pages) includes seven vector diagrams, a concrete Silver-to-RDF
+mapping, an ontology 2.2 design assessment, evidence-qualified temporal observations, a URI/Fuseki
+implementation walkthrough with Linux TDB2 acceptance evidence, an actual Silk 3.6.0 experiment,
 and a criterion-by-criterion five-star assessment. Five-star publication is not a certificate
 of ontology correctness or production security. The dated seven-request HTTP sample is
 in `data/reports/publication-check.json`; it does not establish deployment of the audited branch.
