@@ -272,8 +272,10 @@ person:tan-yap-peng  a vnedu:InstitutionLeader ;  vnedu:leads university:truong-
 
 ## 5. Cây ontology
 
-Ontology [`ontology/vnedu.ttl`](ontology/vnedu.ttl) gồm **34 lớp, 33 thuộc tính quan hệ (đều có domain/range), 20 thuộc tính dữ liệu**, theo
-profile **OWL 2 RL** (để suy luận vừa đúng vừa đầy đủ). Mỗi lớp đều nối sang lớp tương ứng của schema.org / FOAF / DBpedia.
+Ontology [`ontology/vnedu.ttl`](ontology/vnedu.ttl) trong bản audited hiện tại gồm **39 lớp, 38 thuộc tính quan hệ, 27 thuộc tính dữ liệu và 836 triple ontology**, theo
+được materialize bằng bộ luật `owlrl` theo mục tiêu OWL 2 RL; dự án **chưa tuyên bố chứng nhận
+profile OWL 2 RL hình thức**. Chỉ các lớp/thuộc tính có ánh xạ phù hợp mới được nối thận trọng
+sang schema.org / FOAF / DBpedia, không phải mọi lớp đều tương đương với vocabulary bên ngoài.
 👉 Xem bản **tương tác** (bấm để mở/thu nhánh): [trang Ontology](https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology).
 
 ```mermaid

@@ -300,12 +300,12 @@ vnedu:memberOf a owl:ObjectProperty ;
     rdfs:label "member of"@en , "là thành viên của"@vi ;
     rdfs:domain vnedu:EducationalOrganization ;
     rdfs:range vnedu:HigherEducationInstitution ;
-    rdfs:subPropertyOf schema:parentOrganization ;
+    rdfs:comment "Institutional membership is intentionally not aligned with schema:parentOrganization: membership does not by itself prove legal or structural parenthood."@en ;
     owl:inverseOf vnedu:hasMember .
 
 vnedu:hasMember a owl:ObjectProperty ;
     rdfs:label "has member"@en , "có đơn vị thành viên"@vi ;
-    rdfs:subPropertyOf schema:subOrganization .
+    rdfs:comment "Inverse of vnedu:memberOf; it is not asserted to be schema:subOrganization without separate structural evidence."@en .
 
 vnedu:branchOf a owl:ObjectProperty , owl:FunctionalProperty ;
     rdfs:label "branch of"@en , "là phân hiệu của"@vi ;
@@ -569,7 +569,8 @@ schema:image a owl:ObjectProperty ; rdfs:label "image"@en , "hình ảnh"@vi .
 schema:ImageObject a owl:Class ; rdfs:label "image object"@en , "tệp ảnh"@vi .
 schema:thumbnailUrl a owl:ObjectProperty ; rdfs:label "thumbnail"@en , "ảnh thu nhỏ"@vi .
 schema:mainEntityOfPage a owl:ObjectProperty ; rdfs:label "description page"@en , "trang mô tả tệp"@vi .
-schema:license a owl:DatatypeProperty ; rdfs:label "license"@en , "giấy phép"@vi .
+# Do not locally type schema:license: schema.org permits a URL or CreativeWork as
+# a license value, while this project records the ontology licence with dct:license.
 schema:creditText a owl:DatatypeProperty ; rdfs:label "credit"@en , "tác giả / ghi công"@vi .
 
 

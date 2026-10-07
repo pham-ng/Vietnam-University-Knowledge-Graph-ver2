@@ -158,6 +158,7 @@ def main() -> None:
             f"*Sinh tự động từ `ontology/vnedu.ttl` bởi `scripts/gen_docs.py`* — {n_cls} lớp, {n_op} thuộc tính quan hệ, "
             f"{n_dp} thuộc tính dữ liệu, {len(g)} triple.", "",
             "Mũi tên rỗng = kế thừa (`rdfs:subClassOf`); mũi tên có nhãn = thuộc tính quan hệ (domain → range).", "",
+            "![Ontology overview generated from the committed Turtle](report/figures/ontology-overview.png)", "",
             ontology_diagram(g), "", "## Tiên đề phục vụ suy luận", ""] + axioms_table(g)
     (DOCS / "ontology.md").write_text("\n".join(text) + "\n", encoding="utf-8")
     (DOCS / "architecture.md").write_text(ARCH, encoding="utf-8")

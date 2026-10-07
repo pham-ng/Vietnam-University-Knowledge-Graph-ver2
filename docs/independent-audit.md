@@ -57,7 +57,7 @@ as an accuracy estimate in the new report.
 
 ### Follow-up: ontology design, URI publication and Fuseki (7 October 2026)
 
-The expanded English report adds five vector figures to the original architecture figure
+The expanded English report adds the ontology overview and five vector figures to the original architecture figure
 and distinguishes implemented mechanisms from deployment evidence. It corrects the earlier
 URI-strategy claim: publishing RDF statements about an external URI is valid and does not
 in itself lose provenance or change the external dataset.
@@ -68,6 +68,7 @@ The following design risks were fixed in the corrected branch:
   asserted as a direct fact;
 - ownership/governance no longer force `schema:parentOrganization`, and leadership no longer forces
   `schema:employee`;
+- institutional membership no longer forces `schema:parentOrganization` or `schema:subOrganization`;
 - legal classifications, program/provider relations and leadership/education facts are qualified by
   evidence observations, dates and temporal status rather than over-strong global axioms;
 - the Fuseki loader is now a release-gated step with explicit dataset selection, safe replacement,

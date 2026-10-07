@@ -1,5 +1,18 @@
 \subsection{Visual specification of ontology 2.2}
 \begin{figure}[htbp]\centering
+\IfFileExists{docs/report/figures/ontology-overview.png}{%
+  \includegraphics[width=\textwidth]{docs/report/figures/ontology-overview.png}%
+}{%
+  \includegraphics[width=\textwidth]{figures/ontology-overview.png}%
+}
+\caption[Ontology overview generated from Turtle]{Ontology 2.2 overview generated deterministically from the
+committed \texttt{ontology/vnedu.ttl}. The left panel shows named local classes and explicit subclass
+edges; the right panel shows selected domain--property--range signatures. This is a reproducible
+TTL-derived diagram for the report, not a screenshot of Protégé and not a complete rendering of every axiom.}
+\label{fig:ontology-overview}
+\end{figure}
+
+\begin{figure}[htbp]\centering
 \input{figures/taxonomy-en.tex}
 \caption[Organizational class hierarchy]{Selected organizational hierarchy. Arrows point from subclass to superclass.
 The four legal-type classes are no longer globally disjoint: an enduring institution can change type.
@@ -28,7 +41,7 @@ changes without reminting existing entity identifiers.
 \toprule Concern & Implemented correction & Evidence boundary \\\midrule\endfirsthead
 \toprule Concern & Implemented correction & Evidence boundary \\\midrule\endhead
 Supervision versus inclusion &
-Removed parent-organization alignments from governance, subordination and ownership. Membership and branch alignments remain. &
+Removed parent-organization alignments from governance, subordination, ownership and membership. The branch alignment remains because a branch is a structural subdivision. &
 Supervision or investment does not automatically establish organizational parenthood. \\
 Direct versus indirect governance &
 Added \term{directlyGovernedBy} and \term{reportedGovernedBy} under the broad \term{governedBy}; only the broad relation propagates through superiors. &
@@ -53,6 +66,30 @@ Archived 2.1 and 2.2 Turtle; generated HTML, Turtle and JSON-LD version document
 Local verification does not prove deployment at the canonical origin. \\
 \bottomrule
 \end{longtable}}
+
+\subsection{Standards and conformance assessment}
+The audited ontology follows the RDF 1.1/Turtle and OWL 2 RDF serialisation conventions and
+uses explicit OWL classes, object properties, datatype properties, inverse properties,
+selected functional properties, disjointness, property chains and defined classes. The
+current source contains \metricClasses{} local classes, \metricObjectProperties{} local object
+properties, \metricDataProperties{} local datatype properties and \metricOntologyTriples{} ontology triples.
+The visualisation above is generated from those current source counts, so it can be regenerated
+after an ontology change rather than becoming a stale hand-drawn figure.
+
+The design is suitable for a standards-based academic prototype, but it is not an automatic
+``five-star'' certification. The following claims are deliberately separated:
+\begin{longtable}{P{4.0cm}P{5.6cm}P{5.0cm}}
+\caption{Standards assessment and remaining boundaries.}\label{tab:standards-assessment}\\
+\toprule Area & Evidence in this release & Honest qualification \\\midrule\endfirsthead
+\toprule Area & Evidence in this release & Honest qualification \\\midrule\endhead
+RDF and URI design & Stable HTTPS namespace, version IRI, Turtle/JSON-LD/N-Triples publication, content negotiation checks and licence metadata. & Deployment and long-term availability at the canonical origin remain operational responsibilities. \\
+OWL 2 modelling & The ontology parses as RDF, uses OWL vocabulary, inverse relations, chains, restrictions, equivalent classes and disjointness. & The project uses an \texttt{owlrl} rule implementation; no formal OWL 2 RL/DL profile certification is claimed. \\
+Constraint validation & SHACL shapes validate required fields, datatypes, temporal intervals and observation structure; the current suite reports zero violations under its policy. & Warnings reflect incomplete source coverage; SHACL validation is not proof of factual truth. \\
+Provenance and time & PROV-O-style source links and reified evidence observations preserve snapshot context and optional temporal qualifiers. & The current Silver snapshot still lacks claim-level dates for many facts; an undated observation is not a current fact. \\
+Vocabulary reuse & Conservative links to Schema.org, FOAF, DBpedia, SKOS, PROV-O and external identifiers. & External ontologies are not fully imported and reasoned over; alignments must remain semantically narrow. \\
+Linked Data stars & Machine-readable publication, stable links, external links, licence and open formats are implemented. & The five-star scheme is a publication maturity heuristic, not a formal conformance test, and does not certify accuracy, security or production performance. \\
+\bottomrule
+\end{longtable}
 
 \subsection{Qualified observations and temporal interpretation}
 The transformer creates \metricObservations{} \term{SourceObservation} records, including
