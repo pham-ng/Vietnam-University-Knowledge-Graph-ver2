@@ -159,7 +159,7 @@ def main() -> None:
             f"{n_dp} thuộc tính dữ liệu, {len(g)} triple.", "",
             "Release 2.2 passes the OWL API `OWL2RLProfile` gate with zero violations; see `data/reports/owl2rl-profile.txt`.", "",
             "Mũi tên rỗng = kế thừa (`rdfs:subClassOf`); mũi tên có nhãn = thuộc tính quan hệ (domain → range).", "",
-            "![Ontology overview generated from the committed Turtle](report/figures/ontology-overview.png)", "",
+            "![Protégé OntoGraf screenshot of the committed ontology](report/figures/ontology-protege-screenshot.png)", "",
             ontology_diagram(g), "", "## Tiên đề phục vụ suy luận", ""] + axioms_table(g)
     (DOCS / "ontology.md").write_text("\n".join(text) + "\n", encoding="utf-8")
     (DOCS / "architecture.md").write_text(ARCH, encoding="utf-8")

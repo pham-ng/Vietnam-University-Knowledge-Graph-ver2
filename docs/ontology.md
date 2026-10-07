@@ -6,7 +6,7 @@ Release 2.2 passes the OWL API `OWL2RLProfile` gate with zero violations; see `d
 
 Mũi tên rỗng = kế thừa (`rdfs:subClassOf`); mũi tên có nhãn = thuộc tính quan hệ (domain → range).
 
-![Ontology overview generated from the committed Turtle](report/figures/ontology-overview.png)
+![Protégé OntoGraf screenshot of the committed ontology](report/figures/ontology-protege-screenshot.png)
 
 ```mermaid
 classDiagram

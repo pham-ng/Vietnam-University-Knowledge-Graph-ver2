@@ -47,7 +47,7 @@ def class_colour(name: str) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--ontology", type=Path, default=Path("ontology/vnedu.ttl"))
-    parser.add_argument("--output", type=Path, default=Path("docs/report/figures/ontology-overview.png"))
+    parser.add_argument("--output", type=Path, default=Path("docs/report/figures/ontology-ttl-derived-reference.png"))
     args = parser.parse_args()
 
     graph = Graph().parse(args.ontology, format="turtle")
