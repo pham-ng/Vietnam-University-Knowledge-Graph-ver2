@@ -223,7 +223,7 @@ PREFIX_MAP = (("vnedu:", config.ONTO_NS), ("", config.RES_NS),
               ("skos:", "http://www.w3.org/2004/02/skos/core#"), ("foaf:", "http://xmlns.com/foaf/0.1/"),
               ("geo:", "http://www.w3.org/2003/01/geo/wgs84_pos#"), ("wd:", "http://www.wikidata.org/entity/"),
               ("dbr:", "http://dbpedia.org/resource/"), ("dbo:", "http://dbpedia.org/ontology/"),
-              ("schema:", "https://schema.org/"), ("prov:", "http://www.w3.org/ns/prov#"),
+              ("schema:", "http://schema.org/"), ("prov:", "http://www.w3.org/ns/prov#"),
               ("dct:", "http://purl.org/dc/terms/"), ("void:", "http://rdfs.org/ns/void#"),
               ("xsd:", "http://www.w3.org/2001/XMLSchema#"))
 

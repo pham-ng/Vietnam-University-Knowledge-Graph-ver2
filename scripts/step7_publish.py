@@ -296,7 +296,7 @@ def institution_panels() -> dict[str, dict]:
     return out
 
 
-SCHEMA_NS = "https://schema.org/"
+SCHEMA_NS = "http://schema.org/"
 MEDIA_PROPS = {URIRef(SCHEMA_NS + "logo"), URIRef(SCHEMA_NS + "image")}
 LONG_TEXT = {URIRef("http://dbpedia.org/ontology/abstract"), URIRef(config.ONTO_NS + "history")}
 

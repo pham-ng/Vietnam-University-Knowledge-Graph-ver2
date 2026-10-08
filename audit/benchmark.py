@@ -113,7 +113,7 @@ AGG = [
      "SELECT (COUNT(?m) AS ?n) WHERE { ?u rdfs:label 'Đại học Quốc gia Hà Nội'@vi ; vnedu:hasMember ?m }"),
     ("Nhiều bước: cựu sinh viên là chính khách của các trường thuộc ĐHQG Hà Nội",
      None,
-     "SELECT (COUNT(DISTINCT ?p) AS ?n) WHERE { ?u rdfs:label 'Đại học Quốc gia Hà Nội'@vi . { ?p vnedu:alumnusOf ?u } UNION { ?u vnedu:hasMember ?m . ?p vnedu:alumnusOf ?m } ?p <https://schema.org/hasOccupation> <http://www.wikidata.org/entity/Q82955> }"),
+     "SELECT (COUNT(DISTINCT ?p) AS ?n) WHERE { ?u rdfs:label 'Đại học Quốc gia Hà Nội'@vi . { ?p vnedu:alumnusOf ?u } UNION { ?u vnedu:hasMember ?m . ?p vnedu:alumnusOf ?m } ?p <http://schema.org/hasOccupation> <http://www.wikidata.org/entity/Q82955> }"),
     ("Cơ sở đã giải thể / sáp nhập và giai đoạn hoạt động",
      None,
      "SELECT (COUNT(?u) AS ?n) WHERE { ?u a vnedu:DefunctInstitution }"),

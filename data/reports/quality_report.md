@@ -6,23 +6,23 @@
 
 | Tầng | Tệp | Số lượng | SHA-256 | Tạo lúc |
 |---|---|---|---|---|
-| bronze | `data/bronze/dbp_years.json` | 72 records | `7a669856282b` | 2026-10-06T21:38:54 |
-| bronze | `data/bronze/viwiki_images.json` | 280 records | `25e5393d6f99` | 2026-10-06T21:38:54 |
-| bronze | `data/bronze/viwiki_links.json` | 80 records | `d80ec77b0f91` | 2026-10-06T21:38:51 |
-| bronze | `data/bronze/viwiki_pages.json` | 279 records | `c210a0fb69ca` | 2026-10-06T21:38:51 |
-| bronze | `data/bronze/wd_alumni.json` | 1,531 records | `3bb40dc83253` | 2026-10-06T21:38:55 |
-| bronze | `data/bronze/wd_entities.json` | 12 records | `9bf354f87f33` | 2026-10-06T21:38:55 |
-| bronze | `data/bronze/wd_institutions.json` | 363 records | `f3e31d6e0d6d` | 2026-10-06T21:38:54 |
-| bronze | `data/bronze/wd_provinces.json` | 63 records | `e27588d03d60` | 2026-10-06T21:38:55 |
-| silver | `data/silver/governing_bodies.json` | 50 records | `c04e931b132e` | 2026-10-06T21:40:37 |
-| silver | `data/silver/institutions.json` | 300 records | `bbbd5e106f79` | 2026-10-06T21:40:37 |
-| silver | `data/silver/people.json` | 1,695 records | `7cd82e3d0504` | 2026-10-06T21:40:37 |
-| silver | `data/silver/provinces.json` | 63 records | `a3275bbe296d` | 2026-10-06T21:40:37 |
-| gold | `data/gold/vnedu-all.ttl` | 48,428 triples | `db75811ba8be` | 2026-10-06T21:41:55 |
-| gold | `data/gold/vnedu-data.ttl` | 22,903 triples | `74349e0df2e5` | 2026-10-06T21:40:40 |
-| gold | `data/gold/vnedu-inferred.ttl` | 20,990 triples | `1e4c3cb91894` | 2026-10-06T21:41:38 |
-| gold | `data/gold/vnedu-links.ttl` | 3,674 triples | `9058bbfe77eb` | 2026-10-06T21:40:42 |
-| gold | `data/gold/void.ttl` | 96 triples | `d7aa7ed1104b` | 2026-10-06T21:40:43 |
+| bronze | `data/bronze/dbp_years.json` | 72 records | `c0b0f72eae48` | 2026-10-08T10:27:16 |
+| bronze | `data/bronze/viwiki_images.json` | 280 records | `4df5192d37df` | 2026-10-08T10:27:16 |
+| bronze | `data/bronze/viwiki_links.json` | 80 records | `c1a26b63cff7` | 2026-10-08T10:27:16 |
+| bronze | `data/bronze/viwiki_pages.json` | 279 records | `f3a91fa46eb3` | 2026-10-08T10:27:16 |
+| bronze | `data/bronze/wd_alumni.json` | 1,531 records | `af11c19def93` | 2026-10-08T10:27:16 |
+| bronze | `data/bronze/wd_entities.json` | 12 records | `9dff7acfa914` | 2026-10-08T10:27:16 |
+| bronze | `data/bronze/wd_institutions.json` | 363 records | `3539a0481f33` | 2026-10-08T10:27:16 |
+| bronze | `data/bronze/wd_provinces.json` | 63 records | `9bc0e96c5231` | 2026-10-08T10:27:16 |
+| silver | `data/silver/governing_bodies.json` | 50 records | `6bee7090a9a7` | 2026-10-08T10:27:16 |
+| silver | `data/silver/institutions.json` | 300 records | `b2b5ced4ac50` | 2026-10-08T10:27:16 |
+| silver | `data/silver/people.json` | 1,695 records | `c32c2a143d12` | 2026-10-08T10:27:16 |
+| silver | `data/silver/provinces.json` | 63 records | `4cbac2c46a0d` | 2026-10-08T10:27:16 |
+| gold | `data/gold/vnedu-all.ttl` | 48,418 triples | `137c62b73aa5` | 2026-10-08T10:27:42 |
+| gold | `data/gold/vnedu-data.ttl` | 22,903 triples | `73d2ecace72d` | 2026-10-08T10:27:17 |
+| gold | `data/gold/vnedu-inferred.ttl` | 20,990 triples | `0a91cb037fcf` | 2026-10-08T10:27:35 |
+| gold | `data/gold/vnedu-links.ttl` | 3,674 triples | `9058bbfe77eb` | 2026-10-08T10:27:17 |
+| gold | `data/gold/void.ttl` | 96 triples | `64829a0cf1a6` | 2026-10-08T10:27:17 |
 
 ## 2. Độ đầy đủ — 271 cơ sở giáo dục đại học (tầng silver)
 
@@ -124,5 +124,5 @@ Giá trị chưa phân giải được, cần rà soát tay (`unresolved.csv`): 
 | ★ | Công khai, giấy phép mở | `dct:license` CC BY-SA 4.0 trong VoID/DCAT; giấy phép từng nguồn trong `*.meta.json` |
 | ★★ | Có cấu trúc, máy đọc được | JSON (bronze/silver), RDF (gold) |
 | ★★★ | Định dạng mở | JSON, CSV, Turtle |
-| ★★★★ | Chuẩn W3C, URI dereference được | RDF/OWL 2 RL/SHACL/SPARQL 1.1/PROV-O; 48,428 triple (trong đó 20,990 suy luận); HTTP URI + content negotiation (`app/server.py`) |
+| ★★★★ | Chuẩn W3C, URI dereference được | RDF/OWL 2 RL/SHACL/SPARQL 1.1/PROV-O; 48,418 triple (trong đó 20,990 suy luận); HTTP URI + content negotiation (`app/server.py`) |
 | ★★★★★ | Liên kết tới dataset khác | 3,674 liên kết tới Wikidata, DBpedia, ROR, GeoNames, Wikipedia; `void:Linkset` |

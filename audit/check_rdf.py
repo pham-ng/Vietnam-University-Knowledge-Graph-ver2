@@ -36,7 +36,7 @@ def audit(name, data: Graph, onto: Graph, ns: str):
     res["thực thể không có rdf:type"] = sum(1 for s in subjects if (s, RDF.type, None) not in data)
     declared = {p for p in onto.subjects(RDF.type, None)}
     used = {p for p in data.predicates() if str(p).startswith(ns.split("resource")[0]) or str(p).startswith(str(ns))}
-    std = ("http://www.w3.org/", "http://xmlns.com/foaf/", "https://schema.org/", "http://purl.org/dc/", "http://rdfs.org/ns/void#",
+    std = ("http://www.w3.org/", "http://xmlns.com/foaf/", "http://schema.org/", "http://purl.org/dc/", "http://rdfs.org/ns/void#",
            "http://dbpedia.org/ontology/")
     own_preds = {p for p in data.predicates() if not str(p).startswith(std)}
     res["thuộc tính riêng dùng trong dữ liệu"] = len(own_preds)

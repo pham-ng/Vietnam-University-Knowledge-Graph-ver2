@@ -13,7 +13,7 @@ import config  # noqa: E402
 
 VNEDU = Namespace(config.ONTO_NS)
 RES = Namespace(config.RES_NS)
-SCHEMA = Namespace("https://schema.org/")
+SCHEMA = Namespace("http://schema.org/")
 DBO = Namespace("http://dbpedia.org/ontology/")
 GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
 VOID = Namespace("http://rdfs.org/ns/void#")

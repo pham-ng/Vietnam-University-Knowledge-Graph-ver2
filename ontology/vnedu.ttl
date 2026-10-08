@@ -5,7 +5,7 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
 @prefix foaf:   <http://xmlns.com/foaf/0.1/> .
-@prefix schema: <https://schema.org/> .
+@prefix schema: <http://schema.org/> .
 @prefix dbo:    <http://dbpedia.org/ontology/> .
 @prefix dct:    <http://purl.org/dc/terms/> .
 @prefix vann:   <http://purl.org/vocab/vann/> .
@@ -25,6 +25,9 @@
 #      (shapes/vnedu-shapes.ttl) vì OWL dùng giả định thế giới mở.
 #   6. Lớp định nghĩa (defined class) để bộ suy luận tự phân loại cá thể;
 #      tiên đề phân biệt (disjoint) + thuộc tính hàm (functional) để phát hiện dữ liệu sai.
+#   7. KHÔNG đặt rdfs:range là xsd:gYear / xsd:date: hai kiểu này không thuộc OWL 2 datatype map
+#      nên HermiT (bộ suy luận mặc định của Protégé) từ chối nạp ontology. Kiểu dữ liệu của
+#      foundingYear, dissolutionYear, birthDate được kiểm tra trong SHACL.
 ###############################################################################
 
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology>
@@ -34,11 +37,11 @@
 Luật Giáo dục đại học 2012, sửa đổi 2018), cơ quan chủ quản, lãnh đạo, cựu sinh viên, đơn vị hành chính
 (gồm cả sắp xếp tỉnh năm 2025), ngành đào tạo theo Thông tư 09/2022/TT-BGDĐT."""@vi ;
     dct:created "2026-10-05"^^xsd:date ;
-    dct:modified "2026-10-07"^^xsd:date ;
+    dct:modified "2026-10-08"^^xsd:date ;
     dct:creator "VN-Edu LOD project" ;
     dct:source <https://www.wikidata.org/> , <https://vi.wikipedia.org/> ;
     dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
-    owl:versionInfo "2.1 — đủ domain/range, căn chỉnh DBpedia/schema.org, quan hệ lịch sử tổ chức và nơi sinh/quốc tịch" ;
+    owl:versionInfo "2.2 — tương thích Protégé/HermiT, schema.org dùng http://; 2.1 — đủ domain/range, căn chỉnh DBpedia/schema.org, quan hệ lịch sử tổ chức và nơi sinh/quốc tịch" ;
     owl:versionIRI <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology/2.1> ;
     owl:priorVersion <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology/2.0> ;
     vann:preferredNamespacePrefix "vnedu" ;
@@ -174,9 +177,8 @@ vnedu:MemberInstitution a owl:Class ;
 vnedu:DefunctInstitution a owl:Class ;
     rdfs:label "Defunct institution"@en , "Cơ sở đã giải thể / sáp nhập"@vi ;
     rdfs:subClassOf vnedu:EducationalOrganization .
-[ a owl:Class ; owl:intersectionOf ( vnedu:EducationalOrganization
-    [ a owl:Restriction ; owl:onProperty vnedu:dissolutionYear ; owl:someValuesFrom xsd:gYear ] ) ]
-    rdfs:subClassOf vnedu:DefunctInstitution .
+# Có năm giải thể => là DefunctInstitution: biểu diễn bằng rdfs:domain của vnedu:dissolutionYear
+# (hợp lệ cả OWL 2 RL lẫn OWL 2 DL; không cần nhắc tới xsd:gYear mà HermiT/Protégé không hỗ trợ).
 
 # Cá thể tham chiếu dùng trong lớp định nghĩa (thông tin chi tiết nằm trong dữ liệu)
 vnedu:MinistryOfNationalDefence a owl:NamedIndividual , vnedu:Ministry ;
@@ -424,13 +426,13 @@ vnedu:website a owl:ObjectProperty ;
 
 vnedu:foundingYear a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "founding year"@en , "năm thành lập"@vi ;
-    rdfs:domain vnedu:Organization ;
-    rdfs:range xsd:gYear .
+    rdfs:comment "Giá trị là xsd:gYear; kiểu dữ liệu được kiểm tra bằng SHACL (xem ghi chú đầu tệp)."@vi ;
+    rdfs:domain vnedu:Organization .
 
 vnedu:dissolutionYear a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "dissolution year"@en , "năm giải thể / sáp nhập"@vi ;
-    rdfs:domain vnedu:Organization ;
-    rdfs:range xsd:gYear .
+    rdfs:comment "Giá trị là xsd:gYear; kiểu dữ liệu được kiểm tra bằng SHACL. Domain là DefunctInstitution: cơ sở có năm giải thể được suy ra là đã giải thể / sáp nhập."@vi ;
+    rdfs:domain vnedu:DefunctInstitution .
 
 vnedu:admissionCode a owl:DatatypeProperty ;
     rdfs:label "admission code"@en , "mã trường (tuyển sinh)"@vi ;
@@ -515,8 +517,8 @@ vnedu:area a owl:DatatypeProperty ;
 
 vnedu:birthDate a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "birth date"@en , "ngày sinh"@vi ;
-    rdfs:domain vnedu:Person ;
-    rdfs:range xsd:date .
+    rdfs:comment "Giá trị là xsd:date; kiểu dữ liệu được kiểm tra bằng SHACL."@vi ;
+    rdfs:domain vnedu:Person .
 
 vnedu:honorific a owl:DatatypeProperty ;
     rdfs:label "academic title / rank"@en , "học hàm, học vị, quân hàm"@vi ;

@@ -9,6 +9,6 @@ SELECT ?truong (COUNT(DISTINCT ?p) AS ?so_cuu_sv) (COUNT(DISTINCT ?ck) AS ?chinh
 WHERE {
   ?p a vnedu:Alumnus ; vnedu:alumnusOf ?u .
   ?u rdfs:label ?truong FILTER(LANG(?truong) = "vi")
-  OPTIONAL { ?p <https://schema.org/hasOccupation> <http://www.wikidata.org/entity/Q82955> BIND(?p AS ?ck) }
+  OPTIONAL { ?p <http://schema.org/hasOccupation> <http://www.wikidata.org/entity/Q82955> BIND(?p AS ?ck) }
 }
 GROUP BY ?truong ORDER BY DESC(?so_cuu_sv) LIMIT 12
