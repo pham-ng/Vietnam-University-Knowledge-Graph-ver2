@@ -39,6 +39,40 @@ labels stored in the project ontology.}\label{fig:ontology-graphdb-visual}
 \end{figure}
 
 \begin{figure}[htbp]\centering
+\IfFileExists{docs/report/figures/ontology-protege-relations.png}{%
+  \includegraphics[width=\textwidth]{docs/report/figures/ontology-protege-relations.png}%
+}{%
+  \includegraphics[width=\textwidth]{figures/ontology-protege-relations.png}%
+}
+\caption[Protégé object-property signature]{Direct screenshot of Protégé's Object properties view for
+the committed ontology. The selected \term{governedBy} relation is displayed with bilingual labels,
+its comment, domain \term{EducationalOrganization}, range \term{GoverningBody}, and its inverse
+relation. This is the property-signature view used to verify that the graph has database-like
+domain--relationship--range discipline; it is not a hand-drawn diagram.}\label{fig:ontology-protege-relations}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\IfFileExists{docs/report/figures/ontology-graphdb-relations.png}{%
+  \includegraphics[width=\textwidth]{docs/report/figures/ontology-graphdb-relations.png}%
+}{%
+  \includegraphics[width=\textwidth]{figures/ontology-graphdb-relations.png}%
+}
+\caption[GraphDB domain--range relation graph]{Direct screenshot of GraphDB Workbench using the saved
+configuration \texttt{VN-Edu ontology domain-range relations}. The configuration expands a class using
+the ontology's asserted object-property domains and ranges, so the displayed edges include
+\term{governedBy}, \term{memberOf}, \term{ownedBy}, \term{ownership}, \term{offersProgram},
+\term{offeredBy}, \term{hasMember}, \term{trainsMajor} and related links. The graph is backed by
+the local repository \texttt{vnedu-ontology-d}, not generated from a separate illustration.}
+\label{fig:ontology-graphdb-relations}
+\end{figure}
+
+The two relation views complement one another. Protégé exposes the OWL property signature and makes
+the domain, range, inverse and functional characteristics auditable one property at a time; GraphDB
+renders the same class--property--class pattern as a navigable network. OntoGraf's current plug-in
+session rendered the subclass hierarchy reliably but did not expose all domain--range arcs in its
+Arc Types panel, so this report does not mislabel the GraphDB network as a Protégé screenshot.
+
+\begin{figure}[htbp]\centering
 \input{figures/taxonomy-en.tex}
 \caption[Organizational class hierarchy]{Selected organizational hierarchy. Arrows point from subclass to superclass.
 The four legal-type classes are no longer globally disjoint: an enduring institution can change type.
