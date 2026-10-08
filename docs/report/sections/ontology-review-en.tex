@@ -39,6 +39,22 @@ labels stored in the project ontology.}\label{fig:ontology-graphdb-visual}
 \end{figure}
 
 \begin{figure}[htbp]\centering
+\IfFileExists{docs/report/figures/ontology-graphdb-hei-multilevel.png}{%
+  \includegraphics[width=\textwidth]{docs/report/figures/ontology-graphdb-hei-multilevel.png}%
+}{%
+  \includegraphics[width=\textwidth]{figures/ontology-graphdb-hei-multilevel.png}%
+}
+\caption[GraphDB full multi-level relation view]{Direct screenshot of GraphDB Workbench after
+loading the gold serving union into \texttt{vnedu-ontology-d}. This broader saved view exposes
+multiple education-organization subclasses, \term{AcademicProgram}, \term{Major}, \term{Person},
+\term{GoverningBody}, \term{BranchCampus}, ownership vocabulary and domain--range relation labels
+in one repository-backed canvas. It is intentionally a selected multi-level neighborhood rather
+than a claim that all 74,000+ triples should be rendered simultaneously; the complete graph would
+be unreadable without filtering.}
+\label{fig:ontology-graphdb-hei-multilevel}
+\end{figure}
+
+\begin{figure}[htbp]\centering
 \IfFileExists{docs/report/figures/ontology-protege-relations.png}{%
   \includegraphics[width=\textwidth]{docs/report/figures/ontology-protege-relations.png}%
 }{%
