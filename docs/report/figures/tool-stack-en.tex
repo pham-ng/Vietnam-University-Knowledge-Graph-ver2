@@ -1,0 +1,36 @@
+\begin{tikzpicture}[
+  group/.style={draw=black!18, rounded corners=5pt, fill=black!2, minimum width=4.0cm, minimum height=5.6cm},
+  heading/.style={font=\bfseries\small, align=center, text width=3.6cm},
+  badge/.style={draw=black!18, rounded corners=4pt, fill=white, minimum width=3.45cm,
+    minimum height=10mm, align=center, font=\small, text width=3.25cm},
+  arrow/.style={-{Stealth}, thick, draw=accent!80!black}
+]
+\node[group, fill=orange!5, draw=orange!45!black] (data) at (0,0) {};
+\node[group, fill=accent!5, draw=accent!45!black] (semantics) at (4.8,0) {};
+\node[group, fill=blue!5, draw=blue!45!black] (runtime) at (9.6,0) {};
+\node[group, fill=violet!5, draw=violet!45!black] (delivery) at (14.4,0) {};
+
+\node[heading] at (0,2.05) {Data and code};
+\node[badge] at (0,1.0) {\textcolor{orange!80!black}{\Large\bfseries PY}\quad\textsf{Python / RDFLib}};
+\node[badge] at (0,-0.25) {\textcolor{orange!80!black}{\Large\bfseries JSON}\quad\textsf{JSON Schema}};
+\node[badge] at (0,-1.5) {\textcolor{orange!80!black}{\Large\bfseries URI}\quad\textsf{persistent\\registry}};
+
+\node[heading] at (4.8,2.05) {Semantics and validation};
+\node[badge] at (4.8,1.0) {\textcolor{accent!90!black}{\Large\bfseries OWL}\quad\textsf{OWL 2 RL / OWL API}};
+\node[badge] at (4.8,-0.25) {\textcolor{accent!90!black}{\Large\bfseries SHACL}\quad\textsf{constraint shapes}};
+\node[badge] at (4.8,-1.5) {\textcolor{accent!90!black}{\Large\bfseries PROV}\quad\textsf{provenance\\metadata}};
+
+\node[heading] at (9.6,2.05) {Storage and query};
+\node[badge] at (9.6,1.0) {\textcolor{blue!80!black}{\Large\bfseries JENA}\quad\textsf{Fuseki / TDB2}};
+\node[badge] at (9.6,-0.25) {\textcolor{blue!80!black}{\Large\bfseries GDB}\quad\textsf{GraphDB exploration}};
+\node[badge] at (9.6,-1.5) {\textcolor{blue!80!black}{\Large\bfseries SPARQL}\quad\textsf{read-only\\query protocol}};
+
+\node[heading] at (14.4,2.05) {Linking and delivery};
+\node[badge] at (14.4,1.0) {\textcolor{violet!80!black}{\Large\bfseries SILK}\quad\textsf{candidate\\linking 3.6.0}};
+\node[badge] at (14.4,-0.25) {\textcolor{violet!80!black}{\Large\bfseries WEB}\quad\textsf{Flask / Waitress}};
+\node[badge] at (14.4,-1.5) {\textcolor{violet!80!black}{\Large\bfseries CI}\quad\textsf{GitHub Actions / Pages}};
+
+\draw[arrow] (data.east) -- (semantics.west);
+\draw[arrow] (semantics.east) -- (runtime.west);
+\draw[arrow] (runtime.east) -- (delivery.west);
+\end{tikzpicture}

@@ -47,6 +47,22 @@ formal specification. Apache Jena Fuseki 6.2.0 is used as the RDF HTTP server an
 persistence target in the end-to-end acceptance workflow. Silk Framework 3.6.0 is isolated
 as a candidate-linking experiment so that uncertain matches cannot silently enter the release.
 
+\subsection{Tooling stack}
+Figure~\ref{fig:tool-stack} summarizes the principal tools by responsibility. The short
+colored marks are typographic identifiers for the tools, included to make the architecture
+readable in print; they are not claims that the project redistributes vendor logos. The
+separation is important for interpretation: Protégé and OWL API inspect semantics, GraphDB
+supports interactive exploration, Fuseki provides the tested HTTP/TDB2 runtime, and Silk
+produces candidate links that still require review.
+
+\begin{figure}[htbp]\centering
+\resizebox{\textwidth}{!}{\input{figures/tool-stack-en.tex}}
+\caption[VN-Edu technology stack]{VN-Edu technology stack grouped by responsibility. The
+left-to-right arrows summarize the implementation path; they do not imply that all tools are
+runtime dependencies of every request.}
+\label{fig:tool-stack}
+\end{figure}
+
 \begin{table}[htbp]\centering\small
 \caption{Main software components and their boundaries.}\label{tab:software-components}
 \begin{tabularx}{\textwidth}{p{3.2cm}p{4.2cm}X}\toprule
