@@ -119,6 +119,55 @@ property as a database foreign key. OntoGraf's current plug-in session rendered 
 reliably but did not expose all domain--range arcs in its Arc Types panel, so this report does not
 mislabel the GraphDB network as a Protégé screenshot.
 
+The previous central-node impression had a concrete cause: the first GraphDB repository view contained the ontology file only, so it was a TBox view. The repository is now loaded with the gold serving union and a dedicated TBox-ABox GraphDB configuration. The live view starts from a real university individual and shows its asserted and inferred types, governance, geography, programme links and trained-major links. For the report, the two semantic layers are shown separately as well: the TBox diagram is a schema-level view, while the ABox diagram is an instance-level view. This avoids pretending that a class hierarchy and a real institution are the same kind of node.
+
+\clearpage
+\begin{figure}[htbp]\centering
+\IfFileExists{docs/report/figures/tbox-architecture.png}{%
+  \includegraphics[width=\textwidth,height=0.80\textheight,keepaspectratio]{docs/report/figures/tbox-architecture.png}%
+}{%
+  \includegraphics[width=\textwidth,height=0.80\textheight,keepaspectratio]{figures/tbox-architecture.png}%
+}
+\caption[TBox class hierarchy and property signatures]{Data-driven TBox view generated from the committed ontology. The blue hierarchy shows multiple levels of specialization; purple diamonds make domain--property--range signatures explicit; the orange annotation records the \term{offersProgram}/\term{ofMajor} property chain that entails \term{trainsMajor}. The red annotation shows that disjointness is selective rather than a blanket rule over time-varying legal types.}\label{fig:tbox-architecture}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\IfFileExists{docs/report/figures/abox-instance-neighborhood.png}{%
+  \includegraphics[width=\textwidth,height=0.72\textheight,keepaspectratio]{docs/report/figures/abox-instance-neighborhood.png}%
+}{%
+  \includegraphics[width=\textwidth,height=0.72\textheight,keepaspectratio]{figures/abox-instance-neighborhood.png}%
+}
+\caption[ABox instance neighborhood for a real university]{Data-driven ABox view generated from the gold serving union. The orange nodes are named individuals: one university, four programmes, four majors, four fields, location units and the reported governing body. Coloured edges are asserted or materialized object-property links; dashed \texttt{rdf:type} edges connect only the most specific visible types to the TBox. This reproducible diagram supplements, but does not replace, the direct Protégé and GraphDB UI screenshots.}\label{fig:abox-instance-neighborhood}
+\end{figure}
+\clearpage
+
+\subsection{TBox, ABox and constraint semantics}
+The ontology is intentionally split into a schema layer and a data layer. The TBox is
+\texttt{ontology/vnedu.ttl}: classes, subclass axioms, property signatures, inverse properties,
+property chains, defined classes and selected disjointness. The ABox is the generated RDF in
+\texttt{data/gold/vnedu-data.ttl}, with \texttt{data/gold/vnedu-all.ttl} as the serving union of
+asserted data and materialized entailments. A URI such as
+\texttt{university:dai-hoc-bach-khoa-ha-noi} is an individual; \texttt{vnedu:University} and
+\texttt{vnedu:HigherEducationInstitution} are classes. Mixing these levels without explicit
+\texttt{rdf:type} and \texttt{rdfs:subClassOf} labels is what made the earlier graph misleading.
+
+\begin{longtable}{P{3.4cm}P{6.2cm}P{5.0cm}}
+\caption{Separation of ontology axioms, data assertions and validation constraints.}\label{tab:tbox-abox-constraints}\\
+\toprule Layer & What is asserted & Correct interpretation \\\midrule\endfirsthead
+\toprule Layer & What is asserted & Correct interpretation \\\midrule\endhead
+TBox & \texttt{rdfs:subClassOf}, \texttt{rdfs:domain}, \texttt{rdfs:range}, inverses, chains, restrictions and disjointness. & Schema-level meaning and inference rules; it does not require every possible individual to have every field. \\
+ABox & Individuals, \texttt{rdf:type}, object-property links, literals, external identifiers and provenance observations. & Source-backed claims; an omitted triple is unknown under the open-world assumption. \\
+OWL reasoning & Domain/range and property axioms materialize types and consequences, including inferred superclasses and inverse links. & A wrong domain/range can infer a wrong type; OWL entailment is not a database foreign-key rejection. \\
+SHACL & \texttt{shapes/vnedu-shapes.ttl} checks cardinality, datatypes, patterns, temporal intervals and observation structure. & Closed-world data-quality validation, separate from OWL entailments. \\
+\bottomrule
+\end{longtable}
+
+The design therefore uses domain and range as semantic typing constraints, and SHACL for operational
+requirements such as ``at least one provider'' or a valid year range. This is the standards-correct
+combination for an RDF/OWL knowledge graph: imposing every relational-database NOT NULL or foreign-key
+rule directly in OWL would be unsound under the open-world assumption. Time-dependent legal categories
+remain qualified observations rather than permanent global disjointness axioms.
+
 \begin{figure}[htbp]\centering
 \input{figures/taxonomy-en.tex}
 \caption[Organizational class hierarchy]{Selected organizational hierarchy. Arrows point from subclass to superclass.

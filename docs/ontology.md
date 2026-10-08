@@ -18,6 +18,28 @@ illustrations.
 
 ![GraphDB visual graph for vnedu:University](report/figures/ontology-graphdb-visual.png)
 
+## TBox–ABox view
+
+The repository-backed view is now also populated with the serving union
+`data/gold/vnedu-all.ttl`, not only the ontology file. In the local GraphDB repository
+`vnedu-ontology-d`, the verified SPARQL count is 74,972 total statements: 73,794 explicit
+and 1,178 inferred statements. The saved visual configuration
+`VN-Edu TBox-ABox instance neighborhood` starts at the real individual
+`resource/university/dai-hoc-bach-khoa-ha-noi` and exposes its most-specific types,
+governance, location, programmes, majors and fields.
+
+The schema and instance layers are intentionally separated in the report. The TBox view
+shows the multi-level class hierarchy plus domain–property–range signatures and the
+`offersProgram / ofMajor => trainsMajor` chain. The ABox view shows named individuals and
+their asserted or materialized links. A dashed `rdf:type` edge is a typing assertion or
+entailment; it is not a relational foreign key. Domain and range provide OWL semantic
+typing, while cardinality, datatype, temporal and completeness rules are checked by
+SHACL.
+
+![Data-driven TBox architecture](report/figures/tbox-architecture.png)
+
+![Data-driven ABox instance neighborhood](report/figures/abox-instance-neighborhood.png)
+
 ```mermaid
 classDiagram
   direction LR
