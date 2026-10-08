@@ -2,6 +2,7 @@
 
 from pathlib import Path
 import argparse
+from collections import OrderedDict
 import shutil
 import subprocess
 
@@ -43,6 +44,170 @@ def dot_render(lines, output):
     dot.write_text("\n".join(lines), encoding="utf-8")
     dot_bin = shutil.which("dot") or r"D:\Sematicweb\Graphviz\Graphviz-12.2.1-win64\bin\dot.exe"
     subprocess.run([dot_bin, "-Tpng", "-Gdpi=180", str(dot), "-o", str(output)], check=True)
+
+
+def local_classes(graph):
+    """Return every local OWL class, including classes seen only in subclass axioms."""
+    classes = {
+        node for node in graph.subjects(RDF.type, OWL.Class)
+        if str(node).startswith(str(VNEDU))
+    }
+    classes.update(
+        node for node in graph.objects(None, RDFS.subClassOf)
+        if str(node).startswith(str(VNEDU))
+    )
+    return classes
+
+
+def local_object_signatures(graph):
+    """Return asserted local object-property signatures, preserving unspecified endpoints."""
+    properties = {
+        node for node in graph.subjects(RDF.type, OWL.ObjectProperty)
+        if str(node).startswith(str(VNEDU))
+    }
+    signatures = []
+    for predicate in sorted(properties, key=local):
+        domains = [node for node in graph.objects(predicate, RDFS.domain)
+                   if str(node).startswith(str(VNEDU))]
+        ranges = [node for node in graph.objects(predicate, RDFS.range)
+                  if str(node).startswith(str(VNEDU))]
+        domains = domains or [None]
+        ranges = ranges or [None]
+        for domain in domains:
+            for range_node in ranges:
+                signatures.append((predicate, domain, range_node))
+    return signatures
+
+
+SIGNATURE_MODULES = OrderedDict([
+    ("Organization and governance", set((
+        "branchOf hasBranch hasMember memberOf hasPart partOf ownedBy ownership "
+        "governedBy directlyGovernedBy reportedGovernedBy stateManagedBy governs "
+        "subordinateTo hasLeader leads director rector councilChair predecessor successor"
+    ).split())),
+    ("Education and people", set((
+        "offersProgram offeredBy ofMajor trainsMajor inField educatedAt alumnusOf "
+        "hasAlumnus hasEducationParticipant nationality birthPlace bornIn "
+        "birthAreaInCurrentCrosswalk"
+    ).split())),
+    ("Geography and change", set("locatedIn mergedFrom mergedInto".split())),
+])
+
+
+def render_tbox_hierarchy_clean(graph, output):
+    """Render the complete local class hierarchy without property-edge crossings."""
+    classes = local_classes(graph)
+    palette = {
+        "Organization": "#dbeafe",
+        "EducationalOrganization": "#bfdbfe",
+        "HigherEducationInstitution": "#93c5fd",
+        "AcademicProgram": "#fef3c7",
+        "Major": "#fde68a",
+        "FieldOfStudy": "#fef9c3",
+        "Person": "#dcfce7",
+        "AdministrativeUnit": "#d1fae5",
+        "SourceObservation": "#f3e8ff",
+    }
+    lines = [
+        "digraph TBoxHierarchyClean {",
+        'graph [rankdir=LR, splines=ortho, overlap=false, concentrate=false, '
+        'nodesep=0.22, ranksep=0.42, bgcolor="white", pad=0.25, '
+        'fontname="Arial", fontsize=18, ordering=out];',
+        'node [shape=box, style="rounded,filled", fontname="Arial", fontsize=10, '
+        'color="#64748b", fillcolor="#f8fafc", margin="0.10,0.06"];',
+        'edge [color="#2563eb", penwidth=1.1, arrowsize=0.6];',
+    ]
+    for cls in sorted(classes, key=local):
+        fill = palette.get(local(cls), "#f8fafc")
+        lines.append(
+            f'  {node_id(cls)} [label="{local(cls)}", fillcolor="{fill}"];'
+        )
+    for child in sorted(classes, key=local):
+        parents = sorted(
+            (parent for parent in graph.objects(child, RDFS.subClassOf) if parent in classes),
+            key=local,
+        )
+        for parent in parents:
+            lines.append(f'  {node_id(child)} -> {node_id(parent)};')
+    lines.append(
+        '  legend [shape=note, style="filled", fillcolor="#ffffff", color="#94a3b8", '
+        'label="All local OWL classes\\nBlue orthogonal arrows = asserted rdfs:subClassOf\\n'
+        'Node colours group the main ontology modules"];'
+    )
+    lines.append("}")
+    dot_render(lines, output)
+
+
+def render_tbox_signatures_clean(graph, output, module_filter=None):
+    """Render exact local domain-property-range rows with isolated, non-crossing edges."""
+    signatures = local_object_signatures(graph)
+    modules = SIGNATURE_MODULES
+    grouped = OrderedDict((name, []) for name in modules)
+    grouped["Other local object properties"] = []
+    for signature in signatures:
+        name = local(signature[0])
+        target = next((module for module, names in modules.items() if name in names), "Other local object properties")
+        grouped[target].append(signature)
+    if module_filter:
+        grouped = OrderedDict((name, rows) for name, rows in grouped.items() if name == module_filter)
+
+    lines = [
+        "digraph TBoxSignaturesClean {",
+        'graph [rankdir=LR, splines=ortho, overlap=false, concentrate=false, '
+        'nodesep=0.24, ranksep=0.75, bgcolor="white", pad=0.25, newrank=true];',
+        'node [fontname="Arial", fontsize=10, color="#475569", margin="0.09,0.05"];',
+        'edge [fontname="Arial", fontsize=8, arrowsize=0.55, penwidth=1.0];',
+    ]
+    module_colors = ["#2563eb", "#d97706", "#059669", "#7c3aed"]
+    row_number = 0
+    for module_index, (module, rows) in enumerate(grouped.items()):
+        if not rows:
+            continue
+        color = module_colors[module_index % len(module_colors)]
+        cluster_id = "cluster_" + str(module_index)
+        lines.append(
+            f'  subgraph {cluster_id} {{ label="{module}"; color="{color}"; '
+            'style="rounded"; fontname="Arial"; fontsize=13; rankdir=LR;'
+        )
+        domain_ids, property_ids, range_ids = [], [], []
+        for predicate, domain, range_node in rows:
+            base = f"r{row_number}"
+            domain_id, property_id, range_id = base + "_d", base + "_p", base + "_r"
+            domain_ids.append(domain_id)
+            property_ids.append(property_id)
+            range_ids.append(range_id)
+            domain_label = label(graph, domain) if domain else "unspecified domain"
+            range_label = label(graph, range_node) if range_node else "unspecified range"
+            lines.append(
+                f'    {domain_id} [shape=box, style="rounded,filled", fillcolor="#eff6ff", '
+                f'label="{domain_label}\\n({local(domain) if domain else "—"})"];'
+            )
+            lines.append(
+                f'    {property_id} [shape=diamond, style="filled", fillcolor="#f3e8ff", '
+                f'color="{color}", label="{local(predicate)}"];'
+            )
+            lines.append(
+                f'    {range_id} [shape=box, style="rounded,filled", fillcolor="#f8fafc", '
+                f'label="{range_label}\\n({local(range_node) if range_node else "—"})"];'
+            )
+            lines.append(f'    {domain_id} -> {property_id} [color="{color}"];')
+            lines.append(f'    {property_id} -> {range_id} [color="{color}"];')
+            row_number += 1
+        lines.append("    { rank=same; " + "; ".join(domain_ids) + "; }")
+        lines.append("    { rank=same; " + "; ".join(property_ids) + "; }")
+        lines.append("    { rank=same; " + "; ".join(range_ids) + "; }")
+        for ids in (domain_ids, property_ids, range_ids):
+            for first, second in zip(ids, ids[1:]):
+                lines.append(f'    {first} -> {second} [style=invis, weight=100];')
+        lines.append("  }")
+    lines.append(
+        '  legend [shape=note, style="filled", fillcolor="#ffffff", color="#94a3b8", '
+        'label="Each row is one asserted local object-property signature.\\n'
+        'Left box = domain; diamond = predicate; right box = range.\\n'
+        'An unspecified endpoint is shown explicitly, not invented."];'
+    )
+    lines.append("}")
+    dot_render(lines, output)
 
 
 def render_tbox(graph, output):
@@ -182,6 +347,9 @@ def main():
     parser.add_argument("--data", type=Path, default=Path("data/gold/vnedu-all.ttl"))
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--tbox-output", type=Path)
+    parser.add_argument("--clean-hierarchy-output", type=Path)
+    parser.add_argument("--clean-signatures-output", type=Path)
+    parser.add_argument("--clean-signatures-prefix", type=Path)
     parser.add_argument("--max-programs", type=int, default=4)
     parser.add_argument("--max-majors", type=int, default=4)
     args = parser.parse_args()
@@ -192,6 +360,23 @@ def main():
     render_abox(graph, args.output, args.max_programs, args.max_majors)
     if args.tbox_output:
         render_tbox(graph, args.tbox_output)
+    if args.clean_hierarchy_output:
+        render_tbox_hierarchy_clean(graph, args.clean_hierarchy_output)
+    if args.clean_signatures_output:
+        render_tbox_signatures_clean(graph, args.clean_signatures_output)
+    if args.clean_signatures_prefix:
+        slugs = {
+            "Organization and governance": "organization",
+            "Education and people": "education",
+            "Geography and change": "geography",
+            "Other local object properties": "other",
+        }
+        for module in [*SIGNATURE_MODULES.keys(), "Other local object properties"]:
+            render_tbox_signatures_clean(
+                graph,
+                args.clean_signatures_prefix.parent / f"{args.clean_signatures_prefix.name}-{slugs[module]}.png",
+                module_filter=module,
+            )
 
 
 if __name__ == "__main__":

@@ -139,14 +139,55 @@ The previous central-node impression had a concrete cause: the first GraphDB rep
 
 \clearpage
 \begin{figure}[htbp]\centering
-\IfFileExists{docs/report/figures/tbox-architecture.png}{%
-  \includegraphics[width=\textwidth,height=0.80\textheight,keepaspectratio]{docs/report/figures/tbox-architecture.png}%
+\IfFileExists{docs/report/figures/ontology-tbox-hierarchy-clean.png}{%
+  \includegraphics[width=\textwidth,height=0.84\textheight,keepaspectratio]{docs/report/figures/ontology-tbox-hierarchy-clean.png}%
 }{%
-  \includegraphics[width=\textwidth,height=0.80\textheight,keepaspectratio]{figures/tbox-architecture.png}%
+  \includegraphics[width=\textwidth,height=0.84\textheight,keepaspectratio]{figures/ontology-tbox-hierarchy-clean.png}%
 }
-\caption[TBox class hierarchy and property signatures]{Data-driven TBox view generated from the committed ontology. The blue hierarchy shows multiple levels of specialization; purple diamonds make domain--property--range signatures explicit; the orange annotation records the \term{offersProgram}/\term{ofMajor} property chain that entails \term{trainsMajor}. The red annotation shows that disjointness is selective rather than a blanket rule over time-varying legal types.}\label{fig:tbox-architecture}
+\caption[Complete local TBox class hierarchy]{Complete local OWL class hierarchy generated directly from \texttt{ontology/vnedu.ttl}. Every displayed blue arrow is an asserted \texttt{rdfs:subClassOf} triple; disconnected nodes are intentionally retained because the ontology does not assert a superclass for them. Orthogonal routing is used to avoid crossing edges.}\label{fig:tbox-hierarchy-clean}
 \end{figure}
 
+\clearpage
+\begin{figure}[htbp]\centering
+\IfFileExists{docs/report/figures/ontology-tbox-signatures-organization.png}{%
+  \includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{docs/report/figures/ontology-tbox-signatures-organization.png}%
+}{%
+  \includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{figures/ontology-tbox-signatures-organization.png}%
+}
+\caption[Organization and governance signatures]{Exact local object-property signatures for organization, governance, membership, ownership and structural relations. Each row is independent: left box is the declared domain, the diamond is the predicate, and right box is the declared range. No edge is routed through another row.}\label{fig:tbox-signatures-organization}
+\end{figure}
+
+\clearpage
+\begin{figure}[htbp]\centering
+\IfFileExists{docs/report/figures/ontology-tbox-signatures-education.png}{%
+  \includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{docs/report/figures/ontology-tbox-signatures-education.png}%
+}{%
+  \includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{figures/ontology-tbox-signatures-education.png}%
+}
+\caption[Education and people signatures]{Exact local object-property signatures for programmes, majors, fields, people and educational participation. The missing range of \term{birthPlace} is shown explicitly as unspecified rather than guessed.}\label{fig:tbox-signatures-education}
+\end{figure}
+
+\clearpage
+\begin{figure}[htbp]\centering
+\IfFileExists{docs/report/figures/ontology-tbox-signatures-geography.png}{%
+  \includegraphics[width=\textwidth,height=0.70\textheight,keepaspectratio]{docs/report/figures/ontology-tbox-signatures-geography.png}%
+}{%
+  \includegraphics[width=\textwidth,height=0.70\textheight,keepaspectratio]{figures/ontology-tbox-signatures-geography.png}%
+}
+\caption[Geography and change signatures]{Exact local signatures for location and province-change relations. The former/current province distinction is represented as a directed relation, not as a timeless equivalence.}\label{fig:tbox-signatures-geography}
+\end{figure}
+
+\clearpage
+\begin{figure}[htbp]\centering
+\IfFileExists{docs/report/figures/ontology-tbox-signatures-other.png}{%
+  \includegraphics[width=\textwidth,height=0.38\textheight,keepaspectratio]{docs/report/figures/ontology-tbox-signatures-other.png}%
+}{%
+  \includegraphics[width=\textwidth,height=0.38\textheight,keepaspectratio]{figures/ontology-tbox-signatures-other.png}%
+}
+\caption[Other local object-property signature]{The remaining local object property, \term{website}, has an asserted domain but no asserted range in the ontology. This is shown as an open endpoint, not silently assigned \texttt{xsd:anyURI}.}\label{fig:tbox-signatures-other}
+\end{figure}
+
+\clearpage
 \begin{figure}[htbp]\centering
 \IfFileExists{docs/report/figures/abox-instance-neighborhood.png}{%
   \includegraphics[width=\textwidth,height=0.72\textheight,keepaspectratio]{docs/report/figures/abox-instance-neighborhood.png}%
