@@ -66,11 +66,58 @@ the local repository \texttt{vnedu-ontology-d}, not generated from a separate il
 \label{fig:ontology-graphdb-relations}
 \end{figure}
 
-The two relation views complement one another. Protégé exposes the OWL property signature and makes
-the domain, range, inverse and functional characteristics auditable one property at a time; GraphDB
-renders the same class--property--class pattern as a navigable network. OntoGraf's current plug-in
-session rendered the subclass hierarchy reliably but did not expose all domain--range arcs in its
-Arc Types panel, so this report does not mislabel the GraphDB network as a Protégé screenshot.
+\begin{figure}[htbp]\centering
+\IfFileExists{docs/report/figures/ontology-graphdb-hierarchy-clean.png}{%
+  \includegraphics[width=\textwidth]{docs/report/figures/ontology-graphdb-hierarchy-clean.png}%
+}{%
+  \includegraphics[width=\textwidth]{figures/ontology-graphdb-hierarchy-clean.png}%
+}
+\caption[GraphDB multi-level education hierarchy]{Direct GraphDB Workbench screenshot using the saved
+configuration \texttt{VN-Edu class hierarchy clean}. This view is anchored at
+\term{HigherEducationInstitution} and displays its asserted superclass links and direct subclasses,
+including \term{University}, \term{UniversitySchool}, \term{Academy}, \term{OfficerSchool},
+\term{NationalUniversity}, and \term{RegionalUniversity}. It is deliberately separated from the
+object-property view so the hierarchy remains readable.}
+\label{fig:ontology-graphdb-hierarchy-clean}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\IfFileExists{docs/report/figures/ontology-graphdb-university-hierarchy.png}{%
+  \includegraphics[width=\textwidth]{docs/report/figures/ontology-graphdb-university-hierarchy.png}%
+}{%
+  \includegraphics[width=\textwidth]{figures/ontology-graphdb-university-hierarchy.png}%
+}
+\caption[GraphDB lower-level university hierarchy]{Direct GraphDB Workbench screenshot using the saved
+configuration \texttt{VN-Edu university hierarchy detail}. The view is anchored at
+\term{University} and exposes the lower specialization level \term{NationalUniversity} and
+\term{RegionalUniversity}, together with their asserted superclass path. This is the level that the
+single-node overview omitted.}
+\label{fig:ontology-graphdb-university-hierarchy}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\IfFileExists{docs/report/figures/ontology-graphdb-canonical-relations.png}{%
+  \includegraphics[width=\textwidth]{docs/report/figures/ontology-graphdb-canonical-relations.png}%
+}{%
+  \includegraphics[width=\textwidth]{figures/ontology-graphdb-canonical-relations.png}%
+}
+\caption[GraphDB readable canonical relation view]{Direct GraphDB Workbench screenshot using the saved
+configuration \texttt{VN-Edu canonical domain-range relations}. It shows one readable direction for
+the main domain--range relations around \term{EducationalOrganization}: governance, membership,
+alumni, program provision, ownership, ownership type, and inferred major training. The inverse
+properties are retained in the ontology and audited in Protégé; they are omitted from this summary
+view to prevent duplicate arrows and label collisions.}
+\label{fig:ontology-graphdb-canonical-relations}
+\end{figure}
+
+The visual evidence is therefore layered rather than forced into one unreadable canvas. Protégé exposes
+the OWL property signature and makes the domain, range, inverse and functional characteristics auditable
+one property at a time. GraphDB supplies separate hierarchy and canonical relation views. The dense
+all-relations view is useful as a diagnostic: its overlapping labels are caused by showing inverse
+properties, imported alignments and multiple hierarchy levels simultaneously, not by treating an OWL
+property as a database foreign key. OntoGraf's current plug-in session rendered the subclass hierarchy
+reliably but did not expose all domain--range arcs in its Arc Types panel, so this report does not
+mislabel the GraphDB network as a Protégé screenshot.
 
 \begin{figure}[htbp]\centering
 \input{figures/taxonomy-en.tex}
