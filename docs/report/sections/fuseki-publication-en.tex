@@ -59,12 +59,14 @@ and binds port 3030 only on loopback. That Docker configuration was not the test
 The additional \term{audit/production\_readiness.py} test starts the same Waitress WSGI
 entry point used by \term{app/server.py --prod} with the read-only local backend. Under
 normal bounded concurrency (eight requests, two query workers), all eight health requests
-returned HTTP 200; measured latency was 4,213 ms at p50, 4,873 ms at p95, and 4,873 ms
-maximum on the Windows review machine. An intentional eight-request overload returned two
-HTTP 200 responses and six HTTP 503 responses, demonstrating bounded back-pressure rather
-than unbounded queue growth. Security probes rejected a path-injection attempt (404), an
-unapproved SSRF \term{SERVICE} target (400), and an oversized query (413); the response
-included \term{nosniff}, \term{SAMEORIGIN}, and strict referrer-policy headers.
+returned HTTP 200; the 8 October 2026 rerun measured 3,965 ms at p50, 3,996 ms at p95,
+and 3,996 ms maximum on the Windows review machine. An intentional eight-request overload
+returned two HTTP 200 responses and six HTTP 503 responses, demonstrating bounded
+back-pressure rather than unbounded queue growth. Security probes rejected a path-injection
+attempt (404), an unapproved SSRF \term{SERVICE} target (400), and an oversized query (413).
+The response headers now include \term{nosniff}, \term{SAMEORIGIN}, strict referrer-policy,
+\term{Permissions-Policy}, CSP on HTML, and an \term{X-Request-ID}; HSTS is enabled when
+TLS is detected or explicitly forced behind a trusted TLS terminator.
 
 These numbers are a reproducible loopback acceptance sample, not a capacity SLO, penetration
 test, TLS/reverse-proxy audit, cloud IAM review, or production security certification. The
@@ -72,6 +74,46 @@ process-per-query RDFLib backend deliberately trades throughput for isolation; a
 deployment still needs external rate limiting, resource quotas, TLS termination, monitoring,
 authentication policy, and a load test against its selected Fuseki/WSGI topology. The full
 machine-readable evidence is \term{data/reports/production-readiness.json}.
+
+\subsection{Production hardening profile and release gates}
+The review branch adds a deployable reference profile in \term{deploy/} and records its
+scope in \term{docs/production-readiness.md}. The intended production path is:
+\begin{code}
+Internet -> Caddy/Nginx TLS -> Waitress application -> private Fuseki -> encrypted TDB2 volume
+\end{code}
+The application layer is read-only for SPARQL, limits request bodies and serialized result
+size, applies an optional per-client rate limit, restricts CORS to an explicit allow-list,
+and emits request identifiers for incident correlation. The reference Compose file also
+uses a non-root application user, a read-only container filesystem, a private network,
+dropped Linux capabilities and a no-new-privileges flag. Fuseki image digests and admin
+credentials are deliberately operator-supplied; the public reverse proxy must never expose
+Fuseki administration or update endpoints.
+
+These are implementation controls, not evidence that the stack has been deployed on a
+public production host. Before a production availability claim, the deployed Fuseki path
+must be tested for sustained and burst requests, p50/p95/p99 latency, CPU/memory/disk
+growth, query cancellation, rolling restart and backup restoration. The current local
+RDFLib p95 is therefore reported as an isolation/back-pressure observation, not as a
+capacity target.
+
+\begin{table}[htbp]\centering\small
+\caption{Production release gates that remain separate from OWL and SHACL conformance.}
+\label{tab:production-gates}
+\begin{tabularx}{\textwidth}{p{4.2cm}X}\toprule
+Gate & Required evidence before an authoritative production claim \\\midrule
+Security deployment & Public TLS termination, trusted proxy configuration, firewall/IAM policy, secret rotation and external rate limits. \\
+High-load performance & Deployed Fuseki benchmark with representative SELECT/CONSTRUCT queries, p50/p95/p99, saturation behavior and resource measurements. \\
+Recovery & Backup restore, rolling restart and graph-isomorphism verification after replacement. \\
+Factual accuracy & Independent adjudication of the five founding-year conflicts and seven unresolved values, plus a held-out identity-link evaluation. \\
+Temporal validity & Claim-level provenance and validity intervals for leadership, enrolment and legal status; undated snapshots must not be presented as current. \\
+Source authority & Official-register or institution-owner evidence for records currently supported only by encyclopedic or inferred sources. \\
+\bottomrule\end{tabularx}
+\end{table}
+
+The release can pass the OWL 2 RL profile gate, SHACL validation and regression tests while
+still failing these operational and factual gates. Keeping those gates separate is essential:
+OWL entailment is not a truth certificate, and a five-star Linked Data publication is not a
+five-star security or accuracy certification.
 
 \subsection{Executed end-to-end acceptance evidence}
 The primary reproducible test ran on Linux GitHub Actions with Fuseki 6.2.0 and Temurin Java 21.0.12.1,
