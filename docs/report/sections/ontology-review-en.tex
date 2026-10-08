@@ -147,6 +147,20 @@ The previous central-node impression had a concrete cause: the first GraphDB rep
 \caption[Complete local TBox class hierarchy]{Complete local OWL class hierarchy generated directly from \texttt{ontology/vnedu.ttl}. Every displayed blue arrow is an asserted \texttt{rdfs:subClassOf} triple; disconnected nodes are intentionally retained because the ontology does not assert a superclass for them. Orthogonal routing is used to avoid crossing edges.}\label{fig:tbox-hierarchy-clean}
 \end{figure}
 
+The hierarchy and the relation map answer different questions. A root class is not an OWL error under the open-world assumption: it is a class for which this ontology has not asserted a local superclass. In particular, \texttt{Person}, \texttt{AdministrativeUnit}, \texttt{AcademicProgram}, \texttt{FieldOfStudy}, \texttt{OwnershipType} and \texttt{SourceObservation} are independent modelling concepts. The defined classes \texttt{PublicInstitution}, \texttt{PrivateInstitution}, \texttt{MilitaryInstitution} and \texttt{PoliceInstitution} are classified by \texttt{owl:equivalentClass} restrictions rather than by an asserted \texttt{rdfs:subClassOf} edge; adding a superclass only to make a picture connected would change the semantics. If a future competency-questions review confirms that those categories are intended as direct kinds of educational organization, that axiom can be added with a test case; it is not inferred from the visualization requirement.
+
+\clearpage
+\begin{figure}[htbp]\centering
+\IfFileExists{docs/report/figures/ontology-er-relation-map.png}{%
+  \includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{docs/report/figures/ontology-er-relation-map.png}%
+}{%
+  \includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{figures/ontology-er-relation-map.png}%
+}
+\caption[Unique-node ER-style relation map]{Unique-node, ER/GraphRAG-style view of the local ontology. Every class is rendered exactly once; coloured arrows use asserted local domain/range signatures, while dashed grey links show asserted \texttt{rdfs:subClassOf} edges between the displayed classes. One representative direction is shown for inverse pairs to prevent duplicate arrows; the exact full signature inventory, including inverse aliases and unspecified endpoints, is retained in Figures~\ref{fig:tbox-signatures-organization}--\ref{fig:tbox-signatures-other}. The coloured modules are visual grouping only and do not add OWL axioms.}\label{fig:ontology-er-relation-map}
+\end{figure}
+
+This unique-node view fixes a presentation defect in earlier row-based diagrams: repeated labels such as \texttt{Person} represented repeated domain/range rows, not four different classes. It is therefore closer to a relational schema or a GraphRAG semantic map, while the hierarchy figure remains the authoritative view for subclass semantics and the signature figures remain authoritative for the complete domain/range inventory.
+
 \clearpage
 \begin{figure}[htbp]\centering
 \IfFileExists{docs/report/figures/ontology-tbox-signatures-organization.png}{%

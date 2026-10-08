@@ -38,12 +38,18 @@ def most_specific_types(graph, node, allowed):
     }
 
 
-def dot_render(lines, output):
+def dot_render(lines, output, engine="dot"):
     output.parent.mkdir(parents=True, exist_ok=True)
     dot = output.with_suffix(".dot")
     dot.write_text("\n".join(lines), encoding="utf-8")
-    dot_bin = shutil.which("dot") or r"D:\Sematicweb\Graphviz\Graphviz-12.2.1-win64\bin\dot.exe"
-    subprocess.run([dot_bin, "-Tpng", "-Gdpi=180", str(dot), "-o", str(output)], check=True)
+    fallback = rf"D:\Sematicweb\Graphviz\Graphviz-12.2.1-win64\bin\{engine}.exe"
+    graphviz_bin = shutil.which(engine) or fallback
+    command = [graphviz_bin]
+    if engine == "neato":
+        # -n2 preserves the hand-authored positions used by the ER/GraphRAG map.
+        command.append("-n2")
+    command.extend(["-Tpng", "-Gdpi=180", str(dot), "-o", str(output)])
+    subprocess.run(command, check=True)
 
 
 def local_classes(graph):
@@ -210,6 +216,153 @@ def render_tbox_signatures_clean(graph, output, module_filter=None):
     dot_render(lines, output)
 
 
+# The map intentionally chooses one representative direction from inverse pairs.
+# The complete, asserted signature inventory remains in the module figures above.
+UNIQUE_RELATIONS = [
+    ("governedBy", "governedBy", "#b91c1c"),
+    ("hasLeader", "hasLeader", "#be123c"),
+    ("locatedIn", "locatedIn", "#15803d"),
+    ("offersProgram", "offersProgram", "#c2410c"),
+    ("ofMajor", "ofMajor", "#7e22ce"),
+    ("inField", "inField", "#0f766e"),
+    ("trainsMajor", "trainsMajor", "#92400e"),
+    ("educatedAt", "educatedAt", "#0369a1"),
+    ("nationality", "nationality", "#047857"),
+    ("bornIn", "bornIn", "#166534"),
+    ("memberOf", "memberOf", "#1d4ed8"),
+    ("hasBranch", "hasBranch", "#1e40af"),
+    ("ownedBy", "ownedBy", "#a16207"),
+    ("ownership", "ownership", "#a16207"),
+    ("partOf", "partOf", "#4d7c0f"),
+    ("mergedFrom", "mergedFrom", "#4b5563"),
+    ("birthAreaInCurrentCrosswalk", "birthAreaInCurrentCrosswalk", "#0f766e"),
+]
+
+
+UNIQUE_POSITIONS = {
+    # Organization and governance module (upper half).
+    "Organization": (0.0, 8.2),
+    "EducationalOrganization": (4.0, 8.2),
+    "HigherEducationInstitution": (8.0, 8.2),
+    "University": (12.0, 9.8),
+    "UniversitySchool": (12.0, 7.4),
+    "Branch": (16.0, 7.4),
+    "GoverningBody": (8.0, 5.7),
+    "Company": (13.5, 4.3),
+    "OwnershipType": (16.5, 2.8),
+    # People and education module (middle/lower half).
+    "Person": (0.0, 4.4),
+    "InstitutionLeader": (4.0, 4.8),
+    "AcademicProgram": (4.0, 1.7),
+    "Major": (8.0, 1.7),
+    "FieldOfStudy": (12.0, 0.2),
+    # Geography and temporal crosswalk module (bottom).
+    "AdministrativeUnit": (0.0, -0.4),
+    "Country": (4.0, -1.8),
+    "Region": (8.0, -1.8),
+    "Province": (12.0, -1.8),
+    "FormerProvince": (16.0, -3.2),
+}
+
+
+def render_unique_relation_map(graph, output):
+    """Render one ER/GraphRAG-style node per class and curved semantic links.
+
+    This is a presentation view, not a new ontology. It uses asserted local
+    domain/range signatures and deliberately omits inverse aliases from this
+    canvas so that each conceptual relation is drawn once. The exact inventory
+    is still rendered by ``render_tbox_signatures_clean``.
+    """
+    signatures = {
+        local(predicate): (domain, range_node)
+        for predicate, domain, range_node in local_object_signatures(graph)
+        if domain is not None and range_node is not None
+    }
+    selected = [item for item in UNIQUE_RELATIONS if item[0] in signatures]
+    classes = set()
+    for predicate, _, _ in selected:
+        domain, range_node = signatures[predicate]
+        classes.update((domain, range_node))
+    # Keep the main class spine visible even if a future edit removes one edge.
+    classes.update(VNEDU[name] for name in (
+        "Organization", "EducationalOrganization", "HigherEducationInstitution",
+        "University", "Person", "AcademicProgram", "Major", "FieldOfStudy",
+        "AdministrativeUnit", "Country", "Region", "Province", "FormerProvince",
+        "GoverningBody", "Branch", "Company", "OwnershipType",
+    ))
+
+    palette = {
+        "Organization": "#dbeafe",
+        "EducationalOrganization": "#bfdbfe",
+        "HigherEducationInstitution": "#93c5fd",
+        "University": "#60a5fa",
+        "UniversitySchool": "#bfdbfe",
+        "Branch": "#c7d2fe",
+        "GoverningBody": "#fecaca",
+        "Company": "#fde68a",
+        "OwnershipType": "#fef3c7",
+        "Person": "#bbf7d0",
+        "InstitutionLeader": "#dcfce7",
+        "AcademicProgram": "#fed7aa",
+        "Major": "#fde68a",
+        "FieldOfStudy": "#fef9c3",
+        "AdministrativeUnit": "#a7f3d0",
+        "Country": "#d1fae5",
+        "Region": "#d1fae5",
+        "Province": "#d1fae5",
+        "FormerProvince": "#d1fae5",
+    }
+    lines = [
+        "digraph OntologyUniqueRelationMap {",
+        'graph [layout=neato, overlap=false, splines=curved, outputorder=edgesfirst, '
+        'sep="+18", esep="+10", bgcolor="white", pad=0.35, '
+        'fontname="Arial", fontsize=18];',
+        'node [shape=box, style="rounded,filled", fixedsize=false, pin=true, '
+        'fontname="Arial", fontsize=12, color="#475569", penwidth=1.1, '
+        'margin="0.13,0.08"];',
+        'edge [fontname="Arial", fontsize=9, arrowsize=0.65, penwidth=1.25, '
+        'labelfloat=true, labeldistance=1.3];',
+    ]
+    for cls in sorted(classes, key=local):
+        x, y = UNIQUE_POSITIONS.get(local(cls), (0.0, 0.0))
+        fill = palette.get(local(cls), "#f8fafc")
+        lines.append(
+            f'  {node_id(cls)} [label="{local(cls)}", fillcolor="{fill}", '
+            # Graphviz neato reads fixed coordinates in points, not inches.
+            f'pos="{x * 72:.1f},{y * 72:.1f}!"];'
+        )
+
+    # Show only hierarchy edges between nodes that are already in this map.
+    # They are light and dashed so the business relations remain dominant.
+    for child in sorted(classes, key=local):
+        for parent in graph.objects(child, RDFS.subClassOf):
+            if parent in classes and str(parent).startswith(str(VNEDU)):
+                lines.append(
+                    f'  {node_id(child)} -> {node_id(parent)} [label="is-a", '
+                    'style=dashed, color="#94a3b8", penwidth=0.8, arrowsize=0.45, arrowhead=none, '
+                    'constraint=false];'
+                )
+
+    for predicate, display, color in selected:
+        domain, range_node = signatures[predicate]
+        lines.append(
+            f'  {node_id(domain)} -> {node_id(range_node)} [label="{display}", '
+            f'color="{color}", fontcolor="{color}", constraint=false];'
+        )
+
+    lines.append(
+        '  legend [shape=note, pin=true, pos="1224,684!", style="filled", '
+        'fillcolor="#ffffff", color="#94a3b8", fontsize=10, '
+        'label="One box = one local OWL class\\n'
+        'Solid coloured arrows = representative domain/range relations\\n'
+        'Dashed grey links = asserted is-a (subClassOf)\\n'
+        'Inverse aliases are not duplicated on this canvas\\n'
+        'Colours indicate visual modules, not extra OWL axioms"];'
+    )
+    lines.append("}")
+    dot_render(lines, output, engine="neato")
+
+
 def render_tbox(graph, output):
     """Render a readable schema diagram: hierarchy plus domain-property-range signatures."""
     core = [
@@ -350,6 +503,7 @@ def main():
     parser.add_argument("--clean-hierarchy-output", type=Path)
     parser.add_argument("--clean-signatures-output", type=Path)
     parser.add_argument("--clean-signatures-prefix", type=Path)
+    parser.add_argument("--unique-relations-output", type=Path)
     parser.add_argument("--max-programs", type=int, default=4)
     parser.add_argument("--max-majors", type=int, default=4)
     args = parser.parse_args()
@@ -377,6 +531,8 @@ def main():
                 args.clean_signatures_prefix.parent / f"{args.clean_signatures_prefix.name}-{slugs[module]}.png",
                 module_filter=module,
             )
+    if args.unique_relations_output:
+        render_unique_relation_map(graph, args.unique_relations_output)
 
 
 if __name__ == "__main__":
