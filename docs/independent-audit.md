@@ -88,6 +88,9 @@ the historical Render health probe timed out after 15 seconds. Details and times
 
 Verdict: basic five-star publication mechanisms are present, with limited public evidence;
 this is not an ontology-quality, factual-accuracy, licensing or production-security certificate.
+The separate [production-readiness profile](production-readiness.md) now records the implemented
+application hardening and the operator-controlled TLS/Fuseki/load-test gates; it does not convert
+loopback acceptance into a production certification.
 
 ### Previously recorded limitations
 

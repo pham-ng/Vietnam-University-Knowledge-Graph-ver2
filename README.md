@@ -5,6 +5,8 @@
 
 **Bản rà soát 06/10/2026:** xem [kết quả audit và giới hạn còn lại](docs/independent-audit.md),
 [báo cáo tiếng Anh đã hiệu chỉnh](docs/report/main-en.pdf), và [số liệu sinh từ bản dữ liệu đã kiểm định](data/reports/audit-metrics.json).
+[Hồ sơ triển khai production](docs/production-readiness.md) mô tả các kiểm soát bảo mật, topology Fuseki/TLS,
+release gate độ chính xác và các phép đo còn bắt buộc trước khi tuyên bố production.
 Kết quả kiểm định cấu trúc không phải chứng nhận độ chính xác thực tế. Đánh giá liên kết hiện đo mức khớp với tập tham chiếu do dự án tạo;
 không có bằng chứng độc lập cho độ chính xác 100%. Báo cáo tiếng Việt cũ và các so sánh lịch sử được giữ làm tài liệu lưu trữ.
 

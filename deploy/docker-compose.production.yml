@@ -1,0 +1,68 @@
+services:
+  fuseki:
+    image: ${FUSEKI_IMAGE:?Set an operator-reviewed Fuseki image digest}
+    restart: unless-stopped
+    environment:
+      ADMIN_PASSWORD: ${FUSEKI_ADMIN_PASSWORD:?Set a non-demo Fuseki admin password}
+      TDB: "2"
+      FUSEKI_DATASET_1: vnedu
+      JVM_ARGS: "-Xms1g -Xmx4g"
+    expose:
+      - "3030"
+    volumes:
+      - fuseki-data:/fuseki
+    networks:
+      - private
+
+  app:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    restart: unless-stopped
+    command: ["--prod", "--backend", "fuseki", "--host", "0.0.0.0", "--port", "8000"]
+    environment:
+      FUSEKI_URL: http://fuseki:3030
+      VNEDU_RATE_LIMIT_PER_MINUTE: "60"
+      VNEDU_MAX_RESULT_BYTES: "8388608"
+      VNEDU_MAX_BODY_BYTES: "240000"
+      VNEDU_CORS_ORIGINS: ${VNEDU_CORS_ORIGINS:?Set explicit HTTPS origins}
+      VNEDU_FORCE_HSTS: "1"
+    expose:
+      - "8000"
+    depends_on:
+      - fuseki
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=128m
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - private
+
+  caddy:
+    image: ${CADDY_IMAGE:?Set an operator-reviewed Caddy image digest}
+    restart: unless-stopped
+    environment:
+      DOMAIN: ${DOMAIN:?Set the public HTTPS domain}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      - app
+    networks:
+      - private
+
+volumes:
+  fuseki-data:
+  caddy-data:
+  caddy-config:
+
+networks:
+  private:
+    driver: bridge

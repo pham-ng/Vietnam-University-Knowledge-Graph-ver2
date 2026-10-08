@@ -18,3 +18,13 @@ services:
         value: 3.12.7
       - key: VNEDU_QUERY_TIMEOUT
         value: "30"
+      - key: VNEDU_RATE_LIMIT_PER_MINUTE
+        value: "60"
+      - key: VNEDU_MAX_RESULT_BYTES
+        value: "8388608"
+      - key: VNEDU_MAX_BODY_BYTES
+        value: "240000"
+      - key: VNEDU_CORS_ORIGINS
+        value: "https://pham-ng.github.io,https://vnedu-lod.onrender.com"
+      - key: VNEDU_FORCE_HSTS
+        value: "1"

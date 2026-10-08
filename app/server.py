@@ -35,6 +35,7 @@ from __future__ import annotations
 
 import argparse
 import multiprocessing
+import secrets
 import threading
 import json
 import logging
@@ -71,6 +72,8 @@ FMT_PARAM = {"ttl": "text/turtle", "jsonld": "application/ld+json", "rdf": "appl
 
 MAX_QUERY_CHARS = int(os.environ.get("VNEDU_MAX_QUERY_CHARS", 20_000))
 QUERY_TIMEOUT_S = float(os.environ.get("VNEDU_QUERY_TIMEOUT", 30))
+MAX_RESULT_BYTES = int(os.environ.get("VNEDU_MAX_RESULT_BYTES", 8 * 1024 * 1024))
+MAX_BODY_BYTES = int(os.environ.get("VNEDU_MAX_BODY_BYTES", MAX_QUERY_CHARS * 12))
 ALLOWED_SERVICE_URLS = {"https://query.wikidata.org/sparql", "https://dbpedia.org/sparql"}
 # URI tài nguyên của dataset: <loại>/<slug>, slug chỉ gồm chữ thường không dấu, số, gạch nối
 RESOURCE_PATH = re.compile(r"^[a-z]+/[a-z0-9]+(?:-[a-z0-9]+)*$")
@@ -82,6 +85,36 @@ class QueryRejected(ValueError):
     def __init__(self, message: str, status: int = 400):
         super().__init__(message)
         self.status = status
+
+
+class FixedWindowLimiter:
+    """Small dependency-free per-client limiter for a public read-only endpoint.
+
+    A reverse proxy remains the primary production control. This application-level
+    limiter provides a safe fallback for a single process and makes overload visible
+    to the caller instead of allowing unbounded query fan-out.
+    """
+
+    def __init__(self, limit: int, window_seconds: int = 60):
+        self.limit = max(0, int(limit))
+        self.window_seconds = max(1, int(window_seconds))
+        self._lock = threading.Lock()
+        self._windows: dict[str, tuple[int, int]] = {}
+
+    def allow(self, key: str) -> bool:
+        if self.limit <= 0:
+            return True
+        now = int(time.time())
+        bucket = now // self.window_seconds
+        with self._lock:
+            previous = self._windows.get(key)
+            count = previous[1] if previous and previous[0] == bucket else 0
+            if count >= self.limit:
+                return False
+            self._windows[key] = (bucket, count + 1)
+            if len(self._windows) > 10_000:
+                self._windows = {k: v for k, v in self._windows.items() if v[0] >= bucket}
+            return True
 
 
 def check_query(query: str) -> None:
@@ -128,8 +161,8 @@ def _query_worker(path, query, mode, accept, connection):
             elif mode == "protocol" and "sparql-results+xml" in accept:
                 mime, fmt = "application/sparql-results+xml", "xml"
             payload = result.serialize(format=fmt)
-        if len(payload) > 8 * 1024 * 1024:
-            raise ValueError("Result exceeds 8 MiB; use LIMIT or download the RDF dump.")
+        if len(payload) > MAX_RESULT_BYTES:
+            raise ValueError(f"Result exceeds {MAX_RESULT_BYTES // (1024 * 1024)} MiB; use LIMIT or download the RDF dump.")
         connection.send((True, mime, payload))
     except Exception as exc:
         connection.send((False, "", str(exc)))
@@ -334,8 +367,11 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
     inferred = load_inferred() if inferred is None else inferred
     install_user_agent()
     app = Flask(__name__)
-    app.config["MAX_CONTENT_LENGTH"] = MAX_QUERY_CHARS * 12
+    app.config["MAX_CONTENT_LENGTH"] = MAX_BODY_BYTES
     app.config["BACKEND"] = backend
+    app.config["RATE_LIMITER"] = FixedWindowLimiter(
+        os.environ.get("VNEDU_RATE_LIMIT_PER_MINUTE", "0"), 60)
+    cors_origins = {value.strip() for value in os.environ.get("VNEDU_CORS_ORIGINS", "*").split(",") if value.strip()}
     site = site_dir if site_dir and (site_dir / "index.html").exists() else None
     app.config["SITE"] = site
     if site:
@@ -394,15 +430,38 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
     @app.before_request
     def _start_timer():
         request.environ["vnedu.t0"] = time.perf_counter()
+        request.environ["vnedu.request_id"] = secrets.token_hex(8)
+        if request.path == "/sparql":
+            client = request.remote_addr or "unknown"
+            if not app.config["RATE_LIMITER"].allow(client):
+                response = Response("Quá nhiều truy vấn; vui lòng thử lại sau.",
+                                    status=429, content_type="text/plain; charset=utf-8")
+                response.headers["Retry-After"] = "60"
+                return response
+        return None
 
     @app.after_request
     def _headers_and_log(resp):
         resp.headers.setdefault("X-Content-Type-Options", "nosniff")
         resp.headers.setdefault("Referrer-Policy", "strict-origin-when-cross-origin")
         resp.headers.setdefault("X-Frame-Options", "SAMEORIGIN")
+        resp.headers.setdefault("Permissions-Policy", "camera=(), microphone=(), geolocation=()")
+        if resp.content_type.startswith("text/html"):
+            resp.headers.setdefault(
+                "Content-Security-Policy",
+                "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; "
+                "img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https://query.wikidata.org https://dbpedia.org; "
+                "object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'",
+            )
+        if request.is_secure or os.environ.get("VNEDU_FORCE_HSTS") == "1":
+            resp.headers.setdefault("Strict-Transport-Security", "max-age=31536000; includeSubDomains")
+        resp.headers["X-Request-ID"] = request.environ.get("vnedu.request_id", "")
+        if request.path == "/sparql":
+            resp.headers.setdefault("Cache-Control", "no-store")
         t0 = request.environ.get("vnedu.t0")
         if t0 is not None:
-            log.info("%s %s %d %.0fms", request.method, request.path, resp.status_code, 1000 * (time.perf_counter() - t0))
+            log.info("%s %s %d %.0fms request_id=%s", request.method, request.path, resp.status_code,
+                     1000 * (time.perf_counter() - t0), request.environ.get("vnedu.request_id", ""))
         return resp
 
     @app.errorhandler(404)
@@ -451,7 +510,12 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
         except Exception as e:  # noqa: BLE001 — lỗi cú pháp (pyparsing) của rdflib: thông báo có ích cho người dùng
             msg = str(e).splitlines()[0][:300] if str(e) else type(e).__name__
             resp = Response(f"Truy vấn không hợp lệ: {msg}", status=400, content_type="text/plain; charset=utf-8")
-        resp.headers["Access-Control-Allow-Origin"] = "*"
+        origin = request.headers.get("Origin")
+        if "*" in cors_origins:
+            resp.headers["Access-Control-Allow-Origin"] = "*"
+        elif origin in cors_origins:
+            resp.headers["Access-Control-Allow-Origin"] = origin
+            resp.headers["Vary"] = "Origin"
         return resp
 
     @app.route("/query")

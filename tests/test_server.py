@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "app"))
 import config  # noqa: E402
-from server import LocalBackend, QueryRejected, check_query, create_app  # noqa: E402
+from server import FixedWindowLimiter, LocalBackend, QueryRejected, check_query, create_app  # noqa: E402
 
 BKA = "resource/university/dai-hoc-bach-khoa-ha-noi"
 
@@ -93,6 +93,17 @@ def test_security_headers(client):
     r = client.get("/")
     assert r.headers["X-Content-Type-Options"] == "nosniff"
     assert "X-Frame-Options" in r.headers
+    assert "Content-Security-Policy" in r.headers
+    assert r.headers["Permissions-Policy"] == "camera=(), microphone=(), geolocation=()"
+    assert r.headers["X-Request-ID"]
+
+
+def test_rate_limiter_bounds_a_single_client():
+    limiter = FixedWindowLimiter(2, window_seconds=60)
+    assert limiter.allow("client-a")
+    assert limiter.allow("client-a")
+    assert not limiter.allow("client-a")
+    assert limiter.allow("client-b")
 
 
 def test_download_and_query_file_traversal(client):

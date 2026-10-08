@@ -83,7 +83,9 @@ def main() -> int:
 
         health = requests.get(base + "/healthz", timeout=10)
         headers = {key: health.headers.get(key, "") for key in (
-            "X-Content-Type-Options", "X-Frame-Options", "Referrer-Policy")}
+            "X-Content-Type-Options", "X-Frame-Options", "Referrer-Policy", "Permissions-Policy", "X-Request-ID")}
+        html_headers = {key: requests.get(base + "/", timeout=10).headers.get(key, "") for key in (
+            "Content-Security-Policy", "Permissions-Policy", "X-Request-ID")}
         injection = requests.get(
             base + "/resource/university/a%3E%20%3Fp%20%3Fo%20%7D%20UNION%20%7B%20%3Fs%20%3Fp%20%3Fo%20%7D",
             timeout=10)
@@ -97,7 +99,7 @@ def main() -> int:
             "health_status": health.status_code == 200,
             "normal_load_no_5xx": all(status == 200 for status, _ in samples),
             "overload_backpressure": any(status == 503 for status, _ in overload),
-            "security_headers": all(headers.values()),
+            "security_headers": all(headers.values()) and all(html_headers.values()),
             "resource_injection_rejected": injection.status_code == 404,
             "ssrf_rejected": ssrf.status_code == 400,
             "oversized_query_rejected": oversized.status_code == 413,
@@ -113,7 +115,7 @@ def main() -> int:
                                     "max": round(max(latencies, default=0) * 1000, 2)},
                      "overload_requests": len(overload),
                      "overload_status_counts": overload_status_counts},
-            "headers": headers,
+            "headers": {**headers, "html": html_headers},
             "security_status_codes": {"resource_injection": injection.status_code,
                                        "ssrf": ssrf.status_code,
                                        "oversized_query": oversized.status_code},
