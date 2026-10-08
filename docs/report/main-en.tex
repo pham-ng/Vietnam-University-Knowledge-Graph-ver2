@@ -17,7 +17,7 @@
 \definecolor{accent}{HTML}{126B65}
 \tikzset{auditbox/.style={draw=accent,rounded corners=2pt,fill=accent!5,align=center,font=\small,text width=3cm,minimum height=10mm},auditarr/.style={-{Stealth},thick,draw=accent},auditlabel/.style={font=\scriptsize,fill=white,inner sep=2pt,align=center}}
 \pagestyle{fancy}\fancyhf{}
-\fancyhead[L]{\small VN-Edu LOD}\fancyhead[R]{\small Audited technical report}
+\fancyhead[L]{\small VN-Edu LOD}\fancyhead[R]{\small English project report}
 \fancyfoot[C]{\thepage}
 \setlength{\headheight}{14pt}
 \setlength{\parskip}{5pt}
@@ -42,18 +42,20 @@
 \vspace{8mm}
 {\LARGE A Knowledge Graph of Vietnamese\par Higher-Education Institutions\par}
 \vspace{10mm}
-{\Large Design, Implementation, and Critical Evaluation\par}
+{\Large Design, Implementation, and Evidence-based Evaluation\par}
 \vspace{10mm}
 {\color{accent}\rule{0.65\textwidth}{1pt}\par}
 \vspace{10mm}
-{\large Revised English technical report\par}
+{\large Revised English project report\par}
 {\large Ontology 2.2 and integration edition: 8 October 2026\par}
 \vfill
 \begin{minipage}{0.9\textwidth}\small
-This edition incorporates an independent code and data audit of the repository and
-recomputes measurements from the corrected release rather than copying them from the
-earlier Vietnamese report. The earlier report remains an archival
-description; its accuracy, security, and performance claims are not evidence for this edition.
+This report presents the design and implementation of a Linked Open Data knowledge graph
+for Vietnamese higher-education institutions. It combines a domain ontology, a reproducible
+multi-source transformation pipeline, RDF publication, reasoning, validation, and SPARQL
+access. The report is based on the corrected repository release and reports measured results
+with their scope, rather than treating a successful query or a visualization as proof of
+real-world truth.
 
 Project repository:\\
 \url{https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2}
@@ -62,62 +64,96 @@ Project repository:\\
 \hypersetup{pageanchor=true}
 
 \begin{abstract}
-VN-Edu LOD integrates information about Vietnamese educational institutions into an RDF
-knowledge graph, combining structured Wikidata records, Vietnamese Wikipedia infoboxes,
-and curated reference tables. The corrected snapshot contains \metricInstitutions{}
-educational-organization records, of which \metricHEIs{} are classified as higher-education
-institutions under the project's classification rules. It also represents
-\metricPeople{} person records, \metricCurrentProvinces{} current and
-\metricFormerProvinces{} former province-level units, and \metricPrograms{}
-illustrative academic programs. An ontology supports organizational, geographic, and
-educational relations; rule-based materialization adds inverse relations, classifications,
-and geographic containment. JSON Schema and SHACL enforce selected data contracts.
+VN-Edu LOD is an RDF knowledge graph for Vietnamese educational institutions. The project
+integrates structured Wikidata records, Vietnamese Wikipedia material, and curated reference
+tables into a common model of organizations, people, academic programs, and administrative
+geography. The corrected snapshot contains \metricInstitutions{} educational organizations,
+\metricPeople{} people, \metricCurrentProvinces{} current and \metricFormerProvinces{}
+former province-level units, and \metricPrograms{} illustrative programs. Its central
+technical contribution is a staged Bronze--Silver--Gold pipeline: source snapshots are
+normalized into records, records are mapped to persistent HTTP IRIs, RDF is linked and
+materialized, and the resulting union is released only after structural and semantic checks.
 
-The resulting serving graph contains \metricUnionTriples{} distinct triples. An independent
-review identified defects in SPARQL request validation, query cancellation, publication
-gates, entity identity, persistent URI allocation, and the interpretation of evaluation
-results. The revised implementation addresses these defects and adds targeted regression
-tests. Evaluation distinguishes local structural validity, reference-link agreement, and
-factual accuracy. The ontology passes the OWL API OWL 2 RL profile gate with zero violations.
-A dated seven-request publication check has limited scope. The result is
-a reproducible educational Linked Data system with explicit operational and epistemic limits.
+The ontology contains \metricClasses{} local classes, \metricObjectProperties{} object
+properties, and \metricDataProperties{} datatype properties. OWL 2 RL profile checking,
+rule-based materialization, SHACL validation, Apache Jena Fuseki/TDB2 acceptance tests,
+and regression tests provide complementary evidence. The validated serving union contains
+\metricUnionTriples{} distinct triples. The report separates ontology conformance,
+reference-link agreement, data completeness, factual accuracy, and production readiness:
+they are related engineering goals, but none is a substitute for the others. The result is
+a reproducible educational Linked Data artifact with an explicit list of remaining evidence
+requirements for authoritative, high-load deployment.
 \end{abstract}
 \noindent\textbf{Keywords:} knowledge graph; RDF; ontology; SHACL; SPARQL; entity resolution;
 data provenance; Vietnamese higher education.
 \clearpage\tableofcontents\clearpage
 \listoffigures\clearpage
+\listoftables\clearpage
 
-\section{Introduction and scope}
-Information about a university can appear under different names and identifiers across
-encyclopedic articles, knowledge bases, and organizational websites. Relationships are
-equally important: a member school is different from a branch campus; direct governance is
-different from general state oversight; and the area containing an institution may have
-changed its administrative representation. A knowledge graph makes these distinctions
-explicit and supports queries that join several kinds of entity.
+\section{Project overview}
+\subsection{Motivation and problem statement}
+Information about a university is distributed across knowledge bases, encyclopedic articles,
+institutional pages, and administrative reference data. The same institution may have several
+names, identifiers, locations, or organizational relationships. These differences matter in
+practice: a member school is not necessarily a branch campus, direct governance is not the
+same as state oversight, and a former province is not interchangeable with its successor.
+An RDF knowledge graph is useful here because it represents those distinctions as typed,
+linkable statements that can be queried across sources.
 
-This project is an engineering case study of that integration problem. Its contribution is
-the combination of a domain model, a layered data pipeline, machine-readable outputs, and
-a query interface. It does not introduce a new reasoning algorithm or establish a complete
-official register of Vietnamese higher education. Names, classifications, and dates reflect
-the collected snapshot and documented extraction policies.
+VN-Edu LOD is an engineering case study of this integration problem. It is designed to
+demonstrate a complete Semantic Web workflow, from source collection and URI assignment to
+ontology-based transformation, reasoning, validation, publication, and query execution.
+It is not presented as a complete official register of Vietnamese higher education. Names,
+classifications, dates, and relationships describe the collected snapshot and the project's
+documented extraction policies.
 
-The evaluation is organized around four questions:
+\subsection{Objectives and contributions}
+The project has four practical objectives:
 \begin{enumerate}
-\item Can the model distinguish relevant organizational relationships and support useful
-multi-step queries without introducing contradictions detected by the implemented checks?
-\item Can the pipeline reproduce a validated release and preserve stable identifiers as
-labels and input ordering change?
-\item What do the available data and evaluation procedures establish about completeness,
-link agreement, and correctness, and what remains unmeasured?
-\item Can publication and public query handling fail safely on invalid data and hostile inputs?
+\item build a domain ontology that distinguishes organization, governance, people, education,
+geography, identity, and temporal evidence;
+\item transform heterogeneous records into persistent RDF resources and publish machine-readable
+representations using Linked Data principles;
+\item evaluate the release with OWL 2 RL profile checking, materialization, SHACL, SPARQL,
+and automated regression tests; and
+\item demonstrate reproducible execution with Apache Jena Fuseki and a controlled Silk
+candidate-linking experiment.
 \end{enumerate}
 
-The audit covers source code, the ontology, SHACL shapes, cached inputs, generated RDF,
-tests, and the existing report. Security counterexamples are executed locally; external
-production endpoints are not used as attack targets. The project author's identity,
-institution, course identifier, and supervisor are not inferred or fabricated.
+The resulting contributions are summarized in Table~\ref{tab:contributions}. This framing
+follows a project-report structure: each contribution is paired with an artifact and an
+evidence source, so that the report can distinguish implementation from evaluation.
+\begin{table}[htbp]\centering\small
+\caption{Project contributions and evidence.}\label{tab:contributions}
+\begin{tabularx}{\textwidth}{p{3.0cm}XX}\toprule
+Contribution & Implemented artifact & Evidence reported in this document \\\midrule
+Domain model & OWL/Turtle ontology 2.2 with classes, properties, signatures, alignments, and selected chains & Protégé inspection, OWL 2 RL profile gate, ontology figures, and reasoning examples \\
+Data integration & Bronze--Silver--Gold transformation pipeline, URI registry, provenance and conflict logs & Reproducible pipeline, mapping example, release fingerprints, and coverage counts \\
+Linked publication & HTML, Turtle, JSON-LD, stable resource IRIs, link graph, and metadata & Publication checks, five-star assessment, and explicit licensing/identity scope \\
+Operational checks & Flask read-only query path, Fuseki/TDB2 loader, CI workflows, SHACL and regression suite & End-to-end acceptance tables, security probes, and test results \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
-\section{Technical foundations}
+\subsection{Research and evaluation questions}
+The evaluation is organized around four questions:
+\begin{enumerate}
+\item Does the model distinguish the relationships needed for institutional, educational,
+geographic, and governance queries without producing detected local contradictions?
+\item Can the transformation reproduce a validated release while preserving resource identity
+when labels or input order change?
+\item What do the measurements establish about structure, coverage, link agreement, and
+factual correctness, and which claims remain unsupported?
+\item Can publication and query handling fail safely on stale releases, invalid input,
+unapproved federation, and bounded overload?
+\end{enumerate}
+
+The review covers the source code, ontology, SHACL shapes, cached inputs, generated RDF,
+tests, CI workflows, and earlier project documentation. Security counterexamples are
+executed locally; external production endpoints are not used as attack targets.
+
+\section{Semantic Web foundations and requirements}
+\subsection{Standards used by the project}
 RDF describes resources through triples. Subjects may be IRIs or blank nodes; predicates
 are IRIs, and objects may additionally be literals. A graph is a set, so duplicate triples
 do not increase its size. This matters when combining asserted data, ontology statements,
@@ -147,6 +183,27 @@ provenance is attached to an entity, a graph, or an individual assertion determi
 can actually be traced. HTTP identifiers and useful representations support Linked Data
 publication, while persistence requires more than generating readable slugs~\cite{uris}.
 
+The standards are assigned different responsibilities. RDF and HTTP IRIs provide the data
+model and Web identity; OWL provides class and property semantics; SHACL provides explicit
+validation constraints; SPARQL provides query access; and Fuseki provides a storage/query
+runtime. Silk is used only for an experimental candidate-linking task. This separation is
+important because a tool boundary is not a semantic guarantee: loading RDF into Fuseki does
+not mint IRIs, SHACL does not prove facts, and OWL profile membership does not certify data
+accuracy.
+
+\begin{table}[htbp]\centering\small
+\caption{Design requirements and the mechanism used to address them.}\label{tab:requirements}
+\begin{tabularx}{\textwidth}{p{3.2cm}XX}\toprule
+Requirement & Design response & Verification boundary \\\midrule
+Interoperability & RDF 1.1, OWL, SKOS, PROV-O, JSON-LD, HTTP IRIs & Syntax and profile checks; external vocabulary semantics are not fully imported \\
+Identity stability & Canonical resource namespace and committed URI registry & URI-regression tests; migration is still required when source keys change \\
+Semantic precision & Separate properties for governance, oversight, membership, branch, ownership, and geography & Domain/range inspection and competency queries \\
+Data quality & JSON Schema, raw asserted checks, OWL 2 RL materialization, and SHACL & Release gate; warnings remain visible and are not silently converted to facts \\
+Reproducibility & Cached inputs, fingerprints, pinned runtime versions, CI workflows, and machine-readable reports & Local reconstruction and Linux Fuseki/Silk workflows \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 \section{Data sources and collection}
 \subsection{Source roles}
 Wikidata contributes identifiers, labels, institutional attributes, organizational links,
@@ -155,6 +212,19 @@ historical text, and links between articles. DBpedia supplies candidate identity
 some fallback values. Selected reference tables describe province mergers, regional
 groupings, fields of study, majors, and example programs. Geocoding is used as a fallback
 for location resolution and is not equivalent to an authoritative campus register.
+
+\begin{table}[htbp]\centering\small
+\caption{Source roles and integration treatment.}\label{tab:sources}
+\begin{tabularx}{\textwidth}{p{3.0cm}p{4.0cm}X}\toprule
+Source or input & Information used & Treatment in the release \\\midrule
+Wikidata & Identifiers, labels, types, links, and person/organization attributes & Primary identity evidence when a stable identifier is available; provenance is retained \\
+Vietnamese Wikipedia & Infobox values, article descriptions, revisions, and page links & Structured extraction and revision-specific provenance; not treated as an official register \\
+DBpedia and other linked datasets & Candidate external resources and identity links & Interlinking evidence; uncertain matches remain outside accepted identity assertions \\
+Reference tables & Provinces, mergers, regions, fields, majors, and sample programs & Curated integration inputs; programs are illustrative rather than a complete catalogue \\
+Geocoding fallback & Location resolution when structured identifiers are missing & Convenience support only; not evidence of legal campus status \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 Wikipedia and Wikidata are interconnected community resources. Agreement between them is
 useful corroborating evidence, but they must not be described as statistically independent
@@ -188,6 +258,12 @@ education, not necessarily completion of a degree. The existing \term{Alumnus} c
 be interpreted with that limitation.
 
 \section{Architecture and data management}
+The implementation follows a layered architecture. Raw source material is kept separate
+from normalized records; RDF generation is separate from reasoning; and validated output is
+separate from publication. This organization is similar to the Bronze--Silver--Gold pattern
+used in other Linked Data projects, but the names describe project artifacts rather than a
+universal standard. The flow in Figure~\ref{fig:release-flow} is the release-level view;
+the detailed transformation diagram appears in Section~\ref{sec:transform}.
 \begin{figure}[htbp]\centering
 \begin{tikzpicture}[box/.style={draw=accent,rounded corners,align=center,text width=3.9cm,minimum height=1.3cm,font=\small},arr/.style={-{Stealth},thick},node distance=11mm]
 \node[box] (bronze) {\textbf{Bronze}\\Cached responses and source snapshots};
@@ -201,6 +277,7 @@ be interpreted with that limitation.
 \draw[arr] (release)--(web);
 \end{tikzpicture}
 \caption[Validated release flow]{Release flow. A failed validation prevents replacement of validated inference and the serving graph; changed inputs invalidate the publication fingerprint.}
+\label{fig:release-flow}
 \end{figure}
 
 \subsection{Layers and contracts}
@@ -261,6 +338,21 @@ and authoritative supporting sources.
 \input{sections/transformation-en.tex}
 
 \section{Ontology design and relationship semantics}
+\subsection{Design method}
+The ontology was designed from competency questions rather than from the visual shape of
+the source tables. Candidate concepts were grouped into modules, each relation was assigned
+a domain and range only when the data semantics justified it, and stronger axioms were kept
+separate from data-quality rules. The resulting model is therefore a TBox: it describes
+classes, properties, signatures, hierarchies, alignments, and selected entailment patterns.
+The institutional records, people, programs, and locations are the ABox. SHACL shapes and
+raw-record checks validate the ABox without pretending that every optional field is complete.
+
+This distinction also explains why the ontology diagram should not be read as a relational
+database schema. A relational diagram emphasizes tables and cardinalities; an OWL diagram
+emphasizes concepts, property semantics, and possible entailments under the open-world
+assumption. The project uses an ER/UML-like projection for readability, while the Turtle
+axioms, Protégé inspection, profile check, and reasoner output remain authoritative.
+
 \subsection{Modules}
 The ontology has \metricClasses{} named local classes, \metricObjectProperties{} local
 object properties, and \metricDataProperties{} local datatype properties in the audited
@@ -335,6 +427,26 @@ the precision of all other dates. These source-quality limitations remain docume
 work, not conclusions resolved by successful reasoning.
 
 \section{Linking and publication}
+This stage turns the validated graph into a Linked Data artifact. It has three distinct
+responsibilities: interlink local resources with external datasets, expose useful Web
+representations, and provide a query/storage runtime. The responsibilities are deliberately
+not collapsed into one product: the Python transformer creates RDF, the publisher creates
+resource documents, Protégé inspects ontology axioms, GraphDB is useful for interactive
+exploration, and Fuseki provides the tested Apache Jena SPARQL/TDB2 path.
+
+\begin{table}[htbp]\centering\small
+\caption{Technology roles in the VN-Edu publication architecture.}\label{tab:technology-roles}
+\begin{tabularx}{\textwidth}{p{3.0cm}XX}\toprule
+Component & Main role & What it does not prove \\\midrule
+Python/RDFLib pipeline & Integrates records, assigns URIs, emits RDF, materializes selected entailments & Does not provide a persistent public endpoint by itself \\
+Protégé and OWL API & Inspects ontology axioms and checks OWL 2 RL profile membership & Does not validate all ABox facts or measure production capacity \\
+GraphDB Workbench & Interactive repository loading, visualization, and SPARQL exploration & A layout is not a formal ontology specification \\
+Apache Jena Fuseki/TDB2 & HTTP SPARQL/Graph Store access and persistent acceptance path & Does not mint canonical IRIs or establish factual accuracy \\
+Silk Framework & Candidate entity-linking experiment on a frozen sample & Candidate links are not automatically accepted as \term{owl:sameAs} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 \subsection{External relations}
 The link graph contains \metricLinkTriples{} triples. Wikidata, ROR, GeoNames, and
 selected DBpedia links use \term{owl:sameAs}; subject mappings use
@@ -367,7 +479,27 @@ data or the project itself.
 
 \input{sections/fuseki-publication-en.tex}
 
-\section{Query execution and security review}
+\section{Application, security and CI/CD}
+The repository treats the validated graph as a release artifact. The main CI workflow rebuilds
+the site, runs the reasoning and publication gates, and executes the regression suite. Separate
+workflow paths exercise Fuseki/TDB2 and the Silk runtime when their relevant inputs change.
+This split keeps the ordinary documentation build fast while preserving explicit evidence for
+the two external runtimes. A green workflow means that the declared checks passed on the CI
+runner; it is not a claim that a public deployment is secure or available.
+
+\begin{table}[htbp]\centering\small
+\caption{CI/CD gates and the claim supported by each gate.}\label{tab:ci-gates}
+\begin{tabularx}{\textwidth}{p{3.8cm}p{4.0cm}X}\toprule
+Gate & Executed check & Supported claim \\\midrule
+Reasoning and release metrics & OWL/RL materialization, consistency diagnostics, SHACL, graph union checks & The checked local release satisfies the implemented structural policy \\
+Static publication & Site build, fingerprints, HTML/RDF/JSON-LD generation & The generated publication is reproducible from the validated inputs \\
+Regression suite & Python tests for transformation, queries, security, URIs and release gates & The known counterexamples remain covered by automated tests \\
+Fuseki/TDB2 workflow & Load, read, query parity, restart, backup, and denied update tests & Apache Jena persistence and read-only acceptance succeeded in the test environment \\
+Silk workflow & Frozen candidates and reference-agreement metrics & Silk executed and produced candidates; independent identity accuracy remains unproven \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 The original SPARQL policy searched for textual patterns containing whitespace after
 \term{SERVICE} and \term{FROM}. Valid forms without that whitespace bypassed the filter.
 The audit reproduced this locally using loopback targets without issuing an outbound
@@ -482,6 +614,12 @@ are built before the server integration suite. A successful run establishes that
 tested release follows the intended local contracts. It does not constitute a penetration
 test, an independent factual annotation study, or a load test of the public deployment.
 
+On the review branch, the final local regression command completed with 139 passed tests
+and one dependency deprecation warning. The reasoning gate, release metrics, publication
+build, and the dedicated Fuseki and Silk workflows are reported separately because they
+exercise different systems. This is a deliberate evidence matrix rather than one composite
+``green means correct'' score.
+
 \subsection{Treatment of earlier comparisons}
 The earlier report's 21-fact comparison with a predecessor repository is a small,
 hand-selected demonstration. Its benchmark script relies on a machine-specific path and
@@ -496,7 +634,14 @@ adding useful or correct information. A future comparison should define a common
 universe, edge projection, deduplication policy, and frozen input revisions before reporting
 degree statistics.
 
-\section{Threats to validity and remaining work}
+\section{Discussion, limitations and future work}
+The evidence supports the project as a reproducible Semantic Web implementation and a useful
+educational knowledge graph. It does not support a single overall ``five-star software''
+rating. The five-star Linked Open Data scheme concerns how data is published and connected;
+OWL 2 RL concerns ontology profile membership; SHACL concerns declared constraints; and
+production readiness concerns security, operations, recovery, and load. A sound evaluation
+must report these dimensions separately.
+
 \textbf{Construct validity.} Logical consistency, SHACL conformance, field presence, and
 link agreement measure different things. None alone measures real-world correctness.
 Program examples and name-based legal-type classification further restrict what answers
@@ -526,17 +671,20 @@ coverage, linking coverage, and correctness. Those additions require evidence no
 in the current repository and are not supplied by inventing dates, labels, or outcomes.
 
 \section{Conclusion}
-VN-Edu LOD demonstrates a working integration and publication pipeline for a Vietnamese
-education knowledge graph. The audited implementation strengthens the boundary between
-untrusted queries and execution, between candidate data and publication, and between
-source labels and entity identity. Its measured result is a locally validated release with
-\metricUnionTriples{} distinct serving triples and explicit limitations on factual,
-temporal, and operational interpretation. The available evidence supports the system as
-an educational Linked Data artifact; it does not establish perfect accuracy or complete
-coverage of Vietnamese higher education. The current branch also contains a production
-hardening profile and a private Fuseki/TDB2 deployment topology, but its local acceptance
-results must not be confused with a deployed high-load, security or factual-accuracy
-certification. Those claims remain gated by the evidence listed in Table~\ref{tab:production-gates}.
+VN-Edu LOD demonstrates an end-to-end Linked Data workflow for Vietnamese higher education.
+The project connects a modular OWL ontology to a layered transformation pipeline, persistent
+HTTP identifiers, external links, reasoning, SHACL validation, publication, and SPARQL access.
+The corrected release contains \metricUnionTriples{} distinct serving triples, and the
+automated gates provide reproducible evidence for its local structure, release integrity,
+and runtime integration.
+
+The most important result is methodological: the report makes the boundaries between claims
+explicit. OWL 2 RL profile membership is not factual accuracy; SHACL conformance is not
+completeness; Silk candidate agreement is not an independently measured identity accuracy;
+and Fuseki acceptance is not a production security or high-load certificate. With those
+boundaries preserved, the repository is a credible educational Semantic Web artifact and a
+sound basis for future work using authoritative registers, claim-level temporal provenance,
+held-out link annotations, and a deployed Fuseki benchmark.
 
 \appendix
 \section{Reproducing the release and report}

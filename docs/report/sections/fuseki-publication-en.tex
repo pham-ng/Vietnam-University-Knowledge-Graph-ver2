@@ -1,5 +1,9 @@
-\section{URI publication and Apache Jena Fuseki}
+\section{Deployment and Apache Jena Fuseki}
 \label{sec:fuseki}
+This section documents how the validated RDF release is published and queried. It is useful
+to separate the URI design from the runtime: a URI identifies a resource, while Fuseki stores
+and queries triples about that resource. The same graph can therefore be published as static
+RDF and loaded into Fuseki without changing its identifiers.
 Fuseki is a SPARQL server, not a URI minting service~\cite{fuseki}.
 The transformer assigns canonical identifiers before data enters any store.
 The same university IRI remains in RDF whether queried by RDFLib, Oxigraph or Fuseki.
@@ -131,7 +135,7 @@ completed successfully.
 \caption{Measured Fuseki/TDB2 acceptance results.}\label{tab:fuseki-status}
 \begin{tabularx}{\textwidth}{P{6.5cm}X}\toprule
 Check & Observed result \\\midrule
-Load complete validated serving graph & 73,690 triples; graph-isomorphic to local RDF. \\
+Load complete validated serving graph & 73,628 triples; graph-isomorphic to local RDF. \\
 Attempt unapproved replacement & Refused before PUT. \\
 Approved replacement with backup & Backup graph-isomorphic to previous contents. \\
 Query parity with RDFLib & Count: 1 row; class totals: 68 rows; programs: 78 rows; explicitly dated leadership: 0 rows. \\
