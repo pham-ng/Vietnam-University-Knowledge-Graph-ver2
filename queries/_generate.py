@@ -92,7 +92,7 @@ Q["07_ho_so_truong"] = """# Hồ sơ đầy đủ của Đại học Bách khoa 
 SELECT ?thuoc_tinh (GROUP_CONCAT(DISTINCT ?v; separator=" | ") AS ?gia_tri)
 WHERE {{
   ?u vnedu:admissionCode "BKA" ; ?p ?o .
-  FILTER(?p NOT IN (vnedu:hasAlumnus, <https://schema.org/alumni>))
+  FILTER(?p NOT IN (vnedu:hasAlumnus, <http://schema.org/alumni>))
   OPTIONAL {{ ?o rdfs:label ?ol FILTER(LANG(?ol) = "vi") }}
   BIND(COALESCE(?ol, STR(?o)) AS ?v)
   BIND(REPLACE(STR(?p), "^.*[#/]", "") AS ?thuoc_tinh)
@@ -118,7 +118,7 @@ SELECT ?truong (COUNT(DISTINCT ?p) AS ?so_cuu_sv) (COUNT(DISTINCT ?ck) AS ?chinh
 WHERE {{
   ?p a vnedu:Alumnus ; vnedu:alumnusOf ?u .
   ?u rdfs:label ?truong FILTER(LANG(?truong) = "vi")
-  OPTIONAL {{ ?p <https://schema.org/hasOccupation> <http://www.wikidata.org/entity/Q82955> BIND(?p AS ?ck) }}
+  OPTIONAL {{ ?p <http://schema.org/hasOccupation> <http://www.wikidata.org/entity/Q82955> BIND(?p AS ?ck) }}
 }}
 GROUP BY ?truong ORDER BY DESC(?so_cuu_sv) LIMIT 12
 """

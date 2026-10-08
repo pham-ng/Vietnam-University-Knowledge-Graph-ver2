@@ -1,6 +1,6 @@
 # Sơ đồ ontology VN-Edu
 
-*Sinh tự động từ `ontology/vnedu.ttl` bởi `scripts/gen_docs.py`* — 34 lớp, 33 thuộc tính quan hệ, 20 thuộc tính dữ liệu, 769 triple.
+*Sinh tự động từ `ontology/vnedu.ttl` bởi `scripts/gen_docs.py`* — 34 lớp, 33 thuộc tính quan hệ, 20 thuộc tính dữ liệu, 759 triple.
 
 Mũi tên rỗng = kế thừa (`rdfs:subClassOf`); mũi tên có nhãn = thuộc tính quan hệ (domain → range).
 
@@ -106,7 +106,6 @@ classDiagram
 | Lớp định nghĩa (≡) | **PrivateInstitution** ≡ EducationalOrganization ⊓ ∋ownership.{PrivateOwnership} |
 | Lớp định nghĩa (≡) | **PublicInstitution** ≡ EducationalOrganization ⊓ ∋ownership.{PublicOwnership} |
 | Phân loại (⊑) | EducationalOrganization ⊓ ∃memberOf.HigherEducationInstitution ⊑ **MemberInstitution** |
-| Phân loại (⊑) | EducationalOrganization ⊓ ∃dissolutionYear.gYear ⊑ **DefunctInstitution** |
 | Phân loại (⊑) | Person ⊓ ∃alumnusOf.EducationalOrganization ⊑ **Alumnus** |
 | Phân loại (⊑) | Person ⊓ ∃leads.EducationalOrganization ⊑ **InstitutionLeader** |
 | Chuỗi thuộc tính | bornIn ∘ mergedInto ⊑ **bornIn** |

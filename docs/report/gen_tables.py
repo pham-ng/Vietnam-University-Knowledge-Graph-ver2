@@ -14,7 +14,7 @@ import config  # noqa: E402
 V = config.ONTO_NS
 o = Graph().parse(ROOT / "ontology" / "vnedu.ttl")
 o.bind("vnedu", V)
-o.bind("schema", "https://schema.org/")
+o.bind("schema", "http://schema.org/")
 o.bind("dbo", "http://dbpedia.org/ontology/")
 
 GROUPS = [

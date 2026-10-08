@@ -234,7 +234,7 @@ def build_void(data: Graph, links: Graph, counts) -> Graph:
     v.add((ds, VOID.sparqlEndpoint, URIRef(config.PUBLIC_SPARQL)))
     v.add((ds, VOID.uriSpace, Literal(config.RES_NS)))
     v.add((ds, VOID.vocabulary, URIRef(config.ONTO_NS)))
-    for vocab in ("https://schema.org/", "http://xmlns.com/foaf/0.1/", "http://www.w3.org/2004/02/skos/core#",
+    for vocab in ("http://schema.org/", "http://xmlns.com/foaf/0.1/", "http://www.w3.org/2004/02/skos/core#",
                   "http://dbpedia.org/ontology/", "http://www.w3.org/2003/01/geo/wgs84_pos#", "http://www.w3.org/ns/prov#"):
         v.add((ds, VOID.vocabulary, URIRef(vocab)))
     v.add((ds, VOID.exampleResource, URIRef(config.RES_NS + "university/dai-hoc-bach-khoa-ha-noi")))

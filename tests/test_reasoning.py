@@ -92,7 +92,7 @@ def test_trains_major_chain(onto):
 
 
 def test_defunct_from_dissolution_year(onto):
-    """EduOrg ⊓ ∃dissolutionYear.xsd:gYear ⊑ DefunctInstitution (VD: Viện Đại học Vạn Hạnh 1964–1975)."""
+    """dissolutionYear rdfs:domain DefunctInstitution (VD: Viện Đại học Vạn Hạnh 1964–1975)."""
     c = closure_of(onto, [(R.vh, RDF.type, V.UniversitySchool),
                           (R.vh, V.dissolutionYear, Literal("1975", datatype=XSD.gYear))])
     assert (R.vh, RDF.type, V.DefunctInstitution) in c

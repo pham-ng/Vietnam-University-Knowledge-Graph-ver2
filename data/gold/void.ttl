@@ -5,7 +5,7 @@
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix university: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/> .
 @prefix vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#> .
@@ -89,7 +89,7 @@
     dct:description "Cơ sở giáo dục đại học Việt Nam, cơ quan chủ quản, lãnh đạo, cựu sinh viên, đơn vị hành chính (gồm sắp xếp tỉnh 2025), ngành đào tạo — tích hợp và đối chiếu từ Wikidata và Wikipedia tiếng Việt."@vi ;
     dct:language <http://id.loc.gov/vocabulary/iso639-1/vi> ;
     dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
-    dct:modified "2026-10-06"^^xsd:date ;
+    dct:modified "2026-10-08"^^xsd:date ;
     dct:source <https://vi.wikipedia.org/>,
         <https://www.wikidata.org/> ;
     dct:title "VN-Edu Linked Open Data"@en,
@@ -110,12 +110,12 @@
     void:triples 26577 ;
     void:uriSpace "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/" ;
     void:vocabulary dbo:,
+        schema:,
         geo:,
         skos:,
         prov:,
         foaf:,
-        vnedu:,
-        schema: ;
+        vnedu: ;
     dcat:distribution <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-data.ttl>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-links.ttl> ;
