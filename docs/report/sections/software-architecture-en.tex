@@ -1,0 +1,61 @@
+\section{System and software architecture}
+\label{sec:software-architecture}
+The project is implemented as a batch-oriented Python application with separate data,
+semantic, publication, and verification responsibilities. Figure~\ref{fig:system-architecture}
+shows the complete system from external sources to user-facing artifacts. Figure~\ref{fig:software-architecture}
+maps that flow to the repository's executable components. The diagrams are complementary:
+the first explains the data life cycle, while the second explains the software boundaries.
+
+\begin{figure}[htbp]\centering
+\resizebox{\textwidth}{!}{\input{figures/system-architecture-en.tex}}
+\caption[Overall VN-Edu LOD architecture]{Overall architecture of VN-Edu LOD. Source material is
+collected and normalized before RDF generation; ontology enrichment and quality gates produce a
+validated release that can be published statically, queried through the application, or loaded
+into Apache Jena Fuseki.}
+\label{fig:system-architecture}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\resizebox{\textwidth}{!}{\input{figures/software-architecture-en.tex}}
+\caption[Software architecture and repository components]{Software architecture. The CLI orchestrator
+coordinates domain services, while versioned artifacts connect the services to the static publisher,
+web application, and Fuseki adapter. Dashed arrows indicate artifact hand-off rather than direct
+runtime calls.}
+\label{fig:software-architecture}
+\end{figure}
+
+\subsection{Component responsibilities}
+The collection layer obtains structured records and cached source responses. The integration
+layer applies identity, field-precedence, normalization, and conflict policies. The RDF
+transformer assigns or reuses resource IRIs, emits typed literals and object links, and keeps
+the asserted graph separate from inferred output. The semantic layer applies the local ontology,
+selected OWL/RDF rules, external links, and qualified observations. The release layer runs
+raw-data checks, OWL diagnostics, SHACL, metric generation, graph-isomorphism checks, and
+fingerprint validation before a serving artifact is accepted.
+
+The web application is a consumer of the release rather than the source of truth. Its local
+RDFLib backend is useful for an isolated read-only view; the optional Fuseki adapter provides
+the tested HTTP/TDB2 path. The static publisher produces resource pages and RDF downloads for
+Linked Data clients. This separation makes it possible to test the transformation and semantic
+artifacts without requiring a running web server.
+
+\subsection{Technology choices}
+Python and RDFLib were retained for transparent transformation and easy regression testing.
+OWL API and Protégé are used to inspect the ontology and check its OWL 2 RL profile. GraphDB
+is useful for interactive repository exploration and visualization, but its layout is not the
+formal specification. Apache Jena Fuseki 6.2.0 is used as the RDF HTTP server and TDB2
+persistence target in the end-to-end acceptance workflow. Silk Framework 3.6.0 is isolated
+as a candidate-linking experiment so that uncertain matches cannot silently enter the release.
+
+\begin{table}[htbp]\centering\small
+\caption{Main software components and their boundaries.}\label{tab:software-components}
+\begin{tabularx}{\textwidth}{p{3.2cm}p{4.2cm}X}\toprule
+Component & Responsibility & Boundary \\\midrule
+\texttt{run\_all.py} and pipeline scripts & Orchestrate collection, integration, transformation, reasoning and publication & Batch execution; not a long-running RDF server \\
+RDFLib and Python validators & Create RDF, apply local policies, inspect graphs, and run regression checks & Does not replace formal OWL profile checking or production load testing \\
+Protégé/OWL API & Inspect ontology axioms and profile membership & Does not decide whether source facts are true \\
+Flask/Waitress application & Read-only UI and guarded SPARQL access & Uses bounded local execution; external TLS/proxy policy remains operational \\
+Apache Jena Fuseki/TDB2 & Persistent RDF store and SPARQL/Graph Store protocol & Requires deployment hardening, authentication, backups, and measured capacity \\
+\bottomrule
+\end{tabularx}
+\end{table}

@@ -1,0 +1,36 @@
+\begin{tikzpicture}[
+  node distance=7mm and 8mm,
+  layer/.style={draw=accent!80!black, rounded corners=3pt, fill=accent!5, align=center, font=\small, text width=2.55cm, minimum height=13mm},
+  source/.style={draw=orange!70!black, rounded corners=3pt, fill=orange!10, align=center, font=\small, text width=2.55cm, minimum height=13mm},
+  artifact/.style={draw=blue!70!black, rounded corners=3pt, fill=blue!6, align=center, font=\small, text width=2.7cm, minimum height=13mm},
+  arrow/.style={-{Stealth}, thick, draw=accent!80!black},
+  sidearrow/.style={-{Stealth}, dashed, thick, draw=black!55}
+]
+\node[source] (sources) at (0,0) {Wikidata\\Vietnamese Wikipedia\\reference tables};
+\node[source] (bronze) at (3.5,0) {Bronze\\cached responses\\source snapshots};
+\node[layer] (silver) at (7,0) {Silver\\normalized records\\conflict log};
+\node[layer] (transform) at (10.5,0) {RDF transformation\\persistent URI registry\\RDFLib};
+\node[layer] (semantic) at (14,0) {Ontology + rules\\OWL 2 RL\\link graph};
+
+\node[layer] (quality) at (10.5,-2.35) {Quality gates\\schema checks\\reasoning diagnostics};
+\node[artifact] (release) at (14,-2.35) {Validated Gold release\\asserted RDF + selected inference\\SHACL and fingerprints};
+\node[artifact] (static) at (10.5,-4.75) {Static Linked Data\\HTML, Turtle, JSON-LD\\canonical resource IRIs};
+\node[artifact] (fuseki) at (14,-4.75) {Apache Jena Fuseki\\SPARQL + Graph Store\\TDB2 persistence};
+\node[artifact] (app) at (17.5,-4.75) {Web application\\read-only query guard\\human-facing views};
+
+\draw[arrow] (sources)--(bronze);
+\draw[arrow] (bronze)--(silver);
+\draw[arrow] (silver)--(transform);
+\draw[arrow] (transform)--(semantic);
+\draw[arrow] (semantic)--(release);
+\draw[arrow] (quality)--(release);
+\draw[sidearrow] (transform)--(quality);
+\draw[arrow] (release.south west) to[bend right=12] (static.north east);
+\draw[arrow] (release)--(fuseki);
+\draw[arrow] (release.south east) to[bend left=12] (app.north west);
+
+\node[font=\scriptsize, align=center] at (1.75,0.82) {acquire};
+\node[font=\scriptsize, align=center] at (5.25,0.82) {integrate};
+\node[font=\scriptsize, align=center] at (8.75,0.82) {map};
+\node[font=\scriptsize, align=center] at (12.25,0.82) {enrich};
+\end{tikzpicture}

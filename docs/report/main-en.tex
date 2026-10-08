@@ -335,6 +335,7 @@ without pretending that the historical ambiguity has been adjudicated. Distingui
 predecessor origin, legal establishment, and opening would require dated event records
 and authoritative supporting sources.
 
+\input{sections/software-architecture-en.tex}
 \input{sections/transformation-en.tex}
 
 \section{Ontology design and relationship semantics}
@@ -357,9 +358,10 @@ axioms, Protégé inspection, profile check, and reasoner output remain authorit
 The ontology has \metricClasses{} named local classes, \metricObjectProperties{} local
 object properties, and \metricDataProperties{} local datatype properties in the audited
 release. Table~\ref{tab:modules} summarizes the main relationship choices.
-Figures~\ref{fig:taxonomy}--\ref{fig:geo-chain} visualize selected implemented axioms,
-not a proposed replacement ontology. Classes, property signatures and individual-level
-inferences are distinguished explicitly.
+Figures~\ref{fig:ontology-er-relation-map} and~\ref{fig:tbox-architecture} visualize the
+implemented axioms, while Figure~\ref{fig:abox-instance-neighborhood} shows a populated
+individual-level neighborhood. Classes, property signatures, and instances are distinguished
+explicitly.
 \begin{table}[htbp]\centering\small
 \caption{Main modules and intended distinctions.}\label{tab:modules}
 \begin{tabularx}{\textwidth}{p{2.6cm}XX}\toprule
@@ -386,7 +388,7 @@ local reasoning scope, not every possible external combination.
 
 \input{sections/ontology-review-en.tex}
 
-\subsection{Materialization}
+\subsection{Materialization and temporal interpretation}
 The system computes a rule closure over the local ontology and asserted data and retains
 selected new instance-level statements. External identity links are joined into the
 serving graph after this step. This avoids equality-driven copying to remote identifiers,
@@ -406,13 +408,13 @@ successor province and its larger region. Inverse properties expose the same rel
 in the opposite direction without manually storing both directions in the asserted graph.
 
 The model uses the \term{owlrl} implementation of OWL 2 RL/RDF rules. A separate OWL API
-\term{OWL2RLProfile} gate now checks the committed Turtle ontology; release 2.2 produced
-zero violations. Calendar years are represented as \term{xsd:integer}, and calendar dates
-as \term{xsd:dateTime} at midnight when the source supplies date precision only. This
-certifies the ontology's syntactic profile membership, not factual correctness, reasoner
-completeness over unimported external ontologies, or production performance.
+\term{OWL2RLProfile} gate checks the committed Turtle ontology; release 2.2 produced zero
+violations. Calendar years are represented as \term{xsd:integer}, and calendar dates as
+\term{xsd:dateTime} at midnight when the source supplies date precision only. This certifies
+profile membership, not factual correctness, completeness over imported vocabularies, or
+production performance.
 
-\subsection{Geographic and temporal limitations}
+The main temporal limitations are:
 The \term{birthAreaInCurrentCrosswalk} chains are geographic containment crosswalks, separated from \term{bornIn} in version 2.2. Relating a birthplace to
 a province created in 2025 does not mean that province existed when the person was born.
 Similarly, historical institutions should not automatically be counted as currently
@@ -477,29 +479,34 @@ project root, external paths, symbolic links, and existing directories without g
 markers. This prevents a misconfigured output environment variable from deleting source
 data or the project itself.
 
+\subsection{User-facing resource and query views}
+The publication layer is also evaluated from the perspective of a reader and a
+developer. Figure~\ref{fig:resource-page} shows a generated resource page for a
+university. It exposes the canonical IRI, labels, source context, external links,
+and machine-readable affordances without requiring a user to inspect the raw Turtle
+file. Figure~\ref{fig:sparql-ui} shows the separate SPARQL interface used to submit
+read-only competency queries and inspect tabular results. These screenshots document
+the user interface only; endpoint availability, persistence, graph parity, and the
+read-only policy are established by the automated acceptance tests described in
+Section~\ref{sec:fuseki}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.94\textwidth]{figures/resource.png}
+\caption{Generated Linked Data resource view for a university.}
+\label{fig:resource-page}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.94\textwidth]{figures/sparql.png}
+\caption{Read-only SPARQL query view and returned result table.}
+\label{fig:sparql-ui}
+\end{figure}
+
 \input{sections/fuseki-publication-en.tex}
 
-\section{Application, security and CI/CD}
-The repository treats the validated graph as a release artifact. The main CI workflow rebuilds
-the site, runs the reasoning and publication gates, and executes the regression suite. Separate
-workflow paths exercise Fuseki/TDB2 and the Silk runtime when their relevant inputs change.
-This split keeps the ordinary documentation build fast while preserving explicit evidence for
-the two external runtimes. A green workflow means that the declared checks passed on the CI
-runner; it is not a claim that a public deployment is secure or available.
-
-\begin{table}[htbp]\centering\small
-\caption{CI/CD gates and the claim supported by each gate.}\label{tab:ci-gates}
-\begin{tabularx}{\textwidth}{p{3.8cm}p{4.0cm}X}\toprule
-Gate & Executed check & Supported claim \\\midrule
-Reasoning and release metrics & OWL/RL materialization, consistency diagnostics, SHACL, graph union checks & The checked local release satisfies the implemented structural policy \\
-Static publication & Site build, fingerprints, HTML/RDF/JSON-LD generation & The generated publication is reproducible from the validated inputs \\
-Regression suite & Python tests for transformation, queries, security, URIs and release gates & The known counterexamples remain covered by automated tests \\
-Fuseki/TDB2 workflow & Load, read, query parity, restart, backup, and denied update tests & Apache Jena persistence and read-only acceptance succeeded in the test environment \\
-Silk workflow & Frozen candidates and reference-agreement metrics & Silk executed and produced candidates; independent identity accuracy remains unproven \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
+\section{Application security and query execution}
 The original SPARQL policy searched for textual patterns containing whitespace after
 \term{SERVICE} and \term{FROM}. Valid forms without that whitespace bypassed the filter.
 The audit reproduced this locally using loopback targets without issuing an outbound
@@ -528,6 +535,15 @@ redirects. Actual query cancellation and remote SERVICE egress remain responsibi
 of the configured Fuseki instance. The separate Linux acceptance run verifies load/query/persistence/read-only behavior;
 it does not verify production federation controls. Raw POST requests with \term{application/sparql-query} are now accepted,
 alongside form-encoded query requests.
+
+The security tests support a bounded local read-only service: path traversal, unapproved
+federation targets, oversized queries, and uncontrolled worker growth are rejected by the
+implemented checks. These are application-level controls. They do not replace TLS termination,
+authentication, external rate limiting, memory quotas, secret rotation, monitoring, or a
+deployed Fuseki load test. The production topology and its remaining gates are documented in
+Section~\ref{sec:fuseki}.
+
+\input{sections/cicd-en.tex}
 
 \section{Evaluation and results}
 \subsection{Release measurements}

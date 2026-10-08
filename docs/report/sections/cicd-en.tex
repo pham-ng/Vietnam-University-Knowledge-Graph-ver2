@@ -1,0 +1,35 @@
+\section{Reproducible workflow and CI/CD}
+\label{sec:cicd}
+The repository uses continuous integration as a reproducibility mechanism, not as a substitute
+for scientific interpretation. Figure~\ref{fig:cicd-workflow} shows the ordinary release path
+and the two specialized evidence paths. The main workflow rebuilds the graph and static site,
+while Fuseki and Silk run in separate workflows with their own runtime requirements.
+
+\begin{figure}[htbp]\centering
+\resizebox{\textwidth}{!}{\input{figures/cicd-en.tex}}
+\caption[CI/CD and evidence workflow]{CI/CD workflow. A commit enters the ordinary reconstruction
+and quality gates; successful artifacts can be published to GitHub Pages. Fuseki/TDB2 and Silk
+are separate evidence paths with different acceptance claims.}
+\label{fig:cicd-workflow}
+\end{figure}
+
+\subsection{Release sequence}
+The release sequence is intentionally ordered. Inputs are reconstructed first, RDF is then
+materialized and checked, and only a release with matching fingerprints can be published or
+loaded into Fuseki. A failure in a later gate does not turn a candidate graph into a public
+graph. This design addresses a common failure mode in data projects: reporting a successful
+transformation before validating the exact artifact that is served.
+
+\begin{enumerate}
+\item Reconstruct cached inputs and validate Silver records.
+\item Generate asserted RDF, link metadata, ontology data, and selected inferred triples.
+\item Run OWL diagnostics, SHACL, metrics, stale-release checks, and graph-isomorphism checks.
+\item Build the static publication and the report from the accepted artifact.
+\item Run the Fuseki/TDB2 acceptance job and, when requested, the isolated Silk experiment.
+\end{enumerate}
+
+\subsection{What CI proves}
+The current suite demonstrates reproducible execution of the declared local gates. It does
+not prove that every institution is represented, every identity link is correct, or that the
+public endpoint can sustain an arbitrary workload. Those claims require independent annotation,
+authoritative source comparison, and a load test against the selected production topology.

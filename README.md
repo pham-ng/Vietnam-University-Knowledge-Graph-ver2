@@ -500,7 +500,7 @@ federated sang Wikidata/DBpedia…).
 
 | Tài liệu | Nội dung |
 |---|---|
-| [**docs/report/main-en.pdf**](docs/report/main-en.pdf) | **English audited technical report** (44 pages, LaTeX): project narrative, data flow, ontology, TBox/ABox, reasoning, SHACL, Fuseki, Silk and evidence limits |
+| [**docs/report/main-en.pdf**](docs/report/main-en.pdf) | **English audited technical report** (37 pages, LaTeX): project narrative, system/software architecture, data transformation, ontology, TBox/ABox, reasoning, SHACL, Fuseki, Silk and evidence limits |
 | [docs/report/VN-Edu-LOD-Bao-cao-cuoi-ky.pdf](docs/report/VN-Edu-LOD-Bao-cao-cuoi-ky.pdf) | Archived Vietnamese course report; retained for historical reference |
 | [docs/pipeline.md](docs/pipeline.md) | Chi tiết kỹ thuật từng bước (nguyên tắc thiết kế ontology, cách thu thập, làm sạch, liên kết, truy vấn) |
 | [docs/ontology.md](docs/ontology.md) | Sơ đồ lớp/thuộc tính đầy đủ và bảng tiên đề (sinh tự động) |

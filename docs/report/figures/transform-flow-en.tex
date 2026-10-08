@@ -1,0 +1,27 @@
+\begin{tikzpicture}[
+  node distance=8mm and 7mm,
+  tstep/.style={draw=accent!80!black, rounded corners=3pt, fill=accent!5, align=center, font=\small, text width=3.15cm, minimum height=14mm},
+  toutput/.style={draw=blue!70!black, rounded corners=3pt, fill=blue!7, align=center, font=\small, text width=3.15cm, minimum height=14mm},
+  arr/.style={-{Stealth}, thick, draw=accent!80!black},
+  aux/.style={-{Stealth}, dashed, thick, draw=black!55}
+]
+\node[tstep] (s1) at (0,0) {1. Collect\\API responses, infoboxes,\\cached source revisions};
+\node[tstep] (s2) at (4.0,0) {2. Integrate\\normalize labels, resolve\\identifiers and conflicts};
+\node[tstep] (s3) at (8.0,0) {3. Transform\\mint persistent IRIs,\\emit typed RDF};
+\node[tstep] (s4) at (12.0,0) {4. Enrich\\external links, OWL rules,\\qualified observations};
+\node[toutput] (s5) at (16.0,0) {5. Validate and release\\SHACL, profile, metrics,\\fingerprints and serving union};
+
+\node[toutput] (a1) at (2.0,-2.55) {Bronze JSON\\HTTP cache};
+\node[toutput] (a2) at (6.0,-2.55) {Silver JSON\\conflict and unresolved logs};
+\node[toutput] (a3) at (10.0,-2.55) {vnedu-data.ttl\\URI registry};
+\node[toutput] (a4) at (14.0,-2.55) {vnedu-links.ttl\\vnedu-inferred.ttl};
+\node[toutput] (a5) at (16.0,-4.75) {vnedu-all.ttl\\HTML / Turtle / JSON-LD\\Fuseki input};
+
+\draw[arr] (s1)--(s2)--(s3)--(s4)--(s5);
+\draw[aux] (s1)--(a1);
+\draw[aux] (s2)--(a2);
+\draw[aux] (s3)--(a3);
+\draw[aux] (s4)--(a4);
+\draw[arr] (s5)--(a5);
+\node[font=\scriptsize, align=center] at (8,-1.0) {each step is reproducible from versioned inputs; a failed gate blocks publication};
+\end{tikzpicture}

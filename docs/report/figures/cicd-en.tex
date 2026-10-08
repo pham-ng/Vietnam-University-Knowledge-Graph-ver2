@@ -1,0 +1,24 @@
+\begin{tikzpicture}[
+  node distance=8mm and 7mm,
+  job/.style={draw=accent!80!black, rounded corners=3pt, fill=accent!5, align=center, font=\small, text width=3.0cm, minimum height=14mm},
+  evidence/.style={draw=blue!70!black, rounded corners=3pt, fill=blue!7, align=center, font=\small, text width=3.0cm, minimum height=14mm},
+  arr/.style={-{Stealth}, thick, draw=accent!80!black},
+  branch/.style={-{Stealth}, dashed, thick, draw=black!55}
+]
+\node[job] (commit) at (0,0) {Git commit or pull request};
+\node[job] (build) at (4.0,0) {Reconstruct from cache\\build static site\\compile report};
+\node[job] (gates) at (8.0,0) {Quality gates\\reasoning + SHACL\\metrics + pytest};
+\node[evidence] (artifact) at (12.0,0) {Release artifacts\\reports, RDF, PDF\\fingerprints};
+\node[evidence] (pages) at (16.0,0) {GitHub Pages\\static publication};
+
+\node[job] (fuseki) at (8.0,-2.7) {Fuseki/TDB2 job\\load, query, restart,\\read-only update checks};
+\node[job] (silk) at (12.0,-2.7) {Silk job\\frozen candidate sample\\reference agreement};
+\node[evidence] (review) at (16.0,-2.7) {Human review\\interpret limitations\\before accepting links};
+
+\draw[arr] (commit)--(build)--(gates)--(artifact)--(pages);
+\draw[branch] (gates)--(fuseki);
+\draw[branch] (artifact)--(silk);
+\draw[branch] (silk)--(review);
+\node[font=\scriptsize, align=center] at (8,-1.15) {ordinary release path};
+\node[font=\scriptsize, align=center] at (12,-3.75) {specialized evidence paths};
+\end{tikzpicture}

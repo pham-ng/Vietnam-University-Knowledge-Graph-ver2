@@ -1,0 +1,36 @@
+\begin{tikzpicture}[
+  node distance=7mm and 8mm,
+  box/.style={draw=accent!80!black, rounded corners=3pt, fill=accent!5, align=center, font=\small, text width=3.1cm, minimum height=12mm},
+  data/.style={draw=blue!70!black, rounded corners=3pt, fill=blue!7, align=center, font=\small, text width=3.1cm, minimum height=12mm},
+  edge/.style={-{Stealth}, thick, draw=accent!80!black},
+  aux/.style={-{Stealth}, dashed, thick, draw=black!55}
+]
+\node[box] (cli) at (0,0) {CLI orchestrator\\\texttt{run\_all.py}};
+\node[box] (web) at (4.2,0) {Flask / Waitress\\Web UI and /sparql};
+\node[box] (rdfdocs) at (8.4,0) {Static publisher\\HTML + RDF documents};
+\node[box] (fuseki) at (12.6,0) {Fuseki adapter\\safe load and query};
+
+\node[box] (collect) at (0,-2.2) {Collection and cache\\Wikidata/Wikipedia};
+\node[box] (integrate) at (4.2,-2.2) {Integration\\identity and field policy};
+\node[box] (transform) at (8.4,-2.2) {Transformation\\RDFLib + URI minter};
+\node[box] (reason) at (12.6,-2.2) {Reasoning and validation\\owlrl + SHACL};
+
+\node[data] (raw) at (0,-4.4) {Bronze snapshots};
+\node[data] (silver) at (4.2,-4.4) {Silver JSON\\URI registry};
+\node[data] (rdf) at (8.4,-4.4) {Gold RDF components};
+\node[data] (reports) at (12.6,-4.4) {Release reports\\metrics and fingerprints};
+
+\draw[edge] (cli)--(collect);
+\draw[edge] (collect)--(integrate)--(transform)--(reason);
+\draw[edge] (web)--(rdfdocs)--(fuseki);
+\draw[edge] (collect)--(raw);
+\draw[edge] (integrate)--(silver);
+\draw[edge] (transform)--(rdf);
+\draw[edge] (reason)--(reports);
+\draw[aux] (rdf) to[bend left=18] (rdfdocs);
+\draw[aux] (reports) to[bend right=18] (fuseki);
+
+\node[font=\scriptsize, align=center] at (6.3,0.78) {application layer};
+\node[font=\scriptsize, align=center] at (6.3,-1.48) {domain services};
+\node[font=\scriptsize, align=center] at (6.3,-3.68) {versioned artifacts};
+\end{tikzpicture}

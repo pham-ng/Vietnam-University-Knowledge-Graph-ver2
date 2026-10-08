@@ -1,80 +1,71 @@
-\section{Transformation: from source records to RDF}
+\section{Data transformation and knowledge-graph population}
 \label{sec:transform}
-Transformation is implemented in Python, not in Fuseki. The main pipeline calls
-\term{step3\_integrate.py} to reconcile source records and
-\term{step3\_transform.py} to construct RDF with RDFLib. It does not use RML, R2RML,
-an Apache Jena mapping engine, or a relational database. Figure~\ref{fig:etl-detail}
-connects the operations to their actual artifacts.
+The transformation is implemented in Python. Apache Jena Fuseki is not the transformer: it
+is the RDF store and query server used after the graph has been created. Figure~\ref{fig:transform-flow}
+shows the implemented path from source records to the validated serving union.
 
 \begin{figure}[htbp]\centering
-\input{figures/etl-en.tex}
-\caption[Transformation stages and data artifacts]{Implemented transformation and validation stages. Dashed arrows denote auxiliary
-inputs, not an independent source of factual verification. Fuseki is an optional consumer
-of the final graph, not a transformation step.}\label{fig:etl-detail}
+\resizebox{\textwidth}{!}{\input{figures/transform-flow-en.tex}}
+\caption[Data transformation workflow]{Data transformation workflow. Each stage produces a
+reviewable artifact. The final serving union is emitted only after RDF, ontology, reasoning,
+SHACL, metric, and fingerprint checks succeed.}
+\label{fig:transform-flow}
 \end{figure}
 
-\subsection{Integration policies and information loss}
-The integration script joins articles through Wikidata identifiers where available,
-normalizes names, parses dates and quantities, and resolves organization references.
-When a target is an educational institution, it becomes a membership or branch relation;
-a recognized public body becomes a governance target; and a company becomes an ownership
-target. Unknown targets go to an unresolved-reference report. A ministry associated with
-a record classified as private is moved to \term{stateManagedBy}. These are executable
-heuristics, not legal determinations. The original source predicate and temporal scope
-are not preserved on every resolved edge.
+\subsection{Bronze layer: collection and source preservation}
+The Bronze layer stores cached responses, structured snapshots, and source context. Wikidata
+queries contribute identifiers and structured attributes; Vietnamese Wikipedia contributes
+infobox fields, article text, links, and revision identifiers; reference tables contribute
+administrative crosswalks, fields, majors, and illustrative programs. A cache miss fails by
+default during reconstruction, so a normal build does not silently change its input by
+contacting a live endpoint. Fresh collection is an explicit operation.
 
-The earliest candidate founding year is selected and disagreements are logged. Integer
-counts lose the measurement context when no corresponding year or unit is retained.
-Some campus and funding values stay as source strings because their units are not reliably
-normalized. The source collector's loss of birth-date precision cannot be repaired simply
-by assigning an RDF datatype later. Bronze, Silver and conflict reports must therefore be
-retained together when reviewing a disputed result.
+\subsection{Silver layer: integration and normalization}
+The integration stage joins records through stable identifiers when available, normalizes
+labels and values, resolves organization references, and records conflicts or unresolved
+targets. It produces normalized JSON for institutions, people, governing bodies, provinces,
+and programs. The Silver layer is where source policies are applied; it is not yet an OWL
+graph. For example, a ministry associated with a private institution is represented as
+reported state oversight rather than automatically asserted as direct ownership or governance.
 
-\subsection{Concrete mapping example}
-Table~\ref{tab:mapping} follows the shipped Silver record \term{Q3075696}, Hanoi University
-of Science and Technology. The table demonstrates transformation, not an independent
-verification of the institution's current legal status or leadership. Let
-\term{u:} abbreviate the project's \term{resource/university/} namespace.
+\subsection{Gold layer: RDF transformation, linking and reasoning}
+The RDF transformer maps each normalized record to a class and a set of properties in
+\texttt{ontology/vnedu.ttl}. Persistent IRIs are reused from \texttt{uri\_map.json}; a readable
+slug is only the initial allocation key. Literal values receive explicit language tags and
+datatypes, while resource-valued fields become object IRIs. External links are written to a
+separate link graph. The reasoner applies the local ontology and selected OWL/RDF rules, and
+the release retains selected instance-level entailments rather than treating every internal
+closure statement as an authoritative source fact.
+
+\subsection{Concrete Silver-to-RDF mapping}
+Table~\ref{tab:mapping} follows the shipped Silver record \texttt{Q3075696}, Hanoi University
+of Science and Technology. It demonstrates the mapping rules; it is not an independent
+verification of the institution's current legal status or leadership.
 
 \begin{table}[htbp]\centering\small
-\caption{Selected Silver-to-RDF mappings for a real input record.}\label{tab:mapping}
+\caption{Selected Silver-to-RDF mappings for one institution record.}\label{tab:mapping}
 \begin{tabularx}{\textwidth}{p{3.3cm}Xp{4.4cm}}\toprule
-Silver input & RDF output & Rule or caveat \\\midrule
-\term{key = Q3075696} & Subject \term{u:dai-hoc-bach-khoa-ha-noi} & Reuse the persistent registry; do not mint again on a label change. \\
-\term{kind = University} & \term{rdf:type vnedu:University} & Classification came from integration policy, not from Fuseki. \\
-\term{name\_vi} & \term{rdfs:label} and \term{skos:prefLabel}, tagged \term{@vi} & Keep language tags, not an untyped display string. \\
-\term{founding\_year = 1956} & \term{vnedu:foundingYear "1956"}\newline\term{\string^\string^xsd:integer} & May refer to a predecessor's origin; integer is used to remain inside OWL 2 RL. \\
-\term{province = Q1858} & \term{vnedu:locatedIn} the registered Hanoi URI & An object IRI, not a province-name literal. \\
-\term{ownership = public} & \term{vnedu:ownership vnedu:PublicOwnership} & Later classifies the subject as a public institution. \\
-\term{viwiki\_revid = 75604914} & \term{prov:wasDerivedFrom} a Wikipedia \term{oldid} URL & Revision-specific entity provenance; not per-triple attribution. \\
-\bottomrule\end{tabularx}
+Silver input & RDF output & Rule or qualification \\\midrule
+\texttt{key = Q3075696} & Subject \texttt{u:dai-hoc-bach-khoa-ha-noi} & Reuse the persistent registry; a label change does not mint a new IRI. \\
+\texttt{kind = University} & \texttt{rdf:type vnedu:University} & Classification follows the integration policy, not Fuseki. \\
+\texttt{name\_vi} & \texttt{rdfs:label} and \texttt{skos:prefLabel} with \texttt{@vi} & Preserve language information. \\
+\texttt{founding\_year = 1956} & \texttt{vnedu:foundingYear ``1956'' \textasciicircum\textasciicircum xsd:integer} & May refer to predecessor origin; the event meaning remains qualified. \\
+\texttt{province = Q1858} & \texttt{vnedu:locatedIn} the registered Hanoi IRI & Use an object resource, not a province-name literal. \\
+\texttt{ownership = public} & \texttt{vnedu:ownership vnedu:PublicOwnership} & Supports the public-institution classification rule. \\
+\texttt{viwiki\_revid} & \texttt{prov:wasDerivedFrom} a Wikipedia oldid IRI & Entity-level source context, not complete assertion-level provenance. \\
+\bottomrule
+\end{tabularx}
 \end{table}
 
-The exporter also emits coordinates as decimals, counts as non-negative integers, and
-websites as IRIs. Missing optional values usually produce no triple; they are not encoded
-as an empty string, zero, or a claim of nonexistence. Reference programs generate a program
-URI from the registered institution slug and major code. Consequently, this model identifies
-one illustrative offering per institution--major pair; it cannot distinguish multiple
-curricula, degree levels, delivery modes or academic years for that pair without extending
-the identifier design.
+Missing optional values normally produce no triple; they are not converted into empty strings,
+zeros, or claims of non-existence. Reference programs are identified using the institution slug
+and major code. This gives a stable demonstration resource, but it does not distinguish every
+curriculum, degree level, delivery mode, or academic year without additional identifiers.
 
-\subsection{Linking, reasoning and release boundaries}
-\term{step4\_link.py} writes a separate link graph and dataset metadata. The reasoner reads
-the local ontology plus asserted data, computes a closure, and retains selected
-instance-level entailments. Raw asserted constraints are evaluated against the unmerged
-asserted graph, independently of equality effects. The current script invokes this check
-after closure computation, but before replacing the inferred and serving files; it is not
-an early pre-computation performance gate. Successful validation produces
-\term{validated-release.json}. Publication checks the recorded input hashes.
-
-The serving file is the set union of ontology, assertions, retained inferences, links and
-metadata. Separate files remain available, but the union itself does not carry named-graph
-boundaries. Loading that file into Fuseki's default graph does not restore those boundaries
-or create assertion-level provenance. A versioned dataset with named graphs and an explicit
-default-union query policy would be a future design change, not an existing feature.
-
-This is a staged batch workflow, not a transaction spanning every artifact. Failed validation
-preserves the previous inferred and serving files, while preceding stages may already have
-rewritten candidate assertions and links. Hash checks protect the static publisher; the
-revised Fuseki loader enforces that same release gate. An immutable staging
-directory followed by an atomic release-pointer switch would make this boundary stronger.
+\subsection{Release boundary}
+The serving graph is the set union of ontology, asserted data, selected inference, external
+links, and metadata. Component files remain available for inspection, but loading the union
+into a default graph does not recreate named-graph provenance. The workflow is therefore a
+reproducible staged batch process, not a transaction covering every intermediate file. The
+validated release record binds the accepted output to its inputs and rejects stale publication
+or Fuseki loading attempts.
