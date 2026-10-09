@@ -226,6 +226,42 @@ WHERE {{
 ORDER BY DESC(?so_co_so)
 """
 
+Q["16_danh_sach_co_so"] = """# Danh sách cơ sở GDĐH đang hoạt động: tên, tỉnh/thành hiện hành, loại hình sở hữu
+{P}
+SELECT ?co_so ?tinh ?so_huu WHERE {{
+  ?u a vnedu:HigherEducationInstitution ; rdfs:label ?co_so FILTER(LANG(?co_so) = "vi")
+  FILTER NOT EXISTS {{ ?u a vnedu:DefunctInstitution }}
+  OPTIONAL {{ ?u vnedu:locatedIn ?p . ?p a vnedu:Province ; rdfs:label ?tinh FILTER(LANG(?tinh) = "vi")
+             FILTER NOT EXISTS {{ ?p a vnedu:FormerProvince }} }}
+  OPTIONAL {{ ?u vnedu:ownership ?o . ?o rdfs:label ?so_huu FILTER(LANG(?so_huu) = "vi") }}
+}}
+ORDER BY (!BOUND(?tinh)) ?tinh ?co_so
+"""
+
+Q["17_ask_ton_tai"] = """# ASK — kiểm tra tồn tại: có trường quân đội nào đặt tại Khánh Hòa không? (MilitaryInstitution do suy luận phân loại)
+{P}
+ASK {{
+  ?u a vnedu:MilitaryInstitution ;
+     vnedu:locatedIn <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa> .
+}}
+"""
+
+Q["18_construct_do_thi"] = """# CONSTRUCT — dựng đồ thị con: các trường thành viên của hai đại học quốc gia, ánh xạ sang schema.org
+{P}
+PREFIX schema: <https://schema.org/>
+CONSTRUCT {{
+  ?u a schema:CollegeOrUniversity ; schema:name ?ten ; schema:parentOrganization ?dhqg .
+}} WHERE {{
+  ?dhqg a vnedu:NationalUniversity .
+  ?u vnedu:memberOf ?dhqg ; rdfs:label ?ten FILTER(LANG(?ten) = "vi")
+}}
+"""
+
+Q["19_describe_tai_nguyen"] = """# DESCRIBE — mô tả đầy đủ một tài nguyên: Trường Đại học Quốc tế RMIT Việt Nam
+{P}
+DESCRIBE <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/university/truong-dai-hoc-quoc-te-rmit-viet-nam>
+"""
+
 for name, body in Q.items():
-    (HERE / f"{name}.rq").write_text(body.format(P=P), encoding="utf-8")
+    (HERE / f"{name}.rq").write_text(body.format(P=P), encoding="utf-8", newline="\n")
 print(f"{len(Q)} truy vấn")

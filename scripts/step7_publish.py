@@ -81,7 +81,8 @@ nguồn: Wikidata/ROR (CC0), Wikipedia (CC BY-SA), OSM (ODbL), Bộ GD&amp;ĐT (
 </body>
 </html>""")
 NAV = [("", "Tổng quan"), ("map", "Bản đồ"), ("explore", "Tra cứu"), ("ontology", "Ontology"),
-       ("sparql", "SPARQL"), ("dataset", "Dataset"), ("about", "Giới thiệu"), ("demo", "Demo")]
+       ("sparql", "SPARQL"), ("links", "Liên kết LOD"), ("dataset", "Dataset"), ("about", "Giới thiệu"),
+       ("demo", "Demo")]
 
 
 def page(path: str, title: str, body: str, active: str = "", head: str = "", desc: str = "",
@@ -500,6 +501,48 @@ def validate_site_output(path: Path) -> None:
         raise ValueError("Refusing to replace a directory without generated-site markers.")
 
 
+LINK_TARGETS = (("wikidata", "Wikidata", "www.wikidata.org"), ("dbpedia", "DBpedia", "dbpedia.org"),
+                ("ror", "ROR", "ror.org"), ("geonames", "GeoNames", "geonames.org"),
+                ("wikipedia", "Wikipedia", "wikipedia.org"))
+LINK_KIND_VI = {"university": "Cơ sở giáo dục", "province": "Tỉnh/thành", "organization": "Cơ quan", "person": "Người",
+                "major": "Ngành", "field": "Lĩnh vực", "country": "Quốc gia", "region": "Miền"}
+
+
+def links_data(links: Graph, full: Graph) -> dict:
+    """Dữ liệu trang Liên kết LOD: số liên kết theo đích + danh sách (thực thể cục bộ -> URI ngoài) + precision mẫu."""
+    def label(s):
+        vi = [str(o) for o in full.objects(s, RDFS.label) if getattr(o, "language", None) == "vi"]
+        return vi[0] if vi else str(s).rsplit("/", 1)[-1]
+    targets = {key: {"key": key, "name": name, "predicates": Counter(), "items": []} for key, name, _ in LINK_TARGETS}
+    for s, p, o in sorted(links):
+        if not str(s).startswith(config.RES_NS) or not isinstance(o, URIRef):
+            continue
+        key = next((k for k, _, host in LINK_TARGETS if host in str(o)), None)
+        if not key:
+            continue
+        kind = str(s)[len(config.RES_NS):].split("/", 1)[0]
+        t = targets[key]
+        t["predicates"][links.namespace_manager.normalizeUri(p)] += 1
+        t["items"].append({"href": str(s)[len(config.BASE):], "label": label(s), "kind": LINK_KIND_VI.get(kind, kind),
+                           "p": links.namespace_manager.normalizeUri(p), "target": str(o)})
+    out = []
+    for t in targets.values():
+        t["count"] = len(t["items"])
+        t["predicates"] = dict(t["predicates"].most_common())
+        order = list(LINK_KIND_VI.values())          # cơ sở giáo dục trước, rồi tỉnh/thành, cơ quan, người...
+        t["items"].sort(key=lambda x: (order.index(x["kind"]) if x["kind"] in order else 99, x["label"]))
+        out.append(t)
+    precision = {}
+    sample = config.REPORTS_DIR / "link_precision.csv"
+    if sample.exists():
+        import csv
+        rows = list(csv.DictReader(sample.open(encoding="utf-8")))
+        precision = {"sample": len(rows), "correct": sum(r["verdict"] == "correct" for r in rows),
+                     "report": "https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/data/reports/link_precision.md"}
+    return {"targets": out, "total": sum(t["count"] for t in out),
+            "resources": len({i["href"] for t in out for i in t["items"]}), "precision": precision}
+
+
 def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
     require_validated_release()
@@ -547,6 +590,7 @@ def main() -> None:
     (SITE / "data").mkdir()
     (SITE / "data" / "app.json").write_text(json.dumps(app_data(full, onto), ensure_ascii=False), encoding="utf-8")
     (SITE / "data" / "ontology.json").write_text(json.dumps(ontology_data(onto, full), ensure_ascii=False), encoding="utf-8")
+    (SITE / "data" / "links.json").write_text(json.dumps(links_data(links, full), ensure_ascii=False), encoding="utf-8")
     queries = [{"file": f.name, "title": f.read_text(encoding="utf-8").splitlines()[0].lstrip("# "),
                 "text": f.read_text(encoding="utf-8")} for f in sorted((config.ROOT / "queries").glob("*.rq"))]
     (SITE / "data" / "queries.json").write_text(json.dumps(queries, ensure_ascii=False), encoding="utf-8")
@@ -568,7 +612,7 @@ def main() -> None:
     # trang 404 + sitemap
     page("404", "Không tìm thấy · VN-Edu LOD", f'<h1>Không tìm thấy</h1><p>URI này không có trong dataset. '
          f'<a href="{ROOT_PATH}explore">Tra cứu</a> hoặc <a href="{ROOT_PATH}">về trang chủ</a>.</p>')
-    urls = [BASE + p for p in ("", "map", "explore", "ontology", "sparql", "dataset", "about")] + \
+    urls = [BASE + p for p in ("", "map", "explore", "ontology", "sparql", "links", "dataset", "about")] + \
            [BASE + str(p.relative_to(SITE).with_suffix("")).replace("\\", "/") for p in (SITE / "resource").rglob("*.html")]
     (SITE / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                       + "\n".join(f"<url><loc>{html.escape(u)}</loc></url>" for u in urls) + "\n</urlset>\n", encoding="utf-8")

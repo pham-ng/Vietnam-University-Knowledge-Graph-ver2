@@ -1,0 +1,15 @@
+# Danh sách cơ sở GDĐH đang hoạt động: tên, tỉnh/thành hiện hành, loại hình sở hữu
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?co_so ?tinh ?so_huu WHERE {
+  ?u a vnedu:HigherEducationInstitution ; rdfs:label ?co_so FILTER(LANG(?co_so) = "vi")
+  FILTER NOT EXISTS { ?u a vnedu:DefunctInstitution }
+  OPTIONAL { ?u vnedu:locatedIn ?p . ?p a vnedu:Province ; rdfs:label ?tinh FILTER(LANG(?tinh) = "vi")
+             FILTER NOT EXISTS { ?p a vnedu:FormerProvince } }
+  OPTIONAL { ?u vnedu:ownership ?o . ?o rdfs:label ?so_huu FILTER(LANG(?so_huu) = "vi") }
+}
+ORDER BY (!BOUND(?tinh)) ?tinh ?co_so

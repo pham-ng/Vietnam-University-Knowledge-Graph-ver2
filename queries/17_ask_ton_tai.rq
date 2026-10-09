@@ -1,0 +1,11 @@
+# ASK — kiểm tra tồn tại: có trường quân đội nào đặt tại Khánh Hòa không? (MilitaryInstitution do suy luận phân loại)
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+ASK {
+  ?u a vnedu:MilitaryInstitution ;
+     vnedu:locatedIn <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/khanh-hoa> .
+}

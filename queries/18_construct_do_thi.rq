@@ -1,0 +1,14 @@
+# CONSTRUCT — dựng đồ thị con: các trường thành viên của hai đại học quốc gia, ánh xạ sang schema.org
+PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX schema: <https://schema.org/>
+CONSTRUCT {
+  ?u a schema:CollegeOrUniversity ; schema:name ?ten ; schema:parentOrganization ?dhqg .
+} WHERE {
+  ?dhqg a vnedu:NationalUniversity .
+  ?u vnedu:memberOf ?dhqg ; rdfs:label ?ten FILTER(LANG(?ten) = "vi")
+}

@@ -24,12 +24,47 @@
   table.props td { font-size: 13.5px; }
   table.props td:first-child { font-family: var(--mono); white-space: nowrap; }
   tr:target { background: var(--accent-soft); }
+  /* ---- sơ đồ ontology: thẻ lớp + quan hệ có nhãn ---- */
+  .odiag { position: relative; padding: 22px; margin-bottom: 18px; }
+  .og { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+        column-gap: 116px; row-gap: 64px; }
+  #oge { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: visible; }
+  #oge path { fill: none; stroke-width: 1.5; stroke-dasharray: 5 5; opacity: .8; transition: opacity .15s; }
+  #oge path.sub { stroke-dasharray: none; stroke-width: 1.5; }
+  #oge text { font: 11.5px var(--mono); fill: var(--ink-2); paint-order: stroke; stroke: var(--surface); stroke-width: 5px; }
+  #oge .dim { opacity: .12; }
+  .oc { background: var(--surface); border: 2px solid var(--c); border-radius: 12px; padding: 12px 12px 10px; text-align: center;
+        cursor: pointer; box-shadow: 0 0 0 4px color-mix(in srgb, var(--c) 10%, transparent); transition: transform .12s; min-width: 0;
+        align-self: center; }
+  .oc:hover, .oc:focus-visible { transform: translateY(-2px); outline: none; box-shadow: 0 0 0 4px color-mix(in srgb, var(--c) 28%, transparent); }
+  .oc .id { font: 600 13px var(--mono); color: var(--c); overflow-wrap: anywhere; }
+  .oc .vi { font-size: 14px; color: var(--ink); margin-top: 2px; }
+  .oc .n { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .oc .subs { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
+  .oc .subs span { font: 11px var(--mono); border: 1px solid var(--line); border-radius: 5px; padding: 0 5px; color: var(--ink-2); }
+  .oc .rels { display: none; text-align: left; margin-top: 8px; font: 11.5px var(--mono); color: var(--ink-2); }
+  .omod { display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; color: var(--ink-2); margin: 0 0 12px; }
+  .omod i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+  @media (max-width: 860px) {
+    .og { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 12px; row-gap: 12px; }
+    .og .oc { grid-column: auto !important; grid-row: auto !important; }
+    #oge { display: none; }
+    .oc .rels { display: block; }
+  }
 </style>
 <!--/HEAD-->
 <h1>Ontology VN-Edu</h1>
 <p class="sub">Namespace <code>{{BASE}}ontology#</code> · profile OWL 2 RL ·
   tải <a href="{{ROOT}}ontology.ttl">Turtle</a> / <a href="{{ROOT}}ontology.jsonld">JSON-LD</a> ·
   ràng buộc <a href="{{ROOT}}download/vnedu-shapes.ttl">SHACL</a></p>
+<h2 style="margin-top:8px">Sơ đồ ontology</h2>
+<div class="omod" id="omod"></div>
+<div class="card odiag" id="odiag"><svg id="oge" aria-hidden="true"></svg><div class="og" id="og"></div></div>
+<p class="lang" style="margin:-8px 0 18px">Nét đứt: thuộc tính quan hệ (miền → đích, theo <code>rdfs:domain</code>/<code>rdfs:range</code>);
+  nét liền: lớp con (⊑). Rê chuột vào một lớp để làm nổi quan hệ của nó, bấm để xem định nghĩa.
+  Các lớp con hiện trong thẻ; cây đầy đủ ở bên dưới.</p>
+
+<h2>Cây lớp</h2>
 <div class="key">
   <span><i style="background:var(--s1)"></i>lớp khẳng định trong dữ liệu</span>
   <span><i style="background:var(--surface);border:2px dashed var(--s2)"></i>lớp định nghĩa — cá thể do bộ suy luận tự phân loại</span>
@@ -131,6 +166,83 @@
   });
   Object.values(C).sort((a, b) => a.id.localeCompare(b.id)).forEach(c => document.getElementById("cl").insertAdjacentHTML("beforeend",
     row(c.id, [c.id, `${VN.esc(c.vi)}<div class="lang">${VN.esc(c.en)}</div>`, VN.esc([...c.parents, ...c.external].join(", ") || "—"), VN.fmt(c.count)])));
+
+  // --- sơ đồ: vị trí thẻ (cột, hàng) và các quan hệ cần vẽ; nhãn/miền/đích lấy từ ontology.json
+  const MOD = { org: ["--s3", "Tổ chức"], gov: ["--s1", "Cơ quan chủ quản & doanh nghiệp"], people: ["--s2", "Con người"],
+                geo: ["--warn", "Địa lý hành chính"], edu: ["--accent", "Đào tạo"], prov: ["--muted", "Nguồn gốc dữ liệu"] };
+  const BOX = [
+    ["GoverningBody", "gov", 1, 1], ["EducationalOrganization", "org", 2, 1], ["AcademicProgram", "edu", 3, 1], ["Major", "edu", 4, 1],
+    ["Person", "people", 1, 2], ["HigherEducationInstitution", "org", 2, 2], ["Company", "gov", 3, 2], ["FieldOfStudy", "edu", 4, 2],
+    ["SourceObservation", "prov", 1, 3], ["Province", "geo", 2, 3], ["Region", "geo", 3, 3],
+    ["FormerProvince", "geo", 2, 4], ["Country", "geo", 3, 4],
+  ].filter(([id]) => C[id]);
+  const EDGES = [   // [từ, thuộc tính, tới]; "⊑" = lớp con; "rdf:subject" = phát biểu được ghi nguồn
+    ["EducationalOrganization", "governedBy", "GoverningBody"], ["EducationalOrganization", "ownedBy", "Company"],
+    ["EducationalOrganization", "offersProgram", "AcademicProgram"], ["AcademicProgram", "ofMajor", "Major"],
+    ["Major", "inField", "FieldOfStudy"], ["HigherEducationInstitution", "⊑", "EducationalOrganization"],
+    ["EducationalOrganization", "hasLeader", "Person"], ["Person", "educatedAt", "HigherEducationInstitution"],
+    ["HigherEducationInstitution", "locatedIn", "Province"], ["Person", "bornIn", "Province"],
+    ["FormerProvince", "mergedInto", "Province"], ["Province", "partOf", "Region"], ["Region", "partOf", "Country"],
+  ].filter(([a, prop, b]) => C[a] && C[b] && (prop === "⊑" || prop === "rdf:subject" || O.properties.some(x => x.id === prop)));
+  const propOf = id => O.properties.find(x => x.id === id);
+  const kids = id => Object.values(C).filter(c => c.parents.includes(id)).map(c => c.id)
+    .filter(k => !BOX.some(([b]) => b === k)).sort();
+  document.getElementById("omod").innerHTML = Object.values(MOD).map(([c, l]) => `<span><i style="background:var(${c})"></i>${l}</span>`).join("");
+  document.getElementById("og").innerHTML = BOX.map(([id, mod, col, row]) => {
+    const c = C[id], sub = kids(id);
+    const rels = EDGES.filter(e => e[0] === id).map(e => `${e[1] === "⊑" ? "⊑" : e[1] + " →"} ${e[2]}`);
+    return `<div class="oc" tabindex="0" role="button" data-id="${id}" style="--c:var(${MOD[mod][0]});grid-column:${col};grid-row:${row}"
+      aria-label="${VN.esc(c.vi || id)}">
+      <div class="id">vnedu:${id}</div><div class="vi">${VN.esc(c.vi || "")}</div>
+      <div class="n">${VN.fmt(c.count)} cá thể</div>
+      ${sub.length ? `<div class="subs">${sub.slice(0, 6).map(k => `<span>${k}</span>`).join("")}${sub.length > 6 ? `<span>+${sub.length - 6}</span>` : ""}</div>` : ""}
+      ${rels.length ? `<div class="rels">${rels.map(VN.esc).join("<br>")}</div>` : ""}</div>`;
+  }).join("");
+
+  function drawEdges() {
+    const box = document.getElementById("odiag"), svgE = document.getElementById("oge");
+    if (getComputedStyle(svgE).display === "none") return;
+    const base = box.getBoundingClientRect();
+    const rect = id => { const r = box.querySelector(`.oc[data-id="${id}"]`).getBoundingClientRect();
+      return { x: r.left - base.left, y: r.top - base.top, w: r.width, h: r.height }; };
+    const clip = (r, tx, ty) => {   // điểm trên mép thẻ theo hướng tới (tx, ty)
+      const cx = r.x + r.w / 2, cy = r.y + r.h / 2, dx = tx - cx, dy = ty - cy;
+      const t = Math.min(Math.abs((r.w / 2 + 6) / (dx || 1e-9)), Math.abs((r.h / 2 + 6) / (dy || 1e-9)));
+      return [cx + dx * t, cy + dy * t];
+    };
+    const seen = {};
+    svgE.innerHTML = EDGES.map(([a, prop, b]) => {
+      const ra = rect(a), rb = rect(b);
+      const [x1, y1] = clip(ra, rb.x + rb.w / 2, rb.y + rb.h / 2), [x2, y2] = clip(rb, ra.x + ra.w / 2, ra.y + ra.h / 2);
+      const pair = [a, b].sort().join("|"); const k = seen[pair] = (seen[pair] || 0) + 1;
+      const bend = k === 1 ? 0 : 38 * (k % 2 ? 1 : -1);             // cặp lớp có 2 quan hệ: tách làm 2 đường cong
+      const mx = (x1 + x2) / 2, my = (y1 + y2) / 2, len = Math.hypot(x2 - x1, y2 - y1) || 1;
+      const qx = mx - (y2 - y1) / len * bend, qy = my + (x2 - x1) / len * bend;
+      const color = prop === "⊑" ? "--axis" : prop === "rdf:subject" ? "--muted" : MOD[BOX.find(x => x[0] === a)[1]][0];
+      const title = prop === "⊑" ? `${a} ⊑ ${b} (lớp con)` : prop === "rdf:subject" ? "Mỗi observation ghi nguồn cho một phát biểu" :
+        `${prop} — ${propOf(prop)?.vi || ""} (${a} → ${b})`;
+      return `<g data-a="${a}" data-b="${b}"><title>${VN.esc(title)}</title>
+        <path class="${prop === "⊑" ? "sub" : ""}" d="M${x1},${y1} Q${qx},${qy} ${x2},${y2}" stroke="${VN.css(color)}"
+          marker-end="url(#arr-${prop === "⊑" ? "sub" : "rel"})"></path>
+        <text x="${(x1 + 2 * qx + x2) / 4}" y="${(y1 + 2 * qy + y2) / 4}" text-anchor="middle"
+          dy="${Math.abs(x2 - x1) > Math.abs(y2 - y1) ? "-0.6em" : "0.35em"}">${VN.esc(prop)}</text></g>`;
+    }).join("") + `<defs>
+      <marker id="arr-rel" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="${VN.css("--ink-2")}" stroke="none"></path></marker>
+      <marker id="arr-sub" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="${VN.css("--surface")}" stroke="${VN.css("--axis")}" stroke-width="1.2"></path></marker></defs>`;
+  }
+  const og = document.getElementById("og");
+  const focus = id => document.querySelectorAll("#oge g").forEach(g =>
+    g.classList.toggle("dim", !!id && g.dataset.a !== id && g.dataset.b !== id));
+  og.addEventListener("mouseover", e => { const c = e.target.closest(".oc"); focus(c ? c.dataset.id : null); });
+  og.addEventListener("mouseleave", () => focus(null));
+  const open = c => { select(c.dataset.id); update(); document.getElementById("info").scrollIntoView({ behavior: "smooth", block: "nearest" }); };
+  og.addEventListener("click", e => { const c = e.target.closest(".oc"); if (c) open(c); });
+  og.addEventListener("keydown", e => { const c = e.target.closest(".oc"); if (c && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); open(c); } });
+  new ResizeObserver(drawEdges).observe(document.getElementById("odiag"));
+  document.addEventListener("themechange", drawEdges);
+  drawEdges();
 
   const initial = location.hash.slice(1);
   if (initial && C[initial]) {   // mở nhánh chứa lớp được trỏ tới bởi URI ontology#Lop

@@ -239,7 +239,7 @@ def test_outbound_user_agent_overrides_rdflib_default(client):
 
 # ------------------------------------------------------------------ máy chủ phục vụ giao diện đầy đủ (giống GitHub Pages)
 
-@pytest.mark.parametrize("path", ["/", "/map", "/explore", "/ontology", "/sparql", "/dataset", "/about", "/demo"])
+@pytest.mark.parametrize("path", ["/", "/map", "/explore", "/ontology", "/sparql", "/links", "/dataset", "/about", "/demo"])
 def test_site_pages_are_served(site_client, path):
     r = site_client.get(path, headers={"Accept": "text/html"})
     assert r.status_code == 200 and "text/html" in r.content_type
@@ -427,3 +427,12 @@ def test_query_cli_repl_run_index_and_trailing_query():
     assert "Dùng: :run <số từ 1 đến" in out                            # không chạy nhầm tệp cuối
     out = _query_cli("-i", stdin="SELECT (1 AS ?x) WHERE {}").stdout   # không có dòng trống cuối
     assert "1 dòng" in out
+
+
+def test_links_page_data_matches_linkset(site_client):
+    """Trang Liên kết LOD: số liệu lấy từ đúng tệp liên kết đã phát hành."""
+    data = site_client.get("/data/links.json").get_json()
+    links = Graph().parse(config.LINKS_TTL)
+    assert data["total"] == sum(1 for s, _, o in links if str(s).startswith(config.RES_NS) and isinstance(o, URIRef))
+    assert {t["key"] for t in data["targets"] if t["count"]} == {"wikidata", "dbpedia", "ror", "geonames", "wikipedia"}
+    assert all(i["href"].startswith("resource/") for t in data["targets"] for i in t["items"])

@@ -1,0 +1,138 @@
+<!-- title: Liên kết LOD · VN-Edu LOD -->
+<!-- desc: Liên kết 5 sao từ VN-Edu LOD sang Wikidata, DBpedia, ROR, GeoNames và Wikipedia: số liệu, sơ đồ và danh sách từng liên kết. -->
+<!--HEAD-->
+<style>
+  .lk-stats { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); margin-bottom: 16px; }
+  .lk-stats .card { padding: 14px 14px; }
+  .lk-stats .card b { display: block; font-size: 27px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .lk-stats .card span { color: var(--ink-2); font-size: 13px; }
+  .hub { padding: 8px; }
+  .hub svg { display: block; width: 100%; height: auto; max-height: 460px; }
+  .hub .edge { stroke-width: 1.6; stroke-dasharray: 5 5; fill: none; opacity: .75; }
+  .hub .elbl { font: 11px var(--mono); fill: var(--muted); }
+  .hub .node { cursor: pointer; }
+  .hub .node circle { stroke-width: 2.5; }
+  .hub .node text { font-size: 13px; font-weight: 600; text-anchor: middle; }
+  .hub .node .cnt { font-size: 11.5px; font-weight: 500; fill: var(--ink-2); }
+  .hub .node.dim { opacity: .35; }
+  .lk-lists { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); }
+  .lk-list { padding: 0; overflow: hidden; border-top-width: 3px; }
+  .lk-list header { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+  .lk-list header h3 { margin: 0; font-size: 17px; }
+  .lk-list header .n { margin-left: auto; color: var(--ink-2); font-size: 13px; font-variant-numeric: tabular-nums; }
+  .lk-list .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+  .lk-list .preds { padding: 6px 16px 0; font-size: 12px; color: var(--muted); }
+  .lk-list ul { list-style: none; margin: 0; padding: 6px 8px 10px; max-height: 380px; overflow: auto; }
+  .lk-list li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 10px; align-items: center;
+                padding: 7px 8px; border-radius: 8px; }
+  .lk-list li:hover { background: var(--bg); }
+  .lk-list li small { display: block; color: var(--muted); font-size: 12px; }
+  .lk-list li .ext { font: 12px var(--mono); color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: right; }
+  .lk-list .more { padding: 0 16px 12px; font-size: 12.5px; color: var(--muted); }
+  .lk-tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 22px 0 12px; }
+  .lk-tools input { min-width: min(100%, 320px); }
+  @media (max-width: 560px) { .lk-list li { grid-template-columns: 1fr; } .lk-list li .ext { text-align: left; } }
+</style>
+<!--/HEAD-->
+<h1>Liên kết LOD</h1>
+<p class="sub">Tiêu chí ★★★★★: thực thể của VN-Edu được nối sang các bộ dữ liệu mở khác. <code>owl:sameAs</code> khẳng định
+  <i>cùng một thực thể</i>; <code>skos:closeMatch</code> dùng cho khái niệm gần tương đương (ngành, lĩnh vực);
+  <code>foaf:isPrimaryTopicOf</code> trỏ tới trang Wikipedia mô tả thực thể. Mô tả máy đọc được trong
+  <a href="{{ROOT}}dataset">VoID/DCAT</a>.</p>
+
+<div class="lk-stats" id="stats"></div>
+
+<div class="card hub"><h2 style="margin:4px 8px 0">Bản đồ liên kết</h2>
+  <p class="lang" style="margin:2px 8px 0">Bấm một bộ dữ liệu để lọc danh sách bên dưới; độ lớn vòng tròn theo số liên kết.</p>
+  <svg id="hub" viewBox="0 0 900 420" role="img" aria-label="Sơ đồ liên kết từ VN-Edu LOD tới các bộ dữ liệu ngoài"></svg>
+</div>
+
+<div class="lk-tools">
+  <input type="search" id="flt" placeholder="Lọc theo tên thực thể hoặc URI…" aria-label="Lọc liên kết">
+  <button class="btn ghost" id="all" type="button">Hiện tất cả bộ dữ liệu</button>
+  <span class="lang" id="shown"></span>
+</div>
+<div class="lk-lists" id="lists"></div>
+
+<script>
+(async () => {
+  const D = await (await fetch("{{ROOT}}data/links.json")).json();
+  const COLOR = { wikidata: "--s1", dbpedia: "--s2", ror: "--s3", geonames: "--warn", wikipedia: "--ink-2" };
+  const col = k => VN.css(COLOR[k] || "--accent");
+  const targets = D.targets.filter(t => t.count);
+  let only = null;
+
+  // --- thẻ số liệu
+  const p = D.precision;
+  document.getElementById("stats").innerHTML = [
+    [VN.fmt(D.total), "Tổng liên kết", "--accent"],
+    ...targets.map(t => [VN.fmt(t.count), t.name, COLOR[t.key]]),
+    [VN.fmt(D.resources), "Tài nguyên liên kết", "--ink"],
+    ...(p.sample ? [[`${p.correct}/${p.sample}`, `sameAs đúng (<a href="${VN.esc(p.report)}">mẫu ngẫu nhiên</a>)`, "--good"]] : []),
+  ].map(([n, l, c]) => `<div class="card"><b style="color:var(${c})">${n}</b><span>${l}</span></div>`).join("");
+
+  // --- sơ đồ hub
+  const svg = document.getElementById("hub"), W = 900, H = 420, cx = W / 2, cy = H / 2 + 6;
+  const max = Math.max(...targets.map(t => t.count));
+  const ns = "http://www.w3.org/2000/svg";
+  const el = (tag, attrs, parent = svg) => { const e = document.createElementNS(ns, tag);
+    Object.entries(attrs).forEach(([k, v]) => e.setAttribute(k, v)); parent.appendChild(e); return e; };
+  function drawHub() {
+    svg.innerHTML = "";
+    targets.forEach((t, i) => {
+      const a = -Math.PI / 2 + i * 2 * Math.PI / targets.length;
+      t.x = cx + Math.cos(a) * 300; t.y = cy + Math.sin(a) * 150;
+      t.r = 42 + 22 * Math.sqrt(t.count / max);
+    });
+    targets.forEach(t => {
+      el("line", { class: "edge", x1: cx, y1: cy, x2: t.x, y2: t.y, stroke: col(t.key) });
+      const lbl = el("text", { class: "elbl", x: (cx + t.x) / 2, y: (cy + t.y) / 2 - 6, "text-anchor": "middle" });
+      lbl.textContent = Object.keys(t.predicates)[0];
+    });
+    const center = el("g", { class: "node" });
+    el("circle", { cx, cy, r: 54, fill: VN.css("--accent-soft"), stroke: VN.css("--accent") }, center);
+    const t1 = el("text", { x: cx, y: cy - 2, fill: VN.css("--accent") }, center); t1.textContent = "VN-Edu LOD";
+    const t2 = el("text", { class: "cnt", x: cx, y: cy + 16 }, center); t2.textContent = `${VN.fmt(D.resources)} tài nguyên`;
+    center.addEventListener("click", () => { only = null; render(); });
+    targets.forEach(t => {
+      const g = el("g", { class: "node" + (only && only !== t.key ? " dim" : ""), tabindex: 0, role: "button",
+                          "aria-label": `${t.name}: ${t.count} liên kết` });
+      el("circle", { cx: t.x, cy: t.y, r: t.r, fill: VN.css("--surface"), stroke: col(t.key) }, g);
+      const a = el("text", { x: t.x, y: t.y - 2, fill: col(t.key) }, g); a.textContent = t.name;
+      const b = el("text", { class: "cnt", x: t.x, y: t.y + 15 }, g); b.textContent = `${VN.fmt(t.count)} liên kết`;
+      const pick = () => { only = only === t.key ? null : t.key; render(); };
+      g.addEventListener("click", pick);
+      g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(); } });
+    });
+  }
+
+  // --- danh sách theo bộ dữ liệu
+  const LIMIT = 400;
+  function render() {
+    drawHub();
+    const q = VN.norm(document.getElementById("flt").value.trim());
+    let shown = 0;
+    document.getElementById("lists").innerHTML = targets.filter(t => !only || only === t.key).map(t => {
+      const items = q ? t.items.filter(i => VN.norm(i.label + " " + i.target + " " + i.href).includes(q)) : t.items;
+      shown += items.length;
+      const rows = items.slice(0, LIMIT).map(i => {
+        const ext = VN.safeHref(i.target);
+        return `<li><div><a href="{{ROOT}}${VN.esc(i.href)}">${VN.esc(i.label)}</a><small>${VN.esc(i.kind)} · ${VN.esc(i.p)}</small></div>
+          <div class="ext">${ext ? `<a href="${VN.esc(ext)}" rel="noopener noreferrer" title="${VN.esc(i.target)}">${VN.esc(i.target.replace(/^https?:\/\//, ""))}</a>` : VN.esc(i.target)}</div></li>`;
+      }).join("");
+      return `<section class="card lk-list" style="border-top-color:${col(t.key)}">
+        <header><span class="dot" style="background:${col(t.key)}"></span><h3 style="color:${col(t.key)}">${t.name}</h3>
+          <span class="n">${VN.fmt(items.length)}${q ? " / " + VN.fmt(t.count) : ""} liên kết</span></header>
+        <div class="preds">${Object.entries(t.predicates).map(([k, v]) => `${VN.esc(k)} ${VN.fmt(v)}`).join(" · ")}</div>
+        <ul>${rows || `<li><span class="lang">Không có liên kết khớp bộ lọc.</span></li>`}</ul>
+        ${items.length > LIMIT ? `<div class="more">Hiện ${LIMIT} / ${VN.fmt(items.length)} — dùng ô lọc hoặc <a href="{{ROOT}}download/vnedu-links.ttl">tải toàn bộ</a>.</div>` : ""}
+      </section>`;
+    }).join("");
+    document.getElementById("shown").textContent = `${VN.fmt(shown)} liên kết${only ? " · " + targets.find(t => t.key === only).name : ""}`;
+  }
+  document.getElementById("flt").addEventListener("input", render);
+  document.getElementById("all").addEventListener("click", () => { only = null; render(); });
+  document.addEventListener("themechange", render);
+  render();
+})();
+</script>
