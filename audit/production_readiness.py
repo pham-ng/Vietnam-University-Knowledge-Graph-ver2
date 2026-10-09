@@ -17,6 +17,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
+from threading import Barrier
 
 import requests
 
@@ -41,6 +42,19 @@ def percentile(values: list[float], p: float) -> float:
 def timed_get(url: str) -> tuple[int, float]:
     started = time.perf_counter()
     response = requests.get(url, timeout=20)
+    return response.status_code, time.perf_counter() - started
+
+
+def timed_query(url: str, query: str, start_gate: Barrier) -> tuple[int, float]:
+    """Start an actual RDF query concurrently so the bounded worker pool is exercised."""
+    start_gate.wait(timeout=10)
+    started = time.perf_counter()
+    response = requests.post(
+        url,
+        data={"query": query},
+        headers={"Accept": "application/sparql-results+json"},
+        timeout=20,
+    )
     return response.status_code, time.perf_counter() - started
 
 
@@ -74,8 +88,15 @@ def main() -> int:
 
         with ThreadPoolExecutor(max_workers=2) as pool:
             samples = list(pool.map(timed_get, [base + "/healthz"] * 8))
+        overload_query = """SELECT ?s (COUNT(?o) AS ?n) WHERE {
+          ?s ?p ?o
+        } GROUP BY ?s ORDER BY DESC(?n) LIMIT 25"""
+        start_gate = Barrier(8)
         with ThreadPoolExecutor(max_workers=8) as pool:
-            overload = list(pool.map(timed_get, [base + "/healthz"] * 8))
+            overload = list(pool.map(
+                lambda _: timed_query(base + "/sparql", overload_query, start_gate),
+                range(8),
+            ))
         latencies = [elapsed for status, elapsed in samples]
         status_counts = {}
         for status, _ in samples:
@@ -117,6 +138,7 @@ def main() -> int:
                                     "p95": percentile(latencies, .95),
                                     "max": round(max(latencies, default=0) * 1000, 2)},
                      "overload_requests": len(overload),
+                     "overload_target": "SPARQL query worker pool",
                      "overload_status_counts": overload_status_counts},
             "headers": {**headers, "html": html_headers},
             "security_status_codes": {"resource_injection": injection.status_code,

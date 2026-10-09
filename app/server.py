@@ -79,6 +79,10 @@ MAX_BODY_BYTES = int(os.environ.get("VNEDU_MAX_BODY_BYTES", MAX_QUERY_CHARS * 12
 ALLOWED_SERVICE_URLS = {"https://query.wikidata.org/sparql", "https://dbpedia.org/sparql"}
 # URI tài nguyên của dataset: <loại>/<slug>, slug chỉ gồm chữ thường không dấu, số, gạch nối
 RESOURCE_PATH = re.compile(r"^[a-z]+/[a-z0-9]+(?:-[a-z0-9]+)*$")
+# RDFLib's pyparsing grammar is lazily initialized and is not safe to initialize
+# from several Waitress threads at once.  Parsing is short; serialize this gate,
+# while query execution remains concurrent in the bounded worker pool.
+QUERY_PARSE_LOCK = threading.Lock()
 
 
 class QueryRejected(ValueError):
@@ -143,7 +147,8 @@ def check_query(query: str) -> None:
             for value in node:
                 visit(value)
 
-    visit(parseQuery(query))
+    with QUERY_PARSE_LOCK:
+        visit(parseQuery(query))
 
 
 def _query_worker(path, connection):

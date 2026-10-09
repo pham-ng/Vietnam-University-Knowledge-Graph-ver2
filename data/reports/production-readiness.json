@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-09T02:06:06.747382+00:00",
+  "checked_at_utc": "2026-10-09T04:01:48.017867+00:00",
   "server": "Waitress via app/server.py --prod --backend local",
   "scope": "normal bounded concurrency, intentional overload, and security guards",
   "load": {
@@ -9,14 +9,15 @@
       "200": 8
     },
     "latency_ms": {
-      "p50": 4250.76,
-      "p95": 4315.2,
-      "max": 4315.2
+      "p50": 12.45,
+      "p95": 15.89,
+      "max": 15.89
     },
     "overload_requests": 8,
+    "overload_target": "SPARQL query worker pool",
     "overload_status_counts": {
-      "200": 2,
-      "503": 6
+      "503": 6,
+      "200": 2
     }
   },
   "headers": {
@@ -24,11 +25,11 @@
     "X-Frame-Options": "SAMEORIGIN",
     "Referrer-Policy": "strict-origin-when-cross-origin",
     "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
-    "X-Request-ID": "074aa6a5c1b2453a",
+    "X-Request-ID": "7171ed4ad3c64713",
     "html": {
       "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https://query.wikidata.org https://dbpedia.org; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'",
       "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
-      "X-Request-ID": "b3acc1f98990a430"
+      "X-Request-ID": "eef3a619d01f38c9"
     }
   },
   "security_status_codes": {

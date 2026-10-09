@@ -1,7 +1,10 @@
 """Kiểm thử máy chủ web (Flask test client + backend rdflib trên dữ liệu thật):
 chức năng, content negotiation theo nguyên tắc Linked Data, và các lỗ hổng đã từng tồn tại (SSRF, chèn SPARQL)."""
+from concurrent.futures import ThreadPoolExecutor
 import json
 import sys
+import threading
+import time
 from pathlib import Path
 
 import pytest
@@ -116,6 +119,31 @@ def test_sparql_select_json_and_csv(client):
 def test_sparql_syntax_error_is_400_not_500(client):
     r = client.post("/sparql", data={"query": "SELEKT * WHERE {"})
     assert r.status_code == 400 and r.get_data(as_text=True).startswith("Truy vấn không hợp lệ")
+
+
+def test_query_parser_guard_serializes_non_reentrant_parser(monkeypatch):
+    """Cold concurrent requests must not race RDFLib's lazy pyparsing initialization."""
+    from rdflib.plugins.sparql import parser
+
+    active = 0
+    state_lock = threading.Lock()
+
+    def non_reentrant_parser(_query):
+        nonlocal active
+        with state_lock:
+            if active:
+                raise RuntimeError("concurrent parser entry")
+            active += 1
+        try:
+            time.sleep(0.01)
+            return []
+        finally:
+            with state_lock:
+                active -= 1
+
+    monkeypatch.setattr(parser, "parseQuery", non_reentrant_parser)
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        list(pool.map(check_query, ["ASK {}"] * 8))
 
 
 def test_security_headers(client):
