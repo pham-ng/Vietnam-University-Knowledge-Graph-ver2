@@ -21,14 +21,14 @@ http://localhost:3030/vnedu/data?default
 Uploading RDF does not make its canonical IRIs dereferenceable automatically.
 The publisher independently creates HTML, Turtle and JSON-LD descriptions. Ontology terms
 retain hash IRIs; entity and observation identifiers use slash paths.
-Immutable 2.1 and 2.2 version artifacts are now generated under \term{ontology/}.
+Immutable 2.1 and 2.2 version artifacts are generated under \term{ontology/}.
 Dynamic version routes support RDF content negotiation and return 404 for unknown versions.
 
 GitHub Pages remains a separate HTTP origin from Flask. Its static representation links
 and embedded JSON-LD do not implement Flask's negotiation, nor the entity-to-document
 303 pattern discussed in \emph{Cool URIs}~\cite{uris}. Adding Fuseki cannot fix those origin-level
-behaviors. Version artifacts are implemented and tested locally; their production deployment
-requires promotion of the review branch.
+behaviors. Version artifacts are implemented and tested in the release; availability from
+each public origin remains an HTTP-deployment concern rather than an ontology property.
 
 \begin{figure}[htbp]\centering
 \resizebox{\textwidth}{!}{\input{figures/deployment-en.tex}}
@@ -74,7 +74,7 @@ TLS is detected or explicitly forced behind a trusted TLS terminator.
 
 These numbers are a reproducible loopback acceptance sample, not a capacity SLO, penetration
 test, TLS/reverse-proxy audit, cloud IAM review, or production security certification. The
-process-per-query RDFLib backend deliberately trades throughput for isolation; a real
+bounded persistent RDFLib worker deliberately trades throughput for isolation; a real
 deployment still needs external rate limiting, resource quotas, TLS termination, monitoring,
 authentication policy, and a load test against its selected Fuseki/WSGI topology. The full
 machine-readable evidence is \term{data/reports/production-readiness.json}.
@@ -93,8 +93,9 @@ dropped Linux capabilities and a no-new-privileges flag. Fuseki image digests an
 credentials are deliberately operator-supplied; the public reverse proxy must never expose
 Fuseki administration or update endpoints.
 
-These are implementation controls, not evidence that the stack has been deployed on a
-public production host. Before a production availability claim, the deployed Fuseki path
+Some application-layer controls are active on the public Render service, but this is not
+evidence that the complete reverse-proxy/Fuseki/TDB2 profile has been deployed. Before a
+production claim for that topology, the deployed Fuseki path
 must be tested for sustained and burst requests, p50/p95/p99 latency, CPU/memory/disk
 growth, query cancellation, rolling restart and backup restoration. The current local
 RDFLib p95 is therefore reported as an isolation/back-pressure observation, not as a
@@ -121,10 +122,12 @@ five-star security or accuracy certification.
 
 \subsection{Executed end-to-end acceptance evidence}
 The primary reproducible test ran on Linux GitHub Actions with Fuseki 6.2.0 and Temurin Java 21.0.12.1,
-on 7 October 2026 at 01:50 UTC. A fresh Windows run on 9 October 2026 at 01:36 UTC used the
-same pinned Fuseki JAR, Java 21 and the selector/socket workaround against the current
-87,117-triple release. The first same-day attempt without that workaround reproduced the
-known Windows loopback-selector failure; the corrected invocation then passed.
+on 7 October 2026 at 01:50 UTC. The latest Windows run began on 9 October 2026 at
+03:50:45 UTC and used the same pinned Fuseki JAR, Java 21.0.8 and the selector/socket
+workaround against the current 87,183-triple release. An accidental invocation through the
+Java 8 executable failed before startup because Fuseki 6.2 requires class-file version 65;
+rerunning with the explicitly selected JDK 21 completed successfully. This is useful runtime
+selection evidence rather than a semantic or data failure.
 The input hash, JAR hash, runtime details and assertions are archived in
 \term{data/reports/fuseki-e2e-linux.json} and the Windows run in
 \term{data/reports/fuseki-e2e-windows.json}; the corresponding Linux
@@ -135,7 +138,7 @@ completed successfully.
 \caption{Measured Fuseki/TDB2 acceptance results.}\label{tab:fuseki-status}
 \begin{tabularx}{\textwidth}{P{6.5cm}X}\toprule
 Check & Observed result \\\midrule
-Load complete validated serving graph & 87,117 triples; graph-isomorphic to local RDF. \\
+Load complete validated serving graph & 87,183 triples; graph-isomorphic to local RDF. \\
 Attempt unapproved replacement & Refused before PUT. \\
 Approved replacement with backup & Backup graph-isomorphic to previous contents. \\
 Query parity with RDFLib & Count: 1 row; class totals: 68 rows; programs: 78 rows; explicitly dated leadership: 0 rows. \\
@@ -178,37 +181,40 @@ Level & Criterion, summarized & Project evidence and qualification \\\midrule
 \bottomrule\end{tabularx}
 \end{table}
 
-\textbf{Verdict.} The implementation and sampled public RDF support the basic five-star
-publication pattern, subject to the declared licensing scope. This is not an independent
-certification, proof of factual accuracy, or proof that the corrected branch is deployed.
-Deployment, temporal-evidence and operations limits should be reported alongside the claim,
-not hidden by a five-star badge. Failing a single endpoint probe does not automatically
-reduce an otherwise accessible RDF dataset to a lower star level.
+\textbf{Verdict.} The implementation and sampled public RDF support the five-star
+publication pattern, subject to the declared licensing scope. Commit \term{a977a239} was
+observed live on Render on 9 October 2026 with the corrected 87,183-triple release. This is
+not an independent certification, proof of every fact, or proof of a production-grade SLA.
+Temporal-evidence and operations limits must therefore accompany the claim rather than be
+hidden by a five-star badge.
 
 \subsection{Dated HTTP evidence}
-\term{audit/check\_publication.py} performs seven read-only requests with bounded timeouts;
-the result is saved in \term{data/reports/publication-check.json}. This historical, pre-migration sample was recorded
-on 7 October 2026 at 00:10 ICT (UTC+7). The institution tested was
-\term{resource/university/dai-hoc-bach-khoa-ha-noi}; this is not a random or exhaustive sample.
+The public Render deployment was checked after manual promotion of commit
+\term{a977a239} on 9 October 2026. The checks used bounded read-only HTTP requests against
+\url{https://vnedu-lod.onrender.com}; this is an acceptance sample, not continuous
+monitoring or a random workload.
 
 \begin{table}[htbp]\centering\small
-\caption{Observed HTTP behavior; deployed content may predate the corrected branch.}\label{tab:http-check}
+\caption{Observed HTTP behavior of the deployed corrected release.}\label{tab:http-check}
 \begin{tabularx}{\textwidth}{p{4.5cm}X}\toprule
 Request & Observation \\\midrule
-Canonical entity, Accept HTML & HTTP 200, HTML, embedded JSON-LD and alternate RDF links. \\
-Canonical entity, Accept Turtle & HTTP 200, still HTML; no HTTP redirect. \\
-Entity's \term{.ttl} document & HTTP 200, Turtle, 204 triples; graph describes the entity IRI. \\
-Entity's \term{.jsonld} document & HTTP 200, JSON-LD, 204 triples; graph describes the entity IRI. \\
-Declared \term{ontology/2.2} version & Source build emits immutable HTML, Turtle and JSON-LD; live Pages availability awaits deployment of this corrected branch. \\
-Render \term{/healthz} & Read timeout after 15 seconds; health and deployed commit were not established. \\
-Local Fuseki \term{/\$/ping} & Connection refused on port 3030; no reachable service at the configured address. \\
+Render \term{/healthz} & HTTP 200; status \term{ok}, backend \term{rdflib (persistent isolated worker)}, commit \term{a977a239}. \\
+Three full triple-count queries & All returned 87,183; observed response times were 11,313, 8,742 and 8,421 ms. \\
+Institutional-membership query & Four distinct HUS/HCMUS/USSH results had the intended Hanoi or Ho Chi Minh City parent and an inferred inverse \term{hasMember}; HTTP 200 in 3,477 ms. \\
+HUST entity, Accept Turtle & HTTP 200, \term{text/turtle}, 13,347 bytes, 2,653 ms. \\
+SPARQL Update attempt & HTTP 400; public query surface remained read-only. \\
+Unapproved federated \term{SERVICE} target & HTTP 400; the SSRF allow-list rejected the target. \\
+Latest local Fuseki/TDB2 E2E & 87,183 triples loaded, queried, restarted and graph-isomorphism checked; writes rejected with HTTP 405. \\
 \bottomrule\end{tabularx}
 \end{table}
 
-A Render timeout can reflect a cold start or a network/service problem; it is not proof of
-permanent downtime. The probe did not test SPARQL federation, persistence, admin credentials,
-or the full set of resource identifiers. The existing public deployment remains distinct
-from the audited branch, whose Linux CI and local tests validate a different scope.
+The Render deployment took 5 minutes 27 seconds and generated the static site during startup;
+this is operationally inefficient. The free service can cold-start, uses one bounded query
+worker, and the measured 8--11 second full counts are not a high-load benchmark or SLO.
+The public runtime uses RDFLib, not the separately accepted Fuseki/TDB2 topology. The probes
+do not establish sustained capacity, admin security, backup recovery, or external penetration
+test results. They do establish sampled public availability, deployed-revision identity,
+read-only behavior and query correctness for the stated release.
 
 The media distinction also matters. For example, the shipped HUST logo metadata records
 ``fair use'' while its campus photograph records CC0. Describing or linking such an image
