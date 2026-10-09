@@ -40,7 +40,7 @@ jobs:
       - name: Execute Silk candidate experiment
         run: python audit/silk_experiment.py --java java --classpath 'tmp/runtimes/silk-cli:tmp/runtimes/silk-workbench-v3.6.0/lib/*' --timeout 600
       - name: Upload Silk evidence
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: silk-e2e-evidence
           path: |
