@@ -51,7 +51,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 import requests
-from flask import Flask, Response, abort, render_template, request, send_from_directory
+from flask import Flask, Response, abort, make_response, render_template, request, send_from_directory
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -65,6 +65,8 @@ for _ext, _mime in ((".ttl", "text/turtle"), (".jsonld", "application/ld+json"),
     mimetypes.add_type(_mime, _ext)
 
 QUERIES_DIR = config.ROOT / "queries"
+# CDN mà các trang trong site_src dùng (Oxigraph WASM, Leaflet, D3); CSP chỉ mở đúng các host này.
+CDN_HOSTS = "https://cdn.jsdelivr.net https://cdnjs.cloudflare.com"
 RDF_MIME = {"text/turtle": "turtle", "application/ld+json": "json-ld",
             "application/rdf+xml": "xml", "application/n-triples": "nt"}
 FMT_PARAM = {"ttl": "text/turtle", "jsonld": "application/ld+json", "rdf": "application/rdf+xml",
@@ -76,6 +78,9 @@ MAX_QUERY_CHARS = int(os.environ.get("VNEDU_MAX_QUERY_CHARS", 20_000))
 QUERY_TIMEOUT_S = float(os.environ.get("VNEDU_QUERY_TIMEOUT", 30))
 MAX_RESULT_BYTES = int(os.environ.get("VNEDU_MAX_RESULT_BYTES", 8 * 1024 * 1024))
 MAX_BODY_BYTES = int(os.environ.get("VNEDU_MAX_BODY_BYTES", MAX_QUERY_CHARS * 12))
+# Thời gian một truy vấn được chờ worker rảnh trước khi nhận 503 (thay vì bị từ chối ngay).
+QUEUE_WAIT_S = float(os.environ.get("VNEDU_QUEUE_WAIT", 5))
+SELECT_MIME = ("application/sparql-results+json", "text/csv", "application/sparql-results+xml")
 ALLOWED_SERVICE_URLS = {"https://query.wikidata.org/sparql", "https://dbpedia.org/sparql"}
 # URI tài nguyên của dataset: <loại>/<slug>, slug chỉ gồm chữ thường không dấu, số, gạch nối
 RESOURCE_PATH = re.compile(r"^[a-z]+/[a-z0-9]+(?:-[a-z0-9]+)*$")
@@ -166,15 +171,16 @@ def _query_worker(path, connection):
             try:
                 check_query(query)
                 result = graph.query(query)
+                # accept: các MIME client chấp nhận, đã xếp theo q giảm dần và bỏ q=0 (xem preferred_mimes)
+                prefs = [m.strip() for m in accept.split(",") if m.strip()] if mode == "protocol" else []
                 if result.type in ("CONSTRUCT", "DESCRIBE"):
-                    mime = next((m for m in RDF_MIME if m in accept), "text/turtle") if mode == "protocol" else "text/turtle"
+                    mime = next((m for m in prefs if m in RDF_MIME), "text/turtle")
                     payload = result.graph.serialize(format=RDF_MIME[mime], encoding="utf-8")
                 else:
-                    mime, fmt = "application/sparql-results+json", "json"
-                    if mode == "protocol" and "text/csv" in accept and result.type == "SELECT":
-                        mime, fmt = "text/csv", "csv"
-                    elif mode == "protocol" and "sparql-results+xml" in accept:
-                        mime, fmt = "application/sparql-results+xml", "xml"
+                    allowed = SELECT_MIME if result.type == "SELECT" else SELECT_MIME[::2]   # ASK không có CSV
+                    mime = next((m for m in prefs if m in allowed), SELECT_MIME[0])
+                    fmt = {"application/sparql-results+json": "json", "text/csv": "csv",
+                           "application/sparql-results+xml": "xml"}[mime]
                     payload = result.serialize(format=fmt)
                 if len(payload) > MAX_RESULT_BYTES:
                     raise ValueError(
@@ -310,6 +316,12 @@ class LocalBackend:
 
         threading.Thread(target=replace, name="vnedu-rdf-worker-restart", daemon=True).start()
 
+    def pool_status(self) -> dict:
+        """Số worker sống / đang rảnh — để /healthz phản ánh tình trạng pool mà không tốn truy vấn."""
+        with self.pool_lock:
+            alive = sum(1 for process, _ in self.workers if process.is_alive())
+        return {"workers": self.worker_count, "alive": alive, "idle": self.available.qsize(), "started": self.started}
+
     def healthy(self) -> bool:
         """Constant-time readiness check for the validated, immutable RDF release.
 
@@ -330,9 +342,9 @@ class LocalBackend:
     def _execute(self, query: str, mode: str, accept: str = ""):
         self.warmup()
         try:
-            worker = self.available.get_nowait()
+            worker = self.available.get(timeout=QUEUE_WAIT_S)
         except queue.Empty:
-            raise QueryRejected("Máy chủ đang bận. Vui lòng thử lại sau.", 503)
+            raise QueryRejected("Máy chủ đang bận. Vui lòng thử lại sau.", 503) from None
         process, connection = worker
         reusable = False
         try:
@@ -509,6 +521,15 @@ def group(rows, node_key: str, label_key: str, triple_of, inferred) -> list[dict
                                                   g["uri"] in ("http://www.w3.org/2002/07/owl#sameAs",), g["short"]))
 
 
+def preferred_mimes(supported) -> str:
+    """Các MIME trong `supported` mà client chấp nhận, theo q giảm dần; q=0 nghĩa là KHÔNG chấp nhận."""
+    accept = request.accept_mimetypes
+    if not accept:
+        return ""
+    ranked = sorted(((accept[m], -i, m) for i, m in enumerate(supported) if accept[m] > 0), reverse=True)
+    return ", ".join(m for _, _, m in ranked)
+
+
 def rdf_response(graph, mime: str) -> Response:
     from common import bind_prefixes
     bind_prefixes(graph)
@@ -606,8 +627,11 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
         if resp.content_type.startswith("text/html"):
             resp.headers.setdefault(
                 "Content-Security-Policy",
-                "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; "
-                "img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https://query.wikidata.org https://dbpedia.org; "
+                "default-src 'self'; "
+                f"script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' {CDN_HOSTS}; "
+                f"style-src 'self' 'unsafe-inline' {CDN_HOSTS} https://fonts.googleapis.com; "
+                "img-src 'self' data: https:; font-src 'self' data: https:; worker-src 'self' blob:; "
+                f"connect-src 'self' {CDN_HOSTS} https://query.wikidata.org https://dbpedia.org; "
                 "object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'",
             )
         if request.is_secure or os.environ.get("VNEDU_FORCE_HSTS") == "1":
@@ -625,6 +649,14 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
     def _not_found(_e):
         page = site_page("404", 404) if request.accept_mimetypes.accept_html else None
         return page or Response("Không tìm thấy tài nguyên.", status=404, content_type="text/plain; charset=utf-8")
+
+    @app.errorhandler(QueryRejected)
+    def _rejected(e):
+        """Bận / quá giờ ở bất kỳ route nào (vd. /resource) -> 503 + Retry-After, không phải 500."""
+        resp = Response(str(e), status=e.status, content_type="text/plain; charset=utf-8")
+        if e.status == 503:
+            resp.headers["Retry-After"] = "10"
+        return resp
 
     @app.errorhandler(Exception)
     def _internal(e):
@@ -651,8 +683,15 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
             ok = bool(checker()) if checker else bool(backend.select("SELECT ?s WHERE { ?s ?p ?o } LIMIT 1"))
         except Exception:  # noqa: BLE001
             ok = False
-        return {"status": "ok" if ok else "degraded", "backend": backend.name, "ui": "site" if site else "fallback",
-                "commit": (os.environ.get("RENDER_GIT_COMMIT") or "local")[:8]}, (200 if ok else 503)
+        body = {"backend": backend.name, "ui": "site" if site else "fallback",
+                "commit": (os.environ.get("RENDER_GIT_COMMIT") or "local")[:8]}
+        status_of = getattr(backend, "pool_status", None)
+        if status_of:
+            pool = body["query_pool"] = status_of()
+            # pool đã khởi động mà không còn worker nào sống -> endpoint không phục vụ được
+            ok = ok and not (pool["started"] and pool["alive"] == 0)
+        body["status"] = "ok" if ok else "degraded"
+        return body, (200 if ok else 503)
 
     @app.route("/sparql", methods=["GET", "POST"])
     def sparql():
@@ -662,9 +701,11 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
             return site_page("sparql") or render_template("query.html", queries=example_queries(), initial=None)
         try:
             check_query(q)
-            resp = backend.protocol(q, request.headers.get("Accept", ""))
+            accept = (preferred_mimes((*SELECT_MIME, *RDF_MIME)) if isinstance(backend, LocalBackend)
+                      else request.headers.get("Accept", ""))
+            resp = backend.protocol(q, accept)
         except QueryRejected as e:
-            resp = Response(str(e), status=e.status, content_type="text/plain; charset=utf-8")
+            resp = _rejected(e)
         except Exception as e:  # noqa: BLE001 — lỗi cú pháp (pyparsing) của rdflib: thông báo có ích cho người dùng
             msg = str(e).splitlines()[0][:300] if str(e) else type(e).__name__
             resp = Response(f"Truy vấn không hợp lệ: {msg}", status=400, content_type="text/plain; charset=utf-8")
@@ -687,25 +728,40 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
     def query_file(name):
         return send_from_directory(QUERIES_DIR, name, mimetype="application/sparql-query")
 
+    def static_rdf(rel: str, mime: str):
+        """Bản RDF đã build sẵn của tài nguyên (cùng nội dung GitHub Pages); None nếu chưa build."""
+        if site is None:
+            return None
+        f = site / "resource" / (rel + (".jsonld" if mime == "application/ld+json" else ".ttl"))
+        if not f.is_file():
+            return None
+        if mime in ("text/turtle", "application/ld+json"):
+            return send_from_directory(site, f.relative_to(site).as_posix(), mimetype=mime)
+        from rdflib import Graph                                # N-Triples / RDF/XML: chuyển từ Turtle
+        return rdf_response(Graph().parse(f, format="turtle"), mime)
+
+    def resource_rdf(rel: str, mime: str):
+        """Tra cứu RDF không chiếm worker SPARQL khi đã có bản tĩnh; nếu chưa build thì CONSTRUCT."""
+        resp = static_rdf(rel, mime)
+        if resp is None:
+            uri = config.RES_NS + rel
+            g = backend.construct(f"CONSTRUCT {{ <{uri}> ?p ?o }} WHERE {{ <{uri}> ?p ?o }}")
+            if not len(g):
+                abort(404)
+            resp = rdf_response(g, mime)
+        return resp
+
     @app.route("/resource/<path:rest>")
     def resource(rest):
         m = re.fullmatch(r"(.+)\.(ttl|jsonld)", rest)
         if m and RESOURCE_PATH.fullmatch(m.group(1)):          # .../x.ttl, .../x.jsonld giống GitHub Pages
-            fmt = {"ttl": "text/turtle", "jsonld": "application/ld+json"}[m.group(2)]
-            g = backend.construct(f"CONSTRUCT {{ <{config.RES_NS + m.group(1)}> ?p ?o }} "
-                                  f"WHERE {{ <{config.RES_NS + m.group(1)}> ?p ?o }}")
-            if not len(g):
-                abort(404)
-            return rdf_response(g, fmt)
+            return resource_rdf(m.group(1), {"ttl": "text/turtle", "jsonld": "application/ld+json"}[m.group(2)])
         if not RESOURCE_PATH.fullmatch(rest):
             abort(404)
         uri = config.RES_NS + rest
         mime = wants_rdf()
         if mime:
-            g = backend.construct(f"CONSTRUCT {{ <{uri}> ?p ?o }} WHERE {{ <{uri}> ?p ?o }}")
-            if not len(g):
-                abort(404)
-            resp = rdf_response(g, mime)
+            resp = resource_rdf(rest, mime)
             resp.headers["Vary"] = "Accept"
             return resp
         page = site_page("resource/" + rest)

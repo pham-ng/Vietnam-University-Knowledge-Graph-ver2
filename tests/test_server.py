@@ -14,9 +14,18 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "app"))
 import config  # noqa: E402
-from server import FixedWindowLimiter, LocalBackend, QueryRejected, check_query, create_app  # noqa: E402
+import server  # noqa: E402
+from server import (FixedWindowLimiter, LocalBackend, QueryRejected, build_site_if_missing,  # noqa: E402
+                    check_query, create_app)
 
 BKA = "resource/university/dai-hoc-bach-khoa-ha-noi"
+
+
+def hei_count() -> str:
+    """Đáp án đối chiếu tính độc lập bằng rdflib trên bản gold (không hard-code con số)."""
+    g = Graph().parse(config.ALL_TTL)
+    return str(len(set(g.subjects(URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"),
+                                  URIRef(config.ONTO_NS + "HigherEducationInstitution")))))
 
 
 @pytest.fixture(scope="module")
@@ -34,8 +43,11 @@ def client():
 def site_client():
     """Máy chủ phục vụ giao diện đầy đủ (site_server/, build bằng VNEDU_SITE_DIR=site_server VNEDU_SITE_ROOT=/)."""
     site = ROOT / "site_server"
+    if not config.ALL_TTL.exists():
+        pytest.skip("chưa chạy pipeline")
+    build_site_if_missing(site)                     # như khi máy chủ khởi động: tự build thay vì bỏ qua test
     if not (site / "index.html").exists():
-        pytest.skip("chưa build site_server")
+        pytest.fail("không build được site_server")
     backend = LocalBackend()
     app = create_app(backend, site_dir=site)
     app.config["TESTING"] = True
@@ -48,7 +60,7 @@ def site_client():
 def test_home_shows_statistics(client):
     r = client.get("/")
     assert r.status_code == 200
-    assert "271" in r.get_data(as_text=True)          # số cơ sở GDĐH
+    assert hei_count() in r.get_data(as_text=True)          # số cơ sở GDĐH
 
 
 def test_healthz(client):
@@ -110,10 +122,11 @@ def test_sparql_select_json_and_csv(client):
     q = "PREFIX vnedu: <%s> SELECT (COUNT(?u) AS ?n) WHERE { ?u a vnedu:HigherEducationInstitution }" % config.ONTO_NS
     r = client.post("/sparql", data={"query": q}, headers={"Accept": "application/sparql-results+json"})
     assert r.status_code == 200
-    assert json.loads(r.data)["results"]["bindings"][0]["n"]["value"] == "271"
+    expected = hei_count()
+    assert json.loads(r.data)["results"]["bindings"][0]["n"]["value"] == expected
     assert r.headers["Access-Control-Allow-Origin"] == "*"
     r = client.get("/sparql", query_string={"query": q}, headers={"Accept": "text/csv"})
-    assert r.status_code == 200 and r.get_data(as_text=True).splitlines()[1].strip() == "271"
+    assert r.status_code == 200 and r.get_data(as_text=True).splitlines()[1].strip() == expected
 
 
 def test_sparql_syntax_error_is_400_not_500(client):
@@ -256,3 +269,106 @@ def test_site_404_and_traversal(site_client):
     assert site_client.get("/resource/university/khong-ton-tai.ttl").status_code == 404
     assert site_client.get("/..%2F..%2Fconfig.py").status_code == 404
     assert site_client.get("/%2e%2e/%2e%2e/config.py").status_code == 404
+
+
+# ------------------------------------------------------------------ hồi quy sau đánh giá độc lập (10/2026)
+
+def test_csp_allows_every_external_script_used_by_the_site():
+    """CSP từng chặn chính Oxigraph/Leaflet/D3 của giao diện -> /sparql treo, /map hỏng."""
+    import re
+    app = create_app(object(), inferred=set(), site_dir=None)
+    app.config["TESTING"] = True
+
+    @app.route("/_csp_probe")
+    def _probe():
+        return "<p>x</p>"
+
+    csp = app.test_client().get("/_csp_probe").headers["Content-Security-Policy"]
+    directives = dict(d.strip().split(" ", 1) for d in csp.split(";") if " " in d.strip())
+    used = set()
+    for page in (ROOT / "site_src").rglob("*.html"):
+        text = page.read_text(encoding="utf-8")
+        used |= set(re.findall(r'(?:src=|import[^;]*?from\s*|import\()\s*["\'](https://[^/"\']+)', text))
+    assert used, "không tìm thấy script ngoài nào — biểu thức kiểm tra đã lỗi thời"
+    for host in used:
+        assert host in directives["script-src"], host
+    assert "'wasm-unsafe-eval'" in directives["script-src"]          # Oxigraph biên dịch WebAssembly
+    assert "https://cdn.jsdelivr.net" in directives["connect-src"]  # tải tệp .wasm
+
+
+@pytest.mark.parametrize("headers", [{}, {"Accept": "text/html"}])
+def test_ontology_version_html_is_not_500(headers):
+    client = create_app(object(), inferred=set(), site_dir=None).test_client()
+    r = client.get("/ontology/2.2", headers=headers)
+    assert r.status_code == 200 and "2.2.ttl" in r.get_data(as_text=True)
+
+
+@pytest.fixture
+def busy_backend(tmp_path, monkeypatch):
+    """Pool đã khởi động nhưng không còn worker rảnh (một truy vấn nặng đang chạy)."""
+    release = tmp_path / "release.ttl"
+    release.write_text("# release\n", encoding="utf-8")
+    backend = LocalBackend(release)
+    backend.started = True
+    monkeypatch.setattr(server, "QUEUE_WAIT_S", 0.05)
+    return backend
+
+
+def test_busy_pool_returns_503_with_retry_after(busy_backend):
+    client = create_app(busy_backend, inferred=set(), site_dir=None).test_client()
+    r = client.post("/sparql", data={"query": "ASK {}"})
+    assert r.status_code == 503 and r.headers["Retry-After"]
+    # tra cứu RDF khi không có bản tĩnh cũng phải là 503 (trước đây là 500)
+    r = client.get("/" + BKA, headers={"Accept": "text/turtle"})
+    assert r.status_code == 503 and r.headers["Retry-After"]
+
+
+def test_queued_query_waits_for_a_free_worker(busy_backend, monkeypatch):
+    """Truy vấn đến khi pool bận được chờ ngắn thay vì bị từ chối tức thì."""
+    monkeypatch.setattr(server, "QUEUE_WAIT_S", 2)
+    sentinel = object()
+    threading.Timer(0.2, busy_backend.available.put_nowait, args=(sentinel,)).start()
+    assert busy_backend.available.get(timeout=server.QUEUE_WAIT_S) is sentinel
+
+
+def test_healthz_reports_query_pool(busy_backend):
+    client = create_app(busy_backend, inferred=set(), site_dir=None).test_client()
+    body = client.get("/healthz").get_json()
+    assert body["query_pool"]["idle"] == 0
+    assert body["status"] == "degraded"          # đã khởi động nhưng không còn worker nào sống
+
+
+def test_resource_rdf_is_served_without_the_query_worker(site_client):
+    """Dereference không được phụ thuộc worker SPARQL: một truy vấn nặng không làm 'chết' URI."""
+    backend = site_client.application.config["BACKEND"]
+    original = backend.construct
+    backend.construct = lambda _q: pytest.fail("dereference dùng worker SPARQL")
+    try:
+        for accept, fmt in (("text/turtle", "turtle"), ("application/ld+json", "json-ld"),
+                            ("application/n-triples", "nt")):
+            r = site_client.get("/resource/university/truong-dai-hoc-vinuni", headers={"Accept": accept})
+            assert r.status_code == 200 and r.content_type.startswith(accept)
+            assert len(Graph().parse(data=r.get_data(as_text=True), format=fmt)) > 10
+    finally:
+        backend.construct = original
+
+
+@pytest.mark.parametrize("accept, expected", [
+    ("text/csv;q=0, application/sparql-results+json", "application/sparql-results+json"),
+    ("application/sparql-results+xml, application/sparql-results+json;q=0.5", "application/sparql-results+xml"),
+    ("text/csv", "text/csv"),
+    ("", "application/sparql-results+json"),
+])
+def test_sparql_select_honours_q_values(client, accept, expected):
+    r = client.get("/sparql", query_string={"query": "SELECT ?x WHERE { BIND(1 AS ?x) }"}, headers={"Accept": accept})
+    assert r.status_code == 200 and r.content_type.startswith(expected)
+
+
+@pytest.mark.parametrize("accept, expected", [
+    ("application/rdf+xml, text/turtle;q=0.1", "application/rdf+xml"),
+    ("text/turtle;q=0, application/n-triples", "application/n-triples"),
+])
+def test_sparql_construct_honours_q_values(client, accept, expected):
+    q = "CONSTRUCT { <urn:a> <urn:b> <urn:c> } WHERE {}"
+    r = client.get("/sparql", query_string={"query": q}, headers={"Accept": accept})
+    assert r.status_code == 200 and r.content_type.startswith(expected)
