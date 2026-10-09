@@ -34,7 +34,7 @@ jobs:
           unzip -q tmp/runtimes/fuseki.zip -d tmp/runtimes
       - name: TDB2 load, query parity, restart and denied writes
         run: python audit/fuseki_e2e.py --jar tmp/runtimes/apache-jena-fuseki-6.2.0/fuseki-server.jar
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         if: always()
         with:
           name: fuseki-e2e-evidence
