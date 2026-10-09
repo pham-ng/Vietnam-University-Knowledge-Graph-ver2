@@ -117,6 +117,7 @@ def test_public_sparql_accepts_raw_post_and_blocks_compact_ssrf():
 
 def test_expensive_query_is_terminated_and_capacity_recovers(tmp_path, monkeypatch):
     import multiprocessing
+    import time
     import server
     graph = Graph()
     for n in range(100):
@@ -124,14 +125,24 @@ def test_expensive_query_is_terminated_and_capacity_recovers(tmp_path, monkeypat
     path = tmp_path / 'input.ttl'
     graph.serialize(path, format='turtle')
     backend = server.LocalBackend(path)
-    before = {p.pid for p in multiprocessing.active_children()}
+    backend.warmup()
+    before_count = len(multiprocessing.active_children())
     monkeypatch.setattr(server, 'QUERY_TIMEOUT_S', 2)
     with pytest.raises(QueryRejected) as error:
         backend.select('SELECT ?a ?b ?c ?d WHERE { ?a ?p ?o . ?b ?q ?r . ?c ?s ?t . ?d ?v ?w }')
     assert error.value.status == 503
-    assert {p.pid for p in multiprocessing.active_children()} == before
     monkeypatch.setattr(server, 'QUERY_TIMEOUT_S', 15)
-    assert len(backend.select('SELECT ?s WHERE { ?s ?p ?o } LIMIT 1')) == 1
+    deadline = time.monotonic() + 10
+    while True:
+        try:
+            assert len(backend.select('SELECT ?s WHERE { ?s ?p ?o } LIMIT 1')) == 1
+            break
+        except QueryRejected:
+            if time.monotonic() >= deadline:
+                raise
+            time.sleep(0.05)
+    assert len(multiprocessing.active_children()) == before_count
+    backend.close()
 
 
 def test_federation_redirects_are_disabled():

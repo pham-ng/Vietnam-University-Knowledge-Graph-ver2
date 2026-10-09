@@ -34,7 +34,9 @@ An toàn (endpoint SPARQL mở cho công chúng):
 from __future__ import annotations
 
 import argparse
+import atexit
 import multiprocessing
+import queue
 import secrets
 import threading
 import json
@@ -144,28 +146,42 @@ def check_query(query: str) -> None:
     visit(parseQuery(query))
 
 
-def _query_worker(path, query, mode, accept, connection):
-    """All evaluation AND serialization happen in a disposable, killable process."""
+def _query_worker(path, connection):
+    """Load RDF once, then evaluate requests in a persistent, killable process."""
     from rdflib import Graph
     try:
         install_user_agent()
-        check_query(query)
-        result = Graph().parse(path).query(query)
-        if result.type in ("CONSTRUCT", "DESCRIBE"):
-            mime = next((m for m in RDF_MIME if m in accept), "text/turtle") if mode == "protocol" else "text/turtle"
-            payload = result.graph.serialize(format=RDF_MIME[mime], encoding="utf-8")
-        else:
-            mime, fmt = "application/sparql-results+json", "json"
-            if mode == "protocol" and "text/csv" in accept and result.type == "SELECT":
-                mime, fmt = "text/csv", "csv"
-            elif mode == "protocol" and "sparql-results+xml" in accept:
-                mime, fmt = "application/sparql-results+xml", "xml"
-            payload = result.serialize(format=fmt)
-        if len(payload) > MAX_RESULT_BYTES:
-            raise ValueError(f"Result exceeds {MAX_RESULT_BYTES // (1024 * 1024)} MiB; use LIMIT or download the RDF dump.")
-        connection.send((True, mime, payload))
+        graph = Graph().parse(path)
+        connection.send(("ready", True, len(graph)))
+        while True:
+            task = connection.recv()
+            if task is None:
+                break
+            query, mode, accept = task
+            try:
+                check_query(query)
+                result = graph.query(query)
+                if result.type in ("CONSTRUCT", "DESCRIBE"):
+                    mime = next((m for m in RDF_MIME if m in accept), "text/turtle") if mode == "protocol" else "text/turtle"
+                    payload = result.graph.serialize(format=RDF_MIME[mime], encoding="utf-8")
+                else:
+                    mime, fmt = "application/sparql-results+json", "json"
+                    if mode == "protocol" and "text/csv" in accept and result.type == "SELECT":
+                        mime, fmt = "text/csv", "csv"
+                    elif mode == "protocol" and "sparql-results+xml" in accept:
+                        mime, fmt = "application/sparql-results+xml", "xml"
+                    payload = result.serialize(format=fmt)
+                if len(payload) > MAX_RESULT_BYTES:
+                    raise ValueError(
+                        f"Result exceeds {MAX_RESULT_BYTES // (1024 * 1024)} MiB; use LIMIT or download the RDF dump.")
+                connection.send(("result", True, mime, payload))
+            except Exception as exc:  # noqa: BLE001 — lỗi được chuyển có cấu trúc về tiến trình web
+                connection.send(("result", False, "", str(exc)))
     except Exception as exc:
-        connection.send((False, "", str(exc)))
+        try:
+            connection.send(("ready", False, str(exc)))
+        except (BrokenPipeError, EOFError, OSError):
+            pass
     finally:
         connection.close()
 
@@ -173,13 +189,121 @@ def _query_worker(path, query, mode, accept, connection):
 # ------------------------------------------------------------------ backends
 
 class LocalBackend:
-    """RDFLib queries in bounded child processes; timed-out work is terminated."""
-    name = "rdflib (isolated processes)"
+    """RDFLib in bounded persistent workers; timed-out work is terminated."""
+    name = "rdflib (persistent isolated worker)"
 
     def __init__(self, path: Path = config.ALL_TTL):
         self.path = Path(path).resolve()
-        self.slots = threading.BoundedSemaphore(int(os.environ.get("VNEDU_QUERY_WORKERS", "2")))
+        self.worker_count = max(1, int(os.environ.get("VNEDU_QUERY_WORKERS", "1")))
         self.context = multiprocessing.get_context("spawn")
+        self.available = queue.Queue(maxsize=self.worker_count)
+        self.workers: list[tuple[multiprocessing.Process, object]] = []
+        self.pool_lock = threading.Lock()
+        self.started = False
+        self.closed = False
+        atexit.register(self.close)
+
+    def _spawn_worker(self):
+        parent, child = self.context.Pipe(duplex=True)
+        process = self.context.Process(target=_query_worker, args=(self.path, child), daemon=True)
+        process.start()
+        child.close()
+        startup_timeout = float(os.environ.get("VNEDU_WORKER_STARTUP_TIMEOUT", max(120, QUERY_TIMEOUT_S * 4)))
+        if not parent.poll(startup_timeout):
+            process.terminate()
+            process.join()
+            parent.close()
+            raise RuntimeError(f"RDF worker did not load {self.path.name} within {startup_timeout:g} seconds")
+        kind, ok, detail = parent.recv()
+        if kind != "ready" or not ok:
+            process.join(timeout=1)
+            if process.is_alive():
+                process.terminate()
+                process.join()
+            parent.close()
+            raise RuntimeError(f"RDF worker could not load {self.path.name}: {detail}")
+        log.info("RDF worker %s ready with %s triples", process.pid, detail)
+        return process, parent
+
+    def warmup(self) -> None:
+        """Start the bounded worker pool and parse the immutable release once."""
+        with self.pool_lock:
+            if self.started or self.closed:
+                return
+            self.started = True
+            try:
+                for _ in range(self.worker_count):
+                    worker = self._spawn_worker()
+                    self.workers.append(worker)
+                    self.available.put_nowait(worker)
+            except Exception:
+                self.started = False
+                self._close_workers()
+                raise
+
+    def _close_workers(self) -> None:
+        for process, connection in self.workers:
+            try:
+                if process.is_alive():
+                    connection.send(None)
+                    process.join(timeout=1)
+                if process.is_alive():
+                    process.terminate()
+                    process.join()
+            except (BrokenPipeError, EOFError, OSError, ValueError):
+                if process.is_alive():
+                    process.terminate()
+                    process.join()
+            finally:
+                connection.close()
+                if process.pid is not None:
+                    process.close()
+        self.workers.clear()
+        while True:
+            try:
+                self.available.get_nowait()
+            except queue.Empty:
+                break
+
+    def close(self) -> None:
+        with self.pool_lock:
+            if self.closed:
+                return
+            self.closed = True
+            self._close_workers()
+
+    def _retire(self, worker) -> None:
+        process, connection = worker
+        with self.pool_lock:
+            if worker in self.workers:
+                self.workers.remove(worker)
+        if process.is_alive():
+            process.terminate()
+            process.join()
+        connection.close()
+        if process.pid is not None:
+            process.close()
+
+    def _replace_async(self) -> None:
+        def replace():
+            try:
+                worker = self._spawn_worker()
+            except Exception:  # noqa: BLE001 — pool remains unavailable and the error is logged
+                log.exception("Could not restart RDF worker")
+                return
+            with self.pool_lock:
+                if self.closed:
+                    process, connection = worker
+                    if process.is_alive():
+                        process.terminate()
+                        process.join()
+                    connection.close()
+                    process.close()
+                    return
+                self.workers.append(worker)
+                self.available.put_nowait(worker)
+
+        threading.Thread(target=replace, name="vnedu-rdf-worker-restart", daemon=True).start()
 
     def healthy(self) -> bool:
         """Constant-time readiness check for the validated, immutable RDF release.
@@ -199,30 +323,34 @@ class LocalBackend:
             return False
 
     def _execute(self, query: str, mode: str, accept: str = ""):
-        if not self.slots.acquire(blocking=False):
-            raise QueryRejected("Máy chủ đang bận. Vui lòng thử lại sau.", 503)
-        receiver, sender = self.context.Pipe(duplex=False)
-        process = self.context.Process(target=_query_worker, args=(self.path, query, mode, accept, sender))
+        self.warmup()
         try:
-            process.start()
-            sender.close()
-            if not receiver.poll(QUERY_TIMEOUT_S):
+            worker = self.available.get_nowait()
+        except queue.Empty:
+            raise QueryRejected("Máy chủ đang bận. Vui lòng thử lại sau.", 503)
+        process, connection = worker
+        reusable = False
+        try:
+            connection.send((query, mode, accept))
+            if not connection.poll(QUERY_TIMEOUT_S):
+                self._retire(worker)
+                self._replace_async()
                 raise QueryRejected(f"Truy vấn chạy quá {QUERY_TIMEOUT_S:g} giây.", 503)
-            ok, mime, payload = receiver.recv()
+            kind, ok, mime, payload = connection.recv()
+            if kind != "result":
+                raise RuntimeError("RDF worker returned an invalid response")
+            reusable = True
             if not ok:
                 raise ValueError(payload)
             return mime, payload
-        except EOFError:
+        except (EOFError, BrokenPipeError, OSError):
+            if worker in self.workers:
+                self._retire(worker)
+                self._replace_async()
             raise QueryRejected("Tiến trình truy vấn đã dừng.", 503) from None
         finally:
-            if process.pid is not None:
-                if process.is_alive():
-                    process.terminate()
-                process.join()
-                process.close()
-            sender.close()
-            receiver.close()
-            self.slots.release()
+            if reusable and process.is_alive():
+                self.available.put_nowait(worker)
 
     def protocol(self, query: str, accept: str) -> Response:
         mime, payload = self._execute(query, "protocol", accept)
@@ -707,7 +835,10 @@ def main() -> None:
     if args.prod:
         build_site_if_missing()
     use_fuseki = args.backend == "fuseki" or (args.backend == "auto" and fuseki_alive())
-    app = create_app(FusekiBackend() if use_fuseki else LocalBackend())
+    backend = FusekiBackend() if use_fuseki else LocalBackend()
+    if isinstance(backend, LocalBackend):
+        backend.warmup()
+    app = create_app(backend)
     log.info("Backend: %s — mở http://%s:%d/", app.config["BACKEND"].name, args.host, args.port)
     if args.prod:
         from waitress import serve

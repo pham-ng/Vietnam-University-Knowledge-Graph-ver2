@@ -18,6 +18,10 @@ services:
         value: 3.12.7
       - key: VNEDU_QUERY_TIMEOUT
         value: "30"
+      - key: VNEDU_QUERY_WORKERS
+        value: "1"
+      - key: VNEDU_WORKER_STARTUP_TIMEOUT
+        value: "180"
       - key: VNEDU_RATE_LIMIT_PER_MINUTE
         value: "60"
       - key: VNEDU_MAX_RESULT_BYTES

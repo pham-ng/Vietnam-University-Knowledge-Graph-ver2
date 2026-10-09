@@ -20,9 +20,11 @@ BKA = "resource/university/dai-hoc-bach-khoa-ha-noi"
 def client():
     if not config.ALL_TTL.exists():
         pytest.skip("chưa chạy pipeline")
-    app = create_app(LocalBackend(), site_dir=None)        # giao diện dự phòng (app/templates)
+    backend = LocalBackend()
+    app = create_app(backend, site_dir=None)        # giao diện dự phòng (app/templates)
     app.config["TESTING"] = True
-    return app.test_client()
+    yield app.test_client()
+    backend.close()
 
 
 @pytest.fixture(scope="module")
@@ -31,9 +33,11 @@ def site_client():
     site = ROOT / "site_server"
     if not (site / "index.html").exists():
         pytest.skip("chưa build site_server")
-    app = create_app(LocalBackend(), site_dir=site)
+    backend = LocalBackend()
+    app = create_app(backend, site_dir=site)
     app.config["TESTING"] = True
-    return app.test_client()
+    yield app.test_client()
+    backend.close()
 
 
 # ------------------------------------------------------------------ chức năng
