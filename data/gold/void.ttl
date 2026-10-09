@@ -25,7 +25,7 @@
     void:linkPredicate owl:sameAs ;
     void:objectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/dbpedia> ;
     void:subjectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset> ;
-    void:triples 201 .
+    void:triples 202 .
 
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-geonames-sameAs> a void:Linkset ;
     void:linkPredicate owl:sameAs ;
@@ -55,7 +55,7 @@
     void:linkPredicate foaf:isPrimaryTopicOf ;
     void:objectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/wikipedia> ;
     void:subjectsTarget <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset> ;
-    void:triples 1188 .
+    void:triples 1186 .
 
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/ror> a void:Dataset ;
     foaf:homepage <https://ror.org/> .
@@ -105,7 +105,7 @@
     void:dataDump <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-data.ttl>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-links.ttl> ;
-    void:entities 6669 ;
+    void:entities 6654 ;
     void:exampleResource university:dai-hoc-bach-khoa-ha-noi ;
     void:sparqlEndpoint <https://vnedu-lod.onrender.com/sparql> ;
     void:subset <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-dbpedia-closeMatch>,
@@ -115,7 +115,7 @@
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-closeMatch>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-sameAs>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikipedia-isPrimaryTopicOf> ;
-    void:triples 63044 ;
+    void:triples 62931 ;
     void:uriSpace "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/" ;
     void:vocabulary dbo:,
         geo:,

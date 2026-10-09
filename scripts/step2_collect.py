@@ -37,11 +37,12 @@ ORG_LINK_KEYS = {"affiliation", "affiliations", "liên kết", "parent", "thành
 
 def save(name: str, obj) -> None:
     """Ghi một ảnh chụp tầng BRONZE + tệp .meta.json (nguồn, thời điểm, số bản ghi) + manifest."""
-    import datetime
     path = config.BRONZE_DIR / name
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(obj, ensure_ascii=False, indent=1, default=sorted), encoding="utf-8")
-    meta = {"source": SOURCES.get(name, ""), "retrieved_at": datetime.datetime.now().isoformat(timespec="seconds"),
+    text = json.dumps(obj, ensure_ascii=False, indent=1, default=sorted)
+    retrieved = authoritative.stable_retrieved_at(path, text)     # giữ thời điểm gốc nếu dữ liệu không đổi
+    path.write_text(text, encoding="utf-8")
+    meta = {"source": SOURCES.get(name, ""), "retrieved_at": retrieved,
             "records": len(obj), "user_agent": config.USER_AGENT,
             "license": "CC BY-SA 4.0" if "viwiki" in name else ("CC BY-SA 3.0" if "dbp" in name else "CC0 1.0")}
     path.with_suffix(".meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")

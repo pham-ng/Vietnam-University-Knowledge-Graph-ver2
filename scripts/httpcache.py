@@ -59,9 +59,16 @@ def _throttle(host: str) -> None:
     _last_call[host] = time.time()
 
 
+def get_text(url: str, params: dict, method: str = "GET", use_cache: bool = True,
+             headers: dict | None = None, retries: int = 8) -> str:
+    """Như get_json nhưng cho phản hồi HTML/văn bản (vd. trang chi tiết của cổng tuyển sinh Bộ GD&ĐT).
+    Bộ đệm lưu {"text": ...} dưới khoá riêng (hậu tố #text) để không lẫn với phản hồi JSON."""
+    return get_json(url, params, method, use_cache, headers, retries, _text=True)["text"]
+
+
 def get_json(url: str, params: dict, method: str = "GET", use_cache: bool = True,
-             headers: dict | None = None, retries: int = 8) -> dict:
-    path = _cache_path(method, url, params)
+             headers: dict | None = None, retries: int = 8, _text: bool = False) -> dict:
+    path = _cache_path(method + ("#text" if _text else ""), url, params)
     if use_cache and path.exists():
         return json.loads(path.read_text(encoding="utf-8"))
     if os.environ.get("VNEDU_OFFLINE") == "1":
@@ -80,7 +87,7 @@ def get_json(url: str, params: dict, method: str = "GET", use_cache: bool = True
                 wait = float(r.headers.get("Retry-After", delay))
                 raise requests.HTTPError(f"HTTP {r.status_code}, chờ {wait:.0f}s", response=r)
             r.raise_for_status()
-            data = r.json()
+            data = {"text": r.text} if _text else r.json()
             break
         except (requests.RequestException, ValueError) as e:
             if attempt == retries:
@@ -107,10 +114,12 @@ def mediawiki(api: str, **params) -> list[dict]:
     """Gọi MediaWiki API, tự xử lý 'continue'; trả về danh sách các trang kết quả."""
     params = {**params, "format": "json", "formatversion": 2, "maxlag": 5}
     out = []
+    lagged = 0
     while True:
         r = get_json(api, params)
         if "error" in r:
-            if r["error"].get("code") == "maxlag":
+            if r["error"].get("code") == "maxlag" and lagged < 12:     # tối đa ~1 phút, không lặp vô hạn
+                lagged += 1
                 time.sleep(5)
                 continue
             raise SystemExit(f"MediaWiki lỗi: {r['error']}")

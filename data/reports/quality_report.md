@@ -6,53 +6,53 @@
 
 | Tầng | Tệp | Số lượng | SHA-256 | Tạo lúc |
 |---|---|---|---|---|
-| bronze | `data/bronze/dbp_years.json` | 72 records | `c0b0f72eae48` | 2026-10-09T10:30:47 |
-| bronze | `data/bronze/moet_admissions.json` | 405 records | `8f078d80eb5f` | 2026-10-09T10:31:04 |
-| bronze | `data/bronze/ror_organizations.json` | 202 records | `c5e8fc0c544a` | 2026-10-09T10:31:18 |
-| bronze | `data/bronze/viwiki_images.json` | 280 records | `4df5192d37df` | 2026-10-09T10:30:47 |
-| bronze | `data/bronze/viwiki_links.json` | 80 records | `c1a26b63cff7` | 2026-10-09T10:30:46 |
-| bronze | `data/bronze/viwiki_pages.json` | 279 records | `f3a91fa46eb3` | 2026-10-09T10:30:46 |
-| bronze | `data/bronze/wd_alumni.json` | 1,531 records | `af11c19def93` | 2026-10-09T10:30:48 |
-| bronze | `data/bronze/wd_entities.json` | 12 records | `9dff7acfa914` | 2026-10-09T10:30:47 |
-| bronze | `data/bronze/wd_institutions.json` | 363 records | `3539a0481f33` | 2026-10-09T10:30:47 |
-| bronze | `data/bronze/wd_provinces.json` | 63 records | `9bc0e96c5231` | 2026-10-09T10:30:47 |
-| silver | `data/silver/governing_bodies.json` | 50 records | `6bee7090a9a7` | 2026-10-09T10:31:21 |
-| silver | `data/silver/institutions.json` | 300 records | `27343518ea61` | 2026-10-09T10:31:21 |
-| silver | `data/silver/people.json` | 1,702 records | `5de5683cb457` | 2026-10-09T10:31:21 |
-| silver | `data/silver/provinces.json` | 63 records | `4cbac2c46a0d` | 2026-10-09T10:31:21 |
-| gold | `data/gold/vnedu-all.ttl` | 87,183 triples | `9627fce0d3b0` | 2026-10-09T10:32:44 |
-| gold | `data/gold/vnedu-data.ttl` | 59,486 triples | `806ca34b242d` | 2026-10-09T10:31:25 |
-| gold | `data/gold/vnedu-inferred.ttl` | 23,177 triples | `21ef4266c2e1` | 2026-10-09T10:32:40 |
-| gold | `data/gold/vnedu-links.ttl` | 3,558 triples | `53197c8a1276` | 2026-10-09T10:31:28 |
-| gold | `data/gold/void.ttl` | 104 triples | `e7bc2d72550f` | 2026-10-09T10:31:30 |
+| bronze | `data/bronze/dbp_years.json` | 72 records | `c0b0f72eae48` | 2026-10-09T17:01:28 |
+| bronze | `data/bronze/moet_admissions.json` | 405 records | `49df1786c58e` | 2026-10-09T17:01:29 |
+| bronze | `data/bronze/ror_organizations.json` | 202 records | `c5e8fc0c544a` | 2026-10-09T17:01:29 |
+| bronze | `data/bronze/viwiki_images.json` | 280 records | `4df5192d37df` | 2026-10-09T17:01:28 |
+| bronze | `data/bronze/viwiki_links.json` | 80 records | `c1a26b63cff7` | 2026-10-09T17:01:28 |
+| bronze | `data/bronze/viwiki_pages.json` | 279 records | `f3a91fa46eb3` | 2026-10-09T17:01:28 |
+| bronze | `data/bronze/wd_alumni.json` | 1,531 records | `af11c19def93` | 2026-10-09T17:01:29 |
+| bronze | `data/bronze/wd_entities.json` | 12 records | `9dff7acfa914` | 2026-10-09T17:01:28 |
+| bronze | `data/bronze/wd_institutions.json` | 363 records | `3539a0481f33` | 2026-10-09T17:01:28 |
+| bronze | `data/bronze/wd_provinces.json` | 63 records | `9bc0e96c5231` | 2026-10-09T17:01:28 |
+| silver | `data/silver/governing_bodies.json` | 50 records | `6bee7090a9a7` | 2026-10-09T17:01:31 |
+| silver | `data/silver/institutions.json` | 297 records | `92376e3f40e4` | 2026-10-09T17:01:31 |
+| silver | `data/silver/people.json` | 1,703 records | `6e7c31f5af19` | 2026-10-09T17:01:31 |
+| silver | `data/silver/provinces.json` | 63 records | `4cbac2c46a0d` | 2026-10-09T17:01:31 |
+| gold | `data/gold/vnedu-all.ttl` | 86,129 triples | `dd6821fb9f1a` | 2026-10-09T17:03:00 |
+| gold | `data/gold/vnedu-data.ttl` | 59,374 triples | `5db5d799b8bb` | 2026-10-09T17:01:34 |
+| gold | `data/gold/vnedu-inferred.ttl` | 22,226 triples | `469736494dea` | 2026-10-09T17:02:56 |
+| gold | `data/gold/vnedu-links.ttl` | 3,557 triples | `64e97a1b1caa` | 2026-10-09T17:01:35 |
+| gold | `data/gold/void.ttl` | 104 triples | `b90c36705532` | 2026-10-09T17:01:37 |
 
-## 2. Độ đầy đủ — 271 cơ sở giáo dục đại học (tầng silver)
+## 2. Độ đầy đủ — 268 cơ sở giáo dục đại học (tầng silver)
 
 | Thuộc tính | Có | Tỉ lệ | |
 |---|---|---|---|
-| năm thành lập | 261 | 96.3% | `███████████████████░` |
-| tỉnh/thành | 263 | 97.0% | `███████████████████░` |
-| loại hình sở hữu | 247 | 91.1% | `██████████████████░░` |
-| website | 243 | 89.7% | `██████████████████░░` |
-| lãnh đạo | 195 | 72.0% | `██████████████░░░░░░` |
-| cơ quan chủ quản | 138 | 50.9% | `██████████░░░░░░░░░░` |
-| tên tiếng Anh | 226 | 83.4% | `█████████████████░░░` |
-| tên viết tắt | 177 | 65.3% | `█████████████░░░░░░░` |
-| khẩu hiệu | 126 | 46.5% | `█████████░░░░░░░░░░░` |
-| toạ độ | 164 | 60.5% | `████████████░░░░░░░░` |
-| mã trường | 218 | 80.4% | `████████████████░░░░` |
-| mã ROR | 192 | 70.8% | `██████████████░░░░░░` |
-| số sinh viên | 25 | 9.2% | `██░░░░░░░░░░░░░░░░░░` |
-| số giảng viên | 33 | 12.2% | `██░░░░░░░░░░░░░░░░░░` |
-| giới thiệu chung | 261 | 96.3% | `███████████████████░` |
-| lịch sử | 217 | 80.1% | `████████████████░░░░` |
-| biểu trưng | 144 | 53.1% | `███████████░░░░░░░░░` |
-| ảnh | 93 | 34.3% | `███████░░░░░░░░░░░░░` |
-| ngày thành lập đầy đủ | 114 | 42.1% | `████████░░░░░░░░░░░░` |
-| tên khác | 53 | 19.6% | `████░░░░░░░░░░░░░░░░` |
-| điện thoại | 235 | 86.7% | `█████████████████░░░` |
-| email | 215 | 79.3% | `████████████████░░░░` |
-| khuôn viên | 41 | 15.1% | `███░░░░░░░░░░░░░░░░░` |
+| năm thành lập | 259 | 96.6% | `███████████████████░` |
+| tỉnh/thành | 260 | 97.0% | `███████████████████░` |
+| loại hình sở hữu | 246 | 91.8% | `██████████████████░░` |
+| website | 241 | 89.9% | `██████████████████░░` |
+| lãnh đạo | 195 | 72.8% | `███████████████░░░░░` |
+| cơ quan chủ quản | 138 | 51.5% | `██████████░░░░░░░░░░` |
+| tên tiếng Anh | 225 | 84.0% | `█████████████████░░░` |
+| tên viết tắt | 177 | 66.0% | `█████████████░░░░░░░` |
+| khẩu hiệu | 126 | 47.0% | `█████████░░░░░░░░░░░` |
+| toạ độ | 164 | 61.2% | `████████████░░░░░░░░` |
+| mã trường | 216 | 80.6% | `████████████████░░░░` |
+| mã ROR | 192 | 71.6% | `██████████████░░░░░░` |
+| số sinh viên | 25 | 9.3% | `██░░░░░░░░░░░░░░░░░░` |
+| số giảng viên | 33 | 12.3% | `██░░░░░░░░░░░░░░░░░░` |
+| giới thiệu chung | 260 | 97.0% | `███████████████████░` |
+| lịch sử | 217 | 81.0% | `████████████████░░░░` |
+| biểu trưng | 144 | 53.7% | `███████████░░░░░░░░░` |
+| ảnh | 93 | 34.7% | `███████░░░░░░░░░░░░░` |
+| ngày thành lập đầy đủ | 114 | 42.5% | `█████████░░░░░░░░░░░` |
+| tên khác | 53 | 19.8% | `████░░░░░░░░░░░░░░░░` |
+| điện thoại | 233 | 86.9% | `█████████████████░░░` |
+| email | 213 | 79.5% | `████████████████░░░░` |
+| khuôn viên | 41 | 15.3% | `███░░░░░░░░░░░░░░░░░` |
 
 ## 3. Nguồn hiện hành và chính sách chấp nhận
 
@@ -65,11 +65,11 @@ Các giá trị mới chỉ được hợp nhất khi tên chính thức khớp 
 
 | Trường có nguồn cấp thuộc tính | Số cơ sở GDĐH |
 |---|---:|
-| mã tuyển sinh — Bộ GDĐT | 202 |
-| email — Bộ GDĐT | 201 |
-| website — Bộ GDĐT | 204 |
+| mã tuyển sinh — Bộ GDĐT | 200 |
+| email — Bộ GDĐT | 199 |
+| website — Bộ GDĐT | 202 |
 | tên viết tắt — ROR | 147 |
-| tên cũ — quyết định đổi tên | 4 |
+| tên cũ — quyết định đổi tên | 5 |
 | cơ quan chủ quản trực tiếp — văn bản pháp lý | 41 |
 
 **Toạ độ:** `nominatim-address` 58, `viwiki` 13, `wikidata` 93. Không dùng toạ độ ROR làm toạ độ campus vì ROR/GeoNames thường biểu diễn tâm địa phương, không phải điểm của cơ sở.
@@ -85,9 +85,11 @@ Giá trị chính lấy từ Wikidata và infobox Wikipedia tiếng Việt (đ�
 | 1723/QĐ-TTg | direct_governed_by | 41 |
 | DBpedia (infobox Wikipedia tiếng Anh) | founding_year | 1 |
 | Wikidata – mô tả | ownership | 7 |
+| https://congbao.hatinh.gov.vn/vbpq_hatinh.nsf/64f0c917e087475547256f96002869cb/8D30CB0399EAB67D47258B510030C135/$file/bao-cao-so-ket-5-nam-nam-thuc-hien-Luat-Giao-duc-dai-hoc-ban-hanh-(04.07.2024_16h48p51)_signed.pdf | ownership | 1 |
 | https://hcmus.edu.vn/dhqg-tp-hcm-va-cac-don-vi-thanh-vien/ | member_of | 1 |
 | https://ussh.vnu.edu.vn/vi/ | member_of | 1 |
-| phân biệt thực thể trùng tên | name_vi | 1 |
+| https://vbu.edu.vn/ | ownership | 1 |
+| https://www.rmit.edu.vn/about-us | ownership | 1 |
 | toạ độ → OpenStreetMap Nominatim | province | 1 |
 | viwiki – đoạn mở đầu | dissolution_year | 11 |
 | viwiki – đoạn mở đầu | founding_year | 18 |
@@ -101,14 +103,15 @@ Mâu thuẫn giữa các nguồn (`conflicts.csv`):
 
 | Trường | Số mâu thuẫn |
 |---|---|
-| website | 137 |
+| website | 136 |
 | email | 37 |
 | founding_year | 32 |
 | province | 5 |
 | birth_date | 5 |
 | admission_codes | 3 |
+| ownership | 2 |
 
-Thực thể bị loại khỏi phạm vi (`excluded.csv`): **68**
+Thực thể bị loại khỏi phạm vi (`excluded.csv`): **71**
 
 | Lý do | Số |
 |---|---|
@@ -116,6 +119,9 @@ Thực thể bị loại khỏi phạm vi (`excluded.csv`): **68**
 | chỉ có trong Wikidata, không có nhãn tiếng Việt và bài viwiki | 12 |
 | không phải cơ sở GDĐH (trường phổ thông / bài không phải tổ chức) | 8 |
 | trùng với … | 4 |
+| trang hệ thống Wikimedia (định hướng / thể loại / bản mẫu / danh sách), không phải tổ chức | 1 |
+| trùng với … (cùng tên, cùng đang hoạt động) | 1 |
+| trùng với … (đổi tên/chuyển đổi theo Quyết định của Thủ tướng Chính phủ (công bố 04/08/202 | 1 |
 
 Giá trị chưa phân giải được, cần rà soát tay (`unresolved.csv`): **7**
 
@@ -125,11 +131,11 @@ Giá trị chưa phân giải được, cần rà soát tay (`unresolved.csv`): 
 |---|---|---|
 | JSON Schema (`schemas/silver.schema.json`) | silver | ✅ đạt — 0 vi phạm |
 | Nhất quán logic OWL 2 RL (disjoint, functional, AllDifferent) | gold | ✅ nhất quán |
-| SHACL (`shapes/vnedu-shapes.ttl`) | gold | ✅ conforms — 0 vi phạm, 34 cảnh báo, 1 thông tin |
+| SHACL (`shapes/vnedu-shapes.ttl`) | gold | ✅ conforms — 0 vi phạm, 33 cảnh báo, 1 thông tin |
 
 | Mức | Thông điệp SHACL | Số |
 |---|---|---|
-| Warning | Thiếu năm thành lập. | 22 |
+| Warning | Thiếu năm thành lập. | 21 |
 | Warning | Thiếu tỉnh/thành nơi đặt trụ sở. | 12 |
 | Info | Trường thành viên đặt ở tỉnh khác với đại học chủ quản (https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/an-giang ≠ https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/province/thanh-pho-ho-chi-minh). | 1 |
 
@@ -138,8 +144,8 @@ Giá trị chưa phân giải được, cần rà soát tay (`unresolved.csv`): 
 | Đích | Thuộc tính | Số liên kết |
 |---|---|---|
 | wikidata | `owl:sameAs` | 1850 |
-| wikipedia | `foaf:isPrimaryTopicOf` | 1188 |
-| dbpedia | `owl:sameAs` | 201 |
+| wikipedia | `foaf:isPrimaryTopicOf` | 1186 |
+| dbpedia | `owl:sameAs` | 202 |
 | ror | `owl:sameAs` | 195 |
 | geonames | `owl:sameAs` | 63 |
 | wikidata | `skos:closeMatch` | 35 |
@@ -154,5 +160,5 @@ Giá trị chưa phân giải được, cần rà soát tay (`unresolved.csv`): 
 | ★ | Công khai, quyền tái sử dụng minh bạch | CC BY-SA 4.0 chỉ áp dụng cho phần dự án có quyền cấp phép; `dct:rights`, `LICENSE-DATA.md` và `*.meta.json` giữ điều kiện riêng của từng nguồn (nguồn Bộ GD&ĐT chưa công bố giấy phép dữ liệu mở dạng máy đọc được) |
 | ★★ | Có cấu trúc, máy đọc được | JSON (bronze/silver), RDF (gold) |
 | ★★★ | Định dạng mở | JSON, CSV, Turtle |
-| ★★★★ | Chuẩn W3C, URI dereference được | RDF/OWL 2 RL/SHACL/SPARQL 1.1/PROV-O; 87,183 triple (trong đó 23,177 suy luận); HTTP URI + content negotiation (`app/server.py`) |
-| ★★★★★ | Liên kết tới dataset khác | 3,558 liên kết tới Wikidata, DBpedia, ROR, GeoNames, Wikipedia; `void:Linkset` |
+| ★★★★ | Chuẩn W3C, URI dereference được | RDF/OWL 2 RL/SHACL/SPARQL 1.1/PROV-O; 86,129 triple (trong đó 22,226 suy luận); HTTP URI + content negotiation (`app/server.py`) |
+| ★★★★★ | Liên kết tới dataset khác | 3,557 liên kết tới Wikidata, DBpedia, ROR, GeoNames, Wikipedia; `void:Linkset` |

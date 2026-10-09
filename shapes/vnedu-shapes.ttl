@@ -33,7 +33,7 @@ shapes:Institution a sh:NodeShape ;
         sh:path vnedu:locatedIn ; sh:minCount 1 ; sh:severity sh:Warning ;
         sh:message "Thiếu tỉnh/thành nơi đặt trụ sở."@vi ] ;
     sh:property [
-        sh:path vnedu:ownership ; sh:maxCount 1 ; sh:in ( vnedu:PublicOwnership vnedu:PrivateOwnership ) ;
+        sh:path vnedu:ownership ; sh:maxCount 1 ; sh:in ( vnedu:PublicOwnership vnedu:PrivateOwnership vnedu:ReligiousOrganizationOwnership ) ;
         sh:message "Loại hình sở hữu phải là công lập hoặc tư thục (một giá trị)."@vi ] ;
     sh:property [
         sh:path vnedu:website ; sh:nodeKind sh:IRI ; sh:pattern "^https?://" ;

@@ -1,8 +1,8 @@
 # Sơ đồ ontology VN-Edu
 
-*Sinh tự động từ `ontology/vnedu.ttl` bởi `scripts/gen_docs.py`* — 39 lớp, 38 thuộc tính quan hệ, 27 thuộc tính dữ liệu, 862 triple.
+*Sinh tự động từ `ontology/vnedu.ttl` bởi `scripts/gen_docs.py`* — 39 lớp, 38 thuộc tính quan hệ, 28 thuộc tính dữ liệu, 872 triple.
 
-Release 2.2 passes the OWL API `OWL2RLProfile` gate with zero violations; see `data/reports/owl2rl-profile.txt`.
+Release 2.3 passes the OWL API `OWL2RLProfile` gate with zero violations; see `data/reports/owl2rl-profile.txt`.
 
 Mũi tên rỗng = kế thừa (`rdfs:subClassOf`); mũi tên có nhãn = thuộc tính quan hệ (domain → range).
 
@@ -145,6 +145,7 @@ classDiagram
 | Hàm (tối đa 1 giá trị) | **birthDate** |
 | Hàm (tối đa 1 giá trị) | **branchOf** |
 | Hàm (tối đa 1 giá trị) | **dissolutionYear** |
+| Hàm (tối đa 1 giá trị) | **foreignInvested** |
 | Hàm (tối đa 1 giá trị) | **foundingYear** |
 | Hàm (tối đa 1 giá trị) | **mergedInto** |
 | Hàm (tối đa 1 giá trị) | **ownership** |

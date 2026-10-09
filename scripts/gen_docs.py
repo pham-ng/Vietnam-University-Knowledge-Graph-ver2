@@ -157,7 +157,7 @@ def main() -> None:
     text = ["# Sơ đồ ontology VN-Edu", "",
             f"*Sinh tự động từ `ontology/vnedu.ttl` bởi `scripts/gen_docs.py`* — {n_cls} lớp, {n_op} thuộc tính quan hệ, "
             f"{n_dp} thuộc tính dữ liệu, {len(g)} triple.", "",
-            "Release 2.2 passes the OWL API `OWL2RLProfile` gate with zero violations; see `data/reports/owl2rl-profile.txt`.", "",
+            "Release 2.3 passes the OWL API `OWL2RLProfile` gate with zero violations; see `data/reports/owl2rl-profile.txt`.", "",
             "Mũi tên rỗng = kế thừa (`rdfs:subClassOf`); mũi tên có nhãn = thuộc tính quan hệ (domain → range).", "",
             "![Protégé OntoGraf screenshot of the committed ontology](report/figures/ontology-protege-screenshot.png)", "",
             "GraphDB Workbench 11.1.0 was also connected to the local `vnedu-ontology-d` repository after loading the committed Turtle. The following are direct repository-backed screenshots; the hierarchy view reports 57 classes and the visual graph focuses on `vnedu:University`.", "",

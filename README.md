@@ -10,7 +10,7 @@ release gate độ chính xác và các phép đo còn bắt buộc trước khi
 Kết quả kiểm định cấu trúc không phải chứng nhận độ chính xác thực tế. Đánh giá liên kết hiện đo mức khớp với tập tham chiếu do dự án tạo;
 không có bằng chứng độc lập cho độ chính xác 100%. Báo cáo tiếng Việt cũ và các so sánh lịch sử được giữ làm tài liệu lưu trữ.
 
-**VN-Edu LOD** là một đồ thị tri thức (knowledge graph) về **300 cơ sở giáo dục Việt Nam**, trong đó 271 được hệ thống phân loại là cơ sở GDĐH,
+**VN-Edu LOD** là một đồ thị tri thức (knowledge graph) về **297 cơ sở giáo dục Việt Nam**, trong đó 268 được hệ thống phân loại là cơ sở GDĐH (258 đang hoạt động, 10 đã giải thể/sáp nhập),
 hướng tới các thực hành **Linked Open Data 5 sao**. Dữ liệu được thu thập từ Wikidata và Wikipedia tiếng Việt, đối chiếu chéo, chuyển sang RDF
 theo một ontology OWL, suy luận tự động, kiểm định chất lượng, rồi liên kết tới Wikidata, DBpedia, ROR, GeoNames.
 
@@ -51,12 +51,12 @@ theo một ontology OWL, suy luận tự động, kiểm định chất lượng
 
 | | |
 |---|---|
-| 🏫 **Cơ sở giáo dục** | **300** — trong đó **271 cơ sở giáo dục đại học** (trường đại học, học viện, đại học, trường sĩ quan) |
+| 🏫 **Cơ sở giáo dục** | **297** — trong đó **268 cơ sở giáo dục đại học** (258 đang hoạt động + 10 đã giải thể/sáp nhập; trường đại học, học viện, đại học, trường sĩ quan) |
 | 📍 **Địa giới hành chính** | 34 tỉnh/thành mới (từ 1/7/2025) + 29 tỉnh cũ đã sáp nhập + 3 miền |
-| 👤 **Con người** | 1.702 hồ sơ người — 1.481 hồ sơ có quan hệ giáo dục, 221 hồ sơ lãnh đạo; hồ sơ trùng tên chưa có định danh được tách theo trường |
+| 👤 **Con người** | 1.703 hồ sơ người — 1.482 hồ sơ có quan hệ giáo dục, 221 hồ sơ lãnh đạo; hồ sơ trùng tên chưa có định danh được tách theo trường |
 | 🏛️ **Cơ quan chủ quản** | 50 — các Bộ, UBND tỉnh, quân chủng/binh chủng, tập đoàn giáo dục |
-| 🔗 **Triple RDF** | **48.492** triple phân biệt trong hợp của dữ liệu (22.931), liên kết (3.674), suy luận giữ lại (21.018), ontology và metadata; các tập có thể giao nhau |
-| 🌍 **Liên kết ra ngoài** | 1.880 Wikidata · 1.188 Wikipedia · 260 DBpedia · 195 ROR · 63 GeoNames |
+| 🔗 **Triple RDF** | **86.129** triple trong bản phục vụ truy vấn. Trong 59.374 triple dữ liệu, **35.538 (60%) là siêu dữ liệu nguồn gốc** của 4.165 bản ghi `SourceObservation`; phần dữ kiện còn lại ≈ 23.800 triple. Cộng thêm 3.557 triple liên kết, 22.226 triple suy luận giữ lại, ontology và VoID |
+| 🌍 **Liên kết ra ngoài** | 1.885 Wikidata · 1.186 Wikipedia · 228 DBpedia · 195 ROR · 63 GeoNames |
 
 Với mỗi trường có: tên (vi/en/viết tắt/tên khác/tên cũ), mã tuyển sinh, loại hình, công lập hay tư thục, năm và ngày
 thành lập, cơ quan chủ quản, trường thành viên, lãnh đạo, đối tác, địa chỉ, tỉnh (cả trước và sau sáp nhập 2025),
@@ -92,7 +92,9 @@ Gói Free của Render tự ngủ sau ~15 phút không có truy cập; lần g�
 
 **Chạy trên máy (clone về là chạy)** — cần Python 3.12 (đã kiểm thử; 3.10+ chạy được). Fuseki 6.2.0 dùng Java 21; Java 8 chỉ dùng cho thí nghiệm Silk 3.6.0 theo recipe đã ghim.
 Repo đã có sẵn toàn bộ dữ liệu (bronze → gold) và **bộ đệm HTTP nén** `data/bronze/http_cache.zip`, nên không cần
-Internet cho các bước dữ liệu sau khi cài thư viện. Chế độ mặc định dừng khi thiếu cache; timestamp và cách tuần tự hoá RDF có thể khác.
+Internet cho các bước dữ liệu sau khi cài thư viện (kể cả danh mục tuyển sinh của Bộ GD&ĐT và ROR). Chế độ mặc định dừng khi thiếu cache.
+Chạy lại cho **dữ liệu bronze/silver/gold giống hệt từng byte** (đã kiểm bằng hai lần build liên tiếp, kể cả 4.165 URI observation);
+chỉ các báo cáo `data/manifest.json`, `data/reports/*` mang dấu thời gian của lần chạy.
 
 ```bash
 git clone https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2.git
@@ -183,7 +185,7 @@ liệu sai sẽ bị chặn lại thay vì lọt vào sản phẩm cuối.
 flowchart LR
     SRC["🌐 <b>Nguồn mở</b><br/>Wikidata · Wikipedia<br/>DBpedia · OpenStreetMap<br/>văn bản pháp lý"]
     BR["🟫 <b>Bronze</b><br/>JSON thô<br/>+ nguồn, thời điểm,<br/>giấy phép"]
-    SI["⬜ <b>Silver</b><br/>300 cơ sở · 63 tỉnh<br/>50 cơ quan<br/>1.702 hồ sơ người"]
+    SI["⬜ <b>Silver</b><br/>297 cơ sở · 63 tỉnh<br/>50 cơ quan<br/>1.703 hồ sơ người"]
     GO["🟨 <b>Gold</b><br/>RDF theo ontology<br/>+ owl:sameAs<br/>+ suy luận OWL 2 RL"]
     OUT["🚀 <b>Sử dụng</b><br/>Trang web (GitHub Pages)<br/>Fuseki SPARQL<br/>Web app · Terminal"]
     SRC -->|"① thu thập"| BR
@@ -285,7 +287,7 @@ person:tan-yap-peng  a vnedu:InstitutionLeader ;  vnedu:leads university:truong-
 
 ## 5. Cây ontology
 
-Ontology [`ontology/vnedu.ttl`](ontology/vnedu.ttl) trong bản audited hiện tại gồm **39 lớp, 38 thuộc tính quan hệ, 27 thuộc tính dữ liệu và 862 triple ontology**, được
+Ontology [`ontology/vnedu.ttl`](ontology/vnedu.ttl) trong bản audited hiện tại gồm **39 lớp, 38 thuộc tính quan hệ, 28 thuộc tính dữ liệu và 872 triple ontology** (phiên bản 2.3), được
 materialize bằng bộ luật `owlrl` theo mục tiêu OWL 2 RL; bộ kiểm tra OWL API `OWL2RLProfile`
 đã chạy trên release 2.2 và trả **zero violations**. Chỉ các lớp/thuộc tính có ánh xạ phù hợp mới được nối thận trọng
 sang schema.org / FOAF / DBpedia, không phải mọi lớp đều tương đương với vocabulary bên ngoài.
@@ -358,7 +360,7 @@ Sơ đồ đầy đủ (sinh tự động từ tệp TTL, kèm bảng tiên đ�
 
 ## 6. Suy luận: máy tự biết thêm điều gì?
 
-Bộ máy `owlrl` giữ lại **21.825 triple suy luận**. Chứng nhận profile hình thức của ontology được lưu tại `data/reports/owl2rl-profile.txt`; nó không phải chứng nhận độ đúng dữ kiện hay hiệu năng production. Vài ví dụ:
+Bộ máy `owlrl` giữ lại **22.226 triple suy luận**. Chứng nhận profile hình thức của ontology được lưu tại `data/reports/owl2rl-profile.txt`; nó không phải chứng nhận độ đúng dữ kiện hay hiệu năng production. Vài ví dụ:
 
 | Dữ liệu gốc chỉ ghi | Quy tắc trong ontology | Máy tự suy ra |
 |---|---|---|
@@ -380,15 +382,15 @@ SHACL đạt theo chính sách cho phép **34 cảnh báo và 1 thông tin**. Xe
 
 | Tệp | Nội dung | Số triple |
 |---|---|--:|
-| [`vnedu-data.ttl`](data/gold/vnedu-data.ttl) | dữ kiện gốc (sau làm sạch) | 59.428 |
-| [`vnedu-links.ttl`](data/gold/vnedu-links.ttl) | liên kết ra dataset khác | 3.558 |
-| [`vnedu-inferred.ttl`](data/gold/vnedu-inferred.ttl) | suy luận mới được giữ lại | 23.169 |
+| [`vnedu-data.ttl`](data/gold/vnedu-data.ttl) | dữ kiện gốc (sau làm sạch) + 35.538 triple siêu dữ liệu nguồn gốc | 59.374 |
+| [`vnedu-links.ttl`](data/gold/vnedu-links.ttl) | liên kết ra dataset khác | 3.557 |
+| [`vnedu-inferred.ttl`](data/gold/vnedu-inferred.ttl) | suy luận mới được giữ lại | 22.226 |
 | [`void.ttl`](data/gold/void.ttl) | mô tả dataset (VoID + DCAT) | 104 |
-| [`ontology/vnedu.ttl`](ontology/vnedu.ttl) | ontology đã hiệu chỉnh | 862 |
-| **[`vnedu-all.ttl`](data/gold/vnedu-all.ttl)** | **hợp các tập, dùng để truy vấn** | **87.117** |
+| [`ontology/vnedu.ttl`](ontology/vnedu.ttl) | ontology đã hiệu chỉnh | 872 |
+| **[`vnedu-all.ttl`](data/gold/vnedu-all.ttl)** | **hợp các tập, dùng để truy vấn** | **86.129** |
 
-- **6.422 URI tài nguyên cục bộ** xuất hiện ở vị trí chủ thể; kiểm tra bản dựng cục bộ không đồng nghĩa với kiểm chứng uptime của website.
-- Liên kết gồm **2.309 `owl:sameAs`**, **61 `skos:closeMatch`**, **1.188 liên kết trang Wikipedia**; các loại này có ngữ nghĩa khác nhau.
+- **6.413 URI tài nguyên cục bộ** xuất hiện ở vị trí chủ thể; kiểm tra bản dựng cục bộ không đồng nghĩa với kiểm chứng uptime của website.
+- Liên kết gồm **2.310 `owl:sameAs`**, **61 `skos:closeMatch`**, **1.186 liên kết trang Wikipedia**; các loại này có ngữ nghĩa khác nhau.
 - Các kiểm tra datatype, SHACL và suy luận có phạm vi xác định, chưa thay thế kiểm chứng dữ kiện bằng nguồn độc lập.
 
 ### 7.2. Trường học thu thập được
@@ -407,21 +409,21 @@ SHACL đạt theo chính sách cho phép **34 cảnh báo và 1 thông tin**. Xe
 
 **Tỉnh/thành nhiều trường nhất:** Hà Nội 103 · TP. Hồ Chí Minh 58 · Huế 13 · Đà Nẵng 13 · Thái Nguyên 8 · Cần Thơ 6
 
-**Do suy luận phân loại:** 21 trường quân đội · 7 trường công an · 44 trường thành viên · 11 cơ sở đã giải thể/sáp nhập
+**Do suy luận phân loại:** 21 trường quân đội · 7 trường công an · 46 trường thành viên · 10 cơ sở đã giải thể/sáp nhập
 
 **Thành lập theo thập kỷ:** đỉnh ở thập niên **1950–1960** (92 trường, giai đoạn xây dựng hệ thống ĐH miền Bắc)
 và **2000** (57 trường, giai đoạn mở rộng và ra đời nhiều trường tư thục).
 
-### 7.3. Độ đầy đủ thông tin (300 cơ sở)
+### 7.3. Độ đầy đủ thông tin (297 cơ sở)
 
 | Thông tin | Có | | Thông tin | Có |
 |---|--:|---|---|--:|
-| Năm thành lập | 278 | | Giới thiệu chung | 271 |
-| Tỉnh/thành | 288 | | Lịch sử | 223 |
-| Loại hình sở hữu | 256 | | Biểu trưng (logo) | 149 |
-| Website | 260 | | Ảnh trường | 97 |
-| Lãnh đạo | 199 | | Điện thoại / email | 246 / 225 |
-| Toạ độ | 175 | | Mã tuyển sinh | 222 |
+| Năm thành lập | 276 | | Giới thiệu chung | 270 |
+| Tỉnh/thành | 285 | | Lịch sử | 223 |
+| Loại hình sở hữu | 255 | | Biểu trưng (logo) | 149 |
+| Website | 258 | | Ảnh trường | 97 |
+| Lãnh đạo | 199 | | Điện thoại / email | 244 / 223 |
+| Toạ độ | 175 | | Mã tuyển sinh | 220 |
 
 Báo cáo đầy đủ: [data/reports/quality_report.md](data/reports/quality_report.md).
 
@@ -452,7 +454,7 @@ curl https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/
 ```python
 from rdflib import Graph
 g = Graph().parse("https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl")
-print(len(g))  # 87117
+print(len(g))  # 86129
 ```
 
 Ví dụ SPARQL — số cơ sở GDĐH theo miền và loại hình (miền do máy suy ra):

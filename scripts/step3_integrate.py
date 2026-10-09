@@ -431,6 +431,16 @@ LEAD_GOV = re.compile(r"trực thuộc (?:sự quản lý của )?((?:Bộ|Binh 
                       r"Ban|Đoàn|Học viện|Đại học|Viện Hàn lâm|Ngân hàng Nhà nước|Tổng Liên đoàn)[^,.;()]{2,60})")
 
 
+# Item Wikidata là trang hệ thống Wikimedia, không phải tổ chức: định hướng, thể loại, bản mẫu, danh sách.
+# (Đánh giá độc lập 10/2026: trang "Đại học Cần Thơ (định hướng)" từng bị dựng thành một cơ sở giả có owl:sameAs.)
+NON_ARTICLE_TYPES = {"Q4167410", "Q4167836", "Q11266439", "Q13406463", "Q22808320"}
+# Infobox ghi "phân hiệu đại học ngoại quốc", "100% vốn nước ngoài"...: theo Luật 34/2018 (sửa Điều 7 Luật GDĐH),
+# cơ sở do nhà đầu tư nước ngoài đầu tư là cơ sở TƯ THỤC; tính chất công/tư của trường mẹ ở nước ngoài không áp dụng.
+FOREIGN = re.compile(r"ngoại quốc|nước ngoài|vốn đầu tư nước ngoài|100\s*% vốn|foreign", re.I)
+# Tổ chức tôn giáo không phải cơ quan nhà nước: cơ sở đào tạo của họ không thể suy ra là "công lập".
+RELIGIOUS = re.compile(r"Giáo hội|Phật giáo|Công giáo|Tin Lành|Hồi giáo|Cao Đài|Hòa Hảo|Hoà Hảo", re.I)
+
+
 def ownership_from_lead(text: str):
     """Chỉ xét 2 câu đầu; regex chặt để không bắt nhầm 'đầu tư', 'ngoài công lập' …"""
     head = " ".join(sentences(text)[:2])
@@ -605,6 +615,10 @@ def build_institutions(provs):
         # --- loại hình sở hữu
         own = []
         for fld in ("hệ", "loại hình", "type", "loại"):
+            if FOREIGN.search(box.get(fld, "")):
+                own.append(("viwiki", "private"))
+                inst["foreign_invested"] = True
+                break
             o = ownership_from_text(box.get(fld, ""))
             if o:
                 own.append(("viwiki", o))
@@ -616,6 +630,9 @@ def build_institutions(provs):
             own.append(("wikidata", "private"))
         if own:
             inst["ownership"] = own[0][1]          # viwiki (thông tin chi tiết hơn) ưu tiên
+            lead_own = None if inst.get("foreign_invested") else ownership_from_lead(lead)
+            if lead_own and lead_own != inst["ownership"]:
+                own.append(("viwiki – đoạn mở đầu", lead_own))   # infobox và lời văn cùng bài mâu thuẫn
             if len({v for _, v in own}) > 1:
                 conflict(name, "ownership", inst["ownership"], own)
         else:
@@ -899,6 +916,10 @@ def build_institutions(provs):
         if EXCLUDE_NAME.search(i["name_vi"]) or "Q9826" in i["wd_types"]:
             excluded.append({"key": k, "name": i["name_vi"], "reason": "không phải cơ sở GDĐH (trường phổ thông / bài không phải tổ chức)"})
             del insts[k]
+        elif set(i["wd_types"]) & NON_ARTICLE_TYPES or "(định hướng)" in i["viwiki"]:
+            excluded.append({"key": k, "name": i["name_vi"],
+                             "reason": "trang hệ thống Wikimedia (định hướng / thể loại / bản mẫu / danh sách), không phải tổ chức"})
+            del insts[k]
         elif i["english_only"]:
             twin = en_index.get(vn_key(i["name_vi"]))
             if twin and twin != k:
@@ -912,6 +933,31 @@ def build_institutions(provs):
                 excluded.append({"key": k, "name": i["name_vi"], "reason": "chỉ có trong Wikidata, không có nhãn tiếng Việt "
                                  "và bài viwiki — không kiểm chứng chéo được (có thể là bản trùng)"})
                 del insts[k]
+    # Bản trùng: cùng tên chuẩn và cùng đang hoạt động (Wikidata có 2 item cho một trường, vd. ĐH Y tế Công cộng
+    # Q10829176 / Q5649327 cùng mã YTC) -> một URI, giữ owl:sameAs tới mọi item.
+    active: dict[str, list[str]] = {}
+    for k, i in insts.items():
+        if not i.get("dissolution_year"):
+            active.setdefault(vn_key(i["name_vi"]), []).append(k)
+    for keys in active.values():
+        if len(keys) > 1:
+            keeper = max(keys, key=lambda k: (bool(insts[k]["viwiki"]), sum(bool(v) for v in insts[k].values()), k))
+            merge_institutions(insts, keeper, [k for k in keys if k != keeper], "cùng tên, cùng đang hoạt động")
+    # Đổi tên/chuyển đổi có văn bản: cơ sở mang tên cũ là CÙNG thực thể với cơ sở mang tên mới
+    for row in rename_rows:
+        old = [k for k, i in insts.items() if vn_key(i["name_vi"]) == vn_key(row["former_name"])]
+        new = [k for k, i in insts.items() if vn_key(i["name_vi"]) == vn_key(row["current_name"])]
+        if old and new:
+            merge_institutions(insts, new[0], old, f"đổi tên/chuyển đổi theo {row['decision']}")
+            insts[new[0]]["former_names"] = sorted(set(insts[new[0]]["former_names"]) | {row["former_name"]})
+    # Mã tuyển sinh chỉ thuộc cơ sở đang hoạt động (trước đây cơ sở đã giải thể vẫn mang mã của trường kế tục)
+    for i in insts.values():
+        if i.get("dissolution_year") and i.get("admission_codes"):
+            note_filled(i["name_vi"], "admission_codes", "(bỏ) " + ",".join(i["admission_codes"]),
+                        "cơ sở đã giải thể không có mã tuyển sinh hiện hành")
+            i["admission_codes"] = []
+            i["field_sources"].pop("admission_codes", None)
+
     # Trùng tên: thêm giai đoạn hoạt động vào tên của cơ sở đã giải thể ('Đại học Cần Thơ (1966–1975)')
     by_name: dict[str, list[str]] = {}
     for k, i in insts.items():
@@ -926,12 +972,59 @@ def build_institutions(provs):
     return insts, wdi, ents
 
 
+def merge_institutions(insts: dict, keeper: str, others: list[str], reason: str) -> None:
+    """Gộp các bản ghi `others` vào `keeper`: điền trường còn trống, hợp các danh sách, giữ QID để phát owl:sameAs."""
+    k_rec = insts[keeper]
+    for k in others:
+        o = insts.pop(k)
+        for field, value in o.items():
+            if field in ("key", "qid", "name_vi", "field_sources") or not value:
+                continue
+            if isinstance(value, list) and isinstance(k_rec.get(field), list):
+                seen = {json.dumps(x, ensure_ascii=False, sort_keys=True) for x in k_rec[field]}
+                k_rec[field] = k_rec[field] + [x for x in value
+                                               if json.dumps(x, ensure_ascii=False, sort_keys=True) not in seen]
+            elif not k_rec.get(field):
+                k_rec[field] = value
+        for field, refs in o["field_sources"].items():
+            k_rec["field_sources"].setdefault(field, []).extend(refs)
+        k_rec["same_qids"] = sorted({*k_rec.get("same_qids", []), o["qid"], *o.get("same_qids", [])}
+                                    - {"", k_rec["qid"]})
+        excluded.append({"key": k, "name": o["name_vi"], "reason": f"trùng với {keeper} ({reason}) — gộp, giữ owl:sameAs"})
+    # Sau khi gộp, item cũ là CHÍNH cơ sở này (owl:sameAs) -> không thể là tiền thân / kế tục của nó
+    own = {k_rec["qid"], *k_rec.get("same_qids", [])} - {""}
+    for field in ("predecessors", "successors"):
+        k_rec[field] = [x for x in k_rec.get(field, []) if x.get("qid") not in own]
+
+
+def apply_ownership_overrides(insts: dict, by_name: dict) -> None:
+    """Hiệu chỉnh loại hình sở hữu có trích nguồn chính thức, khi các nguồn mở sai hoặc mâu thuẫn."""
+    meta_path = config.CURATED_DIR / "ownership_overrides.meta.json"
+    meta = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {}
+    for row in read_csv(config.CURATED_DIR / "ownership_overrides.csv"):
+        key = by_name.get(vn_key(row["institution_name"]))
+        if not key:
+            unresolved.append({"entity": row["institution_name"], "field": "ownership", "value": row["ownership"],
+                               "reason": "hiệu chỉnh không khớp cơ sở nào"})
+            continue
+        inst = insts[key]
+        if inst.get("ownership") and inst["ownership"] != row["ownership"]:
+            conflict(inst["name_vi"], "ownership", row["ownership"],
+                     [("nguồn mở", inst["ownership"]), ("hiệu chỉnh có trích nguồn", row["ownership"])])
+        inst["ownership"], inst["ownership_source"] = row["ownership"], row["source"]
+        inst["foreign_invested"] = row.get("foreign_invested", "").strip().lower() == "true"
+        inst["field_sources"]["ownership"] = [{"source": row["source"], "retrieved_at": meta.get("retrieved_at", ""),
+                                               "record": row.get("note", ""), "values": [row["ownership"]]}]
+        note_filled(inst["name_vi"], "ownership", row["ownership"], row["source"])
+
+
 def resolve_relations(insts, ents, wdi):
     by_name = {}
     for k, i in insts.items():
         for n in [i["name_vi"], i["viwiki"]] + i["former_names"]:
             if n:
                 by_name.setdefault(vn_key(n), k)
+    alias = {q: k for k, i in insts.items() for q in i.get("same_qids", [])}   # QID của bản trùng đã gộp
     bodies: dict[str, dict] = {}
 
     def body(name, qid):
@@ -959,6 +1052,7 @@ def resolve_relations(insts, ents, wdi):
     for k, i in insts.items():
         member, branch, governed, owned = set(), set(), set(), set()
         for src, q, nm in i.pop("_targets"):
+            q = alias.get(q, q)
             tgt = q if q in insts else by_name.get(vn_key(nm)) if nm else None
             if tgt and tgt != k:
                 (branch if i["kind"] == "Branch" else member).add(tgt)
@@ -980,8 +1074,12 @@ def resolve_relations(insts, ents, wdi):
         i["state_managed_by"] = sorted(state)
         i["governed_by"], i["owned_by"] = sorted(governed), sorted(owned)
         i["direct_governed_by"] = []
-        # Cơ sở công lập do cơ quan nhà nước thành lập: suy ra "công lập" khi nguồn không nêu
-        if "ownership" not in i and governed:
+        # Cơ sở công lập do cơ quan nhà nước thành lập: suy ra "công lập" khi nguồn không nêu.
+        # Tổ chức tôn giáo không phải cơ quan nhà nước -> cơ sở đào tạo tôn giáo, không phải công lập.
+        religious = {b for b in governed if RELIGIOUS.search(bodies[b]["name_vi"])}
+        if "ownership" not in i and religious:
+            i["ownership"], i["ownership_source"] = "religious", "rule: thuộc tổ chức tôn giáo"
+        elif "ownership" not in i and governed - religious:
             i["ownership"], i["ownership_source"] = "public", "rule: có cơ quan chủ quản nhà nước"
 
     # Legally direct governance is stronger than a source-reported relation and
@@ -1009,6 +1107,8 @@ def resolve_relations(insts, ents, wdi):
             "valid_from": row["effective_from"], "record": row["decision"], "values": [body_key],
         })
         note_filled(inst["name_vi"], "direct_governed_by", row["governing_body"], row["decision"])
+
+    apply_ownership_overrides(insts, by_name)
 
     # Membership is a structural fact, not free-text inference.  When upstream
     # records omit it, accept only an explicit curated assertion backed by an
@@ -1060,8 +1160,10 @@ def build_people(insts, ents, provs):
         for leader in inst["leaders"]:
             if not leader["qid"]:
                 name_orgs[vn_key(leader["name"])].add(key)
+    # QID của bản trùng đã gộp (vd. ĐH Y tế Công cộng Q5649327) trỏ về cơ sở được giữ lại
+    alias = {q: k for k, i in insts.items() for q in i.get("same_qids", [])}
     for a in load("wd_alumni.json"):
-        schools = [s for s in a["schools"] if s in insts]
+        schools = list(dict.fromkeys(alias.get(s, s) for s in a["schools"] if alias.get(s, s) in insts))
         if not schools:
             continue
         people[a["qid"]] = {"key": a["qid"], "qid": a["qid"], "name_vi": a["vi"], "name_en": a["en"],

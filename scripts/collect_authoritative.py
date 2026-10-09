@@ -23,16 +23,13 @@ import html
 import json
 import re
 import sys
-import threading
-import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-
-import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config  # noqa: E402
+import httpcache  # noqa: E402 — bộ đệm dùng chung: chạy lại không cần Internet, kết quả tái lập
 from common import record_manifest, vn_key  # noqa: E402
 
 MOET_LIST_URL = "https://tuyensinh.moet.gov.vn/ts/ThongTinTruong/GetData"
@@ -40,34 +37,10 @@ MOET_DETAIL_URL = "https://tuyensinh.moet.gov.vn/ts/ThongTinTruong/ViewDetail"
 MOET_PUBLIC_URL = "https://tuyensinh.moet.gov.vn/ts/"
 ROR_API = "https://api.ror.org/v2/organizations/https%3A%2F%2Fror.org%2F{}"
 USER_AGENT = "Mozilla/5.0 (compatible; VNEduLOD/2.2; +https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2)"
-
-_local = threading.local()
-
-
-def _session() -> requests.Session:
-    session = getattr(_local, "session", None)
-    if session is None:
-        session = requests.Session()
-        session.headers.update({"User-Agent": USER_AGENT})
-        _local.session = session
-    return session
-
-
-def _request(method: str, url: str, *, attempts: int = 5, **kwargs) -> requests.Response:
-    delay = 1.5
-    for attempt in range(1, attempts + 1):
-        try:
-            response = _session().request(method, url, timeout=90, **kwargs)
-            if response.status_code == 429 or response.status_code >= 500:
-                raise requests.HTTPError(f"HTTP {response.status_code}", response=response)
-            response.raise_for_status()
-            return response
-        except requests.RequestException:
-            if attempt == attempts:
-                raise
-            time.sleep(delay)
-            delay = min(delay * 2, 20)
-    raise AssertionError("unreachable")
+# Cổng tuyển sinh từ chối User-Agent dạng bot (403) -> dùng UA kiểu trình duyệt cho các request tới Bộ.
+MOET_HEADERS = {"User-Agent": USER_AGENT, "Referer": MOET_PUBLIC_URL}
+# Lỗi khi tải (hết lượt thử lại -> SystemExit, hoặc thiếu bộ đệm khi chạy offline) được ghi nhận, không nuốt im.
+FETCH_ERRORS = (Exception, SystemExit)
 
 
 def _clean_html(value: str) -> str:
@@ -82,8 +55,8 @@ def _detail_value(document: str, label: str) -> str:
 
 
 def _fetch_moet_detail(row: dict) -> tuple[str, dict]:
-    response = _request("POST", MOET_DETAIL_URL, data={"Id": row["Id"], "LOAI_HO_TRO": "1"})
-    document = response.text
+    document = httpcache.get_text(MOET_DETAIL_URL, {"Id": row["Id"], "LOAI_HO_TRO": "1"}, method="POST",
+                                  headers=MOET_HEADERS)
     website_match = re.search(r'<a\s+href="([^"]+)"[^>]*target="_blank"', document, flags=re.I)
     return row["Id"], {
         "email": _detail_value(document, "Email:"),
@@ -93,7 +66,7 @@ def _fetch_moet_detail(row: dict) -> tuple[str, dict]:
 
 
 def collect_moet(insts: dict, workers: int) -> tuple[list[dict], list[dict]]:
-    headers = {"X-Requested-With": "XMLHttpRequest", "Referer": MOET_PUBLIC_URL}
+    headers = {**MOET_HEADERS, "X-Requested-With": "XMLHttpRequest"}
     payload = {
         "indexPage": 1,
         "sortQuery": "",
@@ -103,7 +76,7 @@ def collect_moet(insts: dict, workers: int) -> tuple[list[dict], list[dict]]:
         "searchModel[Code]": "",
         "searchModel[Name]": "",
     }
-    data = _request("POST", MOET_LIST_URL, data=payload, headers=headers).json()
+    data = httpcache.get_json(MOET_LIST_URL, payload, method="POST", headers=headers)
     rows = data.get("ListItem", [])
     known = {vn_key(item["name_vi"]): key for key, item in insts.items()}
     matched = {row["Id"]: known[vn_key(row["TEN_DON_VI"])] for row in rows if vn_key(row["TEN_DON_VI"]) in known}
@@ -119,7 +92,7 @@ def collect_moet(insts: dict, workers: int) -> tuple[list[dict], list[dict]]:
             try:
                 key, detail = future.result()
                 details[key] = detail
-            except Exception as exc:  # recorded and rejected rather than silently producing blanks
+            except FETCH_ERRORS as exc:  # recorded and rejected rather than silently producing blanks
                 failures.append({"source": "moet", "code": row.get("MA"), "id": row.get("Id"), "error": str(exc)})
 
     output = []
@@ -135,8 +108,7 @@ def collect_moet(insts: dict, workers: int) -> tuple[list[dict], list[dict]]:
 
 
 def _fetch_ror(ror_id: str) -> tuple[str, dict]:
-    response = _request("GET", ROR_API.format(ror_id))
-    return ror_id, response.json()
+    return ror_id, httpcache.get_json(ROR_API.format(ror_id), {})
 
 
 def collect_ror(insts: dict, workers: int) -> tuple[dict, list[dict]]:
@@ -150,19 +122,46 @@ def collect_ror(insts: dict, workers: int) -> tuple[dict, list[dict]]:
             try:
                 key, record = future.result()
                 records[key] = record
-            except Exception as exc:
+            except FETCH_ERRORS as exc:
                 failures.append({"source": "ror", "ror": ror_id, "error": str(exc)})
     return dict(sorted(records.items())), failures
 
 
 def _write_snapshot(name: str, data, source: str, license_name: str) -> None:
     path = config.BRONZE_DIR / name
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
-    retrieved = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    text = json.dumps(data, ensure_ascii=False, indent=1, sort_keys=True)
+    retrieved = stable_retrieved_at(path, text)
+    path.write_text(text, encoding="utf-8")
     meta = {"source": source, "retrieved_at": retrieved, "records": len(data), "license": license_name}
     path.with_suffix(".meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
     record_manifest("bronze", path, len(data), "records", source=source, license=license_name,
                     retrieved_at=retrieved)
+
+
+# Trường do pipeline tự ghép (không phải dữ liệu nguồn): đổi khi quy tắc ghép đổi, không có nghĩa là đã tải lại.
+DERIVED_KEYS = {"matched_institution_key"}
+
+
+def _source_part(text: str):
+    def strip(x):
+        if isinstance(x, dict):
+            return {k: strip(v) for k, v in x.items() if k not in DERIVED_KEYS}
+        if isinstance(x, list):
+            return [strip(v) for v in x]
+        return x
+    return strip(json.loads(text))
+
+
+def stable_retrieved_at(path: Path, new_text: str) -> str:
+    """Thời điểm thu thập chỉ đổi khi DỮ LIỆU NGUỒN đổi: dữ liệu lấy lại từ bộ đệm giữ nguyên thời điểm gốc.
+
+    Trước đây mỗi lần build ghi now(), làm đổi mã băm snapshot và toàn bộ URI observation dù dữ liệu y hệt."""
+    meta = path.with_suffix(".meta.json")
+    if path.exists() and meta.exists() and _source_part(path.read_text(encoding="utf-8")) == _source_part(new_text):
+        previous = json.loads(meta.read_text(encoding="utf-8")).get("retrieved_at")
+        if previous:
+            return previous
+    return dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
 
 
 def load_collection_registry() -> dict:
@@ -186,7 +185,7 @@ def load_collection_registry() -> dict:
 def collect_all(workers: int = 6, skip_moet: bool = False, skip_ror: bool = False) -> dict:
     insts = load_collection_registry()
     failures: list[dict] = []
-    summary = {"retrieved_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")}
+    summary = {}
 
     if not skip_moet:
         print("[authoritative] Ministry admissions directory and public contacts ...", flush=True)
@@ -204,6 +203,9 @@ def collect_all(workers: int = 6, skip_moet: bool = False, skip_ror: bool = Fals
         _write_snapshot("ror_organizations.json", ror, "https://api.ror.org/v2/organizations", "CC0 1.0")
         summary["ror"] = {"records": len(ror), "failures": len(failed)}
 
+    metas = [config.BRONZE_DIR / n for n in ("moet_admissions.meta.json", "ror_organizations.meta.json")]
+    summary["retrieved_at"] = max((json.loads(m.read_text(encoding="utf-8"))["retrieved_at"]
+                                   for m in metas if m.exists()), default="")
     summary["failures"] = failures
     out = config.REPORTS_DIR / "authoritative-collection.json"
     out.write_text(json.dumps(summary, ensure_ascii=False, indent=1), encoding="utf-8")

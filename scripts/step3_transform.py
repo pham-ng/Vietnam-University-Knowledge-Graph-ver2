@@ -25,6 +25,11 @@ PROV = Namespace("http://www.w3.org/ns/prov#")
 WD = Namespace("http://www.wikidata.org/entity/")
 CLEAN = config.SILVER_DIR
 
+# Loại hình theo Luật GDĐH (sửa đổi 2018, Điều 7): công lập / tư thục (gồm cả nhà đầu tư nước ngoài);
+# cơ sở đào tạo của tổ chức tôn giáo nằm ngoài hai loại này (Luật Tín ngưỡng, tôn giáo 2016).
+OWNERSHIP = {"public": VNEDU.PublicOwnership, "private": VNEDU.PrivateOwnership,
+             "religious": VNEDU.ReligiousOrganizationOwnership}
+
 KIND_CLASS = {
     "University": VNEDU.University, "UniversitySchool": VNEDU.UniversitySchool, "Academy": VNEDU.Academy,
     "OfficerSchool": VNEDU.OfficerSchool, "NationalUniversity": VNEDU.NationalUniversity,
@@ -95,6 +100,15 @@ def main() -> None:
     m_person = Minter("person", registry.get("person"))
     m_reg = Minter("region", registry.get("region"))
     u_inst = {k: m_org.mint(i["name_vi"], i["name_en"], k, key=k) for k, i in sorted(insts.items())}
+    # URI cũ của bản ghi đã gộp (bản trùng Wikidata, trường đổi tên) vẫn tra được và trỏ sang URI hiện hành.
+    # Dùng dct:isReplacedBy, không dùng owl:sameAs: suy luận sameAs sẽ nhân bản mọi dữ kiện sang URI cũ.
+    merged_into = {q: k for k, i in insts.items() for q in i.get("same_qids", [])}
+    retired_inst = {URIRef(uri): u_inst[merged_into[old]] for old, uri in sorted(m_org.registry.items())
+                    if old not in insts and old in merged_into}
+    for old, new in retired_inst.items():
+        g.add((old, DCTERMS.isReplacedBy, new))
+        g.add((old, RDFS.comment, Literal("URI cũ của một bản ghi đã gộp; dùng URI ở dct:isReplacedBy.", lang="vi")))
+        g.add((old, RDFS.comment, Literal("Retired URI of a merged record; use the dct:isReplacedBy URI.", lang="en")))
     u_body = {k: ONTOLOGY_INDIVIDUALS.get(vn_key(b["name_vi"])) or m_body.mint(b["name_vi"], k, key=k) for k, b in sorted(bodies.items())}
     u_prov = {k: m_prov.mint(p["name_vi"], k, key=k) for k, p in sorted(provs.items(), key=lambda x: (x[1]["status"], x[0]))}
     u_person = {k: m_person.mint(p["name_vi"], p["name_en"], k, key=k) for k, p in sorted(people.items())}
@@ -152,7 +166,9 @@ def main() -> None:
         add(g, s, VNEDU.foundingYear, lit(str(i["founding_year"]) if i.get("founding_year") else None, XSD.integer))
         add(g, s, VNEDU.dissolutionYear, lit(str(i["dissolution_year"]) if i.get("dissolution_year") else None, XSD.integer))
         if i.get("ownership"):
-            g.add((s, VNEDU.ownership, VNEDU.PublicOwnership if i["ownership"] == "public" else VNEDU.PrivateOwnership))
+            g.add((s, VNEDU.ownership, OWNERSHIP[i["ownership"]]))
+        if i.get("foreign_invested"):
+            g.add((s, VNEDU.foreignInvested, Literal(True)))
         add(g, s, VNEDU.motto, lit(i["motto_vi"], lang="vi"))
         for text, lang in i["motto_other"]:
             add(g, s, VNEDU.motto, lit(text, lang=lang or "und"))
