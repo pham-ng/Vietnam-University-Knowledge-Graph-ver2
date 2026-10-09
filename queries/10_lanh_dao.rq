@@ -1,4 +1,4 @@
-# [Suy luận] Người đứng đầu các đại học quốc gia & vùng (rector/director ⊑ hasLeader, nghịch đảo leads)
+# [Suy luận] Người đứng đầu các đại học quốc gia & vùng (rector/director ⊑ hasHead, nghịch đảo headOf -> InstitutionHead)
 PREFIX vnedu: <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/ontology#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:   <http://www.w3.org/2002/07/owl#>
@@ -10,7 +10,7 @@ WHERE {
   VALUES ?c { vnedu:NationalUniversity vnedu:RegionalUniversity }
   ?u a ?c ; rdfs:label ?co_so ; ?r ?p .
   VALUES (?r ?vai_tro) { (vnedu:rector "Hiệu trưởng") (vnedu:director "Giám đốc") }
-  ?p a vnedu:InstitutionLeader ; rdfs:label ?nguoi .
+  ?p a vnedu:InstitutionHead ; rdfs:label ?nguoi .
   FILTER(LANG(?co_so) = "vi")
   OPTIONAL { ?p vnedu:honorific ?hoc_ham }
 }

@@ -17,7 +17,7 @@ from pathlib import Path
 import owlrl
 from pyshacl import validate
 from rdflib import BNode, Graph, Literal, URIRef
-from rdflib.namespace import OWL, RDF, RDFS, SH
+from rdflib.namespace import OWL, RDF, RDFS, SH, VOID, XSD
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -66,7 +66,9 @@ def instance_level(closure: Graph, base: Graph) -> Graph:
             continue
         if not str(s).startswith(config.RES_NS) and not str(s).startswith(config.ONTO_NS):
             continue
-        if str(s).startswith(config.ONTO_NS) and p != RDF.type:   # chỉ lấy kiểu của cá thể trong ontology
+        # Cá thể tham chiếu trong ontology (Bộ Quốc phòng, Bộ Công an): giữ mọi suy luận về chúng, vd. vnedu:governs
+        # (trước đây chỉ giữ rdf:type -> thiếu 28 cặp governs so với governedBy). Lớp/thuộc tính: chỉ giữ rdf:type.
+        if str(s).startswith(config.ONTO_NS) and p != RDF.type and (s, RDF.type, OWL.NamedIndividual) not in base:
             continue
         if p == RDF.type and (o in TRIVIAL_TYPES or (str(s).startswith(config.ONTO_NS) and o in TRIVIAL_TYPES)):
             continue
@@ -131,6 +133,8 @@ def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
     onto = load_ontology()
     data = Graph().parse(config.DATA_TTL)
+    if config.OSM_GEO_TTL.exists():          # toạ độ OSM (ODbL) — phân phối riêng nhưng cùng được kiểm định và phục vụ
+        data.parse(config.OSM_GEO_TTL)
     base = onto + data
     print(f"[1/4] Suy luận OWL 2 RL (owlrl) trên {len(base)} triple ...")
     t0 = time.time()
@@ -183,6 +187,15 @@ def main() -> None:
     everything += inferred
     everything.parse(config.LINKS_TTL)
     everything.parse(config.VOID_TTL)
+    # VoID: số triple của bản phục vụ truy vấn (vnedu-all.ttl) chỉ biết sau khi gộp -> ghi ở đây, khớp đúng tệp dump
+    void = Graph().parse(config.VOID_TTL)
+    bind_prefixes(void)
+    serving = URIRef(config.BASE + "dataset/serving")
+    count = (serving, VOID.triples, Literal(len(everything) + 1, datatype=XSD.integer))   # +1: chính triple này
+    void.add(count)
+    everything.add(count)
+    void.serialize(config.VOID_TTL, format="turtle", encoding="utf-8")
+    record_manifest("gold", config.VOID_TTL, len(void), "triples")
     everything.serialize(config.ALL_TTL, format="turtle", encoding="utf-8")
     record_manifest("gold", config.ALL_TTL, len(everything), "triples", consistent=not problems,
                     shacl_conforms=conforms, shacl_results=dict(sev))

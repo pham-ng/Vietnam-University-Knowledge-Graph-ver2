@@ -339,6 +339,10 @@ STATE = re.compile(r"Chính phủ|Ban Chấp hành Trung ương|Ban Bí thư|Tru
                    r"Ủy ban Dân tộc|Thanh tra Chính phủ|Đài Truyền hình|Đài Tiếng nói|Kiểm toán Nhà nước|"
                    r"Tòa án|Viện kiểm sát|Hội Chữ thập đỏ|Giáo hội|Thành ủy|Tỉnh ủy|Quân đội nhân dân|Bộ Tư lệnh|"
                    r"Bộ đội|Ban Cơ yếu|Ban Tuyên giáo|Ban Tổ chức|Công an nhân dân", re.I)
+# Tổ chức Đảng và chính trị - xã hội: KHÔNG phải cơ quan nhà nước (đánh giá 10/2026)
+PARTY_SOCIAL = re.compile(r"Ban Chấp hành Trung ương|Ban Bí thư|Trung ương Đảng|Thành ủy|Tỉnh ủy|Ban Tuyên giáo|"
+                          r"Ban Tổ chức|Tổng Liên đoàn|Trung ương Đoàn|Đoàn Thanh niên|Hội Liên hiệp|Mặt trận|"
+                          r"Liên minh Hợp tác xã|Hội Chữ thập đỏ|Hội Nông dân|Hội Cựu chiến binh", re.I)
 MILITARY_PARENT = re.compile(r"Quân chủng|Binh chủng|Bộ Tổng Tham mưu|Tổng cục (Chính trị|Hậu cần|Kỹ thuật|"
                              r"Công nghiệp quốc phòng|Tình báo)|Quân khu|Quân đội nhân dân|Bộ đội Biên phòng|Bộ Tư lệnh|Ban Cơ yếu", re.I)
 POLICE_PARENT = re.compile(r"Công an nhân dân|Công an|Cảnh sát|An ninh", re.I)
@@ -589,7 +593,11 @@ def build_institutions(provs):
                 cands.append(("dbpedia", y))
         lead = page.get("lead", "") if page else ""
         desc = f.get("description_vi", "") or ""
+        wd_years = {v for src_, v in cands if src_ == "wikidata"}
+        if len(wd_years) == 1:          # năm thành lập pháp nhân hiện tại theo Wikidata P571 (khi không mơ hồ)
+            inst["establishment_year"] = wd_years.pop()
         if cands:
+            # Chính sách thống nhất: năm truyền thống = năm sớm nhất mọi nguồn ghi nhận (có thể của tiền thân)
             inst["founding_year"] = min(v for _, v in cands)
             if len({v for _, v in cands}) > 1:
                 conflict(name, "founding_year", inst["founding_year"], cands)
@@ -1028,6 +1036,7 @@ def resolve_relations(insts, ents, wdi):
     bodies: dict[str, dict] = {}
 
     def body(name, qid):
+        name = re.sub(r"^(trực tiếp|trực thuộc)\s*", "", name.strip(), flags=re.I)   # rác khi tách infobox
         canon = CANON.get(vn_key(name), name)
         key = qid or "name:" + vn_key(canon)
         for k, b in bodies.items():   # gộp theo QID hoặc tên chuẩn
@@ -1041,8 +1050,12 @@ def resolve_relations(insts, ents, wdi):
             kind = "ProvincialPeoplesCommittee"
         elif COMPANY.search(canon):
             kind = "Company"
+        elif RELIGIOUS.search(canon):
+            kind = "ReligiousOrganization"
+        elif PARTY_SOCIAL.search(canon):
+            kind = "PoliticalSocialOrganization"
         elif STATE.search(canon) or (qid and set((ents.get(qid) or {}).get("types", [])) & {"Q327333", "Q192350", "Q2659904"}):
-            kind = "GoverningBody"
+            kind = "StateAgency"
         else:
             return None
         bodies[key] = {"key": key, "qid": qid, "name_vi": canon, "kind": kind,

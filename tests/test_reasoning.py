@@ -110,10 +110,12 @@ def test_detects_conflicting_ownership(onto):
     assert kinds & {"AllDifferent bị gộp (sameAs)", "disjointWith"}
 
 
-def test_historical_legal_types_are_not_globally_disjoint(onto):
-    """Một cơ sở không thể vừa là Học viện vừa là Trường đại học (AllDisjointClasses)."""
+def test_current_legal_types_are_disjoint(onto):
+    """Ontology 2.4: loại pháp lý phản ánh tên chính thức HIỆN HÀNH, nên một cơ sở không thể vừa là Học viện vừa là
+    Trường đại học (AllDisjointClasses). Lịch sử đổi loại (Trường ĐH PCCC -> Học viện) ghi bằng formerName/predecessor,
+    không bằng hai rdf:type đồng thời."""
     c = closure_of(onto, [(R.u, RDF.type, V.Academy), (R.u, RDF.type, V.UniversitySchool)])
-    assert consistency(c) == []
+    assert any(p[0] == "AllDisjointClasses" for p in consistency(c))
 
 
 def test_detects_person_used_as_organization(onto):

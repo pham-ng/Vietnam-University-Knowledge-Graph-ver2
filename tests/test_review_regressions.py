@@ -163,3 +163,93 @@ def test_authoritative_sources_are_served_from_the_bundled_cache(monkeypatch):
     assert not failures and len(moet) > 300
     ror, failures = ca.collect_ror(insts, workers=2)
     assert not failures and len(ror) > 100
+
+
+# ------------------------------------------------------------------ ontology 2.4: phân lớp theo pháp lý (đánh giá 10/2026)
+
+def test_every_prior_version_is_archived():
+    """owl:priorVersion phải tra được: mỗi phiên bản trước có bản lưu trữ (2.1 từng trỏ tới 2.0 bị 404)."""
+    versions = ROOT / "ontology" / "versions"
+    for archive in versions.glob("*.ttl"):
+        for prior in Graph().parse(archive).objects(None, OWL.priorVersion):
+            assert (versions / (str(prior).rsplit("/", 1)[-1] + ".ttl")).exists(), (archive.name, prior)
+
+
+def test_regions_are_not_administrative_units(closure):
+    regions = set(closure.subjects(RDF.type, URIRef(V + "Region")))
+    assert len(regions) == 3
+    assert not regions & set(closure.subjects(RDF.type, URIRef(V + "AdministrativeUnit")))
+
+
+def test_only_state_agencies_are_government_organizations(closure):
+    government = set(closure.subjects(RDF.type, URIRef("https://schema.org/GovernmentOrganization")))
+    assert government <= set(closure.subjects(RDF.type, URIRef(V + "StateAgency")))
+    for slug, cls in (("giao-hoi-phat-giao-viet-nam", "ReligiousOrganization"),
+                      ("thanh-uy-thanh-pho-ho-chi-minh", "PoliticalSocialOrganization")):
+        body = URIRef(R + "organization/" + slug)
+        assert (body, RDF.type, URIRef(V + cls)) in closure
+        assert body not in government
+
+
+def test_council_chair_is_leader_but_not_head(onto):
+    from owlrl import DeductiveClosure, OWLRL_Semantics
+    g = Graph() + onto
+    u, chair, rector = URIRef(R + "u"), URIRef(R + "chair"), URIRef(R + "rector")
+    for s, p, o in ((u, RDF.type, URIRef(V + "UniversitySchool")), (chair, RDF.type, URIRef(V + "Person")),
+                    (rector, RDF.type, URIRef(V + "Person")), (u, URIRef(V + "councilChair"), chair),
+                    (u, URIRef(V + "rector"), rector)):
+        g.add((s, p, o))
+    DeductiveClosure(OWLRL_Semantics, axiomatic_triples=False, datatype_axioms=False).expand(g)
+    assert (chair, RDF.type, URIRef(V + "InstitutionLeader")) in g
+    assert (chair, RDF.type, URIRef(V + "InstitutionHead")) not in g
+    assert (rector, RDF.type, URIRef(V + "InstitutionHead")) in g
+
+
+def test_legal_institution_types_are_pairwise_disjoint(onto):
+    members = set()
+    for node in onto.subjects(RDF.type, OWL.AllDisjointClasses):
+        lst = onto.value(node, OWL.members)
+        from rdflib.collection import Collection
+        members.add(frozenset(Collection(onto, lst)))
+    expected = frozenset(URIRef(V + c) for c in ("University", "UniversitySchool", "Academy", "OfficerSchool"))
+    assert expected in members
+
+
+def test_ministries_govern_their_institutions(closure):
+    governed_by = set(closure.subject_objects(URIRef(V + "governedBy")))
+    governs = {(o, s) for s, o in closure.subject_objects(URIRef(V + "governs"))}
+    assert governed_by == governs
+    assert any(b == URIRef(V + "MinistryOfNationalDefence") for _, b in governed_by)
+
+
+def test_tradition_and_establishment_year_are_separate(data):
+    epu = URIRef(R + "university/truong-dai-hoc-dien-luc")
+    assert (epu, URIRef(V + "foundingYear"), Literal(1898)) in data           # năm truyền thống (tiền thân)
+    assert (epu, URIRef(V + "establishmentYear"), Literal(2006)) in data      # pháp nhân hiện tại (Wikidata P571)
+
+
+def test_void_counts_match_the_dumps(closure):
+    from rdflib.namespace import VOID
+    void = Graph().parse(config.VOID_TTL)
+    count = lambda s: int(void.value(URIRef(config.BASE + s), VOID.triples))  # noqa: E731
+    assert count("dataset") == len(Graph().parse(config.DATA_TTL)) + len(Graph().parse(config.LINKS_TTL))
+    assert count("dataset/serving") == len(closure)
+    assert count("dataset/osm-coordinates") == len(Graph().parse(config.OSM_GEO_TTL))
+
+
+def test_osm_coordinates_are_released_separately_under_odbl(data):
+    from rdflib.namespace import DCTERMS
+    osm = Graph().parse(config.OSM_GEO_TTL)
+    assert len(osm) and not set(osm) & set(data)          # không trộn vào tệp CC BY-SA
+    void = Graph().parse(config.VOID_TTL)
+    licences = {str(o) for o in void.objects(URIRef(config.BASE + "download/vnedu-geo-osm.ttl"), DCTERMS.license)}
+    assert licences == {"https://opendatacommons.org/licenses/odbl/1-0/"}
+    for name in ("vnedu-data.ttl", "vnedu-links.ttl"):
+        assert {str(o) for o in void.objects(URIRef(config.BASE + "download/" + name), DCTERMS.license)} == \
+            {"https://creativecommons.org/licenses/by-sa/4.0/"}
+
+
+def test_link_precision_report_is_complete():
+    """Mẫu ngẫu nhiên 100 owl:sameAs đã được đánh giá hết (không còn 'review')."""
+    rows = list(csv.DictReader((config.REPORTS_DIR / "link_precision.csv").open(encoding="utf-8")))
+    assert len(rows) == 100 and all(r["verdict"] in ("correct", "incorrect") for r in rows)

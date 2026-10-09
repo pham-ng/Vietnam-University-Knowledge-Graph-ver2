@@ -26,6 +26,7 @@
         "viwiki": { "type": "string" },
         "viwiki_revid": { "type": ["integer", "null"], "minimum": 1 },
         "founding_year": { "$ref": "#/$defs/year" },
+        "establishment_year": { "$ref": "#/$defs/year" },
         "dissolution_year": { "$ref": "#/$defs/year" },
         "ownership": { "enum": ["public", "private", "religious"] },
         "foreign_invested": { "type": "boolean" },
@@ -125,7 +126,8 @@
       "properties": {
         "qid": { "$ref": "#/$defs/qidOrEmpty" },
         "name_vi": { "$ref": "#/$defs/nonEmpty" },
-        "kind": { "enum": ["Ministry", "ProvincialPeoplesCommittee", "GoverningBody", "Company"] },
+        "kind": { "enum": ["Ministry", "ProvincialPeoplesCommittee", "StateAgency", "PoliticalSocialOrganization",
+                           "ReligiousOrganization", "Company"] },
         "subordinate_to": { "type": "array", "items": { "type": "string" } }
       }
     },

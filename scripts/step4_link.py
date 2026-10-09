@@ -234,9 +234,9 @@ def build_void(data: Graph, links: Graph, counts) -> Graph:
     v.add((ds, DCTERMS.title, Literal("VN-Edu Linked Open Data", lang="en")))
     v.add((ds, DCTERMS.title, Literal("Dữ liệu liên kết mở Giáo dục đại học Việt Nam", lang="vi")))
     v.add((ds, DCTERMS.description, Literal(
-        "Cơ sở giáo dục đại học Việt Nam, cơ quan chủ quản, lãnh đạo, cựu sinh viên, đơn vị hành chính (gồm sắp xếp "
-        "tỉnh 2025), ngành đào tạo — tích hợp từ các nguồn được ghi nhận ở mức phát biểu và đối chiếu với "
-        "Wikidata, Wikipedia, ROR cùng nguồn chính thức của Việt Nam.", lang="vi")))
+        "Cơ sở giáo dục đại học Việt Nam, cơ quan chủ quản, lãnh đạo được nguồn ghi nhận, người có quan hệ học tập "
+        "(Wikidata P69 — không khẳng định đã tốt nghiệp), đơn vị hành chính (gồm sắp xếp tỉnh 2025), ngành đào tạo — "
+        "tích hợp từ Wikidata, Wikipedia, ROR cùng nguồn chính thức của Việt Nam; nguồn gốc ghi ở mức thực thể.", lang="vi")))
     # CC BY-SA applies only to the compilation and project-authored material.  It does
     # not override source-specific rights; LICENSE-DATA.md records those boundaries.
     v.add((ds, DCTERMS.license, URIRef("https://creativecommons.org/licenses/by-sa/4.0/")))
@@ -262,18 +262,58 @@ def build_void(data: Graph, links: Graph, counts) -> Graph:
                   "http://dbpedia.org/ontology/", "http://www.w3.org/2003/01/geo/wgs84_pos#", "http://www.w3.org/ns/prov#"):
         v.add((ds, VOID.vocabulary, URIRef(vocab)))
     v.add((ds, VOID.exampleResource, URIRef(config.RES_NS + "university/dai-hoc-bach-khoa-ha-noi")))
+    # void:triples của dataset chính = đúng hai tệp dump của nó (dữ liệu khẳng định + liên kết)
     v.add((ds, VOID.triples, Literal(len(data) + len(links), datatype=XSD.integer)))
-    v.add((ds, VOID.entities, Literal(len(set(data.subjects(RDF.type, None))), datatype=XSD.integer)))
-    for fname, fmt in (("vnedu-all.ttl", "text/turtle"), ("vnedu-data.ttl", "text/turtle"), ("vnedu-links.ttl", "text/turtle")):
+    observation = URIRef(config.ONTO_NS + "SourceObservation")
+    observations = set(data.subjects(RDF.type, observation))
+    entities = {s for s in data.subjects(RDF.type, None) if s not in observations}
+    v.add((ds, VOID.entities, Literal(len(entities), datatype=XSD.integer)))
+    part = URIRef(f"{config.BASE}dataset/class-SourceObservation")
+    v.add((ds, VOID.classPartition, part))
+    v.add((part, URIRef("http://rdfs.org/ns/void#class"), observation))
+    v.add((part, VOID.entities, Literal(len(observations), datatype=XSD.integer)))
+    v.add((part, VOID.triples, Literal(sum(1 for s, _, _ in data if s in observations), datatype=XSD.integer)))
+
+    rights = URIRef("https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/LICENSE-DATA.md")
+    cc_by_sa = URIRef("https://creativecommons.org/licenses/by-sa/4.0/")
+    odbl = URIRef("https://opendatacommons.org/licenses/odbl/1-0/")
+
+    def distribution(owner, fname, license_):
         dist = URIRef(f"{config.BASE}download/{fname}")
-        v.add((ds, DCAT.distribution, dist))
-        v.add((ds, VOID.dataDump, dist))
+        v.add((owner, DCAT.distribution, dist))
+        v.add((owner, VOID.dataDump, dist))
         v.add((dist, RDF.type, DCAT.Distribution))
         v.add((dist, DCAT.downloadURL, dist))
-        v.add((dist, DCAT.mediaType, URIRef(f"https://www.iana.org/assignments/media-types/{fmt}")))
-        v.add((dist, DCTERMS.license, URIRef("https://creativecommons.org/licenses/by-sa/4.0/")))
-        v.add((dist, DCTERMS.rights, URIRef(
-            "https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/LICENSE-DATA.md")))
+        v.add((dist, DCAT.mediaType, URIRef("https://www.iana.org/assignments/media-types/text/turtle")))
+        if license_:
+            v.add((dist, DCTERMS.license, license_))
+        v.add((dist, DCTERMS.rights, rights))
+        return dist
+
+    distribution(ds, "vnedu-data.ttl", cc_by_sa)
+    distribution(ds, "vnedu-links.ttl", cc_by_sa)
+    # Toạ độ geocode từ OpenStreetMap: cơ sở dữ liệu phái sinh của OSM -> ODbL 1.0, tách khỏi phần CC BY-SA
+    osm = URIRef(f"{config.BASE}dataset/osm-coordinates")
+    osm_graph = Graph().parse(config.OSM_GEO_TTL) if config.OSM_GEO_TTL.exists() else Graph()
+    v.add((ds, VOID.subset, osm))
+    for t in (VOID.Dataset, DCAT.Dataset):
+        v.add((osm, RDF.type, t))
+    v.add((osm, DCTERMS.title, Literal("Toạ độ geocode từ OpenStreetMap Nominatim", lang="vi")))
+    v.add((osm, DCTERMS.license, odbl))
+    v.add((osm, DCTERMS.source, URIRef("https://www.openstreetmap.org/")))
+    v.add((osm, DCTERMS.rights, Literal("© OpenStreetMap contributors, ODbL 1.0", lang="en")))
+    v.add((osm, VOID.triples, Literal(len(osm_graph), datatype=XSD.integer)))
+    distribution(osm, "vnedu-geo-osm.ttl", odbl)
+    # Bản phục vụ truy vấn gộp phần CC BY-SA và phần ODbL (+ ontology, suy luận, VoID): không có MỘT giấy phép
+    # chung -> chỉ ghi dct:rights; void:triples được bước 5 điền sau khi gộp.
+    serving = URIRef(f"{config.BASE}dataset/serving")
+    for t in (VOID.Dataset, DCAT.Dataset):
+        v.add((serving, RDF.type, t))
+    v.add((serving, DCTERMS.title, Literal("Bản gộp phục vụ truy vấn (dữ liệu + liên kết + toạ độ OSM + ontology + suy luận)", lang="vi")))
+    v.add((serving, DCTERMS.hasPart, ds))
+    v.add((serving, DCTERMS.hasPart, osm))
+    v.add((serving, VOID.sparqlEndpoint, URIRef(config.PUBLIC_SPARQL)))
+    distribution(serving, "vnedu-all.ttl", None)
     homes = {"wikidata": "https://www.wikidata.org/", "dbpedia": "https://dbpedia.org/", "geonames": "https://www.geonames.org/",
              "ror": "https://ror.org/", "wikipedia": "https://www.wikipedia.org/"}
     for (target, pred), n in counts.items():

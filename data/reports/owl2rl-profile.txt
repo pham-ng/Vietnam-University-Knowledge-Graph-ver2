@@ -1,10 +1,4 @@
-﻿powershell : Note: Annotation processing is enabled because one or more processors were found
-At line:1 char:372
-+ ... raph-ver2"; powershell -ExecutionPolicy Bypass -File audit/owl_profil ...
-+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (Note: Annotatio...sors were found:String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
- 
+Note: Annotation processing is enabled because one or more processors were found
   on the class path. A future release of javac may disable annotation processing
   unless at least one processor is specified by name (-processor), or a search
   path is specified (--processor-path, --processor-module-path), or annotation
@@ -12,7 +6,7 @@ At line:1 char:372
   Use -Xlint:-options to suppress this message.
   Use -proc:none to disable annotation processing.
 Picked up JAVA_TOOL_OPTIONS: -Dorg.slf4j.simpleLogger.defaultLogLevel=warn
-axioms=710
+axioms=761
 in_owl2_rl_profile=true
 violation_count=0
 violation_types={}

@@ -515,7 +515,7 @@ def main() -> None:
 
     print("Dump & tệp RDF ...")
     (SITE / "download").mkdir()
-    for f in (config.ALL_TTL, config.DATA_TTL, config.LINKS_TTL, INFERRED_TTL, config.VOID_TTL):
+    for f in (config.ALL_TTL, config.DATA_TTL, config.LINKS_TTL, INFERRED_TTL, config.VOID_TTL, config.OSM_GEO_TTL):
         shutil.copy(f, SITE / "download" / f.name)
     nt = SITE / "download" / "vnedu-all.nt"
     full.serialize(nt, format="nt", encoding="utf-8")

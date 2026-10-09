@@ -22,7 +22,7 @@ Dữ liệu được dẫn xuất từ:
 | Wikipedia tiếng Việt (infobox, đoạn mở đầu) | CC BY-SA 4.0 | **share-alike** ⇒ dữ liệu phái sinh phải dùng giấy phép tương thích |
 | DBpedia | CC BY-SA 3.0 | dùng làm liên kết và năm thành lập dự phòng |
 | Research Organization Registry (ROR) | CC0 1.0 | tên viết tắt và định danh ROR; không dùng tâm địa phương làm tọa độ campus |
-| OpenStreetMap (Nominatim) | ODbL 1.0 | chỉ dùng toạ độ điểm đơn lẻ, ghi nguồn © OpenStreetMap contributors |
+| OpenStreetMap (Nominatim) | ODbL 1.0 | toạ độ geocode được **tách riêng** thành `vnedu-geo-osm.ttl`, phát hành theo **ODbL 1.0** (© OpenStreetMap contributors); không nằm trong các tệp CC BY-SA `vnedu-data.ttl` / `vnedu-links.ttl` |
 | Cổng tuyển sinh Bộ GD&ĐT | **không thấy giấy phép dữ liệu mở dạng máy đọc được tại thời điểm snapshot** | mã tuyển sinh và thông tin liên hệ công khai; phải giữ nguồn và tự kiểm tra quyền khi tái sử dụng |
 | Văn bản pháp lý và quyết định đổi tên/chủ quản | nguồn công báo hoặc cơ quan ban hành | giữ nguyên số, ngày hiệu lực và URL; việc tái sử dụng tuân theo pháp luật áp dụng |
 

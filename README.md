@@ -55,8 +55,8 @@ theo một ontology OWL, suy luận tự động, kiểm định chất lượng
 | 📍 **Địa giới hành chính** | 34 tỉnh/thành mới (từ 1/7/2025) + 29 tỉnh cũ đã sáp nhập + 3 miền |
 | 👤 **Con người** | 1.703 hồ sơ người — 1.482 hồ sơ có quan hệ giáo dục, 221 hồ sơ lãnh đạo; hồ sơ trùng tên chưa có định danh được tách theo trường |
 | 🏛️ **Cơ quan chủ quản** | 50 — các Bộ, UBND tỉnh, quân chủng/binh chủng, tập đoàn giáo dục |
-| 🔗 **Triple RDF** | **86.129** triple trong bản phục vụ truy vấn. Trong 59.374 triple dữ liệu, **35.538 (60%) là siêu dữ liệu nguồn gốc** của 4.165 bản ghi `SourceObservation`; phần dữ kiện còn lại ≈ 23.800 triple. Cộng thêm 3.557 triple liên kết, 22.226 triple suy luận giữ lại, ontology và VoID |
-| 🌍 **Liên kết ra ngoài** | 1.885 Wikidata · 1.186 Wikipedia · 228 DBpedia · 195 ROR · 63 GeoNames |
+| 🔗 **Triple RDF** | **87.162** triple trong bản phục vụ truy vấn. Trong 59.392 triple dữ liệu, **35.538 (60%) là siêu dữ liệu nguồn gốc** của 4.165 bản ghi `SourceObservation`; phần dữ kiện còn lại ≈ 23.850 triple. Cộng thêm 3.557 triple liên kết, 126 triple toạ độ OpenStreetMap (ODbL, tệp riêng), 23.014 triple suy luận giữ lại, ontology và VoID |
+| 🌍 **Liên kết ra ngoài** | 1.885 Wikidata · 1.186 Wikipedia · 228 DBpedia · 195 ROR · 63 GeoNames — precision `owl:sameAs` ước lượng trên mẫu ngẫu nhiên 100 liên kết: **100/100 đúng, Wilson 95% 96,3–100%** ([báo cáo](data/reports/link_precision.md)) |
 
 Với mỗi trường có: tên (vi/en/viết tắt/tên khác/tên cũ), mã tuyển sinh, loại hình, công lập hay tư thục, năm và ngày
 thành lập, cơ quan chủ quản, trường thành viên, lãnh đạo, đối tác, địa chỉ, tỉnh (cả trước và sau sáp nhập 2025),
@@ -287,7 +287,7 @@ person:tan-yap-peng  a vnedu:InstitutionLeader ;  vnedu:leads university:truong-
 
 ## 5. Cây ontology
 
-Ontology [`ontology/vnedu.ttl`](ontology/vnedu.ttl) trong bản audited hiện tại gồm **39 lớp, 38 thuộc tính quan hệ, 28 thuộc tính dữ liệu và 872 triple ontology** (phiên bản 2.3), được
+Ontology [`ontology/vnedu.ttl`](ontology/vnedu.ttl) trong bản audited hiện tại gồm **44 lớp, 40 thuộc tính quan hệ, 29 thuộc tính dữ liệu và 948 triple ontology** (phiên bản 2.4), được
 materialize bằng bộ luật `owlrl` theo mục tiêu OWL 2 RL; bộ kiểm tra OWL API `OWL2RLProfile`
 đã chạy trên release 2.2 và trả **zero violations**. Chỉ các lớp/thuộc tính có ánh xạ phù hợp mới được nối thận trọng
 sang schema.org / FOAF / DBpedia, không phải mọi lớp đều tương đương với vocabulary bên ngoài.
@@ -360,7 +360,7 @@ Sơ đồ đầy đủ (sinh tự động từ tệp TTL, kèm bảng tiên đ�
 
 ## 6. Suy luận: máy tự biết thêm điều gì?
 
-Bộ máy `owlrl` giữ lại **22.226 triple suy luận**. Chứng nhận profile hình thức của ontology được lưu tại `data/reports/owl2rl-profile.txt`; nó không phải chứng nhận độ đúng dữ kiện hay hiệu năng production. Vài ví dụ:
+Bộ máy `owlrl` giữ lại **23.014 triple suy luận**. Chứng nhận profile hình thức của ontology được lưu tại `data/reports/owl2rl-profile.txt`; nó không phải chứng nhận độ đúng dữ kiện hay hiệu năng production. Vài ví dụ:
 
 | Dữ liệu gốc chỉ ghi | Quy tắc trong ontology | Máy tự suy ra |
 |---|---|---|
@@ -382,12 +382,13 @@ SHACL đạt theo chính sách cho phép **34 cảnh báo và 1 thông tin**. Xe
 
 | Tệp | Nội dung | Số triple |
 |---|---|--:|
-| [`vnedu-data.ttl`](data/gold/vnedu-data.ttl) | dữ kiện gốc (sau làm sạch) + 35.538 triple siêu dữ liệu nguồn gốc | 59.374 |
-| [`vnedu-links.ttl`](data/gold/vnedu-links.ttl) | liên kết ra dataset khác | 3.557 |
-| [`vnedu-inferred.ttl`](data/gold/vnedu-inferred.ttl) | suy luận mới được giữ lại | 22.226 |
-| [`void.ttl`](data/gold/void.ttl) | mô tả dataset (VoID + DCAT) | 104 |
-| [`ontology/vnedu.ttl`](ontology/vnedu.ttl) | ontology đã hiệu chỉnh | 872 |
-| **[`vnedu-all.ttl`](data/gold/vnedu-all.ttl)** | **hợp các tập, dùng để truy vấn** | **86.129** |
+| [`vnedu-data.ttl`](data/gold/vnedu-data.ttl) | dữ kiện gốc (sau làm sạch) + 35.538 triple siêu dữ liệu nguồn gốc — CC BY-SA 4.0 | 59.392 |
+| [`vnedu-links.ttl`](data/gold/vnedu-links.ttl) | liên kết ra dataset khác — CC BY-SA 4.0 | 3.557 |
+| [`vnedu-geo-osm.ttl`](data/gold/vnedu-geo-osm.ttl) | toạ độ geocode từ OpenStreetMap Nominatim — **ODbL 1.0** (tách riêng) | 126 |
+| [`vnedu-inferred.ttl`](data/gold/vnedu-inferred.ttl) | suy luận mới được giữ lại | 23.014 |
+| [`void.ttl`](data/gold/void.ttl) | mô tả dataset (VoID + DCAT; `void:triples` khớp đúng từng tệp dump, giấy phép theo từng phân phối) | 129 |
+| [`ontology/vnedu.ttl`](ontology/vnedu.ttl) | ontology 2.4 (lưu trữ đủ 2.0 → 2.4 trong `ontology/versions/`) | 948 |
+| **[`vnedu-all.ttl`](data/gold/vnedu-all.ttl)** | **hợp các tập, dùng để truy vấn** (gồm phần CC BY-SA và phần ODbL — xem `LICENSE-DATA.md`) | **87.162** |
 
 - **6.413 URI tài nguyên cục bộ** xuất hiện ở vị trí chủ thể; kiểm tra bản dựng cục bộ không đồng nghĩa với kiểm chứng uptime của website.
 - Liên kết gồm **2.310 `owl:sameAs`**, **61 `skos:closeMatch`**, **1.186 liên kết trang Wikipedia**; các loại này có ngữ nghĩa khác nhau.
@@ -433,7 +434,7 @@ Báo cáo đầy đủ: [data/reports/quality_report.md](data/reports/quality_re
 
 | | Yêu cầu | Dự án làm gì |
 |:-:|---|---|
-| ★ | Có trên Web, giấy phép mở | Công khai tại GitHub Pages; CC BY-SA 4.0 cho phần dự án có quyền cấp phép và khai báo quyền riêng theo từng nguồn ([LICENSE-DATA.md](LICENSE-DATA.md)) |
+| ★ | Có trên Web, giấy phép mở | Công khai tại GitHub Pages; dữ liệu và liên kết theo CC BY-SA 4.0, toạ độ OpenStreetMap tách riêng theo ODbL 1.0; giấy phép khai báo theo từng phân phối trong VoID/DCAT ([LICENSE-DATA.md](LICENSE-DATA.md)) |
 | ★★ | Dữ liệu có cấu trúc | JSON, CSV, RDF — không phải ảnh hay PDF |
 | ★★★ | Định dạng mở | Turtle, N-Triples, JSON-LD, CSV |
 | ★★★★ | Chuẩn W3C + URI | RDF, OWL, SHACL, SPARQL, JSON-LD; **mỗi thực thể một URI mở được trên web** |
@@ -454,7 +455,7 @@ curl https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/
 ```python
 from rdflib import Graph
 g = Graph().parse("https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl")
-print(len(g))  # 86129
+print(len(g))  # 87162
 ```
 
 Ví dụ SPARQL — số cơ sở GDĐH theo miền và loại hình (miền do máy suy ra):
@@ -523,6 +524,18 @@ federated sang Wikidata/DBpedia…).
   content negotiation theo header `Accept` có ở máy chủ [vnedu-lod.onrender.com](https://vnedu-lod.onrender.com). Máy chủ chạy gói Free
   (tự ngủ sau thời gian không hoạt động, backend rdflib trong bộ nhớ — không có SLA và không dành cho tải lớn).
   Monitor công khai là best-effort; cấu hình Fuseki production, backup/restore và kiểm thử tải nằm trong `deploy/` và `audit/`.
+- **httpRange-14:** URI dạng slash trên GitHub Pages trả `200 text/html`, nên về hình thức chưa tách "trường đại học" với
+  "trang mô tả trường" bằng `303 See Other` hay hash URI như khuyến nghị *Cool URIs for the Semantic Web*. Hosting tĩnh
+  không làm được 303; đổi sang hash URI hoặc proxy w3id.org sẽ đổi toàn bộ URI đã công bố. Dự án giữ URI ổn định và
+  cung cấp RDF qua JSON-LD nhúng + `rel="alternate"` (theo dõi được bằng máy) và content negotiation ở máy chủ Render.
+- **Nguồn gốc mức phát biểu:** 4.165 `SourceObservation` dùng mẫu reification `rdf:subject/predicate/object` song song với
+  triple đã khẳng định; nguồn ghi ở mức thực thể (không biết nguồn nào khẳng định từng giá trị) và 4.119 bản ghi chưa có
+  thời điểm hiệu lực. Hướng nâng cấp: named graph theo nguồn hoặc RDF 1.2 triple terms (`rdf:reifies`) + `prov:qualifiedDerivation`.
+- **Năm thành lập:** `vnedu:foundingYear` là năm truyền thống (sớm nhất mọi nguồn ghi nhận, có thể của tiền thân);
+  `vnedu:establishmentYear` là năm thành lập pháp nhân hiện tại theo Wikidata P571 (144 cơ sở) — giá trị nguồn ghi nhận,
+  chưa đối chiếu văn bản pháp lý.
+- **Liên kết:** precision `owl:sameAs` ước lượng trên mẫu ngẫu nhiên 100 liên kết với một người đánh giá; chưa đo độ đồng
+  thuận giữa hai người đánh giá và chưa ước lượng recall.
 - Logo nhiều trường là ảnh "sử dụng hợp lý" trên Wikipedia — trang web chỉ nhúng từ Wikimedia và ghi rõ giấy phép.
 
 ---

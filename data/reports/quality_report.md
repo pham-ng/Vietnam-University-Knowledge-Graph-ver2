@@ -6,25 +6,26 @@
 
 | Tầng | Tệp | Số lượng | SHA-256 | Tạo lúc |
 |---|---|---|---|---|
-| bronze | `data/bronze/dbp_years.json` | 72 records | `c0b0f72eae48` | 2026-10-09T17:01:28 |
-| bronze | `data/bronze/moet_admissions.json` | 405 records | `49df1786c58e` | 2026-10-09T17:01:29 |
-| bronze | `data/bronze/ror_organizations.json` | 202 records | `c5e8fc0c544a` | 2026-10-09T17:01:29 |
-| bronze | `data/bronze/viwiki_images.json` | 280 records | `4df5192d37df` | 2026-10-09T17:01:28 |
-| bronze | `data/bronze/viwiki_links.json` | 80 records | `c1a26b63cff7` | 2026-10-09T17:01:28 |
-| bronze | `data/bronze/viwiki_pages.json` | 279 records | `f3a91fa46eb3` | 2026-10-09T17:01:28 |
-| bronze | `data/bronze/wd_alumni.json` | 1,531 records | `af11c19def93` | 2026-10-09T17:01:29 |
-| bronze | `data/bronze/wd_entities.json` | 12 records | `9dff7acfa914` | 2026-10-09T17:01:28 |
-| bronze | `data/bronze/wd_institutions.json` | 363 records | `3539a0481f33` | 2026-10-09T17:01:28 |
-| bronze | `data/bronze/wd_provinces.json` | 63 records | `9bc0e96c5231` | 2026-10-09T17:01:28 |
-| silver | `data/silver/governing_bodies.json` | 50 records | `6bee7090a9a7` | 2026-10-09T17:01:31 |
-| silver | `data/silver/institutions.json` | 297 records | `92376e3f40e4` | 2026-10-09T17:01:31 |
-| silver | `data/silver/people.json` | 1,703 records | `6e7c31f5af19` | 2026-10-09T17:01:31 |
-| silver | `data/silver/provinces.json` | 63 records | `4cbac2c46a0d` | 2026-10-09T17:01:31 |
-| gold | `data/gold/vnedu-all.ttl` | 86,129 triples | `dd6821fb9f1a` | 2026-10-09T17:03:00 |
-| gold | `data/gold/vnedu-data.ttl` | 59,374 triples | `5db5d799b8bb` | 2026-10-09T17:01:34 |
-| gold | `data/gold/vnedu-inferred.ttl` | 22,226 triples | `469736494dea` | 2026-10-09T17:02:56 |
-| gold | `data/gold/vnedu-links.ttl` | 3,557 triples | `64e97a1b1caa` | 2026-10-09T17:01:35 |
-| gold | `data/gold/void.ttl` | 104 triples | `b90c36705532` | 2026-10-09T17:01:37 |
+| bronze | `data/bronze/dbp_years.json` | 72 records | `c0b0f72eae48` | 2026-10-09T23:39:07 |
+| bronze | `data/bronze/moet_admissions.json` | 405 records | `49df1786c58e` | 2026-10-09T23:39:07 |
+| bronze | `data/bronze/ror_organizations.json` | 202 records | `c5e8fc0c544a` | 2026-10-09T23:39:07 |
+| bronze | `data/bronze/viwiki_images.json` | 280 records | `4df5192d37df` | 2026-10-09T23:39:07 |
+| bronze | `data/bronze/viwiki_links.json` | 80 records | `c1a26b63cff7` | 2026-10-09T23:39:07 |
+| bronze | `data/bronze/viwiki_pages.json` | 279 records | `f3a91fa46eb3` | 2026-10-09T23:39:07 |
+| bronze | `data/bronze/wd_alumni.json` | 1,531 records | `af11c19def93` | 2026-10-09T23:39:07 |
+| bronze | `data/bronze/wd_entities.json` | 12 records | `9dff7acfa914` | 2026-10-09T23:39:07 |
+| bronze | `data/bronze/wd_institutions.json` | 363 records | `3539a0481f33` | 2026-10-09T23:39:07 |
+| bronze | `data/bronze/wd_provinces.json` | 63 records | `9bc0e96c5231` | 2026-10-09T23:39:07 |
+| silver | `data/silver/governing_bodies.json` | 50 records | `a4fa23b18217` | 2026-10-09T23:39:09 |
+| silver | `data/silver/institutions.json` | 297 records | `288d679a3b4f` | 2026-10-09T23:39:09 |
+| silver | `data/silver/people.json` | 1,703 records | `6e7c31f5af19` | 2026-10-09T23:39:09 |
+| silver | `data/silver/provinces.json` | 63 records | `4cbac2c46a0d` | 2026-10-09T23:39:09 |
+| gold | `data/gold/vnedu-all.ttl` | 87,162 triples | `d38e99a6a7a8` | 2026-10-09T23:40:32 |
+| gold | `data/gold/vnedu-data.ttl` | 59,392 triples | `60deb827aada` | 2026-10-09T23:39:13 |
+| gold | `data/gold/vnedu-geo-osm.ttl` | 126 triples | `6ac319066fa9` | 2026-10-09T23:39:13 |
+| gold | `data/gold/vnedu-inferred.ttl` | 23,014 triples | `79c2c10f42ca` | 2026-10-09T23:40:29 |
+| gold | `data/gold/vnedu-links.ttl` | 3,557 triples | `64e97a1b1caa` | 2026-10-09T23:39:14 |
+| gold | `data/gold/void.ttl` | 129 triples | `4a0e75501ec1` | 2026-10-09T23:40:29 |
 
 ## 2. Độ đầy đủ — 268 cơ sở giáo dục đại học (tầng silver)
 
@@ -160,5 +161,5 @@ Giá trị chưa phân giải được, cần rà soát tay (`unresolved.csv`): 
 | ★ | Công khai, quyền tái sử dụng minh bạch | CC BY-SA 4.0 chỉ áp dụng cho phần dự án có quyền cấp phép; `dct:rights`, `LICENSE-DATA.md` và `*.meta.json` giữ điều kiện riêng của từng nguồn (nguồn Bộ GD&ĐT chưa công bố giấy phép dữ liệu mở dạng máy đọc được) |
 | ★★ | Có cấu trúc, máy đọc được | JSON (bronze/silver), RDF (gold) |
 | ★★★ | Định dạng mở | JSON, CSV, Turtle |
-| ★★★★ | Chuẩn W3C, URI dereference được | RDF/OWL 2 RL/SHACL/SPARQL 1.1/PROV-O; 86,129 triple (trong đó 22,226 suy luận); HTTP URI + content negotiation (`app/server.py`) |
+| ★★★★ | Chuẩn W3C, URI dereference được | RDF/OWL 2 RL/SHACL/SPARQL 1.1/PROV-O; 87,162 triple (trong đó 23,014 suy luận); HTTP URI + content negotiation (`app/server.py`) |
 | ★★★★★ | Liên kết tới dataset khác | 3,557 liên kết tới Wikidata, DBpedia, ROR, GeoNames, Wikipedia; `void:Linkset` |

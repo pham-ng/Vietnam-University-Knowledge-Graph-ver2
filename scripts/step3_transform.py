@@ -39,7 +39,8 @@ KIND_CLASS = {
     "AcademicUnit": VNEDU.EducationalOrganization,
 }
 BODY_CLASS = {"Ministry": VNEDU.Ministry, "ProvincialPeoplesCommittee": VNEDU.ProvincialPeoplesCommittee,
-              "GoverningBody": VNEDU.GoverningBody, "Company": VNEDU.Company}
+              "StateAgency": VNEDU.StateAgency, "PoliticalSocialOrganization": VNEDU.PoliticalSocialOrganization,
+              "ReligiousOrganization": VNEDU.ReligiousOrganization, "Company": VNEDU.Company}
 # Cơ quan có cá thể tham chiếu sẵn trong ontology (dùng trong lớp định nghĩa MilitaryInstitution/PoliceInstitution)
 ONTOLOGY_INDIVIDUALS = {vn_key("Bộ Quốc phòng"): VNEDU.MinistryOfNationalDefence,
                         vn_key("Bộ Công an"): VNEDU.MinistryOfPublicSecurity}
@@ -88,6 +89,8 @@ def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
     insts, bodies, people, provs = load("institutions"), load("governing_bodies"), load("people"), load("provinces")
     g = Graph()
+    osm = Graph()   # toạ độ geocode từ OpenStreetMap Nominatim (ODbL 1.0) — phân phối riêng
+    bind_prefixes(osm)
     bind_prefixes(g)
     g.bind("prov", PROV)
 
@@ -164,6 +167,8 @@ def main() -> None:
         for c in i["admission_codes"]:
             g.add((s, VNEDU.admissionCode, Literal(c)))
         add(g, s, VNEDU.foundingYear, lit(str(i["founding_year"]) if i.get("founding_year") else None, XSD.integer))
+        add(g, s, VNEDU.establishmentYear,
+            lit(str(i["establishment_year"]) if i.get("establishment_year") else None, XSD.integer))
         add(g, s, VNEDU.dissolutionYear, lit(str(i["dissolution_year"]) if i.get("dissolution_year") else None, XSD.integer))
         if i.get("ownership"):
             g.add((s, VNEDU.ownership, OWNERSHIP[i["ownership"]]))
@@ -199,8 +204,10 @@ def main() -> None:
                 g.add((s, DBO.affiliation, u_inst[qid_inst[pt["qid"]]]))
             else:
                 add_reused(g, s, DBO.affiliation, {"qid": pt["qid"], "vi": pt["name"]})
-        add(g, s, GEO.lat, lit(i.get("lat"), XSD.decimal))
-        add(g, s, GEO.long, lit(i.get("long"), XSD.decimal))
+        # Toạ độ geocode từ OpenStreetMap (ODbL) ghi vào đồ thị riêng, phát hành theo ODbL
+        geo = osm if str(i.get("coord_source", "")).startswith("nominatim") else g
+        add(geo, s, GEO.lat, lit(i.get("lat"), XSD.decimal))
+        add(geo, s, GEO.long, lit(i.get("long"), XSD.decimal))
         if i.get("website"):
             g.add((s, VNEDU.website, URIRef(i["website"].replace(" ", "%20"))))
         add(g, s, VNEDU.locatedIn, u_prov.get(i.get("province")))
@@ -364,6 +371,10 @@ def main() -> None:
     (config.REPORTS_DIR / "observation-provenance.json").write_text(json.dumps(evidence, indent=2, sort_keys=True), encoding="utf-8")
     config.RDF_DIR.mkdir(parents=True, exist_ok=True)
     g.serialize(config.DATA_TTL, format="turtle", encoding="utf-8")
+    osm.serialize(config.OSM_GEO_TTL, format="turtle", encoding="utf-8")
+    record_manifest("gold", config.OSM_GEO_TTL, len(osm), "triples", license="ODbL 1.0",
+                    source="https://nominatim.openstreetmap.org/")
+    print(f"  -> {config.OSM_GEO_TTL.relative_to(config.ROOT)} ({len(osm)} triple, ODbL)")
     record_manifest("gold", config.DATA_TTL, len(g), "triples", derived_from="data/silver/*.json")
     print(f"  -> {config.DATA_TTL.relative_to(config.ROOT)} ({len(g)} triple)")
     print("Xong bước 3.")

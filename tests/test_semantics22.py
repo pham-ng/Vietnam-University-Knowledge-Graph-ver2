@@ -95,7 +95,7 @@ def test_ambiguous_dbpedia_target_rejected(monkeypatch):
 def test_immutable_version_routes():
     from server import create_app
     client = create_app(object(), inferred=set(), site_dir=None).test_client()
-    for version in ('2.1', '2.2', '2.3'):
+    for version in ('2.0', '2.1', '2.2', '2.3', '2.4'):
         response = client.get('/ontology/' + version, headers={'Accept': 'text/turtle'})
         assert response.status_code == 200
         graph = Graph().parse(data=response.data, format='turtle')
@@ -105,4 +105,4 @@ def test_immutable_version_routes():
 
 def test_latest_archive_matches_current():
     from rdflib.compare import isomorphic
-    assert isomorphic(load_ontology(), Graph().parse(ROOT / 'ontology/versions/2.3.ttl'))
+    assert isomorphic(load_ontology(), Graph().parse(ROOT / 'ontology/versions/2.4.ttl'))

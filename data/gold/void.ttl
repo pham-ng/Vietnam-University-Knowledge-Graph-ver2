@@ -12,6 +12,20 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/serving> a void:Dataset,
+        dcat:Dataset ;
+    dct:hasPart <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset>,
+        <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/osm-coordinates> ;
+    dct:title "Bản gộp phục vụ truy vấn (dữ liệu + liên kết + toạ độ OSM + ontology + suy luận)"@vi ;
+    void:dataDump <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl> ;
+    void:sparqlEndpoint <https://vnedu-lod.onrender.com/sparql> ;
+    void:triples 87162 ;
+    dcat:distribution <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl> .
+
+<https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/class-SourceObservation> void:class vnedu:SourceObservation ;
+    void:entities 4165 ;
+    void:triples 35538 .
+
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/geonames> a void:Dataset ;
     foaf:homepage <https://www.geonames.org/> .
 
@@ -66,11 +80,20 @@
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/dbpedia> a void:Dataset ;
     foaf:homepage <https://dbpedia.org/> .
 
+<https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/osm-coordinates> a void:Dataset,
+        dcat:Dataset ;
+    dct:license <https://opendatacommons.org/licenses/odbl/1-0/> ;
+    dct:rights "© OpenStreetMap contributors, ODbL 1.0"@en ;
+    dct:source <https://www.openstreetmap.org/> ;
+    dct:title "Toạ độ geocode từ OpenStreetMap Nominatim"@vi ;
+    void:dataDump <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-geo-osm.ttl> ;
+    void:triples 126 ;
+    dcat:distribution <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-geo-osm.ttl> .
+
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/wikidata> a void:Dataset ;
     foaf:homepage <https://www.wikidata.org/> .
 
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl> a dcat:Distribution ;
-    dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
     dct:rights <https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/LICENSE-DATA.md> ;
     dcat:downloadURL <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl> ;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> .
@@ -81,6 +104,12 @@
     dcat:downloadURL <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-data.ttl> ;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> .
 
+<https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-geo-osm.ttl> a dcat:Distribution ;
+    dct:license <https://opendatacommons.org/licenses/odbl/1-0/> ;
+    dct:rights <https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/LICENSE-DATA.md> ;
+    dcat:downloadURL <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-geo-osm.ttl> ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> .
+
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-links.ttl> a dcat:Distribution ;
     dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
     dct:rights <https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/LICENSE-DATA.md> ;
@@ -89,7 +118,7 @@
 
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset> a void:Dataset,
         dcat:Dataset ;
-    dct:description "Cơ sở giáo dục đại học Việt Nam, cơ quan chủ quản, lãnh đạo, cựu sinh viên, đơn vị hành chính (gồm sắp xếp tỉnh 2025), ngành đào tạo — tích hợp từ các nguồn được ghi nhận ở mức phát biểu và đối chiếu với Wikidata, Wikipedia, ROR cùng nguồn chính thức của Việt Nam."@vi ;
+    dct:description "Cơ sở giáo dục đại học Việt Nam, cơ quan chủ quản, lãnh đạo được nguồn ghi nhận, người có quan hệ học tập (Wikidata P69 — không khẳng định đã tốt nghiệp), đơn vị hành chính (gồm sắp xếp tỉnh 2025), ngành đào tạo — tích hợp từ Wikidata, Wikipedia, ROR cùng nguồn chính thức của Việt Nam; nguồn gốc ghi ở mức thực thể."@vi ;
     dct:language <http://id.loc.gov/vocabulary/iso639-1/vi> ;
     dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
     dct:modified "2026-10-09T00:00:00"^^xsd:dateTime ;
@@ -102,10 +131,10 @@
         <https://www.wikidata.org/> ;
     dct:title "VN-Edu Linked Open Data"@en,
         "Dữ liệu liên kết mở Giáo dục đại học Việt Nam"@vi ;
-    void:dataDump <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl>,
-        <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-data.ttl>,
+    void:classPartition <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/class-SourceObservation> ;
+    void:dataDump <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-data.ttl>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-links.ttl> ;
-    void:entities 6654 ;
+    void:entities 2489 ;
     void:exampleResource university:dai-hoc-bach-khoa-ha-noi ;
     void:sparqlEndpoint <https://vnedu-lod.onrender.com/sparql> ;
     void:subset <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-dbpedia-closeMatch>,
@@ -114,8 +143,9 @@
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-ror-sameAs>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-closeMatch>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-sameAs>,
-        <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikipedia-isPrimaryTopicOf> ;
-    void:triples 62931 ;
+        <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikipedia-isPrimaryTopicOf>,
+        <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/osm-coordinates> ;
+    void:triples 62949 ;
     void:uriSpace "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/" ;
     void:vocabulary dbo:,
         geo:,
@@ -124,8 +154,7 @@
         foaf:,
         vnedu:,
         schema: ;
-    dcat:distribution <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl>,
-        <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-data.ttl>,
+    dcat:distribution <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-data.ttl>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-links.ttl> ;
     dcat:keyword "Vietnam",
         "giáo dục đại học",

@@ -123,14 +123,14 @@ WHERE {{
 GROUP BY ?truong ORDER BY DESC(?so_cuu_sv) LIMIT 12
 """
 
-Q["10_lanh_dao"] = """# [Suy luận] Người đứng đầu các đại học quốc gia & vùng (rector/director ⊑ hasLeader, nghịch đảo leads)
+Q["10_lanh_dao"] = """# [Suy luận] Người đứng đầu các đại học quốc gia & vùng (rector/director ⊑ hasHead, nghịch đảo headOf -> InstitutionHead)
 {P}
 SELECT ?co_so ?vai_tro ?nguoi ?hoc_ham
 WHERE {{
   VALUES ?c {{ vnedu:NationalUniversity vnedu:RegionalUniversity }}
   ?u a ?c ; rdfs:label ?co_so ; ?r ?p .
   VALUES (?r ?vai_tro) {{ (vnedu:rector "Hiệu trưởng") (vnedu:director "Giám đốc") }}
-  ?p a vnedu:InstitutionLeader ; rdfs:label ?nguoi .
+  ?p a vnedu:InstitutionHead ; rdfs:label ?nguoi .
   FILTER(LANG(?co_so) = "vi")
   OPTIONAL {{ ?p vnedu:honorific ?hoc_ham }}
 }}
@@ -214,7 +214,7 @@ WHERE {{
   {{
     SELECT ?thuoc_tinh (COUNT(DISTINCT ?u) AS ?so_co_so) WHERE {{
       VALUES (?p ?thuoc_tinh) {{
-        (vnedu:foundingYear "năm thành lập") (vnedu:ownership "loại hình sở hữu") (vnedu:locatedIn "tỉnh/thành")
+        (vnedu:foundingYear "năm truyền thống") (vnedu:ownership "loại hình sở hữu") (vnedu:locatedIn "tỉnh/thành")
         (vnedu:website "website") (vnedu:hasLeader "lãnh đạo") (vnedu:admissionCode "mã trường")
         (owl:sameAs "liên kết ngoài") (<http://www.w3.org/2003/01/geo/wgs84_pos#lat> "toạ độ")
         (vnedu:motto "khẩu hiệu") (vnedu:shortName "tên viết tắt")

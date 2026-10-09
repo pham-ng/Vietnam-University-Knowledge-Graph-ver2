@@ -29,6 +29,8 @@ DATA_TTL = RDF_DIR / "vnedu-data.ttl"
 LINKS_TTL = RDF_DIR / "vnedu-links.ttl"
 VOID_TTL = RDF_DIR / "void.ttl"
 ALL_TTL = RDF_DIR / "vnedu-all.ttl"  # ontology + data + links + void
+# Toạ độ geocode bằng OpenStreetMap Nominatim: ODbL 1.0 -> phân phối riêng, không trộn vào phần CC BY-SA
+OSM_GEO_TTL = RDF_DIR / "vnedu-geo-osm.ttl"
 
 # Nguồn bên ngoài
 WIKIDATA_SPARQL = "https://query.wikidata.org/sparql"
