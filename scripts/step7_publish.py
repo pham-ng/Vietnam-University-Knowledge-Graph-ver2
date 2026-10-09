@@ -431,7 +431,7 @@ def app_data(full, onto) -> dict:
             "triples": {k.rsplit("/", 1)[-1]: v["count"] for k, v in manifest["gold"].items()},
             "shacl": manifest["gold"]["data/gold/vnedu-all.ttl"].get("shacl_results", {}),
             "consistent": manifest["gold"]["data/gold/vnedu-all.ttl"].get("consistent"),
-            "people": len(umap["person"]), "bodies": len(bodies)}
+            "people": len(load("people")), "bodies": len(bodies)}   # hồ sơ hiện hành (sổ URI còn giữ URI đã ngừng dùng)
 
 
 def ontology_data(onto, full) -> dict:

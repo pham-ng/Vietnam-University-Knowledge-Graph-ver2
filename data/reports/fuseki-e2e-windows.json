@@ -1,14 +1,14 @@
 {
-  "started_at_utc": "2026-10-09T03:50:45.580937+00:00",
+  "started_at_utc": "2026-10-09T21:38:29.963181+00:00",
   "platform": "win32",
   "jar_sha256": "2c92c598e65ab69d99820052e05f4277ed1d77980a8845f87545ad35b71a76ee",
-  "input_sha256": "9627fce0d3b0a770e796c64a5b6a9268e3f66506ac8b7d49722919e9004664c8",
+  "input_sha256": "291c596018203e21ffadb205cfc7906604f8ccef6250e4205bd66ae983aece4d",
   "java": "java version \"21.0.8\" 2025-07-15 LTS\nJava(TM) SE Runtime Environment (build 21.0.8+12-LTS-250)\nJava HotSpot(TM) 64-Bit Server VM (build 21.0.8+12-LTS-250, mixed mode, sharing)",
   "selector_provider": "sun.nio.ch.WindowsSelectorProvider",
   "socket_temp": "tmp\\fuseki-socket-win",
   "checks": {
     "load": {
-      "triples": 87183,
+      "triples": 87162,
       "isomorphic": true,
       "previous_triples": 0
     },
@@ -16,7 +16,7 @@
     "backup_verified": true,
     "query_parity_rows": {
       "count": 1,
-      "classes": 68,
+      "classes": 74,
       "programs": 78,
       "dated_roles": 0
     },
@@ -29,11 +29,11 @@
   },
   "scope": "disposable loopback TDB2; not production security certification",
   "fuseki_startup": [
-    "[2026-10-09 10:50:47] Fuseki     INFO  Apache Jena Fuseki 6.2.0",
-    "[2026-10-09 10:50:47] Config     INFO  Fuseki Base = C:\\Users\\Administrator\\AppData\\Roaming\\Claude\\scratch-workspaces\\22a3c0d9-7a02-453b-9542-b8e7c3b733d3\\8c8b9564-fc1e-49a6-8ada-a9fd529b1ce8\\scratch-2026-10-05-4d14b4\\reviewed-vnedu\\tmp\\fuseki-e2e-e13iadtw\\run",
-    "[2026-10-09 10:50:47] Config     INFO  Database: /vnedu",
-    "[2026-10-09 10:50:48] Config     INFO  UI Base: fuseki-server.jar",
-    "[2026-10-09 10:50:48] Shiro      INFO  Shiro configuration: file:C:\\Users\\Administrator\\AppData\\Roaming\\Claude\\scratch-workspaces\\22a3c0d9-7a02-453b-9542-b8e7c3b733d3\\8c8b9564-fc1e-49a6-8ada-a9fd529b1ce8\\scratch-2026-10-05-4d14b4\\reviewed-vnedu\\tmp\\fuseki-e2e-e13iadtw\\run\\shiro.ini"
+    "[2026-10-10 04:38:31] Fuseki     INFO  Apache Jena Fuseki 6.2.0",
+    "[2026-10-10 04:38:32] Config     INFO  Fuseki Base = D:\\Sematicweb\\Vietnam-University-Knowledge-Graph-ver2\\tmp\\fuseki-e2e-tilyzuek\\run",
+    "[2026-10-10 04:38:32] Config     INFO  Database: /vnedu",
+    "[2026-10-10 04:38:32] Config     INFO  UI Base: fuseki-server.jar",
+    "[2026-10-10 04:38:32] Shiro      INFO  Shiro configuration: file:D:\\Sematicweb\\Vietnam-University-Knowledge-Graph-ver2\\tmp\\fuseki-e2e-tilyzuek\\run\\shiro.ini"
   ],
   "status": "passed"
 }

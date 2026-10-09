@@ -1,6 +1,6 @@
 {\small\setlength{\tabcolsep}{3pt}
 \begin{longtable}{>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{2.7cm}>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}p{2.7cm}}
-\caption{Các thuộc tính của ontology \texttt{vnedu:} 2.1 (sinh tự động từ \texttt{ontology/vnedu.ttl}).}\label{tab:props}\\
+\caption{Các thuộc tính của ontology \texttt{vnedu:} 2.4 (sinh tự động từ \texttt{ontology/vnedu.ttl}).}\label{tab:props}\\
 \toprule
 Thuộc tính & Nhãn & Miền \(\rightarrow\) đích & Đặc tính & Căn chỉnh \\
 \midrule\endfirsthead
@@ -9,14 +9,16 @@ Thuộc tính & Nhãn & Miền \(\rightarrow\) đích & Đặc tính & Căn ch�
 \midrule\endhead
 \bottomrule\endfoot
 \multicolumn{5}{l}{\textbf{Tổ chức và quản trị}} \\
-\texttt{governed\allowbreak{}By} & có cơ quan chủ quản & Educational\allowbreak{}Organization \(\rightarrow\) Governing\allowbreak{}Body & nghịch đảo \texttt{governs}; chuỗi \(\mathit{governed\allowbreak{}By}\circ\mathit{subordinate\allowbreak{}To}\) & \texttt{schema:\allowbreak{}parent\allowbreak{}Organization} \\
-\texttt{governs} & là cơ quan chủ quản của & Governing\allowbreak{}Body \(\rightarrow\) Educational\allowbreak{}Organization & nghịch đảo \texttt{governed\allowbreak{}By} & \texttt{schema:\allowbreak{}sub\allowbreak{}Organization} \\
+\texttt{governed\allowbreak{}By} & có cơ quan chủ quản & Educational\allowbreak{}Organization \(\rightarrow\) Governing\allowbreak{}Body & nghịch đảo \texttt{governs}; chuỗi \(\mathit{governed\allowbreak{}By}\circ\mathit{subordinate\allowbreak{}To}\) & -- \\
+\texttt{directly\allowbreak{}Governed\allowbreak{}By} &  & Educational\allowbreak{}Organization \(\rightarrow\) Governing\allowbreak{}Body & \(\sqsubseteq\) \texttt{governed\allowbreak{}By} & -- \\
+\texttt{reported\allowbreak{}Governed\allowbreak{}By} &  & Educational\allowbreak{}Organization \(\rightarrow\) Governing\allowbreak{}Body & \(\sqsubseteq\) \texttt{governed\allowbreak{}By} & -- \\
+\texttt{governs} & là cơ quan chủ quản của & Governing\allowbreak{}Body \(\rightarrow\) Educational\allowbreak{}Organization & nghịch đảo \texttt{governed\allowbreak{}By} & -- \\
 \texttt{state\allowbreak{}Managed\allowbreak{}By} & chịu quản lý nhà nước của & Educational\allowbreak{}Organization \(\rightarrow\) Governing\allowbreak{}Body & -- & -- \\
-\texttt{subordinate\allowbreak{}To} & trực thuộc (cơ quan cấp trên) & Governing\allowbreak{}Body \(\rightarrow\) Governing\allowbreak{}Body & bắc cầu & \texttt{schema:\allowbreak{}parent\allowbreak{}Organization} \\
-\texttt{owned\allowbreak{}By} & thuộc sở hữu / đầu tư của & Educational\allowbreak{}Organization \(\rightarrow\) Company & -- & \texttt{schema:\allowbreak{}parent\allowbreak{}Organization} \\
+\texttt{subordinate\allowbreak{}To} & trực thuộc (cơ quan cấp trên) & Governing\allowbreak{}Body \(\rightarrow\) Governing\allowbreak{}Body & bắc cầu & -- \\
+\texttt{owned\allowbreak{}By} & thuộc sở hữu / đầu tư của & Educational\allowbreak{}Organization \(\rightarrow\) Company & -- & -- \\
 \texttt{ownership} & loại hình sở hữu & Educational\allowbreak{}Organization \(\rightarrow\) Ownership\allowbreak{}Type & hàm & -- \\
-\texttt{member\allowbreak{}Of} & là thành viên của & Educational\allowbreak{}Organization \(\rightarrow\) Higher\allowbreak{}Education\allowbreak{}Institution & nghịch đảo \texttt{has\allowbreak{}Member} & \texttt{schema:\allowbreak{}parent\allowbreak{}Organization} \\
-\texttt{has\allowbreak{}Member} & có đơn vị thành viên & Higher\allowbreak{}Education\allowbreak{}Institution \(\rightarrow\) Educational\allowbreak{}Organization & nghịch đảo \texttt{member\allowbreak{}Of} & \texttt{schema:\allowbreak{}sub\allowbreak{}Organization} \\
+\texttt{member\allowbreak{}Of} & là thành viên của & Educational\allowbreak{}Organization \(\rightarrow\) Higher\allowbreak{}Education\allowbreak{}Institution & nghịch đảo \texttt{has\allowbreak{}Member} & -- \\
+\texttt{has\allowbreak{}Member} & có đơn vị thành viên & Higher\allowbreak{}Education\allowbreak{}Institution \(\rightarrow\) Educational\allowbreak{}Organization & nghịch đảo \texttt{member\allowbreak{}Of} & -- \\
 \texttt{branch\allowbreak{}Of} & là phân hiệu của & Branch \(\rightarrow\) Higher\allowbreak{}Education\allowbreak{}Institution & hàm; nghịch đảo \texttt{has\allowbreak{}Branch} & \texttt{schema:\allowbreak{}parent\allowbreak{}Organization} \\
 \texttt{has\allowbreak{}Branch} & có phân hiệu & Higher\allowbreak{}Education\allowbreak{}Institution \(\rightarrow\) Branch & nghịch đảo \texttt{branch\allowbreak{}Of} & \texttt{schema:\allowbreak{}sub\allowbreak{}Organization} \\
 \texttt{predecessor} & tiền thân & Educational\allowbreak{}Organization \(\rightarrow\) Organization & nghịch đảo \texttt{successor} & \texttt{dbo:\allowbreak{}predecessor} \\
@@ -24,50 +26,66 @@ Thuộc tính & Nhãn & Miền \(\rightarrow\) đích & Đặc tính & Căn ch�
 \texttt{website} & trang web & Organization \(\rightarrow\) -- & -- & \texttt{foaf:\allowbreak{}homepage} \\
 \midrule
 \multicolumn{5}{l}{\textbf{Lãnh đạo và con người}} \\
-\texttt{has\allowbreak{}Leader} & có người đứng đầu & Organization \(\rightarrow\) Person & nghịch đảo \texttt{leads} & \texttt{schema:\allowbreak{}employee} \\
-\texttt{leads} & đứng đầu & Person \(\rightarrow\) Organization & nghịch đảo \texttt{has\allowbreak{}Leader} & \texttt{schema:\allowbreak{}works\allowbreak{}For} \\
-\texttt{rector} & hiệu trưởng & Educational\allowbreak{}Organization \(\rightarrow\) Person & \(\sqsubseteq\) \texttt{has\allowbreak{}Leader} & \texttt{dbo:\allowbreak{}rector} \\
-\texttt{director} & giám đốc & Educational\allowbreak{}Organization \(\rightarrow\) Person & \(\sqsubseteq\) \texttt{has\allowbreak{}Leader} & -- \\
+\texttt{has\allowbreak{}Leader} & có lãnh đạo được nguồn ghi nhận & Organization \(\rightarrow\) Person & nghịch đảo \texttt{leads} & -- \\
+\texttt{leads} & đứng đầu & Person \(\rightarrow\) Organization & nghịch đảo \texttt{has\allowbreak{}Leader} & -- \\
+\texttt{has\allowbreak{}Head} & có người đứng đầu & Educational\allowbreak{}Organization \(\rightarrow\) Person & nghịch đảo \texttt{head\allowbreak{}Of}; \(\sqsubseteq\) \texttt{has\allowbreak{}Leader} & -- \\
+\texttt{head\allowbreak{}Of} & đứng đầu (theo pháp luật) & Person \(\rightarrow\) Educational\allowbreak{}Organization & nghịch đảo \texttt{has\allowbreak{}Head} & -- \\
+\texttt{rector} & hiệu trưởng & Educational\allowbreak{}Organization \(\rightarrow\) Person & \(\sqsubseteq\) \texttt{has\allowbreak{}Head} & \texttt{dbo:\allowbreak{}rector} \\
+\texttt{director} & giám đốc & Educational\allowbreak{}Organization \(\rightarrow\) Person & \(\sqsubseteq\) \texttt{has\allowbreak{}Head} & -- \\
 \texttt{council\allowbreak{}Chair} & chủ tịch hội đồng trường & Educational\allowbreak{}Organization \(\rightarrow\) Person & \(\sqsubseteq\) \texttt{has\allowbreak{}Leader} & \texttt{dbo:\allowbreak{}chairman} \\
+\texttt{educated\allowbreak{}At} & được ghi nhận học tại & Person \(\rightarrow\) Educational\allowbreak{}Organization & nghịch đảo \texttt{has\allowbreak{}Education\allowbreak{}Participant} & -- \\
+\texttt{has\allowbreak{}Education\allowbreak{}Participant} &  & Educational\allowbreak{}Organization \(\rightarrow\) Person & nghịch đảo \texttt{educated\allowbreak{}At} & -- \\
 \texttt{alumnus\allowbreak{}Of} & cựu sinh viên của & Person \(\rightarrow\) Educational\allowbreak{}Organization & nghịch đảo \texttt{has\allowbreak{}Alumnus} & \texttt{schema:\allowbreak{}alumni\allowbreak{}Of} \\
 \texttt{has\allowbreak{}Alumnus} & có cựu sinh viên & Educational\allowbreak{}Organization \(\rightarrow\) Person & nghịch đảo \texttt{alumnus\allowbreak{}Of} & -- \\
-\texttt{born\allowbreak{}In} & sinh ra tại (đơn vị hành chính) & Person \(\rightarrow\) Administrative\allowbreak{}Unit & chuỗi \(\mathit{born\allowbreak{}In}\circ\mathit{merged\allowbreak{}Into}\); chuỗi \(\mathit{born\allowbreak{}In}\circ\mathit{part\allowbreak{}Of}\) & -- \\
+\texttt{born\allowbreak{}In} & sinh ra tại (đơn vị hành chính) & Person \(\rightarrow\) Administrative\allowbreak{}Unit & -- & -- \\
+\texttt{birth\allowbreak{}Area\allowbreak{}In\allowbreak{}Current\allowbreak{}Crosswalk} &  & Person \(\rightarrow\) Geographic\allowbreak{}Area & chuỗi \(\mathit{born\allowbreak{}In}\circ\mathit{merged\allowbreak{}Into}\); chuỗi \(\mathit{born\allowbreak{}In}\circ\mathit{part\allowbreak{}Of}\); chuỗi \(\mathit{birth\allowbreak{}Area\allowbreak{}In\allowbreak{}Current\allowbreak{}Crosswalk}\circ\mathit{part\allowbreak{}Of}\) & -- \\
 \texttt{birth\allowbreak{}Place} & nơi sinh & Person \(\rightarrow\) -- & -- & \texttt{dbo:\allowbreak{}birth\allowbreak{}Place}, \texttt{schema:\allowbreak{}birth\allowbreak{}Place} \\
 \texttt{nationality} & quốc tịch & Person \(\rightarrow\) Country & -- & \texttt{dbo:\allowbreak{}nationality}, \texttt{schema:\allowbreak{}nationality} \\
 \midrule
 \multicolumn{5}{l}{\textbf{Địa lý hành chính}} \\
-\texttt{located\allowbreak{}In} & đặt tại & Organization \(\rightarrow\) Administrative\allowbreak{}Unit & chuỗi \(\mathit{located\allowbreak{}In}\circ\mathit{part\allowbreak{}Of}\); chuỗi \(\mathit{located\allowbreak{}In}\circ\mathit{merged\allowbreak{}Into}\) & \texttt{schema:\allowbreak{}location} \\
-\texttt{part\allowbreak{}Of} & thuộc (đơn vị lớn hơn) & Administrative\allowbreak{}Unit \(\rightarrow\) Administrative\allowbreak{}Unit & bắc cầu; nghịch đảo \texttt{has\allowbreak{}Part} & \texttt{schema:\allowbreak{}contained\allowbreak{}In\allowbreak{}Place} \\
-\texttt{has\allowbreak{}Part} & gồm & Administrative\allowbreak{}Unit \(\rightarrow\) Administrative\allowbreak{}Unit & nghịch đảo \texttt{part\allowbreak{}Of} & \texttt{schema:\allowbreak{}contains\allowbreak{}Place} \\
+\texttt{located\allowbreak{}In} & đặt tại & Organization \(\rightarrow\) Geographic\allowbreak{}Area & chuỗi \(\mathit{located\allowbreak{}In}\circ\mathit{part\allowbreak{}Of}\); chuỗi \(\mathit{located\allowbreak{}In}\circ\mathit{merged\allowbreak{}Into}\) & \texttt{schema:\allowbreak{}location} \\
+\texttt{part\allowbreak{}Of} & thuộc (khu vực lớn hơn) & Geographic\allowbreak{}Area \(\rightarrow\) Geographic\allowbreak{}Area & bắc cầu; nghịch đảo \texttt{has\allowbreak{}Part} & \texttt{schema:\allowbreak{}contained\allowbreak{}In\allowbreak{}Place} \\
+\texttt{has\allowbreak{}Part} & gồm & Geographic\allowbreak{}Area \(\rightarrow\) Geographic\allowbreak{}Area & nghịch đảo \texttt{part\allowbreak{}Of} & \texttt{schema:\allowbreak{}contains\allowbreak{}Place} \\
 \texttt{merged\allowbreak{}Into} & sáp nhập vào & Former\allowbreak{}Province \(\rightarrow\) Province & hàm; nghịch đảo \texttt{merged\allowbreak{}From} & -- \\
 \texttt{merged\allowbreak{}From} & hình thành từ & Province \(\rightarrow\) Former\allowbreak{}Province & nghịch đảo \texttt{merged\allowbreak{}Into} & -- \\
 \midrule
 \multicolumn{5}{l}{\textbf{Đào tạo}} \\
 \texttt{offers\allowbreak{}Program} & đào tạo chương trình & Educational\allowbreak{}Organization \(\rightarrow\) Academic\allowbreak{}Program & nghịch đảo \texttt{offered\allowbreak{}By} & -- \\
-\texttt{offered\allowbreak{}By} & do ... đào tạo & Academic\allowbreak{}Program \(\rightarrow\) Educational\allowbreak{}Organization & hàm; nghịch đảo \texttt{offers\allowbreak{}Program} & \texttt{schema:\allowbreak{}provider} \\
-\texttt{of\allowbreak{}Major} & thuộc ngành & Academic\allowbreak{}Program \(\rightarrow\) Major & hàm & -- \\
+\texttt{offered\allowbreak{}By} & do ... đào tạo & Academic\allowbreak{}Program \(\rightarrow\) Educational\allowbreak{}Organization & nghịch đảo \texttt{offers\allowbreak{}Program} & \texttt{schema:\allowbreak{}provider} \\
+\texttt{of\allowbreak{}Major} & thuộc ngành & Academic\allowbreak{}Program \(\rightarrow\) Major & -- & -- \\
 \texttt{trains\allowbreak{}Major} & đào tạo ngành & Educational\allowbreak{}Organization \(\rightarrow\) Major & chuỗi \(\mathit{offers\allowbreak{}Program}\circ\mathit{of\allowbreak{}Major}\) & -- \\
 \texttt{in\allowbreak{}Field} & thuộc lĩnh vực & Major \(\rightarrow\) Field\allowbreak{}Of\allowbreak{}Study & -- & \texttt{skos:\allowbreak{}broader} \\
 \midrule
 \multicolumn{5}{l}{\textbf{Thuộc tính dữ liệu}} \\
-\texttt{founding\allowbreak{}Year} & năm thành lập & Organization \(\rightarrow\) xsd:\allowbreak{}g\allowbreak{}Year & hàm & \texttt{dbo:\allowbreak{}founding\allowbreak{}Year} \\
-\texttt{dissolution\allowbreak{}Year} & năm giải thể / sáp nhập & Organization \(\rightarrow\) xsd:\allowbreak{}g\allowbreak{}Year & hàm & \texttt{dbo:\allowbreak{}dissolution\allowbreak{}Year} \\
+\texttt{founding\allowbreak{}Year} & năm truyền thống (năm thành lập sớm nhất được ghi nhận) & Organization \(\rightarrow\) xsd:\allowbreak{}integer & hàm & -- \\
+\texttt{establishment\allowbreak{}Year} & năm thành lập pháp nhân hiện tại & Organization \(\rightarrow\) xsd:\allowbreak{}integer & hàm & -- \\
+\texttt{reported\allowbreak{}Founding\allowbreak{}Date} & ngày thành lập khác được nguồn ghi nhận & Organization \(\rightarrow\) xsd:\allowbreak{}date\allowbreak{}Time & -- & -- \\
+\texttt{dissolution\allowbreak{}Year} & năm giải thể / sáp nhập & Organization \(\rightarrow\) xsd:\allowbreak{}integer & hàm & -- \\
 \texttt{admission\allowbreak{}Code} & mã trường (tuyển sinh) & Educational\allowbreak{}Organization \(\rightarrow\) xsd:\allowbreak{}string & -- & \texttt{skos:\allowbreak{}notation} \\
 \texttt{short\allowbreak{}Name} & tên viết tắt & Organization \(\rightarrow\) xsd:\allowbreak{}string & -- & \texttt{dbo:\allowbreak{}abbreviation} \\
-\texttt{former\allowbreak{}Name} & tên cũ & Organization \(\rightarrow\) rdf:\allowbreak{}lang\allowbreak{}String & -- & \texttt{dbo:\allowbreak{}former\allowbreak{}Name} \\
-\texttt{motto} & khẩu hiệu & Educational\allowbreak{}Organization \(\rightarrow\) rdf:\allowbreak{}lang\allowbreak{}String & -- & \texttt{dbo:\allowbreak{}motto} \\
+\texttt{former\allowbreak{}Name} & tên cũ & Organization \(\rightarrow\) rdfs:\allowbreak{}Literal & -- & \texttt{dbo:\allowbreak{}former\allowbreak{}Name} \\
+\texttt{motto} & khẩu hiệu & Educational\allowbreak{}Organization \(\rightarrow\) rdfs:\allowbreak{}Literal & -- & -- \\
 \texttt{address} & địa chỉ & Organization \(\rightarrow\) xsd:\allowbreak{}string & -- & -- \\
-\texttt{campus} & khuôn viên & Educational\allowbreak{}Organization \(\rightarrow\) xsd:\allowbreak{}string & -- & \texttt{dbo:\allowbreak{}campus} \\
+\texttt{campus} & khuôn viên & Educational\allowbreak{}Organization \(\rightarrow\) xsd:\allowbreak{}string & -- & -- \\
 \texttt{funding} & tài trợ, ngân sách, vốn đầu tư & Educational\allowbreak{}Organization \(\rightarrow\) xsd:\allowbreak{}string & -- & -- \\
-\texttt{history} & lịch sử hình thành & Educational\allowbreak{}Organization \(\rightarrow\) rdf:\allowbreak{}lang\allowbreak{}String & -- & -- \\
+\texttt{history} & lịch sử hình thành & Educational\allowbreak{}Organization \(\rightarrow\) rdfs:\allowbreak{}Literal & -- & -- \\
+\texttt{foreign\allowbreak{}Invested} & có vốn đầu tư nước ngoài & Educational\allowbreak{}Organization \(\rightarrow\) xsd:\allowbreak{}boolean & hàm & -- \\
 \texttt{number\allowbreak{}Of\allowbreak{}Students} & số sinh viên & Educational\allowbreak{}Organization \(\rightarrow\) xsd:\allowbreak{}non\allowbreak{}Negative\allowbreak{}Integer & -- & \texttt{dbo:\allowbreak{}number\allowbreak{}Of\allowbreak{}Students} \\
 \texttt{number\allowbreak{}Of\allowbreak{}Undergraduates} & số sinh viên đại học & Educational\allowbreak{}Organization \(\rightarrow\) xsd:\allowbreak{}non\allowbreak{}Negative\allowbreak{}Integer & -- & \texttt{dbo:\allowbreak{}number\allowbreak{}Of\allowbreak{}Undergraduate\allowbreak{}Students} \\
 \texttt{number\allowbreak{}Of\allowbreak{}Postgraduates} & số học viên sau đại học & Educational\allowbreak{}Organization \(\rightarrow\) xsd:\allowbreak{}non\allowbreak{}Negative\allowbreak{}Integer & -- & \texttt{dbo:\allowbreak{}number\allowbreak{}Of\allowbreak{}Postgraduate\allowbreak{}Students} \\
 \texttt{academic\allowbreak{}Staff} & số giảng viên & Educational\allowbreak{}Organization \(\rightarrow\) xsd:\allowbreak{}non\allowbreak{}Negative\allowbreak{}Integer & -- & \texttt{dbo:\allowbreak{}faculty\allowbreak{}Size} \\
 \texttt{population} & dân số & Administrative\allowbreak{}Unit \(\rightarrow\) xsd:\allowbreak{}non\allowbreak{}Negative\allowbreak{}Integer & -- & \texttt{dbo:\allowbreak{}population\allowbreak{}Total} \\
 \texttt{area} & diện tích (km²) & Administrative\allowbreak{}Unit \(\rightarrow\) xsd:\allowbreak{}decimal & -- & -- \\
-\texttt{birth\allowbreak{}Date} & ngày sinh & Person \(\rightarrow\) xsd:\allowbreak{}date & hàm & \texttt{dbo:\allowbreak{}birth\allowbreak{}Date}, \texttt{schema:\allowbreak{}birth\allowbreak{}Date} \\
+\texttt{birth\allowbreak{}Date} & ngày sinh & Person \(\rightarrow\) xsd:\allowbreak{}date\allowbreak{}Time & hàm & \texttt{schema:\allowbreak{}birth\allowbreak{}Date} \\
 \texttt{honorific} & học hàm, học vị, quân hàm & Person \(\rightarrow\) xsd:\allowbreak{}string & -- & \texttt{schema:\allowbreak{}honorific\allowbreak{}Prefix} \\
 \texttt{code} & mã ngành / mã lĩnh vực & -- \(\rightarrow\) xsd:\allowbreak{}string & -- & \texttt{skos:\allowbreak{}notation} \\
-\texttt{degree\allowbreak{}Level} & trình độ đào tạo & Academic\allowbreak{}Program \(\rightarrow\) xsd:\allowbreak{}string & -- & -- \\
+\texttt{degree\allowbreak{}Level} & trình độ đào tạo & Academic\allowbreak{}Program \(\rightarrow\) rdfs:\allowbreak{}Literal & -- & -- \\
+\midrule
+\multicolumn{5}{l}{\textbf{Nguồn gốc và thời gian (SourceObservation)}} \\
+\texttt{snapshot\allowbreak{}Digest} &  & Source\allowbreak{}Observation \(\rightarrow\) xsd:\allowbreak{}string & -- & -- \\
+\texttt{temporal\allowbreak{}Status} &  & Source\allowbreak{}Observation \(\rightarrow\) xsd:\allowbreak{}string & -- & -- \\
+\texttt{valid\allowbreak{}From} &  & Source\allowbreak{}Observation \(\rightarrow\) xsd:\allowbreak{}date\allowbreak{}Time & -- & -- \\
+\texttt{valid\allowbreak{}Through} &  & Source\allowbreak{}Observation \(\rightarrow\) xsd:\allowbreak{}date\allowbreak{}Time & -- & -- \\
+\texttt{reference\allowbreak{}Year} &  & Source\allowbreak{}Observation \(\rightarrow\) xsd:\allowbreak{}integer & -- & -- \\
+\texttt{measurement\allowbreak{}Unit} &  & Measurement\allowbreak{}Observation \(\rightarrow\) xsd:\allowbreak{}string & -- & -- \\
 \end{longtable}}

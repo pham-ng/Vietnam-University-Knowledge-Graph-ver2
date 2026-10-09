@@ -18,16 +18,21 @@ o.bind("schema", "https://schema.org/")
 o.bind("dbo", "http://dbpedia.org/ontology/")
 
 GROUPS = [
-    ("Tổ chức và quản trị", ["governedBy", "governs", "stateManagedBy", "subordinateTo", "ownedBy", "ownership",
-                             "memberOf", "hasMember", "branchOf", "hasBranch", "predecessor", "successor", "website"]),
-    ("Lãnh đạo và con người", ["hasLeader", "leads", "rector", "director", "councilChair", "alumnusOf", "hasAlumnus",
-                               "bornIn", "birthPlace", "nationality"]),
+    ("Tổ chức và quản trị", ["governedBy", "directlyGovernedBy", "reportedGovernedBy", "governs", "stateManagedBy",
+                             "subordinateTo", "ownedBy", "ownership", "memberOf", "hasMember", "branchOf", "hasBranch",
+                             "predecessor", "successor", "website"]),
+    ("Lãnh đạo và con người", ["hasLeader", "leads", "hasHead", "headOf", "rector", "director", "councilChair",
+                               "educatedAt", "hasEducationParticipant", "alumnusOf", "hasAlumnus",
+                               "bornIn", "birthAreaInCurrentCrosswalk", "birthPlace", "nationality"]),
     ("Địa lý hành chính", ["locatedIn", "partOf", "hasPart", "mergedInto", "mergedFrom"]),
     ("Đào tạo", ["offersProgram", "offeredBy", "ofMajor", "trainsMajor", "inField"]),
-    ("Thuộc tính dữ liệu", ["foundingYear", "dissolutionYear", "admissionCode", "shortName", "formerName", "motto",
-                            "address", "campus", "funding", "history", "numberOfStudents", "numberOfUndergraduates",
+    ("Thuộc tính dữ liệu", ["foundingYear", "establishmentYear", "reportedFoundingDate", "dissolutionYear",
+                            "admissionCode", "shortName", "formerName", "motto", "address", "campus", "funding",
+                            "history", "foreignInvested", "numberOfStudents", "numberOfUndergraduates",
                             "numberOfPostgraduates", "academicStaff", "population", "area", "birthDate", "honorific",
                             "code", "degreeLevel"]),
+    ("Nguồn gốc và thời gian (SourceObservation)", ["snapshotDigest", "temporalStatus", "validFrom", "validThrough",
+                                                     "referenceYear", "measurementUnit"]),
 ]
 
 
@@ -103,7 +108,7 @@ dest = ROOT / "docs" / "report" / "tables"
 dest.mkdir(exist_ok=True)
 HEAD = r"""{\small\setlength{\tabcolsep}{3pt}
 \begin{longtable}{>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{2.7cm}>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}p{2.7cm}}
-\caption{Các thuộc tính của ontology \texttt{vnedu:} 2.1 (sinh tự động từ \texttt{ontology/vnedu.ttl}).}\label{tab:props}\\
+\caption{Các thuộc tính của ontology \texttt{vnedu:} 2.4 (sinh tự động từ \texttt{ontology/vnedu.ttl}).}\label{tab:props}\\
 \toprule
 Thuộc tính & Nhãn & Miền \(\rightarrow\) đích & Đặc tính & Căn chỉnh \\
 \midrule\endfirsthead

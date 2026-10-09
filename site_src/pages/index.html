@@ -68,7 +68,7 @@
   const tiles = [
     [hei.length, "cơ sở GDĐH đang hoạt động"], [hei.filter(i => i.own === "public").length, "công lập"],
     [hei.filter(i => i.own === "private").length, "tư thục"], [hei.filter(i => i.military || i.police).length, "quân đội & công an"],
-    [D.provinces.length, "tỉnh/thành (2025)"], [D.people, "người (cựu SV, lãnh đạo)"],
+    [D.provinces.length, "tỉnh/thành (2025)"], [D.people, "người (học tập, lãnh đạo)"],
     [D.triples["vnedu-all.ttl"], "triple RDF"], [totalLinks, "liên kết ra ngoài"],
   ];
   document.getElementById("tiles").innerHTML = tiles.map(([n, l]) => `<div class="card stat"><b>${VN.fmt(n)}</b><span>${l}</span></div>`).join("");
