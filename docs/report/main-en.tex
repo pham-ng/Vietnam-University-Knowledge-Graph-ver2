@@ -199,7 +199,7 @@ Interoperability & RDF 1.1, OWL, SKOS, PROV-O, JSON-LD, HTTP IRIs & Syntax and p
 Identity stability & Canonical resource namespace and committed URI registry & URI-regression tests; migration is still required when source keys change \\
 Semantic precision & Separate properties for governance, oversight, membership, branch, ownership, and geography & Domain/range inspection and competency queries \\
 Data quality & JSON Schema, raw asserted checks, OWL 2 RL materialization, and SHACL & Release gate; warnings remain visible and are not silently converted to facts \\
-Reproducibility & Cached inputs, fingerprints, pinned runtime versions, CI workflows, and machine-readable reports & Local reconstruction and Linux Fuseki/Silk workflows \\
+Reproducibility & Cached inputs, fingerprints, pinned runtime versions, CI workflows, and machine-readable reports & Local reconstruction plus Linux and Windows Fuseki/Silk evidence \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -471,8 +471,11 @@ performs the same negotiation.
 The implementation supports practices associated with five-star Linked Open Data.
 Section~\ref{sec:five-star} assesses each level and reports a small, dated HTTP sample;
 it does not reuse the earlier report's live availability measurements. The repository
-declares data licensing and retains media metadata; this audit is not a legal verification
-of the license of every upstream asset.
+declares project licensing, retains source-specific rights metadata, and does not purport
+to relicense upstream material. In particular, the Ministry admissions source does not
+state a machine-readable open-data licence; its official facts are attributed and their
+reuse remains subject to the source's terms. This audit is not legal advice or a legal
+verification of every upstream asset.
 
 The publisher now checks its output path before recursive replacement. It refuses the
 project root, external paths, symbolic links, and existing directories without generated-site

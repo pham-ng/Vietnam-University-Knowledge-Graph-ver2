@@ -13,12 +13,12 @@ import sys
 from pathlib import Path
 
 from rdflib import Graph, Literal, Namespace, URIRef
-from rdflib.namespace import FOAF, RDF, RDFS, SKOS, XSD
+from rdflib.namespace import DCTERMS, FOAF, RDF, RDFS, SKOS, XSD
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config  # noqa: E402
-from observations import qualify_snapshot
+from observations import observe, qualify_snapshot
 from common import DBO, GEO, SCHEMA, VNEDU, Minter, bind_prefixes, field_uri, major_uri, read_csv, record_manifest, vn_key  # noqa: E402
 
 PROV = Namespace("http://www.w3.org/ns/prov#")
@@ -194,6 +194,8 @@ def main() -> None:
             g.add((s, VNEDU.branchOf, u_inst[m]))
         for b in i["governed_by"]:
             g.add((s, VNEDU.reportedGovernedBy, u_body[b]))
+        for b in i.get("direct_governed_by", []):
+            g.add((s, VNEDU.directlyGovernedBy, u_body[b]))
         for b in i["owned_by"]:
             g.add((s, VNEDU.ownedBy, u_body[b]))
         for b in i.get("state_managed_by", []):
@@ -213,6 +215,9 @@ def main() -> None:
             g.add((s, PROV.wasDerivedFrom, WD[i["qid"]]))
         if i["viwiki"] and i["viwiki_revid"]:
             g.add((s, PROV.wasDerivedFrom, URIRef(f"https://vi.wikipedia.org/w/index.php?oldid={i['viwiki_revid']}")))
+        for refs in i.get("field_sources", {}).values():
+            for ref in refs:
+                g.add((s, PROV.wasDerivedFrom, URIRef(ref["source"])))
 
     # ------------------------------------------------------------ con người
     for k, p in people.items():
@@ -296,6 +301,46 @@ def main() -> None:
     (CLEAN / "uri_map.json").write_text(json.dumps(keymap, ensure_ascii=False, indent=1), encoding="utf-8")
 
     evidence = qualify_snapshot(g, CLEAN)
+    # Claim-level provenance for fields refreshed from authoritative registries.
+    # Retrieval time qualifies the snapshot only; it is not treated as a legal validity interval.
+    source_fields = {
+        "admission_codes": VNEDU.admissionCode,
+        "short_names": VNEDU.shortName,
+        "email": SCHEMA.email,
+        "telephone": SCHEMA.telephone,
+        "website": VNEDU.website,
+        "direct_governed_by": VNEDU.directlyGovernedBy,
+        "former_names": VNEDU.formerName,
+    }
+    for key, inst in insts.items():
+        subject = u_inst[key]
+        for field, refs in inst.get("field_sources", {}).items():
+            predicate = source_fields.get(field)
+            if predicate is None:
+                continue
+            for value in list(g.objects(subject, predicate)):
+                def source_values(ref):
+                    values = ref.get("values", [])
+                    if field == "direct_governed_by":
+                        return [str(u_body[v]) for v in values if v in u_body]
+                    return values
+
+                matching = [ref for ref in refs if str(value) in source_values(ref)]
+                if not matching:
+                    continue
+                sources = sorted({ref["source"] for ref in matching})
+                records = sorted({ref.get("record", "") for ref in matching if ref.get("record")})
+                times = sorted({ref.get("retrieved_at", "") for ref in matching if ref.get("retrieved_at")})
+                valid_froms = sorted({ref.get("valid_from", "") for ref in matching if ref.get("valid_from")})
+                valid_throughs = sorted({ref.get("valid_through", "") for ref in matching if ref.get("valid_through")})
+                node = observe(g, subject, predicate, value, evidence["snapshot_sha256"], sources=sources,
+                               valid_from=valid_froms[-1] if valid_froms else None,
+                               valid_through=valid_throughs[-1] if valid_throughs else None)
+                for record in records:
+                    g.add((node, DCTERMS.identifier, Literal(record)))
+                for retrieved_at in times:
+                    lexical = retrieved_at.replace("+00:00", "Z")
+                    g.add((node, PROV.generatedAtTime, Literal(lexical, datatype=XSD.dateTime)))
     config.REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     (config.REPORTS_DIR / "observation-provenance.json").write_text(json.dumps(evidence, indent=2, sort_keys=True), encoding="utf-8")
     config.RDF_DIR.mkdir(parents=True, exist_ok=True)

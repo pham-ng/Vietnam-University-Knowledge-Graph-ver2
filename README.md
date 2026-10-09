@@ -133,7 +133,7 @@ powershell -ExecutionPolicy Bypass -File audit/setup_runtimes.ps1
 python run_all.py --no-install --with-silk --silk-java "C:\Program Files\Java\jre1.8.0_481\bin\java.exe" --silk-classpath "tmp\runtimes\silk-cli;tmp\runtimes\silk-workbench-v3.6.0\lib\*"
 ```
 
-Bằng chứng Silk được xác nhận trong workflow Linux [`silk-e2e.yml`](.github/workflows/silk-e2e.yml); Java 8 trên Windows của môi trường review có thể timeout trước khi sinh candidate.
+Bằng chứng Silk được xác nhận trong workflow Linux [`silk-e2e.yml`](.github/workflows/silk-e2e.yml) và đã được tái chạy thành công trên Windows với Java 8.481; kết quả vẫn chỉ là candidate, không tự động nhập vào `owl:sameAs`.
 
 Kiểm tra hình thức OWL 2 RL bằng OWL API (cần Protégé 5.6.7 và Java 21 trên máy Windows review):
 
@@ -380,15 +380,15 @@ SHACL đạt theo chính sách cho phép **34 cảnh báo và 1 thông tin**. Xe
 
 | Tệp | Nội dung | Số triple |
 |---|---|--:|
-| [`vnedu-data.ttl`](data/gold/vnedu-data.ttl) | dữ kiện gốc (sau làm sạch) | 22.931 |
-| [`vnedu-links.ttl`](data/gold/vnedu-links.ttl) | liên kết ra dataset khác | 3.674 |
-| [`vnedu-inferred.ttl`](data/gold/vnedu-inferred.ttl) | suy luận mới được giữ lại | 21.018 |
-| [`void.ttl`](data/gold/void.ttl) | mô tả dataset (VoID + DCAT) | 96 |
-| [`ontology/vnedu.ttl`](ontology/vnedu.ttl) | ontology đã hiệu chỉnh | 777 |
-| **[`vnedu-all.ttl`](data/gold/vnedu-all.ttl)** | **hợp các tập, dùng để truy vấn** | **48.492** |
+| [`vnedu-data.ttl`](data/gold/vnedu-data.ttl) | dữ kiện gốc (sau làm sạch) | 59.428 |
+| [`vnedu-links.ttl`](data/gold/vnedu-links.ttl) | liên kết ra dataset khác | 3.558 |
+| [`vnedu-inferred.ttl`](data/gold/vnedu-inferred.ttl) | suy luận mới được giữ lại | 23.169 |
+| [`void.ttl`](data/gold/void.ttl) | mô tả dataset (VoID + DCAT) | 104 |
+| [`ontology/vnedu.ttl`](ontology/vnedu.ttl) | ontology đã hiệu chỉnh | 862 |
+| **[`vnedu-all.ttl`](data/gold/vnedu-all.ttl)** | **hợp các tập, dùng để truy vấn** | **87.117** |
 
-- **2.248 URI tài nguyên cục bộ** xuất hiện ở vị trí chủ thể; kiểm tra bản dựng cục bộ không đồng nghĩa với kiểm chứng uptime của website.
-- Liên kết gồm **2.398 `owl:sameAs`**, **88 `skos:closeMatch`**, **1.188 liên kết trang Wikipedia**; các loại này có ngữ nghĩa khác nhau.
+- **6.422 URI tài nguyên cục bộ** xuất hiện ở vị trí chủ thể; kiểm tra bản dựng cục bộ không đồng nghĩa với kiểm chứng uptime của website.
+- Liên kết gồm **2.309 `owl:sameAs`**, **61 `skos:closeMatch`**, **1.188 liên kết trang Wikipedia**; các loại này có ngữ nghĩa khác nhau.
 - Các kiểm tra datatype, SHACL và suy luận có phạm vi xác định, chưa thay thế kiểm chứng dữ kiện bằng nguồn độc lập.
 
 ### 7.2. Trường học thu thập được
@@ -419,9 +419,9 @@ và **2000** (57 trường, giai đoạn mở rộng và ra đời nhiều trư�
 | Năm thành lập | 278 | | Giới thiệu chung | 271 |
 | Tỉnh/thành | 288 | | Lịch sử | 223 |
 | Loại hình sở hữu | 256 | | Biểu trưng (logo) | 149 |
-| Website | 237 | | Ảnh trường | 97 |
-| Lãnh đạo | 199 | | Điện thoại / email | 181 / 92 |
-| Toạ độ | 175 | | Mã tuyển sinh | 60 |
+| Website | 260 | | Ảnh trường | 97 |
+| Lãnh đạo | 199 | | Điện thoại / email | 246 / 225 |
+| Toạ độ | 175 | | Mã tuyển sinh | 222 |
 
 Báo cáo đầy đủ: [data/reports/quality_report.md](data/reports/quality_report.md).
 
@@ -431,7 +431,7 @@ Báo cáo đầy đủ: [data/reports/quality_report.md](data/reports/quality_re
 
 | | Yêu cầu | Dự án làm gì |
 |:-:|---|---|
-| ★ | Có trên Web, giấy phép mở | Công khai tại GitHub Pages, giấy phép **CC BY-SA 4.0** ([LICENSE-DATA.md](LICENSE-DATA.md)) |
+| ★ | Có trên Web, giấy phép mở | Công khai tại GitHub Pages; CC BY-SA 4.0 cho phần dự án có quyền cấp phép và khai báo quyền riêng theo từng nguồn ([LICENSE-DATA.md](LICENSE-DATA.md)) |
 | ★★ | Dữ liệu có cấu trúc | JSON, CSV, RDF — không phải ảnh hay PDF |
 | ★★★ | Định dạng mở | Turtle, N-Triples, JSON-LD, CSV |
 | ★★★★ | Chuẩn W3C + URI | RDF, OWL, SHACL, SPARQL, JSON-LD; **mỗi thực thể một URI mở được trên web** |
@@ -452,7 +452,7 @@ curl https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/
 ```python
 from rdflib import Graph
 g = Graph().parse("https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl")
-print(len(g))  # 39507
+print(len(g))  # 87117
 ```
 
 Ví dụ SPARQL — số cơ sở GDĐH theo miền và loại hình (miền do máy suy ra):
@@ -514,14 +514,15 @@ federated sang Wikidata/DBpedia…).
 
 - **Nguồn cộng đồng biên tập:** Wikipedia/Wikidata có thể chưa cập nhật (lãnh đạo, quy mô). Mỗi giá trị đều truy được
   về bản sửa đổi gốc để kiểm chứng.
-- **Còn thiếu:** 12 cơ sở chưa rõ tỉnh, 22 chưa rõ năm thành lập, 24 chưa rõ công lập/tư thục; số sinh viên và mã tuyển sinh
-  còn ít. Chưa có danh sách chính thức của Bộ GD&ĐT để đối chiếu độ phủ.
+- **Còn thiếu:** 12 cơ sở chưa rõ tỉnh, 22 chưa rõ năm thành lập, 44 chưa rõ công lập/tư thục; số sinh viên và giảng viên
+  còn ít. Mã tuyển sinh và liên hệ đã được đối chiếu với snapshot 405 hồ sơ từ Cổng tuyển sinh Bộ GD&ĐT.
 - **Ngành và chương trình đào tạo** (37 ngành, 78 chương trình) là dữ liệu mẫu nhập tay.
 - **URI chính** nằm trên GitHub Pages (hosting tĩnh) nên tra cứu ở đó dùng HTML + JSON-LD nhúng hoặc đuôi `.ttl`/`.jsonld`;
   content negotiation theo header `Accept` có ở máy chủ [vnedu-lod.onrender.com](https://vnedu-lod.onrender.com). Máy chủ chạy gói Free
-  (tự ngủ khi rảnh, backend rdflib trong bộ nhớ — đủ cho quy mô ~40 nghìn triple, không dành cho tải lớn).
+  (tự ngủ sau thời gian không hoạt động, backend rdflib trong bộ nhớ — không có SLA và không dành cho tải lớn).
+  Monitor công khai là best-effort; cấu hình Fuseki production, backup/restore và kiểm thử tải nằm trong `deploy/` và `audit/`.
 - Logo nhiều trường là ảnh "sử dụng hợp lý" trên Wikipedia — trang web chỉ nhúng từ Wikimedia và ghi rõ giấy phép.
 
 ---
 
-**Giấy phép:** mã nguồn [MIT](LICENSE) · dữ liệu [CC BY-SA 4.0](LICENSE-DATA.md) (dẫn xuất từ Wikipedia; Wikidata là CC0).
+**Giấy phép:** mã nguồn [MIT](LICENSE) · dữ liệu và quyền theo nguồn: [LICENSE-DATA.md](LICENSE-DATA.md).

@@ -659,10 +659,11 @@ def build_site_if_missing(site_dir: Path = SITE_DIR) -> None:
     triển khai không chạy bước build riêng. Chạy trong tiến trình con nên bộ nhớ (~170 MB) được trả lại trước khi phục vụ."""
     if (site_dir / "index.html").exists():
         return
-    import subprocess
+    # Fixed local build command; no request data reaches the process API.
+    import subprocess  # nosec B404
     log.info("Chưa có giao diện ở %s — đang build (≈20 giây) ...", site_dir)
     env = dict(os.environ, VNEDU_SITE_DIR=site_dir.name, VNEDU_SITE_ROOT="/", PYTHONUTF8="1")
-    r = subprocess.run([sys.executable, str(ROOT / "scripts" / "step7_publish.py")], env=env, cwd=ROOT,
+    r = subprocess.run([sys.executable, str(ROOT / "scripts" / "step7_publish.py")], env=env, cwd=ROOT,  # nosec B603
                        capture_output=True, text=True, encoding="utf-8", errors="replace")
     if r.returncode != 0:
         log.error("Build giao diện thất bại, dùng giao diện dự phòng: %s", r.stdout[-2000:] + r.stderr[-2000:])

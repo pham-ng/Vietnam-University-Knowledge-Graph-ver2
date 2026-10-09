@@ -9,6 +9,26 @@
    "source": "https://dbpedia.org/sparql",
    "unit": "records"
   },
+  "data/bronze/moet_admissions.json": {
+   "count": 405,
+   "generated_at": "2026-10-09T03:11:10",
+   "hash_normalization": "LF line endings",
+   "license": "Official public facts; no machine-readable open-data licence stated",
+   "retrieved_at": "2026-10-08T20:11:10+00:00",
+   "sha256": "8f078d80eb5ffbe1ab9268662117cc18ff0e573ff57ef87b634d2f3aa32b0963",
+   "source": "https://tuyensinh.moet.gov.vn/ts/",
+   "unit": "records"
+  },
+  "data/bronze/ror_organizations.json": {
+   "count": 202,
+   "generated_at": "2026-10-09T03:11:20",
+   "hash_normalization": "LF line endings",
+   "license": "CC0 1.0",
+   "retrieved_at": "2026-10-08T20:11:20+00:00",
+   "sha256": "c5e8fc0c544a8e3f59324a4de99eae8b0837d4a9c8639edbd28c589e72220e1f",
+   "source": "https://api.ror.org/v2/organizations",
+   "unit": "records"
+  },
   "data/bronze/viwiki_images.json": {
    "count": 280,
    "generated_at": "2026-10-08T00:42:37",
@@ -76,10 +96,10 @@
  "gold": {
   "data/gold/vnedu-all.ttl": {
    "consistent": true,
-   "count": 73628,
-   "generated_at": "2026-10-08T00:52:41",
+   "count": 87117,
+   "generated_at": "2026-10-09T08:43:46",
    "hash_normalization": "LF line endings",
-   "sha256": "39ba38bb9f55e0a8c5ed4d343cc91189d5e539631e2a3c9c4e691543284e002c",
+   "sha256": "7dfefff615378e56e9d6cecfeeb133b77614d0162e2a21c2318a364a6c8fa079",
    "shacl_conforms": true,
    "shacl_results": {
     "Info": 1,
@@ -88,24 +108,24 @@
    "unit": "triples"
   },
   "data/gold/vnedu-data.ttl": {
-   "count": 47291,
+   "count": 59428,
    "derived_from": "data/silver/*.json",
-   "generated_at": "2026-10-08T00:42:45",
+   "generated_at": "2026-10-09T03:27:39",
    "hash_normalization": "LF line endings",
-   "sha256": "87c03bac9bfcb72eafc3cad239f1c39042e8f46f7359ef73a2df8be873890c7c",
+   "sha256": "53099a9938343d065269ffbb229912603c13db181ee098680a4fecdb0bac6c8c",
    "unit": "triples"
   },
   "data/gold/vnedu-inferred.ttl": {
-   "count": 21825,
-   "generated_at": "2026-10-08T00:52:36",
+   "count": 23169,
+   "generated_at": "2026-10-09T08:43:43",
    "hash_normalization": "LF line endings",
    "reasoner": "owlrl OWL 2 RL",
-   "sha256": "06cff73b7fc6de55e67c3043d961f9e11a45497474a8aa18fbf0ecf59eae2258",
+   "sha256": "fe463668be11ce160f8da27f4f155938bc5c7dea6765a9f606740f008cf456b8",
    "unit": "triples"
   },
   "data/gold/vnedu-links.ttl": {
    "count": 3558,
-   "generated_at": "2026-10-08T00:42:49",
+   "generated_at": "2026-10-09T08:27:43",
    "hash_normalization": "LF line endings",
    "linksets": {
     "dbpedia|owl:sameAs": 201,
@@ -120,17 +140,17 @@
    "unit": "triples"
   },
   "data/gold/void.ttl": {
-   "count": 96,
-   "generated_at": "2026-10-08T00:42:51",
+   "count": 104,
+   "generated_at": "2026-10-09T08:27:47",
    "hash_normalization": "LF line endings",
-   "sha256": "046ed052a2232f2f8fa1ca7d2dee672da4cbbe986d2967880ac9204b67cf21ab",
+   "sha256": "f40a7c2e99d4c8ddb51122203fb495d1c57ce1e1c414bf88816e090e5e8b6558",
    "unit": "triples"
   }
  },
  "silver": {
   "data/silver/governing_bodies.json": {
    "count": 50,
-   "generated_at": "2026-10-08T00:42:42",
+   "generated_at": "2026-10-09T03:27:35",
    "hash_normalization": "LF line endings",
    "schema": "schemas/silver.schema.json",
    "sha256": "6bee7090a9a7f31cc2474c4293e6dadc9e35665eae9c506d136e0ebe0b7981ea",
@@ -138,15 +158,15 @@
   },
   "data/silver/institutions.json": {
    "count": 300,
-   "generated_at": "2026-10-08T00:42:42",
+   "generated_at": "2026-10-09T03:27:35",
    "hash_normalization": "LF line endings",
    "schema": "schemas/silver.schema.json",
-   "sha256": "d8745e88e111fbd0427a3444448870c79e7a8a3fc210426dac3205ae3fb4353b",
+   "sha256": "638e84551daed5ff6a0619cc088fbc7796eae33beaa44be14ee9e803700119cc",
    "unit": "records"
   },
   "data/silver/people.json": {
    "count": 1702,
-   "generated_at": "2026-10-08T00:42:42",
+   "generated_at": "2026-10-09T03:27:35",
    "hash_normalization": "LF line endings",
    "schema": "schemas/silver.schema.json",
    "sha256": "5de5683cb457cb1b602037755ce49371eb35611689020a5d03b94e34ca4ba894",
@@ -154,7 +174,7 @@
   },
   "data/silver/provinces.json": {
    "count": 63,
-   "generated_at": "2026-10-08T00:42:42",
+   "generated_at": "2026-10-09T03:27:35",
    "hash_normalization": "LF line endings",
    "schema": "schemas/silver.schema.json",
    "sha256": "4cbac2c46a0d2efbf39ecb46bedd2e4cda4a088bbc27882ba099b6e4e070b8b3",

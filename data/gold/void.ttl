@@ -71,33 +71,41 @@
 
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl> a dcat:Distribution ;
     dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
+    dct:rights <https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/LICENSE-DATA.md> ;
     dcat:downloadURL <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl> ;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> .
 
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-data.ttl> a dcat:Distribution ;
     dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
+    dct:rights <https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/LICENSE-DATA.md> ;
     dcat:downloadURL <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-data.ttl> ;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> .
 
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-links.ttl> a dcat:Distribution ;
     dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
+    dct:rights <https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/LICENSE-DATA.md> ;
     dcat:downloadURL <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-links.ttl> ;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> .
 
 <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset> a void:Dataset,
         dcat:Dataset ;
-    dct:description "Cơ sở giáo dục đại học Việt Nam, cơ quan chủ quản, lãnh đạo, cựu sinh viên, đơn vị hành chính (gồm sắp xếp tỉnh 2025), ngành đào tạo — tích hợp và đối chiếu từ Wikidata và Wikipedia tiếng Việt."@vi ;
+    dct:description "Cơ sở giáo dục đại học Việt Nam, cơ quan chủ quản, lãnh đạo, cựu sinh viên, đơn vị hành chính (gồm sắp xếp tỉnh 2025), ngành đào tạo — tích hợp từ các nguồn được ghi nhận ở mức phát biểu và đối chiếu với Wikidata, Wikipedia, ROR cùng nguồn chính thức của Việt Nam."@vi ;
     dct:language <http://id.loc.gov/vocabulary/iso639-1/vi> ;
     dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
-    dct:modified "2026-10-08T00:00:00"^^xsd:dateTime ;
-    dct:source <https://vi.wikipedia.org/>,
+    dct:modified "2026-10-09T00:00:00"^^xsd:dateTime ;
+    dct:rights <https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/LICENSE-DATA.md> ;
+    dct:source <https://api.ror.org/v2/organizations>,
+        <https://congbao.chinhphu.vn/van-ban/quyet-dinh-so-1723-qd-ttg-45825/58191.htm>,
+        <https://tuyensinh.moet.gov.vn/ts/>,
+        <https://vi.wikipedia.org/>,
+        <https://www.openstreetmap.org/>,
         <https://www.wikidata.org/> ;
     dct:title "VN-Edu Linked Open Data"@en,
         "Dữ liệu liên kết mở Giáo dục đại học Việt Nam"@vi ;
     void:dataDump <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-data.ttl>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-links.ttl> ;
-    void:entities 5644 ;
+    void:entities 6665 ;
     void:exampleResource university:dai-hoc-bach-khoa-ha-noi ;
     void:sparqlEndpoint <https://vnedu-lod.onrender.com/sparql> ;
     void:subset <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-dbpedia-closeMatch>,
@@ -107,7 +115,7 @@
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-closeMatch>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikidata-sameAs>,
         <https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/dataset/links-wikipedia-isPrimaryTopicOf> ;
-    void:triples 50849 ;
+    void:triples 62986 ;
     void:uriSpace "https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/resource/" ;
     void:vocabulary dbo:,
         geo:,

@@ -35,8 +35,19 @@ jobs:
         run: python audit/release_metrics.py
       - name: Build giao diện cho máy chủ (đường dẫn gốc /) — để test máy chủ phục vụ đúng giao diện
         run: VNEDU_SITE_DIR=site_server VNEDU_SITE_ROOT=/ python scripts/step7_publish.py
+      - name: Restore the immutable RDF publication bundle
+        run: python audit/recovery_drill.py --site site_server
+      - name: Production-like bounded load and security acceptance
+        run: python audit/production_readiness.py
       - name: Kiểm thử (suy luận, trích xuất, hợp đồng dữ liệu, infobox, máy chủ web)
         run: python -m pytest tests -q
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: release-assurance-${{ github.run_id }}
+          path: |
+            data/reports/recovery-drill.json
+            data/reports/production-readiness.json
 
   deploy:
     name: Build site & deploy Pages

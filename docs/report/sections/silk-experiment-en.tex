@@ -5,9 +5,10 @@ compiled with Scala 2.12.10 against released workbench libraries and run on Java
 Pinned checksums are in \term{audit/setup\_runtimes.ps1}; the runner, XML rules, input
 N-Triples, candidate outputs and result JSON are included in the repository.
 The reproducible execution is scheduled in \term{.github/workflows/silk-e2e.yml} on
-Ubuntu with Java 8. On the reviewed Windows desktop, Java 8.351 and 8.481 both
-timed out before producing candidates; this is recorded as an environment limitation,
-not converted into a success claim.
+Ubuntu with Java 8. On 9 October 2026, the same pinned Silk 3.6.0 entry point also
+completed locally on Windows with Java 8.481 in approximately 24 seconds and reproduced
+the committed candidate counts and metrics. Earlier Windows timeouts remain useful
+environment history, but are no longer the current execution result.
 
 The experiment freezes the 86-source/86-target sample from revision \term{58c65f0},
 giving 7,396 possible pairs. Both methods use the same lowercased English labels.

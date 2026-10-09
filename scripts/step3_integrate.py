@@ -18,6 +18,7 @@ Nguyên tắc hợp nhất (mỗi giá trị đều ghi lại nguồn):
 import csv
 import datetime
 import json
+import os
 import re
 import sys
 from collections import defaultdict
@@ -42,6 +43,16 @@ VIET_CHARS = re.compile(r"[ăâđêôơưạảấầẩẫậắằẳẵặẹ
 
 def load(name):
     return json.loads((config.RAW_DIR / name).read_text(encoding="utf-8"))
+
+
+def load_optional(name, default):
+    path = config.RAW_DIR / name
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else default
+
+
+def source_meta(name):
+    path = (config.RAW_DIR / name).with_suffix(".meta.json")
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
 
 
 def conflict(entity, field, chosen, candidates):
@@ -263,6 +274,48 @@ def geocode_address(address: str, prov_q: str, provs):
     return None
 
 
+def geocode_institution(name: str, prov_q: str, provs):
+    """Strict institution-name geocoding fallback.
+
+    A hit is accepted only when Nominatim classifies it as an educational
+    facility, the returned province agrees with the curated province (including
+    the 2025 merger mapping), and the significant name-token overlap is high.
+    City/province centroids and generic address matches are rejected.
+    """
+    from httpcache import get_json
+    pname = provs[prov_q]["name_vi"]
+    rows = get_json("https://nominatim.openstreetmap.org/search",
+                    {"q": f"{name}, {pname}, Việt Nam", "format": "jsonv2", "limit": 5,
+                     "addressdetails": 1, "namedetails": 1, "countrycodes": "vn", "accept-language": "vi"})
+    stop = {"truong", "dai", "hoc", "hoc-vien", "academy", "university", "vietnam", "viet", "nam"}
+
+    def tokens(text):
+        return {x for x in vn_key(text).split("-") if len(x) > 1 and x not in stop}
+
+    wanted = tokens(name)
+    for hit in rows:
+        kind = (hit.get("type") or "").lower()
+        category = (hit.get("category") or hit.get("class") or "").lower()
+        if kind not in {"university", "college", "school", "research_institute"} and category != "amenity":
+            continue
+        if hit.get("addresstype") in {"country", "state", "province", "city", "town", "village"}:
+            continue
+        address = hit.get("address", {})
+        found = province_from_text(" ".join(str(address.get(k, "")) for k in ("state", "province", "city")), provs)
+        if not found or current_of(found, provs) != current_of(prov_q, provs):
+            continue
+        candidate = (hit.get("namedetails", {}).get("name") or hit.get("name") or
+                     hit.get("display_name", "").split(",", 1)[0])
+        observed = tokens(candidate)
+        overlap = len(wanted & observed) / max(1, min(len(wanted), len(observed)))
+        if overlap < 0.65:
+            continue
+        lat, lon = float(hit["lat"]), float(hit["lon"])
+        if in_vietnam(lat, lon):
+            return round(lat, 6), round(lon, 6)
+    return None
+
+
 def province_from_name(name: str, provs):
     """Địa danh trong tên trường ('… Hà Nội', '… Sài Gòn', '… Huế'); bỏ 'Hồ Chí Minh' khi là tên người."""
     return province_from_text(re.sub(r"(?<!phố )(?<!TP\. )(?<!TP )Hồ Chí Minh", "", name), provs)
@@ -465,6 +518,16 @@ def build_institutions(provs):
     page_by_q = {p["qid"]: p for p in pages if p["qid"]}
     images = load("viwiki_images.json")
     link_qids = load("viwiki_links.json")
+    moet_rows = load_optional("moet_admissions.json", [])
+    ror_records = load_optional("ror_organizations.json", {})
+    moet_meta = source_meta("moet_admissions.json")
+    ror_meta = source_meta("ror_organizations.json")
+    moet_by_name = {vn_key(row.get("name", "")): row for row in moet_rows if row.get("name")}
+    rename_rows = read_csv(config.CURATED_DIR / "institution_renames.csv")
+    rename_meta_path = config.CURATED_DIR / "institution_renames.meta.json"
+    rename_meta = (json.loads(rename_meta_path.read_text(encoding="utf-8"))
+                   if rename_meta_path.exists() else {})
+    rename_by_current = {vn_key(row["current_name"]): row for row in rename_rows}
     keys = sorted(set(wdi) | {p["qid"] or "vi:" + p["title"] for p in pages}, key=lambda k: (k[0] != "Q", k))
     nopage = {"vi:" + p["title"]: p for p in pages if not p["qid"]}
 
@@ -487,7 +550,17 @@ def build_institutions(provs):
             en = ""
         inst = {"key": k, "qid": k if k.startswith("Q") else "", "name_vi": name, "name_en": en, "kind": kind,
                 "viwiki": page["title"] if page else "", "viwiki_revid": page["revid"] if page else None,
-                "enwiki": lab.get("entitle", ""), "wd_types": f.get("types", [])}
+                "enwiki": lab.get("entitle", ""), "wd_types": f.get("types", []), "field_sources": {}}
+        rename = rename_by_current.get(vn_key(name))
+        moet = moet_by_name.get(vn_key(name))
+        if not moet and rename:
+            moet = moet_by_name.get(vn_key(rename.get("moet_name") or rename["former_name"]))
+
+        def cite_field(field, source, retrieved_at, record="", values=()):
+            ref = {"source": source, "retrieved_at": retrieved_at, "values": list(values)}
+            if record:
+                ref["record"] = record
+            inst["field_sources"].setdefault(field, []).append(ref)
         if vn_key(name) in NATIONAL:
             inst["kind"] = "NationalUniversity"
         elif vn_key(name) in REGIONAL:
@@ -580,10 +653,37 @@ def build_institutions(provs):
         shorts = set(f.get("short", []))
         for fld in ("viết tắt", "tên viết tắt"):
             shorts |= {s for part in split_multi(box.get(fld, "")) for s in re.split(r"\s*[/,;]\s*", part)}
+        ror_acronyms = set()
+        for ror_id in f.get("ror", []):
+            record = ror_records.get(ror_id, {})
+            if record.get("status") != "active":
+                continue
+            ror_acronyms |= {n["value"].strip() for n in record.get("names", [])
+                             if "acronym" in n.get("types", []) and 2 <= len(n.get("value", "").strip()) <= 15}
+        shorts |= ror_acronyms
         inst["short_names"] = sorted(s for s in shorts if 2 <= len(s) <= 15 and not s.islower())
+        if ror_acronyms:
+            cite_field("short_names", "https://api.ror.org/v2/organizations", ror_meta.get("retrieved_at", ""),
+                       ",".join(sorted(f.get("ror", []))), sorted(ror_acronyms))
+        if moet and re.fullmatch(r"[A-Z]{3}", moet.get("code", "")):
+            official_codes = [moet["code"]]
+            if inst["admission_codes"] and inst["admission_codes"] != official_codes:
+                conflict(name, "admission_codes", official_codes[0],
+                         [("viwiki", ",".join(inst["admission_codes"])), ("Bộ GDĐT", official_codes[0])])
+            inst["admission_codes"] = official_codes
+            cite_field("admission_codes", moet_meta.get("source", "https://tuyensinh.moet.gov.vn/ts/"),
+                       moet_meta.get("retrieved_at", ""), moet.get("id", ""), official_codes)
         inst["former_names"] = [re.sub(r"\s*\(?\b(1[89]|20)\d\d.*$", "", n).strip()
                                 for n in split_multi(box.get("tên cũ", ""))]
+        if rename:
+            inst["former_names"].append(rename["former_name"])
         inst["former_names"] = sorted({n for n in inst["former_names"] if len(n) > 5 and n != name})
+        if rename:
+            inst["field_sources"].setdefault("former_names", []).append({
+                "source": rename["source"], "retrieved_at": rename_meta.get("retrieved_at", ""),
+                "valid_through": rename["effective_from"], "record": rename["decision"],
+                "values": [rename["former_name"]],
+            })
         motto = box.get("khẩu hiệu", "")
         inst["motto_vi"] = re.sub(r"\s*\|\s*", " ", motto).strip() if motto else ""
         inst["motto_other"] = [(r["v"], r["lang"]) for r in f.get("motto", []) if r["lang"] != "vi"]
@@ -593,6 +693,13 @@ def build_institutions(provs):
         web = [norm_url(w) for w in f.get("website", [])] + [norm_url(box.get(x, "")) for x in ("web", "website", "trang web")]
         web = [w for w in web if w]
         inst["website"] = web[0] if web else None
+        official_web = norm_url(moet.get("website", "")) if moet else None
+        if official_web:
+            if inst["website"] and inst["website"].rstrip("/").lower() != official_web.rstrip("/").lower():
+                conflict(name, "website", official_web, [("Wikidata/viwiki", inst["website"]), ("Bộ GDĐT", official_web)])
+            inst["website"] = official_web
+            cite_field("website", moet_meta.get("source", "https://tuyensinh.moet.gov.vn/ts/"),
+                       moet_meta.get("retrieved_at", ""), moet.get("id", ""), [official_web])
         pts = [("wikidata", parse_point(c)) for c in f.get("coord", [])] + ([("viwiki", tuple(page["coords"]))] if page and page["coords"] else [])
         pts = [(s, p) for s, p in pts if p]
         for s, p in pts:
@@ -652,6 +759,12 @@ def build_institutions(provs):
             if pt:
                 inst["lat"], inst["long"], inst["coord_source"] = pt[0], pt[1], "nominatim-address"
                 note_filled(name, "coordinates", f"{pt[0]}, {pt[1]}", "địa chỉ → OpenStreetMap Nominatim (kiểm tra cùng tỉnh)")
+        if not inst.get("lat") and chosen and os.environ.get("VNEDU_GEOCODE_NAMES") == "1":
+            pt = geocode_institution(name, chosen, provs)
+            if pt:
+                inst["lat"], inst["long"], inst["coord_source"] = pt[0], pt[1], "nominatim-institution"
+                note_filled(name, "coordinates", f"{pt[0]}, {pt[1]}",
+                            "tên cơ sở → OpenStreetMap Nominatim (khớp loại, tên và tỉnh)")
 
         # --- quan hệ tổ chức (thô; phân giải sau khi có đủ danh sách cơ sở)
         targets = [("wikidata", q, (ents.get(q) or {}).get("vi") or (wdi.get(q, {}).get("labels", {}).get("vi", "")))
@@ -727,6 +840,19 @@ def build_institutions(provs):
         inst["email"] = m.group(0).lower() if m else ""
         m = PHONE.search(box.get("điện thoại", ""))
         inst["telephone"] = re.sub(r"\s+", " ", m.group(0)).strip() if m else ""
+        if moet:
+            official_email = (moet.get("email") or "").strip().lower()
+            if EMAIL.fullmatch(official_email):
+                if inst["email"] and inst["email"] != official_email:
+                    conflict(name, "email", official_email, [("viwiki", inst["email"]), ("Bộ GDĐT", official_email)])
+                inst["email"] = official_email
+                cite_field("email", moet_meta.get("source", "https://tuyensinh.moet.gov.vn/ts/"),
+                           moet_meta.get("retrieved_at", ""), moet.get("id", ""), [official_email])
+            official_phone = (moet.get("telephone") or "").strip()
+            if official_phone:
+                inst["telephone"] = official_phone[:30]
+                cite_field("telephone", moet_meta.get("source", "https://tuyensinh.moet.gov.vn/ts/"),
+                           moet_meta.get("retrieved_at", ""), moet.get("id", ""), [official_phone[:30]])
         inst["campus"] = (split_multi(box.get("khuôn viên", "")) or [""])[0][:120]
         fund = (split_multi(box.get("tài trợ", "") or box.get("ngân sách", "")) or [""])[0][:120]
         inst["funding"] = fund if re.search(r"\d", fund) else ""
@@ -853,9 +979,36 @@ def resolve_relations(insts, ents, wdi):
         governed -= state
         i["state_managed_by"] = sorted(state)
         i["governed_by"], i["owned_by"] = sorted(governed), sorted(owned)
+        i["direct_governed_by"] = []
         # Cơ sở công lập do cơ quan nhà nước thành lập: suy ra "công lập" khi nguồn không nêu
         if "ownership" not in i and governed:
             i["ownership"], i["ownership_source"] = "public", "rule: có cơ quan chủ quản nhà nước"
+
+    # Legally direct governance is stronger than a source-reported relation and
+    # is therefore accepted only from a dated curated legal instrument.
+    legal_meta_path = config.CURATED_DIR / "direct_governance.meta.json"
+    legal_meta = (json.loads(legal_meta_path.read_text(encoding="utf-8"))
+                  if legal_meta_path.exists() else {})
+    for row in read_csv(config.CURATED_DIR / "direct_governance.csv"):
+        key = by_name.get(vn_key(row["institution_name"]))
+        if not key:
+            unresolved.append({"entity": row["institution_name"], "field": "direct_governed_by",
+                               "value": row["governing_body"],
+                               "reason": f"không có thực thể trong dataset ({row['decision']})"})
+            continue
+        body_key = body(row["governing_body"], "")
+        if not body_key:
+            unresolved.append({"entity": row["institution_name"], "field": "direct_governed_by",
+                               "value": row["governing_body"], "reason": "không phân loại được cơ quan"})
+            continue
+        inst = insts[key]
+        inst["direct_governed_by"] = [body_key]
+        inst["governed_by"] = [x for x in inst["governed_by"] if x != body_key]
+        inst["field_sources"].setdefault("direct_governed_by", []).append({
+            "source": row["source"], "retrieved_at": legal_meta.get("retrieved_at", ""),
+            "valid_from": row["effective_from"], "record": row["decision"], "values": [body_key],
+        })
+        note_filled(inst["name_vi"], "direct_governed_by", row["governing_body"], row["decision"])
 
     # Quan hệ cấp trên giữa các cơ quan (quân đội, công an)
     mod = body("Bộ Quốc phòng", "")
@@ -945,7 +1098,7 @@ def validate_silver(collections: dict[str, dict]) -> list[dict]:
                             for t in rec.get(f, []) if t not in records]
             relations = {
                 "institution": {"province": "province", "governed_by": "governing_body", "owned_by": "governing_body",
-                                "state_managed_by": "governing_body"},
+                                "state_managed_by": "governing_body", "direct_governed_by": "governing_body"},
                 "governing_body": {"subordinate_to": "governing_body"},
                 "person": {"alumnus_of": "institution", "born_in": "province"},
                 "province": {"merged_into": "province"},
@@ -1010,7 +1163,8 @@ def main() -> None:
     print(f"  cơ sở: {len(insts)}  {dict(kinds)}")
     print(f"  có: năm TL {fill('founding_year')}, sở hữu {fill('ownership')}, tỉnh {fill('province')}, toạ độ {fill('lat')}, "
           f"web {fill('website')}, mã trường {fill('admission_codes')}, lãnh đạo {fill('leaders')}, SV {fill('students')}, "
-          f"chủ quản {fill('governed_by')}, thành viên của {fill('member_of')}, chủ sở hữu {fill('owned_by')}")
+          f"chủ quản báo cáo {fill('governed_by')}, chủ quản trực tiếp {fill('direct_governed_by')}, "
+          f"thành viên của {fill('member_of')}, chủ sở hữu {fill('owned_by')}")
     print(f"  cơ quan chủ quản / doanh nghiệp: {len(bodies)}; người: {len(people)}")
     print(f"  -> data/reports/filled.csv ({len(filled)} giá trị từ nguồn dự phòng)")
     print(f"  -> data/reports/excluded.csv ({len(excluded)})")

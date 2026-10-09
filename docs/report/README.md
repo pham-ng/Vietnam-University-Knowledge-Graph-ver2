@@ -9,7 +9,7 @@ The expanded edition (8 October 2026, 37 pages) includes the project-report narr
 architecture diagrams, a Bronze--Silver--RDF transformation workflow, CI/CD evidence flow, user-facing resource
 and SPARQL views, a concrete Silver-to-RDF
 mapping, an ontology 2.2 design assessment, evidence-qualified temporal observations, a URI/Fuseki
-implementation walkthrough with Linux TDB2 acceptance evidence, an actual Silk 3.6.0 experiment,
+implementation walkthrough with Linux/Windows TDB2 acceptance evidence, an actual Silk 3.6.0 experiment,
 and a criterion-by-criterion five-star assessment. Five-star publication is not a certificate
 of ontology correctness or production security. The dated seven-request HTTP sample is
 in `data/reports/publication-check.json`; it does not establish deployment of the audited branch.

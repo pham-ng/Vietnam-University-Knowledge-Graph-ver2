@@ -74,8 +74,9 @@ LAYOUT = env.from_string("""<!doctype html>
   <button class="theme-btn" type="button" aria-label="Đổi giao diện sáng/tối">◐ Giao diện</button>
 </div></header>
 <main class="{{ main_class }}">{{ body|safe }}</main>
-<footer>Dữ liệu liên kết mở về giáo dục đại học Việt Nam · <a href="{{ root }}dataset">VoID/DCAT</a> ·
-<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · nguồn: Wikidata (CC0), Wikipedia tiếng Việt (CC BY-SA)
+<footer>Dữ liệu liên kết về giáo dục đại học Việt Nam · <a href="{{ root }}dataset">VoID/DCAT</a> ·
+<a href="https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/LICENSE-DATA.md">quyền theo nguồn</a> ·
+nguồn: Wikidata/ROR (CC0), Wikipedia (CC BY-SA), OSM (ODbL), Bộ GD&amp;ĐT (chưa nêu giấy phép dữ liệu mở)
 · <a href="{{ repo }}">mã nguồn</a></footer>
 </body>
 </html>""")

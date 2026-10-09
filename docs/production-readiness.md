@@ -37,6 +37,47 @@ The repository includes a self-hosted reference topology in `deploy/`. It intent
 requires operator-reviewed image digests and secrets instead of shipping demo credentials.
 Fuseki's admin/update surface must not be exposed through the public reverse proxy.
 
+## Public deployment status and service level
+
+The public Render service is currently configured on the Free plan. Render documents that
+Free services sleep after 15 minutes of inactivity, can take about one minute to wake, have
+an ephemeral filesystem, and must not be used as production infrastructure. Consequently the
+project does **not** claim a provider-backed SLA for that endpoint.
+
+The static GitHub Pages publication is the durable read-only fallback: it contains the full
+Turtle/N-Triples downloads, per-resource Turtle/JSON-LD documents, and a browser-local SPARQL
+engine. `.github/workflows/public-monitor.yml` probes both surfaces hourly on a best-effort
+basis. It deliberately is not a keep-alive that circumvents Free-plan idling. Scheduled GitHub
+Actions can be delayed, and this monitor does not eliminate Render cold starts.
+
+An always-on public SLA requires an operator-authorized paid service or a separately operated
+Fuseki host. Upgrading is intentionally not automated because it creates an external billing
+commitment. Before claiming an SLA, record the provider plan, target availability, alert route,
+and at least 30 days of measured availability.
+
+## Backup, recovery and release integrity
+
+- Git history and the immutable RDF release bundle are the source of truth for the stateless
+  Render deployment; runtime writes are disabled.
+- `audit/recovery_drill.py` extracts the publication ZIP, rejects unsafe archive paths, verifies
+  every release hash against `validated-release.json`, and parses the restored union graph.
+- Fuseki replacement requires an exclusive pre-load backup and post-load graph isomorphism;
+  the CI Fuseki acceptance job verifies backup, restart persistence and denied writes.
+- A real TDB2 production volume still requires encrypted off-host snapshots and an operator-run
+  restore drill. The repository cannot create backups of infrastructure it does not control.
+
+## Monitoring and security evidence
+
+- Render probes `/healthz`; the scheduled public monitor additionally validates static RDF,
+  content negotiation, SPARQL and the exact release triple count.
+- `audit/public_load_test.py` reports cold-start time separately from warm p50/p95/p99 latency
+  and error rate for health, RDF and SPARQL requests.
+- CI runs dependency auditing, Bandit and GitHub CodeQL in addition to regression tests for SSRF,
+  SPARQL injection, path traversal, request limits, rate limiting and security headers.
+- Automated scanners are independent tools, not an independent penetration-test certificate.
+  A formal production-security claim still requires an authorized third-party assessment of the
+  deployed network, cloud account, TLS termination, secrets, logs and incident response.
+
 ## Accuracy gate
 
 The current release is structurally valid but not factually certified. The following are

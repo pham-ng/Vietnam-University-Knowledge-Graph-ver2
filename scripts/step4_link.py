@@ -235,11 +235,22 @@ def build_void(data: Graph, links: Graph, counts) -> Graph:
     v.add((ds, DCTERMS.title, Literal("Dữ liệu liên kết mở Giáo dục đại học Việt Nam", lang="vi")))
     v.add((ds, DCTERMS.description, Literal(
         "Cơ sở giáo dục đại học Việt Nam, cơ quan chủ quản, lãnh đạo, cựu sinh viên, đơn vị hành chính (gồm sắp xếp "
-        "tỉnh 2025), ngành đào tạo — tích hợp và đối chiếu từ Wikidata và Wikipedia tiếng Việt.", lang="vi")))
-    # Dữ liệu dẫn xuất từ Wikipedia (CC BY-SA 4.0) => phải dùng giấy phép tương thích (share-alike)
+        "tỉnh 2025), ngành đào tạo — tích hợp từ các nguồn được ghi nhận ở mức phát biểu và đối chiếu với "
+        "Wikidata, Wikipedia, ROR cùng nguồn chính thức của Việt Nam.", lang="vi")))
+    # CC BY-SA applies only to the compilation and project-authored material.  It does
+    # not override source-specific rights; LICENSE-DATA.md records those boundaries.
     v.add((ds, DCTERMS.license, URIRef("https://creativecommons.org/licenses/by-sa/4.0/")))
-    v.add((ds, DCTERMS.source, URIRef("https://www.wikidata.org/")))
-    v.add((ds, DCTERMS.source, URIRef("https://vi.wikipedia.org/")))
+    v.add((ds, DCTERMS.rights, URIRef(
+        "https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/LICENSE-DATA.md")))
+    for source in (
+        "https://www.wikidata.org/",
+        "https://vi.wikipedia.org/",
+        "https://api.ror.org/v2/organizations",
+        "https://tuyensinh.moet.gov.vn/ts/",
+        "https://congbao.chinhphu.vn/van-ban/quyet-dinh-so-1723-qd-ttg-45825/58191.htm",
+        "https://www.openstreetmap.org/",
+    ):
+        v.add((ds, DCTERMS.source, URIRef(source)))
     v.add((ds, DCTERMS.modified, Literal(time.strftime("%Y-%m-%dT00:00:00"), datatype=XSD.dateTime)))
     v.add((ds, DCTERMS.language, URIRef("http://id.loc.gov/vocabulary/iso639-1/vi")))
     for kw in ("giáo dục đại học", "higher education", "Vietnam", "linked open data"):
@@ -261,6 +272,8 @@ def build_void(data: Graph, links: Graph, counts) -> Graph:
         v.add((dist, DCAT.downloadURL, dist))
         v.add((dist, DCAT.mediaType, URIRef(f"https://www.iana.org/assignments/media-types/{fmt}")))
         v.add((dist, DCTERMS.license, URIRef("https://creativecommons.org/licenses/by-sa/4.0/")))
+        v.add((dist, DCTERMS.rights, URIRef(
+            "https://github.com/pham-ng/Vietnam-University-Knowledge-Graph-ver2/blob/main/LICENSE-DATA.md")))
     homes = {"wikidata": "https://www.wikidata.org/", "dbpedia": "https://dbpedia.org/", "geonames": "https://www.geonames.org/",
              "ror": "https://ror.org/", "wikipedia": "https://www.wikipedia.org/"}
     for (target, pred), n in counts.items():

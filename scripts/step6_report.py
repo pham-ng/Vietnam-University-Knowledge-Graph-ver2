@@ -17,7 +17,7 @@ R = config.REPORTS_DIR
 HEI_KINDS = {"University", "UniversitySchool", "Academy", "OfficerSchool", "NationalUniversity",
              "RegionalUniversity", "HigherEducationInstitution"}
 FIELDS = [("founding_year", "năm thành lập"), ("province", "tỉnh/thành"), ("ownership", "loại hình sở hữu"),
-          ("website", "website"), ("leaders", "lãnh đạo"), ("governed_by", "cơ quan chủ quản"),
+          ("website", "website"), ("leaders", "lãnh đạo"), ("_governance", "cơ quan chủ quản"),
           ("name_en", "tên tiếng Anh"), ("short_names", "tên viết tắt"), ("motto_vi", "khẩu hiệu"),
           ("lat", "toạ độ"), ("admission_codes", "mã trường"), ("ror", "mã ROR"),
           ("students", "số sinh viên"), ("academic_staff", "số giảng viên"),
@@ -52,11 +52,44 @@ def main() -> None:
     L += ["", f"## 2. Độ đầy đủ — {len(hei)} cơ sở giáo dục đại học (tầng silver)", "",
           "| Thuộc tính | Có | Tỉ lệ | |", "|---|---|---|---|"]
     for f, label in FIELDS:
-        n = sum(1 for i in hei if i.get(f))
+        n = (sum(1 for i in hei if i.get("governed_by") or i.get("direct_governed_by"))
+             if f == "_governance" else sum(1 for i in hei if i.get(f)))
         L.append(f"| {label} | {n} | {n / len(hei):.1%} | `{bar(n / len(hei))}` |")
 
+    meta_rows = []
+    for filename, label in (("moet_admissions.meta.json", "Cổng tuyển sinh Bộ GDĐT"),
+                            ("ror_organizations.meta.json", "ROR schema 2.1")):
+        path = config.BRONZE_DIR / filename
+        if path.exists():
+            meta = json.loads(path.read_text(encoding="utf-8"))
+            meta_rows.append((label, meta.get("records", 0), meta.get("retrieved_at", ""), meta.get("license", "")))
+    sourced = Counter()
+    for inst in hei:
+        for field, refs in inst.get("field_sources", {}).items():
+            if refs:
+                sourced[field] += 1
+    coord_sources = Counter(i.get("coord_source", "unknown") for i in hei if i.get("lat") is not None)
+    L += ["", "## 3. Nguồn hiện hành và chính sách chấp nhận", "",
+          "Các giá trị mới chỉ được hợp nhất khi tên chính thức khớp chính xác. Ngoại lệ duy nhất là cặp tên cũ–tên hiện hành "
+          "đã được khai báo bằng quyết định đổi tên có ngày; fuzzy match chỉ được xem là ứng viên. "
+          "Thời điểm truy xuất là thời điểm của snapshot, không được diễn giải thành thời hạn hiệu lực pháp lý.", "",
+          "| Nguồn | Bản ghi | Truy xuất (UTC) | Giấy phép/trạng thái |", "|---|---:|---|---|"]
+    for label, count, retrieved, licence in meta_rows:
+        L.append(f"| {label} | {count} | {retrieved} | {licence} |")
+    L += ["", "| Trường có nguồn cấp thuộc tính | Số cơ sở GDĐH |", "|---|---:|",
+          f"| mã tuyển sinh — Bộ GDĐT | {sourced['admission_codes']} |",
+          f"| email — Bộ GDĐT | {sourced['email']} |",
+          f"| website — Bộ GDĐT | {sourced['website']} |",
+          f"| tên viết tắt — ROR | {sourced['short_names']} |",
+          f"| tên cũ — quyết định đổi tên | {sourced['former_names']} |",
+          f"| cơ quan chủ quản trực tiếp — văn bản pháp lý | {sourced['direct_governed_by']} |", "",
+          "**Toạ độ:** " + ", ".join(f"`{k}` {v}" for k, v in sorted(coord_sources.items())) + ". "
+          "Không dùng toạ độ ROR làm toạ độ campus vì ROR/GeoNames thường biểu diễn tâm địa phương, không phải điểm của cơ sở.", "",
+          "**Campus:** `vnedu:campus` hiện lưu diện tích/mô tả khuôn viên từ nguồn, không đồng nghĩa với địa chỉ trụ sở. "
+          "Không tự động sao chép địa chỉ vào trường này chỉ để tăng coverage."]
+
     filled, conflicts, excluded, unresolved = read("filled.csv"), read("conflicts.csv"), read("excluded.csv"), read("unresolved.csv")
-    L += ["", "## 3. Nguồn của giá trị và mâu thuẫn giữa các nguồn", "",
+    L += ["", "## 4. Nguồn của giá trị và mâu thuẫn giữa các nguồn", "",
           "Giá trị chính lấy từ Wikidata và infobox Wikipedia tiếng Việt (đối chiếu chéo). Khi cả hai đều thiếu, dùng "
           "nguồn dự phòng — mỗi giá trị đều được ghi lại trong `filled.csv`:", "",
           "| Nguồn dự phòng | Trường | Số giá trị |", "|---|---|---|"]
@@ -71,7 +104,7 @@ def main() -> None:
     L += ["", f"Giá trị chưa phân giải được, cần rà soát tay (`unresolved.csv`): **{len(unresolved)}**"]
 
     sv = read("silver_validation.csv")
-    L += ["", "## 4. Kiểm định", "", "| Cổng kiểm định | Tầng | Kết quả |", "|---|---|---|",
+    L += ["", "## 5. Kiểm định", "", "| Cổng kiểm định | Tầng | Kết quả |", "|---|---|---|",
           f"| JSON Schema (`schemas/silver.schema.json`) | silver | {'✅ đạt — 0 vi phạm' if not sv else f'❌ {len(sv)} vi phạm'} |"]
     cons = (R / "consistency.txt").read_text(encoding="utf-8").splitlines() if (R / "consistency.txt").exists() else []
     n_incons = int(cons[1].split()[0]) if len(cons) > 1 else -1
@@ -88,7 +121,7 @@ def main() -> None:
 
     gold = manifest.get("gold", {})
     links = gold.get("data/gold/vnedu-links.ttl", {}).get("linksets", {})
-    L += ["", "## 5. Liên kết (5 sao)", "", "| Đích | Thuộc tính | Số liên kết |", "|---|---|---|"]
+    L += ["", "## 6. Liên kết (5 sao)", "", "| Đích | Thuộc tính | Số liên kết |", "|---|---|---|"]
     for k, n in sorted(links.items(), key=lambda x: -x[1]):
         t, p = k.split("|")
         L.append(f"| {t} | `{p}` | {n} |")
@@ -98,8 +131,10 @@ def main() -> None:
 
     inferred = gold.get("data/gold/vnedu-inferred.ttl", {}).get("count", 0)
     total = gold.get("data/gold/vnedu-all.ttl", {}).get("count", 0)
-    L += ["", "## 6. Checklist 5 sao", "", "| | Tiêu chí | Bằng chứng |", "|---|---|---|",
-          "| ★ | Công khai, giấy phép mở | `dct:license` CC BY-SA 4.0 trong VoID/DCAT; giấy phép từng nguồn trong `*.meta.json` |",
+    L += ["", "## 7. Checklist 5 sao", "", "| | Tiêu chí | Bằng chứng |", "|---|---|---|",
+          "| ★ | Công khai, quyền tái sử dụng minh bạch | CC BY-SA 4.0 chỉ áp dụng cho phần dự án có quyền cấp phép; "
+          "`dct:rights`, `LICENSE-DATA.md` và `*.meta.json` giữ điều kiện riêng của từng nguồn (nguồn Bộ GD&ĐT chưa "
+          "công bố giấy phép dữ liệu mở dạng máy đọc được) |",
           "| ★★ | Có cấu trúc, máy đọc được | JSON (bronze/silver), RDF (gold) |",
           "| ★★★ | Định dạng mở | JSON, CSV, Turtle |",
           f"| ★★★★ | Chuẩn W3C, URI dereference được | RDF/OWL 2 RL/SHACL/SPARQL 1.1/PROV-O; {total:,} triple "

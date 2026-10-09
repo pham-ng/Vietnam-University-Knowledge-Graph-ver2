@@ -1,0 +1,38 @@
+name: Public endpoint monitor
+
+on:
+  schedule:
+    # Hourly availability probe, not a keep-alive. GitHub schedules can be delayed,
+    # and the Render Free service is still expected to cold-start.
+    - cron: '23 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install requests
+      - name: Check static five-star publication
+        run: |
+          curl --fail --location --max-time 30 \
+            https://pham-ng.github.io/Vietnam-University-Knowledge-Graph-ver2/download/vnedu-all.ttl \
+            --output /dev/null
+      - name: Check warm service, release count, RDF and SPARQL
+        run: >-
+          python audit/public_load_test.py
+          --requests 6 --concurrency 2 --cold-start-timeout 120
+          --expected-triples 87117 --max-warm-p95-ms 15000
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-monitor-${{ github.run_id }}
+          path: data/reports/public-load-test.json
+          retention-days: 14

@@ -9,14 +9,14 @@ Mọi con số dưới đây đều do script đo được và chạy lại đư
 
 | Tiêu chí | Repo cũ (`vio`) | VN-Edu 2.0 |
 |---|---|---|
-| Triple | 9.649 | 48.428 (22.903 khẳng định + 3.674 liên kết + 20.990 suy luận) |
+| Triple | 9.649 | 87.117 (59.428 dữ kiện + 3.558 liên kết + 23.169 suy luận + ontology/metadata; tập hợp loại bỏ triple trùng) |
 | Thực thể "trường" | 327, gắn kiểu `University` cho cả bệnh viện (Bệnh viện Quân y 103), ký túc xá, dự án khu đô thị, trường trung học, thậm chí một chính khách (Trường Chinh) | 300, phân theo loại hình pháp lý; 68 thực thể bị loại có ghi lý do |
 | **Nhất quán logic** khi suy luận OWL 2 RL | **349 mâu thuẫn** (344 `Site ⊥ Place` do `geo:lat rdfs:domain Site`; 5 trường có 2 năm thành lập) | **0** (có test tự động) |
 | Câu hỏi có đáp án chuẩn (năm thành lập, trụ sở, chủ quản) | **14/21** (ĐH Luật HN "1727", HV Hải quân "2022", ĐH An Giang "1976", ĐH Thủ Dầu Một ở "Bình Phước") | **21/21** |
 | Câu hỏi tổng hợp/so sánh: công lập vs tư thục, theo miền, sau sáp nhập tỉnh, đã giải thể, theo mã tuyển sinh | không biểu diễn được (thiếu khái niệm) | trả lời được |
 | Thành viên ĐHQG HN | 62 (sai) | 12 |
-| Liên kết ngoài | 305, chỉ Wikidata | 1.880 Wikidata · 260 DBpedia · 195 ROR · 63 GeoNames · 1.188 Wikipedia |
-| Kiểm định | không | JSON Schema (silver) + SHACL + kiểm tra nhất quán + 46 test |
+| Liên kết ngoài | 305, chỉ Wikidata | 1.885 Wikidata · 227 DBpedia · 195 ROR · 63 GeoNames · 1.188 Wikipedia |
+| Kiểm định | không | JSON Schema (silver) + SHACL + kiểm tra nhất quán + bộ kiểm thử CI tự động |
 
 **Những điểm repo cũ làm tốt hơn** (nói thật):
 - Toạ độ: 344 so với 106. Nhưng 240/344 là "Approximate" (xấp xỉ), chỉ 104 là "Exact".

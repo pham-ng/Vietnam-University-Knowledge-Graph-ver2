@@ -207,7 +207,7 @@ rdflib đều gửi từng URI đã biết sang endpoint ngoài (bind join) thay
 | `/` | thống kê (theo tỉnh 2025, miền × sở hữu, thập kỷ thành lập, loại hình, chủ quản, liên kết), chỉ số chất lượng |
 | `map` | bản đồ Leaflet: điểm theo miền, lớp mật độ theo tỉnh, lọc theo sở hữu/loại hình, popup dẫn tới URI |
 | `explore` | tra cứu không dấu, lọc, sắp xếp, **xuất CSV** |
-| `sparql` | **SPARQL 1.1 trong trình duyệt** (Oxigraph WebAssembly) trên toàn bộ 48.428 triple — không cần máy chủ |
+| `sparql` | **SPARQL 1.1 trong trình duyệt** (Oxigraph WebAssembly) trên toàn bộ 87.117 triple — không cần máy chủ |
 | `download/` | dump Turtle, N-Triples, ZIP, shapes, JSON Schema |
 
 GitHub Pages là hosting tĩnh nên không có content negotiation phía máy chủ; máy đọc lấy RDF bằng JSON-LD nhúng trong

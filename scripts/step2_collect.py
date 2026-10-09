@@ -19,6 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import collect_wikidata as wd  # noqa: E402
 import collect_wikipedia as wp  # noqa: E402
+import collect_authoritative as authoritative  # noqa: E402
 import config  # noqa: E402
 from common import record_manifest  # noqa: E402
 
@@ -88,6 +89,8 @@ def main() -> None:
 
     print("[5/5] Cựu sinh viên ...")
     save("wd_alumni.json", wd.alumni(universe))
+    print("[6/6] Danh mục chính thức Bộ GDĐT + ROR hiện hành ...")
+    authoritative.collect_all(workers=6)
     print("Xong bước 2.")
 
 
