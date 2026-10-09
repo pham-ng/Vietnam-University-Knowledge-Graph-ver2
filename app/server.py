@@ -181,6 +181,23 @@ class LocalBackend:
         self.slots = threading.BoundedSemaphore(int(os.environ.get("VNEDU_QUERY_WORKERS", "2")))
         self.context = multiprocessing.get_context("spawn")
 
+    def healthy(self) -> bool:
+        """Constant-time readiness check for the validated, immutable RDF release.
+
+        Running a SPARQL query here is deceptively expensive: the isolated local
+        backend must start a child process and parse the complete dump.  Render
+        probes every few seconds, so query-based probes overlap, exhaust all
+        worker slots, and can prevent an otherwise healthy deployment from ever
+        becoming ready.  RDF syntax and release hashes are checked by the build
+        and CI quality gates; readiness only needs to verify that the selected
+        release artifact is present and readable.
+        """
+        try:
+            with self.path.open("rb") as stream:
+                return self.path.stat().st_size > 0 and bool(stream.read(1))
+        except OSError:
+            return False
+
     def _execute(self, query: str, mode: str, accept: str = ""):
         if not self.slots.acquire(blocking=False):
             raise QueryRejected("Máy chủ đang bận. Vui lòng thử lại sau.", 503)
@@ -224,6 +241,13 @@ class FusekiBackend:
         self.endpoint = f"{config.FUSEKI_URL}/{config.FUSEKI_DATASET}/sparql"
         self.name = f"Apache Jena Fuseki ({self.endpoint})"
         self.session = requests.Session()
+
+    def healthy(self) -> bool:
+        """Use Fuseki's inexpensive server ping for readiness."""
+        try:
+            return self.session.get(f"{config.FUSEKI_URL}/$/ping", timeout=2).ok
+        except requests.RequestException:
+            return False
 
     def _post(self, query: str, accept: str) -> requests.Response:
         try:
@@ -490,7 +514,8 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
     @app.route("/healthz")
     def healthz():
         try:
-            ok = bool(backend.select("SELECT ?s WHERE { ?s ?p ?o } LIMIT 1"))
+            checker = getattr(backend, "healthy", None)
+            ok = bool(checker()) if checker else bool(backend.select("SELECT ?s WHERE { ?s ?p ?o } LIMIT 1"))
         except Exception:  # noqa: BLE001
             ok = False
         return {"status": "ok" if ok else "degraded", "backend": backend.name, "ui": "site" if site else "fallback",

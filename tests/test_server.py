@@ -49,6 +49,31 @@ def test_healthz(client):
     assert r.status_code == 200 and r.get_json()["status"] == "ok"
 
 
+def test_local_healthz_does_not_execute_sparql(tmp_path, monkeypatch):
+    """Platform probes must stay O(1), not parse the full RDF dump per request."""
+    release = tmp_path / "release.ttl"
+    release.write_text("# validated release\n", encoding="utf-8")
+    backend = LocalBackend(release)
+    monkeypatch.setattr(backend, "select", lambda _query: pytest.fail("health probe executed SPARQL"))
+    app = create_app(backend, inferred=set(), site_dir=None)
+    app.config["TESTING"] = True
+    response = app.test_client().get("/healthz")
+    assert response.status_code == 200
+    assert response.get_json()["status"] == "ok"
+
+
+def test_local_healthz_rejects_missing_or_empty_release(tmp_path):
+    missing = LocalBackend(tmp_path / "missing.ttl")
+    app = create_app(missing, inferred=set(), site_dir=None)
+    assert app.test_client().get("/healthz").status_code == 503
+
+    empty_path = tmp_path / "empty.ttl"
+    empty_path.touch()
+    empty = LocalBackend(empty_path)
+    app = create_app(empty, inferred=set(), site_dir=None)
+    assert app.test_client().get("/healthz").status_code == 503
+
+
 def test_resource_html_for_browsers(client):
     r = client.get("/" + BKA, headers={"Accept": "text/html"})
     assert r.status_code == 200 and "text/html" in r.content_type
