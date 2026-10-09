@@ -21,7 +21,8 @@ def main():
     links = Graph().parse(config.LINKS_TTL)
     ontology = load_ontology()
     void = Graph().parse(config.VOID_TTL)
-    expected = ontology + data + inferred + links + void
+    osm = Graph().parse(config.OSM_GEO_TTL)   # toạ độ OpenStreetMap (ODbL), phân phối riêng nhưng nằm trong bản gộp
+    expected = ontology + data + inferred + links + void + osm
     if not isomorphic(expected, full):
         raise SystemExit('Published union does not match its source graphs')
     inst = json.loads((config.SILVER_DIR / 'institutions.json').read_text(encoding='utf-8'))
@@ -38,6 +39,7 @@ def main():
         'CurrentProvinces': len(set(full.subjects(RDF.type, V.Province))),
         'FormerProvinces': len(set(full.subjects(RDF.type, V.FormerProvince))),
         'AssertedTriples': len(data), 'InferredTriples': len(inferred), 'LinkTriples': len(links),
+        'OsmCoordinateTriples': len(osm),
         'OntologyTriples': len(ontology), 'UnionTriples': len(full), 'MetadataTriples': len(void),
         'LocalResources': len({s for s in full.subjects() if isinstance(s, URIRef) and str(s).startswith(config.RES_NS)}),
         'Classes': len({s for s in ontology.subjects(RDF.type, OWL.Class) if isinstance(s, URIRef) and str(s).startswith(str(V))}),

@@ -6,26 +6,26 @@
 
 | Tầng | Tệp | Số lượng | SHA-256 | Tạo lúc |
 |---|---|---|---|---|
-| bronze | `data/bronze/dbp_years.json` | 72 records | `c0b0f72eae48` | 2026-10-09T23:39:07 |
-| bronze | `data/bronze/moet_admissions.json` | 405 records | `49df1786c58e` | 2026-10-09T23:39:07 |
-| bronze | `data/bronze/ror_organizations.json` | 202 records | `c5e8fc0c544a` | 2026-10-09T23:39:07 |
-| bronze | `data/bronze/viwiki_images.json` | 280 records | `4df5192d37df` | 2026-10-09T23:39:07 |
-| bronze | `data/bronze/viwiki_links.json` | 80 records | `c1a26b63cff7` | 2026-10-09T23:39:07 |
-| bronze | `data/bronze/viwiki_pages.json` | 279 records | `f3a91fa46eb3` | 2026-10-09T23:39:07 |
-| bronze | `data/bronze/wd_alumni.json` | 1,531 records | `af11c19def93` | 2026-10-09T23:39:07 |
-| bronze | `data/bronze/wd_entities.json` | 12 records | `9dff7acfa914` | 2026-10-09T23:39:07 |
-| bronze | `data/bronze/wd_institutions.json` | 363 records | `3539a0481f33` | 2026-10-09T23:39:07 |
-| bronze | `data/bronze/wd_provinces.json` | 63 records | `9bc0e96c5231` | 2026-10-09T23:39:07 |
-| silver | `data/silver/governing_bodies.json` | 50 records | `a4fa23b18217` | 2026-10-09T23:39:09 |
-| silver | `data/silver/institutions.json` | 297 records | `288d679a3b4f` | 2026-10-09T23:39:09 |
-| silver | `data/silver/people.json` | 1,703 records | `6e7c31f5af19` | 2026-10-09T23:39:09 |
-| silver | `data/silver/provinces.json` | 63 records | `4cbac2c46a0d` | 2026-10-09T23:39:09 |
-| gold | `data/gold/vnedu-all.ttl` | 87,162 triples | `d38e99a6a7a8` | 2026-10-09T23:40:32 |
-| gold | `data/gold/vnedu-data.ttl` | 59,392 triples | `60deb827aada` | 2026-10-09T23:39:13 |
-| gold | `data/gold/vnedu-geo-osm.ttl` | 126 triples | `6ac319066fa9` | 2026-10-09T23:39:13 |
-| gold | `data/gold/vnedu-inferred.ttl` | 23,014 triples | `79c2c10f42ca` | 2026-10-09T23:40:29 |
-| gold | `data/gold/vnedu-links.ttl` | 3,557 triples | `64e97a1b1caa` | 2026-10-09T23:39:14 |
-| gold | `data/gold/void.ttl` | 129 triples | `4a0e75501ec1` | 2026-10-09T23:40:29 |
+| bronze | `data/bronze/dbp_years.json` | 72 records | `c0b0f72eae48` | 2026-10-10T00:18:10 |
+| bronze | `data/bronze/moet_admissions.json` | 405 records | `49df1786c58e` | 2026-10-10T00:18:10 |
+| bronze | `data/bronze/ror_organizations.json` | 202 records | `c5e8fc0c544a` | 2026-10-10T00:18:10 |
+| bronze | `data/bronze/viwiki_images.json` | 280 records | `4df5192d37df` | 2026-10-10T00:18:10 |
+| bronze | `data/bronze/viwiki_links.json` | 80 records | `c1a26b63cff7` | 2026-10-10T00:18:10 |
+| bronze | `data/bronze/viwiki_pages.json` | 279 records | `f3a91fa46eb3` | 2026-10-10T00:18:10 |
+| bronze | `data/bronze/wd_alumni.json` | 1,531 records | `af11c19def93` | 2026-10-10T00:18:10 |
+| bronze | `data/bronze/wd_entities.json` | 12 records | `9dff7acfa914` | 2026-10-10T00:18:10 |
+| bronze | `data/bronze/wd_institutions.json` | 363 records | `3539a0481f33` | 2026-10-10T00:18:10 |
+| bronze | `data/bronze/wd_provinces.json` | 63 records | `9bc0e96c5231` | 2026-10-10T00:18:10 |
+| silver | `data/silver/governing_bodies.json` | 50 records | `a4fa23b18217` | 2026-10-10T00:18:12 |
+| silver | `data/silver/institutions.json` | 297 records | `288d679a3b4f` | 2026-10-10T00:18:12 |
+| silver | `data/silver/people.json` | 1,703 records | `6e7c31f5af19` | 2026-10-10T00:18:12 |
+| silver | `data/silver/provinces.json` | 63 records | `4cbac2c46a0d` | 2026-10-10T00:18:12 |
+| gold | `data/gold/vnedu-all.ttl` | 87,162 triples | `d38e99a6a7a8` | 2026-10-10T00:19:37 |
+| gold | `data/gold/vnedu-data.ttl` | 59,392 triples | `60deb827aada` | 2026-10-10T00:18:16 |
+| gold | `data/gold/vnedu-geo-osm.ttl` | 126 triples | `6ac319066fa9` | 2026-10-10T00:18:16 |
+| gold | `data/gold/vnedu-inferred.ttl` | 23,014 triples | `79c2c10f42ca` | 2026-10-10T00:19:34 |
+| gold | `data/gold/vnedu-links.ttl` | 3,557 triples | `64e97a1b1caa` | 2026-10-10T00:18:17 |
+| gold | `data/gold/void.ttl` | 129 triples | `4a0e75501ec1` | 2026-10-10T00:19:35 |
 
 ## 2. Độ đầy đủ — 268 cơ sở giáo dục đại học (tầng silver)
 

@@ -186,11 +186,13 @@ def main() -> None:
     everything += data
     everything += inferred
     everything.parse(config.LINKS_TTL)
-    everything.parse(config.VOID_TTL)
-    # VoID: số triple của bản phục vụ truy vấn (vnedu-all.ttl) chỉ biết sau khi gộp -> ghi ở đây, khớp đúng tệp dump
+    # VoID: số triple của bản phục vụ truy vấn (vnedu-all.ttl) chỉ biết sau khi gộp -> ghi ở đây, khớp đúng tệp dump.
+    # Bỏ số đếm của lần chạy trước (CI chạy lại bước 5 mà không chạy lại bước 4) để bước này idempotent.
     void = Graph().parse(config.VOID_TTL)
     bind_prefixes(void)
     serving = URIRef(config.BASE + "dataset/serving")
+    void.remove((serving, VOID.triples, None))
+    everything += void
     count = (serving, VOID.triples, Literal(len(everything) + 1, datatype=XSD.integer))   # +1: chính triple này
     void.add(count)
     everything.add(count)

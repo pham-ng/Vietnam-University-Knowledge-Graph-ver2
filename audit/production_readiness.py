@@ -66,7 +66,9 @@ def main() -> int:
         raise RuntimeError(f"Missing generated site {site_dir!r}; run step7_publish.py for that target first")
     env = dict(os.environ, PYTHONUTF8="1", PYTHONIOENCODING="utf-8",
                VNEDU_SERVE_SITE=site_dir, VNEDU_QUERY_TIMEOUT="5",
-               VNEDU_QUERY_WORKERS="2")
+               # Hàng đợi chờ worker rảnh (mặc định 5 s) sẽ phục vụ hết 8 truy vấn nhẹ; rút ngắn để buộc quá tải xảy ra
+               # và chứng minh máy chủ từ chối có kiểm soát (503 + Retry-After) thay vì sập.
+               VNEDU_QUERY_WORKERS="2", VNEDU_QUEUE_WAIT="0.1")
     process = subprocess.Popen(
         [sys.executable, "app/server.py", "--prod", "--backend", "local",
          "--host", "127.0.0.1", "--port", str(port)],
@@ -83,7 +85,17 @@ def main() -> int:
             time.sleep(0.25)
         if not ready:
             raise RuntimeError("Waitress did not open its loopback port within 15 seconds")
-        if requests.get(base + "/healthz", timeout=30).status_code != 200:
+        # Cổng có thể mở trước khi Waitress nhận kết nối ổn định (thấy trên Windows) -> thử lại /healthz tối đa ~15 s
+        healthy = False
+        for _ in range(30):
+            try:
+                healthy = requests.get(base + "/healthz", timeout=30).status_code == 200
+            except requests.ConnectionError:
+                healthy = False
+            if healthy:
+                break
+            time.sleep(0.5)
+        if not healthy:
             raise RuntimeError("Waitress health check did not return HTTP 200")
 
         with ThreadPoolExecutor(max_workers=2) as pool:
@@ -123,6 +135,7 @@ def main() -> int:
             "health_status": health.status_code == 200,
             "normal_load_no_5xx": all(status == 200 for status, _ in samples),
             "overload_backpressure": any(status == 503 for status, _ in overload),
+            "overload_never_500": all(status in (200, 503) for status, _ in overload),
             "security_headers": all(headers.values()) and all(html_headers.values()),
             "resource_injection_rejected": injection.status_code == 404,
             "ssrf_rejected": ssrf.status_code == 400,

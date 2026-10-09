@@ -251,7 +251,11 @@ def build_void(data: Graph, links: Graph, counts) -> Graph:
         "https://www.openstreetmap.org/",
     ):
         v.add((ds, DCTERMS.source, URIRef(source)))
-    v.add((ds, DCTERMS.modified, Literal(time.strftime("%Y-%m-%dT00:00:00"), datatype=XSD.dateTime)))
+    # Ngày dữ liệu nguồn đổi gần nhất (retrieved_at mới nhất của bronze), không phải ngày build -> build tái lập được
+    retrieved = [json.loads(m.read_text(encoding="utf-8")).get("retrieved_at", "")
+                 for m in sorted(config.BRONZE_DIR.glob("*.meta.json"))]
+    modified = max((r[:10] for r in retrieved if r), default=time.strftime("%Y-%m-%d"))
+    v.add((ds, DCTERMS.modified, Literal(modified + "T00:00:00", datatype=XSD.dateTime)))
     v.add((ds, DCTERMS.language, URIRef("http://id.loc.gov/vocabulary/iso639-1/vi")))
     for kw in ("giáo dục đại học", "higher education", "Vietnam", "linked open data"):
         v.add((ds, DCAT.keyword, Literal(kw)))
