@@ -60,11 +60,12 @@ function cell(t) {
   if (!t) return "";
   if (t.termType === "NamedNode") {
     const v = t.value, local = v.startsWith("{{BASE}}");
-    const href = local ? v.replace("{{BASE}}", "{{ROOT}}") : v;
+    const href = VN.safeHref(local ? v.replace("{{BASE}}", "{{ROOT}}") : v);
     const short = local ? v.slice("{{BASE}}".length) : v;
-    return `<a href="${VN.esc(href)}">${VN.esc(short)}</a>`;
+    // IRI do truy vấn tạo ra (vd. IRI("javascript:...")) không bao giờ thành link bấm được
+    return href ? `<a href="${VN.esc(href)}" rel="noopener noreferrer">${VN.esc(short)}</a>` : `<code>${VN.esc(short)}</code>`;
   }
-  if (t.termType === "Literal") return VN.esc(t.value) + (t.language ? ` <span class="lang">@${t.language}</span>` : "");
+  if (t.termType === "Literal") return VN.esc(t.value) + (t.language ? ` <span class="lang">@${VN.esc(t.language)}</span>` : "");
   return VN.esc(t.value);
 }
 const ENDPOINT = "{{SPARQL}}";

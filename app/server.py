@@ -609,7 +609,7 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
     def _start_timer():
         request.environ["vnedu.t0"] = time.perf_counter()
         request.environ["vnedu.request_id"] = secrets.token_hex(8)
-        if request.path == "/sparql":
+        if request.path == "/sparql" and request.method != "OPTIONS":
             client = request.remote_addr or "unknown"
             if not app.config["RATE_LIMITER"].allow(client):
                 response = Response("Quá nhiều truy vấn; vui lòng thử lại sau.",
@@ -639,6 +639,16 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
         resp.headers["X-Request-ID"] = request.environ.get("vnedu.request_id", "")
         if request.path == "/sparql":
             resp.headers.setdefault("Cache-Control", "no-store")
+            origin = request.headers.get("Origin")
+            allowed = "*" if "*" in cors_origins else origin if origin in cors_origins else None
+            if allowed:
+                resp.headers["Access-Control-Allow-Origin"] = allowed
+                if allowed != "*":
+                    resp.headers.add("Vary", "Origin")
+                if request.method == "OPTIONS":         # preflight: POST application/sparql-query từ trang khác
+                    resp.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+                    resp.headers["Access-Control-Allow-Headers"] = "Content-Type, Accept"
+                    resp.headers["Access-Control-Max-Age"] = "86400"
         t0 = request.environ.get("vnedu.t0")
         if t0 is not None:
             log.info("%s %s %d %.0fms request_id=%s", request.method, request.path, resp.status_code,
@@ -699,9 +709,14 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
              else request.values.get("query"))
         if not q:
             return site_page("sparql") or render_template("query.html", queries=example_queries(), initial=None)
+        supported = (*SELECT_MIME, *RDF_MIME)
+        if isinstance(backend, LocalBackend) and request.headers.get("Accept") and not preferred_mimes(supported):
+            # Client chỉ chấp nhận loại không hỗ trợ (vd. image/png) -> 406, liệt kê các loại có thể trả
+            return Response("Không có định dạng kết quả phù hợp với Accept. Hỗ trợ: " + ", ".join(supported),
+                            status=406, content_type="text/plain; charset=utf-8")
         try:
             check_query(q)
-            accept = (preferred_mimes((*SELECT_MIME, *RDF_MIME)) if isinstance(backend, LocalBackend)
+            accept = (preferred_mimes(supported) if isinstance(backend, LocalBackend)
                       else request.headers.get("Accept", ""))
             resp = backend.protocol(q, accept)
         except QueryRejected as e:
@@ -709,12 +724,6 @@ def create_app(backend=None, inferred: set | None = None, site_dir: Path | None 
         except Exception as e:  # noqa: BLE001 — lỗi cú pháp (pyparsing) của rdflib: thông báo có ích cho người dùng
             msg = str(e).splitlines()[0][:300] if str(e) else type(e).__name__
             resp = Response(f"Truy vấn không hợp lệ: {msg}", status=400, content_type="text/plain; charset=utf-8")
-        origin = request.headers.get("Origin")
-        if "*" in cors_origins:
-            resp.headers["Access-Control-Allow-Origin"] = "*"
-        elif origin in cors_origins:
-            resp.headers["Access-Control-Allow-Origin"] = origin
-            resp.headers["Vary"] = "Origin"
         return resp
 
     @app.route("/query")

@@ -86,7 +86,9 @@ def print_result(data: dict, fmt: str, max_col: int = 60) -> None:
         print(data["graph"])
         return
     cols = data["head"]["vars"]
-    rows = [[short(b[c]) if c in b else "" for c in cols] for b in data["results"]["bindings"]]
+    # CSV là dữ liệu cho máy đọc: giữ IRI đầy đủ (dạng rút gọn res:/vnedu: chỉ dùng khi in bảng cho người đọc)
+    cell = (lambda v: v["value"]) if fmt == "csv" else short
+    rows = [[cell(b[c]) if c in b else "" for c in cols] for b in data["results"]["bindings"]]
     if fmt == "json":
         print(json.dumps(data, ensure_ascii=False, indent=2))
     elif fmt == "csv":
@@ -110,18 +112,20 @@ def print_result(data: dict, fmt: str, max_col: int = 60) -> None:
 
 # ------------------------------------------------------------------ CLI
 
-def execute(query: str, args) -> None:
+def execute(query: str, args) -> bool:
+    """Chạy một truy vấn; trả False nếu lỗi (để dòng lệnh trả exit code khác 0)."""
     if "PREFIX" not in query.upper():
         query = PREFIXES + query  # tự thêm prefix phổ biến cho tiện gõ tay
     try:
         data = run_local(query) if args.local else run_remote(query, args.endpoint)
     except requests.ConnectionError:
         print(f"Không kết nối được {args.endpoint}. Fuseki đã chạy chưa? (hoặc thêm --local)", file=sys.stderr)
-        return
+        return False
     except Exception as e:  # lỗi cú pháp SPARQL, v.v.
         print(f"Lỗi: {e}", file=sys.stderr)
-        return
+        return False
     print_result(data, args.format)
+    return True
 
 
 def repl(args) -> None:
@@ -142,6 +146,8 @@ def repl(args) -> None:
                     lines.append(line)
         except (EOFError, KeyboardInterrupt):
             print()
+            if lines and not lines[0].startswith(":"):   # stdin hết mà không có dòng trống: vẫn chạy truy vấn cuối
+                execute("\n".join(lines), args)
             return
         cmd = "\n".join(lines)
         if cmd in (":quit", ":q", ":exit"):
@@ -151,10 +157,13 @@ def repl(args) -> None:
                 print(f"  {i:2}. {f.name:35} {first_comment(f)}")
         elif cmd.startswith(":run"):
             try:
-                f = files[int(cmd.split()[1]) - 1]
+                n = int(cmd.split()[1])
             except (IndexError, ValueError):
-                print("Dùng: :run <số thứ tự trong :list>")
+                n = 0
+            if not 1 <= n <= len(files):     # trước đây ':run 0' chạy nhầm tệp cuối (chỉ số -1)
+                print(f"Dùng: :run <số từ 1 đến {len(files)} trong :list>")
                 continue
+            f = files[n - 1]
             print(f"# {f.name}: {first_comment(f)}")
             execute(f.read_text(encoding="utf-8"), args)
         else:
@@ -187,7 +196,11 @@ def main() -> None:
         repl(args)
     else:
         p = Path(args.query)
-        execute(p.read_text(encoding="utf-8") if p.suffix == ".rq" and p.exists() else args.query, args)
+        if p.suffix == ".rq" and not p.is_file():
+            print(f"Không tìm thấy tệp truy vấn: {args.query} (xem --list)", file=sys.stderr)
+            sys.exit(2)
+        if not execute(p.read_text(encoding="utf-8") if p.suffix == ".rq" else args.query, args):
+            sys.exit(1)
 
 
 if __name__ == "__main__":

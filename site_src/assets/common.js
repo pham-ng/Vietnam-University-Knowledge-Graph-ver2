@@ -22,7 +22,12 @@ const VN = {
   norm(s) { return (s || "").toString().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/g, "d").replace(/Đ/g, "D").toLowerCase(); },
   fmt(n) { return (n ?? 0).toLocaleString("vi-VN"); },
   css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); },
-  esc(s) { return (s ?? "").toString().replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); },
+  esc(s) { return (s ?? "").toString().replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); },
+  /** URL an toàn để đặt vào href: chỉ http(s) hoặc đường dẫn tương đối; null với javascript:, data:, vbscript:... */
+  safeHref(u) {
+    const s = (u ?? "").toString().trim();
+    return /^(https?:\/\/|\/(?!\/)|\.{1,2}\/|#)/i.test(s) ? s : null;
+  },
 
   tip: null,
   showTip(ev, html) {

@@ -372,3 +372,58 @@ def test_sparql_construct_honours_q_values(client, accept, expected):
     q = "CONSTRUCT { <urn:a> <urn:b> <urn:c> } WHERE {}"
     r = client.get("/sparql", query_string={"query": q}, headers={"Accept": accept})
     assert r.status_code == 200 and r.content_type.startswith(expected)
+
+
+# ------------------------------------------------------------------ 406, CORS preflight, giao diện terminal (đánh giá 10/2026)
+
+def test_sparql_returns_406_when_no_acceptable_format(client):
+    r = client.get("/sparql", query_string={"query": "SELECT ?x WHERE { BIND(1 AS ?x) }"}, headers={"Accept": "image/png"})
+    assert r.status_code == 406 and "application/sparql-results+json" in r.get_data(as_text=True)
+    # trình duyệt gửi */* -> vẫn trả JSON như trước
+    r = client.get("/sparql", query_string={"query": "SELECT ?x WHERE { BIND(1 AS ?x) }"},
+                   headers={"Accept": "text/html,application/xhtml+xml,*/*;q=0.8"})
+    assert r.status_code == 200 and r.content_type.startswith("application/sparql-results+json")
+
+
+def test_sparql_cors_preflight(client):
+    r = client.open("/sparql", method="OPTIONS", headers={
+        "Origin": "https://example.org", "Access-Control-Request-Method": "POST",
+        "Access-Control-Request-Headers": "content-type"})
+    assert r.status_code == 200
+    assert r.headers["Access-Control-Allow-Origin"] == "*"
+    assert "POST" in r.headers["Access-Control-Allow-Methods"]
+    assert "content-type" in r.headers["Access-Control-Allow-Headers"].lower()
+
+
+def test_sparql_page_never_links_unsafe_iris():
+    """Kết quả IRI('javascript:...') không được thành link bấm được (XSS khi người dùng bấm)."""
+    page = (ROOT / "site_src" / "pages" / "sparql.html").read_text(encoding="utf-8")
+    assert "VN.safeHref(" in page and "<a href=\"${VN.esc(href)}\"" in page
+    common = (ROOT / "site_src" / "assets" / "common.js").read_text(encoding="utf-8")
+    assert "safeHref(u)" in common and "https?:" in common
+
+
+def _query_cli(*args, stdin=None):
+    import subprocess
+    return subprocess.run([sys.executable, str(ROOT / "query.py"), "--local", *args], input=stdin,
+                          capture_output=True, text=True, encoding="utf-8", cwd=ROOT,
+                          env={**__import__("os").environ, "PYTHONUTF8": "1"})
+
+
+def test_query_cli_exit_codes_and_csv():
+    if not config.ALL_TTL.exists():
+        pytest.skip("chưa chạy pipeline")
+    assert _query_cli("SELEKT *").returncode == 1                       # lỗi cú pháp -> exit 1
+    missing = _query_cli("queries/khong-ton-tai.rq")
+    assert missing.returncode == 2 and "Không tìm thấy tệp" in missing.stderr
+    ok = _query_cli("SELECT ?u WHERE { ?u vnedu:admissionCode \"BKA\" }", "-f", "csv")
+    assert ok.returncode == 0 and config.RES_NS + "university/" in ok.stdout   # CSV giữ IRI đầy đủ
+
+
+def test_query_cli_repl_run_index_and_trailing_query():
+    if not config.ALL_TTL.exists():
+        pytest.skip("chưa chạy pipeline")
+    out = _query_cli("-i", stdin=":run 0\n").stdout
+    assert "Dùng: :run <số từ 1 đến" in out                            # không chạy nhầm tệp cuối
+    out = _query_cli("-i", stdin="SELECT (1 AS ?x) WHERE {}").stdout   # không có dòng trống cuối
+    assert "1 dòng" in out
