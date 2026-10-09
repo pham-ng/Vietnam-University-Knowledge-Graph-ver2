@@ -436,3 +436,13 @@ def test_links_page_data_matches_linkset(site_client):
     assert data["total"] == sum(1 for s, _, o in links if str(s).startswith(config.RES_NS) and isinstance(o, URIRef))
     assert {t["key"] for t in data["targets"] if t["count"]} == {"wikidata", "dbpedia", "ror", "geonames", "wikipedia"}
     assert all(i["href"].startswith("resource/") for t in data["targets"] for i in t["items"])
+
+
+
+def test_infobox_shows_legal_direct_governance(site_client):
+    """HUST trực thuộc Bộ GD&ĐT theo QĐ 1723/QĐ-TTg: infobox phải hiện (trước đây bị bỏ sót)."""
+    html = site_client.get("/resource/university/dai-hoc-bach-khoa-ha-noi", headers={"Accept": "text/html"}).get_data(as_text=True)
+    box = html[html.index('class="ibox"'):]
+    assert "Bộ Giáo dục và Đào tạo" in box and "1723/QĐ-TTg" in box
+    assert "Đại học Bách khoa Hà Nội (HUST)" in html and "(, HUST)" not in html
+    assert 'href="/explore" class="on"' in html          # trang tài nguyên thuộc mục Tra cứu

@@ -234,7 +234,14 @@ def institution_panels() -> dict[str, dict]:
             row("Thành lập", str(fy))
         if i.get("dissolution_year"):
             row("Giải thể / sáp nhập", str(i["dissolution_year"]))
-        row("Chủ quản", "<br>".join(a(umap["body"][b], bodies[b]["name_vi"]) for b in i["governed_by"]))
+        # Trực thuộc theo văn bản pháp lý (directlyGovernedBy, vd. QĐ 1723/QĐ-TTg) + chủ quản do nguồn ghi nhận
+        decision = {b: ref.get("record", "") for ref in i.get("field_sources", {}).get("direct_governed_by", [])
+                    for b in ref.get("values", [])}
+        row("Chủ quản", "<br>".join(
+            [a(umap["body"][b], bodies[b]["name_vi"]) + (f' <span class="lang">trực thuộc · {esc(decision[b])}</span>'
+                                                       if decision.get(b) else ' <span class="lang">trực thuộc</span>')
+             for b in i.get("direct_governed_by", [])] +
+            [a(umap["body"][b], bodies[b]["name_vi"]) for b in i["governed_by"] if b not in i.get("direct_governed_by", [])]))
         row("Tổ chức mẹ", "<br>".join(a(umap["body"][b], bodies[b]["name_vi"]) for b in i["owned_by"]))
         row("Thành viên của", "<br>".join(a(umap["institution"][m], insts[m]["name_vi"]) for m in i["member_of"]))
         row("Phân hiệu của", "<br>".join(a(umap["institution"][m], insts[m]["name_vi"]) for m in i["branch_of"]))
@@ -373,7 +380,7 @@ def build_resources(onto, data, links, inferred, void, full) -> int:
         body = RES_TPL.render(kind=", ".join(sorted({k for k in kinds if k}))[:160] or rel.split("/")[0],
                               title=title, uri=str(s), slug=rel.rsplit("/", 1)[-1], props=props, incoming=incoming,
                               n_inf=n_inf, root=ROOT_PATH, lat=lat, panel=panel)
-        page(rel, f"{title} · VN-Edu LOD", body, head=head, desc=f"{title} — dữ liệu liên kết mở VN-Edu",
+        page(rel, f"{title} · VN-Edu LOD", body, active="explore", head=head, desc=f"{title} — dữ liệu liên kết mở VN-Edu",
              alternates=[("text/turtle", rel.rsplit('/', 1)[-1] + ".ttl"),
                          ("application/ld+json", rel.rsplit('/', 1)[-1] + ".jsonld")])
         n += 1

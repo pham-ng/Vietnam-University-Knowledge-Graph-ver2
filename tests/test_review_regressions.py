@@ -253,3 +253,25 @@ def test_link_precision_report_is_complete():
     """Mẫu ngẫu nhiên 100 owl:sameAs đã được đánh giá hết (không còn 'review')."""
     rows = list(csv.DictReader((config.REPORTS_DIR / "link_precision.csv").open(encoding="utf-8")))
     assert len(rows) == 100 and all(r["verdict"] in ("correct", "incorrect") for r in rows)
+
+
+# ------------------------------------------------------------------ văn bản trích từ Wikipedia
+
+@pytest.mark.parametrize("raw, clean", [
+    ("Đại học Bách khoa Hà Nội (, HUST) là đại học", "Đại học Bách khoa Hà Nội (HUST) là đại học"),
+    ("Trường Đại học Công nghệ ( – VNU-UET) là", "Trường Đại học Công nghệ (VNU-UET) là"),
+    ("Học viện Quân y (), tên dân sự là", "Học viện Quân y, tên dân sự là"),
+    ("Trường X (viết tắt: ABC, ) là", "Trường X (viết tắt: ABC) là"),
+    ("Không có ngoặc nào cả.", "Không có ngoặc nào cả."),
+    ("Hiệu trưởng (2001–) là", "Hiệu trưởng (2001–) là"),
+])
+def test_tidy_parentheses(raw, clean):
+    from step3_integrate import tidy_parentheses
+    assert tidy_parentheses(raw) == clean
+
+
+def test_no_institution_text_has_dangling_parentheses():
+    import re
+    insts = json.loads((config.SILVER_DIR / "institutions.json").read_text(encoding="utf-8"))
+    bad = re.compile(r"\(\s*[,;:–—-]|[,;:]\s*\)|\(\s*\)")
+    assert [i["name_vi"] for i in insts.values() for f in ("abstract", "history") if bad.search(i.get(f) or "")] == []

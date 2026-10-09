@@ -445,6 +445,18 @@ FOREIGN = re.compile(r"ngoại quốc|nước ngoài|vốn đầu tư nước ng
 RELIGIOUS = re.compile(r"Giáo hội|Phật giáo|Công giáo|Tin Lành|Hồi giáo|Cao Đài|Hòa Hảo|Hoà Hảo", re.I)
 
 
+def tidy_parentheses(text: str) -> str:
+    """Bỏ dấu câu thừa do template ngôn ngữ ({{lang|en|...}}) bị lược khi trích Wikipedia:
+    'Đại học Bách khoa Hà Nội (, HUST)' -> '(HUST)', 'Học viện Quân y ()' -> 'Học viện Quân y'."""
+    prev = None
+    while prev != text:
+        prev = text
+        text = re.sub(r"\(\s*[,;:–—-]+\s*", "(", text)          # mở ngoặc rồi dấu câu
+        text = re.sub(r"\s*[,;:]+\s*\)", ")", text)              # phẩy/chấm phẩy rồi đóng ngoặc ("(2001–)" giữ nguyên)
+        text = re.sub(r"\s*\(\s*\)", "", text)                   # ngoặc rỗng
+    return re.sub(r"[ \t]{2,}", " ", text).replace(" ,", ",")
+
+
 def ownership_from_lead(text: str):
     """Chỉ xét 2 câu đầu; regex chặt để không bắt nhầm 'đầu tư', 'ngoài công lập' …"""
     head = " ".join(sentences(text)[:2])
@@ -906,8 +918,8 @@ def build_institutions(provs):
                                 if x["name"] and not (MINISTRY.search(x["name"]) or PPC.search(x["name"]))]
 
         # --- văn bản giới thiệu (CC BY-SA, ghi nguồn bằng bản sửa đổi viwiki) và ảnh
-        inst["abstract"] = lead if len(lead) >= 40 else ""
-        inst["history"] = page.get("history", "") if page else ""
+        inst["abstract"] = tidy_parentheses(lead) if len(lead) >= 40 else ""
+        inst["history"] = tidy_parentheses(page.get("history", "")) if page else ""
         inst.update(media_of(page, f, images))
         inst["english_only"] = not page and not lab.get("vi")
         insts[k] = inst
