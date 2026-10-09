@@ -47,8 +47,11 @@ def timed_get(url: str) -> tuple[int, float]:
 def main() -> int:
     port = free_port()
     base = f"http://127.0.0.1:{port}"
+    site_dir = os.environ.get("VNEDU_READINESS_SITE", "site_server")
+    if not ((ROOT / site_dir / ".nojekyll").is_file() and (ROOT / site_dir / "index.html").is_file()):
+        raise RuntimeError(f"Missing generated site {site_dir!r}; run step7_publish.py for that target first")
     env = dict(os.environ, PYTHONUTF8="1", PYTHONIOENCODING="utf-8",
-               VNEDU_SERVE_SITE="site", VNEDU_QUERY_TIMEOUT="5",
+               VNEDU_SERVE_SITE=site_dir, VNEDU_QUERY_TIMEOUT="5",
                VNEDU_QUERY_WORKERS="2")
     process = subprocess.Popen(
         [sys.executable, "app/server.py", "--prod", "--backend", "local",

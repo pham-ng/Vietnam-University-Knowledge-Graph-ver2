@@ -63,8 +63,8 @@ and binds port 3030 only on loopback. That Docker configuration was not the test
 The additional \term{audit/production\_readiness.py} test starts the same Waitress WSGI
 entry point used by \term{app/server.py --prod} with the read-only local backend. Under
 normal bounded concurrency (eight requests, two query workers), all eight health requests
-returned HTTP 200; the 9 October 2026 rerun measured 4,293 ms at p50, 4,323 ms at p95,
-and 4,323 ms maximum on the Windows review machine. An intentional eight-request overload
+returned HTTP 200; the final 9 October 2026 rerun measured 4,251 ms at p50, 4,315 ms at p95,
+and 4,315 ms maximum on the Windows review machine. An intentional eight-request overload
 returned two HTTP 200 responses and six HTTP 503 responses, demonstrating bounded
 back-pressure rather than unbounded queue growth. Security probes rejected a path-injection
 attempt (404), an unapproved SSRF \term{SERVICE} target (400), and an oversized query (413).
