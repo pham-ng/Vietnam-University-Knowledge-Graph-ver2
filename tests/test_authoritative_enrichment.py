@@ -35,6 +35,20 @@ def test_legal_governance_is_not_downgraded_to_reported_governance():
     assert ref["source"].startswith("https://congbao.chinhphu.vn/")
 
 
+def test_curated_national_university_memberships_are_source_qualified():
+    records = institutions()
+    cases = {
+        "Q5873997": ("Q943759", "https://hcmus.edu.vn/"),
+        "Q10829064": ("Q1076729", "https://ussh.vnu.edu.vn/"),
+    }
+    for child_key, (parent_key, source_prefix) in cases.items():
+        child = records[child_key]
+        assert parent_key in child["member_of"]
+        refs = child["field_sources"]["member_of"]
+        assert any(parent_key in ref["values"] and ref["source"].startswith(source_prefix)
+                   and ref["retrieved_at"] for ref in refs)
+
+
 def test_ror_acronyms_are_value_scoped():
     hcmue = institutions()["Q10489198"]
     ref = hcmue["field_sources"]["short_names"][0]

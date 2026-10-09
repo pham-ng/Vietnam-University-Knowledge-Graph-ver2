@@ -8,37 +8,11 @@ Mũi tên rỗng = kế thừa (`rdfs:subClassOf`); mũi tên có nhãn = thuộ
 
 ![Protégé OntoGraf screenshot of the committed ontology](report/figures/ontology-protege-screenshot.png)
 
-The same committed `ontology/vnedu.ttl` was also loaded into GraphDB Workbench 11.1.0
-(`vnedu-ontology-d`) for a repository-backed view. The class-hierarchy view reports 57
-classes, while the visual graph below focuses on `vnedu:University` and its asserted
-superclass/alignment links. These are direct screenshots of GraphDB, not generated
-illustrations.
+GraphDB Workbench 11.1.0 was also connected to the local `vnedu-ontology-d` repository after loading the committed Turtle. The following are direct repository-backed screenshots; the hierarchy view reports 57 classes and the visual graph focuses on `vnedu:University`.
 
 ![GraphDB class hierarchy of the committed ontology](report/figures/ontology-graphdb-hierarchy.png)
 
 ![GraphDB visual graph for vnedu:University](report/figures/ontology-graphdb-visual.png)
-
-## TBox–ABox view
-
-The repository-backed view is now also populated with the serving union
-`data/gold/vnedu-all.ttl`, not only the ontology file. In the local GraphDB repository
-`vnedu-ontology-d`, the verified SPARQL count is 74,972 total statements: 73,794 explicit
-and 1,178 inferred statements. The saved visual configuration
-`VN-Edu TBox-ABox instance neighborhood` starts at the real individual
-`resource/university/dai-hoc-bach-khoa-ha-noi` and exposes its most-specific types,
-governance, location, programmes, majors and fields.
-
-The schema and instance layers are intentionally separated in the report. The TBox view
-shows the multi-level class hierarchy plus domain–property–range signatures and the
-`offersProgram / ofMajor => trainsMajor` chain. The ABox view shows named individuals and
-their asserted or materialized links. A dashed `rdf:type` edge is a typing assertion or
-entailment; it is not a relational foreign key. Domain and range provide OWL semantic
-typing, while cardinality, datatype, temporal and completeness rules are checked by
-SHACL.
-
-![Data-driven TBox architecture](report/figures/tbox-architecture.png)
-
-![Data-driven ABox instance neighborhood](report/figures/abox-instance-neighborhood.png)
 
 ```mermaid
 classDiagram

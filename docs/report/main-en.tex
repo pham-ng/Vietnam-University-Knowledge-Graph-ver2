@@ -522,16 +522,17 @@ redirects.
 The previous timeout waited only for \term{Graph.query} to return. RDFLib can evaluate
 SELECT bindings lazily, so result evaluation could continue beyond the limit.
 Cancelling a future also cannot stop an already running Python thread. The revised local
-backend evaluates and serializes each query in a disposable process, terminates it on
-timeout, and limits concurrent workers. An expensive Cartesian-product regression test
-checks that capacity is released and a subsequent small query succeeds.
+backend uses a bounded persistent worker process: the worker parses the release once,
+evaluates and serializes successive queries in isolation from the web process, and is
+terminated and restarted when a query exceeds its deadline. An expensive Cartesian-product
+regression test checks that capacity is released and a subsequent small query succeeds.
 
 The local backend limits serialized responses to 8 MiB. This does not impose a hard
 memory limit during intermediate evaluation, and parsing the public request still occurs
 in the web process. A hostile-workload production deployment therefore needs process or
 container memory limits, request-rate controls, and appropriate upstream isolation. The
-process-per-query approach also reloads the graph and has a throughput cost. Earlier
-in-memory latency measurements do not describe this implementation.
+single-worker Render configuration favours bounded memory over concurrency; it is not a
+high-load topology even though it avoids reparsing the 5.2 MiB Turtle release for every query.
 
 The Fuseki proxy supplies an execution timeout parameter and does not follow proxy
 redirects. Actual query cancellation and remote SERVICE egress remain responsibilities
@@ -581,11 +582,24 @@ mean all records are complete. The consistency diagnostics report no detected lo
 violations after the fixes.
 
 Field coverage uses all 300 institution records as its denominator: 278 have a selected
-foundation year, 288 a province reference, 256 an ownership value, 237 a website, 175
-coordinates, 60 an admission code, and 28 a student-count value. These are presence
+foundation year, 288 a province reference, 256 an ownership value, 260 a website, 175
+coordinates, 222 an admission code, and 28 a student-count value. These are presence
 measurements, not estimates of truth, timeliness, or national coverage. In particular,
 271 higher-education classifications and 300 educational-organization records are
 different denominators and should not be interchanged.
+
+\subsection{Institutional-membership case study}
+The release represents the two similarly named science schools and the two similarly named
+social-sciences-and-humanities schools as four distinct IRIs. HUS and VNU-USSH in Hanoi
+have \term{memberOf} links to Vietnam National University, Hanoi; HCMUS and VNUHCM-USSH
+have links to Vietnam National University Ho Chi Minh City. Two links absent from the
+automated extraction were added through \term{institution\_memberships.csv}, citing current
+official HCMUS and VNU-USSH pages and preserving retrieval time as snapshot metadata rather
+than inventing a legal effective date. The asserted graph contains only the child-to-parent
+direction. OWL 2 RL materialization derives the four corresponding \term{hasMember} triples
+from the declared inverse-property axiom. A regression test checks both the resolved parent
+keys and claim-level source records. This case demonstrates useful inference, but it does
+not imply that every institutional relationship in the national system is complete.
 
 \subsection{Link experiment: agreement, not independent accuracy}
 The available experiment uses 86 institutions with English labels and identifier-derived
@@ -633,7 +647,7 @@ are built before the server integration suite. A successful run establishes that
 tested release follows the intended local contracts. It does not constitute a penetration
 test, an independent factual annotation study, or a load test of the public deployment.
 
-On the review branch, the final local regression command completed with 139 passed tests
+On the review branch, the final local regression command completed with 149 passed tests
 and one dependency deprecation warning. The reasoning gate, release metrics, publication
 build, and the dedicated Fuseki and Silk workflows are reported separately because they
 exercise different systems. This is a deliberate evidence matrix rather than one composite

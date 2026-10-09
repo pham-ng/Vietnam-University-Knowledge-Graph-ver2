@@ -309,6 +309,7 @@ def main() -> None:
         "email": SCHEMA.email,
         "telephone": SCHEMA.telephone,
         "website": VNEDU.website,
+        "member_of": VNEDU.memberOf,
         "direct_governed_by": VNEDU.directlyGovernedBy,
         "former_names": VNEDU.formerName,
     }
@@ -323,6 +324,8 @@ def main() -> None:
                     values = ref.get("values", [])
                     if field == "direct_governed_by":
                         return [str(u_body[v]) for v in values if v in u_body]
+                    if field == "member_of":
+                        return [str(u_inst[v]) for v in values if v in u_inst]
                     return values
 
                 matching = [ref for ref in refs if str(value) in source_values(ref)]

@@ -1010,6 +1010,29 @@ def resolve_relations(insts, ents, wdi):
         })
         note_filled(inst["name_vi"], "direct_governed_by", row["governing_body"], row["decision"])
 
+    # Membership is a structural fact, not free-text inference.  When upstream
+    # records omit it, accept only an explicit curated assertion backed by an
+    # official institution/umbrella-organisation page.  Retrieval time records
+    # the source snapshot and is deliberately not treated as an effective date.
+    membership_meta_path = config.CURATED_DIR / "institution_memberships.meta.json"
+    membership_meta = (json.loads(membership_meta_path.read_text(encoding="utf-8"))
+                       if membership_meta_path.exists() else {})
+    for row in read_csv(config.CURATED_DIR / "institution_memberships.csv"):
+        child_key = by_name.get(vn_key(row["institution_name"]))
+        parent_key = by_name.get(vn_key(row["parent_institution"]))
+        if not child_key or not parent_key:
+            unresolved.append({"entity": row["institution_name"], "field": "member_of",
+                               "value": row["parent_institution"],
+                               "reason": "không phân giải được cơ sở con hoặc cơ sở mẹ"})
+            continue
+        child = insts[child_key]
+        child["member_of"] = sorted(set(child["member_of"]) | {parent_key})
+        child["field_sources"].setdefault("member_of", []).append({
+            "source": row["source"], "retrieved_at": membership_meta.get("retrieved_at", ""),
+            "record": row.get("record", ""), "values": [parent_key],
+        })
+        note_filled(child["name_vi"], "member_of", row["parent_institution"], row["source"])
+
     # Quan hệ cấp trên giữa các cơ quan (quân đội, công an)
     mod = body("Bộ Quốc phòng", "")
     mps = body("Bộ Công an", "")

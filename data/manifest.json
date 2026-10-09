@@ -2,7 +2,7 @@
  "bronze": {
   "data/bronze/dbp_years.json": {
    "count": 72,
-   "generated_at": "2026-10-08T00:42:37",
+   "generated_at": "2026-10-09T10:30:47",
    "hash_normalization": "LF line endings",
    "license": "CC BY-SA 3.0",
    "sha256": "c0b0f72eae4857cd7f4e35c36c968e5fabf502b5d22d482086060dbb5f3e2a3e",
@@ -11,27 +11,27 @@
   },
   "data/bronze/moet_admissions.json": {
    "count": 405,
-   "generated_at": "2026-10-09T03:11:10",
+   "generated_at": "2026-10-09T10:31:04",
    "hash_normalization": "LF line endings",
    "license": "Official public facts; no machine-readable open-data licence stated",
-   "retrieved_at": "2026-10-08T20:11:10+00:00",
+   "retrieved_at": "2026-10-09T03:31:04+00:00",
    "sha256": "8f078d80eb5ffbe1ab9268662117cc18ff0e573ff57ef87b634d2f3aa32b0963",
    "source": "https://tuyensinh.moet.gov.vn/ts/",
    "unit": "records"
   },
   "data/bronze/ror_organizations.json": {
    "count": 202,
-   "generated_at": "2026-10-09T03:11:20",
+   "generated_at": "2026-10-09T10:31:18",
    "hash_normalization": "LF line endings",
    "license": "CC0 1.0",
-   "retrieved_at": "2026-10-08T20:11:20+00:00",
+   "retrieved_at": "2026-10-09T03:31:18+00:00",
    "sha256": "c5e8fc0c544a8e3f59324a4de99eae8b0837d4a9c8639edbd28c589e72220e1f",
    "source": "https://api.ror.org/v2/organizations",
    "unit": "records"
   },
   "data/bronze/viwiki_images.json": {
    "count": 280,
-   "generated_at": "2026-10-08T00:42:37",
+   "generated_at": "2026-10-09T10:30:47",
    "hash_normalization": "LF line endings",
    "license": "CC BY-SA 4.0",
    "sha256": "4df5192d37dfe9997eaae68248eacadb917361acc47a6cee23a75d7fc13801f4",
@@ -40,7 +40,7 @@
   },
   "data/bronze/viwiki_links.json": {
    "count": 80,
-   "generated_at": "2026-10-08T00:42:36",
+   "generated_at": "2026-10-09T10:30:46",
    "hash_normalization": "LF line endings",
    "license": "CC BY-SA 4.0",
    "sha256": "c1a26b63cff789fb034defcd90c6f46628af727b3a78bf611f724dd94e7e13d4",
@@ -49,7 +49,7 @@
   },
   "data/bronze/viwiki_pages.json": {
    "count": 279,
-   "generated_at": "2026-10-08T00:42:36",
+   "generated_at": "2026-10-09T10:30:46",
    "hash_normalization": "LF line endings",
    "license": "CC BY-SA 4.0",
    "sha256": "f3a91fa46eb3d8513089f87dbc5d75c9c508cc68be10eac783679312aa56b5fd",
@@ -58,7 +58,7 @@
   },
   "data/bronze/wd_alumni.json": {
    "count": 1531,
-   "generated_at": "2026-10-08T00:42:39",
+   "generated_at": "2026-10-09T10:30:48",
    "hash_normalization": "LF line endings",
    "license": "CC0 1.0",
    "sha256": "af11c19def93d297e5189ffae28c2450802ed60c038056b66271535f73bfa336",
@@ -67,7 +67,7 @@
   },
   "data/bronze/wd_entities.json": {
    "count": 12,
-   "generated_at": "2026-10-08T00:42:37",
+   "generated_at": "2026-10-09T10:30:47",
    "hash_normalization": "LF line endings",
    "license": "CC0 1.0",
    "sha256": "9dff7acfa914638a1f52bde0411b84dea554d376cd9f630d62e39b59ca3c5313",
@@ -76,7 +76,7 @@
   },
   "data/bronze/wd_institutions.json": {
    "count": 363,
-   "generated_at": "2026-10-08T00:42:37",
+   "generated_at": "2026-10-09T10:30:47",
    "hash_normalization": "LF line endings",
    "license": "CC0 1.0",
    "sha256": "3539a0481f33238480a50cd756db9725df93bb1ed36f26533850e33d23e8cd5d",
@@ -85,7 +85,7 @@
   },
   "data/bronze/wd_provinces.json": {
    "count": 63,
-   "generated_at": "2026-10-08T00:42:37",
+   "generated_at": "2026-10-09T10:30:47",
    "hash_normalization": "LF line endings",
    "license": "CC0 1.0",
    "sha256": "9bc0e96c52316514dd9c85a9c7e368a7d5f40f668106b97a031943c2f6b5ef55",
@@ -96,10 +96,10 @@
  "gold": {
   "data/gold/vnedu-all.ttl": {
    "consistent": true,
-   "count": 87117,
-   "generated_at": "2026-10-09T08:43:46",
+   "count": 87183,
+   "generated_at": "2026-10-09T10:32:44",
    "hash_normalization": "LF line endings",
-   "sha256": "7dfefff615378e56e9d6cecfeeb133b77614d0162e2a21c2318a364a6c8fa079",
+   "sha256": "9627fce0d3b0a770e796c64a5b6a9268e3f66506ac8b7d49722919e9004664c8",
    "shacl_conforms": true,
    "shacl_results": {
     "Info": 1,
@@ -108,24 +108,24 @@
    "unit": "triples"
   },
   "data/gold/vnedu-data.ttl": {
-   "count": 59428,
+   "count": 59486,
    "derived_from": "data/silver/*.json",
-   "generated_at": "2026-10-09T03:27:39",
+   "generated_at": "2026-10-09T10:31:25",
    "hash_normalization": "LF line endings",
-   "sha256": "53099a9938343d065269ffbb229912603c13db181ee098680a4fecdb0bac6c8c",
+   "sha256": "806ca34b242d7d2f2d99269f14846255686187d50cf7d297e425e5b469a527af",
    "unit": "triples"
   },
   "data/gold/vnedu-inferred.ttl": {
-   "count": 23169,
-   "generated_at": "2026-10-09T08:43:43",
+   "count": 23177,
+   "generated_at": "2026-10-09T10:32:40",
    "hash_normalization": "LF line endings",
    "reasoner": "owlrl OWL 2 RL",
-   "sha256": "fe463668be11ce160f8da27f4f155938bc5c7dea6765a9f606740f008cf456b8",
+   "sha256": "21ef4266c2e1a797d931fa32edcec015ad0d7a6e1742fd9b74b02b5da3a9e02d",
    "unit": "triples"
   },
   "data/gold/vnedu-links.ttl": {
    "count": 3558,
-   "generated_at": "2026-10-09T08:27:43",
+   "generated_at": "2026-10-09T10:31:28",
    "hash_normalization": "LF line endings",
    "linksets": {
     "dbpedia|owl:sameAs": 201,
@@ -141,16 +141,16 @@
   },
   "data/gold/void.ttl": {
    "count": 104,
-   "generated_at": "2026-10-09T08:27:47",
+   "generated_at": "2026-10-09T10:31:30",
    "hash_normalization": "LF line endings",
-   "sha256": "f40a7c2e99d4c8ddb51122203fb495d1c57ce1e1c414bf88816e090e5e8b6558",
+   "sha256": "e7bc2d72550f8a12dda1ba1eb3f9f524cb100abd74b3838808673a849b9160f7",
    "unit": "triples"
   }
  },
  "silver": {
   "data/silver/governing_bodies.json": {
    "count": 50,
-   "generated_at": "2026-10-09T03:27:35",
+   "generated_at": "2026-10-09T10:31:21",
    "hash_normalization": "LF line endings",
    "schema": "schemas/silver.schema.json",
    "sha256": "6bee7090a9a7f31cc2474c4293e6dadc9e35665eae9c506d136e0ebe0b7981ea",
@@ -158,15 +158,15 @@
   },
   "data/silver/institutions.json": {
    "count": 300,
-   "generated_at": "2026-10-09T03:27:35",
+   "generated_at": "2026-10-09T10:31:21",
    "hash_normalization": "LF line endings",
    "schema": "schemas/silver.schema.json",
-   "sha256": "638e84551daed5ff6a0619cc088fbc7796eae33beaa44be14ee9e803700119cc",
+   "sha256": "27343518ea61aa8408bbbe4c5cc8b69ee0a941bba24d162c82cbc3822079679f",
    "unit": "records"
   },
   "data/silver/people.json": {
    "count": 1702,
-   "generated_at": "2026-10-09T03:27:35",
+   "generated_at": "2026-10-09T10:31:21",
    "hash_normalization": "LF line endings",
    "schema": "schemas/silver.schema.json",
    "sha256": "5de5683cb457cb1b602037755ce49371eb35611689020a5d03b94e34ca4ba894",
@@ -174,7 +174,7 @@
   },
   "data/silver/provinces.json": {
    "count": 63,
-   "generated_at": "2026-10-09T03:27:35",
+   "generated_at": "2026-10-09T10:31:21",
    "hash_normalization": "LF line endings",
    "schema": "schemas/silver.schema.json",
    "sha256": "4cbac2c46a0d2efbf39ecb46bedd2e4cda4a088bbc27882ba099b6e4e070b8b3",
